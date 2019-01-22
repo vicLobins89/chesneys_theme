@@ -20,6 +20,7 @@ function rarehoney_init() {
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
 //  require_once( 'library/custom-post-type.php' );
+  require_once( 'library/blocks-post-type.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
