@@ -1,0 +1,48 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: IE Stylesheet
+
+Import all the styles the standard stylesheet gets, only
+without the media queries.
+
+******************************************************************/
+
+
+/******************************************************************
+IMPORTS & DEPENDENCIES
+All the BASE styles are called already since IE can
+read those. Below we import the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+
+@import "partials/variables"; // import variables
+@import "partials/typography"; // import typography
+@import "partials/mixins"; // import mixins
+@import "partials/ie_grid"; // import grid
+
+// import everything inside media queries
+@import "breakpoints/481up";
+@import "breakpoints/768up";
+@import "breakpoints/1030up";
+
+
+/******************************************************************
+ADDITIONAL IE FIXES
+For more info on using Modernizr classes:
+http://www.modernizr.com/docs/
+******************************************************************/
+
+/*
+For example:
+
+.no-textshadow .class { ... }
+
+Can also target specific versions by using the classes applied to
+the html element. Check header.php file to see what they are:
+
+.lt-ie8 .class { ... }
+
+*/

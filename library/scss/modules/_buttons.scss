@@ -1,0 +1,139 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Button Styles
+
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+
+/*********************
+BUTTON DEFAULTS
+
+Quick video guide:
+http://www.youtube.com/watch?v=hwdVpKiJzac
+
+*********************/
+
+%btn {
+	position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: transparent;
+	border-radius: 6px;
+    font-size: 1.2rem;
+	font-weight: bold;
+    line-height: 1;
+    padding: 0.9rem 4rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    text-align: center;
+    clear: both;
+    outline: none;
+	@include transition(all 0.2s ease-in-out);
+	@media only screen and (max-width: 767px) {
+		padding: 1rem;
+	}
+
+	// hovering on the btn
+	&:hover, &:focus {
+		color: $white;
+		text-decoration: none;
+	} // end hover
+
+	// clicking on the button
+	&:active {
+		top: 1px;
+	} // end active
+	
+	a {
+		color: inherit !important;
+		text-decoration: inherit !important;
+	}
+	
+	&.full {
+		width: 100%;
+	}
+	
+	&.half {
+		width: 48%;
+    	margin-right: 4%;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+} // end .button
+
+.primary-btn, a.primary-btn {
+	@extend %btn;
+	background-color: $orange;
+	border-color: $orange;
+	color: $white;
+
+	&:hover,
+	&:focus {
+		background-color: $white;
+		color: $orange;
+	}
+	
+	&.alt {
+		background-color: $meta-gray;
+		border-color: $meta-gray;
+		
+		&:hover,
+		&:focus {
+			background-color: $white;
+			color: $meta-gray;
+		}
+	}
+}
+
+.secondary-btn, a.secondary-btn {
+	@extend %btn;
+	background-color: $white;
+	border-color: $meta-gray;
+	color: $meta-gray;
+
+	&:hover,
+	&:focus {
+		background-color: $meta-gray;
+		color: $white;
+	}
+	
+	&.alt {
+		width: 50%;
+		border: 3px solid $orange;
+		font-weight: bold;
+		
+		&:hover,
+		&:focus {
+			background-color: $orange;
+			color: $white;
+		}
+	}
+}
+
+.primary-link {
+	background: url(../images/link-arrow.png) no-repeat center left;
+	background-size: 2rem;
+	padding: .5rem 0 .5rem 2.75rem;
+	display: inline-block;
+	line-height: 1.2;
+	@include transition(color 0.2s ease-in-out);
+}
+
+.hover-anchor {
+	display: block;
+	transform: scale(0.9);
+	@include transition(transform 0.3s ease-in-out);
+	
+	&:hover {
+		transform: scale(1);
+	}
+}

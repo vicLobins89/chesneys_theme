@@ -1,0 +1,156 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Mixins Stylesheet
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+
+
+/*********************
+TRANSITION
+*********************/
+
+/* @include transition(all 0.2s ease-in-out); */
+@mixin transition($transition...) {
+  // defining prefixes so we can use them in mixins below
+  $prefixes:      ("-webkit-", "" );
+  @each $prefix in $prefixes {
+    #{$prefix}transition: $transition;
+  }
+}
+
+/*********************
+CSS3 GRADIENTS
+*********************/
+
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}
+
+/*********************
+BOX SIZING
+*********************/
+
+/* @include box-sizing(border-box); */
+@mixin box-sizing($type: border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing:    $type;
+	-ms-box-sizing:     $type;
+	box-sizing:         $type;
+}
+
+/*********************
+VENDOR
+*********************/
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+/*
+.selector {
+  @include prefix(transform, rotate(45deg), webkit ms);
+}
+*/
+
+
+/*********************
+CSS ANIMATIONS
+*********************/
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+/*
+@include keyframes(move-the-object) {
+  0%   { left: 100px; }
+  100% { left: 200px; }
+}
+*/
+
+
+/*********************
+BOX SHADOW
+*********************/
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+
+/*********************
+PLACEHOLDER
+*********************/
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+/*
+.foo {
+  @include placeholder {
+    color: green;
+  }
+}
+
+@include placeholder {
+  color: red;
+}
+*/

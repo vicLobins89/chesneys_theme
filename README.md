@@ -1,1 +1,1 @@
-# chesneys_theme
+Kenex WP (WooCommerce) Theme
