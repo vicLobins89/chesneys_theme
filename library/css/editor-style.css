@@ -205,7 +205,6 @@ body#tinymce.wp-editor {
   /*********************
   TYPEKIT
   *********************/
-  @import url("https://use.typekit.net/ckh6kbl.css");
   /******************************************************************
   Site Name: Honey
   Author: Vic Lobins
@@ -293,7 +292,7 @@ body#tinymce.wp-editor {
     color: red;
   }
   */
-  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #4c4c4c;
