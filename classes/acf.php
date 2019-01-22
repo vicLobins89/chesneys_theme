@@ -48,10 +48,10 @@ class CustomACF {
 		$styles;
 		
 		if( $padding ) {
-			if( $padding[padding_top] ) { array_push($addStyles, "padding-top: $padding[padding_top];"); }
-			if( $padding[padding_right] ) { array_push($addStyles, "padding-right: $padding[padding_right];"); }
-			if( $padding[padding_bottom] ) { array_push($addStyles, "padding-bottom: $padding[padding_bottom];"); }
-			if( $padding[padding_left] ) { array_push($addStyles, "padding-left: $padding[padding_left];"); }
+			if( $padding['padding_top'] ) { array_push($addStyles, "padding-top: $padding[padding_top];"); }
+			if( $padding['padding_right'] ) { array_push($addStyles, "padding-right: $padding[padding_right];"); }
+			if( $padding['padding_bottom'] ) { array_push($addStyles, "padding-bottom: $padding[padding_bottom];"); }
+			if( $padding['padding_left'] ) { array_push($addStyles, "padding-left: $padding[padding_left];"); }
 		}
 		
 		if( $customClass ) {
