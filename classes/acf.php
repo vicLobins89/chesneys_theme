@@ -5,19 +5,29 @@ class CustomACF {
 		<section class="row entry-content image-links-wrapper cf"
 				 <?php echo (get_field('img_links_background') ? ' style="background:'.get_field('img_links_background').'"' : ''); ?>>
 			<div class="cf">
-			<?php
-				if( get_field('img_links_title') ) {
-					echo '<h2>'.get_field('img_links_title').'</h2>';
-				}
-			?>
-			<?php while( have_rows('image_links') ): the_row(); ?>
-				<div class="col-3"<?php echo ' style="width: calc(100% / '.get_field('img_links_col').')"' ; ?>>
-					<a href="<?php the_sub_field('link'); ?>" class="image-links">
-						<img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('text'); ?>">
-						<p><?php the_sub_field('text'); ?></p>
-					</a>
+				<?php
+					if( get_field('img_links_title') ) {
+						echo '<h2>'.get_field('img_links_title').'</h2>';
+					}
+				?>
+				<div class="thumbs-inner">
+				<?php while( have_rows('image_links') ): the_row(); ?>
+					<div class="col-3"<?php echo ' style="width: calc(100% / '.get_field('img_links_col').')"' ; ?>>
+						<a target="_blank" href="<?php the_sub_field('link'); ?>" class="image-links">
+							<?php 
+							$image = get_sub_field('image');
+							$size = 'image-links';
+
+							if( $image ) {
+								echo wp_get_attachment_image( $image, $size, false, 'alt="'.get_sub_field('text').'"' );
+							}
+
+							?>
+							<p><?php the_sub_field('text'); ?></p>
+						</a>
+					</div>
+				<?php endwhile; ?>
 				</div>
-			<?php endwhile; ?>
 			</div>
 		</section>
 		<?php endif;
