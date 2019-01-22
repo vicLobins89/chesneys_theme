@@ -34,7 +34,7 @@ function blocks_post() {
 			'exclude_from_search' => true,
 			'show_ui' => true,
 			'query_var' => true,
-			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
+			'menu_position' => 10, /* this is what order you want it to appear in on the left hand side menu */ 
 			'menu_icon' => 'dashicons-layout', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'content_block', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'content_block', /* you can rename the slug here */
