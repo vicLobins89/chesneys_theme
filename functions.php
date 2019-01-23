@@ -243,15 +243,15 @@ add_action('woocommerce_thankyou', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
     // get order object and order details
     $order = new WC_Order( $order_id );
-	$billing_address = $order->get_billing_first_name();
-	
-    $email = $order->billing_email;
-    $phone = $order->billing_phone;
+	$first_name = $order->get_billing_first_name();
+	$last_name = $order->get_billing_last_name();
+    $email = $order->get_billing_email();
+    $phone = $order->get_billing_phone();
     $shipping_type = $order->get_shipping_method();
     $shipping_cost = $order->get_total_shipping();
 
     // set the address fields
-    $user_id = $order->user_id;
+    $user_id = $order->get_customer_id();
     $address_fields = array('country',
         'title',
         'first_name',
@@ -368,7 +368,7 @@ function wdm_send_order_to_ext( $order_id ){
                 print_r($response);
         } else {
                 // success
-			print_r($billing_address);
+			print_r($data);
         }
  }
 
