@@ -368,13 +368,20 @@ function wdm_send_order_to_ext( $order_id ){
 		// success
 		print_r($data);
 		echo  nl2br (" \n \n ");
-		foreach( $items as $key => $item){
-			$item_id = $item['product_id'];
-			$product = new WC_Product($item_id);
-			$product_attr = $product->get_attributes();
-			print_r($product_attr[0] . ' ' . $product_attr[1]);
-		}
 	}
+	
+//	$options = array(
+//	  'http' => array(
+//		'method'  => 'POST',
+//		'content' => json_encode( $data ),
+//		'header'=>  "Content-Type: application/json\r\n" .
+//					"Accept: application/json\r\n"
+//		)
+//	);
+//
+//	$context  = stream_context_create( $options );
+//	$result = file_get_contents( $url, false, $context );
+//	$response = json_decode( $result );
 	
 //	send_csv_mail($data, "Report");
 }
