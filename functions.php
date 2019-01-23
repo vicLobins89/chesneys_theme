@@ -290,6 +290,7 @@ function wdm_send_order_to_ext( $order_id ){
         $item_name[] = $item['name'];
         $item_qty[] = $item['qty'];
         $item_price[] = $item['line_total'];
+        $item_tax_class[] = $item['tax_class'];
         
         $item_id = $item['product_id'];
         $product = new WC_Product($item_id);
