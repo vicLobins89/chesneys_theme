@@ -243,13 +243,13 @@ add_action('woocommerce_thankyou', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
     // get order object and order details
     $order = new WC_Order( $order_id ); 
-    $email = $order->billing_email;
-    $phone = $order->billing_phone;
+    $email = $order->get_billing_email;
+    $phone = $order->get_billing_phone;
     $shipping_type = $order->get_shipping_method();
     $shipping_cost = $order->get_total_shipping();
 
     // set the address fields
-    $user_id = $order->user_id;
+    $user_id = $order->get_user_id;
     $address_fields = array('country',
         'title',
         'first_name',
@@ -340,6 +340,7 @@ function wdm_send_order_to_ext( $order_id ){
             'ship_zip' => $address['shipping_postcode'],
             'shipping_type' => $shipping_type,
             'shipping_cost' => $shipping_cost,
+            'item_name' => implode(',', $item_name), 
             'item_sku' => implode(',', $item_sku), 
             'item_price' => implode(',', $item_price), 
             'quantity' => implode(',', $item_qty), 
@@ -351,7 +352,7 @@ function wdm_send_order_to_ext( $order_id ){
         $ch = curl_init();
 
         /* set the complete URL, to process the order on the external system. Let’s consider http://example.com/buyitem.php is the URL, which invokes the API */
-        curl_setopt($ch, CURLOPT_URL, $endpoint."buyitem.php");
+        curl_setopt($ch, CURLOPT_URL, $endpoint);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
