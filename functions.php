@@ -243,33 +243,33 @@ add_action('woocommerce_thankyou', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
     // get order object and order details
     $order = new WC_Order( $order_id );
-	$first_name = $order->get_billing_first_name();
-	$last_name = $order->get_billing_last_name();
+	
+//	$first_name = $order->get_billing_first_name();
+//	$last_name = $order->get_billing_last_name();
     $email = $order->get_billing_email();
     $phone = $order->get_billing_phone();
+	
     $shipping_type = $order->get_shipping_method();
     $shipping_cost = $order->get_total_shipping();
 
     // set the address fields
-    $user_id = $order->get_customer_id();
-    $address_fields = array('country',
-        'title',
+    $address_fields = array(
         'first_name',
         'last_name',
         'company',
         'address_1',
         'address_2',
-        'address_3',
-        'address_4',
         'city',
         'state',
-        'postcode');
+        'postcode',
+		'country',
+	);
 
     $address = array();
     if(is_array($address_fields)){
         foreach($address_fields as $field){
-            $address['billing_'.$field] = get_user_meta( $user_id, 'billing_'.$field, true );
-            $address['shipping_'.$field] = get_user_meta( $user_id, 'shipping_'.$field, true );
+            $address['billing_'.$field] = call_user_func('$order->get_billing_' . $fields);
+            $address['shipping_'.$field] = call_user_func('$order->get_shipping_' . $fields);
         }
     }
     
@@ -326,6 +326,7 @@ function wdm_send_order_to_ext( $order_id ){
             'apipass' => $api_password,
             'customer_email' => $email,
             'customer_phone' => $phone,
+		
             'bill_firstname' => $address['billing_first_name'],
             'bill_surname' => $address['billing_last_name'],
             'bill_address1' => $address['billing_address_1'],
@@ -333,6 +334,7 @@ function wdm_send_order_to_ext( $order_id ){
             'bill_city' => $address['billing_city'],
             'bill_state' => $address['billing_state'],
             'bill_zip' => $address['billing_postcode'],
+		
             'ship_firstname' => $address['shipping_first_name'],
             'ship_surname' => $address['shipping_last_name'],
             'ship_address1' => $address['shipping_address_1'],
@@ -340,6 +342,7 @@ function wdm_send_order_to_ext( $order_id ){
             'ship_city' => $address['shipping_city'],
             'ship_state' => $address['shipping_state'],
             'ship_zip' => $address['shipping_postcode'],
+		
             'shipping_type' => $shipping_type,
             'shipping_cost' => $shipping_cost,
             'item_name' => implode(',', $item_name), 
