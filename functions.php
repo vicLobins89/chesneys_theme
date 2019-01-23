@@ -371,8 +371,7 @@ function wdm_send_order_to_ext( $order_id ){
 			print_r($item);
 		}
 		
-		$csvAttachment = create_csv_string($data);
-		send_csv_mail($csvAttachment);
+		send_csv_mail(create_csv_string($data));
 	}
 }
 
