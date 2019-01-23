@@ -242,10 +242,11 @@ add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 add_action('woocommerce_thankyou', 'wdm_send_order_to_ext'); 
 function wdm_send_order_to_ext( $order_id ){
     // get order object and order details
-    $order = new WC_Order( $order_id ); 
-	$billing = $order->billing;
-//    $email = $order->billing_email;
-//    $phone = $order->billing_phone;
+    $order = new WC_Order( $order_id );
+	$billing_address = $order->get_billing_address();
+	
+    $email = $order->billing_email;
+    $phone = $order->billing_phone;
     $shipping_type = $order->get_shipping_method();
     $shipping_cost = $order->get_total_shipping();
 
@@ -367,7 +368,7 @@ function wdm_send_order_to_ext( $order_id ){
                 print_r($response);
         } else {
                 // success
-			print_r($billing);
+			print_r($billing_address);
         }
  }
 
