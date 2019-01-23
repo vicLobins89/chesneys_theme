@@ -372,7 +372,7 @@ function wdm_send_order_to_ext( $order_id ){
 			$item_id = $item['product_id'];
 			$product = new WC_Product($item_id);
 			$product_attr = $product->get_attributes();
-			print_r($product_attr);
+			print_r($product_attr[0] . ' ' . $product_attr[1]);
 		}
 	}
 	
