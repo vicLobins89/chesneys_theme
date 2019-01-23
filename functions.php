@@ -380,9 +380,7 @@ function create_csv_string($data) {
     if (!$fp = fopen('php://temp', 'w+')) return FALSE;
     
     fputcsv($fp, array('ID', 'Company', 'Name', 'Company Account Number', 'Email', 'Phone Number', 'Invoice'));
-    
-    // Loop data and write to file pointer
-    while ($line = mysql_fetch_assoc($data)) fputcsv($fp, $line);
+    fputcsv($fp, $data);
     
     // Place stream pointer at beginning
     rewind($fp);
