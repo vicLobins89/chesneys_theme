@@ -370,36 +370,47 @@ function wdm_send_order_to_ext( $order_id ){
 		foreach( $items as $key => $item){
 			print_r($item);
 		}
-		
-		send_csv_mail(create_csv_string($data));
 	}
+	
+	$array = array(array(1,2,3,4,5,6,7), array(1,2,3,4,5,6,7), array(1,2,3,4,5,6,7));
+
+	send_csv_mail($array, "Website Report \r\n \r\n www.carlofontanos.com");
 }
 
-function create_csv_string($data2) {
-  // Open temp file pointer
-  if (!$fp = fopen('php://temp', 'w+')) return FALSE;
-  // Loop data and write to file pointer
-  foreach ($data2 as $line) fputcsv($fp, $line);
-  // Place stream pointer at beginning
-  rewind($fp);
-  // Return the data
-  return stream_get_contents($fp);
+function create_csv_string($data) {    
+    // Open temp file pointer
+    if (!$fp = fopen('php://temp', 'w+')) return FALSE;
+    
+    fputcsv($fp, array('ID', 'Company', 'Name', 'Company Account Number', 'Email', 'Phone Number', 'Invoice'));
+    
+    // Loop data and write to file pointer
+    while ($line = mysql_fetch_assoc($data)) fputcsv($fp, $line);
+    
+    // Place stream pointer at beginning
+    rewind($fp);
+
+    // Return the data
+    return stream_get_contents($fp);
+
 }
 
-function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys-test-uk.tk' ,$subject = 'Test email with attachment' ) {
-  // This will provide plenty adequate entropy
-  $multipartSep = '-----'.md5(time()).'-----';
-  // Arrays are much more readable
-  $headers = array(
-    "From: $from",
-    "Reply-To: $from",
-    "Content-Type: multipart/mixed; boundary=\"$multipartSep\""
-  );
-  // Make the attachment
- 
- $attachment = chunk_split(base64_encode(create_csv_string($csvData))); 
-  // Make the body of the message
-  $body = "--$multipartSep\r\n"
+function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys-test-uk.tk', $subject = 'Test email with attachment') {
+
+    // This will provide plenty adequate entropy
+    $multipartSep = '-----'.md5(time()).'-----';
+
+    // Arrays are much more readable
+    $headers = array(
+		"From: $from",
+		"Reply-To: $from",
+		"Content-Type: multipart/mixed; boundary=\"$multipartSep\""
+	  );
+
+    // Make the attachment
+    $attachment = chunk_split(base64_encode(create_csv_string($csvData))); 
+
+    // Make the body of the message
+    $body = "--$multipartSep\r\n"
         . "Content-Type: text/plain; charset=ISO-8859-1; format=flowed\r\n"
         . "Content-Transfer-Encoding: 7bit\r\n"
         . "\r\n"
@@ -411,8 +422,10 @@ function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'norep
         . "\r\n"
         . "$attachment\r\n"
         . "--$multipartSep--";
-   // Send the email, return the result
-   return @mail($to, $subject, $body, implode("\r\n", $headers)); 
+
+    // Send the email, return the result
+    return @mail($to, $subject, $body, implode("\r\n", $headers)); 
+
 }
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
