@@ -344,6 +344,7 @@ function wdm_send_order_to_ext( $order_id ){
             'item_sku' => implode(',', $item_sku), 
             'item_price' => implode(',', $item_price), 
             'quantity' => implode(',', $item_qty), 
+            'tax_class' => implode(',', $item_tax_class), 
             'transaction_key' => $transaction_key,
             'coupon_code' => implode( ",", $coupon )
         );
