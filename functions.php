@@ -243,8 +243,9 @@ add_action('woocommerce_thankyou', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
     // get order object and order details
     $order = new WC_Order( $order_id ); 
-    $email = $order->billing_email;
-    $phone = $order->billing_phone;
+	$billing = $order->billing();
+//    $email = $order->billing_email;
+//    $phone = $order->billing_phone;
     $shipping_type = $order->get_shipping_method();
     $shipping_cost = $order->get_total_shipping();
 
@@ -366,7 +367,7 @@ function wdm_send_order_to_ext( $order_id ){
                 print_r($response);
         } else {
                 // success
-			print_r($order);
+			print_r($billing);
         }
  }
 
