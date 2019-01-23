@@ -364,14 +364,15 @@ function wdm_send_order_to_ext( $order_id ){
 		print_r($response);
 	} else {
 		// success
-//		print_r($data);
-//		echo  nl2br (" \n \n ");
+		print_r($data);
+		echo  nl2br (" \n \n ");
 		foreach( $items as $key => $item) {
 			$item_id = $item['product_id'];
 			echo $item_id;
 			echo  nl2br (" \n \n ");
 			$product = new WC_Product($item_id);
-			print_r($product->get_attributes());
+			$attr = $product->get_attributes();
+			print_r($attr);
 		}
 	}
 	
