@@ -366,7 +366,7 @@ function wdm_send_order_to_ext( $order_id ){
         } else {
 			// success
 			print_r($data);
-			echo '\n \n';
+			echo  nl2br (" \n \n ");
 			print_r($items);
         }
  }
