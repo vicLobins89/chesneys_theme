@@ -243,7 +243,7 @@ add_action('woocommerce_thankyou', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
     // get order object and order details
     $order = new WC_Order( $order_id );
-	$billing_address = $order->get_billing_address();
+	$billing_address = $order->get_billing_first_name();
 	
     $email = $order->billing_email;
     $phone = $order->billing_phone;
