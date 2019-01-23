@@ -241,15 +241,15 @@ add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 /* after an order has been processed, we will use the  'woocommerce_thankyou' hook, to add our function, to send the data */
 add_action('woocommerce_thankyou', 'wdm_send_order_to_ext'); 
 function wdm_send_order_to_ext( $order_id ){
-    // get order object and order details
-    $order = new WC_Order( $order_id );
-    $email = $order->get_billing_email();
-    $phone = $order->get_billing_phone();
-    $shipping_type = $order->get_shipping_method();
-    $shipping_cost = $order->get_total_shipping();
+	// get order object and order details
+	$order = new WC_Order( $order_id );
+	$email = $order->get_billing_email();
+	$phone = $order->get_billing_phone();
+	$shipping_type = $order->get_shipping_method();
+	$shipping_cost = $order->get_total_shipping();
 
-    // set the address fields
-    $address = array(
+	// set the address fields
+	$address = array(
 		'billing_first_name' => $order->get_billing_first_name(),
 		'billing_last_name' => $order->get_billing_last_name(),
 		'billing_company' => $order->get_billing_company(),
@@ -267,112 +267,162 @@ function wdm_send_order_to_ext( $order_id ){
 		'shipping_state' => $order->get_shipping_state(),
 		'shipping_postcode' => $order->get_shipping_postcode()
 	);
-    
-    // get coupon information (if applicable)
-    $cps = array();
-    $cps = $order->get_items( 'coupon' );
-    
-    $coupon = array();
-    foreach($cps as $cp){
-            // get coupon titles (and additional details if accepted by the API)
-            $coupon[] = $cp['name'];
-    }
-    
-    // get product details
-    $items = $order->get_items();
-    
-    $item_name = array();
-    $item_qty = array();
-    $item_price = array();
-    $item_sku = array();
-        
-    foreach( $items as $key => $item){
-        $item_name[] = $item['name'];
-        $item_qty[] = $item['qty'];
-        $item_price[] = $item['line_total'];
-        $item_tax_class[] = $item['tax_class'];
-        
-        $item_id = $item['product_id'];
-        $product = new WC_Product($item_id);
-        $item_sku[] = $product->get_sku();
-    }
-    
-    /* for online payments, send across the transaction ID/key. If the payment is handled offline, you could send across the order key instead */
-    $transaction_key = get_post_meta( $order_id, '_transaction_id', true );
-    $transaction_key = empty($transaction_key) ? $_GET['key'] : $transaction_key;   
-    
-    // set the username and password
-    $api_username = 'testuser';
-    $api_password = 'testpass';
 
-    // to test out the API, set $api_mode as ‘sandbox’
-    $api_mode = 'sandbox';
-    if($api_mode == 'sandbox'){
-        // sandbox URL example
-        $endpoint = "https://enjmrt90ud4b.x.pipedream.net/";
-    }
-    else{
-        // production URL example
-        $endpoint = "http://example.com/"; 
-    }
+	// get coupon information (if applicable)
+	$cps = array();
+	$cps = $order->get_items( 'coupon' );
 
-        // setup the data which has to be sent
-    $data = array(
-            'apiuser' => $api_username,
-            'apipass' => $api_password,
-            'customer_email' => $email,
-            'customer_phone' => $phone,
-            'bill_firstname' => $address['billing_first_name'],
-            'bill_surname' => $address['billing_last_name'],
-            'bill_company' => $address['billing_company'],
-            'bill_address1' => $address['billing_address_1'],
-            'bill_address2' => $address['billing_address_2'],
-            'bill_city' => $address['billing_city'],
-            'bill_state' => $address['billing_state'],
-            'bill_postcode' => $address['billing_postcode'],
-            'ship_firstname' => $address['shipping_first_name'],
-            'ship_surname' => $address['shipping_last_name'],
-            'shipping_company' => $address['shipping_company'],
-            'ship_address1' => $address['shipping_address_1'],
-            'ship_address2' => $address['shipping_address_2'],
-            'ship_city' => $address['shipping_city'],
-            'ship_state' => $address['shipping_state'],
-            'ship_postcode' => $address['shipping_postcode'],		
-            'shipping_type' => $shipping_type,
-            'shipping_cost' => $shipping_cost,
-            'item_name' => implode(',', $item_name), 
-            'item_sku' => implode(',', $item_sku), 
-            'item_price' => implode(',', $item_price), 
-            'quantity' => implode(',', $item_qty), 
-            'tax_class' => implode(',', $item_tax_class), 
-            'transaction_key' => $transaction_key,
-            'coupon_code' => implode( ",", $coupon )
-        );
+	$coupon = array();
+	foreach($cps as $cp){
+			// get coupon titles (and additional details if accepted by the API)
+			$coupon[] = $cp['name'];
+	}
 
-            // send API request via cURL
-        $ch = curl_init();
+	// get product details
+	$items = $order->get_items();
 
-        /* set the complete URL, to process the order on the external system. Let’s consider http://example.com/buyitem.php is the URL, which invokes the API */
-        curl_setopt($ch, CURLOPT_URL, $endpoint);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$item_name = array();
+	$item_qty = array();
+	$item_price = array();
+	$item_sku = array();
+
+	foreach( $items as $key => $item){
+		$item_name[] = $item['name'];
+		$item_qty[] = $item['qty'];
+		$item_price[] = $item['line_total'];
+
+		$item_id = $item['product_id'];
+		$product = new WC_Product($item_id);
+		$item_sku[] = $product->get_sku();
+	}
+
+	/* for online payments, send across the transaction ID/key. If the payment is handled offline, you could send across the order key instead */
+	$transaction_key = get_post_meta( $order_id, '_transaction_id', true );
+	$transaction_key = empty($transaction_key) ? $_GET['key'] : $transaction_key;
+
+	// set the username and password
+	$api_username = 'testuser';
+	$api_password = 'testpass';
+
+	// to test out the API, set $api_mode as ‘sandbox’
+	$api_mode = 'sandbox';
+	if($api_mode == 'sandbox'){
+		// sandbox URL example
+		$endpoint = "https://enjmrt90ud4b.x.pipedream.net/";
+	}
+	else{
+		// production URL example
+		$endpoint = "http://example.com/"; 
+	}
+
+	// setup the data which has to be sent
+	$data = array(
+		'apiuser' => $api_username,
+		'apipass' => $api_password,
+		'customer_email' => $email,
+		'customer_phone' => $phone,
+		'bill_firstname' => $address['billing_first_name'],
+		'bill_surname' => $address['billing_last_name'],
+		'bill_company' => $address['billing_company'],
+		'bill_address1' => $address['billing_address_1'],
+		'bill_address2' => $address['billing_address_2'],
+		'bill_city' => $address['billing_city'],
+		'bill_state' => $address['billing_state'],
+		'bill_postcode' => $address['billing_postcode'],
+		'ship_firstname' => $address['shipping_first_name'],
+		'ship_surname' => $address['shipping_last_name'],
+		'shipping_company' => $address['shipping_company'],
+		'ship_address1' => $address['shipping_address_1'],
+		'ship_address2' => $address['shipping_address_2'],
+		'ship_city' => $address['shipping_city'],
+		'ship_state' => $address['shipping_state'],
+		'ship_postcode' => $address['shipping_postcode'],	
+		'shipping_type' => $shipping_type,
+		'shipping_cost' => $shipping_cost,
+		'item_name' => implode(',', $item_name),
+		'item_sku' => implode(',', $item_sku),
+		'item_price' => implode(',', $item_price),
+		'quantity' => implode(',', $item_qty),
+		'transaction_key' => $transaction_key,
+		'coupon_code' => implode( ",", $coupon )
+	);
+
+	// send API request via cURL
+	$ch = curl_init();
+
+	/* set the complete URL, to process the order on the external system. Let’s consider http://example.com/buyitem.php is the URL, which invokes the API */
+	curl_setopt($ch, CURLOPT_URL, $endpoint);
+	curl_setopt($ch, CURLOPT_POST, 1);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+	$response = curl_exec ($ch);
+
+	curl_close ($ch);
+
+	// the handle response    
+	if (strpos($response,'ERROR') !== false) {
+		print_r($response);
+	} else {
+		// success
+		print_r($data);
+		echo  nl2br (" \n \n ");
+		foreach( $items as $key => $item){
+			print_r($item);
+		}
+	}
+	
+	// Open temp file pointer
+    if (!$fp = fopen('php://temp', 'w+')) return FALSE;
     
-        $response = curl_exec ($ch);
+    fputcsv($fp, $data);
     
-        curl_close ($ch);
-        
-        // the handle response    
-        if (strpos($response,'ERROR') !== false) {
-			print_r($response);
-        } else {
-			// success
-			print_r($data);
-			echo  nl2br (" \n \n ");
-			foreach( $items as $key => $item){
-				print_r($item);
-			}
-        }
- }
+    // Loop data and write to file pointer
+//    while ($line = mysql_fetch_assoc($data)) fputcsv($fp, $line);
+    
+    // Place stream pointer at beginning
+    rewind($fp);
+
+    // Return the data
+    stream_get_contents($fp);
+}
+
+function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk', $subject = 'Website Report', $from = 'noreply@chesneys-test-uk.tk') {
+
+    // This will provide plenty adequate entropy
+    $multipartSep = '-----'.md5(time()).'-----';
+
+    // Arrays are much more readable
+    $headers = array(
+        "From: $from",
+        "Reply-To: $from",
+        "Content-Type: multipart/mixed; boundary=".$multipartSep.""
+    );
+
+    // Make the attachment
+    $attachment = chunk_split(base64_encode($csvData));
+
+    // Make the body of the message
+    $body = "--$multipartSep\r\n"
+        . "Content-Type: text/plain; charset=ISO-8859-1; format=flowed\r\n"
+        . "Content-Transfer-Encoding: 7bit\r\n"
+        . "\r\n"
+        . "$body\r\n"
+        . "--$multipartSep\r\n"
+        . "Content-Type: text/csv\r\n"
+        . "Content-Transfer-Encoding: base64\r\n"
+        . "Content-Disposition: attachment; filename=\"".$subject."\"\r\n\r\n"
+        . "\r\n"
+        . "$attachment\r\n"
+        . "--$multipartSep--";
+
+    // Send the email, return the result
+    return @mail($to, $subject, $body, implode("\r\n", $headers)); 
+
+}
+
+$array = array(array(1,2,3,4,5,6,7), array(1,2,3,4,5,6,7), array(1,2,3,4,5,6,7));
+
+send_csv_mail($array, "Website Report \r\n \r\n www.carlofontanos.com");
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
