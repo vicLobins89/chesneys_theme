@@ -294,7 +294,6 @@ function wdm_send_order_to_ext( $order_id ){
 		$product = new WC_Product($item_id);
 		$item_sku[] = $product->get_sku();
 		$item_attr[] = $product->get_attributes();
-		$product_attr = $product->get_attributes();
 	}
 
 	/* for online payments, send across the transaction ID/key. If the payment is handled offline, you could send across the order key instead */
@@ -370,10 +369,11 @@ function wdm_send_order_to_ext( $order_id ){
 		print_r($data);
 		echo  nl2br (" \n \n ");
 		foreach( $items as $key => $item){
-			print_r($item);
+			$item_id = $item['product_id'];
+			$product = new WC_Product($item_id);
+			$product_attr = $product->get_attributes();
+			echo var_dump( $product_attr );
 		}
-		echo  nl2br (" \n \n ");
-		echo var_dump( $product_attr );
 	}
 	
 //	send_csv_mail($data, "Report");
