@@ -239,7 +239,7 @@ add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 // API
 /* after an order has been processed, we will use the  'woocommerce_thankyou' hook, to add our function, to send the data */
-add_action('woocommerce_thankyou', 'wdm_send_order_to_ext'); 
+//add_action('woocommerce_thankyou', 'wdm_send_order_to_ext'); 
 function wdm_send_order_to_ext( $order_id ){
 	// get order object and order details
 	$order = new WC_Order( $order_id );
@@ -317,8 +317,8 @@ function wdm_send_order_to_ext( $order_id ){
 
 	// setup the data which has to be sent
 	$data = array(
-		'apiuser' => $api_username,
-		'apipass' => $api_password,
+//		'apiuser' => $api_username,
+//		'apipass' => $api_password,
 		'customer_email' => $email,
 		'customer_phone' => $phone,
 		'bill_firstname' => $address['billing_first_name'],
@@ -347,34 +347,44 @@ function wdm_send_order_to_ext( $order_id ){
 		'transaction_key' => $transaction_key,
 		'coupon_code' => implode( ",", $coupon )
 	);
+	
+	$url = 'https://enjmrt90ud4b.x.pipedream.net/';
+	wp_remote_post( $url, 
+		array(
+			'headers'   => array('Content-Type' => 'application/json; charset=utf-8'),
+			'method'    => 'POST',
+			'timeout' 	=> 75,				    
+			'body'		=> json_encode($data),
+		)
+	);
 
 	// send API request via cURL
-	$ch = curl_init();
+//	$ch = curl_init();
 
 	/* set the complete URL, to process the order on the external system. Let’s consider http://example.com/buyitem.php is the URL, which invokes the API */
-	curl_setopt($ch, CURLOPT_URL, $endpoint);
-	curl_setopt($ch, CURLOPT_POST, 1);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//	curl_setopt($ch, CURLOPT_URL, $endpoint);
+//	curl_setopt($ch, CURLOPT_POST, 1);
+//	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+//	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-	$response = curl_exec ($ch);
+//	$response = curl_exec ($ch);
 
-	curl_close ($ch);
+//	curl_close ($ch);
 
 	// the handle response    
-	if (strpos($response,'ERROR') !== false) {
-		print_r($response);
-	} else {
-		// success
-		print_r($data);
-		echo  nl2br (" \n \n ");
-		foreach( $items as $key => $item){
-			$item_id = $item['product_id'];
-			$product = new WC_Product($item_id);
-			$product_attr = $product->get_attributes();
-			echo var_dump( $product_attr );
-		}
-	}
+//	if (strpos($response,'ERROR') !== false) {
+//		print_r($response);
+//	} else {
+//		// success
+//		print_r($data);
+//		echo  nl2br (" \n \n ");
+//		foreach( $items as $key => $item){
+//			$item_id = $item['product_id'];
+//			$product = new WC_Product($item_id);
+//			$product_attr = $product->get_attributes();
+//			echo var_dump( $product_attr );
+//		}
+//	}
 	
 //	send_csv_mail($data, "Report");
 }
