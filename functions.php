@@ -243,35 +243,30 @@ add_action('woocommerce_thankyou', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
     // get order object and order details
     $order = new WC_Order( $order_id );
-	
-//	$first_name = $order->get_billing_first_name();
-//	$last_name = $order->get_billing_last_name();
     $email = $order->get_billing_email();
     $phone = $order->get_billing_phone();
-	
     $shipping_type = $order->get_shipping_method();
     $shipping_cost = $order->get_total_shipping();
 
     // set the address fields
-    $address_fields = array(
-        'first_name',
-        'last_name',
-        'company',
-        'address_1',
-        'address_2',
-        'city',
-        'state',
-        'postcode',
-		'country',
+    $address = array(
+		'billing_first_name' => $order->get_billing_first_name(),
+		'billing_last_name' => $order->get_billing_last_name(),
+		'billing_company' => $order->get_billing_company(),
+		'billing_address_1' => $order->get_billing_address_1(),
+		'billing_address_2' => $order->get_billing_address_2(),
+		'billing_city' => $order->get_billing_city(),
+		'billing_state' => $order->get_billing_state(),
+		'billing_postcode' => $order->get_billing_postcode(),
+		'shipping_first_name' => $order->get_shipping_first_name(),
+		'shipping_last_name' => $order->get_shipping_last_name(),
+		'shipping_company' => $order->get_shipping_company(),
+		'shipping_address_1' => $order->get_shipping_address_1(),
+		'shipping_address_2' => $order->get_shipping_address_2(),
+		'shipping_city' => $order->get_shipping_city(),
+		'shipping_state' => $order->get_shipping_state(),
+		'shipping_postcode' => $order->get_shipping_postcode()
 	);
-
-    $address = array();
-    if(is_array($address_fields)){
-        foreach($address_fields as $field){
-            $address['billing_'.$field] = call_user_func($order->get_billing_ . $fields);
-            $address['shipping_'.$field] = call_user_func($order->get_shipping_ . $fields);
-        }
-    }
     
     // get coupon information (if applicable)
     $cps = array();
@@ -313,7 +308,7 @@ function wdm_send_order_to_ext( $order_id ){
     $api_mode = 'sandbox';
     if($api_mode == 'sandbox'){
         // sandbox URL example
-        $endpoint = "https://enjmrt90ud4b.x.pipedream.net/"; 
+        $endpoint = "https://enjmrt90ud4b.x.pipedream.net/";
     }
     else{
         // production URL example
@@ -326,23 +321,22 @@ function wdm_send_order_to_ext( $order_id ){
             'apipass' => $api_password,
             'customer_email' => $email,
             'customer_phone' => $phone,
-		
             'bill_firstname' => $address['billing_first_name'],
             'bill_surname' => $address['billing_last_name'],
+            'bill_company' => $address['billing_company'],
             'bill_address1' => $address['billing_address_1'],
             'bill_address2' => $address['billing_address_2'],
             'bill_city' => $address['billing_city'],
             'bill_state' => $address['billing_state'],
-            'bill_zip' => $address['billing_postcode'],
-		
+            'bill_postcode' => $address['billing_postcode'],
             'ship_firstname' => $address['shipping_first_name'],
             'ship_surname' => $address['shipping_last_name'],
+            'shipping_company' => $address['shipping_company'],
             'ship_address1' => $address['shipping_address_1'],
             'ship_address2' => $address['shipping_address_2'],
             'ship_city' => $address['shipping_city'],
             'ship_state' => $address['shipping_state'],
-            'ship_zip' => $address['shipping_postcode'],
-		
+            'ship_postcode' => $address['shipping_postcode'],		
             'shipping_type' => $shipping_type,
             'shipping_cost' => $shipping_cost,
             'item_name' => implode(',', $item_name), 
@@ -368,10 +362,12 @@ function wdm_send_order_to_ext( $order_id ){
         
         // the handle response    
         if (strpos($response,'ERROR') !== false) {
-                print_r($response);
+			print_r($response);
         } else {
-                // success
+			// success
 			print_r($data);
+			echo '\n \n';
+			print_r($items);
         }
  }
 
