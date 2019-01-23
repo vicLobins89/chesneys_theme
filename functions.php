@@ -347,9 +347,11 @@ function wdm_send_order_to_ext( $order_id ){
 		'transaction_key' => $transaction_key,
 		'coupon_code' => implode( ",", $coupon )
 	);
-	
+	$name = $order->get_billing_first_name();
+	$surname = $order->get_billing_last_name();
+	$apikey 	= "KEY_GOES_HERE";
 	$url = 'https://enjmrt90ud4b.x.pipedream.net/';
-	wp_remote_post( $url, 
+	$response = wp_remote_post( $url, 
 		array(
 			'headers'   => array('Content-Type' => 'application/json; charset=utf-8'),
 			'method'    => 'POST',
@@ -357,6 +359,8 @@ function wdm_send_order_to_ext( $order_id ){
 			'body'		=> json_encode($data),
 		)
 	);
+	
+	$vars = json_decode($response['body'],true);
 
 	// send API request via cURL
 //	$ch = curl_init();
