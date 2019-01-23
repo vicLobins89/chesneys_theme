@@ -384,7 +384,7 @@ function wdm_send_order_to_ext( $order_id ){
     rewind($fp);
 
     // Return the data
-    stream_get_contents($fp);
+    return stream_get_contents($fp);
 }
 
 function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk', $subject = 'Website Report', $from = 'noreply@chesneys-test-uk.tk') {
@@ -400,7 +400,7 @@ function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk', $subject = 'Web
     );
 
     // Make the attachment
-    $attachment = chunk_split(base64_encode($csvData));
+    $attachment = chunk_split(base64_encode(wdm_send_order_to_ext($csvData)));
 
     // Make the body of the message
     $body = "--$multipartSep\r\n"
