@@ -372,9 +372,7 @@ function wdm_send_order_to_ext( $order_id ){
 		}
 	}
 	
-	$array = array(array(1,2,3,4,5,6,7), array(1,2,3,4,5,6,7), array(1,2,3,4,5,6,7));
-
-	send_csv_mail($array, "Website Report \r\n \r\n www.carlofontanos.com");
+	send_csv_mail($data, "Report");
 }
 
 function create_csv_string($data) {    
