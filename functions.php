@@ -268,8 +268,8 @@ function wdm_send_order_to_ext( $order_id ){
     $address = array();
     if(is_array($address_fields)){
         foreach($address_fields as $field){
-            $address['billing_'.$field] = call_user_func('$order->get_billing_' . $fields);
-            $address['shipping_'.$field] = call_user_func('$order->get_shipping_' . $fields);
+            $address['billing_'.$field] = call_user_func($order->get_billing_ . $fields);
+            $address['shipping_'.$field] = call_user_func($order->get_shipping_ . $fields);
         }
     }
     
