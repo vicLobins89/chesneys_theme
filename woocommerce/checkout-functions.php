@@ -145,14 +145,13 @@ function send_api_call($data) {
 //	curl_close ($ch);
 
 	// the handle response
-	print_r($response->success);
-//	if (strpos($response,'ERROR') !== false) {
-//		print_r($response);
-//	} else {
-//		// success
-//		print_r($data);
-//		echo  nl2br (" \n \n ");
-//	}
+	if ($response->success != 1) {
+		print_r($response);
+	} else {
+		// success
+		print_r($data);
+		echo  nl2br (" \n \n ");
+	}
 }
 
 function create_csv_string($data) {    
