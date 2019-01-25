@@ -144,14 +144,15 @@ function send_api_call($data) {
 //
 //	curl_close ($ch);
 
-	// the handle response    
-	if (strpos($response,'ERROR') !== false) {
-		print_r($response);
-	} else {
-		// success
-		print_r($data);
-		echo  nl2br (" \n \n ");
-	}
+	// the handle response
+	print_r($response);
+//	if (strpos($response,'ERROR') !== false) {
+//		print_r($response);
+//	} else {
+//		// success
+//		print_r($data);
+//		echo  nl2br (" \n \n ");
+//	}
 }
 
 function create_csv_string($data) {    
