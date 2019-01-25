@@ -157,8 +157,36 @@ function send_api_call($data) {
 function create_csv_string($data) {    
 	// Open temp file pointer
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
-
-	fputcsv($fp, array('ID', 'Company', 'Name', 'Company Account Number', 'Email', 'Phone Number', 'Invoice'));
+			
+	fputcsv($fp, array(
+		'customer_email',
+		'customer_phone',
+		'bill_firstname',
+		'bill_surname',
+		'bill_company',
+		'bill_address1',
+		'bill_address2',
+		'bill_city',
+		'bill_state',
+		'bill_postcode',
+		'ship_firstname',
+		'ship_surname',
+		'shipping_company',
+		'ship_address1',
+		'ship_address2',
+		'ship_city',
+		'ship_state',
+		'ship_postcode',	
+		'shipping_type',
+		'shipping_cost',
+		'item_name',
+		'item_sku',
+		'item_ship_class',
+		'item_price',
+		'quantity',
+		'transaction_key',
+		'coupon_code'
+	));
 	fputcsv($fp, $data);
 
 	// Place stream pointer at beginning
@@ -200,7 +228,6 @@ function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'norep
 
 	// Send the email, return the result
 	return @mail($to, $subject, $body, implode("\r\n", $headers)); 
-
 }
 
 ?>
