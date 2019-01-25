@@ -49,12 +49,13 @@ function wdm_send_order_to_ext( $order_id ){
 	$item_price = array();
 	$item_sku = array();
 
-	foreach( $items as $key => $item){
+	foreach( $items as $key => $item) {
+		$product = new WC_Product($item_id);
+		
 		$item_name[] = $item['name'];
 		$item_qty[] = $item['qty'];
 		$item_price[] = $item['line_total'];
 		$item_id = $item['product_id'];
-		$product = new WC_Product($item_id);
 		$item_sku[] = $product->get_sku();
 		$item_ship_class[] = $product->get_shipping_class();
 	}
@@ -105,7 +106,6 @@ function wdm_send_order_to_ext( $order_id ){
 		'item_name' => implode(',', $item_name),
 		'item_sku' => implode(',', $item_sku),
 		'item_ship_class' => implode(',', $item_ship_class),
-		'item_attr' => $item_attr,
 		'item_price' => implode(',', $item_price),
 		'quantity' => implode(',', $item_qty),
 		'transaction_key' => $transaction_key,
@@ -132,6 +132,7 @@ function wdm_send_order_to_ext( $order_id ){
 		// success
 		print_r($data);
 		echo  nl2br (" \n \n ");
+		print_r($product);
 	}
 
 //	$options = array(
