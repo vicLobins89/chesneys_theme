@@ -37,8 +37,8 @@ function wdm_send_order_to_ext( $order_id ){
 
 	$coupon = array();
 	foreach($cps as $cp){
-			// get coupon titles (and additional details if accepted by the API)
-			$coupon[] = $cp['name'];
+		// get coupon titles (and additional details if accepted by the API)
+		$coupon[] = $cp['name'];
 	}
 
 	// get product details
@@ -48,14 +48,15 @@ function wdm_send_order_to_ext( $order_id ){
 	$item_qty = array();
 	$item_price = array();
 	$item_sku = array();
+	$item_ship_class = array();
 
 	foreach( $items as $key => $item) {
 		$product = new WC_Product($item_id);
+		$item_id = $item['product_id'];
 		
 		$item_name[] = $item['name'];
 		$item_qty[] = $item['qty'];
 		$item_price[] = $item['line_total'];
-		$item_id = $item['product_id'];
 		$item_sku[] = $product->get_sku();
 		$item_ship_class[] = $product->get_shipping_class();
 	}
@@ -70,11 +71,10 @@ function wdm_send_order_to_ext( $order_id ){
 
 	// to test out the API, set $api_mode as ‘sandbox’
 	$api_mode = 'sandbox';
-	if($api_mode == 'sandbox'){
+	if($api_mode == 'sandbox') {
 		// sandbox URL example
 		$endpoint = "https://enjmrt90ud4b.x.pipedream.net/";
-	}
-	else{
+	} else {
 		// production URL example
 		$endpoint = "http://example.com/"; 
 	}
@@ -112,6 +112,11 @@ function wdm_send_order_to_ext( $order_id ){
 		'coupon_code' => implode( ",", $coupon )
 	);
 
+	send_api_call($data);
+//	send_csv_mail($data, "Report");
+}
+
+function send_api_call($data) {
 	// send API request via cURL
 	$ch = curl_init();
 
@@ -132,10 +137,6 @@ function wdm_send_order_to_ext( $order_id ){
 		// success
 		print_r($data);
 		echo  nl2br (" \n \n ");
-		foreach( $items as $key => $item) {
-			$product = new WC_Product($item_id);
-			print_r($product);
-		}
 	}
 
 //	$options = array(
@@ -150,8 +151,6 @@ function wdm_send_order_to_ext( $order_id ){
 //	$context  = stream_context_create( $options );
 //	$result = file_get_contents( $url, false, $context );
 //	$response = json_decode( $result );
-
-//	send_csv_mail($data, "Report");
 }
 
 function create_csv_string($data) {    
