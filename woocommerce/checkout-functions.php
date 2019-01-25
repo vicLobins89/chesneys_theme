@@ -65,20 +65,6 @@ function wdm_send_order_to_ext( $order_id ){
 	$transaction_key = get_post_meta( $order_id, '_transaction_id', true );
 	$transaction_key = empty($transaction_key) ? $_GET['key'] : $transaction_key;
 
-	// set the username and password
-	$api_username = 'testuser';
-	$api_password = 'testpass';
-
-	// to test out the API, set $api_mode as ‘sandbox’
-	$api_mode = 'sandbox';
-	if($api_mode == 'sandbox') {
-		// sandbox URL example
-		$endpoint = "https://enjmrt90ud4b.x.pipedream.net/";
-	} else {
-		// production URL example
-		$endpoint = "http://example.com/"; 
-	}
-
 	// setup the data which has to be sent
 	$data = array(
 //		'apiuser' => $api_username,
@@ -117,6 +103,20 @@ function wdm_send_order_to_ext( $order_id ){
 }
 
 function send_api_call($data) {
+	// set the username and password
+	$api_username = 'testuser';
+	$api_password = 'testpass';
+
+	// to test out the API, set $api_mode as ‘sandbox’
+	$api_mode = 'sandbox';
+	if($api_mode == 'sandbox') {
+		// sandbox URL example
+		$endpoint = "https://en753nenvvx5c.x.pipedream.net/";
+	} else {
+		// production URL example
+		$endpoint = "http://example.com/"; 
+	}
+	
 	// send API request via cURL
 	$ch = curl_init();
 
