@@ -51,8 +51,8 @@ function wdm_send_order_to_ext( $order_id ){
 	$item_ship_class = array();
 
 	foreach( $items as $key => $item) {
-		$product = new WC_Product($item_id);
 		$item_id = $item['product_id'];
+		$product = new WC_Product($item_id);
 		
 		$item_name[] = $item['name'];
 		$item_qty[] = $item['qty'];
@@ -117,18 +117,32 @@ function send_api_call($data) {
 		$endpoint = "http://example.com/"; 
 	}
 	
+	// JSON
+	$options = array(
+	  'http' => array(
+		'method'  => 'POST',
+		'content' => json_encode( $data ),
+		'header'=>  "Content-Type: application/json\r\n" .
+					"Accept: application/json\r\n"
+		)
+	);
+
+	$context  = stream_context_create( $options );
+	$result = file_get_contents( $endpoint, false, $context );
+	$response = json_decode( $result );
+	
 	// send API request via cURL
-	$ch = curl_init();
-
-	/* set the complete URL, to process the order on the external system. Let’s consider http://example.com/buyitem.php is the URL, which invokes the API */
-	curl_setopt($ch, CURLOPT_URL, $endpoint);
-	curl_setopt($ch, CURLOPT_POST, 1);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-	$response = curl_exec ($ch);
-
-	curl_close ($ch);
+//	$ch = curl_init();
+//
+//	/* set the complete URL, to process the order on the external system. Let’s consider http://example.com/buyitem.php is the URL, which invokes the API */
+//	curl_setopt($ch, CURLOPT_URL, $endpoint);
+//	curl_setopt($ch, CURLOPT_POST, 1);
+//	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+//	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//
+//	$response = curl_exec ($ch);
+//
+//	curl_close ($ch);
 
 	// the handle response    
 	if (strpos($response,'ERROR') !== false) {
@@ -138,19 +152,6 @@ function send_api_call($data) {
 		print_r($data);
 		echo  nl2br (" \n \n ");
 	}
-
-//	$options = array(
-//	  'http' => array(
-//		'method'  => 'POST',
-//		'content' => json_encode( $data ),
-//		'header'=>  "Content-Type: application/json\r\n" .
-//					"Accept: application/json\r\n"
-//		)
-//	);
-//
-//	$context  = stream_context_create( $options );
-//	$result = file_get_contents( $url, false, $context );
-//	$response = json_decode( $result );
 }
 
 function create_csv_string($data) {    
