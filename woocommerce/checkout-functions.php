@@ -98,8 +98,8 @@ function wdm_send_order_to_ext( $order_id ){
 		'coupon_code' => implode( ",", $coupon )
 	);
 
-	send_api_call($data);
-//	send_csv_mail($data, "Report");
+//	send_api_call($d);
+	send_csv_mail($data, "Report");
 }
 
 function send_api_call($data) {
