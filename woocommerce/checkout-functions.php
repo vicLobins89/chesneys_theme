@@ -145,7 +145,7 @@ function send_api_call($data) {
 //	curl_close ($ch);
 
 	// the handle response
-	print_r($response);
+	print_r($response->success);
 //	if (strpos($response,'ERROR') !== false) {
 //		print_r($response);
 //	} else {
