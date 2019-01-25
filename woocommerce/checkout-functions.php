@@ -56,7 +56,7 @@ function wdm_send_order_to_ext( $order_id ){
 		$item_id = $item['product_id'];
 		$product = new WC_Product($item_id);
 		$item_sku[] = $product->get_sku();
-		$item_attr = $product->get_attributes();
+		$item_ship_class[] = $product->get_shipping_class();
 	}
 
 	/* for online payments, send across the transaction ID/key. If the payment is handled offline, you could send across the order key instead */
@@ -104,6 +104,7 @@ function wdm_send_order_to_ext( $order_id ){
 		'shipping_cost' => $shipping_cost,
 		'item_name' => implode(',', $item_name),
 		'item_sku' => implode(',', $item_sku),
+		'item_ship_class' => implode(',', $item_ship_class),
 		'item_attr' => $item_attr,
 		'item_price' => implode(',', $item_price),
 		'quantity' => implode(',', $item_qty),
