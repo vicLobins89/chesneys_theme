@@ -131,6 +131,7 @@ function wdm_send_order_to_ext( $order_id ){
 		// success
 		print_r($data);
 		echo  nl2br (" \n \n ");
+		print_r($items);
 	}
 
 //	$options = array(
