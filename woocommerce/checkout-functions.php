@@ -132,7 +132,10 @@ function wdm_send_order_to_ext( $order_id ){
 		// success
 		print_r($data);
 		echo  nl2br (" \n \n ");
-		print_r($product);
+		foreach( $items as $key => $item) {
+			$product = new WC_Product($item_id);
+			print_r($product);
+		}
 	}
 
 //	$options = array(
