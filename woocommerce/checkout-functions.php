@@ -89,17 +89,22 @@ function wdm_send_order_to_ext( $order_id ){
 		'ship_postcode' => $address['shipping_postcode'],	
 		'shipping_type' => $shipping_type,
 		'shipping_cost' => $shipping_cost,
+		'transaction_key' => $transaction_key,
+		'coupon_code' => implode( ",", $coupon )
+	);
+	
+	$itemDetails = array(
+		'shipping_type' => $shipping_type,
+		'shipping_cost' => $shipping_cost,
 		'item_name' => implode(',', $item_name),
 		'item_sku' => implode(',', $item_sku),
 		'item_ship_class' => implode(',', $item_ship_class),
 		'item_price' => implode(',', $item_price),
 		'quantity' => implode(',', $item_qty),
-		'transaction_key' => $transaction_key,
-		'coupon_code' => implode( ",", $coupon )
 	);
 
 //	send_api_call($d);
-	send_csv_mail($data, "Report");
+	send_csv_mail($data, $itemDetails, "Report");
 }
 
 function send_api_call($data) {
@@ -154,7 +159,7 @@ function send_api_call($data) {
 	}
 }
 
-function create_csv_string($data) {    
+function create_csv_string($data, $itemDetails) {    
 	// Open temp file pointer
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
 			
@@ -188,6 +193,10 @@ function create_csv_string($data) {
 		'coupon_code'
 	));
 	fputcsv($fp, $data);
+	fputcsv($fp, array(
+		'Item'
+	));
+	fputcsv($fp, $itemDetails);
 
 	// Place stream pointer at beginning
 	rewind($fp);
@@ -197,7 +206,7 @@ function create_csv_string($data) {
 
 }
 
-function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys-test-uk.tk', $subject = 'Test email with attachment') {
+function send_csv_mail($csvData, $itemDetails, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys-test-uk.tk', $subject = 'Test email with attachment') {
 
 	// This will provide plenty adequate entropy
 	$multipartSep = '-----'.md5(time()).'-----';
@@ -210,7 +219,7 @@ function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'norep
 	  );
 
 	// Make the attachment
-	$attachment = chunk_split(base64_encode(create_csv_string($csvData))); 
+	$attachment = chunk_split(base64_encode(create_csv_string($csvData, $itemDetails))); 
 
 	// Make the body of the message
 	$body = "--$multipartSep\r\n"
