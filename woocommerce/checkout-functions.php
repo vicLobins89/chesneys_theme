@@ -90,9 +90,9 @@ function wdm_send_order_to_ext( $order_id ){
 			'quantity' => $item['qty'],
 		);
 		
-		if( $product->get_shipping_class() == 'barnbury' ) {
-			send_csv_mail($data, "Product Order ");
-		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
+		if( WC_Product::get_shipping_class() == 'barnbury' ) {
+			send_csv_mail($data);
+		} elseif ( WC_Product::get_shipping_class() == 'northamptonshire' ) {
 			send_api_call($data);
 		}
 	}
