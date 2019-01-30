@@ -43,23 +43,11 @@ function wdm_send_order_to_ext( $order_id ){
 
 	// get product details
 	$items = $order->get_items();
-
-	$item_name = array();
-	$item_qty = array();
-	$item_price = array();
-	$item_sku = array();
-	$item_ship_class = array();
-	$itemDetails;
+	$itemDetails = array();
 
 	foreach( $items as $key => $item) {
 		$item_id = $item['product_id'];
 		$product = new WC_Product($item_id);
-		
-		$item_name[] = $item['name'];
-		$item_qty[] = $item['qty'];
-		$item_price[] = $item['line_total'];
-		$item_sku[] = $product->get_sku();
-		$item_ship_class[] = $product->get_shipping_class();
 		
 		$itemDetails = array(
 			'item_name' => $item['name'],
