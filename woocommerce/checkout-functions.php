@@ -93,7 +93,7 @@ function wdm_send_order_to_ext( $order_id ){
 	
 
 //	send_api_call($data);
-	send_csv_mail($data, "Report");
+	send_csv_mail($data, "Product Order ");
 }
 
 function send_api_call($data) {
@@ -157,7 +157,9 @@ function create_csv_string($data) {
 	
 	fputcsv($fp, array(NULL,NULL,NULL));
 	
-	fputcsv($fp, array_keys($items));
+	fputcsv($fp, array(
+		'Product Name','SKU','Shipping Class','Price','QTY'
+	));
 	foreach($items as $key => $value) {
 		fputcsv($fp, $value);
 	}
@@ -170,7 +172,9 @@ function create_csv_string($data) {
 
 }
 
-function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys-test-uk.tk', $subject = 'Test email with attachment') {
+function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
+	
+	$today = date("d-m-y");
 
 	// This will provide plenty adequate entropy
 	$multipartSep = '-----'.md5(time()).'-----';
@@ -180,7 +184,7 @@ function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'norep
 		"From: $from",
 		"Reply-To: $from",
 		"Content-Type: multipart/mixed; boundary=\"$multipartSep\""
-	  );
+	);
 
 	// Make the attachment
 	$attachment = chunk_split(base64_encode(create_csv_string($csvData))); 
@@ -194,7 +198,7 @@ function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'norep
 		. "--$multipartSep\r\n"
 		. "Content-Type: text/csv\r\n"
 		. "Content-Transfer-Encoding: base64\r\n"
-		. "Content-Disposition: attachment; filename=\"AFILE.csv\"\r\n"
+		. "Content-Disposition: attachment; filename=\"Order_Sheet_$today.csv\"\r\n"
 		. "\r\n"
 		. "$attachment\r\n"
 		. "--$multipartSep--";
