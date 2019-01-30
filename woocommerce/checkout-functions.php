@@ -67,6 +67,10 @@ function wdm_send_order_to_ext( $order_id ){
 	
 	$itemDetails = array(
 		'item_name' => $item_name,
+		'item_sku' => $item_sku,
+		'item_ship_class' => $item_ship_class,
+		'item_price' => $item_price,
+		'quantity' => $item_qty,
 	);
 	
 	// setup the data which has to be sent
