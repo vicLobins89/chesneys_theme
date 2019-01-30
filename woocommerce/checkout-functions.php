@@ -154,12 +154,13 @@ function create_csv_string($data) {
 	
 	fputcsv($fp, array_keys($data));
 	fputcsv($fp, $data);
-	fputcsv($fp, $items);
 	
-//	fputcsv($fp, array_keys($items));
-//	foreach($items as $key => $value) {
-//		fputcsv($fp, $value);
-//	}
+	fputcsv($fp, array(NULL,NULL,NULL));
+	
+	fputcsv($fp, array_keys($items));
+	foreach($items as $key => $value) {
+		fputcsv($fp, $value);
+	}
 
 	// Place stream pointer at beginning
 	rewind($fp);
