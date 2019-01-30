@@ -149,35 +149,36 @@ function create_csv_string($data, $itemDetails) {
 	// Open temp file pointer
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
 			
-	fputcsv($fp, array(
-		'customer_email',
-		'customer_phone',
-		'bill_firstname',
-		'bill_surname',
-		'bill_company',
-		'bill_address1',
-		'bill_address2',
-		'bill_city',
-		'bill_state',
-		'bill_postcode',
-		'ship_firstname',
-		'ship_surname',
-		'shipping_company',
-		'ship_address1',
-		'ship_address2',
-		'ship_city',
-		'ship_state',
-		'ship_postcode',	
-		'shipping_type',
-		'shipping_cost',
-		'item_name',
-		'item_sku',
-		'item_ship_class',
-		'item_price',
-		'quantity',
-		'transaction_key',
-		'coupon_code'
-	));
+//	fputcsv($fp, array(
+//		'customer_email',
+//		'customer_phone',
+//		'bill_firstname',
+//		'bill_surname',
+//		'bill_company',
+//		'bill_address1',
+//		'bill_address2',
+//		'bill_city',
+//		'bill_state',
+//		'bill_postcode',
+//		'ship_firstname',
+//		'ship_surname',
+//		'shipping_company',
+//		'ship_address1',
+//		'ship_address2',
+//		'ship_city',
+//		'ship_state',
+//		'ship_postcode',	
+//		'shipping_type',
+//		'shipping_cost',
+//		'item_name',
+//		'item_sku',
+//		'item_ship_class',
+//		'item_price',
+//		'quantity',
+//		'transaction_key',
+//		'coupon_code'
+//	));
+	fputcsv($fp, array_keys(data));
 	fputcsv($fp, $data);
 	fputcsv($fp, array(
 		'Item'
