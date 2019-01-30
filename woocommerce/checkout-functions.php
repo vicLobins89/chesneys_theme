@@ -183,9 +183,9 @@ function create_csv_string($data, $itemDetails) {
 		'SKU', 'Shipping Class', 'Price', 'Qty'
 	));
 	
-	foreach($itemDetails as $key => $itemDetail) {
-		fputcsv($fp, $itemDetail[$key]);
-		fputcsv($fp, $itemDetail);
+	foreach($itemDetails as $key => $value) {
+		fputcsv($fp, $key);
+		fputcsv($fp, $value);
 	}
 
 	// Place stream pointer at beginning
