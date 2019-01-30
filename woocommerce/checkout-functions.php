@@ -70,50 +70,30 @@ function wdm_send_order_to_ext( $order_id ){
 		'shipping_type' => $shipping_type,
 		'shipping_cost' => $shipping_cost,
 		'transaction_key' => $transaction_key,
-		'coupon_code' => implode( ",", $coupon )
-//		'items' => $itemDetails
+		'coupon_code' => implode( ",", $coupon ),
+		'items' => $itemDetails
 	);
 
 	// get product details
 	$items = $order->get_items();
-//	$itemDetails = array();
+	$itemDetails = array();
 
 	foreach( $items as $key => $item) {
 		$item_id = $item['product_id'];
 		$product = new WC_Product($item_id);
 		
+		$itemDetails[$item['product_id']] = array(
+			'item_name' => $item['name'],
+			'item_sku' => $product->get_sku(),
+			'item_ship_class' => $product->get_shipping_class(),
+			'item_price' => $item['line_total'],
+			'quantity' => $item['qty'],
+		);
+		
 		if( $product->get_shipping_class() == 'barnbury' ) {
-			
-//			$itemDetails[$item['product_id']] = array(
-//				'item_name' => $item['name'],
-//				'item_sku' => $product->get_sku(),
-//				'item_ship_class' => $product->get_shipping_class(),
-//				'item_price' => $item['line_total'],
-//				'quantity' => $item['qty'],
-//			);
-			
-			$itemDetails = array(
-				'item_name' => $item['name'],
-				'item_sku' => $product->get_sku(),
-				'item_ship_class' => $product->get_shipping_class(),
-				'item_price' => $item['line_total'],
-				'quantity' => $item['qty'],
-			);
-			
-			send_csv_mail($itemDetails, "Product Order ");
-			
+			send_csv_mail($data, "Product Order ");
 		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
-			
-			$itemDetails = array(
-				'item_name' => $item['name'],
-				'item_sku' => $product->get_sku(),
-				'item_ship_class' => $product->get_shipping_class(),
-				'item_price' => $item['line_total'],
-				'quantity' => $item['qty'],
-			);
-			
-			send_csv_mail($itemDetails);
-			
+			send_api_call($data);
 		}
 	}
 	
@@ -182,8 +162,10 @@ function create_csv_string($data) {
 	fputcsv($fp, $data);
 	
 	fputcsv($fp, array(NULL,NULL,NULL));
-	
 	fputcsv($fp, array_keys($allItems));
+	fputcsv($fp, array(
+		'Product Name','SKU','Shipping Class','Price','QTY'
+	));
 	foreach($allItems as $key => $value) {
 		fputcsv($fp, $value);
 	}
