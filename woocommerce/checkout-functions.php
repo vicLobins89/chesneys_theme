@@ -64,7 +64,15 @@ function wdm_send_order_to_ext( $order_id ){
 	/* for online payments, send across the transaction ID/key. If the payment is handled offline, you could send across the order key instead */
 	$transaction_key = get_post_meta( $order_id, '_transaction_id', true );
 	$transaction_key = empty($transaction_key) ? $_GET['key'] : $transaction_key;
-
+	
+	$itemDetails = array(
+		'item_name' => implode(',', $item_name),
+		'item_sku' => implode(',', $item_sku),
+		'item_ship_class' => implode(',', $item_ship_class),
+		'item_price' => implode(',', $item_price),
+		'quantity' => implode(',', $item_qty),
+	);
+	
 	// setup the data which has to be sent
 	$data = array(
 //		'apiuser' => $api_username,
@@ -90,21 +98,13 @@ function wdm_send_order_to_ext( $order_id ){
 		'shipping_type' => $shipping_type,
 		'shipping_cost' => $shipping_cost,
 		'transaction_key' => $transaction_key,
-		'coupon_code' => implode( ",", $coupon )
+		'coupon_code' => implode( ",", $coupon ),
+		'items' => $itemDetails
 	);
 	
-	$itemDetails = array(
-		'shipping_type' => $shipping_type,
-		'shipping_cost' => $shipping_cost,
-		'item_name' => implode(',', $item_name),
-		'item_sku' => implode(',', $item_sku),
-		'item_ship_class' => implode(',', $item_ship_class),
-		'item_price' => implode(',', $item_price),
-		'quantity' => implode(',', $item_qty),
-	);
 
-//	send_api_call($d);
-	send_csv_mail($data, $itemDetails, "Report");
+	send_api_call($data);
+//	send_csv_mail($data, $itemDetails, "Report");
 }
 
 function send_api_call($data) {
@@ -116,7 +116,7 @@ function send_api_call($data) {
 	$api_mode = 'sandbox';
 	if($api_mode == 'sandbox') {
 		// sandbox URL example
-		$endpoint = "https://en753nenvvx5c.x.pipedream.net/";
+		$endpoint = "https://enjqsvm2ajzd.x.pipedream.net";
 	} else {
 		// production URL example
 		$endpoint = "http://example.com/"; 
