@@ -49,7 +49,8 @@ function wdm_send_order_to_ext( $order_id ){
 		$item_id = $item['product_id'];
 		$product = new WC_Product($item_id);
 		
-		$itemDetails[$item['name']] = array(
+		$itemDetails[$item['product_id']] = array(
+			'item_name' => $item['name'],
 			'item_sku' => $product->get_sku(),
 			'item_ship_class' => $product->get_shipping_class(),
 			'item_price' => $item['line_total'],
@@ -92,7 +93,7 @@ function wdm_send_order_to_ext( $order_id ){
 	
 
 //	send_api_call($data);
-	send_csv_mail($data, $itemDetails, "Report");
+	send_csv_mail($data, "Report");
 }
 
 function send_api_call($data) {
@@ -145,44 +146,15 @@ function send_api_call($data) {
 	}
 }
 
-function create_csv_string($data, $itemDetails) {    
+function create_csv_string($data) {    
 	// Open temp file pointer
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
 			
-	fputcsv($fp, array(
-		'customer_email',
-		'customer_phone',
-		'bill_firstname',
-		'bill_surname',
-		'bill_company',
-		'bill_address1',
-		'bill_address2',
-		'bill_city',
-		'bill_state',
-		'bill_postcode',
-		'ship_firstname',
-		'ship_surname',
-		'shipping_company',
-		'ship_address1',
-		'ship_address2',
-		'ship_city',
-		'ship_state',
-		'ship_postcode',	
-		'shipping_type',
-		'shipping_cost',
-		'item_name',
-		'item_sku',
-		'item_ship_class',
-		'item_price',
-		'quantity',
-		'transaction_key',
-		'coupon_code'
-	));
+	fputcsv($fp, array_keys($data));
 	fputcsv($fp, $data);
 	fputcsv($fp, array(
-		'SKU', 'Shipping Class', 'Price', 'Qty'
+		'Product Name', 'SKU', 'Shipping Class', 'Price', 'Qty'
 	));
-	
 	foreach($data['items'] as $key => $value) {
 		fputcsv($fp, $value);
 	}
