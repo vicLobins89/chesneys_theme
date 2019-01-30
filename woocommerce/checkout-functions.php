@@ -167,7 +167,7 @@ function create_csv_string($data) {
 
 }
 
-function send_csv_mail($csvData, $itemDetails, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys-test-uk.tk', $subject = 'Test email with attachment') {
+function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys-test-uk.tk', $subject = 'Test email with attachment') {
 
 	// This will provide plenty adequate entropy
 	$multipartSep = '-----'.md5(time()).'-----';
@@ -180,7 +180,7 @@ function send_csv_mail($csvData, $itemDetails, $body, $to = 'vic@honey.co.uk',  
 	  );
 
 	// Make the attachment
-	$attachment = chunk_split(base64_encode(create_csv_string($csvData, $itemDetails))); 
+	$attachment = chunk_split(base64_encode(create_csv_string($csvData))); 
 
 	// Make the body of the message
 	$body = "--$multipartSep\r\n"
