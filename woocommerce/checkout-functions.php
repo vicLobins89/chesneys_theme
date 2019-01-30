@@ -40,24 +40,7 @@ function wdm_send_order_to_ext( $order_id ){
 		// get coupon titles (and additional details if accepted by the API)
 		$coupon[] = $cp['name'];
 	}
-
-	// get product details
-	$items = $order->get_items();
-	$itemDetails = array();
-
-	foreach( $items as $key => $item) {
-		$item_id = $item['product_id'];
-		$product = new WC_Product($item_id);
-		
-		$itemDetails[$item['product_id']] = array(
-			'item_name' => $item['name'],
-			'item_sku' => $product->get_sku(),
-			'item_ship_class' => $product->get_shipping_class(),
-			'item_price' => $item['line_total'],
-			'quantity' => $item['qty'],
-		);
-	}
-
+	
 	/* for online payments, send across the transaction ID/key. If the payment is handled offline, you could send across the order key instead */
 	$transaction_key = get_post_meta( $order_id, '_transaction_id', true );
 	$transaction_key = empty($transaction_key) ? $_GET['key'] : $transaction_key;
@@ -88,12 +71,36 @@ function wdm_send_order_to_ext( $order_id ){
 		'shipping_cost' => $shipping_cost,
 		'transaction_key' => $transaction_key,
 		'coupon_code' => implode( ",", $coupon ),
-		'items' => $itemDetails
 	);
+
+	// get product details
+	$items = $order->get_items();
+	$itemDetails = array();
+
+	foreach( $items as $key => $item) {
+		$item_id = $item['product_id'];
+		$product = new WC_Product($item_id);
+		
+		$itemDetails[$item['product_id']] = array(
+			'item_name' => $item['name'],
+			'item_sku' => $product->get_sku(),
+			'item_ship_class' => $product->get_shipping_class(),
+			'item_price' => $item['line_total'],
+			'quantity' => $item['qty'],
+		);
+		
+		if( $product->get_shipping_class() == 'barnbury' ) {
+			array_push($data, $itemDetails[$item['product_id']]);
+			send_csv_mail($data, "Product Order ");
+		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
+			array_push($data, $itemDetails[$item['product_id']]);
+			send_api_call($data);
+		}
+	}
 	
 
 //	send_api_call($data);
-	send_csv_mail($data, "Product Order ");
+//	send_csv_mail($data, "Product Order ");
 }
 
 function send_api_call($data) {
