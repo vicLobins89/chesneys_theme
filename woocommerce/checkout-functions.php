@@ -49,7 +49,7 @@ function wdm_send_order_to_ext( $order_id ){
 		$item_id = $item['product_id'];
 		$product = new WC_Product($item_id);
 		
-		$itemDetails = array(
+		$itemDetails[$item['product_id']] = array(
 			'item_name' => $item['name'],
 			'item_sku' => $product->get_sku(),
 			'item_ship_class' => $product->get_shipping_class(),
