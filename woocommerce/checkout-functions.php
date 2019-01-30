@@ -178,15 +178,14 @@ function create_csv_string($data, $itemDetails) {
 		'transaction_key',
 		'coupon_code'
 	));
-	fputcsv($fp, $data);
-	fputcsv($fp, array(
-		'SKU', 'Shipping Class', 'Price', 'Qty'
-	));
-	
-	foreach($itemDetails as $key => $value) {
-		fputcsv($fp, $key);
-		fputcsv($fp, $value);
-	}
+	fputcsv($fp, $data['items']);
+//	fputcsv($fp, array(
+//		'SKU', 'Shipping Class', 'Price', 'Qty'
+//	));
+//	
+//	foreach($itemDetails as $key => $value) {
+//		fputcsv($fp, $value);
+//	}
 
 	// Place stream pointer at beginning
 	rewind($fp);
