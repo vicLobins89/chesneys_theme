@@ -49,6 +49,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$item_price = array();
 	$item_sku = array();
 	$item_ship_class = array();
+	$itemDetails;
 
 	foreach( $items as $key => $item) {
 		$item_id = $item['product_id'];
@@ -59,19 +60,19 @@ function wdm_send_order_to_ext( $order_id ){
 		$item_price[] = $item['line_total'];
 		$item_sku[] = $product->get_sku();
 		$item_ship_class[] = $product->get_shipping_class();
+		
+		$itemDetails = array(
+			'item_name' => $item['name'],
+			'item_sku' => $product->get_sku(),
+			'item_ship_class' => $product->get_shipping_class(),
+			'item_price' => $item['line_total'],
+			'quantity' => $item['qty'],
+		);
 	}
 
 	/* for online payments, send across the transaction ID/key. If the payment is handled offline, you could send across the order key instead */
 	$transaction_key = get_post_meta( $order_id, '_transaction_id', true );
 	$transaction_key = empty($transaction_key) ? $_GET['key'] : $transaction_key;
-	
-	$itemDetails = array(
-		'item_name' => $item_name,
-		'item_sku' => $item_sku,
-		'item_ship_class' => $item_ship_class,
-		'item_price' => $item_price,
-		'quantity' => $item_qty,
-	);
 	
 	// setup the data which has to be sent
 	$data = array(
