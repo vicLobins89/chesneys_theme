@@ -149,13 +149,14 @@ function send_api_call($data) {
 function create_csv_string($data) {    
 	// Open temp file pointer
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
-			
+	
+	$items = array_pop($data);
+	
 	fputcsv($fp, array_keys($data));
 	fputcsv($fp, $data);
-	fputcsv($fp, array(
-		'Product Name', 'SKU', 'Shipping Class', 'Price', 'Qty'
-	));
-	foreach($data['items'] as $key => $value) {
+	
+	fputcsv($fp, array_keys($items));
+	foreach($items as $key => $value) {
 		fputcsv($fp, $value);
 	}
 
