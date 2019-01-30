@@ -71,6 +71,7 @@ function wdm_send_order_to_ext( $order_id ){
 		'shipping_cost' => $shipping_cost,
 		'transaction_key' => $transaction_key,
 		'coupon_code' => implode( ",", $coupon ),
+		'items' => $itemDetails
 	);
 
 	// get product details
@@ -81,20 +82,30 @@ function wdm_send_order_to_ext( $order_id ){
 		$item_id = $item['product_id'];
 		$product = new WC_Product($item_id);
 		
-		$itemDetails[$item['product_id']] = array(
-			'item_name' => $item['name'],
-			'item_sku' => $product->get_sku(),
-			'item_ship_class' => $product->get_shipping_class(),
-			'item_price' => $item['line_total'],
-			'quantity' => $item['qty'],
-		);
-		
 		if( $product->get_shipping_class() == 'barnbury' ) {
-			array_push($data, $itemDetails[$item['product_id']]);
+			
+			$itemDetails[$item['product_id']] = array(
+				'item_name' => $item['name'],
+				'item_sku' => $product->get_sku(),
+				'item_ship_class' => $product->get_shipping_class(),
+				'item_price' => $item['line_total'],
+				'quantity' => $item['qty'],
+			);
+			
 			send_csv_mail($data, "Product Order ");
+			
 		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
-			array_push($data, $itemDetails[$item['product_id']]);
+			
+			$itemDetails[$item['product_id']] = array(
+				'item_name' => $item['name'],
+				'item_sku' => $product->get_sku(),
+				'item_ship_class' => $product->get_shipping_class(),
+				'item_price' => $item['line_total'],
+				'quantity' => $item['qty'],
+			);
+			
 			send_api_call($data);
+			
 		}
 	}
 	
@@ -163,10 +174,8 @@ function create_csv_string($data) {
 	fputcsv($fp, $data);
 	
 	fputcsv($fp, array(NULL,NULL,NULL));
+	
 	fputcsv($fp, array_keys($allItems));
-	fputcsv($fp, array(
-		'Product Name','SKU','Shipping Class','Price','QTY'
-	));
 	foreach($allItems as $key => $value) {
 		fputcsv($fp, $value);
 	}
