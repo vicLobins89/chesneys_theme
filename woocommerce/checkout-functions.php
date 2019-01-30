@@ -66,11 +66,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$transaction_key = empty($transaction_key) ? $_GET['key'] : $transaction_key;
 	
 	$itemDetails = array(
-		'item_name' => implode(',', $item_name),
-		'item_sku' => implode(',', $item_sku),
-		'item_ship_class' => implode(',', $item_ship_class),
-		'item_price' => implode(',', $item_price),
-		'quantity' => implode(',', $item_qty),
+		'item_name' => $item_name,
 	);
 	
 	// setup the data which has to be sent
