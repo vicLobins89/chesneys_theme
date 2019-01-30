@@ -150,17 +150,17 @@ function create_csv_string($data) {
 	// Open temp file pointer
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
 	
-	$items = array_pop($data);
+	$allItems = array_pop($data);
 	
 	fputcsv($fp, array_keys($data));
 	fputcsv($fp, $data);
 	
 	fputcsv($fp, array(NULL,NULL,NULL));
-	
+	fputcsv($fp, array_keys($allItems));
 	fputcsv($fp, array(
 		'Product Name','SKU','Shipping Class','Price','QTY'
 	));
-	foreach($items as $key => $value) {
+	foreach($allItems as $key => $value) {
 		fputcsv($fp, $value);
 	}
 
