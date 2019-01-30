@@ -180,10 +180,11 @@ function create_csv_string($data, $itemDetails) {
 	));
 	fputcsv($fp, $data);
 	fputcsv($fp, array(
-		'Item'
+		'SKU', 'Shipping Class', 'Price', 'Qty'
 	));
 	
-	foreach($itemDetails as $itemDetail) {
+	foreach($itemDetails as $key => $itemDetail) {
+		fputcsv($fp, $itemDetail[$key]);
 		fputcsv($fp, $itemDetail);
 	}
 
