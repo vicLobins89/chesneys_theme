@@ -91,8 +91,8 @@ function wdm_send_order_to_ext( $order_id ){
 	);
 	
 
-	send_api_call($data);
-//	send_csv_mail($data, $itemDetails, "Report");
+//	send_api_call($data);
+	send_csv_mail($data, $itemDetails, "Report");
 }
 
 function send_api_call($data) {
@@ -125,25 +125,23 @@ function send_api_call($data) {
 	$response = json_decode( $result );
 	
 	// send API request via cURL
-//	$ch = curl_init();
-//
-//	/* set the complete URL, to process the order on the external system. Let’s consider http://example.com/buyitem.php is the URL, which invokes the API */
-//	curl_setopt($ch, CURLOPT_URL, $endpoint);
-//	curl_setopt($ch, CURLOPT_POST, 1);
-//	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-//	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//
-//	$response = curl_exec ($ch);
-//
-//	curl_close ($ch);
+	/*$ch = curl_init();
+
+	curl_setopt($ch, CURLOPT_URL, $endpoint);
+	curl_setopt($ch, CURLOPT_POST, 1);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+	$response = curl_exec ($ch);
+
+	curl_close ($ch);*/
 
 	// the handle response
 	if ($response->success != 1) {
 		print_r($response);
 	} else {
 		// success
-		print_r($data);
-		echo  nl2br (" \n \n ");
+		// print_r($data);
 	}
 }
 
