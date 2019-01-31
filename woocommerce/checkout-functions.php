@@ -98,6 +98,16 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		echo $item['name'].": shipping class is -> ".$product->get_shipping_class()."<br>";
 	}
+
+	// Iterating through order shipping items
+	foreach( $order->get_items( 'shipping' ) as $item_id => $shipping_item_obj ){
+		$order_item_name = $shipping_item_obj->get_name();
+		$order_item_type = $shipping_item_obj->get_type();
+		$shipping_method_title = $shipping_item_obj->get_method_title();
+		$shipping_method_total = $shipping_item_obj->get_total();
+		
+		echo $order_item_name . ' ' . $order_item_type . ' ' . $shipping_method_title;
+	}
 	
 //	print_r($order);
 //	print_r($shipping_type);
