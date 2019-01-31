@@ -102,9 +102,9 @@ class CustomACF {
 		);
 		
 		if(is_array($columns)) {
-		  foreach($columns as $column) {
-			print $column;
-		  }
+		foreach($columns as $column) {
+			print '<div class="col">' . $column . '</div>';
+		}
 		}
 		?>
 
