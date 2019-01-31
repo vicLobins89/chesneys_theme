@@ -98,6 +98,16 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		print_r($item['data']);
 		print_r($item['data']->needs_shipping());
+		$query = new WP_Query( wp_parse_args( $args, array(
+			'posts_per_page'         => 1000,
+			'post_type'              => 'shipping_package',
+			'post_status'            => 'publish',
+			'orderby'                => 'menu_order',
+			'order'                  => 'ASC',
+			'no_found_rows'          => true,
+			'update_post_term_cache' => false,
+		) ) );
+		print_r($query);
 	}
 
 //	send_api_call($data);
