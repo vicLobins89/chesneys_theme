@@ -111,12 +111,12 @@ function wdm_send_order_to_ext( $order_id ){
 			
 		} elseif( $shipping_name == 'Premium Delivery and Installation' ) {
 			
-			array_push($csv_items, $shipping_name);
+//			array_push($csv_items, $shipping_name);
 			send_csv_mail($data, $csv_items, "Product Order ");
 			
 		} elseif( $shipping_name == 'Outdoor Products Pallet Delivery' ) {
 			
-			array_push($csv_items, $shipping_name);
+//			array_push($csv_items, $shipping_name);
 			send_csv_mail($data, $csv_items, "Product Order ");
 			
 		}
