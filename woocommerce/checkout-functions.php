@@ -95,10 +95,12 @@ function wdm_send_order_to_ext( $order_id ){
 //		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
 //			send_api_call($data);
 //		}
+		
+		echo $item->ID.": shipping class is -> ".$product->get_shipping_class()."<br>";
 	}
 	
-	print_r($order);
-	print_r($shipping_type);
+//	print_r($order);
+//	print_r($shipping_type);
 	
 //	send_api_call($data);
 //	send_csv_mail($data, "Product Order ");
