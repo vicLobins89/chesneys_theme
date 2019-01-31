@@ -101,60 +101,19 @@ class CustomACF {
 			get_sub_field('col_4')
 		);
 		
+		$colNum = 0;
 		foreach($columns as $key => $column) {	
 			if( $column != '' ) {
-				print '<div class="col">' . $column . '</div>';
+				$colNum ++;
+			}
+		}
+
+		foreach($columns as $key => $column) {	
+			if( $column != '' ) {
+				print '<div class="col-'.(12/$colNum).'">' . $column . '</div>';
 			}
 		}
 		?>
-
-		<?php if( get_sub_field('col_1') ) : ?>
-
-			<div class="col-12"><?php //the_sub_field('col_1'); ?></div>
-
-		<?php elseif( get_sub_field('col_2') ) : ?>
-
-			<div class="cf col-6">
-				<?php //the_sub_field('col_1'); ?>
-			</div>
-
-			<div class="cf col-6">
-				<?php //the_sub_field('col_2'); ?>
-			</div>
-
-		<?php elseif( get_sub_field('col_3') ) : ?>
-
-			<div class="col-4">
-				<?php the_sub_field('col_1'); ?>
-			</div>
-
-			<div class="col-4">
-				<?php the_sub_field('col_2'); ?>
-			</div>
-
-			<div class="col-4">
-				<?php the_sub_field('col_3'); ?>
-			</div>
-
-		<?php elseif( get_sub_field('col_4') ) : ?>
-
-			<div class="col-3">
-				<?php the_sub_field('col_1'); ?>
-			</div>
-
-			<div class="col-3">
-				<?php the_sub_field('col_2'); ?>
-			</div>
-
-			<div class="col-3">
-				<?php the_sub_field('col_3'); ?>
-			</div>
-
-			<div class="col-3">
-				<?php the_sub_field('col_4'); ?>
-			</div>
-
-		<?php endif; ?>
 
 		</section>
 		<?php endwhile; endif;
