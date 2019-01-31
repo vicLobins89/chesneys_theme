@@ -108,15 +108,9 @@ function wdm_send_order_to_ext( $order_id ){
 		if( $shipping_name == 'Outdoor Products Pallet Delivery' || $shipping_name == 'Premium Delivery & Installation' ) {
 			send_csv_mail($data, $csv_items, "Product Order ");
 		} else {
-//			send_api_call($data, $api_items);
+			send_api_call(array_push($data, $api_items));
 		}
 	}
-	
-	print_r($csv_items);
-	print_r($api_items);
-	
-//	send_api_call($data);
-//	send_csv_mail($data, "Product Order ");
 }
 
 function send_api_call($data) {
@@ -128,7 +122,7 @@ function send_api_call($data) {
 	$api_mode = 'sandbox';
 	if($api_mode == 'sandbox') {
 		// sandbox URL example
-		$endpoint = "https://enjqsvm2ajzd.x.pipedream.net";
+		$endpoint = "https://en0vn5z9zpw7gi.x.pipedream.net";
 	} else {
 		// production URL example
 		$endpoint = "http://example.com/"; 
