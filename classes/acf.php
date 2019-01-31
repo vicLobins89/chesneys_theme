@@ -94,25 +94,16 @@ class CustomACF {
 			echo '<div class="cf">';
 		}
 		
-		if( get_sub_field('col_1') ) {
-			if( get_sub_field('col_2') ) {			
-				if( get_sub_field('col_3') ) {
-					if( get_sub_field('col_4') ) {
-						echo '<div class="col-3">' . the_sub_field('col_1') . '</div>';
-						echo '<div class="col-3">' . the_sub_field('col_2') . '</div>';
-						echo '<div class="col-3">' . the_sub_field('col_3') . '</div>';
-						echo '<div class="col-3">' . the_sub_field('col_4') . '</div>';
-					}
-					echo '<div class="col-4">' . the_sub_field('col_1') . '</div>';
-					echo '<div class="col-4">' . the_sub_field('col_2') . '</div>';
-					echo '<div class="col-4">' . the_sub_field('col_3') . '</div>';
-				}
-				echo '<div class="col-6">' . the_sub_field('col_1') . '</div>';
-				echo '<div class="col-6">' . the_sub_field('col_2') . '</div>';
-			}
-			echo '<div class="col-12">' . the_sub_field('col_1') . '</div>';
-		}
+		$columns = array(
+			get_sub_field('col_1'),
+			get_sub_field('col_2'),
+			get_sub_field('col_3'),
+			get_sub_field('col_4')
+		);
 		
+		foreach($columns as $key => $column) { ?>
+			<div class="col-12"><?php the_sub_field('col_1'); ?></div>
+		<?php }
 		?>
 
 		<?php if( get_sub_field('col_1') ) : ?>
