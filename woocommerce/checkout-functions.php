@@ -86,7 +86,7 @@ function wdm_send_order_to_ext( $order_id ){
 			$csv_items[$item['product_id']] = array(
 				'item_name' => $item['name'],
 				'item_sku' => $product->get_sku(),
-				'item_ship_class' => $product->get_shipping_class(),
+//				'item_ship_class' => $product->get_shipping_class(),
 				'item_price' => $item['line_total'],
 				'quantity' => $item['qty'],
 			);
@@ -94,7 +94,7 @@ function wdm_send_order_to_ext( $order_id ){
 			$api_items[$item['product_id']] = array(
 				'item_name' => $item['name'],
 				'item_sku' => $product->get_sku(),
-				'item_ship_class' => $product->get_shipping_class(),
+//				'item_ship_class' => $product->get_shipping_class(),
 				'item_price' => $item['line_total'],
 				'quantity' => $item['qty'],
 			);
@@ -106,19 +106,26 @@ function wdm_send_order_to_ext( $order_id ){
 		$shipping_name = $shipping_item_obj->get_name();
 		
 		if( $shipping_name == 'Standard Delivery' ) {
-			$apiData = array_push($data, $api_items);
-			send_api_call($apiData);
+			
+			send_api_call($data, $api_items);
+			
 		} elseif( $shipping_name == 'Premium Delivery and Installation' ) {
-			$apiData = array_push($data, $shipping_name);
-			send_csv_mail($apiData, $csv_items, "Product Order ");
+			
+			array_push($csv_items, $shipping_name);
+			send_csv_mail($data, $csv_items, "Product Order ");
+			
 		} elseif( $shipping_name == 'Outdoor Products Pallet Delivery' ) {
-			$apiData = array_push($data, $shipping_name);
-			send_csv_mail($apiData, $csv_items, "Product Order ");
+			
+			array_push($csv_items, $shipping_name);
+			send_csv_mail($data, $csv_items, "Product Order ");
+			
 		}
 	}
 }
 
-function send_api_call($data) {
+function send_api_call($data, $api_items) {
+	array_push($data, $api_items);
+	
 	// set the username and password
 	$api_username = 'testuser';
 	$api_password = 'testpass';
@@ -177,7 +184,7 @@ function create_csv_string($data, $csv_items) {
 	fputcsv($fp, array(NULL,NULL,NULL));
 	
 	fputcsv($fp, array(
-		'Product Name','SKU','Shipping Class','Price','QTY'
+		'Product Name','SKU','Price','QTY', 'Shipping Type'
 	));
 	foreach($csv_items as $key => $value) {
 		fputcsv($fp, $value);
