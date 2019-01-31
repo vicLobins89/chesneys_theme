@@ -82,13 +82,13 @@ function wdm_send_order_to_ext( $order_id ){
 		$item_id = $item['product_id'];
 		$product = new WC_Product($item_id);
 		
-		$itemDetails[$item['product_id']] = array(
-			'item_name' => $item['name'],
-			'item_sku' => $product->get_sku(),
-			'item_ship_class' => $product->get_shipping_class(),
-			'item_price' => $item['line_total'],
-			'quantity' => $item['qty'],
-		);
+//		$itemDetails[$item['product_id']] = array(
+//			'item_name' => $item['name'],
+//			'item_sku' => $product->get_sku(),
+//			'item_ship_class' => $product->get_shipping_class(),
+//			'item_price' => $item['line_total'],
+//			'quantity' => $item['qty'],
+//		);
 		
 //		if( $product->get_shipping_class() == 'barnbury' ) {
 //			send_csv_mail($data);
@@ -96,28 +96,9 @@ function wdm_send_order_to_ext( $order_id ){
 //			send_api_call($data);
 //		}
 		
-//		print_r($product);
+		print_r($item['data']);
+		print_r($item['data']->needs_shipping());
 	}
-	
-	$posts = new WP_Query( wp_parse_args( $args, array(
-		'posts_per_page'         => 1000,
-		'post_type'              => 'shipping_package',
-		'post_status'            => 'publish',
-		'orderby'                => 'menu_order',
-		'order'                  => 'ASC',
-		'no_found_rows'          => true,
-		'update_post_term_cache' => false,
-	) ) );
-	$matching_ids = array();
-	$shipping_packages = WC()->cart->get_shipping_packages();
-	$first_package = reset( $shipping_packages );
-	foreach ( $posts as $post ) {
-		$condition_groups = get_post_meta( $post->ID, '_conditions', true );
-		if ( wpc_match_conditions( $condition_groups, array( 'context' => 'aspwc', 'package' => $first_package ) ) == true ) {
-			$matching_ids[] = $post->ID;
-		}
-	}
-	print_r($matching_ids);
 
 //	send_api_call($data);
 //	send_csv_mail($data, "Product Order ");
