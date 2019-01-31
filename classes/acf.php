@@ -99,7 +99,7 @@ class CustomACF {
 
 			<div class="col-12"><?php the_sub_field('col_1'); ?></div>
 
-		<?php elseif( get_sub_field('col_2') ) : ?>
+		<?php elseif( get_sub_field('col_1') && get_sub_field('col_2') ) : ?>
 
 			<div class="cf col-6">
 				<?php the_sub_field('col_1'); ?>
