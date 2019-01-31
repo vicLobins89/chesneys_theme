@@ -81,6 +81,8 @@ function wdm_send_order_to_ext( $order_id ){
 	foreach( $items as $key => $item) {
 		$item_id = $item['product_id'];
 		$product = new WC_Product($item_id);
+		$csv_items = array();
+		$api_items = array();
 		
 //		$itemDetails[$item['product_id']] = array(
 //			'item_name' => $item['name'],
@@ -98,21 +100,14 @@ function wdm_send_order_to_ext( $order_id ){
 	}
 
 	// Iterating through order shipping items
-	foreach( $order->get_items( 'shipping' ) as $item_id => $shipping_item_obj ){
+	foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
 		$order_item_name = $shipping_item_obj->get_name();
-		$order_item_type = $shipping_item_obj->get_type();
-		$shipping_method_title = $shipping_item_obj->get_method_title();
-		$shipping_method_total = $shipping_item_obj->get_total();
-		
-//		echo $order_item_name;
 		
 		if( $order_item_name == 'Outdoor Products Pallet Delivery' ) {
-			print_r($shipping_item_obj->get_meta_data());
+			$shipping_meta = $shipping_item_obj->get_meta_data();
+			echo $shipping_meta['value'];
 		}
 	}
-	
-//	print_r($order);
-//	print_r($shipping_type);
 	
 //	send_api_call($data);
 //	send_csv_mail($data, "Product Order ");
