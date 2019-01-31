@@ -97,6 +97,7 @@ function wdm_send_order_to_ext( $order_id ){
 //		}
 	}
 	
+	print_r($order);
 	print_r($shipping_type);
 	
 //	send_api_call($data);
