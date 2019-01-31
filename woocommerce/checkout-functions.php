@@ -105,11 +105,13 @@ function wdm_send_order_to_ext( $order_id ){
 	foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
 		$shipping_name = $shipping_item_obj->get_name();
 		
-		if( $shipping_name == 'Outdoor Products Pallet Delivery' || $shipping_name == 'Premium Delivery and Installation' ) {
+		if( $shipping_name == 'Outdoor Products Pallet Delivery' ) {
+			send_csv_mail($data, $csv_items, "Product Order ");
+		} elseif( $shipping_name == 'Premium Delivery and Installation' ) {
 			send_csv_mail($data, $csv_items, "Product Order ");
 		} elseif( $shipping_name == 'Standard Delivery' ) {
 			array_push($data, $shipping_name);
-			array_merge($data, $api_items);
+			array_push($data, $api_items);
 			send_api_call($data);
 		}
 	}
