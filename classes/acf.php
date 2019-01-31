@@ -91,54 +91,50 @@ class CustomACF {
 		}
 		?>
 
-		<?php if( get_sub_field('title') ) : ?>
-			<h2 class="row-title"><?php echo get_sub_field('title'); ?></h2>
-		<?php endif; ?>
-
-		<?php if( get_sub_field('column_size') === '1col' ) : ?>
+		<?php if( get_sub_field('col1') ) : ?>
 
 			<div class="col-12"><?php the_sub_field('col1'); ?></div>
 
-		<?php elseif( get_sub_field('column_size') === '2col' ) : ?>
+		<?php elseif( get_sub_field('col2') ) : ?>
 
 			<div class="cf col-6">
-				<?php the_sub_field('col2_a'); ?>
+				<?php the_sub_field('col1'); ?>
 			</div>
 
 			<div class="cf col-6">
-				<?php the_sub_field('col2_b'); ?>
+				<?php the_sub_field('col2'); ?>
 			</div>
 
-		<?php elseif( get_sub_field('column_size') === '3col' ) : ?>
+		<?php elseif( get_sub_field('col3') ) : ?>
 
 			<div class="col-4">
-				<?php the_sub_field('col3_a'); ?>
-			</div>
-
-			<div class="col-4">
-				<?php the_sub_field('col3_b'); ?>
+				<?php the_sub_field('col1'); ?>
 			</div>
 
 			<div class="col-4">
-				<?php the_sub_field('col3_c'); ?>
+				<?php the_sub_field('col2'); ?>
 			</div>
 
-		<?php elseif( get_sub_field('column_size') === '4col' ) : ?>
-
-			<div class="col-3">
-				<?php the_sub_field('col4_a'); ?>
+			<div class="col-4">
+				<?php the_sub_field('col3'); ?>
 			</div>
 
-			<div class="col-3">
-				<?php the_sub_field('col4_b'); ?>
-			</div>
+		<?php elseif( get_sub_field('col4') ) : ?>
 
 			<div class="col-3">
-				<?php the_sub_field('col4_c'); ?>
+				<?php the_sub_field('col1'); ?>
 			</div>
 
 			<div class="col-3">
-				<?php the_sub_field('col4_d'); ?>
+				<?php the_sub_field('col2'); ?>
+			</div>
+
+			<div class="col-3">
+				<?php the_sub_field('col3'); ?>
+			</div>
+
+			<div class="col-3">
+				<?php the_sub_field('col4'); ?>
 			</div>
 
 		<?php endif; ?>
