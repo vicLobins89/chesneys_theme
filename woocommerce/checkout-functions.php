@@ -109,8 +109,7 @@ function wdm_send_order_to_ext( $order_id ){
 //		echo $order_item_name;
 		
 		if( $order_item_name == 'Outdoor Products Pallet Delivery' ) {
-			print_r($shipping_item_obj);
-			$shipping_item_obj->get_meta_data();
+			print_r($shipping_item_obj->get_meta_data());
 		}
 	}
 	
