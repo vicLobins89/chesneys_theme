@@ -90,13 +90,14 @@ function wdm_send_order_to_ext( $order_id ){
 			'quantity' => $item['qty'],
 		);
 		
-		if( WC_Product::get_shipping_class() == 'barnbury' ) {
-			send_csv_mail($data);
-		} elseif ( WC_Product::get_shipping_class() == 'northamptonshire' ) {
-			send_api_call($data);
-		}
+//		if( $product->get_shipping_class() == 'barnbury' ) {
+//			send_csv_mail($data);
+//		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
+//			send_api_call($data);
+//		}
 	}
 	
+	print_r($order);
 
 //	send_api_call($data);
 //	send_csv_mail($data, "Product Order ");
