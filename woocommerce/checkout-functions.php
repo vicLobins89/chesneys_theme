@@ -106,8 +106,11 @@ function wdm_send_order_to_ext( $order_id ){
 		$shipping_method_title = $shipping_item_obj->get_method_title();
 		$shipping_method_total = $shipping_item_obj->get_total();
 		
-		print_r($item_id);
-		print_r($shipping_item_obj);
+		echo $order_item_name;
+		
+//		if( $order_item_name == 'Outdoor Products Pallet Delivery' ) {
+//			
+//		}
 	}
 	
 //	print_r($order);
