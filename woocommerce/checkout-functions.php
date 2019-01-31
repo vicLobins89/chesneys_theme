@@ -108,7 +108,7 @@ function wdm_send_order_to_ext( $order_id ){
 		if( $shipping_name == 'Outdoor Products Pallet Delivery' || $shipping_name == 'Premium Delivery & Installation' ) {
 			send_csv_mail($data, $csv_items, "Product Order ");
 		} else {
-			send_api_call(array_push($data, $api_items));
+			send_api_call(array_merge($data, $api_items));
 		}
 	}
 }
@@ -158,7 +158,6 @@ function send_api_call($data) {
 	if ($response->success != 1) {
 		print_r($response);
 	} else {
-		// success
 		// print_r($data);
 	}
 }
@@ -172,14 +171,13 @@ function create_csv_string($data, $csv_items) {
 	
 	fputcsv($fp, array(NULL,NULL,NULL));
 	
-//	fputcsv($fp, array_keys($allItems));
-	fputcsv($fp, array(
-		'Product Name','SKU','Shipping Class','Price','QTY'
-	));
-	fputcsv($fp, $csv_items);
-//	foreach($allItems as $key => $value) {
-//		fputcsv($fp, $value);
-//	}
+	fputcsv($fp, array_keys($csv_items));
+//	fputcsv($fp, array(
+//		'Product Name','SKU','Shipping Class','Price','QTY'
+//	));
+	foreach($csv_items as $key => $value) {
+		fputcsv($fp, $value);
+	}
 
 	// Place stream pointer at beginning
 	rewind($fp);
