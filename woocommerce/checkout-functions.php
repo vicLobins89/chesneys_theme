@@ -2,7 +2,7 @@
 
 // API
 /* after an order has been processed, we will use the  'woocommerce_thankyou' hook, to add our function, to send the data */
-add_action('woocommerce_review_order_before_submit', 'wdm_send_order_to_ext');
+add_action('woocommerce_after_checkout_form', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
 	// get order object and order details
 	$order = new WC_Order( $order_id );
