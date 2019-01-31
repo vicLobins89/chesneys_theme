@@ -101,21 +101,25 @@ class CustomACF {
 			get_sub_field('col_4')
 		);
 		
-		print_r($columns);
+		if(is_array($columns)) {
+		  foreach($columns as $column) {
+			print $column;
+		  }
+		}
 		?>
 
 		<?php if( get_sub_field('col_1') ) : ?>
 
-			<div class="col-12"><?php the_sub_field('col_1'); ?></div>
+			<div class="col-12"><?php //the_sub_field('col_1'); ?></div>
 
 		<?php elseif( get_sub_field('col_2') ) : ?>
 
 			<div class="cf col-6">
-				<?php the_sub_field('col_1'); ?>
+				<?php //the_sub_field('col_1'); ?>
 			</div>
 
 			<div class="cf col-6">
-				<?php the_sub_field('col_2'); ?>
+				<?php //the_sub_field('col_2'); ?>
 			</div>
 
 		<?php elseif( get_sub_field('col_3') ) : ?>
