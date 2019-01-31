@@ -90,13 +90,11 @@ function wdm_send_order_to_ext( $order_id ){
 //			'quantity' => $item['qty'],
 //		);
 		
-//		if( $product->get_shipping_class() == 'barnbury' ) {
-//			send_csv_mail($data);
-//		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
-//			send_api_call($data);
-//		}
-		
-		echo $item['name'].": shipping class is -> ".$product->get_shipping_class()."<br>";
+		if( $product->get_shipping_class() == 'barnbury' ) {
+			echo $item['name'].": shipping class is -> ".$product->get_shipping_class()."<br>";
+		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
+			
+		}
 	}
 
 	// Iterating through order shipping items
