@@ -101,7 +101,10 @@ class CustomACF {
 			get_sub_field('col_4')
 		);
 		
-		foreach($columns as $column) {
+		foreach($columns as $key => $column) {
+			$colNum;
+			echo $key;
+			
 			if( $column != '' ) {
 				print '<div class="col">' . $column . '</div>';
 			}
