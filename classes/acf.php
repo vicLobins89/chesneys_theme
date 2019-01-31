@@ -34,9 +34,13 @@ class CustomACF {
 	}
 	
 	function page_rows() {
-		if( have_rows('content') ) :
-		$rowNum = 0;
-		while( have_rows('content') ) : the_row();
+		if( have_rows('rows') ) :
+//		$rowNum = 0;
+		while( have_rows('rows') ) : the_row();
+		
+			if( have_rows('content') ) :
+			$rowNum = 0;
+			while( have_rows('content') ) : the_row();
 			
 		$rowNum ++;
 		$layout = get_sub_field('layout');
@@ -141,6 +145,7 @@ class CustomACF {
 
 		</section>
 		<?php endwhile; endif;
+		endwhile; endif;
 	}
 	
 	function pre_footer() {
