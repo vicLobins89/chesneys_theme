@@ -34,9 +34,9 @@ class CustomACF {
 	}
 	
 	function page_rows() {
-		if( have_rows('rows') ) :
+		if( have_rows('content') ) :
 		$rowNum = 0;
-		while( have_rows('rows') ) : the_row();
+		while( have_rows('content') ) : the_row();
 			
 		$rowNum ++;
 		$layout = get_sub_field('layout');
