@@ -99,7 +99,7 @@ function wdm_send_order_to_ext( $order_id ){
 //		print_r($product);
 	}
 	
-	$query = new WP_Query( wp_parse_args( $args, array(
+	$posts = new WP_Query( wp_parse_args( $args, array(
 		'posts_per_page'         => 1000,
 		'post_type'              => 'shipping_package',
 		'post_status'            => 'publish',
@@ -108,7 +108,16 @@ function wdm_send_order_to_ext( $order_id ){
 		'no_found_rows'          => true,
 		'update_post_term_cache' => false,
 	) ) );
-	print_r($query);
+	$matching_ids = array();
+	$shipping_packages = WC()->cart->get_shipping_packages();
+	$first_package = reset( $shipping_packages );
+	foreach ( $posts as $post ) {
+		$condition_groups = get_post_meta( $post->ID, '_conditions', true );
+		if ( wpc_match_conditions( $condition_groups, array( 'context' => 'aspwc', 'package' => $first_package ) ) == true ) {
+			$matching_ids[] = $post->ID;
+		}
+	}
+	print_r($matching_ids);
 
 //	send_api_call($data);
 //	send_csv_mail($data, "Product Order ");
