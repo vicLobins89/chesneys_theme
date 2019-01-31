@@ -107,9 +107,9 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		if( $shipping_name == 'Outdoor Products Pallet Delivery' || $shipping_name == 'Premium Delivery & Installation' ) {
 			send_csv_mail($data, $csv_items, "Product Order ");
-		} else {
+		} elseif( $shipping_name == 'Standard Delivery' ) {
 			array_merge($data, $shipping_name);
-			array_merge($data, $api_items);
+			array_push($data, $api_items);
 			send_api_call($data);
 		}
 	}
