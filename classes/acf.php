@@ -39,6 +39,9 @@ class CustomACF {
 
 			if( get_sub_field('bg_image') ) {
 				array_push($addStyles, "background-image: url('$bgImage');");
+				array_push($addStyles, "background-repeat: no-repeat;");
+				array_push($addStyles, "background-size: cover;");
+				array_push($addStyles, "background-position: center;");
 			}
 
 			if( isset($addClasses) || isset($addStyles) ) {
