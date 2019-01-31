@@ -101,15 +101,7 @@ class CustomACF {
 			get_sub_field('col_4')
 		);
 		
-		echo count(array_filter($columns));
-		
-		$colNum = 0;
-		foreach($columns as $key => $column) {	
-			if( $column != '' ) {
-				$colNum ++;
-			}
-		}
-
+		$colNum = count(array_filter($columns));
 		foreach($columns as $key => $column) {	
 			if( $column != '' ) {
 				print '<div class="col-'.(12/$colNum).'">' . $column . '</div>';
