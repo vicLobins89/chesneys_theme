@@ -96,7 +96,7 @@ function wdm_send_order_to_ext( $order_id ){
 //			send_api_call($data);
 //		}
 		
-		print_r($item);
+		print_r($product);
 	}
 	
 
