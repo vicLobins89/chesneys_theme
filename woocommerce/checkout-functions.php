@@ -83,7 +83,7 @@ function wdm_send_order_to_ext( $order_id ){
 		$product = new WC_Product($item_id);
 		
 		if( $product->get_shipping_class() == 'barnbury' ) {
-			$csv_items = array(
+			$csv_items[$item['product_id']] = array(
 				'item_name' => $item['name'],
 				'item_sku' => $product->get_sku(),
 				'item_ship_class' => $product->get_shipping_class(),
