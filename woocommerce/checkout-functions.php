@@ -96,7 +96,7 @@ function wdm_send_order_to_ext( $order_id ){
 //			send_api_call($data);
 //		}
 		
-		echo $item->ID.": shipping class is -> ".$product->get_shipping_class()."<br>";
+		echo $item['name'].": shipping class is -> ".$product->get_shipping_class()."<br>";
 	}
 	
 //	print_r($order);
