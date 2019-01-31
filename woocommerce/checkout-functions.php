@@ -71,7 +71,7 @@ function wdm_send_order_to_ext( $order_id ){
 		'shipping_cost' => $shipping_cost,
 		'transaction_key' => $transaction_key,
 		'coupon_code' => implode( ",", $coupon ),
-		'items' => $itemDetails
+//		'items' => $itemDetails
 	);
 
 	// get product details
@@ -95,9 +95,10 @@ function wdm_send_order_to_ext( $order_id ){
 //		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
 //			send_api_call($data);
 //		}
+		
+		print_r($item);
 	}
 	
-	print_r($order);
 
 //	send_api_call($data);
 //	send_csv_mail($data, "Product Order ");
