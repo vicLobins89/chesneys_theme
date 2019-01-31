@@ -35,9 +35,6 @@ $class = new CustomACF();
 								$class->page_rows();
 							?>
 
-							<?php // PRE-FOOTER ?>
-							<?php $class->pre_footer(); ?>
-
 							</article>
 
 							<?php endwhile; endif; ?>
