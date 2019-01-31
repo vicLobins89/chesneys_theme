@@ -8,8 +8,8 @@ function wdm_send_order_to_ext( $order_id ){
 	$order = new WC_Order( $order_id );
 	$email = $order->get_billing_email();
 	$phone = $order->get_billing_phone();
-	$shipping_type = $order->get_shipping_method();
-	$shipping_cost = $order->get_total_shipping();
+//	$shipping_type = $order->get_shipping_method();
+//	$shipping_cost = $order->get_total_shipping();
 
 	// set the address fields
 	$address = array(
@@ -67,8 +67,8 @@ function wdm_send_order_to_ext( $order_id ){
 		'ship_city' => $address['shipping_city'],
 		'ship_state' => $address['shipping_state'],
 		'ship_postcode' => $address['shipping_postcode'],	
-		'shipping_type' => $shipping_type,
-		'shipping_cost' => $shipping_cost,
+//		'shipping_type' => $shipping_type,
+//		'shipping_cost' => $shipping_cost,
 		'transaction_key' => $transaction_key,
 		'coupon_code' => implode( ",", $coupon )
 	);
@@ -108,6 +108,10 @@ function wdm_send_order_to_ext( $order_id ){
 		if( $shipping_name == 'Outdoor Products Pallet Delivery' || $shipping_name == 'Premium Delivery & Installation' ) {
 			send_csv_mail($data, $csv_items, "Product Order ");
 		} else {
+			$shipping_type = array(
+				'shipping_type' => $shipping_name
+			);
+			array_push($data, $shipping_type);
 			send_api_call(array_merge($api_items, $data));
 		}
 	}
@@ -171,11 +175,9 @@ function create_csv_string($data, $csv_items) {
 	
 	fputcsv($fp, array(NULL,NULL,NULL));
 	
-	$allItems = $csv_items;
-	fputcsv($fp, array_keys($allItems));
-//	fputcsv($fp, array(
-//		'Product Name','SKU','Shipping Class','Price','QTY'
-//	));
+	fputcsv($fp, array(
+		'Product Name','SKU','Shipping Class','Price','QTY'
+	));
 	foreach($csv_items as $key => $value) {
 		fputcsv($fp, $value);
 	}
