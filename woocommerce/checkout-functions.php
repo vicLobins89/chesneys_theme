@@ -111,13 +111,11 @@ function wdm_send_order_to_ext( $order_id ){
 			
 		} elseif( $shipping_name == 'Premium Delivery and Installation' ) {
 			
-//			array_push($csv_items, $shipping_name);
-			send_csv_mail($data, $csv_items, "Product Order ");
+			send_csv_mail($data, $csv_items, $ship_type, "Product Order ");
 			
 		} elseif( $shipping_name == 'Outdoor Products Pallet Delivery' ) {
 			
-//			array_push($csv_items, $shipping_name);
-			send_csv_mail($data, $csv_items, "Product Order ");
+			send_csv_mail($data, $csv_items, $ship_type, "Product Order ");
 			
 		}
 	}
@@ -174,17 +172,21 @@ function send_api_call($data, $api_items) {
 	}
 }
 
-function create_csv_string($data, $csv_items) {    
+function create_csv_string($data, $csv_items, $ship_type) {    
 	// Open temp file pointer
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
 	
 	fputcsv($fp, array_keys($data));
 	fputcsv($fp, $data);
 	
+	fputcsv($fp, array('Shipping Type:',NULL,NULL));
+	fputcsv($fp, $ship_type);
+	
 	fputcsv($fp, array(NULL,NULL,NULL));
+	fputcsv($fp, array('Items:',NULL,NULL));
 	
 	fputcsv($fp, array(
-		'Product Name','SKU','Price','QTY', 'Shipping Type'
+		'Product Name','SKU','Price','QTY'
 	));
 	foreach($csv_items as $key => $value) {
 		fputcsv($fp, $value);
@@ -198,7 +200,7 @@ function create_csv_string($data, $csv_items) {
 
 }
 
-function send_csv_mail($csvData, $csv_items, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csvData, $csv_items, $ship_type, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
 
@@ -213,7 +215,7 @@ function send_csv_mail($csvData, $csv_items, $body, $to = 'vic@honey.co.uk',  $f
 	);
 
 	// Make the attachment
-	$attachment = chunk_split(base64_encode(create_csv_string($csvData, $csv_items))); 
+	$attachment = chunk_split(base64_encode(create_csv_string($csvData, $csv_items, $ship_type))); 
 
 	// Make the body of the message
 	$body = "--$multipartSep\r\n"
