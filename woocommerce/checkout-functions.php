@@ -70,44 +70,50 @@ function wdm_send_order_to_ext( $order_id ){
 		'shipping_type' => $shipping_type,
 		'shipping_cost' => $shipping_cost,
 		'transaction_key' => $transaction_key,
-		'coupon_code' => implode( ",", $coupon ),
-//		'items' => $itemDetails
+		'coupon_code' => implode( ",", $coupon )
 	);
 
 	// get product details
 	$items = $order->get_items();
-	$itemDetails = array();
-
+	$csv_items = array();
+	$api_items = array();
+	
 	foreach( $items as $key => $item) {
 		$item_id = $item['product_id'];
 		$product = new WC_Product($item_id);
-		$csv_items = array();
-		$api_items = array();
-		
-//		$itemDetails[$item['product_id']] = array(
-//			'item_name' => $item['name'],
-//			'item_sku' => $product->get_sku(),
-//			'item_ship_class' => $product->get_shipping_class(),
-//			'item_price' => $item['line_total'],
-//			'quantity' => $item['qty'],
-//		);
 		
 		if( $product->get_shipping_class() == 'barnbury' ) {
-			echo $item['name'].": shipping class is -> ".$product->get_shipping_class()."<br>";
+			$csv_items = array(
+				'item_name' => $item['name'],
+				'item_sku' => $product->get_sku(),
+				'item_ship_class' => $product->get_shipping_class(),
+				'item_price' => $item['line_total'],
+				'quantity' => $item['qty'],
+			);
 		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
-			
+			$api_items = array(
+				'item_name' => $item['name'],
+				'item_sku' => $product->get_sku(),
+				'item_ship_class' => $product->get_shipping_class(),
+				'item_price' => $item['line_total'],
+				'quantity' => $item['qty'],
+			);
 		}
 	}
 
 	// Iterating through order shipping items
 	foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
-		$order_item_name = $shipping_item_obj->get_name();
+		$shipping_name = $shipping_item_obj->get_name();
 		
-		if( $order_item_name == 'Outdoor Products Pallet Delivery' ) {
-			$shipping_meta = $shipping_item_obj->get_meta_data();
-			echo $shipping_meta['value'];
+		if( $shipping_name == 'Outdoor Products Pallet Delivery' || $shipping_name == 'Premium Delivery & Installation' ) {
+			send_csv_mail($data, $csv_items, "Product Order ");
+		} else {
+//			send_api_call($data, $api_items);
 		}
 	}
+	
+	print_r($csv_items);
+	print_r($api_items);
 	
 //	send_api_call($data);
 //	send_csv_mail($data, "Product Order ");
@@ -163,23 +169,23 @@ function send_api_call($data) {
 	}
 }
 
-function create_csv_string($data) {    
+function create_csv_string($data, $csv_items) {    
 	// Open temp file pointer
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
-	
-	$allItems = array_pop($data);
 	
 	fputcsv($fp, array_keys($data));
 	fputcsv($fp, $data);
 	
 	fputcsv($fp, array(NULL,NULL,NULL));
-	fputcsv($fp, array_keys($allItems));
+	
+//	fputcsv($fp, array_keys($allItems));
 	fputcsv($fp, array(
 		'Product Name','SKU','Shipping Class','Price','QTY'
 	));
-	foreach($allItems as $key => $value) {
-		fputcsv($fp, $value);
-	}
+	fputcsv($fp, $csv_items);
+//	foreach($allItems as $key => $value) {
+//		fputcsv($fp, $value);
+//	}
 
 	// Place stream pointer at beginning
 	rewind($fp);
@@ -189,7 +195,7 @@ function create_csv_string($data) {
 
 }
 
-function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csvData, $csv_items, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
 
@@ -204,7 +210,7 @@ function send_csv_mail($csvData, $body, $to = 'vic@honey.co.uk',  $from = 'norep
 	);
 
 	// Make the attachment
-	$attachment = chunk_split(base64_encode(create_csv_string($csvData))); 
+	$attachment = chunk_split(base64_encode(create_csv_string($csvData, $csv_items))); 
 
 	// Make the body of the message
 	$body = "--$multipartSep\r\n"
