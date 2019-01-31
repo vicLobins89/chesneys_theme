@@ -101,7 +101,7 @@ class CustomACF {
 			get_sub_field('col_4')
 		);
 		
-		echo array_filter($columns);
+		echo count(array_filter($columns));
 		
 		$colNum = 0;
 		foreach($columns as $key => $column) {	
