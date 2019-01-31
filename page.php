@@ -32,13 +32,7 @@ $class = new CustomACF();
 							
 							<?php // ACF FIELDS ?>
 							<?php
-							if( get_field('img_links_pos') === 'top' ) {
-								$class->image_links();
 								$class->page_rows();
-							} else {
-								$class->page_rows();
-								$class->image_links();
-							}
 							?>
 
 							<?php // PRE-FOOTER ?>
