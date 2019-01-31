@@ -34,12 +34,12 @@ class CustomACF {
 			if( get_sub_field('bg_colour') ) {
 				array_push($addClasses, "bg-colour");
 				array_push($addClasses, "bg-colour$rowNum");
-				array_push($addStyles, "background-color: $bgColour");
+				array_push($addStyles, "background-color: $bgColour;");
 			}
 
-//			if( get_sub_field('bg_image') ) {
-//				array_push($addStyles, "background-image: url('$bgImage')");
-//			}
+			if( get_sub_field('bg_image') ) {
+				array_push($addStyles, "background-image: url('$bgImage');");
+			}
 
 			if( isset($addClasses) || isset($addStyles) ) {
 				$styles = ' style="';
