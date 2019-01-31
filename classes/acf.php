@@ -102,14 +102,15 @@ class CustomACF {
 		);
 		
 		$colNum = 0;
-		foreach($columns as $key => $column) {	
-			if( $column != '' ) {
-				$colNum ++;
-			}
-		}
+//		foreach($columns as $key => $column) {	
+//			if( $column != '' ) {
+//				$colNum ++;
+//			}
+//		}
 
 		foreach($columns as $key => $column) {	
 			if( $column != '' ) {
+				$colNum ++;
 				print '<div class="col-'.(12/$colNum).'">' . $column . '</div>';
 			}
 		}
