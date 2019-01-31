@@ -101,9 +101,7 @@ class CustomACF {
 			get_sub_field('col_4')
 		);
 		
-		foreach($columns as $key => $column) { print_r($column);?>
-			<div class="col-12"><?php the_sub_field('col_1'); ?></div>
-		<?php }
+		print_r($columns);
 		?>
 
 		<?php if( get_sub_field('col_1') ) : ?>
