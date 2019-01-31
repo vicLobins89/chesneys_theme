@@ -103,7 +103,9 @@ class CustomACF {
 		
 		$colNum = 1;
 		foreach($columns as $key => $column) {	
-			$colNum ++;
+			if( $column != '' ) {
+				$colNum ++;
+			}
 		}
 
 		foreach($columns as $key => $column) {	
