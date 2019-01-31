@@ -96,9 +96,10 @@ function wdm_send_order_to_ext( $order_id ){
 //			send_api_call($data);
 //		}
 		
-		print_r($product);
+//		print_r($product);
 	}
 	
+	print_r($packages);
 
 //	send_api_call($data);
 //	send_csv_mail($data, "Product Order ");
