@@ -112,7 +112,8 @@ function wdm_send_order_to_ext( $order_id ){
 				'shipping_type' => $shipping_name
 			);
 			array_push($data, $shipping_type);
-			send_api_call(array_merge($api_items, $data));
+			array_push($data, $api_items);
+			send_api_call($data);
 		}
 	}
 }
