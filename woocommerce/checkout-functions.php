@@ -67,8 +67,8 @@ function wdm_send_order_to_ext( $order_id ){
 		'ship_city' => $address['shipping_city'],
 		'ship_state' => $address['shipping_state'],
 		'ship_postcode' => $address['shipping_postcode'],	
-		'shipping_type' => $shipping_type,
-		'shipping_cost' => $shipping_cost,
+//		'shipping_type' => $shipping_type,
+//		'shipping_cost' => $shipping_cost,
 		'transaction_key' => $transaction_key,
 		'coupon_code' => implode( ",", $coupon )
 	);
@@ -108,7 +108,7 @@ function wdm_send_order_to_ext( $order_id ){
 		if( $shipping_name == 'Outdoor Products Pallet Delivery' || $shipping_name == 'Premium Delivery & Installation' ) {
 			send_csv_mail($data, $csv_items, "Product Order ");
 		} else {
-			send_api_call(array_merge($data, $api_items));
+			send_api_call(array_merge($api_items, $data));
 		}
 	}
 }
@@ -171,7 +171,8 @@ function create_csv_string($data, $csv_items) {
 	
 	fputcsv($fp, array(NULL,NULL,NULL));
 	
-	fputcsv($fp, array_keys($csv_items));
+	$allItems = $csv_items;
+	fputcsv($fp, array_keys($allItems));
 //	fputcsv($fp, array(
 //		'Product Name','SKU','Shipping Class','Price','QTY'
 //	));
