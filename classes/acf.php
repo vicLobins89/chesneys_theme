@@ -101,10 +101,10 @@ class CustomACF {
 			get_sub_field('col_4')
 		);
 		
-		if(is_array($columns)) {
 		foreach($columns as $column) {
-			print '<div class="col">' . $column . '</div>';
-		}
+			if( $column != '' ) {
+				print '<div class="col">' . $column . '</div>';
+			}
 		}
 		?>
 
