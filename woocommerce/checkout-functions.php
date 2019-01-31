@@ -67,8 +67,8 @@ function wdm_send_order_to_ext( $order_id ){
 		'ship_city' => $address['shipping_city'],
 		'ship_state' => $address['shipping_state'],
 		'ship_postcode' => $address['shipping_postcode'],	
-//		'shipping_type' => $shipping_type,
-//		'shipping_cost' => $shipping_cost,
+		'shipping_type' => $shipping_type,
+		'shipping_cost' => $shipping_cost,
 		'transaction_key' => $transaction_key,
 		'coupon_code' => implode( ",", $coupon )
 	);
