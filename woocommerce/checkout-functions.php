@@ -99,7 +99,8 @@ function wdm_send_order_to_ext( $order_id ){
 //		print_r($product);
 	}
 	
-	print_r($packages);
+	$shipping_packages = WC()->cart->get_shipping_packages();
+	print_r($shipping_packages);
 
 //	send_api_call($data);
 //	send_csv_mail($data, "Product Order ");
