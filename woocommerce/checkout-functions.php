@@ -111,11 +111,11 @@ function wdm_send_order_to_ext( $order_id ){
 			
 		} elseif( $shipping_name == 'Premium Delivery and Installation' ) {
 			
-			send_csv_mail($data, $csv_items, $ship_type, "Product Order ");
+			send_csv_mail($data, $csv_items, $shipping_name, "Product Order ");
 			
 		} elseif( $shipping_name == 'Outdoor Products Pallet Delivery' ) {
 			
-			send_csv_mail($data, $csv_items, $ship_type, "Product Order ");
+			send_csv_mail($data, $csv_items, $shipping_name, "Product Order ");
 			
 		}
 	}
@@ -180,8 +180,8 @@ function create_csv_string($data, $csv_items, $ship_type) {
 	fputcsv($fp, $data);
 	
 	fputcsv($fp, array('Shipping Type:',NULL,NULL));
-	fputcsv($fp, $ship_type);
-	
+	fputcsv($fp, array($ship_type,NULL,NULL));
+	 
 	fputcsv($fp, array(NULL,NULL,NULL));
 	fputcsv($fp, array('Items:',NULL,NULL));
 	
