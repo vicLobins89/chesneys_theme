@@ -92,8 +92,6 @@ class CustomACF {
 						print '<div class="col-'.(12/$colNum).'">' . $column . '</div>';
 					}
 				}
-		
-				the_sub_field('layout');
 
 				echo '</div></section>';
 			endwhile; endif; // Content
