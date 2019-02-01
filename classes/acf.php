@@ -95,7 +95,7 @@ class CustomACF {
 					}
 				}
 		
-				the_sub_field('col_1');
+				the_sub_field('layout');
 
 //				echo '</div></section>';
 			endwhile; endif; // Content
