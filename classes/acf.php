@@ -4,8 +4,8 @@ class CustomACF {
 		if( have_rows('rows') ) : while( have_rows('rows') ) : the_row();
 		
 			// Modules
-			if( have_rows('content') ) : while( have_rows('content') ) : the_row();
-				$post_object = get_sub_field('module');
+			if( have_rows('module') ) : while( have_rows('module') ) : the_row();
+				$post_object = get_sub_field('content_block');
 				if( $post_object ) :
 					// override $post
 					global $post;
