@@ -5,11 +5,11 @@ class CustomACF {
 		while( have_rows('rows') ) : the_row();
 		
 			echo '<pre>';
-				print_r( get_field('module')  );
+				print_r( get_sub_field('module')  );
 			echo '</pre>';
 			die;
 		
-			$post_object = get_field('module');
+			$post_object = get_sub_field('module');
 
 			if( $post_object ): 
 
