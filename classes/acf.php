@@ -24,9 +24,8 @@ class CustomACF {
 			
 			
 			// Custom Content
-			if( have_rows('content') ) : $rowNum = 0; while( have_rows('content') ) : the_row();
+			if( have_rows('content') ) : while( have_rows('content') ) : the_row();
 			
-			$rowNum ++;
 			$layout = get_sub_field('layout');
 			$padding = get_sub_field('padding');
 			$bgColour = get_sub_field('bg_colour');
@@ -47,11 +46,8 @@ class CustomACF {
 				array_push($addClasses, $customClass);
 			}
 
-			array_push($addClasses, "row-$rowNum");
-
 			if( get_sub_field('bg_colour') ) {
 				array_push($addClasses, "bg-colour");
-				array_push($addClasses, "bg-colour$rowNum");
 				array_push($addStyles, "background-color: $bgColour;");
 			}
 
