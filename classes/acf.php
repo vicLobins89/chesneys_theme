@@ -1,8 +1,7 @@
 <?php
 class CustomACF {
     function page_rows() {
-		if( have_rows('rows') ) :
-		while( have_rows('rows') ) : the_row();
+		if( have_rows('rows') ) : while( have_rows('rows') ) : the_row();
 		
 			// Modules
 			$post_object = get_sub_field('module');
@@ -25,9 +24,7 @@ class CustomACF {
 			
 			
 			// Custom Content
-			if( have_rows('content') ) :
-			$rowNum = 0;
-			while( have_rows('content') ) : the_row();
+			if( have_rows('content') ) : $rowNum = 0; while( have_rows('content') ) : the_row();
 			
 			$rowNum ++;
 			$layout = get_sub_field('layout');
@@ -98,11 +95,11 @@ class CustomACF {
 					print '<div class="col-'.(12/$colNum).'">' . $column . '</div>';
 				}
 			}
-			?>
-
-			</div></section>
-		<?php endwhile; endif;
-		endwhile; endif;
+		
+			echo '</div></section>';
+		
+			endwhile; endif; // Content
+		endwhile; endif; // Row
 	}
 }
 
