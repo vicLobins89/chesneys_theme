@@ -13,6 +13,9 @@ class CustomACF {
 				?>
 				<div>
 					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					<div class="featured-image">
+						<?php the_post_thumbnail('full'); ?>
+					</div>
 				</div>
 				<?php wp_reset_postdata(); 
 			endif;
