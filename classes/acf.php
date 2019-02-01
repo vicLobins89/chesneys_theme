@@ -65,7 +65,7 @@ class CustomACF {
 					$styles .= '"';
 				}
 		
-				print_r($layout);
+				//print_r($layout);
 
 //				if( $layout === 'hide' ) {
 //					echo '<section class="row entry-content cf" style="display: none;">';
@@ -94,7 +94,8 @@ class CustomACF {
 						print '<div class="col-'.(12/$colNum).'">' . $column . '</div>';
 					}
 				}
-		the_sub_field('col_1');
+		
+				the_sub_field('layout');
 
 //				echo '</div></section>';
 			endwhile; endif; // Content
