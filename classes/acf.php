@@ -1,6 +1,10 @@
 <?php
 class CustomACF {
     function page_rows() {
+		if ( !have_rows( 'rows' ) ) {
+			return false;
+		}
+		
 		if( have_rows('rows') ) : while( have_rows('rows') ) : the_row();
 		
 			// Modules
@@ -22,8 +26,11 @@ class CustomACF {
 				<?php wp_reset_postdata(); 
 			endif;
 			
-			
 			// Custom Content
+			if ( !have_rows( 'content' ) ) {
+				return false;
+			}
+			
 			if( have_rows('content') ) : while( have_rows('content') ) : the_row();
 			
 			$layout = get_sub_field('layout');
