@@ -9,14 +9,15 @@ class CustomACF {
 				// override $post
 				global $post;
 				$post = $post_object;
-				setup_postdata( $post ); 
-
+				setup_postdata( $post );
+				if( has_post_thumbnail() ) {
+					$moduleBackground = ' style="background: url(';
+					$moduleBackground .= get_the_post_thumbnail_url(get_the_ID(),'full');
+					$moduleBackground .= ') center/cover no-repeat"';
+				}
 				?>
-				<div>
-					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<div class="featured-image">
-						<?php the_post_thumbnail('full'); ?>
-					</div>
+				<div class="module module-<?php strtolower(get_the_title()); ?>" <?php echo $moduleBackground; ?>>
+					<div class="inner-module"><?php the_content(); ?></div>
 				</div>
 				<?php wp_reset_postdata(); 
 			endif;
