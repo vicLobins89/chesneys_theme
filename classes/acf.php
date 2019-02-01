@@ -25,46 +25,45 @@ class CustomACF {
 			endwhile; endif; // Modules
 			
 			// Custom Content
-			//print_r(get_sub_field('custom_content'));
-			if( have_rows('custom_content') ) : while( have_rows('custom_content') ) : the_row();
-				$layout = get_sub_field('layout');
-				if($layout){
-				$padding = get_sub_field('padding');
-				$bgColour = get_sub_field('bg_colour');
-				$bgImage = get_sub_field('bg_image');
-				$customClass = get_sub_field('class');
-				$addClasses = array();
-				$addStyles = array();
-				$styles;
+			$custom = get_sub_field('custom_content');
+			if( $custom ) {
+				$layout = $custom['layout'];
+//				$padding = get_sub_field('padding');
+//				$bgColour = get_sub_field('bg_colour');
+//				$bgImage = get_sub_field('bg_image');
+//				$customClass = get_sub_field('class');
+//				$addClasses = array();
+//				$addStyles = array();
+//				$styles;
 
-				if( $padding ) {
-					if( $padding['padding_top'] ) { array_push($addStyles, "padding-top: $padding[padding_top];"); }
-					if( $padding['padding_right'] ) { array_push($addStyles, "padding-right: $padding[padding_right];"); }
-					if( $padding['padding_bottom'] ) { array_push($addStyles, "padding-bottom: $padding[padding_bottom];"); }
-					if( $padding['padding_left'] ) { array_push($addStyles, "padding-left: $padding[padding_left];"); }
-				}
-
-				if( $customClass ) {
-					array_push($addClasses, $customClass);
-				}
-
-				if( get_sub_field('bg_colour') ) {
-					array_push($addClasses, "bg-colour");
-					array_push($addStyles, "background-color: $bgColour;");
-				}
-
-				if( get_sub_field('bg_image') ) {
-					array_push($addStyles, "background-image: url('$bgImage');");
-					array_push($addStyles, "background-repeat: no-repeat;");
-					array_push($addStyles, "background-size: cover;");
-					array_push($addStyles, "background-position: center;");
-				}
-
-				if( isset($addClasses) || isset($addStyles) ) {
-					$styles = ' style="';
-					$styles .= implode(" ", $addStyles);
-					$styles .= '"';
-				}
+//				if( $padding ) {
+//					if( $padding['padding_top'] ) { array_push($addStyles, "padding-top: $padding[padding_top];"); }
+//					if( $padding['padding_right'] ) { array_push($addStyles, "padding-right: $padding[padding_right];"); }
+//					if( $padding['padding_bottom'] ) { array_push($addStyles, "padding-bottom: $padding[padding_bottom];"); }
+//					if( $padding['padding_left'] ) { array_push($addStyles, "padding-left: $padding[padding_left];"); }
+//				}
+//
+//				if( $customClass ) {
+//					array_push($addClasses, $customClass);
+//				}
+//
+//				if( get_sub_field('bg_colour') ) {
+//					array_push($addClasses, "bg-colour");
+//					array_push($addStyles, "background-color: $bgColour;");
+//				}
+//
+//				if( get_sub_field('bg_image') ) {
+//					array_push($addStyles, "background-image: url('$bgImage');");
+//					array_push($addStyles, "background-repeat: no-repeat;");
+//					array_push($addStyles, "background-size: cover;");
+//					array_push($addStyles, "background-position: center;");
+//				}
+//
+//				if( isset($addClasses) || isset($addStyles) ) {
+//					$styles = ' style="';
+//					$styles .= implode(" ", $addStyles);
+//					$styles .= '"';
+//				}
 		
 				//print_r($layout);
 
@@ -83,10 +82,10 @@ class CustomACF {
 //				}
 
 				$columns = array(
-					get_sub_field('col_1'),
-					get_sub_field('col_2'),
-					get_sub_field('col_3'),
-					get_sub_field('col_4')
+					$custom['col_1'],
+					$custom['col_2'],
+					$custom['col_3'],
+					$custom['col_4']
 				);
 
 				$colNum = count(array_filter($columns));
@@ -96,11 +95,11 @@ class CustomACF {
 					}
 				}
 		
-				the_sub_field('layout');
-				}
+				$custom['layout'];
 
 //				echo '</div></section>';
-			endwhile; endif; // Content
+			}
+			//endwhile; endif; // Content
 		endwhile; endif; // Row
 	}
 }
