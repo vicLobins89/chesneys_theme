@@ -25,8 +25,8 @@ class CustomACF {
 			endwhile; endif; // Modules
 			
 			// Custom Content
-			print_r(get_sub_field('content'));
-			if( have_rows('content') ) : while( have_rows('content') ) : the_row();
+			print_r(get_sub_field('custom_content'));
+			if( have_rows('custom_content') ) : while( have_rows('custom_content') ) : the_row();
 				$layout = get_sub_field('layout');
 				$padding = get_sub_field('padding');
 				$bgColour = get_sub_field('bg_colour');
