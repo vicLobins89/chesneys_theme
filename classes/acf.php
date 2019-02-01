@@ -6,6 +6,7 @@ class CustomACF {
 		}
 		
 		if( have_rows('rows') ) : while( have_rows('rows') ) : the_row();
+		print_r(the_row());
 		
 			// Modules
 			$post_object = get_sub_field('module');
@@ -32,6 +33,7 @@ class CustomACF {
 			}
 			
 			if( have_rows('content') ) : while( have_rows('content') ) : the_row();
+			print_r(the_row());
 			
 			$layout = get_sub_field('layout');
 			$padding = get_sub_field('padding');
