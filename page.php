@@ -23,7 +23,7 @@ $class = new CustomACF();
 
 							<?php // MAIN CONTENT ?>
 							<?php if( get_the_content() ) : ?>
-								<section class="row entry-content cf top<?php if( get_field('wrap') ) { echo ' wrap'; } ?>" itemprop="articleBody">
+								<section class="row entry-content cf top" itemprop="articleBody">
 									<div class="cf"><div class="col-12">
 										<?php the_content(); ?>
 									</div></div>
