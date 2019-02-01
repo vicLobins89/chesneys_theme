@@ -4,6 +4,12 @@ class CustomACF {
 		if( have_rows('rows') ) :
 		while( have_rows('rows') ) : the_row();
 		
+			echo '<pre>';
+				print_r( get_field('module')  );
+				print_r( get_sub_field('module')  );
+			echo '</pre>';
+			die;
+		
 			$post_object = get_sub_field('module');
 
 			if( $post_object ): 
@@ -15,7 +21,6 @@ class CustomACF {
 				?>
 				<div>
 					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<span>Post Object Custom Field: <?php the_field('field_name'); ?></span>
 				</div>
 				<?php wp_reset_postdata(); 
 			endif;
