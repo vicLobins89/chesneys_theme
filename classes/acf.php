@@ -26,14 +26,12 @@ class CustomACF {
 			
 			// Custom Content
 			$contentField = get_sub_field('content');
-			echo $contentField['layout'];
-		
-			if( have_rows('content') ) : while( have_rows('content') ) : the_row();
-				$layout = get_sub_field('layout');
-				$padding = get_sub_field('padding');
-				$bgColour = get_sub_field('bg_colour');
-				$bgImage = get_sub_field('bg_image');
-				$customClass = get_sub_field('class');
+			if( $contentField );
+				$layout = $contentField['layout'];
+				$padding = $contentField['padding'];
+				$bgColour = $contentField['bg_colour'];
+				$bgImage = $contentField['bg_image'];
+				$customClass = $contentField['class'];
 				$addClasses = array();
 				$addStyles = array();
 				$styles;
@@ -84,10 +82,10 @@ class CustomACF {
 //				}
 
 				$columns = array(
-					get_sub_field('col_1'),
-					get_sub_field('col_2'),
-					get_sub_field('col_3'),
-					get_sub_field('col_4')
+					$contentField['col_1'],
+					$contentField['col_2'],
+					$contentField['col_3'],
+					$contentField['col_4']
 				);
 
 				$colNum = count(array_filter($columns));
@@ -98,7 +96,7 @@ class CustomACF {
 				}
 
 //				echo '</div></section>';
-			endwhile; endif; // Content
+			//endwhile; endif; // Content
 		endwhile; endif; // Row
 	}
 }
