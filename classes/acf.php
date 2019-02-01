@@ -25,7 +25,9 @@ class CustomACF {
 			endwhile; endif; // Modules
 			
 			// Custom Content
-//			print_r(get_sub_field('content'));
+			$contentField = get_sub_field('content');
+			echo $contentField['layout'];
+		
 			if( have_rows('content') ) : while( have_rows('content') ) : the_row();
 				$layout = get_sub_field('layout');
 				$padding = get_sub_field('padding');
@@ -66,7 +68,6 @@ class CustomACF {
 				}
 		
 				print_r($layout);
-				print_r($customClass);
 
 //				if( $layout === 'hide' ) {
 //					echo '<section class="row entry-content cf" style="display: none;">';
