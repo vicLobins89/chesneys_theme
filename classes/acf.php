@@ -66,6 +66,7 @@ class CustomACF {
 				}
 		
 				print_r($layout);
+				print_r($customClass);
 
 //				if( $layout === 'hide' ) {
 //					echo '<section class="row entry-content cf" style="display: none;">';
