@@ -27,7 +27,8 @@ class CustomACF {
 			// Custom Content
 			//print_r(get_sub_field('custom_content'));
 			if( have_rows('custom_content') ) : while( have_rows('custom_content') ) : the_row();
-//				$layout = get_sub_field('layout');
+				$layout = get_sub_field('layout');
+				if($layout){
 				$padding = get_sub_field('padding');
 				$bgColour = get_sub_field('bg_colour');
 				$bgImage = get_sub_field('bg_image');
@@ -96,6 +97,7 @@ class CustomACF {
 				}
 		
 				the_sub_field('layout');
+				}
 
 //				echo '</div></section>';
 			endwhile; endif; // Content
