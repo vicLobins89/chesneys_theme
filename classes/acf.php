@@ -65,19 +65,19 @@ class CustomACF {
 					$styles .= '"';
 				}
 
-				if( $layout === 'hide' ) {
-					echo '<section class="row entry-content cf" style="display: none;">';
-					echo '<div class="cf">';
-				} else if( $layout === 'wrap' ) {
-					echo '<section class="row entry-content wrap cf '.implode(" ", $addClasses).'"'.$styles.'>';
-					echo '<div class="cf">';
-				} else if( $layout === 'full' ) {
-					echo '<section class="row entry-content full cf '.implode(" ", $addClasses).'"'.$styles.'>';
-					echo '<div class="cf">';
-				} else {
-					echo '<section class="row entry-content cf '.implode(" ", $addClasses).'"'.$styles.'>';
-					echo '<div class="cf">';
-				}
+//				if( $layout === 'hide' ) {
+//					echo '<section class="row entry-content cf" style="display: none;">';
+//					echo '<div class="cf">';
+//				} else if( $layout === 'wrap' ) {
+//					echo '<section class="row entry-content wrap cf '.implode(" ", $addClasses).'"'.$styles.'>';
+//					echo '<div class="cf">';
+//				} else if( $layout === 'full' ) {
+//					echo '<section class="row entry-content full cf '.implode(" ", $addClasses).'"'.$styles.'>';
+//					echo '<div class="cf">';
+//				} else {
+//					echo '<section class="row entry-content cf '.implode(" ", $addClasses).'"'.$styles.'>';
+//					echo '<div class="cf">';
+//				}
 
 				$columns = array(
 					get_sub_field('col_1'),
@@ -93,7 +93,7 @@ class CustomACF {
 					}
 				}
 
-				echo '</div></section>';
+//				echo '</div></section>';
 			endwhile; endif; // Content
 		endwhile; endif; // Row
 	}
