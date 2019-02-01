@@ -4,6 +4,22 @@ class CustomACF {
 		if( have_rows('rows') ) :
 		while( have_rows('rows') ) : the_row();
 		
+			$post_object = get_field('post_object');
+
+			if( $post_object ): 
+
+				// override $post
+				$post = $post_object;
+				setup_postdata( $post ); 
+
+				?>
+				<div>
+					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					<span>Post Object Custom Field: <?php the_field('field_name'); ?></span>
+				</div>
+				<?php wp_reset_postdata(); 
+			endif;
+		
 			if( have_rows('content') ) :
 			$rowNum = 0;
 			while( have_rows('content') ) : the_row();
