@@ -7,6 +7,7 @@ class CustomACF {
 			$post_object = get_sub_field('module');
 			if( $post_object ) :
 				// override $post
+				global $post;
 				$post = $post_object;
 				setup_postdata( $post ); 
 
