@@ -95,7 +95,7 @@ class CustomACF {
 					}
 				}
 		
-				$custom['layout'];
+				echo $custom['layout'];
 
 //				echo '</div></section>';
 			}
