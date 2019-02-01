@@ -4,15 +4,8 @@ class CustomACF {
 		if( have_rows('rows') ) :
 		while( have_rows('rows') ) : the_row();
 		
-			echo '<pre>';
-				print_r( get_sub_field('module')  );
-			echo '</pre>';
-			die;
-		
 			$post_object = get_sub_field('module');
-
-			if( $post_object ): 
-
+			if( $post_object ) :
 				// override $post
 				$post = $post_object;
 				setup_postdata( $post ); 
