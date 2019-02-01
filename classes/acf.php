@@ -99,5 +99,5 @@ class CustomACF {
 	}
 }
 
-$class = new CustomACF();
+$acfClass = new CustomACF();
 ?>

@@ -32,7 +32,7 @@ $class = new CustomACF();
 							
 							<?php // ACF FIELDS ?>
 							<?php
-								$class->page_rows();
+								$acfClass->page_rows();
 							?>
 
 							</article>
