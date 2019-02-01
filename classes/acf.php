@@ -16,7 +16,7 @@ class CustomACF {
 					$moduleBackground .= ') center/cover no-repeat"';
 				}
 				?>
-				<div class="module module-<?php strtolower(get_the_title()); ?>" <?php echo $moduleBackground; ?>>
+				<div class="module module-<?php echo strtolower(get_the_title()); ?>" <?php echo $moduleBackground; ?>>
 					<div class="inner-module"><?php the_content(); ?></div>
 				</div>
 				<?php wp_reset_postdata(); 
