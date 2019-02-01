@@ -25,13 +25,13 @@ class CustomACF {
 			endwhile; endif; // Modules
 			
 			// Custom Content
-			$contentField = get_sub_field('content');
-			if( $contentField );
-				$layout = $contentField['layout'];
-				$padding = $contentField['padding'];
-				$bgColour = $contentField['bg_colour'];
-				$bgImage = $contentField['bg_image'];
-				$customClass = $contentField['class'];
+			print_r(get_sub_field('content'));
+			if( have_rows('content') ) : while( have_rows('content') ) : the_row();
+				$layout = get_sub_field('layout');
+				$padding = get_sub_field('padding');
+				$bgColour = get_sub_field('bg_colour');
+				$bgImage = get_sub_field('bg_image');
+				$customClass = get_sub_field('class');
 				$addClasses = array();
 				$addStyles = array();
 				$styles;
@@ -67,25 +67,25 @@ class CustomACF {
 		
 				print_r($layout);
 
-				if( $layout === 'hide' ) {
-					echo '<section class="row entry-content cf" style="display: none;">';
-					echo '<div class="cf">';
-				} else if( $layout === 'wrap' ) {
-					echo '<section class="row entry-content wrap cf '.implode(" ", $addClasses).'"'.$styles.'>';
-					echo '<div class="cf">';
-				} else if( $layout === 'full' ) {
-					echo '<section class="row entry-content full cf '.implode(" ", $addClasses).'"'.$styles.'>';
-					echo '<div class="cf">';
-				} else {
-					echo '<section class="row entry-content cf '.implode(" ", $addClasses).'"'.$styles.'>';
-					echo '<div class="cf">';
-				}
+//				if( $layout === 'hide' ) {
+//					echo '<section class="row entry-content cf" style="display: none;">';
+//					echo '<div class="cf">';
+//				} else if( $layout === 'wrap' ) {
+//					echo '<section class="row entry-content wrap cf '.implode(" ", $addClasses).'"'.$styles.'>';
+//					echo '<div class="cf">';
+//				} else if( $layout === 'full' ) {
+//					echo '<section class="row entry-content full cf '.implode(" ", $addClasses).'"'.$styles.'>';
+//					echo '<div class="cf">';
+//				} else {
+//					echo '<section class="row entry-content cf '.implode(" ", $addClasses).'"'.$styles.'>';
+//					echo '<div class="cf">';
+//				}
 
 				$columns = array(
-					$contentField['col_1'],
-					$contentField['col_2'],
-					$contentField['col_3'],
-					$contentField['col_4']
+					get_sub_field('col_1'),
+					get_sub_field('col_2'),
+					get_sub_field('col_3'),
+					get_sub_field('col_4')
 				);
 
 				$colNum = count(array_filter($columns));
@@ -95,8 +95,8 @@ class CustomACF {
 					}
 				}
 
-				echo '</div></section>';
-			//endwhile; endif; // Content
+//				echo '</div></section>';
+			endwhile; endif; // Content
 		endwhile; endif; // Row
 	}
 }
