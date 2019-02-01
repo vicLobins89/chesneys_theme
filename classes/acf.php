@@ -1,10 +1,6 @@
 <?php
 class CustomACF {
     function page_rows() {
-		if ( !have_rows( 'rows' ) ) {
-			return false;
-		}
-		
 		if( have_rows('rows') ) : while( have_rows('rows') ) : the_row();
 		
 			// Modules
@@ -27,10 +23,7 @@ class CustomACF {
 			endif;
 			
 			// Custom Content
-			if ( !have_rows( 'content' ) ) {
-				return false;
-			}
-			
+			print_r(get_sub_field('content'));
 			if( have_rows('content') ) : while( have_rows('content') ) : the_row();
 			print_r(the_row());
 			
