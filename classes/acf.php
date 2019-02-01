@@ -6,7 +6,6 @@ class CustomACF {
 		}
 		
 		if( have_rows('rows') ) : while( have_rows('rows') ) : the_row();
-		print_r(the_row());
 		
 			// Modules
 			$post_object = get_sub_field('module');
