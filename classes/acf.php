@@ -28,7 +28,7 @@ class CustomACF {
 			if( have_rows('select_blog_feed') ) : while( have_rows('select_blog_feed') ) : the_row();
 				$category = get_sub_field('choose_category');
 				if( $category ) {
-//					global $post;
+					global $post;
 					$args = array(
 						'post_type' => 'post',
 						'post_status' => 'publish',
@@ -65,11 +65,12 @@ class CustomACF {
 			if( have_rows('select_portfolio_feed') ) : while( have_rows('select_portfolio_feed') ) : the_row();
 				$folio_cat = get_sub_field('choose_portfolio');
 				if( $folio_cat ) {
-//					global $post;
+					echo $folio_cat;
+					global $post;
 					$args2 = array(
 						'post_type' => 'case_study',
 						'post_status' => 'publish',
-						'cat' => $folio_cat,
+//						'cat' => $folio_cat,
 						'posts_per_page' => get_sub_field('post_count'),
 					);
 					$arr_posts2 = new WP_Query( $args2 );
