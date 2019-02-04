@@ -23,6 +23,26 @@ class CustomACF {
 					<?php wp_reset_postdata(); 
 				endif;
 			endwhile; endif; // Modules
+		
+			// Blog Cat
+			if( have_rows('select_blog_feed') ) : while( have_rows('select_blog_feed') ) : the_row();
+				$terms = get_sub_field('choose_category');
+				if( $terms ): ?>
+
+					<ul>
+
+					<?php foreach( $terms as $term ): ?>
+
+						<h2><?php echo $term->name; ?></h2>
+						<p><?php echo $term->description; ?></p>
+						<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
+
+					<?php endforeach; ?>
+
+					</ul>
+
+				<?php endif;
+			endwhile; endif; // Blog
 			
 			// Custom Content
 			//print_r(get_sub_field('custom_content'));
