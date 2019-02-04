@@ -33,7 +33,7 @@ class CustomACF {
 					$args = array(
 						'post_type' => 'post',
 						'post_status' => 'publish',
-						'category' => $category,
+						'cat' => $category,
 						'posts_per_page' => get_sub_field('post_count'),
 					);
 					$arr_posts = new WP_Query( $args );
