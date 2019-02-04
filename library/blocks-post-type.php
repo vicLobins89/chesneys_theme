@@ -4,9 +4,9 @@
 //add_action( 'after_switch_theme', 'bones_flush_rewrite_rules' );
 
 // Flush your rewrite rules
-function bones_flush_rewrite_rules() {
-	flush_rewrite_rules();
-}
+//function bones_flush_rewrite_rules() {
+//	flush_rewrite_rules();
+//}
 
 // let's create the function for the custom type
 function blocks_post() { 
