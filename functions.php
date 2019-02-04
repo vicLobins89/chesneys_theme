@@ -237,7 +237,8 @@ function mytheme_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
-//WOOCOMMERCE Checkout Functions
+//WOOCOMMERCE Functions
+require_once( 'woocommerce/shop-functions.php' );
 require_once( 'woocommerce/checkout-functions.php' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
