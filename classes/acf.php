@@ -28,7 +28,38 @@ class CustomACF {
 			if( have_rows('select_blog_feed') ) : while( have_rows('select_blog_feed') ) : the_row();
 				$category = get_sub_field('choose_category');
 				if( $category ) {
-					print_r($category);
+					global $post;
+					$args = array(
+						'post_type' => 'post',
+						'post_status' => 'publish',
+						'category' => $category,
+						'posts_per_page' => 5,
+					);
+					$arr_posts = new WP_Query( $args );
+
+					if ( $arr_posts->have_posts() ) :
+
+						while ( $arr_posts->have_posts() ) :
+							$arr_posts->the_post();
+							?>
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								<?php
+								if ( has_post_thumbnail() ) :
+									the_post_thumbnail();
+								endif;
+								?>
+								<header class="entry-header">
+									<h1 class="entry-title"><?php the_title(); ?></h1>
+								</header>
+								<div class="entry-content">
+									<?php the_excerpt(); ?>
+									<a href="<?php the_permalink(); ?>">Read More</a>
+								</div>
+							</article>
+							<?php
+						endwhile;
+					endif;
+					wp_reset_postdata(); 
 				}
 			endwhile; endif; // Blog
 			
