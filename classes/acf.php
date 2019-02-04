@@ -29,7 +29,6 @@ class CustomACF {
 				$category = get_sub_field('choose_category');
 				if( $category ) {
 					global $post;
-					echo $category;
 					$args = array(
 						'post_type' => 'post',
 						'post_status' => 'publish',
