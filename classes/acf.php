@@ -29,11 +29,12 @@ class CustomACF {
 				$category = get_sub_field('choose_category');
 				if( $category ) {
 					global $post;
+					echo $category;
 					$args = array(
 						'post_type' => 'post',
 						'post_status' => 'publish',
 						'category' => $category,
-						'posts_per_page' => 5,
+						'posts_per_page' => get_sub_field('post_count'),
 					);
 					$arr_posts = new WP_Query( $args );
 
