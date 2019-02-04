@@ -1,7 +1,7 @@
 <?php
 
 // Flush rewrite rules for custom post types
-add_action( 'after_switch_theme', 'bones_flush_rewrite_rules' );
+//add_action( 'after_switch_theme', 'bones_flush_rewrite_rules' );
 
 // Flush your rewrite rules
 function bones_flush_rewrite_rules() {
