@@ -48,9 +48,7 @@ class CustomACF {
 									the_post_thumbnail();
 								endif;
 								?>
-								<header class="entry-header">
-									<h1 class="entry-title"><?php the_title(); ?></h1>
-								</header>
+								<h1 class="entry-title"><?php the_title(); ?></h1>
 								<div class="entry-content">
 									<?php the_excerpt(); ?>
 									<a href="<?php the_permalink(); ?>">Read More</a>
@@ -62,6 +60,43 @@ class CustomACF {
 					wp_reset_postdata(); 
 				}
 			endwhile; endif; // Blog
+		
+			// Case Studies
+			if( have_rows('select_portfolio_feed') ) : while( have_rows('select_portfolio_feed') ) : the_row();
+				$folio_cat = get_sub_field('choose_portfolio');
+				if( $folio_cat ) {
+//					global $post;
+					$args2 = array(
+						'post_type' => 'case_study',
+						'post_status' => 'publish',
+						'cat' => folio_cat,
+						'posts_per_page' => get_sub_field('post_count'),
+					);
+					$arr_posts2 = new WP_Query( $args2 );
+
+					if ( $arr_posts2->have_posts() ) :
+
+						while ( $arr_posts2->have_posts() ) :
+							$arr_posts2->the_post();
+							?>
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								<?php
+								if ( has_post_thumbnail() ) :
+									the_post_thumbnail();
+								endif;
+								?>
+								<h1 class="entry-title"><?php the_title(); ?></h1>
+								<div class="entry-content">
+									<?php the_excerpt(); ?>
+									<a href="<?php the_permalink(); ?>">Read More</a>
+								</div>
+							</article>
+							<?php
+						endwhile;
+					endif;
+					wp_reset_postdata();
+				}
+			endwhile; endif; // Case Studies
 			
 			// Custom Content
 			//print_r(get_sub_field('custom_content'));
