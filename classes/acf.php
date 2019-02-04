@@ -27,12 +27,9 @@ class CustomACF {
 			// Blog Cat
 			if( have_rows('select_blog_feed') ) : while( have_rows('select_blog_feed') ) : the_row();
 				$category = get_sub_field('choose_category');
-				if( $category ): ?>
-
-					<h2><?php echo $category->name; ?></h2>
-					<p><?php echo $category->description; ?></p>
-
-				<?php endif;
+				if( $category ) {
+					print_r($category);
+				}
 			endwhile; endif; // Blog
 			
 			// Custom Content
