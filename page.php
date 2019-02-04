@@ -22,18 +22,30 @@ $class = new CustomACF();
 							<?php endif; ?>
 
 							<?php // MAIN CONTENT ?>
-							<?php if( get_the_content() ) : ?>
-								<section class="row entry-content cf top" itemprop="articleBody">
-									<div class="cf"><div class="col-12">
+							<?php if( get_the_content() ) :
+								$layout = get_field('editor_layout');
+								if( $layout === 'hide' ) {
+									echo '<section class="row entry-content cf" style="display: none;">';
+									echo '<div class="cf">';
+								} else if( $layout === 'wrap' ) {
+									echo '<section class="row entry-content wrap cf" itemprop="articleBody">';
+									echo '<div class="cf">';
+								} else if( $layout === 'full' ) {
+									echo '<section class="row entry-content full cf" itemprop="articleBody">';
+									echo '<div class="cf">';
+								} else {
+									echo '<section class="row entry-content cf top" itemprop="articleBody">';
+									echo '<div class="cf">';
+								}
+								?>
+									<div class="col-12">
 										<?php the_content(); ?>
-									</div></div>
-								</section>
+									</div>
+								</div></section>
 							<?php endif; ?>
 							
 							<?php // ACF FIELDS ?>
-							<?php
-								$acfClass->page_rows();
-							?>
+							<?php $acfClass->page_rows(); ?>
 
 							</article>
 
