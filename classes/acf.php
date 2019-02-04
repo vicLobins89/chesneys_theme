@@ -25,7 +25,7 @@ class CustomACF {
 			endwhile; endif; // Modules
 		
 			// Blog Cat
-			if( have_rows('select_blog_feed') ) : while( have_rows('select_blog_feed') ) : the_row();
+			if( have_rows('blog_feed') ) : while( have_rows('blog_feed') ) : the_row();
 				$category = get_sub_field('choose_category');
 				if( $category ) {
 					global $post;
@@ -62,7 +62,7 @@ class CustomACF {
 			endwhile; endif; // Blog
 		
 			// Case Studies
-			if( have_rows('select_portfolio_feed') ) : while( have_rows('select_portfolio_feed') ) : the_row();
+			if( have_rows('portfolio_feed') ) : while( have_rows('portfolio_feed') ) : the_row();
 				$folio_cat = get_sub_field('choose_portfolio');
 				if( $folio_cat ) {
 					global $post;
