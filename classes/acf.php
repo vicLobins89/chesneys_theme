@@ -69,7 +69,7 @@ class CustomACF {
 					$args2 = array(
 						'post_type' => 'case_study',
 						'post_status' => 'publish',
-						'cat' => folio_cat,
+						'cat' => $folio_cat,
 						'posts_per_page' => get_sub_field('post_count'),
 					);
 					$arr_posts2 = new WP_Query( $args2 );
