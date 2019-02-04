@@ -6,7 +6,7 @@ class CustomACF {
 			// Modules
 			if( have_rows('module') ) : while( have_rows('module') ) : the_row();
 				$post_object = get_sub_field('module_block');
-				if( $post_object ) :
+				if( $post_object ) {
 					// override $post
 					global $post;
 					$post = $post_object;
@@ -21,14 +21,14 @@ class CustomACF {
 						<div class="inner-module"><?php the_content(); ?></div>
 					</section>
 					<?php wp_reset_postdata(); 
-				endif;
+				}
 			endwhile; endif; // Modules
 		
 			// Blog Cat
 			if( have_rows('select_blog_feed') ) : while( have_rows('select_blog_feed') ) : the_row();
 				$category = get_sub_field('choose_category');
 				if( $category ) {
-					global $post;
+//					global $post;
 					$args = array(
 						'post_type' => 'post',
 						'post_status' => 'publish',
