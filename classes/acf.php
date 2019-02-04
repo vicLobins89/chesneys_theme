@@ -26,11 +26,11 @@ class CustomACF {
 		
 			// Blog Cat
 			if( have_rows('select_blog_feed') ) : while( have_rows('select_blog_feed') ) : the_row();
-				$term = get_sub_field('choose_category');
-				if( $term ): ?>
+				$category = get_sub_field('choose_category');
+				if( $category ): ?>
 
-					<h2><?php echo $term->name; ?></h2>
-					<p><?php echo $term->description; ?></p>
+					<h2><?php echo $category->name; ?></h2>
+					<p><?php echo $category->description; ?></p>
 
 				<?php endif;
 			endwhile; endif; // Blog
