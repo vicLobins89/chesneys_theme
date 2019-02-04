@@ -26,7 +26,7 @@ class CustomACF {
 		
 			// Blog Cat
 			if( have_rows('select_blog_feed') ) : while( have_rows('select_blog_feed') ) : the_row();
-				$term = get_field('choose_category');
+				$term = get_sub_field('choose_category');
 				if( $term ): ?>
 
 					<h2><?php echo $term->name; ?></h2>
