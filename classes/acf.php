@@ -26,16 +26,16 @@ class CustomACF {
 		
 			// Blog Cat
 			if( have_rows('select_blog_feed') ) : while( have_rows('select_blog_feed') ) : the_row();
-				$terms = get_sub_field('choose_category');
-				if( $terms ): ?>
+				$cats = get_sub_field('choose_category');
+				if( $cats ): ?>
 
 					<ul>
 
-					<?php foreach( $terms as $term ): ?>
+					<?php foreach( $cats as $cat ): ?>
 
-						<h2><?php echo $term->name; ?></h2>
-						<p><?php echo $term->description; ?></p>
-						<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
+						<h2><?php echo $cat->name; ?></h2>
+						<p><?php echo $cat->description; ?></p>
+						<a href="<?php echo get_term_link( $cat ); ?>">View all '<?php echo $cat->name; ?>' posts</a>
 
 					<?php endforeach; ?>
 
