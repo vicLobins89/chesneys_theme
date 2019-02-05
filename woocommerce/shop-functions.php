@@ -12,7 +12,7 @@ function remove_add_to_cart_buttons() {
 add_action( 'wp', 'remove_addcart' );
 
 function remove_addcart() {
-   $product = get_product();
+   $product = wc_get_product();
    if ( has_term ( array('fireplaces', 'stoves'), 'product_cat') ) {
        remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
        remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
