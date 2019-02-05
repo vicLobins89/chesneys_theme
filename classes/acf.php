@@ -16,7 +16,7 @@ class CustomACF {
 			<section class="module module-<?php echo $post->post_name; ?>" <?php echo $moduleBackground; ?>>
 				<div class="inner-module"><?php the_content(); ?></div>
 			</section>
-			<?php wp_reset_postdata(); 
+			<?php wp_reset_postdata();
 		}
 	}
 	
@@ -52,7 +52,7 @@ class CustomACF {
 					<?php
 				endwhile;
 			endif;
-			wp_reset_postdata(); 
+			wp_reset_postdata();
 		}
 	}
 	
