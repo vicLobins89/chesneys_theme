@@ -90,7 +90,7 @@ if ( woocommerce_product_loop() ) {
 		foreach($rows as $row) {
 			$modules = $row['module'];
 			foreach($modules as $module) {
-				$acfClass->render_modules();
+				$acfClass->render_modules($module['module_block']);
 			}
 			
 			$blogFeed = $row['blog_feed'];
