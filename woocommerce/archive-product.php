@@ -18,8 +18,6 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
-require_once('../classes/acf.php');
-$acfClass = new CustomACF();
 
 /**
  * Hook: woocommerce_before_main_content.
@@ -84,7 +82,9 @@ if ( woocommerce_product_loop() ) {
 	 */
 	do_action( 'woocommerce_after_shop_loop' );
 	
-	$acfClass->page_rows();
+	$term = get_queried_object();
+	$row = get_field('rows', $term);
+	print_r($row);
 } else {
 	/**
 	 * Hook: woocommerce_no_products_found.
