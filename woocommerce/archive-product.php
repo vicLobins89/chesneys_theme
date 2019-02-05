@@ -18,6 +18,8 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
+require_once('classes/acf.php');
+$acfClass = new CustomACF();
 
 /**
  * Hook: woocommerce_before_main_content.

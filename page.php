@@ -1,7 +1,7 @@
 <?php
 get_header();
 require_once('classes/acf.php');
-$class = new CustomACF();
+$acfClass = new CustomACF();
 ?>
 
 			<div id="content">
