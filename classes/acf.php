@@ -1,27 +1,31 @@
 <?php
 class CustomACF {
+	public function render_modules() {
+		$post_object = get_sub_field('module_block');
+		if( $post_object ) {
+			// override $post
+			global $post;
+			$post = $post_object;
+			setup_postdata( $post );
+			if( has_post_thumbnail() ) {
+				$moduleBackground = ' style="background: url(';
+				$moduleBackground .= get_the_post_thumbnail_url(get_the_ID(),'full');
+				$moduleBackground .= ') center/cover no-repeat"';
+			}
+			?>
+			<section class="module module-<?php echo $post->post_name; ?>" <?php echo $moduleBackground; ?>>
+				<div class="inner-module"><?php the_content(); ?></div>
+			</section>
+			<?php wp_reset_postdata(); 
+		}
+	}
+	
     function page_rows() {
 		if( have_rows('rows') ) : while( have_rows('rows') ) : the_row();
 		
 			// Modules
 			if( have_rows('module') ) : while( have_rows('module') ) : the_row();
-				$post_object = get_sub_field('module_block');
-				if( $post_object ) {
-					// override $post
-					global $post;
-					$post = $post_object;
-					setup_postdata( $post );
-					if( has_post_thumbnail() ) {
-						$moduleBackground = ' style="background: url(';
-						$moduleBackground .= get_the_post_thumbnail_url(get_the_ID(),'full');
-						$moduleBackground .= ') center/cover no-repeat"';
-					}
-					?>
-					<section class="module module-<?php echo $post->post_name; ?>" <?php echo $moduleBackground; ?>>
-						<div class="inner-module"><?php the_content(); ?></div>
-					</section>
-					<?php wp_reset_postdata(); 
-				}
+				$this->render_modules();
 			endwhile; endif; // Modules
 		
 			// Blog Cat
