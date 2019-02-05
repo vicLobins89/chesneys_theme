@@ -88,7 +88,23 @@ if ( woocommerce_product_loop() ) {
 		foreach($rows as $row) {
 			$modules = $row['module'];
 			foreach($modules as $module) {
-				print_r($module);
+				$post_object = $module['module_block'];
+				if( $post_object ) {
+					// override $post
+					global $post;
+					$post = $post_object;
+					setup_postdata( $post );
+					if( has_post_thumbnail() ) {
+						$moduleBackground = ' style="background: url(';
+						$moduleBackground .= get_the_post_thumbnail_url(get_the_ID(),'full');
+						$moduleBackground .= ') center/cover no-repeat"';
+					}
+					?>
+					<section class="module module-<?php echo $post->post_name; ?>" <?php echo $moduleBackground; ?>>
+						<div class="inner-module"><?php the_content(); ?></div>
+					</section>
+					<?php wp_reset_postdata(); 
+				}
 			}
 			
 			$blogFeed = $row['blog_feed'];
