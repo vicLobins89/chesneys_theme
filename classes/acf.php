@@ -1,6 +1,6 @@
 <?php
 class CustomACF {
-	public function render_modules($module_block = '') {
+	public function render_modules($module_block = null) {
 		$post_object = (!isset($module_block) || is_null($module_block)) ? get_sub_field('module_block') : $module_block; 
 //		$post_object = get_sub_field('module_block');
 		if( $post_object ) {
