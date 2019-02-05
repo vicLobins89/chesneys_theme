@@ -15,7 +15,7 @@ function disable_cars_initially() {
 	global $product;
 
 	// Set HERE your category ID, slug or name (or an array)
-	$category = 'fireplaces';
+	$category = array('fireplaces', 'stoves');
 
 	//Remove Add to Cart button from product description of product with any cat    
 	if ( has_term( $category, 'product_cat', $product->id ) ) {
