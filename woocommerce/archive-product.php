@@ -83,8 +83,18 @@ if ( woocommerce_product_loop() ) {
 	do_action( 'woocommerce_after_shop_loop' );
 	
 	$term = get_queried_object();
-	$row = get_field('rows', $term);
-	print_r($row);
+	$rows = get_field('rows', $term);
+	if($rows) {
+		foreach($rows as $row) {
+			$modules = $row['module'];
+			foreach($modules as $module) {
+				print_r($module);
+			}
+			
+			$blogFeed = $row['blog_feed'];
+			$folioFeed = $row['portfolio_feed'];
+		}
+	}
 } else {
 	/**
 	 * Hook: woocommerce_no_products_found.
