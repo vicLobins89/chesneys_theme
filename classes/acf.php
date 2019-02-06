@@ -20,20 +20,20 @@ class CustomACF {
 		}
 	}
 	
-	public function render_blog() {
-		$category = get_sub_field('choose_category');
+	public function render_blog($catID = null, $post_count = null) {
+		$category = (!isset($catID) || is_null($catID)) ? get_sub_field('choose_category') : $catID;
+		$posts = (!isset($post_count) || is_null(post_count)) ? get_sub_field('post_count') : 1;
 		if( $category ) {
 			global $post;
 			$args = array(
 				'post_type' => 'post',
 				'post_status' => 'publish',
-				'cat' => $category,
-				'posts_per_page' => get_sub_field('post_count'),
+				'cat' => $catID,
+				'posts_per_page' => $posts,
 			);
 			$arr_posts = new WP_Query( $args );
 
 			if ( $arr_posts->have_posts() ) :
-
 				while ( $arr_posts->have_posts() ) :
 					$arr_posts->the_post();
 					?>
@@ -51,6 +51,10 @@ class CustomACF {
 					</article>
 					<?php
 				endwhile;
+				
+				return true;
+			else : 
+				return false;
 			endif;
 			wp_reset_postdata();
 		}

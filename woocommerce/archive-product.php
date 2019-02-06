@@ -85,14 +85,9 @@ if ( woocommerce_product_loop() ) {
 	do_action( 'woocommerce_after_shop_loop' );
 	
 	$term = get_queried_object();
+	
+	// Modules
 	$rows = get_field('rows', $term);
-	
-	echo $term->term_id;
-	$parentcats = get_ancestors($term->term_id, 'product_cat');
-	foreach($parentcats as $parentcat){
-		echo $parentcat;
-	}
-	
 	if($rows) {
 		foreach($rows as $row) {
 			$modules = $row['module'];
@@ -102,6 +97,17 @@ if ( woocommerce_product_loop() ) {
 			
 //			$blogFeed = $row['blog_feed'];
 //			$folioFeed = $row['portfolio_feed'];
+		}
+	}
+	
+	$catID = $term->term_id;
+	
+	if( $acfClass->render_blog($catID) == true ) {
+		$acfClass->render_blog($catID);
+	} else {
+		$parentCats = get_ancestors($catID, 'product_cat');
+		foreach($parentCats as $parentcat){
+			echo $parentcat;
 		}
 	}
 } else {
