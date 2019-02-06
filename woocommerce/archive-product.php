@@ -100,12 +100,7 @@ if ( woocommerce_product_loop() ) {
 	$categoryId = $term->term_id;
 	$categoryName = $term->slug;
 	
-	if( $acfClass->render_blog($categoryName) == true ) {
-		$acfClass->render_blog($categoryName);
-		echo 'true';
-	} else {
-		echo 'false';
-	}
+	$content = $acfClass->render_blog($categoryName);
 	
 //	$parentCats = get_ancestors($categoryId, 'product_cat');
 //	foreach($parentCats as $parentCat){

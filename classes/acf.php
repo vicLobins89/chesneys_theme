@@ -45,7 +45,6 @@ class CustomACF {
 			$arr_posts = new WP_Query( $args );
 
 			if ( $arr_posts->have_posts() ) :
-				if( $cat ) { return true; }
 				while ( $arr_posts->have_posts() ) :
 					$arr_posts->the_post();
 					?>
@@ -63,8 +62,6 @@ class CustomACF {
 					</article>
 					<?php
 				endwhile;
-			else : 
-				return false;
 			endif;
 			wp_reset_postdata();
 		}
