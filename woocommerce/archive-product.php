@@ -86,6 +86,13 @@ if ( woocommerce_product_loop() ) {
 	
 	$term = get_queried_object();
 	$rows = get_field('rows', $term);
+	
+	$parentcats = get_ancestors($term, 'product_cat');
+
+	foreach($parentcat as $parentcats){
+		echo $parentcat;
+	}
+	
 	echo $term->name;
 	if($rows) {
 		foreach($rows as $row) {
