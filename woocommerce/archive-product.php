@@ -100,17 +100,22 @@ if ( woocommerce_product_loop() ) {
 	$prCatId = $term->term_id;
 	$prCatName = $term->slug;
 	
-	function count_cat_post($category) {
-		if(is_string($category)) {
-			$catID = get_cat_ID($category);
-		} else {
-			return 0;
-		}
-		$cat = get_category($catID);
-		return $cat->count;
+//	function count_cat_post($category) {
+//		if(is_string($category)) {
+//			$catID = get_cat_ID($category);
+//		} else {
+//			return 0;
+//		}
+//		$cat = get_category($catID);
+//		return $cat->count;
+//	}
+	
+	if( get_cat_ID($prCatName) ) {
+		$acfClass->render_blog($categoryName);
+	} else {
+		$acfClass->render_blog($categoryName);
 	}
 	
-	echo count_cat_post($prCatName);
 //	$acfClass->render_blog($categoryName);
 	
 //	$parentCats = get_ancestors($categoryId, 'product_cat');
