@@ -104,8 +104,9 @@ if ( woocommerce_product_loop() ) {
 	$categoryName = $term->slug;
 	
 	$parentCats = get_ancestors($categoryId, 'product_cat');
-	foreach($parentCats as $parentcat){
-		echo get_the_category($parentcat)->slug;
+	foreach($parentCats as $parentCat){
+		$category = get_the_category($parentCat);
+		echo $category>slug;
 	}
 } else {
 	/**
