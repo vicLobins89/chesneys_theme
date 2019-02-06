@@ -106,8 +106,8 @@ if ( woocommerce_product_loop() ) {
 	
 	$parentCats = get_ancestors($categoryId, 'product_cat');
 	foreach($parentCats as $parentCat){
-		echo $parentCat;
-		echo get_cat_name($parentCat);
+		$category = get_term_by('id', $parentCat, 'product_cat');
+		print_r($category);
 	}
 } else {
 	/**
