@@ -102,12 +102,14 @@ if ( woocommerce_product_loop() ) {
 	
 	if( $acfClass->render_blog($categoryName) == true ) {
 //		$acfClass->render_blog($categoryName);
+		echo 'true';
 	} else {
-		$parentCats = get_ancestors($categoryId, 'product_cat');
-		foreach($parentCats as $parentCat){
-			$category = get_term_by('id', $parentCat, 'product_cat');
-			$acfClass->render_blog($category->slug);
-		}
+		echo 'false';
+//		$parentCats = get_ancestors($categoryId, 'product_cat');
+//		foreach($parentCats as $parentCat){
+//			$category = get_term_by('id', $parentCat, 'product_cat');
+//			$acfClass->render_blog($category->slug);
+//		}
 	}
 } else {
 	/**
