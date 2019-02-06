@@ -100,17 +100,19 @@ if ( woocommerce_product_loop() ) {
 	$categoryId = $term->term_id;
 	$categoryName = $term->slug;
 	
-	if( $acfClass->render_blog($categoryName) == true ) {
+	$acfClass->render_blog($categoryName);
+	
+//	if( $acfClass->render_blog($categoryName) == true ) {
 //		$acfClass->render_blog($categoryName);
-		echo 'true';
-	} else {
-		echo 'false';
+//		echo 'true';
+//	} else {
+//		echo 'false';
 //		$parentCats = get_ancestors($categoryId, 'product_cat');
 //		foreach($parentCats as $parentCat){
 //			$category = get_term_by('id', $parentCat, 'product_cat');
 //			$acfClass->render_blog($category->slug);
 //		}
-	}
+//	}
 } else {
 	/**
 	 * Hook: woocommerce_no_products_found.
