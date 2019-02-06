@@ -102,6 +102,7 @@ if ( woocommerce_product_loop() ) {
 	
 	if( $acfClass->render_blog($categoryName) ) {
 		$acfClass->render_blog($categoryName);
+		echo $categoryName;
 	} else {
 		$parentCats = get_ancestors($categoryId, 'product_cat');
 		foreach($parentCats as $parentCat){
