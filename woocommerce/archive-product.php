@@ -100,41 +100,17 @@ if ( woocommerce_product_loop() ) {
 	$prCatId = $term->term_id;
 	$prCatName = $term->slug;
 	
-//	function count_cat_post($category) {
-//		if(is_string($category)) {
-//			$catID = get_cat_ID($category);
-//		} else {
-//			return 0;
-//		}
-//		$cat = get_category($catID);
-//		return $cat->count;
-//	}
-	
 	if( get_cat_ID($prCatName) ) {
 		$acfClass->render_blog($prCatName);
 	} else {
-//		$acfClass->render_blog($prCatName);
+		$parentCats = get_ancestors($prCatId, 'product_cat');
+		foreach($parentCats as $parentCat){
+			$category = get_term_by('id', $parentCat, 'product_cat');
+			if( get_cat_ID($parentCat) ) {
+				$acfClass->render_blog($category->slug);
+			}
+		}
 	}
-	
-//	$acfClass->render_blog($categoryName);
-	
-//	$parentCats = get_ancestors($categoryId, 'product_cat');
-//	foreach($parentCats as $parentCat){
-//		$category = get_term_by('id', $parentCat, 'product_cat');
-//		$acfClass->render_blog($category->slug);
-//	}
-	
-//	if( $acfClass->render_blog($categoryName) == true ) {
-//		$acfClass->render_blog($categoryName);
-//		echo 'true';
-//	} else {
-//		echo 'false';
-//		$parentCats = get_ancestors($categoryId, 'product_cat');
-//		foreach($parentCats as $parentCat){
-//			$category = get_term_by('id', $parentCat, 'product_cat');
-//			$acfClass->render_blog($category->slug);
-//		}
-//	}
 } else {
 	/**
 	 * Hook: woocommerce_no_products_found.
