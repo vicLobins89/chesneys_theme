@@ -25,7 +25,7 @@ class CustomACF {
 			$category = "'cat' => get_sub_field('choose_category')";
 			echo $category;
 		} else {
-			$category = "'category_name' => $cat";
+			$category = "'category_name' => '$cat'";
 			echo $category;
 		}
 		$posts = (!isset($post_count) || is_null(post_count)) ? get_sub_field('post_count') : 1;
