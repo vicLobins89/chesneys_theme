@@ -100,15 +100,13 @@ if ( woocommerce_product_loop() ) {
 	$categoryId = $term->term_id;
 	$categoryName = $term->slug;
 	
-	function testFunctionOutput($f, $p = array()){
-		ob_start();
-		call_user_func_array($f, $p);
-		$s = ob_get_contents();
-		ob_end_flush();
-		return (bool)($s !== '');
-	}
-	
-	var_dump(testFunctionOutput($acfClass->render_blog($categoryName)));
+//	function testFunctionOutput($f, $p = array()){
+	ob_start();
+	call_user_func_array($acfClass->render_blog($categoryName));
+	$s = ob_get_contents();
+	ob_end_flush();
+	return (bool)($s !== '');
+//	}
 	
 //	$parentCats = get_ancestors($categoryId, 'product_cat');
 //	foreach($parentCats as $parentCat){
