@@ -87,7 +87,8 @@ if ( woocommerce_product_loop() ) {
 	$term = get_queried_object();
 	$rows = get_field('rows', $term);
 	
-	echo $term->slug;
+	echo $term->term_id;
+	print_r(get_ancestors($term->term_id, 'product_cat'));
 	
 	if($rows) {
 		foreach($rows as $row) {
