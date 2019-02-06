@@ -102,10 +102,10 @@ if ( woocommerce_product_loop() ) {
 	
 //	function testFunctionOutput($f, $p = array()){
 	ob_start();
-	call_user_func_array($acfClass->render_blog($categoryName));
+	call_user_func_array($acfClass->render_blog($categoryName), $p = array());
 	$s = ob_get_contents();
 	ob_end_flush();
-	return (bool)($s !== '');
+	echo (bool)($s !== '');
 //	}
 	
 //	$parentCats = get_ancestors($categoryId, 'product_cat');
