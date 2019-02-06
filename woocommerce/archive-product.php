@@ -86,6 +86,7 @@ if ( woocommerce_product_loop() ) {
 	
 	$term = get_queried_object();
 	$rows = get_field('rows', $term);
+	echo $term->name;
 	if($rows) {
 		foreach($rows as $row) {
 			$modules = $row['module'];
@@ -93,8 +94,8 @@ if ( woocommerce_product_loop() ) {
 				$acfClass->render_modules($module['module_block']);
 			}
 			
-			$blogFeed = $row['blog_feed'];
-			$folioFeed = $row['portfolio_feed'];
+//			$blogFeed = $row['blog_feed'];
+//			$folioFeed = $row['portfolio_feed'];
 		}
 	}
 } else {
