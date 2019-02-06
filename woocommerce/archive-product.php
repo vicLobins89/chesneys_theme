@@ -87,17 +87,8 @@ if ( woocommerce_product_loop() ) {
 	$term = get_queried_object();
 	$rows = get_field('rows', $term);
 	
-	$category_parent_id = $term[0]->category_parent;
-	if ( $category_parent_id != 0 ) {
-		$category_parent = get_term( $category_parent_id, 'category' );
-		$css_slug = $category_parent->slug;
-		echo $css_slug;
-	} else {
-		$css_slug = $category[0]->slug;
-		echo $css_slug;
-	}
+	echo $term->slug;
 	
-	echo $term->name;
 	if($rows) {
 		foreach($rows as $row) {
 			$modules = $row['module'];
