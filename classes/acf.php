@@ -23,8 +23,10 @@ class CustomACF {
 	public function render_blog($cat = null, $post_count = null) {
 		if (!isset($cat) || is_null($cat) ) {
 			$category = "'cat' => get_sub_field('choose_category')";
+			echo $category;
 		} else {
 			$category = "'category_name' => $cat";
+			echo $category;
 		}
 		$posts = (!isset($post_count) || is_null(post_count)) ? get_sub_field('post_count') : 1;
 		if( $category ) {
