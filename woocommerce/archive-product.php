@@ -88,7 +88,10 @@ if ( woocommerce_product_loop() ) {
 	$rows = get_field('rows', $term);
 	
 	echo $term->term_id;
-	print_r(get_ancestors($term->term_id, 'product_cat'));
+	$parentcats = get_ancestors($term->term_id, 'product_cat');
+	foreach($parentcats as $parentcat){
+		echo $parentcat;
+	}
 	
 	if($rows) {
 		foreach($rows as $row) {
