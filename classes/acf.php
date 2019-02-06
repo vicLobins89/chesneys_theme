@@ -21,7 +21,8 @@ class CustomACF {
 	}
 	
 	public function render_blog($cat = null) {
-		$postNum =  (isset(get_sub_field('post_count'))) ? get_sub_field('post_count') : 1;
+		$postNum = get_sub_field('post_count');
+		$postNum = (isset($postNum)) ? $postNum : 1;
 		$category = get_sub_field('choose_category');
 		if( $category || $cat ) {
 			global $post;
