@@ -89,7 +89,7 @@ if ( woocommerce_product_loop() ) {
 	
 	$parentcats = get_ancestors($term, 'product_cat');
 
-	foreach($parentcat as $parentcats){
+	foreach($parentcats as $parentcat){
 		echo $parentcat;
 	}
 	
