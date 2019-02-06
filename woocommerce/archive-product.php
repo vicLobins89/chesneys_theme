@@ -101,6 +101,7 @@ if ( woocommerce_product_loop() ) {
 	$categoryName = $term->slug;
 	
 	if( $acfClass->render_blog($categoryName) == true ) {
+		$acfClass->render_blog($categoryName);
 		echo 'true';
 	} else {
 		echo 'false';
