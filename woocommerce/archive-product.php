@@ -101,7 +101,7 @@ if ( woocommerce_product_loop() ) {
 	$categoryName = $term->slug;
 	
 	if( $acfClass->render_blog($categoryName) == true ) {
-		$acfClass->render_blog($categoryName);
+//		$acfClass->render_blog($categoryName);
 	} else {
 		$parentCats = get_ancestors($categoryId, 'product_cat');
 		foreach($parentCats as $parentCat){
