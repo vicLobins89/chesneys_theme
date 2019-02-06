@@ -20,23 +20,27 @@ class CustomACF {
 		}
 	}
 	
-	public function render_blog($cat = null, $post_count = null) {
-		if (!isset($cat) || is_null($cat) ) {
-			$category = "'cat' => get_sub_field('choose_category')";
-			echo $category;
-		} else {
-			$category = "'category_name' => '$cat'";
-			echo $category;
-		}
-		$posts = (!isset($post_count) || is_null(post_count)) ? get_sub_field('post_count') : 1;
-		if( $category ) {
+	public function render_blog($cat = null) {
+		$postNum =  (isset(get_sub_field('post_count'))) ? get_sub_field('post_count') : 1;
+		$category = get_sub_field('choose_category');
+		if( $category || $cat ) {
 			global $post;
-			$args = array(
-				'post_type' => 'post',
-				'post_status' => 'publish',
-				$category,
-				'posts_per_page' => $posts,
-			);
+			
+			if (!isset($cat) || is_null($cat) ) {
+				$args = array(
+					'post_type' => 'post',
+					'post_status' => 'publish',
+					'cat' => $category,
+					'posts_per_page' => $postNum,
+				);
+			} else {
+				$args = array(
+					'post_type' => 'post',
+					'post_status' => 'publish',
+					'category_name' => $cat,
+					'posts_per_page' => $postNum,
+				);
+			}
 			$arr_posts = new WP_Query( $args );
 
 			if ( $arr_posts->have_posts() ) :
