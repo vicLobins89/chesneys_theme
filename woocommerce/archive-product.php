@@ -100,7 +100,7 @@ if ( woocommerce_product_loop() ) {
 	$categoryId = $term->term_id;
 	$categoryName = $term->slug;
 	
-	function testFunctionOutput($f){
+	function testFunctionOutput($f, $p = array()){
 		ob_start();
 		call_user_func_array($f, $p);
 		$s = ob_get_contents();
