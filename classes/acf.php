@@ -45,7 +45,7 @@ class CustomACF {
 			$arr_posts = new WP_Query( $args );
 
 			if ( $arr_posts->have_posts() ) :
-				return true;
+//				return true;
 				while ( $arr_posts->have_posts() ) :
 					$arr_posts->the_post();
 					?>
