@@ -62,10 +62,6 @@ class CustomACF {
 					</article>
 					<?php
 				endwhile;
-				
-				return true;
-			else : 
-				return false;
 			endif;
 			wp_reset_postdata();
 		}
