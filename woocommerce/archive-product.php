@@ -106,9 +106,7 @@ if ( woocommerce_product_loop() ) {
 		$parentCats = get_ancestors($prCatId, 'product_cat');
 		foreach($parentCats as $parentCat){
 			$category = get_term_by('id', $parentCat, 'product_cat');
-			
-			echo $category->slug;
-			if( get_cat_ID($parentCat) ) {
+			if( get_cat_ID($category->slug) ) {
 				$acfClass->render_blog($category->slug);
 			}
 		}
