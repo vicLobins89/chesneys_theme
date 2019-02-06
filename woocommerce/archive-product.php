@@ -111,9 +111,9 @@ if ( woocommerce_product_loop() ) {
 //	}
 	
 	if( get_cat_ID($prCatName) ) {
-		$acfClass->render_blog($categoryName);
+		$acfClass->render_blog($prCatName);
 	} else {
-		$acfClass->render_blog($categoryName);
+//		$acfClass->render_blog($prCatName);
 	}
 	
 //	$acfClass->render_blog($categoryName);
