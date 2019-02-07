@@ -91,12 +91,11 @@ function wdm_send_order_to_ext( $order_id ){
 				'quantity' => $item['qty'],
 			);
 		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
-			$api_items[$item['product_id']] = array(
+			$api_items[$item] = array(
 				'item_name' => $item['name'],
 				'item_sku' => $product->get_sku(),
-//				'item_ship_class' => $product->get_shipping_class(),
-				'item_price' => $item['line_total'],
 				'quantity' => $item['qty'],
+				'price' => $item['line_total'],
 			);
 		}
 	}
@@ -104,25 +103,29 @@ function wdm_send_order_to_ext( $order_id ){
 	$apiData = array(
 		'test' => true,
 		'order' => array(
-			'transaction_key' => $transaction_key,
-			'customer_email' => $email,
-			'customer_phone' => $phone,
-			'bill_firstname' => $address['billing_first_name'],
-			'bill_surname' => $address['billing_last_name'],
-			'bill_company' => $address['billing_company'],
-			'bill_address1' => $address['billing_address_1'],
-			'bill_address2' => $address['billing_address_2'],
-			'bill_city' => $address['billing_city'],
-			'bill_state' => $address['billing_state'],
-			'bill_postcode' => $address['billing_postcode'],
-			'ship_firstname' => $address['shipping_first_name'],
-			'ship_surname' => $address['shipping_last_name'],
-			'shipping_company' => $address['shipping_company'],
-			'ship_address1' => $address['shipping_address_1'],
-			'ship_address2' => $address['shipping_address_2'],
-			'ship_city' => $address['shipping_city'],
-			'ship_state' => $address['shipping_state'],
-			'ship_postcode' => $address['shipping_postcode']
+			'client_ref' => $transaction_key,
+			'ShippingContact' => array(
+				'name' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
+				'email' => $email,
+				'phone' => $phone,
+				'address' => $address['shipping_address_1'],
+				'address_contd' => $address['shipping_address_2'],
+				'city' => $address['shipping_city'],
+				'county' => $address['shipping_state'],
+				'country' => $address['shipping_country'],
+				'postcode' => $address['shipping_postcode']
+			),
+			'BillingContact' => array(
+				'name' => $address['billing_first_name'] . ' ' . $address['billing_last_name'],
+				'email' => $email,
+				'phone' => $phone,
+				'address' => $address['billing_address_1'],
+				'address_contd' => $address['billing_address_2'],
+				'city' => $address['billing_city'],
+				'county' => $address['billing_state'],
+				'country' => $address['billing_country'],
+				'postcode' => $address['billing_postcode']
+			),
 		),
 		'items' => $api_items
 	);
@@ -133,7 +136,7 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		if( $shipping_name == 'Standard Delivery' ) {
 			
-			send_api_call($apiData, $api_items);
+			send_api_call($apiData);
 			
 		} elseif( $shipping_name == 'Premium Delivery and Installation' ) {
 			
@@ -147,9 +150,7 @@ function wdm_send_order_to_ext( $order_id ){
 	}
 }
 
-function send_api_call($data, $api_items) {
-	array_push($data, $api_items);
-	
+function send_api_call($data) {
 	// set the username and password
 	$api_username = 'testuser';
 	$api_password = 'testpass';
