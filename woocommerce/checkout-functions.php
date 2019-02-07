@@ -96,8 +96,6 @@ function wdm_send_order_to_ext( $order_id ){
 		'ship_city' => $address['shipping_city'],
 		'ship_state' => $address['shipping_state'],
 		'ship_postcode' => $address['shipping_postcode'],	
-//		'shipping_type' => $shipping_type,
-//		'shipping_cost' => $shipping_cost,
 		'transaction_key' => $transaction_key,
 		'coupon_code' => implode( ",", $coupon )
 	);
@@ -158,7 +156,7 @@ function send_api_call($data) {
 	$api_password = 'testpass';
 
 	// to test out the API, set $api_mode as ‘sandbox’
-	$api_mode = 'sandbox';
+	$api_mode = 'live';
 	if($api_mode == 'sandbox') {
 		// sandbox URL example
 		$endpoint = "https://enum5s26ejk6a.x.pipedream.net/";
@@ -185,7 +183,7 @@ function send_api_call($data) {
 	if ($response->success != 1) {
 		print_r($response);
 	} else {
-		// print_r($data);
+		print_r($response);
 	}
 }
 
