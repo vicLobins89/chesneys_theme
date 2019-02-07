@@ -98,15 +98,17 @@ if ( woocommerce_product_loop() ) {
 	}
 	
 	// Blog Posts
-	$prCatId = $term->term_id;
-	$prCatName = $term->slug;
 	
+	// Getting URL
 	$r = $_SERVER['REQUEST_URI'];
 	$r = explode('/', $r);
 	$r = array_filter($r);
 	$r = array_merge($r, array());
 	$code = $r[1];
-	echo $code;
+	
+	// Getting Category Name
+	$prCatId = $term->term_id;
+	$prCatName = ( !empty($term->slug) ) ? $term->slug : $code;
 	
 	if( get_cat_ID($prCatName) ) {
 		$acfClass->render_blog($prCatName);
