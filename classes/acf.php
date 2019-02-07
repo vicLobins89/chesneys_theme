@@ -22,8 +22,6 @@ class CustomACF {
 	
 	public function render_blog($cat = null) {
 		$postNum = get_sub_field('post_count');
-		$postNum = (isset($postNum)) ? $postNum : 1;
-		echo $postNum;
 		$category = get_sub_field('choose_category');
 		if( $category || $cat ) {
 			global $post;
@@ -40,7 +38,7 @@ class CustomACF {
 					'post_type' => 'post',
 					'post_status' => 'publish',
 					'category_name' => $cat,
-					'posts_per_page' => $postNum,
+					'posts_per_page' => 1,
 				);
 			}
 			$arr_posts = new WP_Query( $args );
