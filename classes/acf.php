@@ -38,7 +38,7 @@ class CustomACF {
 					'post_type' => 'post',
 					'post_status' => 'publish',
 					'category_name' => $cat,
-					'posts_per_page' => 1,
+					'posts_per_page' => -1,
 				);
 			}
 			$arr_posts = new WP_Query( $args );
@@ -89,7 +89,7 @@ class CustomACF {
 				$args2 = array(
 					'post_type' => 'case_study',
 					'post_status' => 'publish',
-					'posts_per_page' => 1,
+					'posts_per_page' => -1,
 					'tax_query' => array(
 						array(
 							'taxonomy' => 'portfolio_cat',
