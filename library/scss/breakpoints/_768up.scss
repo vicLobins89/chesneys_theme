@@ -15,9 +15,6 @@ html {
 }
 
 body {
-	&:not(.home) #content {
-		margin-top: 0;
-	}
 }
 
 
@@ -113,9 +110,6 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	.home & {
-		margin-top: -89px;
-	}
 }
 
 .featured-image {
@@ -138,17 +132,6 @@ POSTS & CONTENT STYLES
 			li {
 				width: 48%;
 				display: inline-block;
-			}
-		}
-	}
-}
-
-.home {
-	.row-1 {
-		.col-6 {
-			&:last-child {
-				width: 41.66%;
-				float: right;
 			}
 		}
 	}

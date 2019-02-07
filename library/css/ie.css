@@ -165,9 +165,6 @@ GENERAL STYLES
 html {
   font-size: 14px; }
 
-body:not(.home) #content {
-  margin-top: 0; }
-
 /*********************
 FONT STYLES
 *********************/
@@ -239,9 +236,6 @@ NAVIGATION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-.home #content {
-  margin-top: -89px; }
-
 .featured-image {
   width: 100%;
   margin-left: auto; }
@@ -257,10 +251,6 @@ POSTS & CONTENT STYLES
     .entry-content ul.col-2 li {
       width: 48%;
       display: inline-block; }
-
-.home .row-1 .col-6:last-child {
-  width: 41.66%;
-  float: right; }
 
 /*********************
 LAYOUT & GRID STYLES

@@ -1814,9 +1814,6 @@ TABLET & SMALLER LAPTOPS
   html {
     font-size: 14px; }
 
-  body:not(.home) #content {
-    margin-top: 0; }
-
   /*********************
   FONT STYLES
   *********************/
@@ -1888,9 +1885,6 @@ TABLET & SMALLER LAPTOPS
   /*********************
   POSTS & CONTENT STYLES
   *********************/
-  .home #content {
-    margin-top: -89px; }
-
   .featured-image {
     width: 100%;
     margin-left: auto; }
@@ -1906,10 +1900,6 @@ TABLET & SMALLER LAPTOPS
       .entry-content ul.col-2 li {
         width: 48%;
         display: inline-block; }
-
-  .home .row-1 .col-6:last-child {
-    width: 41.66%;
-    float: right; }
 
   /*********************
   LAYOUT & GRID STYLES
