@@ -97,7 +97,7 @@ if ( woocommerce_product_loop() ) {
 		}
 	}
 	
-	// Blog Case Study Posts
+	// Blog / Case Study Posts
 	// Getting URL
 	$r = $_SERVER['REQUEST_URI'];
 	$r = explode('/', $r);

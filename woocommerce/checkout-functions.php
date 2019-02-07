@@ -132,10 +132,10 @@ function send_api_call($data, $api_items) {
 	$api_mode = 'sandbox';
 	if($api_mode == 'sandbox') {
 		// sandbox URL example
-		$endpoint = "https://en0vn5z9zpw7gi.x.pipedream.net";
+		$endpoint = "https://enum5s26ejk6a.x.pipedream.net/";
 	} else {
 		// production URL example
-		$endpoint = "http://example.com/"; 
+		$endpoint = "https://api.controlport.co.uk/api/1/order"; 
 	}
 	
 	// JSON
@@ -151,18 +151,6 @@ function send_api_call($data, $api_items) {
 	$context  = stream_context_create( $options );
 	$result = file_get_contents( $endpoint, false, $context );
 	$response = json_decode( $result );
-	
-	// send API request via cURL
-	/*$ch = curl_init();
-
-	curl_setopt($ch, CURLOPT_URL, $endpoint);
-	curl_setopt($ch, CURLOPT_POST, 1);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-	$response = curl_exec ($ch);
-
-	curl_close ($ch);*/
 
 	// the handle response
 	if ($response->success != 1) {
