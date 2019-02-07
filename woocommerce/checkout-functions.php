@@ -133,7 +133,7 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		if( $shipping_name == 'Standard Delivery' ) {
 			
-			send_api_call($data, $api_items);
+			send_api_call($apiData, $api_items);
 			
 		} elseif( $shipping_name == 'Premium Delivery and Installation' ) {
 			
