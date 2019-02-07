@@ -100,6 +100,32 @@ function wdm_send_order_to_ext( $order_id ){
 			);
 		}
 	}
+	
+	$apiData = array(
+		'test' => true,
+		'order' => array(
+			'transaction_key' => $transaction_key,
+			'customer_email' => $email,
+			'customer_phone' => $phone,
+			'bill_firstname' => $address['billing_first_name'],
+			'bill_surname' => $address['billing_last_name'],
+			'bill_company' => $address['billing_company'],
+			'bill_address1' => $address['billing_address_1'],
+			'bill_address2' => $address['billing_address_2'],
+			'bill_city' => $address['billing_city'],
+			'bill_state' => $address['billing_state'],
+			'bill_postcode' => $address['billing_postcode'],
+			'ship_firstname' => $address['shipping_first_name'],
+			'ship_surname' => $address['shipping_last_name'],
+			'shipping_company' => $address['shipping_company'],
+			'ship_address1' => $address['shipping_address_1'],
+			'ship_address2' => $address['shipping_address_2'],
+			'ship_city' => $address['shipping_city'],
+			'ship_state' => $address['shipping_state'],
+			'ship_postcode' => $address['shipping_postcode']
+		),
+		'items' => $api_items
+	);
 
 	// Iterating through order shipping items
 	foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
