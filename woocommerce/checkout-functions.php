@@ -156,7 +156,7 @@ function send_api_call($data) {
 	$api_password = 'testpass';
 
 	// to test out the API, set $api_mode as ‘sandbox’
-	$api_mode = 'live';
+	$api_mode = 'sandbox';
 	if($api_mode == 'sandbox') {
 		// sandbox URL example
 		$endpoint = "https://enum5s26ejk6a.x.pipedream.net/";
