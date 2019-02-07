@@ -809,7 +809,7 @@ html {
 body {
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
   line-height: 1.3;
-  color: #4c4c4c;
+  color: #142128;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -941,14 +941,14 @@ hr {
   top: 10px;
   right: 10px;
   line-height: 1;
-  color: #4c4c4c;
+  color: #142128;
   padding-right: 22px; }
   .close-overlay:hover:before, .close-overlay:hover:after {
     background: #ff8700; }
   .close-overlay:before, .close-overlay:after {
     content: '';
     position: absolute;
-    background: #4c4c4c;
+    background: #142128;
     top: 8px;
     right: 0;
     width: 17px;
@@ -1298,7 +1298,17 @@ NAVIGATION STYLES
             opacity: 0.8; }
 
 .socket {
-  display: none; }
+  background: #53575a; }
+  .socket .socket-nav {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center; }
+    .socket .socket-nav .menu-item {
+      color: #cbc3bb;
+      text-transform: uppercase;
+      font-family: 'Univers'; }
+      .socket .socket-nav .menu-item a {
+        color: inherit; }
 
 /*********************
 POSTS & CONTENT STYLES
@@ -1353,7 +1363,7 @@ POSTS & CONTENT STYLES
 
 .archive-title, .single-title {
   text-align: center;
-  color: #4c4c4c;
+  color: #53575a;
   margin-bottom: 0; }
 
 .archive-description {
@@ -1458,7 +1468,7 @@ POSTS & CONTENT STYLES
       text-transform: uppercase;
       letter-spacing: 1px; }
   .entry-content thead tr th {
-    background: #4c4c4c;
+    background: #53575a;
     color: #fff; }
   .entry-content tr:nth-child(even) {
     background-color: #e5e5e5; }
@@ -1551,7 +1561,7 @@ PAGE NAVI STYLES
     float: left;
     display: inline;
     overflow: hidden;
-    border-right: 1px solid #4c4c4c; }
+    border-right: 1px solid #53575a; }
     .pagination li:last-child {
       border: none; }
   .pagination a, .pagination span {
@@ -1674,7 +1684,7 @@ COMMENT FORM STYLES
   font-style: italic;
   margin: 0; }
   .logged-in-as a {
-    color: #4c4c4c; }
+    color: #142128; }
 
 .comment-form-comment {
   margin: 1.5em 0 0.75em; }
@@ -1726,7 +1736,7 @@ FOOTER STYLES
 .footer {
   clear: both;
   padding: 2rem;
-  background: #4c4c4c;
+  background: #53575a;
   position: relative; }
   .footer a, .footer p, .footer li {
     color: #fff; }
@@ -1787,7 +1797,7 @@ CALENDAR
           height: 3rem;
           margin-top: 6px;
           border-radius: 0;
-          border: 1px solid #4c4c4c;
+          border: 1px solid #53575a;
           background: #fff;
           z-index: 99; }
           .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-next .wpsbc-arrow, .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-prev .wpsbc-arrow {
@@ -1798,14 +1808,14 @@ CALENDAR
           .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-prev .wpsbc-arrow {
             border-width: 6px 11px 6px 0;
             margin-left: -5px;
-            border-color: transparent #4c4c4c transparent transparent; }
+            border-color: transparent #53575a transparent transparent; }
         .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-next {
           right: 0;
           top: -5%; }
           .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-next .wpsbc-arrow {
             border-width: 6px 0 6px 11px;
             margin-right: -5px;
-            border-color: transparent transparent transparent #4c4c4c; }
+            border-color: transparent transparent transparent #53575a; }
     .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-wrapper table tr td {
       font-size: .8rem;
       border: 1px solid #cccccc !important;
@@ -2087,7 +2097,7 @@ TABLET & SMALLER LAPTOPS
           .home .primary-nav > li > a:hover, .home .primary-nav > li > a:focus {
             color: #fff; }
         .primary-nav > li > a.active {
-          color: #4c4c4c;
+          color: #53575a;
           border-color: #1f2043 !important; }
       .primary-nav > li ul.sub-menu,
       .primary-nav > li ul.children {

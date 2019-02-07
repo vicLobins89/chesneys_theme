@@ -658,7 +658,23 @@ NAVIGATION STYLES
 }
 
 .socket {
-	display: none;
+	background: $gray;
+	
+	.socket-nav {
+		margin: 0;
+		padding: 1rem 0;
+		text-align: center;
+		
+		.menu-item {
+			color: $light-brown;
+			text-transform: uppercase;
+			font-family: 'Univers';
+			
+			a {
+				color: inherit;
+			}
+		}
+	}
 }
 
 

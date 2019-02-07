@@ -260,7 +260,7 @@ NAVIGATION STYLES
         .home .primary-nav > li > a:hover, .home .primary-nav > li > a:focus {
           color: #fff; }
       .primary-nav > li > a.active {
-        color: #4c4c4c;
+        color: #53575a;
         border-color: #1f2043 !important; }
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {

@@ -44,7 +44,7 @@
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 				
-				<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+				<nav role="navigation" class="socket" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php wp_nav_menu(array(
 							 'container' => false,
 							 'container_class' => 'menu cf',
