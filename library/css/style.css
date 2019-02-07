@@ -1195,18 +1195,14 @@ HEADER STYLES
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75); }
 
 .logo {
-  position: absolute;
-  z-index: 10;
-  width: 15.5rem;
   display: block;
-  float: left;
   font-size: 0;
-  margin: 1rem; }
+  margin: 1.75rem auto; }
   .logo img {
     max-width: 100%;
     height: auto; }
   .logo a {
-    color: #000; }
+    color: #53575a; }
 
 /*********************
 NAVIGATION STYLES
@@ -1229,84 +1225,58 @@ NAVIGATION STYLES
   display: block; }
 
 .primary-nav {
-  position: fixed;
-  margin: 0 auto;
-  padding-top: 0;
+  position: relative;
   text-align: center;
-  max-height: 0px;
-  max-height: 0vh;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  background: #ff8700;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
-  .primary-nav li a {
-    font-weight: 900;
-    font-size: 1.4em;
-    color: #fff; }
+  /* end .menu li */
+  /* highlight current page */ }
   .primary-nav > li {
-    padding: 0 2.5rem; }
+    border: none;
+    padding: 0;
+    vertical-align: top; }
     .primary-nav > li > a {
-      position: relative;
-      display: block;
-      text-decoration: none;
-      padding: 1.35rem 0 1rem;
-      text-align: left;
-      border-bottom: 1px solid #fff;
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
+      color: inherit;
+      outline: none; }
       .primary-nav > li > a br {
-        display: none; }
-    .primary-nav > li.mobile-links a {
-      font-weight: normal;
-      font-size: 1.2em;
-      border: none;
-      padding: 2rem 0 1rem; }
+        display: block; }
+      .primary-nav > li > a:hover, .primary-nav > li > a:focus {
+        color: #ff8700; }
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {
-      overflow: hidden;
-      background: #00a5db;
-      margin: 0 -2.5rem;
-      padding: 0;
-      z-index: 10;
-      max-height: 0;
-      -webkit-transition: max-height 0.2s ease-in-out;
-      transition: max-height 0.2s ease-in-out; }
+      position: absolute;
+      overflow: visible;
+      background: rgba(31, 32, 67, 0.9);
+      opacity: 0;
+      visibility: hidden;
+      margin: 0;
+      padding: 1.4rem 0 1rem 2.5rem;
+      text-align: left;
+      font-size: 0;
+      z-index: 8;
+      -webkit-transition: all 1s ease-out;
+      transition: all 1s ease-out;
+      /* highlight sub-menu current page */ }
       .primary-nav > li ul.sub-menu.active,
       .primary-nav > li ul.children.active {
-        max-height: 550px; }
+        opacity: 1;
+        visibility: visible; }
       .primary-nav > li ul.sub-menu li,
       .primary-nav > li ul.children li {
-        padding: 0 2.5em; }
-        @media only screen and (min-width: 1370px) {
-          .primary-nav > li ul.sub-menu li,
-          .primary-nav > li ul.children li {
-            padding: 0 2rem !important;
-            padding: 0 2.5vw !important; } }
-        .primary-nav > li ul.sub-menu li a,
-        .primary-nav > li ul.children li a {
-          display: block;
-          padding: 1.35rem 0 1rem;
-          outline: 0;
-          text-align: left;
-          border-bottom: 1px solid #fff; }
-          .primary-nav > li ul.sub-menu li a:hover, .primary-nav > li ul.sub-menu li a:focus,
-          .primary-nav > li ul.children li a:hover,
-          .primary-nav > li ul.children li a:focus {
-            text-decoration: none;
-            opacity: 0.8; }
+        vertical-align: middle;
+        display: inline-block;
+        padding: 0 1rem; }
 
 .socket {
-  background: #53575a; }
+  background: #53575a;
+  font-size: .825rem; }
   .socket .socket-nav {
     margin: 0;
-    padding: 1rem 0;
+    padding: .7rem 0;
     text-align: center; }
     .socket .socket-nav .menu-item {
       color: #cbc3bb;
       text-transform: uppercase;
-      font-family: 'Univers'; }
+      font-family: 'Univers';
+      margin: 0 1rem; }
       .socket .socket-nav .menu-item a {
         color: inherit; }
 
@@ -2024,8 +1994,7 @@ TABLET & SMALLER LAPTOPS
   .logo {
     top: 0;
     left: 0;
-    width: 16rem;
-    margin: 1.5rem 2rem; }
+    width: 16rem; }
 
   /*********************
   NAVIGATION STYLES
@@ -2070,85 +2039,6 @@ TABLET & SMALLER LAPTOPS
       background: none;
       padding: 0;
       color: #fff; }
-
-  .primary-nav {
-    position: relative;
-    max-height: none;
-    background: none;
-    overflow: visible;
-    text-align: right;
-    /* end .menu li */
-    /* highlight current page */ }
-    .primary-nav > li {
-      border: none;
-      padding: 0;
-      vertical-align: top; }
-      .primary-nav > li > a {
-        color: #1f2043;
-        outline: none;
-        padding: 1.5rem 2em;
-        font-size: 0.9em;
-        border: none;
-        height: 5.25rem; }
-        .primary-nav > li > a br {
-          display: block; }
-        .primary-nav > li > a:hover, .primary-nav > li > a:focus {
-          color: #ff8700; }
-          .home .primary-nav > li > a:hover, .home .primary-nav > li > a:focus {
-            color: #fff; }
-        .primary-nav > li > a.active {
-          color: #53575a;
-          border-color: #1f2043 !important; }
-      .primary-nav > li ul.sub-menu,
-      .primary-nav > li ul.children {
-        position: absolute;
-        overflow: visible;
-        background: rgba(31, 32, 67, 0.9);
-        opacity: 0;
-        visibility: hidden;
-        margin: 0;
-        padding: 1.4rem 0 1rem 2.5rem;
-        text-align: left;
-        font-size: 0;
-        z-index: 8;
-        -webkit-transition: all 1s ease-out;
-        transition: all 1s ease-out;
-        /* highlight sub-menu current page */ }
-        .primary-nav > li ul.sub-menu.active,
-        .primary-nav > li ul.children.active {
-          opacity: 1;
-          visibility: visible; }
-        .primary-nav > li ul.sub-menu li,
-        .primary-nav > li ul.children li {
-          vertical-align: middle;
-          text-align: left;
-          display: inline-block;
-          padding: 0 1rem;
-          border: none; }
-          .primary-nav > li ul.sub-menu li a,
-          .primary-nav > li ul.children li a {
-            color: #fff;
-            font-weight: bold;
-            font-size: 0.625rem;
-            display: inline;
-            padding: 0;
-            border: none; }
-            .primary-nav > li ul.sub-menu li a:hover, .primary-nav > li ul.sub-menu li a:focus,
-            .primary-nav > li ul.children li a:hover,
-            .primary-nav > li ul.children li a:focus {
-              text-decoration: underline;
-              text-decoration-style: dotted; }
-    .primary-nav > li.current_page_item > a:after,
-    .primary-nav > li.current-menu-ancestor > a:after,
-    .primary-nav > li.current-menu-item > a:after,
-    .primary-nav > li.current_page_ancestor > a:after {
-      content: '';
-      position: absolute;
-      bottom: 1rem;
-      left: 2em;
-      width: calc(100% - 4em);
-      height: 4px;
-      background: #ff8700; }
 
   .mobile-links {
     display: none !important; }

@@ -529,13 +529,9 @@ HEADER STYLES
 }
 
 .logo {
-	position: absolute;
-	z-index: 10;
-	width: 15.5rem;
 	display: block;
-    float: left;
 	font-size: 0;
-	margin: 1rem;
+	margin: 1.75rem auto;
 	
 	img {
 		max-width: 100%;
@@ -543,7 +539,7 @@ HEADER STYLES
 	}
 
 	a {
-		color: $black;
+		color: $gray;
 	}
 }
 
@@ -572,103 +568,99 @@ NAVIGATION STYLES
 }
 
 .primary-nav {
-	position: fixed;
-	margin: 0 auto;
-	padding-top: 0;
+	position: relative;
 	text-align: center;
-	max-height: 0px;
-	max-height: 0vh;
-    overflow: hidden;
-	width: 100%;
-	height: 100%;
-	background: $orange;
-	@include transition(all 0.2s ease-in-out);
-	
-	li {
-		a {
-			font-weight: 900;
-			font-size: 1.4em;
-			color: $white;
-		}
-	}
-	
+
 	> li {
-		padding: 0 2.5rem;
+		border: none;
+		padding: 0;
+		vertical-align: top;
 		
 		> a {
-			position: relative;
-			display: block;
-			text-decoration: none;
-			padding: 1.35rem 0 1rem;
-			text-align: left;
-			border-bottom: 1px solid $white;
-			@include transition(all 0.2s ease-in-out);
+			color: inherit;
+			outline: none;
 			
 			br {
-				display: none;
+				display: block;
 			}
-		}
-		
-		&.mobile-links {
-			a {
-				font-weight: normal;
-				font-size: 1.2em;
-				border: none;
-				padding: 2rem 0 1rem;
+			
+			&:hover,
+			&:focus {
+				color: $orange;
 			}
-		}
-		
-		ul.sub-menu,
-		ul.children {
-			overflow: hidden;
-			background: $alt-blue;
-			margin: 0 -2.5rem;
-			padding: 0;
-			z-index: 10;
-			max-height: 0;
-			@include transition(max-height 0.2s ease-in-out);
 			
 			&.active {
-				max-height: 550px;
+				
+			}
+		}
+
+		ul.sub-menu,
+		ul.children {
+			position: absolute;
+			overflow: visible;
+			background: rgba($blue, .9);
+			opacity: 0;
+			visibility: hidden;
+			margin: 0;
+			padding: 1.4rem 0 1rem 2.5rem;
+			text-align: left;
+			font-size: 0;
+			z-index: 8;
+			@include transition (all 1s ease-out);
+			
+			&.active {
+				opacity: 1;
+				visibility: visible;
 			}
 
 			li {
-				padding: 0 2.5em;
-				@media only screen and (min-width: 1370px) {
-					padding: 0 2rem !important;
-					padding: 0 2.5vw !important;
-				}
+				vertical-align: middle;
+				display: inline-block;
+				padding: 0 1rem;
 
 				a {
-					display: block;
-					padding: 1.35rem 0 1rem;
-					outline:0;
-					text-align: left;
-					border-bottom: 1px solid $white;
-					
 					&:hover,
-					&:focus {						
-						text-decoration:none;
-						opacity:0.8;
+					&:focus {
 					}
 				}
+
 			}
+			
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {}
+			}
+		}
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	> li.current_page_item,
+	> li.current-menu-ancestor,
+	> li.current-menu-item,
+	> li.current_page_ancestor {
+		> a {
+			
 		}
 	}
 }
 
 .socket {
 	background: $gray;
+	font-size: .825rem;
 	
 	.socket-nav {
 		margin: 0;
-		padding: 1rem 0;
+		padding: .7rem 0;
 		text-align: center;
 		
 		.menu-item {
 			color: $light-brown;
 			text-transform: uppercase;
 			font-family: 'Univers';
+			margin: 0 1rem;
 			
 			a {
 				color: inherit;

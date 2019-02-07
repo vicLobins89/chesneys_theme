@@ -46,7 +46,6 @@ HEADER STYLES
 	top: 0;
 	left: 0;
 	width: 16rem;
-	margin: 1.5rem 2rem;
 }
 
 /*********************
@@ -102,114 +101,6 @@ NAVIGATION STYLES
 }
 
 .primary-nav {
-	position: relative;
-	max-height: none;
-	background: none;
-	overflow: visible;
-	text-align: right;
-
-	> li {
-		border: none;
-		padding: 0;
-		vertical-align: top;
-		
-		> a {
-			color: $blue;
-			outline: none;
-			padding: 1.5rem 2em;
-			font-size: 0.9em;
-			border: none;
-			height: 5.25rem;
-			
-			br {
-				display: block;
-			}
-			
-			&:hover,
-			&:focus {
-				color: $orange;
-				
-				.home & {
-					color: $white;
-				}
-			}
-			
-			&.active {
-				color: $gray;
-				border-color: $blue !important;
-			}
-		}
-
-		ul.sub-menu,
-		ul.children {
-			position: absolute;
-			overflow: visible;
-			background: rgba($blue, .9);
-			opacity: 0;
-			visibility: hidden;
-			margin: 0;
-			padding: 1.4rem 0 1rem 2.5rem;
-			text-align: left;
-			font-size: 0;
-			z-index: 8;
-			@include transition (all 1s ease-out);
-			
-			&.active {
-				opacity: 1;
-				visibility: visible;
-			}
-
-			li {
-				vertical-align: middle;
-				text-align: left;
-				display: inline-block;
-				padding: 0 1rem;
-				border: none;
-
-				a {
-					color: $white;
-					font-weight: bold;
-					font-size: 0.625rem;
-					display: inline;
-    				padding: 0;
-					border: none;
-					
-					&:hover,
-					&:focus {
-						text-decoration: underline;
-						text-decoration-style: dotted;
-					}
-				}
-
-			}
-			
-			/* highlight sub-menu current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current_page_ancestor {
-				a {}
-			}
-		}
-
-	} /* end .menu li */
-
-	/* highlight current page */
-	> li.current_page_item,
-	> li.current-menu-ancestor,
-	> li.current-menu-item,
-	> li.current_page_ancestor {
-		> a {
-			&:after {
-				content: '';
-				position: absolute;
-				bottom: 1rem;
-				left: 2em;
-				width: calc(100% - 4em);
-				height: 4px;
-				background: $orange;
-			}
-		}
-	}
 }
 
 .mobile-links {
