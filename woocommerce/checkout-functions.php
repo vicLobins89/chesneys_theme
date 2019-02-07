@@ -65,7 +65,7 @@ function wdm_send_order_to_ext( $order_id ){
 				'quantity' => $item['qty'],
 			);
 		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
-			$api_items[$key] = array(
+			$api_items[] = array(
 				'item_name' => $item['name'],
 				'item_sku' => $product->get_sku(),
 				'quantity' => $item['qty'],
