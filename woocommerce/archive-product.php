@@ -30,10 +30,6 @@ $acfClass = new CustomACF();
  */
 do_action( 'woocommerce_before_main_content' );
 
-if ( function_exists('yoast_breadcrumb') ) {
-  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-}
-
 ?>
 <header class="woocommerce-products-header">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
@@ -104,6 +100,13 @@ if ( woocommerce_product_loop() ) {
 	// Blog Posts
 	$prCatId = $term->term_id;
 	$prCatName = $term->slug;
+	
+	$r = $_SERVER['REQUEST_URI'];
+	$r = explode('/', $r);
+	$r = array_filter($r);
+	$r = array_merge($r, array());
+	$code = $r[1];
+	echo $code;
 	
 	if( get_cat_ID($prCatName) ) {
 		$acfClass->render_blog($prCatName);
