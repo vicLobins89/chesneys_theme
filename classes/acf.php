@@ -21,7 +21,7 @@ class CustomACF {
 	}
 	
 	public function render_blog($cat = null) {
-		$postNum = get_sub_field('post_count');
+		$post_num = get_sub_field('post_count');
 		$category = get_sub_field('choose_category');
 		if( $category || $cat ) {
 			global $post;
@@ -31,7 +31,7 @@ class CustomACF {
 					'post_type' => 'post',
 					'post_status' => 'publish',
 					'cat' => $category,
-					'posts_per_page' => $postNum,
+					'posts_per_page' => $post_num,
 				);
 			} else {
 				$args = array(
@@ -66,22 +66,40 @@ class CustomACF {
 		}
 	}
 	
-	public function render_portfolio() {
+	public function render_portfolio($cat = null) {
+		$post_num = get_sub_field('post_count');
 		$folio_cat = get_sub_field('choose_portfolio');
-		if( $folio_cat ) {
+		if( $folio_cat || $cat ) {
 			global $post;
-			$args2 = array(
-				'post_type' => 'case_study',
-				'post_status' => 'publish',
-				'posts_per_page' => get_sub_field('post_count'),
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'portfolio_cat',
-						'field'    => 'term_taxonomy_id',
-						'terms'    => $folio_cat
+			
+			if (!isset($cat) || is_null($cat) ) {
+				$args2 = array(
+					'post_type' => 'case_study',
+					'post_status' => 'publish',
+					'posts_per_page' => $post_num,
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'portfolio_cat',
+							'field'    => 'term_taxonomy_id',
+							'terms'    => $folio_cat
+						)
 					)
-				)
-			);
+				);
+			} else {
+				$args2 = array(
+					'post_type' => 'case_study',
+					'post_status' => 'publish',
+					'posts_per_page' => 1,
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'portfolio_cat',
+							'field'    => 'slug',
+							'terms'    => $cat
+						)
+					)
+				);
+			}
+			
 			$arr_posts2 = new WP_Query( $args2 );
 
 			if ( $arr_posts2->have_posts() ) :
