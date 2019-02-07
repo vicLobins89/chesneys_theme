@@ -97,6 +97,7 @@ if ( woocommerce_product_loop() ) {
 		}
 	}
 	
+	// Blog Posts
 	$prCatId = $term->term_id;
 	$prCatName = $term->slug;
 	
