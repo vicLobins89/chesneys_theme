@@ -7,9 +7,11 @@ Stylesheet: Typography
 ******************************************************************/
 
 /*********************
-TYPEKIT
+FONTFACE
 *********************/
 
+@import "../fonts/stylesheet.css";
+
 // font stacks
-$sans-serif:        Helvetica, Arial, sans-serif;
-$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$sans-serif:        'Univers', Helvetica, Arial, sans-serif;
+$serif:             Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";

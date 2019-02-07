@@ -43,6 +43,16 @@
 		<div id="container">
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+				
+				<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<?php wp_nav_menu(array(
+							 'container' => false,
+							 'container_class' => 'menu cf',
+							 'menu' => __( 'Socket Menu', 'bonestheme' ),
+							 'menu_class' => 'nav socket-nav cf',
+							 'theme_location' => 'socket-nav'
+					)); ?>
+				</nav>
 
 				<div id="inner-header" class="cf">
 					

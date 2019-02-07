@@ -34,8 +34,9 @@ Stylesheet: Typography
 
 ******************************************************************/
 /*********************
-TYPEKIT
+FONTFACE
 *********************/
+@import url(../fonts/stylesheet.css);
 /******************************************************************
 Site Name: Honey
 Author: Vic Lobins
