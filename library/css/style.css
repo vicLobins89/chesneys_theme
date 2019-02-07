@@ -1227,6 +1227,8 @@ NAVIGATION STYLES
 .primary-nav {
   position: relative;
   text-align: center;
+  font-family: "Univers", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
   /* end .menu li */
   /* highlight current page */ }
   .primary-nav > li {
@@ -1275,7 +1277,7 @@ NAVIGATION STYLES
     .socket .socket-nav .menu-item {
       color: #cbc3bb;
       text-transform: uppercase;
-      font-family: 'Univers';
+      font-family: "Univers", Helvetica, Arial, sans-serif;
       margin: 0 1rem; }
       .socket .socket-nav .menu-item a {
         color: inherit; }
@@ -1740,167 +1742,6 @@ FOOTER STYLES
   text-align: center;
   font-size: 1.3rem;
   margin: 0; }
-
-/*********************
-CALENDAR
-*********************/
-.entry-content .wpsbc-container .wpsbc-calendars-wrapper {
-  width: calc(100% + 40px);
-  margin: auto 0 0 -20px;
-  padding-right: 0 !important; }
-  .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar {
-    max-width: none !important;
-    width: 100%;
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    border: none; }
-    .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header {
-      background: none; }
-      .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation {
-        position: static;
-        font-size: 1.15em;
-        font-weight: bold; }
-        .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-next, .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-prev {
-          width: 3rem;
-          height: 3rem;
-          margin-top: 6px;
-          border-radius: 0;
-          border: 1px solid #53575a;
-          background: #fff;
-          z-index: 99; }
-          .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-next .wpsbc-arrow, .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-prev .wpsbc-arrow {
-            margin-top: -6px; }
-        .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-prev {
-          left: 0;
-          top: 100%; }
-          .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-prev .wpsbc-arrow {
-            border-width: 6px 11px 6px 0;
-            margin-left: -5px;
-            border-color: transparent #53575a transparent transparent; }
-        .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-next {
-          right: 0;
-          top: -5%; }
-          .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-next .wpsbc-arrow {
-            border-width: 6px 0 6px 11px;
-            margin-right: -5px;
-            border-color: transparent transparent transparent #53575a; }
-    .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-wrapper table tr td {
-      font-size: .8rem;
-      border: 1px solid #cccccc !important;
-      padding: 0 !important; }
-      .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-wrapper table tr td .wpsbc-date-inner .wpsbc-date-number {
-        font-size: 1em;
-        font-weight: bold; }
-      .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-wrapper table tr td .wpsbc-legend-item-icon-2 + .wpsbc-date-inner .wpsbc-date-number,
-      .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-wrapper table tr td .wpsbc-legend-item-icon-3 + .wpsbc-date-inner .wpsbc-date-number,
-      .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-wrapper table tr td .wpsbc-legend-item-icon-4 + .wpsbc-date-inner .wpsbc-date-number {
-        opacity: 0.3; }
-    .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-wrapper table .wpsbc-gap {
-      display: none; }
-  .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-legend {
-    border: none;
-    padding: 0 1.4em; }
-    .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-legend .wpsbc-legend-item {
-      margin-right: 1em; }
-      .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-legend .wpsbc-legend-item:nth-child(4), .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-legend .wpsbc-legend-item:nth-child(5) {
-        display: none; }
-    .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-legend .wpsbc-legend-item-icon {
-      border: 1px solid #cccccc; }
-  .entry-content .wpsbc-container .wpsbc-calendars-wrapper .hint {
-    background: #fff;
-    padding: 1rem;
-    position: fixed;
-    width: 40%;
-    height: 200px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    top: calc(50% - 100px);
-    left: 50%;
-    margin-left: -20%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    z-index: -10;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    z-index: -20;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.28);
-    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.28);
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.28);
-    border-radius: 4px;
-    border: 1px solid #999999; }
-    .entry-content .wpsbc-container .wpsbc-calendars-wrapper .hint.active {
-      visibility: visible;
-      opacity: 1;
-      z-index: 999; }
-    .entry-content .wpsbc-container .wpsbc-calendars-wrapper .hint a {
-      font-weight: normal;
-      font-size: 1rem; }
-
-/*********************
-SLIDER
-*********************/
-div#n2-ss-2-align .nextend-thumbnail-default,
-div#n2-ss-2-align .nextend-thumbnail-inner,
-div#n2-ss-3-align .nextend-thumbnail-default,
-div#n2-ss-3-align .nextend-thumbnail-inner {
-  bottom: 1rem !important;
-  height: auto !important; }
-  div#n2-ss-2-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group,
-  div#n2-ss-2-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group,
-  div#n2-ss-3-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group,
-  div#n2-ss-3-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group {
-    display: block !important;
-    width: 100% !important;
-    text-align: center; }
-    div#n2-ss-2-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
-    div#n2-ss-2-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div,
-    div#n2-ss-3-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
-    div#n2-ss-3-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div {
-      display: inline-block !important;
-      height: 3rem !important;
-      margin: 0;
-      border-left: 2px solid #fff;
-      border-right: 2px solid #fff;
-      border-top: 4px solid #fff;
-      border-bottom: 4px solid #fff;
-      opacity: 1; }
-      div#n2-ss-2-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div .n2-ss-thumb-image,
-      div#n2-ss-2-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div .n2-ss-thumb-image,
-      div#n2-ss-3-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div .n2-ss-thumb-image,
-      div#n2-ss-3-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div .n2-ss-thumb-image {
-        width: 100% !important;
-        height: 100% !important; }
-      div#n2-ss-2-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div:first-child,
-      div#n2-ss-2-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div:first-child,
-      div#n2-ss-3-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div:first-child,
-      div#n2-ss-3-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div:first-child {
-        border-left: 4px solid #fff; }
-      div#n2-ss-2-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div:last-child,
-      div#n2-ss-2-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div:last-child,
-      div#n2-ss-3-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div:last-child,
-      div#n2-ss-3-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div:last-child {
-        border-right: 4px solid #fff; }
-  div#n2-ss-2-align .nextend-thumbnail-default .nextend-thumbnail-scroller,
-  div#n2-ss-2-align .nextend-thumbnail-inner .nextend-thumbnail-scroller,
-  div#n2-ss-3-align .nextend-thumbnail-default .nextend-thumbnail-scroller,
-  div#n2-ss-3-align .nextend-thumbnail-inner .nextend-thumbnail-scroller {
-    width: 100% !important;
-    height: auto !important;
-    display: inline-block !important; }
 
 /*********************
 LARGER MOBILE DEVICES
