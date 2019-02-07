@@ -107,9 +107,7 @@ if ( woocommerce_product_loop() ) {
 	$code = $r[1];
 	
 	// Getting Category Name
-	if( $term ) {
-		$prCatId = $term->term_id;
-	}
+	$prCatId = ( !empty($term->term_id) ) ? $term->term_id : 15;
 	$prCatName = ( !empty($term->slug) ) ? $term->slug : $code;
 	
 	if( get_cat_ID($prCatName) ) {
