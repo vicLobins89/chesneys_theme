@@ -1234,7 +1234,8 @@ NAVIGATION STYLES
   .primary-nav > li {
     border: none;
     padding: 0;
-    vertical-align: top; }
+    vertical-align: top;
+    color: #766e63; }
     .primary-nav > li > a {
       color: inherit;
       outline: none; }
