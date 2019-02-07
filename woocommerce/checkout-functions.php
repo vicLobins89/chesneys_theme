@@ -20,6 +20,7 @@ function wdm_send_order_to_ext( $order_id ){
 		'billing_address_2' => $order->get_billing_address_2(),
 		'billing_city' => $order->get_billing_city(),
 		'billing_state' => $order->get_billing_state(),
+		'billing_country' => $order->get_billing_country(),
 		'billing_postcode' => $order->get_billing_postcode(),
 		'shipping_first_name' => $order->get_shipping_first_name(),
 		'shipping_last_name' => $order->get_shipping_last_name(),
@@ -28,6 +29,7 @@ function wdm_send_order_to_ext( $order_id ){
 		'shipping_address_2' => $order->get_shipping_address_2(),
 		'shipping_city' => $order->get_shipping_city(),
 		'shipping_state' => $order->get_shipping_state(),
+		'shipping_country' => $order->get_shipping_country(),
 		'shipping_postcode' => $order->get_shipping_postcode()
 	);
 
@@ -44,6 +46,33 @@ function wdm_send_order_to_ext( $order_id ){
 	/* for online payments, send across the transaction ID/key. If the payment is handled offline, you could send across the order key instead */
 	$transaction_key = get_post_meta( $order_id, '_transaction_id', true );
 	$transaction_key = empty($transaction_key) ? $_GET['key'] : $transaction_key;
+
+	// get product details
+	$items = $order->get_items();
+	$csv_items = array();
+	$api_items = array();
+	
+	foreach( $items as $key => $item) {
+		$item_id = $item['product_id'];
+		$product = new WC_Product($item_id);
+		
+		if( $product->get_shipping_class() == 'banbury' ) {
+			$csv_items[$item['product_id']] = array(
+				'item_name' => $item['name'],
+				'item_sku' => $product->get_sku(),
+//				'item_ship_class' => $product->get_shipping_class(),
+				'item_price' => $item['line_total'],
+				'quantity' => $item['qty'],
+			);
+		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
+			$api_items[$key] = array(
+				'item_name' => $item['name'],
+				'item_sku' => $product->get_sku(),
+				'quantity' => $item['qty'],
+				'price' => $item['line_total'],
+			);
+		}
+	}
 	
 	// setup the data which has to be sent
 	$data = array(
@@ -72,33 +101,6 @@ function wdm_send_order_to_ext( $order_id ){
 		'transaction_key' => $transaction_key,
 		'coupon_code' => implode( ",", $coupon )
 	);
-
-	// get product details
-	$items = $order->get_items();
-	$csv_items = array();
-	$api_items = array();
-	
-	foreach( $items as $key => $item) {
-		$item_id = $item['product_id'];
-		$product = new WC_Product($item_id);
-		
-		if( $product->get_shipping_class() == 'banbury' ) {
-			$csv_items[$item['product_id']] = array(
-				'item_name' => $item['name'],
-				'item_sku' => $product->get_sku(),
-//				'item_ship_class' => $product->get_shipping_class(),
-				'item_price' => $item['line_total'],
-				'quantity' => $item['qty'],
-			);
-		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
-			$api_items[$item] = array(
-				'item_name' => $item['name'],
-				'item_sku' => $product->get_sku(),
-				'quantity' => $item['qty'],
-				'price' => $item['line_total'],
-			);
-		}
-	}
 	
 	$apiData = array(
 		'test' => true,
