@@ -30,6 +30,10 @@ $acfClass = new CustomACF();
  */
 do_action( 'woocommerce_before_main_content' );
 
+if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+}
+
 ?>
 <header class="woocommerce-products-header">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
