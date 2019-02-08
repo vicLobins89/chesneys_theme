@@ -25,13 +25,13 @@ $acfClass = new CustomACF();
 							<?php if( get_the_content() ) :
 								$layout = get_field('editor_layout');
 								if( $layout === 'hide' ) {
-									echo '<section class="row entry-content cf" style="display: none;">';
+									echo '<section class="row entry-content cf top" style="display: none;">';
 									echo '<div class="cf">';
 								} else if( $layout === 'wrap' ) {
-									echo '<section class="row entry-content wrap cf" itemprop="articleBody">';
+									echo '<section class="row entry-content wrap cf top" itemprop="articleBody">';
 									echo '<div class="cf">';
 								} else if( $layout === 'full' ) {
-									echo '<section class="row entry-content full cf" itemprop="articleBody">';
+									echo '<section class="row entry-content full cf top" itemprop="articleBody">';
 									echo '<div class="cf">';
 								} else {
 									echo '<section class="row entry-content cf top" itemprop="articleBody">';

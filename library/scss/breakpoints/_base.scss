@@ -271,20 +271,6 @@ LAYOUT & GRID STYLES
 			padding: 0;
 		}
 	}
-	
-	&.border-bottom {
-		position: relative;
-		
-		&:after {
-			content: '';
-			position: absolute;
-			height: 1px;
-			width: calc(100% - 6rem);
-			left: 3rem;
-			bottom: 0;
-			background: $light-gray;
-		}
-	}
 }
 
 .flex {
@@ -314,81 +300,6 @@ LAYOUT & GRID STYLES
 			content:'';
 			float:left;
 			padding-top:90%;
-		}
-	}
-}
-
-.products {
-	&[class*="col-"] {
-		clear: none !important;
-	}
-}
-
-.image-links-wrapper {
-	h2 {
-		margin-left: 1rem;
-	}
-}
-
-.image-links {
-	display: block;
-	background: $white;
-	padding-bottom: 2rem;
-	@include transition(color 0.2s ease-in-out);
-	
-	img {
-		font-size: 0;
-		margin: 0;
-		width: 100%;
-	}
-	
-	p {
-		padding: .5rem 0;
-		margin: .5rem 1rem;
-		background: url(../images/link-arrow.png) no-repeat right top;
-		background: url(../images/link-arrow.png) no-repeat right 0 top 0;
-		background-size: 2rem;
-	}
-}
-
-.gallery {
-	width: calc(100% + 2rem);
-    margin-left: -1rem;
-	
-	.gallery-item {
-		display: inline-block;
-		padding: 1rem;
-		margin: 0;
-		width: 100%;
-		
-		.gallery-icon {
-			font-size: 0;
-		}
-	}
-	
-	img {
-		margin: 0 !important;
-	}
-}
-
-.ski-facts {
-	> div {
-		background: url(/wp-content/uploads/2018/11/ski-facts-bg.jpg) no-repeat center;
-		background-size: cover;
-		color: $white;
-		padding: 2.75rem 2.75rem 4rem;
-	}
-	
-	[class*="col-"] {
-		padding: 0;
-	}
-	
-	p {
-		margin: .75rem 0;
-		
-		.skill {
-			display: inline-block;
-    		min-width: 130px;
 		}
 	}
 }
@@ -432,6 +343,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 h1, .h1 {
 	font-size: 3em;
+	font-weight: normal;
 	line-height: 1.2;
 	margin-top: 0;
 }
