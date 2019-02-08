@@ -602,6 +602,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 *********************/
 .primary-btn, .image-link + p, .image-link .wp-caption-text, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, a.secondary-btn {
   position: relative;
+  min-width: 12rem;
   display: inline-block;
   text-decoration: none;
   color: #fff;
@@ -659,6 +660,11 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .image-link img {
     width: 100%;
     height: auto; }
+  .image-link + p, .image-link .wp-caption-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .primary-link {
   background: url(../images/link-arrow.png) no-repeat center left;
@@ -1562,17 +1568,12 @@ POSTS & CONTENT STYLES
 
 .wp-caption {
   max-width: 100%;
-  background: #eee;
-  padding: 5px;
+  position: relative;
   /* images inside wp-caption */ }
   .wp-caption img {
     max-width: 100%;
     margin-bottom: 0;
     width: 100%; }
-  .wp-caption p.wp-caption-text {
-    font-size: 0.85em;
-    margin: 4px 0 7px;
-    text-align: center; }
 
 /* end .wp-caption */
 .tags {
