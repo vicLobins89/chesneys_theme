@@ -24,7 +24,7 @@ class CustomACF {
 		$post_num = get_sub_field('post_count');
 		$all_categories = get_sub_field('all_categories');
 		$post_category = ( isset($all_categories) || !is_null($all_categories) ) ? null : get_sub_field('choose_category');
-		if( $post_category || $post_cat ) {
+		if( $all_categories || $post_category || $post_cat ) {
 			global $post;
 			
 			if (!isset($post_cat) || is_null($post_cat) ) {
