@@ -453,7 +453,7 @@ HEADER STYLES
 .logo {
 	display: block;
 	font-size: 0;
-	margin: 1.75rem auto;
+	margin: 1.75rem auto 1.25rem;
 	
 	img {
 		max-width: 100%;
@@ -500,7 +500,8 @@ NAVIGATION STYLES
 	> li {
 		position: relative;
 		border: none;
-		padding: 1rem 1.5rem;
+		padding: 1rem 1.5rem 1.5rem;
+		line-height: 1.2;
 		margin: 0;
 		vertical-align: top;
 		color: $dark-brown;
@@ -555,7 +556,7 @@ NAVIGATION STYLES
 		ul.sub-menu,
 		ul.children {
 			position: absolute;
-			top: 3.1rem;
+			top: 3.6rem;
 			left: 0;
 			height: 16rem;
 			overflow: visible;
