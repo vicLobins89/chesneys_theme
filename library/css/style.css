@@ -1178,9 +1178,6 @@ NAVIGATION STYLES
         display: block; }
       .primary-nav > li > a:hover, .primary-nav > li > a:focus {
         color: #ff8700; }
-        .primary-nav > li > a:hover > .sub-menu, .primary-nav > li > a:focus > .sub-menu {
-          visibility: visible;
-          opacity: 1; }
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {
       position: absolute;
@@ -1205,6 +1202,15 @@ NAVIGATION STYLES
         vertical-align: middle;
         display: inline-block;
         padding: 0 1rem; }
+      .primary-nav > li ul.sub-menu:hover ul.sub-menu,
+      .primary-nav > li ul.sub-menu:hover ul.children, .primary-nav > li ul.sub-menu:focus ul.sub-menu,
+      .primary-nav > li ul.sub-menu:focus ul.children,
+      .primary-nav > li ul.children:hover ul.sub-menu,
+      .primary-nav > li ul.children:hover ul.children,
+      .primary-nav > li ul.children:focus ul.sub-menu,
+      .primary-nav > li ul.children:focus ul.children {
+        opacity: 1;
+        visibility: visible; }
 
 .socket {
   background: #53575a;
