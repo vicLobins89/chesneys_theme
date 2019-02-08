@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
 	
 	function menuResize(){
 		var menuWidth = $('.primary-nav').outerWidth();
-		$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li .sub-menu').width( menuWidth/3 );
+		$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width( menuWidth/3 );
 	}
 	menuResize();
 	
