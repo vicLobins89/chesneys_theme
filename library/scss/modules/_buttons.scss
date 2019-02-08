@@ -152,12 +152,15 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 			text-transform: uppercase;
 			font-weight: normal;
 			position: relative;
+			margin-bottom: 14px;
+    		display: block;
 			
 			&:after {
 				display: block;
+				position: absolute;
 				content: '';
 				left: 0;
-				bottom: -10px;
+				bottom: -3px;
 				width: 3rem;
 				height: 1px;
 				background: $white;
