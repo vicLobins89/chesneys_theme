@@ -26,12 +26,19 @@ jQuery(document).ready(function($) {
 		$(this).parents('.header').toggleClass('active');
 	});
 	
+	function menuResize(){
+		var menuWidth = $('.primary-nav').outerWidth();
+		$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li .sub-menu').width( menuWidth/3 );
+	}
+	menuResize();
+	
 	$(window).on('resize load', function(){
 		if( viewport.width < 768 ) {
 			$('body').addClass('is-mobile');
 		} else {
 			$('body').removeClass('is-mobile');
 		}
+		menuResize();
 	});
 	
 	$(window).on('scroll', function(){
