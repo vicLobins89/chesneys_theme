@@ -696,9 +696,11 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom, black, black);
-    -webkit-transition: background-image 0.3s ease-in-out;
-    transition: background-image 0.3s ease-in-out; }
+    opacity: .6;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
   .hover-link:hover:before, .hover-link:focus:before {
+    opacity: 1;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black); }
 
 .primary-link {
