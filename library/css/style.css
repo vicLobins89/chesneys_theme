@@ -690,12 +690,15 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     left: 0;
     margin: 0;
     padding: 2rem; }
+    .hover-link + p br, .hover-link .wp-caption-text br {
+      display: none; }
     .hover-link + p b, .hover-link + p strong, .hover-link .wp-caption-text b, .hover-link .wp-caption-text strong {
       font-family: "Univers", Helvetica, Arial, sans-serif;
       text-transform: uppercase;
       font-weight: normal;
       position: relative; }
       .hover-link + p b:after, .hover-link + p strong:after, .hover-link .wp-caption-text b:after, .hover-link .wp-caption-text strong:after {
+        display: block;
         content: '';
         left: 0;
         bottom: -10px;
