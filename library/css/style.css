@@ -1198,7 +1198,7 @@ NAVIGATION STYLES
       left: 0;
       height: 16rem;
       overflow: visible;
-      background: #766e63;
+      background: #cbc3bb;
       opacity: 0;
       visibility: hidden;
       text-align: left;
@@ -1213,7 +1213,7 @@ NAVIGATION STYLES
         vertical-align: middle;
         display: block;
         padding: 1rem 1.5rem;
-        color: #fff; }
+        color: #766e63; }
         .primary-nav > li ul.sub-menu li a,
         .primary-nav > li ul.children li a {
           color: inherit; }

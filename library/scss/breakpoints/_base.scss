@@ -503,7 +503,7 @@ NAVIGATION STYLES
 		padding: 1rem 1.5rem;
 		margin: 0;
 		vertical-align: top;
-		color: $brown;
+		color: $dark-brown;
 		
 		> a {
 			color: inherit;
@@ -515,7 +515,7 @@ NAVIGATION STYLES
 			
 			&:hover,
 			&:focus {
-				color: $brown;
+				color: $dark-brown;
 			}
 		}
 		
@@ -554,7 +554,7 @@ NAVIGATION STYLES
 				vertical-align: middle;
 				display: block;
 				padding: 1rem 1.5rem;
-				color: $white;
+				color: $dark-brown;
 
 				a {
 					color: inherit;
