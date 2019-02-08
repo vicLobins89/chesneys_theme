@@ -94,6 +94,20 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 	}
 }
 
+.image-link {
+	display: block;
+	position: relative;
+	
+	img {
+		width: 100%;
+		height: auto;
+	}
+	
+	+ p {
+		@extend .primary-btn;
+	}
+}
+
 .primary-link {
 	background: url(../images/link-arrow.png) no-repeat center left;
 	background-size: 2rem;

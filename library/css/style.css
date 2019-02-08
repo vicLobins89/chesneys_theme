@@ -600,7 +600,7 @@ Quick video guide:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.primary-btn, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, a.secondary-btn {
+.primary-btn, .image-link + p, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, a.secondary-btn {
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -621,20 +621,20 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   outline: none;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  .primary-btn:hover, a.comment-reply-link:hover, #submit:hover, .secondary-btn:hover, .primary-btn:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus {
+  .primary-btn:hover, .image-link + p:hover, a.comment-reply-link:hover, #submit:hover, .secondary-btn:hover, .primary-btn:focus, .image-link + p:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus {
     color: #fff;
     text-decoration: none; }
-  .primary-btn:active, a.comment-reply-link:active, #submit:active, .secondary-btn:active {
+  .primary-btn:active, .image-link + p:active, a.comment-reply-link:active, #submit:active, .secondary-btn:active {
     top: 1px; }
-  .primary-btn a, a.comment-reply-link a, #submit a, .secondary-btn a {
+  .primary-btn a, .image-link + p a, a.comment-reply-link a, #submit a, .secondary-btn a {
     color: inherit !important;
     text-decoration: inherit !important; }
 
-.primary-btn, a.comment-reply-link, #submit, a.primary-btn, a.comment-reply-link, a#submit {
+.primary-btn, .image-link + p, a.comment-reply-link, #submit, a.primary-btn, a.comment-reply-link, a#submit {
   background-color: none;
   border-color: #fff;
   color: #fff; }
-  .primary-btn:hover, a.comment-reply-link:hover, #submit:hover, .primary-btn:focus, a.comment-reply-link:focus, #submit:focus, a.primary-btn:hover, a.comment-reply-link:hover, a#submit:hover, a.primary-btn:focus, a.comment-reply-link:focus, a#submit:focus {
+  .primary-btn:hover, .image-link + p:hover, a.comment-reply-link:hover, #submit:hover, .primary-btn:focus, .image-link + p:focus, a.comment-reply-link:focus, #submit:focus, a.primary-btn:hover, a.comment-reply-link:hover, a#submit:hover, a.primary-btn:focus, a.comment-reply-link:focus, a#submit:focus {
     background-color: #fff;
     color: #53575a; }
 
@@ -652,6 +652,13 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     .secondary-btn.alt:hover, .secondary-btn.alt:focus, a.secondary-btn.alt:hover, a.secondary-btn.alt:focus {
       background-color: #ff8700;
       color: #fff; }
+
+.image-link {
+  display: block;
+  position: relative; }
+  .image-link img {
+    width: 100%;
+    height: auto; }
 
 .primary-link {
   background: url(../images/link-arrow.png) no-repeat center left;
