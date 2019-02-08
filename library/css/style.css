@@ -1561,11 +1561,18 @@ POSTS & CONTENT STYLES
     border-radius: 3px; }
 
 .wp-caption {
+  max-width: 100%;
+  background: #eee;
+  padding: 5px;
   /* images inside wp-caption */ }
   .wp-caption img {
     max-width: 100%;
     margin-bottom: 0;
     width: 100%; }
+  .wp-caption p.wp-caption-text {
+    font-size: 0.85em;
+    margin: 4px 0 7px;
+    text-align: center; }
 
 /* end .wp-caption */
 .tags {
