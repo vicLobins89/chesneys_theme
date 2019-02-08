@@ -98,6 +98,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 .image-link {
 	display: block;
 	position: relative;
+	font-size: 0;
 
 	img {
 		width: 100%;
@@ -120,7 +121,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: rgba(0,0,0,0.9);
+		background: rgba(0,0,0,0.4);
 	}
 }
 

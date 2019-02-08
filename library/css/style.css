@@ -656,7 +656,8 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 .image-link {
   display: block;
-  position: relative; }
+  position: relative;
+  font-size: 0; }
   .image-link img {
     width: 100%;
     height: auto; }
@@ -673,7 +674,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9); }
+    background: rgba(0, 0, 0, 0.4); }
 
 .primary-link {
   background: url(../images/link-arrow.png) no-repeat center left;
@@ -1081,9 +1082,10 @@ h1, .h1 {
   margin-top: 0; }
 
 h2, .h2 {
-  font-size: 1.75em;
-  margin: .35em 0 .5em;
+  font-size: 1.5em;
   font-family: "Univers", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin: .35em 0 .5em;
   text-transform: uppercase; }
 
 h3, .h3 {

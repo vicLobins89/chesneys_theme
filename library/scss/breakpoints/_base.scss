@@ -363,9 +363,10 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	font-size: 1.75em;
-	margin: .35em 0 .5em;
+	font-size: 1.5em;
 	font-family: $sans-serif;
+	font-weight: normal;
+	margin: .35em 0 .5em;
 	text-transform: uppercase;
 }
 
