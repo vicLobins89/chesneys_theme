@@ -512,6 +512,11 @@ NAVIGATION STYLES
 			&:hover,
 			&:focus {
 				color: $orange;
+				
+				> .sub-menu {
+					visibility: visible;
+					opacity: 1;
+				}
 			}
 		}
 

@@ -1178,6 +1178,9 @@ NAVIGATION STYLES
         display: block; }
       .primary-nav > li > a:hover, .primary-nav > li > a:focus {
         color: #ff8700; }
+        .primary-nav > li > a:hover > .sub-menu, .primary-nav > li > a:focus > .sub-menu {
+          visibility: visible;
+          opacity: 1; }
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {
       position: absolute;
