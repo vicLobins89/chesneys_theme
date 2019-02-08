@@ -1171,8 +1171,8 @@ NAVIGATION STYLES
   .primary-nav > li {
     position: relative;
     border: none;
-    padding: 0;
-    margin: 0 1.5rem;
+    padding: 1rem 1.5rem;
+    margin: 0;
     vertical-align: top;
     color: #766e63; }
     .primary-nav > li > a {
