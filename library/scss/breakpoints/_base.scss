@@ -556,7 +556,7 @@ NAVIGATION STYLES
 		ul.sub-menu,
 		ul.children {
 			position: absolute;
-			top: 3.6rem;
+			top: 3.5rem;
 			left: 0;
 			height: 16rem;
 			overflow: visible;
@@ -580,6 +580,18 @@ NAVIGATION STYLES
 					
 					&:hover,
 					&:focus {
+					}
+				}
+				
+				&.menu-item-has-children {
+					a:after {
+						content: '';
+						width: 6px;
+						height: 10px;
+						display: inline-block;
+						margin-left: 9px;
+						background: url(../images/arrow-right.png) no-repeat center;
+						background-size: 7px;
 					}
 				}
 

@@ -1211,7 +1211,7 @@ NAVIGATION STYLES
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {
       position: absolute;
-      top: 3.6rem;
+      top: 3.5rem;
       left: 0;
       height: 16rem;
       overflow: visible;
@@ -1234,6 +1234,15 @@ NAVIGATION STYLES
         .primary-nav > li ul.sub-menu li a,
         .primary-nav > li ul.children li a {
           color: inherit; }
+        .primary-nav > li ul.sub-menu li.menu-item-has-children a:after,
+        .primary-nav > li ul.children li.menu-item-has-children a:after {
+          content: '';
+          width: 6px;
+          height: 10px;
+          display: inline-block;
+          margin-left: 9px;
+          background: url(../images/arrow-right.png) no-repeat center;
+          background-size: 7px; }
       .primary-nav > li ul.sub-menu > li > ul.sub-menu,
       .primary-nav > li ul.sub-menu > li > ul.children,
       .primary-nav > li ul.children > li > ul.sub-menu,
