@@ -1077,7 +1077,7 @@ h5, .h5 {
 p, .p {
   line-height: 1.3;
   font-size: 1.2em;
-  margin: 0.85em 0 1.2em;
+  margin: 0.85em 0;
   font-weight: normal; }
 
 .copy-l {
