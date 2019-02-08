@@ -1950,29 +1950,6 @@ DESKTOP
   .wrap > div {
     width: 930px; }
 
-  .header {
-    font-size: 1rem; }
-
-  .primary-nav {
-    /* highlight current page */ }
-    .primary-nav > li > a {
-      padding: 1.5em; }
-    .primary-nav > li ul.sub-menu,
-    .primary-nav > li ul.children {
-      padding: 1.2rem 0 1rem 2.5rem; }
-      .primary-nav > li ul.sub-menu li,
-      .primary-nav > li ul.children li {
-        padding: 0 1rem; }
-        .primary-nav > li ul.sub-menu li a,
-        .primary-nav > li ul.children li a {
-          font-size: 0.625rem; }
-    .primary-nav > li.current_page_item > a:after,
-    .primary-nav > li.current-menu-ancestor > a:after,
-    .primary-nav > li.current-menu-item > a:after,
-    .primary-nav > li.current_page_ancestor > a:after {
-      left: 1.5em;
-      width: calc(100% - 3em); }
-
   .footer-links ul li {
     margin: 0 2rem; } }
 /*********************
@@ -1993,41 +1970,7 @@ LARGE VIEWING SIZE
     max-width: 1400px; }
 
   .wrap > div {
-    width: 1080px; }
-
-  .primary-nav {
-    /* highlight current page */ }
-    .primary-nav > li > a {
-      padding: 1.5em 2.5em; }
-    .primary-nav > li ul.sub-menu,
-    .primary-nav > li ul.children {
-      padding: 1rem 0 1rem 2.5rem; }
-      .primary-nav > li ul.sub-menu li,
-      .primary-nav > li ul.children li {
-        padding: 0 1.15rem; }
-        .primary-nav > li ul.sub-menu li a,
-        .primary-nav > li ul.children li a {
-          font-size: 0.775rem; }
-    .primary-nav > li.current_page_item > a:after,
-    .primary-nav > li.current-menu-ancestor > a:after,
-    .primary-nav > li.current-menu-item > a:after,
-    .primary-nav > li.current_page_ancestor > a:after {
-      left: 2.5em;
-      width: calc(100% - 5em); }
-
-  /*********************
-  SLIDER STYLES
-  *********************/
-  div#n2-ss-2-align .nextend-thumbnail-default,
-  div#n2-ss-2-align .nextend-thumbnail-inner,
-  div#n2-ss-3-align .nextend-thumbnail-default,
-  div#n2-ss-3-align .nextend-thumbnail-inner {
-    bottom: 1rem !important; }
-    div#n2-ss-2-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
-    div#n2-ss-2-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div,
-    div#n2-ss-3-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
-    div#n2-ss-3-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div {
-      height: 7rem !important; } }
+    width: 1080px; } }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 *********************/

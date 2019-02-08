@@ -349,29 +349,6 @@ html {
 .wrap > div {
   width: 930px; }
 
-.header {
-  font-size: 1rem; }
-
-.primary-nav {
-  /* highlight current page */ }
-  .primary-nav > li > a {
-    padding: 1.5em; }
-  .primary-nav > li ul.sub-menu,
-  .primary-nav > li ul.children {
-    padding: 1.2rem 0 1rem 2.5rem; }
-    .primary-nav > li ul.sub-menu li,
-    .primary-nav > li ul.children li {
-      padding: 0 1rem; }
-      .primary-nav > li ul.sub-menu li a,
-      .primary-nav > li ul.children li a {
-        font-size: 0.625rem; }
-  .primary-nav > li.current_page_item > a:after,
-  .primary-nav > li.current-menu-ancestor > a:after,
-  .primary-nav > li.current-menu-item > a:after,
-  .primary-nav > li.current_page_ancestor > a:after {
-    left: 1.5em;
-    width: calc(100% - 3em); }
-
 .footer-links ul li {
   margin: 0 2rem; }
 
