@@ -861,8 +861,8 @@ hr {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
-.vidbg-container h1, .vidbg-container .h1 {
-  font-size: 3.75em; }
+  .vidbg-container + div h1, .vidbg-container + div .h1 {
+    font-size: 3.75em; }
 
 #wpcf7-f257-p2-o1,
 #wpcf7-f257-p13-o1, .full-features {
