@@ -23,7 +23,7 @@ class CustomACF {
 	public function render_blog($post_cat = null) {
 		$post_num = get_sub_field('post_count');
 		$all_categories = get_sub_field('all_categories');
-		$post_category = ( isset($all_categories) || !is_null($all_categories) ) ? null : get_sub_field('choose_category');
+		$post_category = ( $all_categories == 'all' ) ? null : get_sub_field('choose_category');
 		if( $all_categories || $post_category || $post_cat ) {
 			global $post;
 			
