@@ -1196,7 +1196,7 @@ NAVIGATION STYLES
       background: #766e63;
       opacity: 0;
       visibility: hidden;
-      text-align-last: auto;
+      text-align: left;
       padding: 1rem 0;
       margin: 0;
       z-index: 8;
@@ -1213,6 +1213,9 @@ NAVIGATION STYLES
         display: block;
         padding: 1rem 1.5rem;
         color: #fff; }
+        .primary-nav > li ul.sub-menu li a,
+        .primary-nav > li ul.children li a {
+          color: inherit; }
       .primary-nav > li ul.sub-menu > li:hover > ul.sub-menu,
       .primary-nav > li ul.sub-menu > li:hover > ul.children, .primary-nav > li ul.sub-menu > li:focus > ul.sub-menu,
       .primary-nav > li ul.sub-menu > li:focus > ul.children,
