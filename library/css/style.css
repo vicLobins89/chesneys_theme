@@ -1234,8 +1234,8 @@ NAVIGATION STYLES
         .primary-nav > li ul.sub-menu li a,
         .primary-nav > li ul.children li a {
           color: inherit; }
-        .primary-nav > li ul.sub-menu li.menu-item-has-children a:after,
-        .primary-nav > li ul.children li.menu-item-has-children a:after {
+        .primary-nav > li ul.sub-menu li.menu-item-has-children > a:after,
+        .primary-nav > li ul.children li.menu-item-has-children > a:after {
           content: '';
           width: 6px;
           height: 10px;
