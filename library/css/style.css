@@ -1075,7 +1075,7 @@ h5, .h5 {
   font-size: 1.2em; }
 
 p, .p {
-  line-height: 1.5;
+  line-height: 1.3;
   font-size: 1.2em;
   margin: 0.85em 0 1.2em;
   font-weight: normal; }
@@ -1084,7 +1084,10 @@ p, .p {
   font-size: 120% !important; }
 
 .copy-xl {
-  font-size: 150% !important; }
+  font-size: 160% !important; }
+
+.copy-xxl {
+  font-size: 200% !important; }
 
 .narrow-para {
   max-width: 80%;

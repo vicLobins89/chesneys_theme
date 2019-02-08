@@ -381,7 +381,7 @@ h5, .h5 {
 }
 
 p, .p {
-	line-height: 1.5;
+	line-height: 1.3;
 	font-size: 1.2em;
 	margin: 0.85em 0 1.2em;
 	font-weight: normal;
@@ -392,7 +392,11 @@ p, .p {
 }
 
 .copy-xl {
-	font-size: 150% !important;
+	font-size: 160% !important;
+}
+
+.copy-xxl {
+	font-size: 200% !important;
 }
 
 .narrow-para {
