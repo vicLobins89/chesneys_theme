@@ -210,7 +210,7 @@ class CustomACF {
 		
 			// Blog
 			if( have_rows('blog_feed') ) : while( have_rows('blog_feed') ) : the_row();
-//				$this->render_blog();
+				$this->render_blog();
 			endwhile; endif; // Blog
 		
 			// Case Studies
