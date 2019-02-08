@@ -609,11 +609,11 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   background-color: transparent;
   border-radius: 0;
   font-family: 'Univers';
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1;
-  padding: 0.8rem 2rem 0.65rem;
+  padding: 1.2rem 2rem 1rem;
   margin: 1rem 0;
   cursor: pointer;
   text-align: center;
@@ -847,6 +847,8 @@ hr {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+.vidbg-container h1, .vidbg-container .h1 {
+  font-size: 3.75em; }
 
 #wpcf7-f257-p2-o1,
 #wpcf7-f257-p13-o1, .full-features {
