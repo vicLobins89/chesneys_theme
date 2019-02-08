@@ -20,25 +20,25 @@ class CustomACF {
 		}
 	}
 	
-	public function render_blog($cat = null) {
+	public function render_blog($post_cat = null) {
 		$post_num = get_sub_field('post_count');
 //		$all_cats = get_sub_field('all_categories');
-		$category = get_sub_field('choose_category');
-		if( $category || $cat ) {
+		$post_category = get_sub_field('choose_category');
+		if( $post_category || $post_cat ) {
 			global $post;
 			
-			if (!isset($cat) || is_null($cat) ) {
+			if (!isset($post_cat) || is_null($post_cat) ) {
 				$args = array(
 					'post_type' => 'post',
 					'post_status' => 'publish',
-					'cat' => $category,
+					'cat' => $post_category,
 					'posts_per_page' => $post_num,
 				);
 			} else {
 				$args = array(
 					'post_type' => 'post',
 					'post_status' => 'publish',
-					'category_name' => $cat,
+					'category_name' => $post_cat,
 					'posts_per_page' => 1,
 				);
 			}
@@ -67,13 +67,13 @@ class CustomACF {
 		}
 	}
 	
-	public function render_portfolio($cat = null) {
+	public function render_portfolio($folio_cat = null) {
 		$post_num = get_sub_field('post_count');
-		$folio_cat = get_sub_field('choose_portfolio');
-		if( $folio_cat || $cat ) {
+		$folio_category = get_sub_field('choose_portfolio');
+		if( $folio_category || $folio_cat ) {
 			global $post;
 			
-			if (!isset($cat) || is_null($cat) ) {
+			if (!isset($folio_cat) || is_null($folio_cat) ) {
 				$args2 = array(
 					'post_type' => 'case_study',
 					'post_status' => 'publish',
@@ -82,7 +82,7 @@ class CustomACF {
 						array(
 							'taxonomy' => 'portfolio_cat',
 							'field'    => 'term_taxonomy_id',
-							'terms'    => $folio_cat
+							'terms'    => $folio_category
 						)
 					)
 				);
@@ -95,7 +95,7 @@ class CustomACF {
 						array(
 							'taxonomy' => 'portfolio_cat',
 							'field'    => 'slug',
-							'terms'    => $cat
+							'terms'    => $folio_cat
 						)
 					)
 				);
