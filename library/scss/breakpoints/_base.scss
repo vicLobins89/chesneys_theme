@@ -571,6 +571,7 @@ NAVIGATION STYLES
 				> ul.children {
 					width: 290px;
 					width: 17vw;
+					background: $mid-brown;
 				}
 				
 				ul.sub-menu,
@@ -584,6 +585,8 @@ NAVIGATION STYLES
 						width: 478px;
 						width: 28vw;
 						font-family: $serif;
+						text-transform: none;
+						background: $light-brown;
 						
 						li {
 							float:left;

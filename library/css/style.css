@@ -1222,7 +1222,8 @@ NAVIGATION STYLES
       .primary-nav > li ul.children > li > ul.sub-menu,
       .primary-nav > li ul.children > li > ul.children {
         width: 290px;
-        width: 17vw; }
+        width: 17vw;
+        background: #afa99f; }
       .primary-nav > li ul.sub-menu > li ul.sub-menu,
       .primary-nav > li ul.sub-menu > li ul.children,
       .primary-nav > li ul.children > li ul.sub-menu,
@@ -1240,7 +1241,9 @@ NAVIGATION STYLES
           clear: both;
           width: 478px;
           width: 28vw;
-          font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; }
+          font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+          text-transform: none;
+          background: #cbc3bb; }
           .primary-nav > li ul.sub-menu > li ul.sub-menu ul.sub-menu li,
           .primary-nav > li ul.sub-menu > li ul.sub-menu ul.children li,
           .primary-nav > li ul.sub-menu > li ul.children ul.sub-menu li,
