@@ -1178,11 +1178,11 @@ NAVIGATION STYLES
         display: block; }
       .primary-nav > li > a:hover, .primary-nav > li > a:focus {
         color: #766e63; }
-        .primary-nav > li > a:hover + ul.sub-menu,
-        .primary-nav > li > a:hover + ul.children, .primary-nav > li > a:focus + ul.sub-menu,
-        .primary-nav > li > a:focus + ul.children {
-          opacity: 1;
-          visibility: visible; }
+    .primary-nav > li:hover > ul.sub-menu,
+    .primary-nav > li:hover > ul.children, .primary-nav > li:focus > ul.sub-menu,
+    .primary-nav > li:focus > ul.children {
+      opacity: 1;
+      visibility: visible; }
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {
       position: absolute;
@@ -1207,13 +1207,13 @@ NAVIGATION STYLES
         vertical-align: middle;
         display: block;
         padding: 0 1rem; }
-      .primary-nav > li ul.sub-menu > li > a:hover + ul.sub-menu,
-      .primary-nav > li ul.sub-menu > li > a:hover + ul.children, .primary-nav > li ul.sub-menu > li > a:focus + ul.sub-menu,
-      .primary-nav > li ul.sub-menu > li > a:focus + ul.children,
-      .primary-nav > li ul.children > li > a:hover + ul.sub-menu,
-      .primary-nav > li ul.children > li > a:hover + ul.children,
-      .primary-nav > li ul.children > li > a:focus + ul.sub-menu,
-      .primary-nav > li ul.children > li > a:focus + ul.children {
+      .primary-nav > li ul.sub-menu > li:hover > ul.sub-menu,
+      .primary-nav > li ul.sub-menu > li:hover > ul.children, .primary-nav > li ul.sub-menu > li:focus > ul.sub-menu,
+      .primary-nav > li ul.sub-menu > li:focus > ul.children,
+      .primary-nav > li ul.children > li:hover > ul.sub-menu,
+      .primary-nav > li ul.children > li:hover > ul.children,
+      .primary-nav > li ul.children > li:focus > ul.sub-menu,
+      .primary-nav > li ul.children > li:focus > ul.children {
         opacity: 1;
         visibility: visible; }
 

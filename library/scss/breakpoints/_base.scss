@@ -512,12 +512,15 @@ NAVIGATION STYLES
 			&:hover,
 			&:focus {
 				color: $brown;
-				
-				+ ul.sub-menu,
-				+ ul.children {
-					opacity: 1;
-					visibility: visible
-				}
+			}
+		}
+		
+		&:hover,
+		&:focus {
+			> ul.sub-menu,
+			> ul.children {
+				opacity: 1;
+				visibility: visible
 			}
 		}
 
@@ -554,14 +557,17 @@ NAVIGATION STYLES
 			}
 			
 			> li {
-				> a {
-					&:hover,
-					&:focus {
-						+ ul.sub-menu,
-						+ ul.children {
-							opacity: 1;
-							visibility: visible
-						}
+				ul.sub-menu,
+				ul.children {
+					
+				}
+				
+				&:hover,
+				&:focus {
+					> ul.sub-menu,
+					> ul.children {
+						opacity: 1;
+						visibility: visible
 					}
 				}
 			}
