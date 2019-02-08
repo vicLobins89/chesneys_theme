@@ -1223,7 +1223,7 @@ NAVIGATION STYLES
       .primary-nav > li ul.children > li > ul.children {
         width: 290px;
         width: 17vw;
-        background: #afa99f; }
+        background: #e0dbd6; }
       .primary-nav > li ul.sub-menu > li ul.sub-menu,
       .primary-nav > li ul.sub-menu > li ul.children,
       .primary-nav > li ul.children > li ul.sub-menu,
@@ -1243,7 +1243,7 @@ NAVIGATION STYLES
           width: 28vw;
           font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
           text-transform: none;
-          background: #cbc3bb; }
+          background: #f5f3f1; }
           .primary-nav > li ul.sub-menu > li ul.sub-menu ul.sub-menu li,
           .primary-nav > li ul.sub-menu > li ul.sub-menu ul.children li,
           .primary-nav > li ul.sub-menu > li ul.children ul.sub-menu li,
@@ -1273,7 +1273,7 @@ NAVIGATION STYLES
     padding: .7rem 0;
     text-align: center; }
     .socket .socket-nav .menu-item {
-      color: #cbc3bb;
+      color: #f5f3f1;
       text-transform: uppercase;
       font-family: "Univers", Helvetica, Arial, sans-serif;
       margin: 0 1rem; }
