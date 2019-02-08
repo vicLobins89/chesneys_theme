@@ -24,19 +24,24 @@ class CustomACF {
 		$post_num = get_sub_field('post_count');
 		$all_cats = get_sub_field('all_categories');
 		$post_category = ($all_cats) ? '0' : get_sub_field('choose_category');
-		echo $post_category;
 		
 		if( $post_category || $post_cat ) {
 			global $post;
 			
-			if (!isset($post_cat) || is_null($post_cat) ) {
+			if( $post_category == '0' ) {
+				$args = array(
+					'post_type' => 'post',
+					'post_status' => 'publish',
+					'posts_per_page' => $post_num,
+				);
+			} elseif( !isset($post_cat) || is_null($post_cat) ) {
 				$args = array(
 					'post_type' => 'post',
 					'post_status' => 'publish',
 					'cat' => $post_category,
 					'posts_per_page' => $post_num,
 				);
-			} else {
+			}else {
 				$args = array(
 					'post_type' => 'post',
 					'post_status' => 'publish',
