@@ -73,62 +73,67 @@ class CustomACF {
 	
 	public function render_portfolio($folio_cat = null) {
 		$post_num = get_sub_field('post_count');
-		$folio_category = get_sub_field('choose_portfolio');
-		if( $folio_category || $folio_cat ) {
-			global $post;
-			
-			if (!isset($folio_cat) || is_null($folio_cat) ) {
-				$args2 = array(
-					'post_type' => 'case_study',
-					'post_status' => 'publish',
-					'posts_per_page' => $post_num,
-					'tax_query' => array(
-						array(
-							'taxonomy' => 'portfolio_cat',
-							'field'    => 'term_taxonomy_id',
-							'terms'    => $folio_category
-						)
+		$all_cats = get_sub_field('all_categories');
+		$folio_category = ($all_cats) ? 'all' : get_sub_field('choose_portfolio');
+		
+		global $post;
+		if( $folio_category == 'all' ) {
+			$args2 = array(
+				'post_type' => 'case_study',
+				'post_status' => 'publish',
+				'posts_per_page' => $post_num
+			);
+		} elseif( isset($folio_cat) || !is_null($folio_cat) ) {
+			$args2 = array(
+				'post_type' => 'case_study',
+				'post_status' => 'publish',
+				'posts_per_page' => 1,
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'portfolio_cat',
+						'field'    => 'slug',
+						'terms'    => $folio_cat
 					)
-				);
-			} else {
-				$args2 = array(
-					'post_type' => 'case_study',
-					'post_status' => 'publish',
-					'posts_per_page' => 1,
-					'tax_query' => array(
-						array(
-							'taxonomy' => 'portfolio_cat',
-							'field'    => 'slug',
-							'terms'    => $folio_cat
-						)
+				)
+			);
+		} else {
+			$args2 = array(
+				'post_type' => 'case_study',
+				'post_status' => 'publish',
+				'posts_per_page' => $post_num,
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'portfolio_cat',
+						'field'    => 'term_taxonomy_id',
+						'terms'    => $folio_category
 					)
-				);
-			}
-			
-			$arr_posts2 = new WP_Query( $args2 );
-
-			if ( $arr_posts2->have_posts() ) :
-
-				while ( $arr_posts2->have_posts() ) :
-					$arr_posts2->the_post();
-					?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<?php
-						if ( has_post_thumbnail() ) :
-							the_post_thumbnail();
-						endif;
-						?>
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<div class="entry-content">
-							<?php the_excerpt(); ?>
-							<a href="<?php the_permalink(); ?>">Read More</a>
-						</div>
-					</article>
-					<?php
-				endwhile;
-			endif;
-			wp_reset_postdata();
+				)
+			);
 		}
+
+		$arr_posts2 = new WP_Query( $args2 );
+
+		if ( $arr_posts2->have_posts() ) :
+
+			while ( $arr_posts2->have_posts() ) :
+				$arr_posts2->the_post();
+				?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<?php
+					if ( has_post_thumbnail() ) :
+						the_post_thumbnail();
+					endif;
+					?>
+					<h1 class="entry-title"><?php the_title(); ?></h1>
+					<div class="entry-content">
+						<?php the_excerpt(); ?>
+						<a href="<?php the_permalink(); ?>">Read More</a>
+					</div>
+				</article>
+				<?php
+			endwhile;
+		endif;
+		wp_reset_postdata();
 	}
 	
 	public function render_content() {
