@@ -569,6 +569,17 @@ NAVIGATION STYLES
 				ul.children {
 					top: 0;
     				left: 100%;
+					
+					ul.sub-menu,
+					ul.children {
+						clear: both;
+						
+						li {
+							float:left;
+ 							display:inline;
+							width: 50%;
+						}
+					}
 				}
 				
 				&:hover,

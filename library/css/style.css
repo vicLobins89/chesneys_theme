@@ -1222,6 +1222,26 @@ NAVIGATION STYLES
       .primary-nav > li ul.children > li ul.children {
         top: 0;
         left: 100%; }
+        .primary-nav > li ul.sub-menu > li ul.sub-menu ul.sub-menu,
+        .primary-nav > li ul.sub-menu > li ul.sub-menu ul.children,
+        .primary-nav > li ul.sub-menu > li ul.children ul.sub-menu,
+        .primary-nav > li ul.sub-menu > li ul.children ul.children,
+        .primary-nav > li ul.children > li ul.sub-menu ul.sub-menu,
+        .primary-nav > li ul.children > li ul.sub-menu ul.children,
+        .primary-nav > li ul.children > li ul.children ul.sub-menu,
+        .primary-nav > li ul.children > li ul.children ul.children {
+          clear: both; }
+          .primary-nav > li ul.sub-menu > li ul.sub-menu ul.sub-menu li,
+          .primary-nav > li ul.sub-menu > li ul.sub-menu ul.children li,
+          .primary-nav > li ul.sub-menu > li ul.children ul.sub-menu li,
+          .primary-nav > li ul.sub-menu > li ul.children ul.children li,
+          .primary-nav > li ul.children > li ul.sub-menu ul.sub-menu li,
+          .primary-nav > li ul.children > li ul.sub-menu ul.children li,
+          .primary-nav > li ul.children > li ul.children ul.sub-menu li,
+          .primary-nav > li ul.children > li ul.children ul.children li {
+            float: left;
+            display: inline;
+            width: 50%; }
       .primary-nav > li ul.sub-menu > li:hover > ul.sub-menu,
       .primary-nav > li ul.sub-menu > li:hover > ul.children, .primary-nav > li ul.sub-menu > li:focus > ul.sub-menu,
       .primary-nav > li ul.sub-menu > li:focus > ul.children,
