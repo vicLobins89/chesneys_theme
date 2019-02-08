@@ -1216,6 +1216,12 @@ NAVIGATION STYLES
         .primary-nav > li ul.sub-menu li a,
         .primary-nav > li ul.children li a {
           color: inherit; }
+      .primary-nav > li ul.sub-menu > li ul.sub-menu,
+      .primary-nav > li ul.sub-menu > li ul.children,
+      .primary-nav > li ul.children > li ul.sub-menu,
+      .primary-nav > li ul.children > li ul.children {
+        top: 0;
+        left: 100%; }
       .primary-nav > li ul.sub-menu > li:hover > ul.sub-menu,
       .primary-nav > li ul.sub-menu > li:hover > ul.children, .primary-nav > li ul.sub-menu > li:focus > ul.sub-menu,
       .primary-nav > li ul.sub-menu > li:focus > ul.children,
