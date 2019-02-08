@@ -514,6 +514,15 @@ NAVIGATION STYLES
 				color: $orange;
 			}
 		}
+		
+		&:hover,
+		&:focus {
+			ul.sub-menu,
+			ul.children {
+				opacity: 1;
+				visibility: visible
+			}
+		}
 
 		ul.sub-menu,
 		ul.children {
@@ -552,15 +561,6 @@ NAVIGATION STYLES
 			li.current_page_item,
 			li.current_page_ancestor {
 				a {}
-			}
-			
-			&:hover,
-			&:focus {
-				ul.sub-menu,
-				ul.children {
-					opacity: 1;
-					visibility: visible
-				}
 			}
 		}
 
