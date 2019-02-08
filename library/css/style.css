@@ -850,8 +850,9 @@ hr {
   margin: 0; }
   .aspect-ratio iframe, .aspect-ratio video, .vidbg-container iframe, .vidbg-container video {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none;
     left: 0;
     top: 0; }
 
