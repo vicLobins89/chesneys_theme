@@ -83,6 +83,15 @@ hr {
 	}
 }
 
+.vidbg-container {
+	+ div {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
 %overlay {
 	padding: 1rem;
 	width: 60%;
