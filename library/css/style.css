@@ -676,6 +676,27 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     height: 100%;
     background: rgba(0, 0, 0, 0.4); }
 
+.hover-link {
+  display: block;
+  position: relative;
+  font-size: 0; }
+  .hover-link img {
+    width: 100%;
+    height: auto; }
+  .hover-link + p, .hover-link .wp-caption-text {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0; }
+  .hover-link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), red); }
+
 .primary-link {
   background: url(../images/link-arrow.png) no-repeat center left;
   background-size: 2rem;
@@ -1117,7 +1138,7 @@ p, .p {
   font-size: 200% !important; }
 
 .narrow-para {
-  max-width: 80%;
+  max-width: 70%;
   margin-left: auto !important;
   margin-right: auto !important; }
 
