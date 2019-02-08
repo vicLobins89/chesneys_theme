@@ -22,9 +22,9 @@ class CustomACF {
 	
 	public function render_blog($cat = null) {
 		$post_num = get_sub_field('post_count');
-		$all_cats = get_sub_field('all_categories');
+//		$all_cats = get_sub_field('all_categories');
 		$category = get_sub_field('choose_category');
-		if( $all_cats || $category || $cat ) {
+		if( $category || $cat ) {
 			global $post;
 			
 			if (!isset($cat) || is_null($cat) ) {
