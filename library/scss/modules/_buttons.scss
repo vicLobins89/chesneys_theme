@@ -22,22 +22,21 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    border: 2px solid #fff;
+    border: 2px solid $white;
     background-color: transparent;
-	border-radius: 6px;
+	border-radius: 0;
+	font-family: 'Univers';
     font-size: 1.2rem;
-	font-weight: bold;
+	font-weight: normal;
+	text-transform: uppercase;
     line-height: 1;
-    padding: 0.9rem 4rem;
+    padding: 0.8rem 2rem;
     margin: 1rem 0;
     cursor: pointer;
     text-align: center;
     clear: both;
     outline: none;
 	@include transition(all 0.2s ease-in-out);
-	@media only screen and (max-width: 767px) {
-		padding: 1rem;
-	}
 
 	// hovering on the btn
 	&:hover, &:focus {
@@ -54,43 +53,19 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 		color: inherit !important;
 		text-decoration: inherit !important;
 	}
-	
-	&.full {
-		width: 100%;
-	}
-	
-	&.half {
-		width: 48%;
-    	margin-right: 4%;
-		
-		&:last-child {
-			margin-right: 0;
-		}
-	}
 
 } // end .button
 
 .primary-btn, a.primary-btn {
 	@extend %btn;
-	background-color: $orange;
-	border-color: $orange;
+	background-color: none;
+	border-color: $white;
 	color: $white;
 
 	&:hover,
 	&:focus {
 		background-color: $white;
-		color: $orange;
-	}
-	
-	&.alt {
-		background-color: $meta-gray;
-		border-color: $meta-gray;
-		
-		&:hover,
-		&:focus {
-			background-color: $white;
-			color: $meta-gray;
-		}
+		color: $gray;
 	}
 }
 

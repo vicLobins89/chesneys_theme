@@ -607,11 +607,13 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   color: #fff;
   border: 2px solid #fff;
   background-color: transparent;
-  border-radius: 6px;
+  border-radius: 0;
+  font-family: 'Univers';
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: normal;
+  text-transform: uppercase;
   line-height: 1;
-  padding: 0.9rem 4rem;
+  padding: 0.8rem 2rem;
   margin: 1rem 0;
   cursor: pointer;
   text-align: center;
@@ -619,9 +621,6 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   outline: none;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  @media only screen and (max-width: 767px) {
-    .primary-btn, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, a.secondary-btn {
-      padding: 1rem; } }
   .primary-btn:hover, a.comment-reply-link:hover, #submit:hover, .secondary-btn:hover, .primary-btn:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus {
     color: #fff;
     text-decoration: none; }
@@ -630,27 +629,14 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .primary-btn a, a.comment-reply-link a, #submit a, .secondary-btn a {
     color: inherit !important;
     text-decoration: inherit !important; }
-  .full.primary-btn, a.full.comment-reply-link, .full#submit, .full.secondary-btn {
-    width: 100%; }
-  .half.primary-btn, a.half.comment-reply-link, .half#submit, .half.secondary-btn {
-    width: 48%;
-    margin-right: 4%; }
-    .half.primary-btn:last-child, a.half.comment-reply-link:last-child, .half#submit:last-child, .half.secondary-btn:last-child {
-      margin-right: 0; }
 
 .primary-btn, a.comment-reply-link, #submit, a.primary-btn, a.comment-reply-link, a#submit {
-  background-color: #ff8700;
-  border-color: #ff8700;
+  background-color: none;
+  border-color: #fff;
   color: #fff; }
   .primary-btn:hover, a.comment-reply-link:hover, #submit:hover, .primary-btn:focus, a.comment-reply-link:focus, #submit:focus, a.primary-btn:hover, a.comment-reply-link:hover, a#submit:hover, a.primary-btn:focus, a.comment-reply-link:focus, a#submit:focus {
     background-color: #fff;
-    color: #ff8700; }
-  .primary-btn.alt, a.alt.comment-reply-link, .alt#submit, a.primary-btn.alt, a.alt.comment-reply-link, a.alt#submit {
-    background-color: #808080;
-    border-color: #808080; }
-    .primary-btn.alt:hover, a.alt.comment-reply-link:hover, .alt#submit:hover, .primary-btn.alt:focus, a.alt.comment-reply-link:focus, .alt#submit:focus, a.primary-btn.alt:hover, a.alt.comment-reply-link:hover, a.alt#submit:hover, a.primary-btn.alt:focus, a.alt.comment-reply-link:focus, a.alt#submit:focus {
-      background-color: #fff;
-      color: #808080; }
+    color: #53575a; }
 
 .secondary-btn, a.secondary-btn {
   background-color: #fff;
