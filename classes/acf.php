@@ -23,55 +23,52 @@ class CustomACF {
 	public function render_blog($post_cat = null) {
 		$post_num = get_sub_field('post_count');
 		$all_cats = get_sub_field('all_categories');
-		$post_category = ($all_cats) ? '0' : get_sub_field('choose_category');
+		$post_category = ($all_cats) ? 'all' : get_sub_field('choose_category');
 		
-		if( $post_category || $post_cat ) {
-			global $post;
-			
-			if( $post_category == '0' ) {
-				$args = array(
-					'post_type' => 'post',
-					'post_status' => 'publish',
-					'posts_per_page' => $post_num,
-				);
-			} elseif( !isset($post_cat) || is_null($post_cat) ) {
-				$args = array(
-					'post_type' => 'post',
-					'post_status' => 'publish',
-					'cat' => $post_category,
-					'posts_per_page' => $post_num,
-				);
-			}else {
-				$args = array(
-					'post_type' => 'post',
-					'post_status' => 'publish',
-					'category_name' => $post_cat,
-					'posts_per_page' => 1,
-				);
-			}
-			$arr_posts = new WP_Query( $args );
-
-			if ( $arr_posts->have_posts() ) :
-				while ( $arr_posts->have_posts() ) :
-					$arr_posts->the_post();
-					?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<?php
-						if ( has_post_thumbnail() ) :
-							the_post_thumbnail();
-						endif;
-						?>
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<div class="entry-content">
-							<?php the_excerpt(); ?>
-							<a href="<?php the_permalink(); ?>">Read More</a>
-						</div>
-					</article>
-					<?php
-				endwhile;
-			endif;
-			wp_reset_postdata();
+		global $post;
+		if( $post_category == 'all' ) {
+			$args = array(
+				'post_type' => 'post',
+				'post_status' => 'publish',
+				'posts_per_page' => $post_num,
+			);
+		} elseif( isset($post_cat) || !is_null($post_cat) ) {
+			$args = array(
+				'post_type' => 'post',
+				'post_status' => 'publish',
+				'category_name' => $post_cat,
+				'posts_per_page' => 1,
+			);
+		} else {
+			$args = array(
+				'post_type' => 'post',
+				'post_status' => 'publish',
+				'cat' => $post_category,
+				'posts_per_page' => $post_num,
+			);
 		}
+		$arr_posts = new WP_Query( $args );
+
+		if ( $arr_posts->have_posts() ) :
+			while ( $arr_posts->have_posts() ) :
+				$arr_posts->the_post();
+				?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<?php
+					if ( has_post_thumbnail() ) :
+						the_post_thumbnail();
+					endif;
+					?>
+					<h1 class="entry-title"><?php the_title(); ?></h1>
+					<div class="entry-content">
+						<?php the_excerpt(); ?>
+						<a href="<?php the_permalink(); ?>">Read More</a>
+					</div>
+				</article>
+				<?php
+			endwhile;
+		endif;
+		wp_reset_postdata();
 	}
 	
 	public function render_portfolio($folio_cat = null) {
