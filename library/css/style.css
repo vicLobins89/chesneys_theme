@@ -635,7 +635,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   background-color: none;
   border-color: #fff;
   color: #fff; }
-  .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, a.comment-reply-link:hover, #submit:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, a.comment-reply-link:focus, #submit:focus, a.primary-btn:hover, .image-link a.wp-caption-text:hover, a.comment-reply-link:hover, a#submit:hover, a.primary-btn:focus, .image-link a.wp-caption-text:focus, a.comment-reply-link:focus, a#submit:focus {
+  .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, a.comment-reply-link:hover, #submit:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, a.comment-reply-link:focus, #submit:focus, .image-link:hover .primary-btn, .image-link:hover .image-link + p, .image-link:hover .wp-caption-text, .image-link:hover a.comment-reply-link, .image-link:hover #submit, a.primary-btn:hover, .image-link a.wp-caption-text:hover, a.comment-reply-link:hover, a#submit:hover, a.primary-btn:focus, .image-link a.wp-caption-text:focus, a.comment-reply-link:focus, a#submit:focus, .image-link:hover a.primary-btn, .image-link:hover a.wp-caption-text, .image-link:hover a.comment-reply-link, .image-link:hover a#submit {
     background-color: #fff;
     color: #53575a; }
 

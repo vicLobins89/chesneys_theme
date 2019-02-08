@@ -64,7 +64,8 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 	color: $white;
 
 	&:hover,
-	&:focus {
+	&:focus,
+	.image-link:hover & {
 		background-color: $white;
 		color: $gray;
 	}
