@@ -1191,6 +1191,22 @@ NAVIGATION STYLES
     .primary-nav > li > ul.children {
       width: 375px;
       width: 22vw; }
+      .primary-nav > li > ul.sub-menu:before, .primary-nav > li > ul.sub-menu:after,
+      .primary-nav > li > ul.children:before,
+      .primary-nav > li > ul.children:after {
+        content: '';
+        position: absolute;
+        background: #cbc3bb;
+        height: 100%;
+        top: 0; }
+      .primary-nav > li > ul.sub-menu:before,
+      .primary-nav > li > ul.children:before {
+        left: 0;
+        width: 100%; }
+      .primary-nav > li > ul.sub-menu:after,
+      .primary-nav > li > ul.children:after {
+        right: 0;
+        width: 100%; }
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {
       position: absolute;
@@ -1239,8 +1255,8 @@ NAVIGATION STYLES
         .primary-nav > li ul.children > li ul.children ul.sub-menu,
         .primary-nav > li ul.children > li ul.children ul.children {
           clear: both;
-          width: 478px;
-          width: 28vw;
+          width: 546px;
+          width: 32vw;
           font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
           text-transform: none;
           background: #f5f3f1; }
@@ -1254,7 +1270,9 @@ NAVIGATION STYLES
           .primary-nav > li ul.children > li ul.children ul.children li {
             float: left;
             display: inline;
-            width: 50%; }
+            width: 45%;
+            font-size: 1.2rem;
+            padding: .78rem 1.7rem; }
       .primary-nav > li ul.sub-menu > li:hover > ul.sub-menu,
       .primary-nav > li ul.sub-menu > li:hover > ul.children, .primary-nav > li ul.sub-menu > li:focus > ul.sub-menu,
       .primary-nav > li ul.sub-menu > li:focus > ul.children,

@@ -532,6 +532,24 @@ NAVIGATION STYLES
 		> ul.children {
 			width: 375px;
     		width: 22vw;
+			
+			&:before, &:after {
+				content: '';
+				position: absolute;
+				background: $brown;
+				height: 100%;
+				top: 0;
+			}
+			
+			&:before {
+				left: 0;
+				width: 100%;
+			}
+			
+			&:after {
+				right: 0;
+				width: 100%;
+			}
 		}
 
 		ul.sub-menu,
@@ -582,8 +600,8 @@ NAVIGATION STYLES
 					ul.sub-menu,
 					ul.children {
 						clear: both;
-						width: 478px;
-						width: 28vw;
+						width: 546px;
+						width: 32vw;
 						font-family: $serif;
 						text-transform: none;
 						background: $light-brown;
@@ -591,7 +609,9 @@ NAVIGATION STYLES
 						li {
 							float:left;
  							display:inline;
-							width: 50%;
+							width: 45%;
+							font-size: 1.2rem;
+							padding: .78rem 1.7rem;
 						}
 					}
 				}
