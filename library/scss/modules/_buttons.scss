@@ -146,6 +146,17 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 		b, strong {
 			font-family: $sans-serif;
 			text-transform: uppercase;
+			font-weight: normal;
+			position: relative;
+			
+			&:after {
+				content: '';
+				left: 0;
+				bottom: -10px;
+				width: 3rem;
+				height: 1px;
+				background: $white;
+			}
 		}
 	}
 	
