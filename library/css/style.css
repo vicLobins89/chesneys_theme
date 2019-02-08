@@ -695,18 +695,13 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, black, black);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     opacity: .6;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-  .hover-link:hover, .hover-link:focus {
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-    .hover-link:hover:before, .hover-link:focus:before {
-      opacity: 1;
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out; }
+  .hover-link:hover:before, .hover-link:focus:before {
+    opacity: 1;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black); }
 
 .primary-link {
   background: url(../images/link-arrow.png) no-repeat center left;
