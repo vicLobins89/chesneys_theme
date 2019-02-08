@@ -546,6 +546,16 @@ NAVIGATION STYLES
 			}
 		}
 		
+		&:after {
+			content: '';
+			position: absolute;
+			background: none;
+			width: 100%;
+			height: 1rem;
+			bottom: -100%;
+			left: 0;
+		}
+		
 		> ul.sub-menu,
 		> ul.children {
 			width: 375px;
