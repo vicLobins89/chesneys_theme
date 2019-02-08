@@ -42,6 +42,8 @@ class CustomACF {
 				);
 			}
 			$arr_posts = new WP_Query( $args );
+			if ( is_wp_error( $arr_posts ) )
+				echo $arr_posts->get_error_message();
 
 			if ( $arr_posts->have_posts() ) :
 				while ( $arr_posts->have_posts() ) :
@@ -198,7 +200,10 @@ class CustomACF {
 	
     function page_rows() {
 		if( have_rows('rows') ) : while( have_rows('rows') ) : the_row();
-			
+			// Custom Content
+			if( have_rows('custom_content') ) : while( have_rows('custom_content') ) : the_row();
+				$this->render_content();
+			endwhile; endif; // Content
 		
 			// Modules
 			if( have_rows('module') ) : while( have_rows('module') ) : the_row();
@@ -214,10 +219,6 @@ class CustomACF {
 			if( have_rows('portfolio_feed') ) : while( have_rows('portfolio_feed') ) : the_row();
 				$this->render_portfolio();
 			endwhile; endif; // Case Studies
-		// Custom Content
-			if( have_rows('custom_content') ) : while( have_rows('custom_content') ) : the_row();
-				$this->render_content();
-			endwhile; endif; // Content
 		endwhile; endif; // Row
 	}
 }
