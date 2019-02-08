@@ -664,7 +664,8 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    margin: 0; }
 
 .primary-link {
   background: url(../images/link-arrow.png) no-repeat center left;
