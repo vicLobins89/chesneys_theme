@@ -1177,12 +1177,12 @@ NAVIGATION STYLES
       .primary-nav > li > a br {
         display: block; }
       .primary-nav > li > a:hover, .primary-nav > li > a:focus {
-        color: #ff8700; }
-    .primary-nav > li:hover > ul.sub-menu,
-    .primary-nav > li:hover > ul.children, .primary-nav > li:focus > ul.sub-menu,
-    .primary-nav > li:focus > ul.children {
-      opacity: 1;
-      visibility: visible; }
+        color: #766e63; }
+        .primary-nav > li > a:hover + ul.sub-menu,
+        .primary-nav > li > a:hover + ul.children, .primary-nav > li > a:focus + ul.sub-menu,
+        .primary-nav > li > a:focus + ul.children {
+          opacity: 1;
+          visibility: visible; }
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {
       position: absolute;
@@ -1195,8 +1195,8 @@ NAVIGATION STYLES
       text-align: left;
       font-size: 0;
       z-index: 8;
-      -webkit-transition: all 1s ease-out;
-      transition: all 1s ease-out;
+      -webkit-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-out;
       /* highlight sub-menu current page */ }
       .primary-nav > li ul.sub-menu.active,
       .primary-nav > li ul.children.active {
@@ -1205,15 +1205,15 @@ NAVIGATION STYLES
       .primary-nav > li ul.sub-menu li,
       .primary-nav > li ul.children li {
         vertical-align: middle;
-        display: inline-block;
+        display: block;
         padding: 0 1rem; }
-      .primary-nav > li ul.sub-menu > li:hover > ul.sub-menu,
-      .primary-nav > li ul.sub-menu > li:hover > ul.children, .primary-nav > li ul.sub-menu > li:focus > ul.sub-menu,
-      .primary-nav > li ul.sub-menu > li:focus > ul.children,
-      .primary-nav > li ul.children > li:hover > ul.sub-menu,
-      .primary-nav > li ul.children > li:hover > ul.children,
-      .primary-nav > li ul.children > li:focus > ul.sub-menu,
-      .primary-nav > li ul.children > li:focus > ul.children {
+      .primary-nav > li ul.sub-menu > li > a:hover + ul.sub-menu,
+      .primary-nav > li ul.sub-menu > li > a:hover + ul.children, .primary-nav > li ul.sub-menu > li > a:focus + ul.sub-menu,
+      .primary-nav > li ul.sub-menu > li > a:focus + ul.children,
+      .primary-nav > li ul.children > li > a:hover + ul.sub-menu,
+      .primary-nav > li ul.children > li > a:hover + ul.children,
+      .primary-nav > li ul.children > li > a:focus + ul.sub-menu,
+      .primary-nav > li ul.children > li > a:focus + ul.children {
         opacity: 1;
         visibility: visible; }
 

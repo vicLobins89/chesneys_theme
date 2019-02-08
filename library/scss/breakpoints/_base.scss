@@ -511,16 +511,13 @@ NAVIGATION STYLES
 			
 			&:hover,
 			&:focus {
-				color: $orange;
-			}
-		}
-		
-		&:hover,
-		&:focus {
-			> ul.sub-menu,
-			> ul.children {
-				opacity: 1;
-				visibility: visible
+				color: $brown;
+				
+				+ ul.sub-menu,
+				+ ul.children {
+					opacity: 1;
+					visibility: visible
+				}
 			}
 		}
 
@@ -536,7 +533,7 @@ NAVIGATION STYLES
 			text-align: left;
 			font-size: 0;
 			z-index: 8;
-			@include transition (all 1s ease-out);
+			@include transition (all 0.4s ease-out);
 			
 			&.active {
 				opacity: 1;
@@ -545,7 +542,7 @@ NAVIGATION STYLES
 
 			li {
 				vertical-align: middle;
-				display: inline-block;
+				display: block;
 				padding: 0 1rem;
 
 				a {
@@ -557,17 +554,14 @@ NAVIGATION STYLES
 			}
 			
 			> li {
-				ul.sub-menu,
-				ul.children {
-					
-				}
-				
-				&:hover,
-				&:focus {
-					> ul.sub-menu,
-					> ul.children {
-						opacity: 1;
-						visibility: visible
+				> a {
+					&:hover,
+					&:focus {
+						+ ul.sub-menu,
+						+ ul.children {
+							opacity: 1;
+							visibility: visible
+						}
 					}
 				}
 			}
