@@ -1187,11 +1187,16 @@ NAVIGATION STYLES
     .primary-nav > li:focus > ul.children {
       opacity: 1;
       visibility: visible; }
+    .primary-nav > li > ul.sub-menu,
+    .primary-nav > li > ul.children {
+      width: 375px;
+      width: 22vw; }
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {
       position: absolute;
       top: 3.1rem;
       left: 0;
+      height: 16rem;
       overflow: visible;
       background: #766e63;
       opacity: 0;
@@ -1203,10 +1208,6 @@ NAVIGATION STYLES
       -webkit-transition: all 0.4s ease-out;
       transition: all 0.4s ease-out;
       /* highlight sub-menu current page */ }
-      .primary-nav > li ul.sub-menu.active,
-      .primary-nav > li ul.children.active {
-        opacity: 1;
-        visibility: visible; }
       .primary-nav > li ul.sub-menu li,
       .primary-nav > li ul.children li {
         vertical-align: middle;
@@ -1216,6 +1217,12 @@ NAVIGATION STYLES
         .primary-nav > li ul.sub-menu li a,
         .primary-nav > li ul.children li a {
           color: inherit; }
+      .primary-nav > li ul.sub-menu > li > ul.sub-menu,
+      .primary-nav > li ul.sub-menu > li > ul.children,
+      .primary-nav > li ul.children > li > ul.sub-menu,
+      .primary-nav > li ul.children > li > ul.children {
+        width: 290px;
+        width: 17vw; }
       .primary-nav > li ul.sub-menu > li ul.sub-menu,
       .primary-nav > li ul.sub-menu > li ul.children,
       .primary-nav > li ul.children > li ul.sub-menu,
@@ -1230,7 +1237,10 @@ NAVIGATION STYLES
         .primary-nav > li ul.children > li ul.sub-menu ul.children,
         .primary-nav > li ul.children > li ul.children ul.sub-menu,
         .primary-nav > li ul.children > li ul.children ul.children {
-          clear: both; }
+          clear: both;
+          width: 478px;
+          width: 28vw;
+          font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; }
           .primary-nav > li ul.sub-menu > li ul.sub-menu ul.sub-menu li,
           .primary-nav > li ul.sub-menu > li ul.sub-menu ul.children li,
           .primary-nav > li ul.sub-menu > li ul.children ul.sub-menu li,

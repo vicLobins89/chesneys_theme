@@ -527,12 +527,19 @@ NAVIGATION STYLES
 				visibility: visible
 			}
 		}
+		
+		> ul.sub-menu,
+		> ul.children {
+			width: 375px;
+    		width: 22vw;
+		}
 
 		ul.sub-menu,
 		ul.children {
 			position: absolute;
 			top: 3.1rem;
 			left: 0;
+			height: 16rem;
 			overflow: visible;
 			background: $brown;
 			opacity: 0;
@@ -542,11 +549,6 @@ NAVIGATION STYLES
 			margin: 0;
 			z-index: 8;
 			@include transition (all 0.4s ease-out);
-			
-			&.active {
-				opacity: 1;
-				visibility: visible;
-			}
 
 			li {
 				vertical-align: middle;
@@ -565,6 +567,12 @@ NAVIGATION STYLES
 			}
 			
 			> li {
+				> ul.sub-menu,
+				> ul.children {
+					width: 290px;
+					width: 17vw;
+				}
+				
 				ul.sub-menu,
 				ul.children {
 					top: 0;
@@ -573,6 +581,9 @@ NAVIGATION STYLES
 					ul.sub-menu,
 					ul.children {
 						clear: both;
+						width: 478px;
+						width: 28vw;
+						font-family: $serif;
 						
 						li {
 							float:left;
