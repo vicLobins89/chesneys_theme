@@ -494,10 +494,14 @@ NAVIGATION STYLES
 	text-align: center;
 	font-family: $sans-serif;
 	text-transform: uppercase;
+	font-size: .9rem;
+	margin: 0;
 
 	> li {
+		position: relative;
 		border: none;
 		padding: 0;
+		margin: 0 1.5rem;
 		vertical-align: top;
 		color: $brown;
 		
@@ -527,14 +531,15 @@ NAVIGATION STYLES
 		ul.sub-menu,
 		ul.children {
 			position: absolute;
+			top: 3.1rem;
+			left: 0;
 			overflow: visible;
 			background: $brown;
 			opacity: 0;
 			visibility: hidden;
+			text-align-last: auto;
+			padding: 1rem 0;
 			margin: 0;
-			padding: 1.4rem 0 1rem 2.5rem;
-			text-align: left;
-			font-size: 0;
 			z-index: 8;
 			@include transition (all 0.4s ease-out);
 			
@@ -546,7 +551,8 @@ NAVIGATION STYLES
 			li {
 				vertical-align: middle;
 				display: block;
-				padding: 0 1rem;
+				padding: 1rem 1.5rem;
+				color: $white;
 
 				a {
 					&:hover,
