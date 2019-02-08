@@ -42,8 +42,6 @@ class CustomACF {
 				);
 			}
 			$arr_posts = new WP_Query( $args );
-			if ( is_wp_error( $arr_posts ) )
-				echo $arr_posts->get_error_message();
 
 			if ( $arr_posts->have_posts() ) :
 				while ( $arr_posts->have_posts() ) :
@@ -212,7 +210,7 @@ class CustomACF {
 		
 			// Blog
 			if( have_rows('blog_feed') ) : while( have_rows('blog_feed') ) : the_row();
-				$this->render_blog();
+//				$this->render_blog();
 			endwhile; endif; // Blog
 		
 			// Case Studies
