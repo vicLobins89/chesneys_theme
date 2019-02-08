@@ -1178,16 +1178,16 @@ NAVIGATION STYLES
         display: block; }
       .primary-nav > li > a:hover, .primary-nav > li > a:focus {
         color: #ff8700; }
-    .primary-nav > li:hover ul.sub-menu,
-    .primary-nav > li:hover ul.children, .primary-nav > li:focus ul.sub-menu,
-    .primary-nav > li:focus ul.children {
+    .primary-nav > li:hover > ul.sub-menu,
+    .primary-nav > li:hover > ul.children, .primary-nav > li:focus > ul.sub-menu,
+    .primary-nav > li:focus > ul.children {
       opacity: 1;
       visibility: visible; }
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {
       position: absolute;
       overflow: visible;
-      background: rgba(31, 32, 67, 0.9);
+      background: #766e63;
       opacity: 0;
       visibility: hidden;
       margin: 0;
@@ -1207,6 +1207,15 @@ NAVIGATION STYLES
         vertical-align: middle;
         display: inline-block;
         padding: 0 1rem; }
+      .primary-nav > li ul.sub-menu > li:hover > ul.sub-menu,
+      .primary-nav > li ul.sub-menu > li:hover > ul.children, .primary-nav > li ul.sub-menu > li:focus > ul.sub-menu,
+      .primary-nav > li ul.sub-menu > li:focus > ul.children,
+      .primary-nav > li ul.children > li:hover > ul.sub-menu,
+      .primary-nav > li ul.children > li:hover > ul.children,
+      .primary-nav > li ul.children > li:focus > ul.sub-menu,
+      .primary-nav > li ul.children > li:focus > ul.children {
+        opacity: 1;
+        visibility: visible; }
 
 .socket {
   background: #53575a;

@@ -517,8 +517,8 @@ NAVIGATION STYLES
 		
 		&:hover,
 		&:focus {
-			ul.sub-menu,
-			ul.children {
+			> ul.sub-menu,
+			> ul.children {
 				opacity: 1;
 				visibility: visible
 			}
@@ -528,7 +528,7 @@ NAVIGATION STYLES
 		ul.children {
 			position: absolute;
 			overflow: visible;
-			background: rgba($blue, .9);
+			background: $brown;
 			opacity: 0;
 			visibility: hidden;
 			margin: 0;
@@ -554,6 +554,22 @@ NAVIGATION STYLES
 					}
 				}
 
+			}
+			
+			> li {
+				ul.sub-menu,
+				ul.children {
+					
+				}
+				
+				&:hover,
+				&:focus {
+					> ul.sub-menu,
+					> ul.children {
+						opacity: 1;
+						visibility: visible
+					}
+				}
 			}
 			
 			/* highlight sub-menu current page */
