@@ -173,7 +173,7 @@ function create_csv_string($csv_data, $ship_type) {
 	// Open temp file pointer
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
 	
-	fputcsv($fp, array_keys($csv_data));
+	fputcsv($fp, array_keys($csv_data[0]));
 	
 //	fputcsv($fp, array('Shipping Type:',NULL,NULL));
 //	fputcsv($fp, array($ship_type,NULL,NULL));
