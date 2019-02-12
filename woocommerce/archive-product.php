@@ -119,6 +119,7 @@ if ( woocommerce_product_loop() ) {
 			if( get_cat_ID($category->slug) ) {
 				$acfClass->render_blog($category->slug);
 				$acfClass->render_portfolio($category->slug);
+				return;
 			}
 		}
 	}
