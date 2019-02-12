@@ -176,16 +176,6 @@ function create_csv_string($csv_data, $ship_type) {
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
 	
 	fputcsv($fp, array_keys($csv_data[0]));
-	
-//	fputcsv($fp, array('Shipping Type:',NULL,NULL));
-//	fputcsv($fp, array($ship_type,NULL,NULL));
-//	 
-//	fputcsv($fp, array(NULL,NULL,NULL));
-//	fputcsv($fp, array('Items:',NULL,NULL));
-//	
-//	fputcsv($fp, array(
-//		'Product Name','SKU','Price','QTY'
-//	));
 	foreach($csv_data as $key => $value) {
 		fputcsv($fp, $value);
 	}
