@@ -88,10 +88,11 @@ if ( woocommerce_product_loop() ) {
 	
 	// Modules
 	$modules = get_field('module', $term);
-	foreach($modules as $module) {
-		print_r($module);
-		$acfClass->render_modules($module['module_block']);
-	}
+	print_r($modules);
+//	foreach($modules as $module) {
+//		print_r($module);
+//		$acfClass->render_modules($module['module_block']);
+//	}
 	
 	// Blog / Case Study Posts
 	// Getting URL
