@@ -114,17 +114,13 @@ if ( woocommerce_product_loop() ) {
 		$acfClass->render_portfolio($prCatName);
 	} else {
 		$parentCats = get_ancestors($prCatId, 'product_cat');
-		$first = true;
 		foreach($parentCats as $parentCat){
 			$category = get_term_by('id', $parentCat, 'product_cat');
 			if( get_cat_ID($category->slug) ) {
-				$first = true;
 				$acfClass->render_blog($category->slug);
 				$acfClass->render_portfolio($category->slug);
-			} else {
-				$first = false;
+				break;
 			}
-			if(!$first) break;
 		}
 	}
 } else {

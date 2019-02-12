@@ -1,0 +1,370 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: IE Stylesheet
+
+Import all the styles the standard stylesheet gets, only
+without the media queries.
+
+******************************************************************/
+/******************************************************************
+IMPORTS & DEPENDENCIES
+All the BASE styles are called already since IE can
+read those. Below we import the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Variables
+
+******************************************************************/
+/*********************
+COLORS
+Choosing your colors http://0to255.com/
+*********************/
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Typography
+
+******************************************************************/
+/*********************
+FONTFACE
+*********************/
+@import url(../fonts/stylesheet.css);
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Mixins Stylesheet
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/* @include transition(all 0.2s ease-in-out); */
+/*********************
+CSS3 GRADIENTS
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/*********************
+VENDOR
+*********************/
+/*
+.selector {
+  @include prefix(transform, rotate(45deg), webkit ms);
+}
+*/
+/*********************
+CSS ANIMATIONS
+*********************/
+/*
+@include keyframes(move-the-object) {
+  0%   { left: 100px; }
+  100% { left: 200px; }
+}
+*/
+/*********************
+BOX SHADOW
+*********************/
+/*********************
+PLACEHOLDER
+*********************/
+/*
+.foo {
+  @include placeholder {
+    color: green;
+  }
+}
+
+@include placeholder {
+  color: red;
+}
+*/
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: IE Grid Styles
+
+******************************************************************/
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: 481px and Up Stylesheet
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+html {
+  font-size: 13px; }
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* entry content */
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left; }
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right; }
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both; }
+
+/* end .entry-content */
+/*********************
+FOOTER STYLES
+*********************/
+/* end .footer-links */
+/*********************
+SLIDER STYLES
+*********************/
+div#n2-ss-2-align .nextend-thumbnail-default,
+div#n2-ss-2-align .nextend-thumbnail-inner,
+div#n2-ss-3-align .nextend-thumbnail-default,
+div#n2-ss-3-align .nextend-thumbnail-inner {
+  bottom: 1rem !important; }
+  div#n2-ss-2-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
+  div#n2-ss-2-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div,
+  div#n2-ss-3-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
+  div#n2-ss-3-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div {
+    height: 4rem !important; }
+
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+html {
+  font-size: 14px; }
+
+/*********************
+FONT STYLES
+*********************/
+p, .p {
+  font-size: 1.15em; }
+
+/*********************
+HEADER STYLES
+*********************/
+.header {
+  position: relative;
+  font-size: 0.8rem; }
+
+#inner-header {
+  position: relative; }
+
+.logo {
+  top: 0;
+  left: 0;
+  width: 16rem; }
+
+/*********************
+NAVIGATION STYLES
+*********************/
+.menu-button {
+  display: none; }
+
+.nav .menu-item {
+  display: inline-block; }
+  .nav .menu-item a {
+    text-decoration: none; }
+
+.search-box {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1em; }
+  .search-box #s {
+    background: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    outline: none;
+    padding: 0;
+    width: 190px;
+    font-size: 0.675rem; }
+    .search-box #s::-webkit-input-placeholder {
+      color: #fff; }
+    .search-box #s:-moz-placeholder {
+      color: #fff; }
+    .search-box #s::-moz-placeholder {
+      color: #fff; }
+    .search-box #s:-ms-input-placeholder {
+      color: #fff; }
+  .search-box button {
+    top: 1px;
+    left: -2px;
+    position: relative;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    color: #fff; }
+
+.mobile-links {
+  display: none !important; }
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+.featured-image {
+  width: 100%;
+  margin-left: auto; }
+
+.page-title {
+  font-size: 1rem; }
+
+.entry-content {
+  padding: 3rem;
+  font-size: 1rem; }
+  .entry-content ul.col-2 {
+    padding: 0; }
+    .entry-content ul.col-2 li {
+      width: 48%;
+      display: inline-block; }
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.wrap > div {
+  width: 760px; }
+
+.flex {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .flex .flex-panel {
+    width: 33.333%; }
+
+.gallery.gallery-columns-2 .gallery-item {
+  width: 50%; }
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.sidebar {
+  margin-top: 2.2em; }
+
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em; }
+
+.widget {
+  padding: 0 10px;
+  margin: 2.2em 0; }
+  .widget ul li {
+    margin-bottom: 0.75em; }
+    .widget ul li ul {
+      margin-top: 0.75em;
+      padding-left: 1em; }
+
+/*********************
+FOOTER STYLES
+*********************/
+.footer {
+  padding: 2.5rem 4rem; }
+
+.footer-links {
+  float: right;
+  margin: 0; }
+  .footer-links ul li {
+    margin: 0 10px;
+    font-size: 1rem; }
+
+.copyright {
+  text-align: left;
+  font-size: 1rem; }
+
+/*********************
+CALENDAR
+*********************/
+.entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar {
+  width: calc(50% - 10px);
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px; }
+  .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-next, .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-prev {
+    top: 50%; }
+  .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-prev {
+    left: -3rem; }
+  .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-next {
+    right: -3rem; }
+.entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-legend {
+  transform: scale(1.2);
+  transform-origin: left; }
+
+/*********************
+SLIDER STYLES
+*********************/
+div#n2-ss-2-align .nextend-thumbnail-default,
+div#n2-ss-2-align .nextend-thumbnail-inner,
+div#n2-ss-3-align .nextend-thumbnail-default,
+div#n2-ss-3-align .nextend-thumbnail-inner {
+  bottom: 1rem !important; }
+  div#n2-ss-2-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
+  div#n2-ss-2-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div,
+  div#n2-ss-3-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
+  div#n2-ss-3-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div {
+    height: 5rem !important; }
+
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Desktop Stylsheet
+
+******************************************************************/
+html {
+  font-size: 16px; }
+
+.wrap > div {
+  width: 930px; }
+
+.footer-links ul li {
+  margin: 0 2rem; }
+
+/******************************************************************
+ADDITIONAL IE FIXES
+For more info on using Modernizr classes:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example:
+
+.no-textshadow .class { ... }
+
+Can also target specific versions by using the classes applied to
+the html element. Check header.php file to see what they are:
+
+.lt-ie8 .class { ... }
+
+*/
