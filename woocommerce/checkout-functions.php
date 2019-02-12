@@ -101,6 +101,9 @@ function wdm_send_order_to_ext( $order_id ){
 	);
 	
 	$apiData = array(
+		'half_api_key' => '',
+		'message_timestamp' => '',
+		'security_hash' => time(),
 		'test' => true,
 		'order' => array(
 			'client_ref' => $transaction_key,
