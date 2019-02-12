@@ -87,14 +87,9 @@ if ( woocommerce_product_loop() ) {
 	$term = get_queried_object();
 	
 	// Modules
-	$rows = get_field('rows', $term);
-	if($rows) {
-		foreach($rows as $row) {
-			$modules = $row['module'];
-			foreach($modules as $module) {
-				$acfClass->render_modules($module['module_block']);
-			}
-		}
+	$modules = get_field('rows', $term);
+	foreach($modules as $module) {
+		$acfClass->render_modules($module['module_block']);
 	}
 	
 	// Blog / Case Study Posts
@@ -113,14 +108,14 @@ if ( woocommerce_product_loop() ) {
 		$acfClass->render_blog($prCatName);
 		$acfClass->render_portfolio($prCatName);
 	} else {
-//		$parentCats = get_ancestors($prCatId, 'product_cat');
-//		foreach($parentCats as $parentCat){
-//			$category = get_term_by('id', $parentCat, 'product_cat');
-//			if( get_cat_ID($category->slug) ) {
-//				$acfClass->render_blog($category->slug);
-//				$acfClass->render_portfolio($category->slug);
-//			}
-//		}
+		$parentCats = get_ancestors($prCatId, 'product_cat');
+		foreach($parentCats as $parentCat){
+			$category = get_term_by('id', $parentCat, 'product_cat');
+			if( get_cat_ID($category->slug) ) {
+				$acfClass->render_blog($category->slug);
+				$acfClass->render_portfolio($category->slug);
+			}
+		}
 	}
 } else {
 	/**
