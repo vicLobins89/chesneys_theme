@@ -159,7 +159,7 @@ function wdm_send_order_to_ext( $order_id ){
 }
 
 function send_api_call($data) {
-	$api_mode = 'sandbox';
+	$api_mode = 'live';
 	if($api_mode == 'sandbox') {
 		$endpoint = "https://enh641edaecg.x.pipedream.net";
 	} else {
