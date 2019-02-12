@@ -103,7 +103,7 @@ if ( woocommerce_product_loop() ) {
 	$r = explode('/', $r);
 	$r = array_filter($r);
 	$r = array_merge($r, array());
-	$code = $r[1];
+	$code = ( !empty($r[1]) ) ? $r[1] : 'fireplaces';
 	
 	// Getting Category Name
 	$prCatId = ( !empty($term->term_id) ) ? $term->term_id : 15;
@@ -113,14 +113,14 @@ if ( woocommerce_product_loop() ) {
 		$acfClass->render_blog($prCatName);
 		$acfClass->render_portfolio($prCatName);
 	} else {
-		$parentCats = get_ancestors($prCatId, 'product_cat');
-		foreach($parentCats as $parentCat){
-			$category = get_term_by('id', $parentCat, 'product_cat');
-			if( get_cat_ID($category->slug) ) {
-				$acfClass->render_blog($category->slug);
-				$acfClass->render_portfolio($category->slug);
-			}
-		}
+//		$parentCats = get_ancestors($prCatId, 'product_cat');
+//		foreach($parentCats as $parentCat){
+//			$category = get_term_by('id', $parentCat, 'product_cat');
+//			if( get_cat_ID($category->slug) ) {
+//				$acfClass->render_blog($category->slug);
+//				$acfClass->render_portfolio($category->slug);
+//			}
+//		}
 	}
 } else {
 	/**
