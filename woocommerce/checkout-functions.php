@@ -104,6 +104,7 @@ function wdm_send_order_to_ext( $order_id ){
 	//API Details
 	$api_key = 'a83fb1720d8382b90fad6d00aee2f4ad';
 	$message_timestamp = time();
+	$order_date = $order->order_date;
 	$apiData = array(
 		'half_api_key' => substr($api_key, 0, 16),
 		'message_timestamp' => $message_timestamp,
@@ -111,7 +112,7 @@ function wdm_send_order_to_ext( $order_id ){
 		'test' => true,
 		'order' => array(
 			'client_ref' => $transaction_key,
-			'date_placed'=> date('c', $order->order_date ),
+			'date_placed'=> date('c', $order_date ),
 			'ShippingContact' => array(
 				'name' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
 				'email' => $email,
