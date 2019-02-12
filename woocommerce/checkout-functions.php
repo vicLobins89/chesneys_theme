@@ -104,7 +104,6 @@ function wdm_send_order_to_ext( $order_id ){
 	//API Details
 	$api_key = 'a83fb1720d8382b90fad6d00aee2f4ad';
 	$message_timestamp = time();
-	$order_date = $order->order_date;
 	$apiData = array(
 		'half_api_key' => substr($api_key, 0, 16),
 		'message_timestamp' => $message_timestamp,
@@ -160,9 +159,9 @@ function wdm_send_order_to_ext( $order_id ){
 }
 
 function send_api_call($data) {
-	$api_mode = 'live';
+	$api_mode = 'sandbox';
 	if($api_mode == 'sandbox') {
-		$endpoint = "https://enum5s26ejk6a.x.pipedream.net/";
+		$endpoint = "https://enh641edaecg.x.pipedream.net";
 	} else {
 		$endpoint = "https://api.controlport.co.uk/api/1/"; 
 	}
