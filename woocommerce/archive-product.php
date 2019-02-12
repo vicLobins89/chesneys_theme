@@ -87,12 +87,15 @@ if ( woocommerce_product_loop() ) {
 	$term = get_queried_object();
 	
 	// Modules
-	$modules = get_field('module', $term);
-	print_r($modules);
-//	foreach($modules as $module) {
-//		print_r($module);
-//		$acfClass->render_modules($module['module_block']);
-//	}
+	$rows = get_field('rows', $term);
+	if($rows) {
+		foreach($rows as $row) {
+			$modules = $row['module'];
+			foreach($modules as $module) {
+				$acfClass->render_modules($module['module_block']);
+			}
+		}
+	}
 	
 	// Blog / Case Study Posts
 	// Getting URL
@@ -100,7 +103,7 @@ if ( woocommerce_product_loop() ) {
 	$r = explode('/', $r);
 	$r = array_filter($r);
 	$r = array_merge($r, array());
-	$code = ( !empty($r[1]) ) ? $r[1] : 'fireplaces';
+	$code = $r[1];
 	
 	// Getting Category Name
 	$prCatId = ( !empty($term->term_id) ) ? $term->term_id : 15;
