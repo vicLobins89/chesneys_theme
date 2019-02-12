@@ -54,62 +54,36 @@ function wdm_send_order_to_ext( $order_id ){
 	foreach( $items as $key => $item) {
 		$item_id = $item['product_id'];
 		$product = new WC_Product($item_id);
+		$service_type;
 		
 		foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
 			$shipping_name = $shipping_item_obj->get_name();
-
 			if( $shipping_name == 'Unpack and Position' ) {
-				
-				if( $product->get_shipping_class() == 'banbury' ) {
-					$csv_data[] = array(
-						'YourOrderRef' => $transaction_key,
-						'CustomerName' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
-						'CustomerAddressLine1' => $address['shipping_address_1'],
-						'CustomerAddressLine2' => $address['shipping_address_2'],
-						'CustomerCity' => $address['shipping_city'],
-						'CustomerCounty' => $address['shipping_state'],
-						'CustomerPostcode' => $address['shipping_postcode'],
-						'CustomerEmail' => $email,
-						'CustomerPhone' => $phone,
-						'ProductCode' => $product->get_sku(),
-						'Decription' => $item['name'],
-						'NoItems' => $item['qty'],
-						'Weight_KG' =>$product->get_weight(),
-						'DeliveryType' => 'Home',
-						'ServiceType' => 'Unpack and Position'
-					);
-				}
-				
-				send_csv_mail($csv_data, "Product Order ");
-
+				$service_type = 'Unpack and Position';
 			} elseif( $shipping_name == 'Deliver' ) {
-
-				if( $product->get_shipping_class() == 'banbury' ) {
-					$csv_data[] = array(
-						'YourOrderRef' => $transaction_key,
-						'CustomerName' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
-						'CustomerAddressLine1' => $address['shipping_address_1'],
-						'CustomerAddressLine2' => $address['shipping_address_2'],
-						'CustomerCity' => $address['shipping_city'],
-						'CustomerCounty' => $address['shipping_state'],
-						'CustomerPostcode' => $address['shipping_postcode'],
-						'CustomerEmail' => $email,
-						'CustomerPhone' => $phone,
-						'ProductCode' => $product->get_sku(),
-						'Decription' => $item['name'],
-						'NoItems' => $item['qty'],
-						'Weight_KG' =>$product->get_weight(),
-						'DeliveryType' => 'Home',
-						'ServiceType' => 'Deliver'
-					);
-				}
-				
-				send_csv_mail($csv_data, "Product Order ");
-
+				$service_type = 'Deliver';
 			}
 		}
 		
-		if ( $product->get_shipping_class() == 'northamptonshire' ) {
+		if( $product->get_shipping_class() == 'banbury' ) {
+			$csv_data[] = array(
+				'YourOrderRef' => $transaction_key,
+				'CustomerName' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
+				'CustomerAddressLine1' => $address['shipping_address_1'],
+				'CustomerAddressLine2' => $address['shipping_address_2'],
+				'CustomerCity' => $address['shipping_city'],
+				'CustomerCounty' => $address['shipping_state'],
+				'CustomerPostcode' => $address['shipping_postcode'],
+				'CustomerEmail' => $email,
+				'CustomerPhone' => $phone,
+				'ProductCode' => $product->get_sku(),
+				'Decription' => $item['name'],
+				'NoItems' => $item['qty'],
+				'Weight_KG' =>$product->get_weight(),
+				'DeliveryType' => 'Home',
+				'ServiceType' => $service_type
+			);
+		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
 			$api_items[] = array(
 				'client_ref' => $product->get_sku(),
 				'quantity' => $item['qty'],
@@ -207,7 +181,7 @@ function send_api_call($data) {
 	}
 }
 
-function create_csv_string($csv_data) {    
+function create_csv_string($csv_data, $ship_type) {    
 	// Open temp file pointer
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
 	
@@ -224,7 +198,7 @@ function create_csv_string($csv_data) {
 
 }
 
-function send_csv_mail($csv_data, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csv_data, $ship_type, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
 
@@ -239,7 +213,7 @@ function send_csv_mail($csv_data, $body, $to = 'vic@honey.co.uk',  $from = 'nore
 	);
 
 	// Make the attachment
-	$attachment = chunk_split(base64_encode(create_csv_string($csv_data))); 
+	$attachment = chunk_split(base64_encode(create_csv_string($csv_data, $ship_type))); 
 
 	// Make the body of the message
 	$body = "--$multipartSep\r\n"
