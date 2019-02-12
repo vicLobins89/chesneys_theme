@@ -1,7 +1,7 @@
 <?php
 
-// API
-/* after an order has been processed, we will use the  'woocommerce_thankyou' hook, to add our function, to send the data */
+// Order Complete Hook
+//add_action('woocommerce_payment_complete', 'wdm_send_order_to_ext');
 add_action('woocommerce_thankyou', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
 	// get order object and order details
@@ -97,7 +97,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$api_key = 'a83fb1720d8382b90fad6d00aee2f4ad';
 	$message_timestamp = time();
 	$api_data = array(
-		'half_api_key' => substr($api_key, 0, 16),
+		'half_api_key' => substr( $api_key, 0, 16 ),
 		'message_timestamp' => $message_timestamp,
 		'security_hash' => md5( $message_timestamp . $api_key ),
 		'test' => true,
@@ -134,21 +134,13 @@ function wdm_send_order_to_ext( $order_id ){
 		$shipping_name = $shipping_item_obj->get_name();
 		
 		if( $shipping_name == 'Standard Delivery' ) {
-			
 			send_api_call($api_data);
-			
 		} elseif( $shipping_name == 'Unpack and Position' ) {
-			
-			send_csv_mail($csv_data, $shipping_name, "Product Order ");
-			
+			send_csv_mail($csv_data, "Product Order ");
 		} elseif( $shipping_name == 'Deliver' ) {
-			
-			send_csv_mail($csv_data, $shipping_name, "Product Order ");
-			
+			send_csv_mail($csv_data, "Product Order ");
 		}
 	}
-	
-	print_r($csv_data);
 }
 
 function send_api_call($data) {
@@ -181,7 +173,7 @@ function send_api_call($data) {
 	}
 }
 
-function create_csv_string($csv_data, $ship_type) {    
+function create_csv_string($csv_data) {    
 	// Open temp file pointer
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
 	
@@ -198,7 +190,7 @@ function create_csv_string($csv_data, $ship_type) {
 
 }
 
-function send_csv_mail($csv_data, $ship_type, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csv_data, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
 
@@ -213,7 +205,7 @@ function send_csv_mail($csv_data, $ship_type, $body, $to = 'vic@honey.co.uk',  $
 	);
 
 	// Make the attachment
-	$attachment = chunk_split(base64_encode(create_csv_string($csv_data, $ship_type))); 
+	$attachment = chunk_split(base64_encode(create_csv_string($csv_data))); 
 
 	// Make the body of the message
 	$body = "--$multipartSep\r\n"
