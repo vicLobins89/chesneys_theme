@@ -87,7 +87,7 @@ if ( woocommerce_product_loop() ) {
 	$term = get_queried_object();
 	
 	// Modules
-	$modules = get_field('rows', $term);
+	$modules = get_field('module', $term);
 	foreach($modules as $module) {
 		$acfClass->render_modules($module['module_block']);
 	}
