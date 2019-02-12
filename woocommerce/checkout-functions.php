@@ -100,10 +100,14 @@ function wdm_send_order_to_ext( $order_id ){
 		'coupon_code' => implode( ",", $coupon )
 	);
 	
+	
+	//API Details
+	$api_key = 'a83fb1720d8382b90fad6d00aee2f4ad';
+	$message_timestamp = time();
 	$apiData = array(
-		'half_api_key' => '',
-		'message_timestamp' => '',
-		'security_hash' => time(),
+		'half_api_key' => substr($api_key, 0, 16),
+		'message_timestamp' => $message_timestamp,
+		'security_hash' => md5( $message_timestamp . $api_key ),
 		'test' => true,
 		'order' => array(
 			'client_ref' => $transaction_key,
@@ -156,8 +160,8 @@ function wdm_send_order_to_ext( $order_id ){
 
 function send_api_call($data) {
 	// set the username and password
-	$api_username = 'testuser';
-	$api_password = 'testpass';
+//	$api_username = 'testuser';
+//	$api_password = 'testpass';
 
 	// to test out the API, set $api_mode as ‘sandbox’
 	$api_mode = 'sandbox';
