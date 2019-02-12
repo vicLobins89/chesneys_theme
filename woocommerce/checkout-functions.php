@@ -159,18 +159,11 @@ function wdm_send_order_to_ext( $order_id ){
 }
 
 function send_api_call($data) {
-	// set the username and password
-//	$api_username = 'testuser';
-//	$api_password = 'testpass';
-
-	// to test out the API, set $api_mode as ‘sandbox’
-	$api_mode = 'sandbox';
+	$api_mode = 'live';
 	if($api_mode == 'sandbox') {
-		// sandbox URL example
 		$endpoint = "https://enum5s26ejk6a.x.pipedream.net/";
 	} else {
-		// production URL example
-		$endpoint = "https://api.controlport.co.uk/api/1/order"; 
+		$endpoint = "https://api.controlport.co.uk/api/1/"; 
 	}
 	
 	// JSON
