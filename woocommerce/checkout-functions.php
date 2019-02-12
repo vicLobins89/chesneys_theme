@@ -111,7 +111,7 @@ function wdm_send_order_to_ext( $order_id ){
 		'test' => true,
 		'order' => array(
 			'client_ref' => $transaction_key,
-			'date_placed'=> $date_placed,
+			'date_placed'=> date('c', $order->order_date ),
 			'ShippingContact' => array(
 				'name' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
 				'email' => $email,
