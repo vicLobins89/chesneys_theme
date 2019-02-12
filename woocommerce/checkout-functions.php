@@ -69,9 +69,9 @@ function wdm_send_order_to_ext( $order_id ){
 				'ProductCode' => $product->get_sku(),
 				'Decription' => $item['name'],
 				'NoItems' => $item['qty'],
-				'Weight' => $item['weight'],
+				'Weight' =>$product->get_weight(),
 				'DeliveryType' => 'Home',
-				'ServiceType' => $product->get_shipping_class()
+				'ServiceType' => $order->get_items('shipping')
 			);
 		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
 			$api_items[] = array(
@@ -137,6 +137,8 @@ function wdm_send_order_to_ext( $order_id ){
 			
 		}
 	}
+	
+	print_r($csv_data);
 }
 
 function send_api_call($data) {
