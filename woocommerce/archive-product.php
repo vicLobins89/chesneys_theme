@@ -103,7 +103,7 @@ if ( woocommerce_product_loop() ) {
 	$r = explode('/', $r);
 	$r = array_filter($r);
 	$r = array_merge($r, array());
-	$code = ( !empty($r[1]) ) ? $r[1] : 'fireplaces';
+	$code = $r[1];
 	
 	// Getting Category Name
 	$prCatId = ( !empty($term->term_id) ) ? $term->term_id : 15;
