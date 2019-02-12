@@ -169,12 +169,11 @@ function send_api_call($data) {
 	}
 }
 
-function create_csv_string($data, $ship_type) {    
+function create_csv_string($csv_data, $ship_type) {    
 	// Open temp file pointer
 	if (!$fp = fopen('php://temp', 'w+')) return FALSE;
 	
-	fputcsv($fp, array_keys($data));
-	fputcsv($fp, $data);
+	fputcsv($fp, array_keys($csv_data));
 	
 //	fputcsv($fp, array('Shipping Type:',NULL,NULL));
 //	fputcsv($fp, array($ship_type,NULL,NULL));
@@ -185,9 +184,9 @@ function create_csv_string($data, $ship_type) {
 //	fputcsv($fp, array(
 //		'Product Name','SKU','Price','QTY'
 //	));
-//	foreach($csv_items as $key => $value) {
-//		fputcsv($fp, $value);
-//	}
+	foreach($csv_data as $key => $value) {
+		fputcsv($fp, $value);
+	}
 
 	// Place stream pointer at beginning
 	rewind($fp);
