@@ -121,26 +121,13 @@ class CustomACF {
 				<p>Learn more about some of our most recently completed projects</p>
 			<?php while ( $arr_posts2->have_posts() ) :
 				$arr_posts2->the_post(); ?>
-				<article id="post-<?php the_ID(); ?>" class="folio-item folio-item-<?php echo $row; ?>">
-					<?php
-					if( $row == 1 ) : ?>
-						<div class="col-6">
-							<?php if( has_post_thumbnail() ) : the_post_thumbnail('full'); endif; ?>
-							<h1 class="entry-title"><?php the_title(); ?></h1>
-							<div class="entry-content">
-								<?php the_excerpt(); ?>
-								<a href="<?php the_permalink(); ?>">Read More</a>
-							</div>
-						</div>
-					<?php else : ?>
-						<div class="col-3">
-							<?php if( has_post_thumbnail() ) : the_post_thumbnail('full'); endif; ?>
-							<h1 class="entry-title"><?php the_title(); ?></h1>
-							<div class="entry-content">
-								<a href="<?php the_permalink(); ?>">Read More</a>
-							</div>
-						</div>
-					<?php endif; ?>
+				<article id="post-<?php the_ID(); ?>" class="folio-item folio-item-<?php echo $row . ' ' . ($row == 1) ? 'col-6' : 'col-3' ; ?>">
+					<?php if( has_post_thumbnail() ) : the_post_thumbnail('full'); endif; ?>
+					<h1 class="entry-title"><?php the_title(); ?></h1>
+					<div class="entry-content">
+						<?php ($row == 1) ? the_excerpt() : '' ; ?>
+						<a href="<?php the_permalink(); ?>">Read More</a>
+					</div>
 				</article>
 			<?php $row ++; endwhile; ?>
 			</div>
