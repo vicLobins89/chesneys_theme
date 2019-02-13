@@ -117,8 +117,8 @@ class CustomACF {
 		if ( $arr_posts2->have_posts() ) : $row = 1; ?>
 			<section class="row entry-content cf folio-module">
 			<div class="cf">
-				<h2>Portfolio</h2>
-				<p>Learn more about some of our most recently completed projects</p>
+				<h2 class="title">Portfolio</h2>
+				<p class="description">Learn more about some of our most recently completed projects</p>
 			<?php while ( $arr_posts2->have_posts() ) :
 				$arr_posts2->the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" class="folio-item folio-item-<?php echo $row; echo ($row == 1) ? ' col-6' : ' col-3' ; ?>">

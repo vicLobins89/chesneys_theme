@@ -315,7 +315,9 @@ LAYOUT & GRID STYLES
 	}
 	
 	.folio-module {
-		
+		.title, .description {
+			text-align: center;
+		}
 	}
 }
 

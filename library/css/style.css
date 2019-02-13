@@ -1079,6 +1079,8 @@ LAYOUT & GRID STYLES
     left: 0;
     top: 0;
     background: rgba(0, 0, 0, 0.7); }
+.row .folio-module .title, .row .folio-module .description {
+  text-align: center; }
 
 .flex {
   display: inline-block;
