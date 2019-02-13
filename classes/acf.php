@@ -58,7 +58,7 @@ class CustomACF {
 					$thumb_bg .= ') center/cover no-repeat"';
 				}
 				?>
-				<section id="post-<?php the_ID(); ?>" class="row entry-content full cf blog-module" <?php echo $thumb_bg; ?>>
+				<section id="post-<?php the_ID(); ?>" class="row entry-content cf blog-module" <?php echo $thumb_bg; ?>>
 					<div class="cf">
 						<h2>Blog Post</h2>
 						<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
