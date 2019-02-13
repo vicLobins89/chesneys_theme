@@ -26,9 +26,13 @@ jQuery(document).ready(function($) {
 		$(this).parents('.header').toggleClass('active');
 	});
 	
-	$('.primary-nav li').hover(function(){
-		$('.primary-nav li').not(this).removeClass('active');
+	$('.primary-nav > li').hover(function(){
+		$('.primary-nav > li').not(this).removeClass('active');
 		$(this).addClass('active');
+	});
+	
+	$('#content').hover(function(){
+		$('.primary-nav > li').removeClass('active');
 	});
 	
 	function menuResize(){
