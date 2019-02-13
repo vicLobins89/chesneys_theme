@@ -122,19 +122,23 @@ class CustomACF {
 			<?php while ( $arr_posts2->have_posts() ) :
 				$arr_posts2->the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" class="folio-item folio-item-<?php echo $row; echo ($row == 1) ? ' col-6' : ' col-3' ; ?>">
-					<?php if( has_post_thumbnail() ) {
+					<?php
+					if( has_post_thumbnail() ) {
 						echo '<a href="'.the_permalink().'">';
 						get_the_post_thumbnail('full');
 						echo '</a>';
 					}
-					$terms = get_the_terms( $post->ID );
-					echo '<p class="category">';
-					foreach ( $terms as $term ) {
-						echo $term->name;
-					}
-					echo '</p>';
+					$terms = get_the_terms( $post->ID , 'portfolio_cat' );
+					 // Loop over each item since it's an array
+					 if ( $terms != null ){
+					 foreach( $terms as $term ) {
+					 // Print the name method from $term which is an OBJECT
+					 	print $term->slug ;
+					 // Get rid of the other data stored in the object, since it's not needed
+					 unset($term);
+					} }
 					?>
-					<h3 class="entry-title"><?php the_title(); ?></h3>
+					<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<?php ($row == 1) ? the_excerpt() : '' ; ?>
 				</article>
 			<?php $row ++; endwhile; ?>
