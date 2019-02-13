@@ -26,6 +26,10 @@ jQuery(document).ready(function($) {
 		$(this).parents('.header').toggleClass('active');
 	});
 	
+	$('.primary-nav li').hover(function(){
+		$('#nav_widget').addClass('active');
+	});
+	
 	function menuResize(){
 		var menuWidth = $('.primary-nav').outerWidth(),
 			menuHeight = $('.primary-nav').outerHeight(),
