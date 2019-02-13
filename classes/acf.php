@@ -124,7 +124,7 @@ class CustomACF {
 				<article id="post-<?php the_ID(); ?>" class="folio-item folio-item-<?php echo $row; echo ($row == 1) ? ' col-6' : ' col-3' ; ?>">
 					<?php
 					if( has_post_thumbnail() ) {
-						echo '<a href="'.the_permalink().'">';
+						echo '<a href="'.get_the_permalink().'">';
 						get_the_post_thumbnail('full');
 						echo '</a>';
 					}
