@@ -45,13 +45,13 @@
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 				
 				<nav role="navigation" class="socket" itemscope itemtype="http://schema.org/SiteNavigationElement">
-					<?php wp_nav_menu(array(
-							 'container' => false,
-							 'container_class' => 'menu cf',
-							 'menu' => __( 'Socket Menu', 'bonestheme' ),
-							 'menu_class' => 'nav socket-nav cf',
-							 'theme_location' => 'socket-nav'
-					)); ?>
+				<?php wp_nav_menu(array(
+					'container' => false,
+					'container_class' => 'menu cf',
+					'menu' => __( 'Socket Menu', 'bonestheme' ),
+					'menu_class' => 'nav socket-nav cf',
+					'theme_location' => 'socket-nav'
+				)); ?>
 				</nav>
 
 				<div id="inner-header" class="cf">
@@ -66,13 +66,16 @@
 					
 					<a class="menu-button" title="Main Menu"></a>
 					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
-    					         'container' => false,
-    					         'container_class' => 'menu cf',
-    					         'menu' => __( 'The Main Menu', 'bonestheme' ),
-    					         'menu_class' => 'nav primary-nav cf',
-    					         'theme_location' => 'main-nav'
-						)); ?>
+					<?php
+					wp_nav_menu(array(
+						'container' => false,
+						'container_class' => 'menu cf',
+						'menu' => __( 'The Main Menu', 'bonestheme' ),
+						'menu_class' => 'nav primary-nav cf',
+						'theme_location' => 'main-nav'
+					));
+					get_sidebar('nav_widget');
+					?>
 					</nav>
 
 				</div>
