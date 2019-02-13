@@ -124,20 +124,25 @@ class CustomACF {
 				<article id="post-<?php the_ID(); ?>" class="folio-item folio-item-<?php echo $row; echo ($row == 1) ? ' col-6' : ' col-3' ; ?>">
 					<?php
 					if( has_post_thumbnail() ) {
-						echo '<a href="'.get_the_permalink().'">';
+						echo '<a href="'.get_the_permalink().'" class="thumb">';
 						($row == 1) ? the_post_thumbnail('folio-portrait') : the_post_thumbnail('folio-thumb') ;
 						echo '</a>';
-					}
-					$terms = get_the_terms( $post->ID , 'portfolio_cat' );
-					if ( $terms != null ){
-						foreach( $terms as $term ) {
-							echo $term->name . ' ';
-							unset($term);
+					} ?>
+					
+					<div class="text">
+						<?php $terms = get_the_terms( $post->ID , 'portfolio_cat' );
+						if ( $terms != null ){
+							echo '<p class="categories">';
+							foreach( $terms as $term ) {
+								echo $term->name . ' ';
+								unset($term);
+							}
+							echo '</p>';
 						}
-					}
-					?>
-					<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<?php ($row == 1) ? the_excerpt() : '' ; ?>
+						?>
+						<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<?php ($row == 1) ? the_excerpt() : '' ; ?>
+					</div>
 				</article>
 			<?php $row ++; endwhile; ?>
 			</div>

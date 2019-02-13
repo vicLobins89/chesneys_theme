@@ -315,8 +315,33 @@ LAYOUT & GRID STYLES
 	}
 	
 	&.folio-module {
+		.col-3 {
+			
+			
+			.text {
+				padding: .75rem;
+			}
+		}
+		
 		.title, .description {
 			text-align: center;
+		}
+		
+		.thumb {
+			display: block;
+		}
+		
+		.categories {
+			text-transform: uppercase;
+			font-family: $sans-serif;
+		}
+		
+		.entry-title {
+			font-size: 1.35em;
+			
+			+ p {
+				
+			}
 		}
 	}
 }

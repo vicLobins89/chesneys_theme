@@ -1077,8 +1077,17 @@ LAYOUT & GRID STYLES
     left: 0;
     top: 0;
     background: rgba(0, 0, 0, 0.7); }
+.row.folio-module .col-3 .text {
+  padding: .75rem; }
 .row.folio-module .title, .row.folio-module .description {
   text-align: center; }
+.row.folio-module .thumb {
+  display: block; }
+.row.folio-module .categories {
+  text-transform: uppercase;
+  font-family: "Univers", Helvetica, Arial, sans-serif; }
+.row.folio-module .entry-title {
+  font-size: 1.35em; }
 
 .flex {
   display: inline-block;
