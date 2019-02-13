@@ -619,7 +619,7 @@ NAVIGATION STYLES
 	z-index: -1;
 	@include transition(all 0.5s ease-in-out);
 	
-	&:hover, &:focus {
+	&:hover, &:focus, &.active {
 		opacity: 1;
 		visibility: visible;
 	}

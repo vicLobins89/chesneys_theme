@@ -1320,7 +1320,7 @@ NAVIGATION STYLES
   z-index: -1;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
-  #nav_widget:hover, #nav_widget:focus {
+  #nav_widget:hover, #nav_widget:focus, #nav_widget.active {
     opacity: 1;
     visibility: visible; }
 

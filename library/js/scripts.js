@@ -29,10 +29,12 @@ jQuery(document).ready(function($) {
 	$('.primary-nav > li.menu-item-has-children').hover(function(){
 		$('.primary-nav > li').not(this).removeClass('active');
 		$(this).addClass('active');
+		$('#nav_widget').addClass('active');
 	});
 	
 	$('#content, #inner-header, .socket, .logo, .primary-nav > li:not(.menu-item-has-children)').hover(function(){
 		$('.primary-nav > li').removeClass('active');
+		$('#nav_widget').removeClass('active');
 	});
 	
 	function menuResize(){
