@@ -292,12 +292,14 @@ FOOTER STYLES
 *********************/
 .footer {
   padding: 2.5rem 4rem; }
-  .footer h4 {
+
+.footer-nav {
+  float: left; }
+  .footer-nav h4 {
     text-transform: uppercase;
     font-family: "Univers", Helvetica, Arial, sans-serif; }
 
 .footer-links {
-  float: left;
   margin: 0; }
   .footer-links .nav .menu-item {
     margin: 0 10px;

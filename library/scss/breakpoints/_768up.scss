@@ -200,6 +200,10 @@ FOOTER STYLES
 
 .footer {
 	padding: 2.5rem 4rem;
+}
+
+.footer-nav {
+	float: left;
 	
 	h4 {
 		text-transform: uppercase;
@@ -208,7 +212,6 @@ FOOTER STYLES
 }
 
 .footer-links {
-	float: left;
 	margin: 0;
 	
 	.nav {
