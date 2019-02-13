@@ -58,10 +58,10 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
 			$shipping_name = $shipping_item_obj->get_name();
-			if( $shipping_name == 'Unpack and Position' ) {
-				$service_type = 'Unpack and Position';
-			} elseif( $shipping_name == 'Deliver' ) {
-				$service_type = 'Deliver';
+			if( $shipping_name == 'Deliver, Unpack & Position' ) {
+				$service_type = 'Deliver, Unpack & Position';
+			} elseif( $shipping_name == 'Delivery Only' ) {
+				$service_type = 'Delivery Only';
 			}
 		}
 		
@@ -135,9 +135,9 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		if( $shipping_name == 'Standard Delivery' ) {
 			send_api_call($api_data);
-		} elseif( $shipping_name == 'Unpack and Position' ) {
+		} elseif( $shipping_name == 'Deliver, Unpack & Position' ) {
 			send_csv_mail($csv_data, "Product Order ");
-		} elseif( $shipping_name == 'Deliver' ) {
+		} elseif( $shipping_name == 'Delivery Only' ) {
 			send_csv_mail($csv_data, "Product Order ");
 		}
 	}

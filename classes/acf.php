@@ -131,7 +131,7 @@ class CustomACF {
 					$terms = get_the_terms( $post->ID , 'portfolio_cat' );
 					if ( $terms != null ){
 						foreach( $terms as $term ) {
-							print $term->name;
+							echo $term->name . ' ';
 							unset($term);
 						}
 					}
