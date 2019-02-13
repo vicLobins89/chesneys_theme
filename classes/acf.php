@@ -59,11 +59,10 @@ class CustomACF {
 				}
 				?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); echo $thumb_bg; ?>>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-					<div class="entry-content">
-						<?php the_excerpt(); ?>
-						<a href="<?php the_permalink(); ?>">Read More</a>
-					</div>
+					<h2>Blog Post</h2>
+					<h3 class="entry-title"><?php the_title(); ?></h3>
+					<?php the_excerpt(); ?>
+					<a href="<?php the_permalink(); ?>" class="primary-btn">Read More</a>
 				</article>
 				<?php
 			endwhile;
