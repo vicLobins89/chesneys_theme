@@ -79,7 +79,7 @@ function wdm_send_order_to_ext( $order_id ){
 				'ProductCode' => $product->get_sku(),
 				'Decription' => $item['name'],
 				'NoItems' => $item['qty'],
-				'Weight_KG' =>$product->get_weight(),
+				'Weight_kg' =>$product->get_weight().'kg',
 				'DeliveryType' => 'Home',
 				'ServiceType' => $service_type
 			);
@@ -141,8 +141,6 @@ function wdm_send_order_to_ext( $order_id ){
 			send_csv_mail($csv_data, "Product Order ");
 		}
 	}
-	
-	print_r($order->get_items('shipping'));
 }
 
 function send_api_call($data) {
