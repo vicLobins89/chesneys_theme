@@ -599,6 +599,14 @@ NAVIGATION STYLES
 	@include transition(all 0.3s ease-in-out);
 }
 
+.main-nav {
+	position: relative;
+}
+
+#nav_widget {
+	
+}
+
 .nav {
 	.menu-item {
 		display: block;
