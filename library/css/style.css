@@ -1310,7 +1310,11 @@ NAVIGATION STYLES
   left: 0;
   top: 20.55rem;
   color: #fff;
-  background: rgba(20, 33, 40, 0.9); }
+  background: rgba(20, 33, 40, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
 
 .nav .menu-item {
   display: block; }
@@ -1327,6 +1331,9 @@ NAVIGATION STYLES
   margin: 0;
   /* end .menu li */
   /* highlight current page */ }
+  .primary-nav:hover + #nav_widget, .primary-nav:focus + #nav_widget {
+    opacity: 1;
+    visibility: visible; }
   .primary-nav > li {
     position: relative;
     border: none;
