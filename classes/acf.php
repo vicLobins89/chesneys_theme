@@ -125,7 +125,7 @@ class CustomACF {
 					<?php
 					if( has_post_thumbnail() ) {
 						echo '<a href="'.get_the_permalink().'">';
-						get_the_post_thumbnail('full');
+						the_post_thumbnail('full');
 						echo '</a>';
 					}
 					$terms = get_the_terms( $post->ID , 'portfolio_cat' );
