@@ -1454,57 +1454,50 @@ FOOTER STYLES
 *********************/
 
 .footer {
-	clear: both;
-	padding: 2rem;
-	background: $gray;
-	position: relative;
+	padding: 2.5rem 4rem;
+}
+
+.footer-nav {
+	color: $white;
+	float: left;
+	width: 100%;
 	
-	a, p, li {
-		color: $white;
+	h4 {
+		font-size: 1rem;
+		text-transform: uppercase;
+		font-family: $sans-serif;
+		position: relative;
+		margin-bottom: 10px;
+		
+		&:after {
+			display: block;
+			position: absolute;
+			content: '';
+			left: 0;
+			bottom: 0;
+			width: 3rem;
+			height: 1px;
+			background: $white;
+		}
 	}
 }
 
 .footer-links {
-	position: relative;
-	z-index: 20;
+	margin: 0;
 	
-	ul {
-		margin: 0;
-		border: none;
-		text-align: center;
-		list-style-type: none;
-
-		li {
-			display: inline-block;
-			border: none;
-			margin: 0 0 1rem 0;
-			font-size: 1.3rem;
-			
-			a {
-				display: inline-block;
-				text-transform: none;
-				padding: 0;
-				margin: 0;
-				text-decoration: none;
-				border: none;
-				
-				&:hover, &:focus {
-					text-decoration: underline;
-				}
-			}
-			
-			&:last-child {
-				a {
-					margin-right: 0;
-				}
-			}
+	.nav {
+		text-align: left;
+		
+		.menu-item {
+			margin: 0;
+			font-size: 1rem;
+			display: block;
 		}
-
 	}
 }
 
 .copyright {
-    text-align: center;
-	font-size: 1.3rem;
-	margin: 0;
+	float: right;
+	text-align: left;
+	font-size: 1rem;
 }

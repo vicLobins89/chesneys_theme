@@ -1913,42 +1913,41 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 .footer {
-  clear: both;
-  padding: 2rem;
-  background: #53575a;
-  position: relative; }
-  .footer a, .footer p, .footer li {
-    color: #fff; }
+  padding: 2.5rem 4rem; }
+
+.footer-nav {
+  color: #fff;
+  float: left;
+  width: 100%; }
+  .footer-nav h4 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: "Univers", Helvetica, Arial, sans-serif;
+    position: relative;
+    margin-bottom: 10px; }
+    .footer-nav h4:after {
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      width: 3rem;
+      height: 1px;
+      background: #fff; }
 
 .footer-links {
-  position: relative;
-  z-index: 20; }
-  .footer-links ul {
-    margin: 0;
-    border: none;
-    text-align: center;
-    list-style-type: none; }
-    .footer-links ul li {
-      display: inline-block;
-      border: none;
-      margin: 0 0 1rem 0;
-      font-size: 1.3rem; }
-      .footer-links ul li a {
-        display: inline-block;
-        text-transform: none;
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        border: none; }
-        .footer-links ul li a:hover, .footer-links ul li a:focus {
-          text-decoration: underline; }
-      .footer-links ul li:last-child a {
-        margin-right: 0; }
+  margin: 0; }
+  .footer-links .nav {
+    text-align: left; }
+    .footer-links .nav .menu-item {
+      margin: 0;
+      font-size: 1rem;
+      display: block; }
 
 .copyright {
-  text-align: center;
-  font-size: 1.3rem;
-  margin: 0; }
+  float: right;
+  text-align: left;
+  font-size: 1rem; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -2144,32 +2143,7 @@ TABLET & SMALLER LAPTOPS
 
   /*********************
   FOOTER STYLES
-  *********************/
-  .footer {
-    padding: 2.5rem 4rem; }
-
-  .footer-nav {
-    color: #fff;
-    float: left;
-    width: 100%; }
-    .footer-nav h4 {
-      font-size: 1rem;
-      text-transform: uppercase;
-      font-family: "Univers", Helvetica, Arial, sans-serif; }
-
-  .footer-links {
-    margin: 0; }
-    .footer-links .nav {
-      text-align: left; }
-      .footer-links .nav .menu-item {
-        margin: 0;
-        font-size: 1rem;
-        display: block; }
-
-  .copyright {
-    float: right;
-    text-align: left;
-    font-size: 1rem; } }
+  *********************/ }
 /*********************
 DESKTOP
 *********************/

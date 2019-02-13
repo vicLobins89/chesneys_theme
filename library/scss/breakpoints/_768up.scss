@@ -198,38 +198,3 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
-.footer {
-	padding: 2.5rem 4rem;
-}
-
-.footer-nav {
-	color: $white;
-	float: left;
-	width: 100%;
-	
-	h4 {
-		font-size: 1rem;
-		text-transform: uppercase;
-		font-family: $sans-serif;
-	}
-}
-
-.footer-links {
-	margin: 0;
-	
-	.nav {
-		text-align: left;
-		
-		.menu-item {
-			margin: 0;
-			font-size: 1rem;
-			display: block;
-		}
-	}
-}
-
-.copyright {
-	float: right;
-	text-align: left;
-	font-size: 1rem;
-}

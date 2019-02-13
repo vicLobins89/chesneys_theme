@@ -290,32 +290,6 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-.footer {
-  padding: 2.5rem 4rem; }
-
-.footer-nav {
-  color: #fff;
-  float: left;
-  width: 100%; }
-  .footer-nav h4 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-family: "Univers", Helvetica, Arial, sans-serif; }
-
-.footer-links {
-  margin: 0; }
-  .footer-links .nav {
-    text-align: left; }
-    .footer-links .nav .menu-item {
-      margin: 0;
-      font-size: 1rem;
-      display: block; }
-
-.copyright {
-  float: right;
-  text-align: left;
-  font-size: 1rem; }
-
 /******************************************************************
 Site Name: Honey
 Author: Vic Lobins
