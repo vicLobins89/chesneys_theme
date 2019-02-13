@@ -602,9 +602,11 @@ NAVIGATION STYLES
 .main-nav {
 	position: relative;
 	
-	#nav_widget {
-		opacity: 1;
-		visibility: visible;
+	&:hover, &:focus {
+		#nav_widget {
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 }
 
