@@ -122,12 +122,20 @@ class CustomACF {
 			<?php while ( $arr_posts2->have_posts() ) :
 				$arr_posts2->the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" class="folio-item folio-item-<?php echo $row; echo ($row == 1) ? ' col-6' : ' col-3' ; ?>">
-					<?php if( has_post_thumbnail() ) : the_post_thumbnail('full'); endif; ?>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-					<div class="entry-content">
-						<?php ($row == 1) ? the_excerpt() : '' ; ?>
-						<a href="<?php the_permalink(); ?>">Read More</a>
-					</div>
+					<?php if( has_post_thumbnail() ) {
+						echo '<a href="'.the_permalink().'">';
+						get_the_post_thumbnail('full');
+						echo '</a>';
+					}
+					$terms = get_the_terms( $post->ID );
+					echo '<p class="category">';
+					foreach ( $terms as $term ) {
+						echo $term->name;
+					}
+					echo '</p>';
+					?>
+					<h3 class="entry-title"><?php the_title(); ?></h3>
+					<?php ($row == 1) ? the_excerpt() : '' ; ?>
 				</article>
 			<?php $row ++; endwhile; ?>
 			</div>

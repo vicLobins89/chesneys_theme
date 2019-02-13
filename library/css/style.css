@@ -1067,7 +1067,7 @@ LAYOUT & GRID STYLES
     font-size: 2em; }
   .row.blog-module p {
     width: 70%;
-    margin: 1rem auto; }
+    margin: 1rem auto 2rem; }
   .row.blog-module .primary-btn, .row.blog-module .image-link + p, .row.blog-module .image-link .wp-caption-text, .image-link .row.blog-module .wp-caption-text, .row.blog-module a.comment-reply-link, .row.blog-module #submit {
     margin: 0; }
   .row.blog-module:before {
