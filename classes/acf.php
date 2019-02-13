@@ -123,24 +123,24 @@ class CustomACF {
 				$arr_posts2->the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" class="folio-item folio-item-<?php echo $row; ?>">
 					<?php
-					if( $row == 1 ) {
-						if( has_post_thumbnail() ) :
-							the_post_thumbnail('full');
-						endif; ?>
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<div class="entry-content">
-							<?php the_excerpt(); ?>
-							<a href="<?php the_permalink(); ?>">Read More</a>
+					if( $row == 1 ) : ?>
+						<div class="col-6">
+							<?php if( has_post_thumbnail() ) : the_post_thumbnail('full'); endif; ?>
+							<h1 class="entry-title"><?php the_title(); ?></h1>
+							<div class="entry-content">
+								<?php the_excerpt(); ?>
+								<a href="<?php the_permalink(); ?>">Read More</a>
+							</div>
 						</div>
-					<?php } else {
-						if( has_post_thumbnail() ) :
-							the_post_thumbnail('full');
-						endif; ?>
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<div class="entry-content">
-							<a href="<?php the_permalink(); ?>">Read More</a>
+					<?php else : ?>
+						<div class="col-3">
+							<?php if( has_post_thumbnail() ) : the_post_thumbnail('full'); endif; ?>
+							<h1 class="entry-title"><?php the_title(); ?></h1>
+							<div class="entry-content">
+								<a href="<?php the_permalink(); ?>">Read More</a>
+							</div>
 						</div>
-					<?php } ?>
+					<?php endif; ?>
 				</article>
 			<?php $row ++; endwhile; ?>
 			</div>
