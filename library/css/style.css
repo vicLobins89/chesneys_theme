@@ -1304,6 +1304,14 @@ NAVIGATION STYLES
 .main-nav {
   position: relative; }
 
+#nav_widget {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 20.55rem;
+  color: #fff;
+  background: rgba(20, 33, 40, 0.9); }
+
 .nav .menu-item {
   display: block; }
 
