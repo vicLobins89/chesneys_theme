@@ -200,14 +200,19 @@ FOOTER STYLES
 
 .footer {
 	padding: 2.5rem 4rem;
+	
+	h4 {
+		text-transform: uppercase;
+		font-family: $sans-serif;
+	}
 }
 
 .footer-links {
 	float: left;
 	margin: 0;
 	
-	ul {
-		li {
+	.nav {
+		.menu-item {
 			margin: 0 10px;
 			font-size: 1rem;
 			display: block;
