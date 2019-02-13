@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
 	});
 	
 	$('.primary-nav li').hover(function(){
-		('.primary-nav li').not(this).removeClass('active');
+		$('.primary-nav li').not(this).removeClass('active');
 		$(this).addClass('active');
 	});
 	
