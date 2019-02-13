@@ -1942,7 +1942,7 @@ FOOTER STYLES
     margin: 0;
     text-align: left; }
     .footer-links .nav .menu-item {
-      margin: 0 8px;
+      margin: 6px 0;
       font-size: 1rem;
       display: block; }
       .footer-links .nav .menu-item a {
