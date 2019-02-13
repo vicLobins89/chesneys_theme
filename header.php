@@ -67,13 +67,14 @@
 					<a class="menu-button" title="Main Menu"></a>
 					<nav class="main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php
-					get_sidebar('nav_widget');
+					
 					wp_nav_menu(array(
 						'container' => false,
 						'container_class' => 'menu cf',
 						'menu' => __( 'The Main Menu', 'bonestheme' ),
 						'menu_class' => 'nav primary-nav cf',
-						'theme_location' => 'main-nav'
+						'theme_location' => 'main-nav',
+						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s'.get_sidebar('nav_widget').'</ul>'
 					));
 					?>
 					</nav>
