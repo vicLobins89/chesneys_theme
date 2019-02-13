@@ -125,18 +125,16 @@ class CustomACF {
 					<?php
 					if( has_post_thumbnail() ) {
 						echo '<a href="'.get_the_permalink().'">';
-						the_post_thumbnail('full');
+						($row == 1) ? the_post_thumbnail('folio-portrait') : the_post_thumbnail('folio-thumb') ;
 						echo '</a>';
 					}
 					$terms = get_the_terms( $post->ID , 'portfolio_cat' );
-					 // Loop over each item since it's an array
-					 if ( $terms != null ){
-					 foreach( $terms as $term ) {
-					 // Print the name method from $term which is an OBJECT
-					 	print $term->name ;
-					 // Get rid of the other data stored in the object, since it's not needed
-					 unset($term);
-					} }
+					if ( $terms != null ){
+						foreach( $terms as $term ) {
+							print $term->name;
+							unset($term);
+						}
+					}
 					?>
 					<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<?php ($row == 1) ? the_excerpt() : '' ; ?>
