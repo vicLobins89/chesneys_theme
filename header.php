@@ -73,7 +73,7 @@
 						'menu' => __( 'The Main Menu', 'bonestheme' ),
 						'menu_class' => 'nav primary-nav cf',
 						'theme_location' => 'main-nav',
-						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s'.get_sidebar('nav_widget').'</ul>'
+//						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s'.get_sidebar('nav_widget').'</ul>'
 					));
 					?>
 					</nav>
