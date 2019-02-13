@@ -1356,7 +1356,9 @@ NAVIGATION STYLES
         color: #4b858e; }
     .primary-nav > li:hover > ul.sub-menu,
     .primary-nav > li:hover > ul.children, .primary-nav > li:focus > ul.sub-menu,
-    .primary-nav > li:focus > ul.children {
+    .primary-nav > li:focus > ul.children,
+    .primary-nav > li .active > ul.sub-menu,
+    .primary-nav > li .active > ul.children {
       opacity: 1;
       visibility: visible; }
     .primary-nav > li:after {

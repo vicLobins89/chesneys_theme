@@ -670,7 +670,8 @@ NAVIGATION STYLES
 		}
 		
 		&:hover,
-		&:focus {
+		&:focus,
+		.active {
 			> ul.sub-menu,
 			> ul.children {
 				opacity: 1;
