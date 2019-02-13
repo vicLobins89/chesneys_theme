@@ -1497,6 +1497,10 @@ FOOTER STYLES
 			
 			a {
 				color: inherit;
+				
+				&:hover, &:focus {
+					text-decoration: underline;
+				}
 			}
 			
 			&:last-child {

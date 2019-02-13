@@ -1947,6 +1947,8 @@ FOOTER STYLES
       display: block; }
       .footer-links .nav .menu-item a {
         color: inherit; }
+        .footer-links .nav .menu-item a:hover, .footer-links .nav .menu-item a:focus {
+          text-decoration: underline; }
       .footer-links .nav .menu-item:last-child {
         margin-bottom: 0; }
 
