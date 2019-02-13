@@ -52,13 +52,13 @@ class CustomACF {
 		if ( $arr_posts->have_posts() ) :
 			while ( $arr_posts->have_posts() ) :
 				$arr_posts->the_post();
+				if ( has_post_thumbnail() ) {
+					$thumb_bg = ' style="background: url(';
+					$thumb_bg .= get_the_post_thumbnail_url(get_the_ID(),'full');
+					$thumb_bg .= ') center/cover no-repeat"';
+				}
 				?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php
-					if ( has_post_thumbnail() ) :
-						the_post_thumbnail();
-					endif;
-					?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); echo $thumb_bg; ?>>
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 					<div class="entry-content">
 						<?php the_excerpt(); ?>
