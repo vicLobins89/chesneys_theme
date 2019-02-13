@@ -317,7 +317,7 @@ LAYOUT & GRID STYLES
 	&.folio-module {
 		.folio-item {
 			.text {
-				padding: .5rem 1rem 1.5rem;
+				padding: .5rem .75rem 1.5rem;
 				background: $white;
 				@include transition(background 0.3s ease-in-out);
 			}
@@ -346,7 +346,7 @@ LAYOUT & GRID STYLES
 			text-transform: uppercase;
 			font-family: $sans-serif;
 			padding: .5rem 0;
-			margin: 0;
+			margin: 0 0 10px;
 			font-size: .9em;
 			position: relative;
 			
@@ -355,7 +355,7 @@ LAYOUT & GRID STYLES
 				position: absolute;
 				content: '';
 				left: 0;
-				bottom: -3px;
+				bottom: 0;
 				width: 3rem;
 				height: 1px;
 				background: $text-color;
@@ -461,7 +461,7 @@ h2, .h2 {
 		content: '';
 		margin-left: -1.5rem;
 		left: 50%;
-		bottom: -5rem;
+		bottom: -10px;
 		width: 3rem;
 		height: 1px;
 		background: $text-color;

@@ -1078,7 +1078,7 @@ LAYOUT & GRID STYLES
     top: 0;
     background: rgba(0, 0, 0, 0.7); }
 .row.folio-module .folio-item .text {
-  padding: .5rem 1rem 1.5rem;
+  padding: .5rem .75rem 1.5rem;
   background: #fff;
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out; }
@@ -1095,7 +1095,7 @@ LAYOUT & GRID STYLES
   text-transform: uppercase;
   font-family: "Univers", Helvetica, Arial, sans-serif;
   padding: .5rem 0;
-  margin: 0;
+  margin: 0 0 10px;
   font-size: .9em;
   position: relative; }
   .row.folio-module .categories:after {
@@ -1103,7 +1103,7 @@ LAYOUT & GRID STYLES
     position: absolute;
     content: '';
     left: 0;
-    bottom: -3px;
+    bottom: 0;
     width: 3rem;
     height: 1px;
     background: #142128; }
@@ -1193,7 +1193,7 @@ h2, .h2 {
     content: '';
     margin-left: -1.5rem;
     left: 50%;
-    bottom: -5rem;
+    bottom: -10px;
     width: 3rem;
     height: 1px;
     background: #142128; }
