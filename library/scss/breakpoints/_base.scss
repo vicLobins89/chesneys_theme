@@ -316,10 +316,16 @@ LAYOUT & GRID STYLES
 	
 	&.folio-module {
 		.col-3 {
-			
+			margin-bottom: 2rem;
 			
 			.text {
 				padding: .5rem .75rem;
+				background: $white;
+				@include transition(background 0.3s ease-in-out);
+				
+				&:hover, &:focus {
+					background: $light-brown;
+				}
 			}
 		}
 		
@@ -335,7 +341,8 @@ LAYOUT & GRID STYLES
 		.categories {
 			text-transform: uppercase;
 			font-family: $sans-serif;
-			margin: .5rem 0;
+			padding: .5rem 0;
+			margin: 0;
 			font-size: .9em;
 		}
 		
@@ -343,7 +350,7 @@ LAYOUT & GRID STYLES
 			font-size: 1.35em;
 			
 			+ p {
-				
+				margin: .5rem 0;
 			}
 		}
 	}
