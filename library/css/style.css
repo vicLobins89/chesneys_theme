@@ -1913,7 +1913,7 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 .footer {
-  padding: 2.5rem 4rem;
+  padding: 2rem 4rem;
   background: #53575a;
   color: #fff; }
 
@@ -1931,7 +1931,7 @@ FOOTER STYLES
       position: absolute;
       content: '';
       left: 0;
-      bottom: 0;
+      bottom: -6px;
       width: 3rem;
       height: 1px;
       background: #fff; }
@@ -1939,9 +1939,10 @@ FOOTER STYLES
 .footer-links {
   margin: 0; }
   .footer-links .nav {
+    margin: 0;
     text-align: left; }
     .footer-links .nav .menu-item {
-      margin: 0;
+      margin: 0 8px;
       font-size: 1rem;
       display: block; }
       .footer-links .nav .menu-item a {
