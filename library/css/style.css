@@ -1336,7 +1336,7 @@ NAVIGATION STYLES
   margin: 0;
   /* end .menu li */
   /* highlight current page */ }
-  .primary-nav:hover #nav_widget, .primary-nav:focus #nav_widget {
+  .primary-nav:hover + #nav_widget, .primary-nav:focus + #nav_widget {
     opacity: 1;
     visibility: visible; }
   .primary-nav > li {
