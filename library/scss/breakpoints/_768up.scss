@@ -203,7 +203,7 @@ FOOTER STYLES
 }
 
 .footer-links {
-	float: right;
+	float: left;
 	margin: 0;
 	
 	ul {
@@ -215,59 +215,7 @@ FOOTER STYLES
 }
 
 .copyright {
+	float: right;
 	text-align: left;
 	font-size: 1rem;
-}
-
-
-/*********************
-CALENDAR
-*********************/
-
-.entry-content .wpsbc-container .wpsbc-calendars-wrapper {	
-	.wpsbc-calendar {
-		width: calc(50% - 10px);
-		float: left;
-		margin-left: 5px;
-		margin-right: 5px;
-		
-		.wpsbc-calendar-header {
-			.wpsbc-calendar-header-navigation {
-				.wpsbc-next, .wpsbc-prev {
-					top: 50%;
-				}
-				
-				.wpsbc-prev {
-					left: -3rem;
-				}
-				
-				.wpsbc-next {
-					right: -3rem;
-				}
-			}
-		}
-	}
-	
-	.wpsbc-legend {
-		transform: scale(1.2);
-		transform-origin: left;
-	}
-}
-
-/*********************
-SLIDER STYLES
-*********************/
-
-div#n2-ss-2-align,
-div#n2-ss-3-align {
-	.nextend-thumbnail-default,
-	.nextend-thumbnail-inner {
-		bottom: 1rem !important;
-		
-		.nextend-thumbnail-scroller-group {	
-			> div {
-				height: 5rem !important;
-			}
-		}
-	}
 }

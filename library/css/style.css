@@ -2126,47 +2126,16 @@ TABLET & SMALLER LAPTOPS
     padding: 2.5rem 4rem; }
 
   .footer-links {
-    float: right;
+    float: left;
     margin: 0; }
     .footer-links ul li {
       margin: 0 10px;
       font-size: 1rem; }
 
   .copyright {
+    float: right;
     text-align: left;
-    font-size: 1rem; }
-
-  /*********************
-  CALENDAR
-  *********************/
-  .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar {
-    width: calc(50% - 10px);
-    float: left;
-    margin-left: 5px;
-    margin-right: 5px; }
-    .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-next, .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-prev {
-      top: 50%; }
-    .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-prev {
-      left: -3rem; }
-    .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-calendar .wpsbc-calendar-header .wpsbc-calendar-header-navigation .wpsbc-next {
-      right: -3rem; }
-  .entry-content .wpsbc-container .wpsbc-calendars-wrapper .wpsbc-legend {
-    transform: scale(1.2);
-    transform-origin: left; }
-
-  /*********************
-  SLIDER STYLES
-  *********************/
-  div#n2-ss-2-align .nextend-thumbnail-default,
-  div#n2-ss-2-align .nextend-thumbnail-inner,
-  div#n2-ss-3-align .nextend-thumbnail-default,
-  div#n2-ss-3-align .nextend-thumbnail-inner {
-    bottom: 1rem !important; }
-    div#n2-ss-2-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
-    div#n2-ss-2-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div,
-    div#n2-ss-3-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
-    div#n2-ss-3-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div {
-      height: 5rem !important; } }
+    font-size: 1rem; } }
 /*********************
 DESKTOP
 *********************/
