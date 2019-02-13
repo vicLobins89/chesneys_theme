@@ -1913,10 +1913,11 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 .footer {
-  padding: 2.5rem 4rem; }
+  padding: 2.5rem 4rem;
+  background: #53575a;
+  color: #fff; }
 
 .footer-nav {
-  color: #fff;
   float: left;
   width: 100%; }
   .footer-nav h4 {
@@ -1943,6 +1944,8 @@ FOOTER STYLES
       margin: 0;
       font-size: 1rem;
       display: block; }
+      .footer-links .nav .menu-item a {
+        color: inherit; }
 
 .copyright {
   float: right;

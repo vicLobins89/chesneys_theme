@@ -1455,10 +1455,11 @@ FOOTER STYLES
 
 .footer {
 	padding: 2.5rem 4rem;
+	background: $gray;
+	color: $white;
 }
 
 .footer-nav {
-	color: $white;
 	float: left;
 	width: 100%;
 	
@@ -1492,6 +1493,10 @@ FOOTER STYLES
 			margin: 0;
 			font-size: 1rem;
 			display: block;
+			
+			a {
+				color: inherit;
+			}
 		}
 	}
 }
