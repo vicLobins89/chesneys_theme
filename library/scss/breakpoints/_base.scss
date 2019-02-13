@@ -441,6 +441,18 @@ h2, .h2 {
 	font-weight: normal;
 	margin: .35em 0 .5em;
 	text-transform: uppercase;
+	position: relative;
+	
+	&:after {
+		display: block;
+		position: absolute;
+		content: '';
+		left: 0;
+		bottom: -3px;
+		width: 3rem;
+		height: 1px;
+		background: $white;
+	}
 }
 
 h3, .h3 {
