@@ -1077,12 +1077,12 @@ LAYOUT & GRID STYLES
     left: 0;
     top: 0;
     background: rgba(0, 0, 0, 0.7); }
-.row.folio-module .folio-items .text {
+.row.folio-module .folio-item .text {
   padding: .5rem .75rem 1.5rem;
   background: #fff;
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out; }
-.row.folio-module .folio-items:hover .text {
+.row.folio-module .folio-item:hover .text {
   background: #f5f3f1; }
 .row.folio-module .col-3 {
   margin-bottom: 1.2rem; }
