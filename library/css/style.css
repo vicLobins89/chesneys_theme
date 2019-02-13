@@ -1078,14 +1078,17 @@ LAYOUT & GRID STYLES
     top: 0;
     background: rgba(0, 0, 0, 0.7); }
 .row.folio-module .col-3 .text {
-  padding: .75rem; }
+  padding: .5rem .75rem; }
 .row.folio-module .title, .row.folio-module .description {
   text-align: center; }
 .row.folio-module .thumb {
-  display: block; }
+  display: block;
+  font-size: 0; }
 .row.folio-module .categories {
   text-transform: uppercase;
-  font-family: "Univers", Helvetica, Arial, sans-serif; }
+  font-family: "Univers", Helvetica, Arial, sans-serif;
+  margin: .5rem 0;
+  font-size: .9em; }
 .row.folio-module .entry-title {
   font-size: 1.35em; }
 
