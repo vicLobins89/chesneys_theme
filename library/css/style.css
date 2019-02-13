@@ -1096,7 +1096,17 @@ LAYOUT & GRID STYLES
   font-family: "Univers", Helvetica, Arial, sans-serif;
   padding: .5rem 0;
   margin: 0;
-  font-size: .9em; }
+  font-size: .9em;
+  position: relative; }
+  .row.folio-module .categories:after {
+    display: block;
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -3px;
+    width: 3rem;
+    height: 1px;
+    background: #142128; }
 .row.folio-module .entry-title {
   font-size: 1.35em; }
   .row.folio-module .entry-title + p {
@@ -1174,18 +1184,21 @@ h2, .h2 {
   font-size: 1.5em;
   font-family: "Univers", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  margin: .35em 0 .5em;
+  margin: .35em 0 .75em;
   text-transform: uppercase;
   position: relative; }
   h2:after, .h2:after {
     display: block;
     position: absolute;
     content: '';
-    left: 0;
-    bottom: -3px;
+    margin-left: -1.5rem;
+    left: 50%;
+    bottom: -5rem;
     width: 3rem;
     height: 1px;
-    background: #fff; }
+    background: #142128; }
+    .blog-module h2:after, .blog-module .h2:after {
+      background: #fff; }
 
 h3, .h3 {
   font-size: 1.75em;

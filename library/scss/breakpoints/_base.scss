@@ -348,6 +348,18 @@ LAYOUT & GRID STYLES
 			padding: .5rem 0;
 			margin: 0;
 			font-size: .9em;
+			position: relative;
+			
+			&:after {
+				display: block;
+				position: absolute;
+				content: '';
+				left: 0;
+				bottom: -3px;
+				width: 3rem;
+				height: 1px;
+				background: $text-color;
+			}
 		}
 		
 		.entry-title {
@@ -439,7 +451,7 @@ h2, .h2 {
 	font-size: 1.5em;
 	font-family: $sans-serif;
 	font-weight: normal;
-	margin: .35em 0 .5em;
+	margin: .35em 0 .75em;
 	text-transform: uppercase;
 	position: relative;
 	
@@ -447,11 +459,16 @@ h2, .h2 {
 		display: block;
 		position: absolute;
 		content: '';
-		left: 0;
-		bottom: -3px;
+		margin-left: -1.5rem;
+		left: 50%;
+		bottom: -5rem;
 		width: 3rem;
 		height: 1px;
-		background: $white;
+		background: $text-color;
+		
+		.blog-module & {
+			background: $white;
+		}
 	}
 }
 
