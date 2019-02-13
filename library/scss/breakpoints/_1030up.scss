@@ -12,14 +12,6 @@ html {
 
 .wrap {
 	> div {
-		width: 930px;
-	}
-}
-
-.footer-links {
-	ul {
-		li {
-			margin: 0 2rem;
-		}
+		max-width: 930px;
 	}
 }

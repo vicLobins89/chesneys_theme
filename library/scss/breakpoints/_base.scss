@@ -21,14 +21,6 @@ body {
 	background-color: $white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
-	
-	&.is-mobile:not(.home) #content {
-		margin-top: 60px;
-	}
-	
-	&:not(.home) #content {
-		margin-top: 60px;
-	}
 }
 
 #container {

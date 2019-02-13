@@ -869,10 +869,6 @@ body {
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  body.is-mobile:not(.home) #content {
-    margin-top: 60px; }
-  body:not(.home) #content {
-    margin-top: 60px; }
 
 #container {
   overflow: hidden; }
@@ -2046,7 +2042,7 @@ TABLET & SMALLER LAPTOPS
   LAYOUT & GRID STYLES
   *********************/
   .wrap > div {
-    width: 760px; }
+    max-width: 760px; }
 
   .flex {
     -webkit-flex-direction: row;
@@ -2140,10 +2136,7 @@ DESKTOP
     font-size: 16px; }
 
   .wrap > div {
-    width: 930px; }
-
-  .footer-links ul li {
-    margin: 0 2rem; } }
+    max-width: 930px; } }
 /*********************
 LARGE VIEWING SIZE
 *********************/
@@ -2162,7 +2155,7 @@ LARGE VIEWING SIZE
     max-width: 1400px; }
 
   .wrap > div {
-    width: 1080px; } }
+    max-width: 1080px; } }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 *********************/
