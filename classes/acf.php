@@ -133,7 +133,7 @@ class CustomACF {
 					 if ( $terms != null ){
 					 foreach( $terms as $term ) {
 					 // Print the name method from $term which is an OBJECT
-					 	print $term->slug ;
+					 	print $term->name ;
 					 // Get rid of the other data stored in the object, since it's not needed
 					 unset($term);
 					} }
