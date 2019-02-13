@@ -67,6 +67,7 @@
 					<a class="menu-button" title="Main Menu"></a>
 					<nav class="main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php
+					get_sidebar('nav_widget');
 					wp_nav_menu(array(
 						'container' => false,
 						'container_class' => 'menu cf',
@@ -74,7 +75,6 @@
 						'menu_class' => 'nav primary-nav cf',
 						'theme_location' => 'main-nav'
 					));
-					get_sidebar('nav_widget');
 					?>
 					</nav>
 

@@ -619,6 +619,11 @@ NAVIGATION STYLES
 	&:hover, &:focus {
 		opacity: 1;
 		visibility: visible;
+		
+		+ .primary-menu > li:first-child > .sub-menu {
+			opacity: 1;
+			visibility: visible
+		}
 	}
 }
 

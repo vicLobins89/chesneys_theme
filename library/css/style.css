@@ -1320,6 +1320,9 @@ NAVIGATION STYLES
   #nav_widget:hover, #nav_widget:focus {
     opacity: 1;
     visibility: visible; }
+    #nav_widget:hover + .primary-menu > li:first-child > .sub-menu, #nav_widget:focus + .primary-menu > li:first-child > .sub-menu {
+      opacity: 1;
+      visibility: visible; }
 
 .nav .menu-item {
   display: block; }
