@@ -207,6 +207,7 @@ FOOTER STYLES
 	float: left;
 	
 	h4 {
+		font-size: 1rem;
 		text-transform: uppercase;
 		font-family: $sans-serif;
 	}
@@ -216,6 +217,8 @@ FOOTER STYLES
 	margin: 0;
 	
 	.nav {
+		text-align: left;
+		
 		.menu-item {
 			margin: 0 10px;
 			font-size: 1rem;
