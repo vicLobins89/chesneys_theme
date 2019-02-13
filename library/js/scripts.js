@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
 	});
 	
 	$('.primary-nav > li.menu-item-has-children').hover(function(){
-		$('.primary-nav > li').not(this).removeClass('active');
+		$('.primary-nav > li.menu-item-has-children').not(this).removeClass('active');
 		$(this).addClass('active');
 		$('#nav_widget').addClass('active');
 	});
