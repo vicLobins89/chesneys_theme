@@ -625,8 +625,6 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, a.comment-reply-link:hover, #submit:hover, .secondary-btn:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus {
     color: #fff;
     text-decoration: none; }
-  .primary-btn:active, .image-link + p:active, .image-link .wp-caption-text:active, a.comment-reply-link:active, #submit:active, .secondary-btn:active {
-    top: 1px; }
   .primary-btn a, .image-link + p a, .image-link .wp-caption-text a, a.comment-reply-link a, #submit a, .secondary-btn a {
     color: inherit !important;
     text-decoration: inherit !important; }
