@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
 		$(this).addClass('active');
 	});
 	
-	$('#content, #inner-header, .socket, .logo').hover(function(){
+	$('#content, #inner-header, .socket, .logo, .primary-nav > li:not(.menu-item-has-children)').hover(function(){
 		$('.primary-nav > li').removeClass('active');
 	});
 	
