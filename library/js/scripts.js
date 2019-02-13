@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
 	});
 	
 	$('.primary-nav li').hover(function(){
-		console.log( $(this).class() );
+		console.log( $(this) );
 	});
 	
 	function menuResize(){
