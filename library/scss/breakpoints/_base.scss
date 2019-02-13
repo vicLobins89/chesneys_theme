@@ -607,12 +607,13 @@ NAVIGATION STYLES
 	position: absolute;
     width: 100%;
     left: 0;
-    top: 0;
-    padding-top: 20.55rem;
+    top: 4.6rem;
+    padding-top: 16rem;
 	color: $white;
 	background: rgba(20, 33, 40, 0.9);
 	opacity: 0;
 	visibility: hidden;
+	z-index: -1;
 	@include transition(all 0.5s ease-in-out);
 }
 
