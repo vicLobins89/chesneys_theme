@@ -2127,7 +2127,8 @@ TABLET & SMALLER LAPTOPS
 
   .footer-nav {
     color: #fff;
-    float: left; }
+    float: left;
+    width: 100%; }
     .footer-nav h4 {
       font-size: 1rem;
       text-transform: uppercase;
@@ -2138,7 +2139,7 @@ TABLET & SMALLER LAPTOPS
     .footer-links .nav {
       text-align: left; }
       .footer-links .nav .menu-item {
-        margin: 0 10px;
+        margin: 0;
         font-size: 1rem;
         display: block; }
 

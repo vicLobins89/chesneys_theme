@@ -295,7 +295,8 @@ FOOTER STYLES
 
 .footer-nav {
   color: #fff;
-  float: left; }
+  float: left;
+  width: 100%; }
   .footer-nav h4 {
     font-size: 1rem;
     text-transform: uppercase;
@@ -306,7 +307,7 @@ FOOTER STYLES
   .footer-links .nav {
     text-align: left; }
     .footer-links .nav .menu-item {
-      margin: 0 10px;
+      margin: 0;
       font-size: 1rem;
       display: block; }
 

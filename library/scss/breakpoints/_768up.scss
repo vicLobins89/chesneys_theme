@@ -205,6 +205,7 @@ FOOTER STYLES
 .footer-nav {
 	color: $white;
 	float: left;
+	width: 100%;
 	
 	h4 {
 		font-size: 1rem;
@@ -220,7 +221,7 @@ FOOTER STYLES
 		text-align: left;
 		
 		.menu-item {
-			margin: 0 10px;
+			margin: 0;
 			font-size: 1rem;
 			display: block;
 		}
