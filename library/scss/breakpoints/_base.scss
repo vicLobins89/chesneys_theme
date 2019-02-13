@@ -317,7 +317,7 @@ LAYOUT & GRID STYLES
 	&.folio-module {
 		.folio-item {
 			.text {
-				padding: .5rem .75rem 1.5rem;
+				padding: .5rem 1rem 1.5rem;
 				background: $white;
 				@include transition(background 0.3s ease-in-out);
 			}
