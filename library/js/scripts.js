@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
 			menuHeight = $('.primary-nav').outerHeight(),
 			subMenuHeight = $('.primary-nav > li ul.sub-menu').outerHeight();
 		$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width( menuWidth/3 );
-		$('#nav_widget').css('top', (menuHeight+subMenuHeight));
+		$('#nav_widget').css('padding-top', (menuHeight+subMenuHeight));
 	}
 	menuResize();
 	
