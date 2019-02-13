@@ -1308,7 +1308,8 @@ NAVIGATION STYLES
   position: absolute;
   width: 100%;
   left: 0;
-  top: 20.55rem;
+  top: 0;
+  padding-top: 20.55rem;
   color: #fff;
   background: rgba(20, 33, 40, 0.9);
   opacity: 0;
