@@ -1277,10 +1277,13 @@ HEADER STYLES
 .logo {
   display: block;
   font-size: 0;
-  margin: 1.75rem auto 1.25rem; }
+  padding: 1.75rem 0 1.25rem;
+  margin: 0;
+  text-align: center; }
   .logo img {
-    max-width: 100%;
-    height: auto; }
+    max-width: 16rem;
+    height: auto;
+    width: 90%; }
   .logo a {
     color: #53575a; }
 

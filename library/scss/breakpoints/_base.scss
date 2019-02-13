@@ -569,11 +569,14 @@ HEADER STYLES
 .logo {
 	display: block;
 	font-size: 0;
-	margin: 1.75rem auto 1.25rem;
+	padding: 1.75rem 0 1.25rem;
+	margin: 0;
+	text-align: center;
 	
 	img {
-		max-width: 100%;
+		max-width: 16rem;
 		height: auto;
+		width: 90%;
 	}
 
 	a {
