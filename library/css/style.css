@@ -1303,9 +1303,6 @@ NAVIGATION STYLES
 
 .main-nav {
   position: relative; }
-  .main-nav:hover #nav_widget, .main-nav:focus #nav_widget {
-    opacity: 1;
-    visibility: visible; }
 
 #nav_widget {
   position: absolute;
@@ -1323,9 +1320,6 @@ NAVIGATION STYLES
   #nav_widget:hover, #nav_widget:focus {
     opacity: 1;
     visibility: visible; }
-    #nav_widget:hover + .primary-nav > li:first-child > .sub-menu, #nav_widget:focus + .primary-nav > li:first-child > .sub-menu {
-      opacity: 1;
-      visibility: visible; }
 
 .nav .menu-item {
   display: block; }
@@ -1342,6 +1336,9 @@ NAVIGATION STYLES
   margin: 0;
   /* end .menu li */
   /* highlight current page */ }
+  .primary-nav:hover #nav_widget, .primary-nav:focus #nav_widget {
+    opacity: 1;
+    visibility: visible; }
   .primary-nav > li {
     position: relative;
     border: none;

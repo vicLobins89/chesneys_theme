@@ -72,9 +72,9 @@
 						'container_class' => 'menu cf',
 						'menu' => __( 'The Main Menu', 'bonestheme' ),
 						'menu_class' => 'nav primary-nav cf',
-						'theme_location' => 'main-nav',
-						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s'.get_sidebar('nav_widget').'</ul>'
+						'theme_location' => 'main-nav'
 					));
+					get_sidebar('nav_widget');
 					?>
 					</nav>
 

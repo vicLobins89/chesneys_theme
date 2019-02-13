@@ -601,13 +601,6 @@ NAVIGATION STYLES
 
 .main-nav {
 	position: relative;
-	
-	&:hover, &:focus {
-		#nav_widget {
-			opacity: 1;
-			visibility: visible;
-		}
-	}
 }
 
 #nav_widget {
@@ -626,11 +619,6 @@ NAVIGATION STYLES
 	&:hover, &:focus {
 		opacity: 1;
 		visibility: visible;
-		
-		+ .primary-nav > li:first-child > .sub-menu {
-			opacity: 1;
-			visibility: visible
-		}
 	}
 }
 
@@ -650,6 +638,13 @@ NAVIGATION STYLES
 	text-transform: uppercase;
 	font-size: .9rem;
 	margin: 0;
+	
+	&:hover, &:focus {
+		#nav_widget {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 
 	> li {
 		position: relative;
