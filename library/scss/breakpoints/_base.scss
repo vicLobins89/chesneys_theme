@@ -283,6 +283,11 @@ LAYOUT & GRID STYLES
 		text-align: center;
 		color: $white;
 		position: relative;
+		
+		> div {
+			position: relative;
+			z-index: 5;
+		}
 
 		h3 {
 			font-size: 2em;
@@ -290,7 +295,11 @@ LAYOUT & GRID STYLES
 
 		p {
 			width: 70%;
-			margin: auto;
+			margin: 1rem auto;
+		}
+		
+		.primary-btn {
+			margin: 0;
 		}
 
 		&:before {
@@ -303,6 +312,10 @@ LAYOUT & GRID STYLES
 			top: 0;
 			background: rgba(0,0,0,0.7);
 		}
+	}
+	
+	.folio-module {
+		
 	}
 }
 

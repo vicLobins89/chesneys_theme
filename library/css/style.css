@@ -1060,11 +1060,16 @@ LAYOUT & GRID STYLES
   text-align: center;
   color: #fff;
   position: relative; }
+  .row.blog-module > div {
+    position: relative;
+    z-index: 5; }
   .row.blog-module h3 {
     font-size: 2em; }
   .row.blog-module p {
     width: 70%;
-    margin: auto; }
+    margin: 1rem auto; }
+  .row.blog-module .primary-btn, .row.blog-module .image-link + p, .row.blog-module .image-link .wp-caption-text, .image-link .row.blog-module .wp-caption-text, .row.blog-module a.comment-reply-link, .row.blog-module #submit {
+    margin: 0; }
   .row.blog-module:before {
     content: '';
     display: block;

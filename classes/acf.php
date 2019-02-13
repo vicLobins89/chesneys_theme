@@ -114,26 +114,38 @@ class CustomACF {
 
 		$arr_posts2 = new WP_Query( $args2 );
 
-		if ( $arr_posts2->have_posts() ) :
-
-			while ( $arr_posts2->have_posts() ) :
-				$arr_posts2->the_post();
-				?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		if ( $arr_posts2->have_posts() ) : $row = 1; ?>
+			<section class="row entry-content cf folio-module">
+			<div class="cf">
+				<h2>Portfolio</h2>
+				<p>Learn more about some of our most recently completed projects</p>
+			<?php while ( $arr_posts2->have_posts() ) :
+				$arr_posts2->the_post(); ?>
+				<article id="post-<?php the_ID(); ?>" class="folio-item folio-item-<?php echo $row; ?>">
 					<?php
-					if ( has_post_thumbnail() ) :
-						the_post_thumbnail();
-					endif;
-					?>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-					<div class="entry-content">
-						<?php the_excerpt(); ?>
-						<a href="<?php the_permalink(); ?>">Read More</a>
-					</div>
+					if( $row == 1 ) {
+						if( has_post_thumbnail() ) :
+							the_post_thumbnail('full');
+						endif; ?>
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<div class="entry-content">
+							<?php the_excerpt(); ?>
+							<a href="<?php the_permalink(); ?>">Read More</a>
+						</div>
+					<?php } else {
+						if( has_post_thumbnail() ) :
+							the_post_thumbnail('full');
+						endif; ?>
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<div class="entry-content">
+							<a href="<?php the_permalink(); ?>">Read More</a>
+						</div>
+					<?php } ?>
 				</article>
-				<?php
-			endwhile;
-		endif;
+			<?php $row ++; endwhile; ?>
+			</div>
+			</section>
+		<?php endif;
 		wp_reset_postdata();
 	}
 	
