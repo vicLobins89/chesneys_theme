@@ -298,7 +298,8 @@ FOOTER STYLES
   margin: 0; }
   .footer-links ul li {
     margin: 0 10px;
-    font-size: 1rem; }
+    font-size: 1rem;
+    display: block; }
 
 .copyright {
   float: right;
