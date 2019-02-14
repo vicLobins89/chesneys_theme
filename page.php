@@ -14,15 +14,14 @@ $acfClass = new CustomACF();
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 								
-							<?php // HERO AREA ?>
-							<?php if( has_post_thumbnail() && is_page() ) : ?>
-							<div class="featured-image">
-								<?php the_post_thumbnail('full'); ?>
-							</div>
-							<?php endif; ?>
-
 							<?php // MAIN CONTENT ?>
-							<?php if( get_the_content() ) :
+							<?php if( has_post_thumbnail() && is_page() ) : ?>
+								<section class="row entry-content cf top" itemprop="articleBody">
+									<?php the_post_thumbnail('full'); ?>
+									<?php the_content(); ?>
+								</section>
+
+							<?php else :
 								$layout = get_field('editor_layout');
 								if( $layout === 'hide' ) {
 									echo '<section class="row entry-content cf top" style="display: none;">';
@@ -42,7 +41,7 @@ $acfClass = new CustomACF();
 										<?php the_content(); ?>
 									</div>
 								</div></section>
-							<?php endif; ?>
+							<?php endif; // MAIN CONTENT ?>
 							
 							<?php // ACF FIELDS ?>
 							<?php $acfClass->page_rows(); ?>
