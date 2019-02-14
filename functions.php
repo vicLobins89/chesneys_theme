@@ -143,7 +143,7 @@ function bones_register_sidebars() {
 		'id' => 'nav_widget',
 		'name' => __( 'Nav Widget', 'bonestheme' ),
 		'description' => __( 'The widget area in the navigation.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s cf">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',

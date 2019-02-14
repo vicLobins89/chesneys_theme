@@ -1323,6 +1323,28 @@ NAVIGATION STYLES
   #nav_widget:hover, #nav_widget:focus, #nav_widget.active {
     opacity: 1;
     visibility: visible; }
+  #nav_widget .widget {
+    padding: 3rem 15% 2rem;
+    margin: 0; }
+    #nav_widget .widget h4 {
+      border: none;
+      position: relative;
+      font-family: "Univers", Helvetica, Arial, sans-serif; }
+      #nav_widget .widget h4:after {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: -10px;
+        width: 3rem;
+        height: 1px;
+        background: #fff; }
+    #nav_widget .widget .textwidget p {
+      font-size: 1rem; }
+    #nav_widget .widget .textwidget p:first-child {
+      float: left; }
+    #nav_widget .widget .textwidget p:last-child {
+      float: right; }
 
 .nav .menu-item {
   display: block; }

@@ -623,6 +623,42 @@ NAVIGATION STYLES
 		opacity: 1;
 		visibility: visible;
 	}
+	
+	.widget {
+		padding: 3rem 15% 2rem;
+    	margin: 0;
+		
+		h4 {
+			border: none;
+			position: relative;
+			font-family: $sans-serif;
+			
+			&:after {
+				display: block;
+				position: absolute;
+				content: '';
+				left: 0;
+				bottom: -10px;
+				width: 3rem;
+				height: 1px;
+				background: $white;
+			}
+		}
+		
+		.textwidget {
+			p {
+				font-size: 1rem;
+			}
+			
+			p:first-child {
+				float: left;
+			}
+			
+			p:last-child {
+				float: right;
+			}
+		}
+	}
 }
 
 .nav {
