@@ -19,6 +19,7 @@ $acfClass = new CustomACF();
 								<section class="row entry-content cf top" itemprop="articleBody">
 									<div class="cf">
 									<?php the_post_thumbnail('full'); ?>
+									<?php the_title(); ?>
 									<?php the_content(); ?>
 									</div>
 								</section>
