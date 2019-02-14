@@ -1324,7 +1324,7 @@ NAVIGATION STYLES
     opacity: 1;
     visibility: visible; }
   #nav_widget .widget {
-    padding: 3rem 15% 2rem;
+    padding: 2.5rem 15%;
     margin: 0; }
     #nav_widget .widget h4 {
       border: none;
@@ -1348,7 +1348,7 @@ NAVIGATION STYLES
       float: right;
       font-size: 1rem; }
       #nav_widget .widget .textwidget p:last-child a {
-        margin: 1rem 0 0; }
+        margin: 8px 0 0; }
 
 .nav .menu-item {
   display: block; }
