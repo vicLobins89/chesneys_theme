@@ -632,6 +632,7 @@ NAVIGATION STYLES
 			border: none;
 			position: relative;
 			font-family: $sans-serif;
+			text-transform: uppercase;
 			
 			&:after {
 				display: block;
@@ -646,16 +647,19 @@ NAVIGATION STYLES
 		}
 		
 		.textwidget {
-			p {
-				font-size: 1rem;
-			}
-			
 			p:first-child {
 				float: left;
+				font-size: 1.35rem;
+    			width: 70%;
 			}
 			
 			p:last-child {
 				float: right;
+				font-size: 1rem;
+				
+				a {
+					margin: 1rem 0 0;
+				}
 			}
 		}
 	}

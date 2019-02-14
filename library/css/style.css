@@ -1329,7 +1329,8 @@ NAVIGATION STYLES
     #nav_widget .widget h4 {
       border: none;
       position: relative;
-      font-family: "Univers", Helvetica, Arial, sans-serif; }
+      font-family: "Univers", Helvetica, Arial, sans-serif;
+      text-transform: uppercase; }
       #nav_widget .widget h4:after {
         display: block;
         position: absolute;
@@ -1339,12 +1340,15 @@ NAVIGATION STYLES
         width: 3rem;
         height: 1px;
         background: #fff; }
-    #nav_widget .widget .textwidget p {
-      font-size: 1rem; }
     #nav_widget .widget .textwidget p:first-child {
-      float: left; }
+      float: left;
+      font-size: 1.35rem;
+      width: 70%; }
     #nav_widget .widget .textwidget p:last-child {
-      float: right; }
+      float: right;
+      font-size: 1rem; }
+      #nav_widget .widget .textwidget p:last-child a {
+        margin: 1rem 0 0; }
 
 .nav .menu-item {
   display: block; }
