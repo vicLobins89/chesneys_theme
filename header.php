@@ -45,13 +45,17 @@
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 				
 				<nav role="navigation" class="socket" itemscope itemtype="http://schema.org/SiteNavigationElement">
-				<?php wp_nav_menu(array(
+				<?php
+				wp_nav_menu(array(
 					'container' => false,
 					'container_class' => 'menu cf',
 					'menu' => __( 'Socket Menu', 'bonestheme' ),
 					'menu_class' => 'nav socket-nav cf',
 					'theme_location' => 'socket-nav'
-				)); ?>
+				));
+				$cart_url = $woocommerce->cart->get_cart_url();
+				echo '<a href="'.$cart_url.'" class="rhs-link">Basket</a>';
+				?>
 				</nav>
 
 				<div id="inner-header" class="cf">

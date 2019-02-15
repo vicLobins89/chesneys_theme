@@ -892,10 +892,18 @@ NAVIGATION STYLES
 			font-family: $sans-serif;
 			margin: 0 1rem;
 			
+			&:hover, &:focus {
+				color: $brown;
+			}
+			
 			a {
 				color: inherit;
 			}
 		}
+	}
+	
+	.rhs-link {
+		
 	}
 }
 
