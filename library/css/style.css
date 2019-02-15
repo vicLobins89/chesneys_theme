@@ -1125,12 +1125,17 @@ LAYOUT & GRID STYLES
       left: 0;
       top: 0;
       background: rgba(0, 0, 0, 0.7); }
-  .blog-wrapper .more {
+  .blog-wrapper h3.more {
     text-align: center;
     font-size: 1.35em;
     margin: 2.5rem 0 2rem; }
   .blog-wrapper .col-4 {
-    padding-bottom: 2.5rem; }
+    padding-bottom: 2.5rem;
+    width: 26%; }
+    .blog-wrapper .col-4:first-child {
+      margin-left: 11%; }
+    .blog-wrapper .col-4:last-child {
+      margin-right: 11%; }
   .blog-wrapper .thumb {
     float: left;
     width: 50%; }

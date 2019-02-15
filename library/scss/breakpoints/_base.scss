@@ -375,7 +375,7 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
-	.more {
+	h3.more {
 		text-align: center;
 		font-size: 1.35em;
 		margin: 2.5rem 0 2rem;
@@ -383,6 +383,15 @@ LAYOUT & GRID STYLES
 	
 	.col-4 {
 		padding-bottom: 2.5rem;
+		width: 26%;
+		
+		&:first-child {
+			margin-left: 11%;
+		}
+		
+		&:last-child {
+			margin-right: 11%;
+		}
 	}
 	
 	.thumb {
