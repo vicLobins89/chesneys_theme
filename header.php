@@ -61,6 +61,8 @@
 
 				<div id="inner-header" class="cf">
 					
+					<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+					
 					<?php
 					if($options['logo']){
 						echo '<a class="logo" href="'. home_url() .'"><img src="'. $options['logo'] .'" alt="'. get_bloginfo('name') .'" /></a>';

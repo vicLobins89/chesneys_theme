@@ -1144,10 +1144,12 @@ LAYOUT & GRID STYLES
     width: 42%;
     padding: 1rem;
     font-size: .7rem; }
-    .blog-wrapper .text h4:after {
-      margin-left: 0;
-      left: 0;
-      bottom: -6px; }
+    .blog-wrapper .text h4 {
+      font-family: "Univers", Helvetica, Arial, sans-serif; }
+      .blog-wrapper .text h4:after {
+        margin-left: 0;
+        left: 0;
+        bottom: -6px; }
     .blog-wrapper .text .entry-title {
       font-size: 1.5em; }
   .blog-wrapper img {

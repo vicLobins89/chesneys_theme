@@ -405,10 +405,14 @@ LAYOUT & GRID STYLES
 		padding: 1rem;
 		font-size: .7rem;
 		
-		h4:after {
-			margin-left: 0;
-			left: 0;
-			bottom: -6px;
+		h4 {
+			font-family: $sans-serif;
+			
+			&:after {
+				margin-left: 0;
+				left: 0;
+				bottom: -6px;
+			}
 		}
 		
 		.entry-title {
