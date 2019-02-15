@@ -642,6 +642,10 @@ HEADER STYLES
 					font-size: .85rem;
 					height: 2rem;
 					text-shadow: none;
+					
+					&.autocomplete {
+						opacity: 0;
+					}
 				}
 			}
 			

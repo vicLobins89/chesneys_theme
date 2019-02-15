@@ -1338,6 +1338,9 @@ HEADER STYLES
         font-size: .85rem;
         height: 2rem;
         text-shadow: none; }
+        .searchbox #ajaxsearchlite1 .probox .proinput input.autocomplete,
+        .searchbox div.asl_w .probox .proinput input.autocomplete {
+          opacity: 0; }
       .searchbox #ajaxsearchlite1 .probox .promagnifier,
       .searchbox div.asl_w .probox .promagnifier {
         height: 2rem; }
