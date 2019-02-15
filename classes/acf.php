@@ -70,7 +70,6 @@ class CustomACF {
 					</div>
 					<?php
 				else : 
-					echo ( $row == 2 ) ? '<div class="row entry-content cf">' : '';
 					echo ( $row == 2 ) ? '<h3 class="h2 more">EXPLORE MORE POSTS</h3>' : ''; ?>
 					<div id="post-<?php the_ID(); ?>" class="col-4 cf">
 						<a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('folio-thumb'); ?></a>
@@ -80,8 +79,7 @@ class CustomACF {
 							<a href="<?php the_permalink(); ?>" class="primary-btn alt">Read More</a>
 						</div>
 					</div>
-					<?php echo ( $row == 2 ) ? '</div>' : '';
-				endif;
+				<?php endif;
 			$row ++; endwhile; ?>
 			</section>
 		<?php endif;
