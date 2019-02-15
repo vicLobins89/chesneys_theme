@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
 		$('#nav_widget').addClass('active');
 	});
 	
-	$('#content, .socket, .logo, .primary-nav > li:not(.menu-item-has-children)').hover(function(){
+	$('#content, #main, .socket, .logo, .primary-nav > li:not(.menu-item-has-children)').hover(function(){
 		$('.primary-nav > li').removeClass('active');
 		$('#nav_widget').removeClass('active');
 	});

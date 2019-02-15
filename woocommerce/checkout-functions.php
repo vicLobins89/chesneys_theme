@@ -167,7 +167,7 @@ function send_api_call($data) {
 
 	// the handle response
 	if ($response->success != 1) {
-		print_r($response);
+//		print_r($response);
 	} else {
 //		print_r($response);
 	}
