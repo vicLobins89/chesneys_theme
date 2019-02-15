@@ -1138,10 +1138,10 @@ LAYOUT & GRID STYLES
       margin-right: 9%; }
   .blog-wrapper .thumb {
     float: left;
-    width: 50%; }
+    width: 58%; }
   .blog-wrapper .text {
     float: right;
-    width: 50%;
+    width: 42%;
     padding: 1rem;
     font-size: .7rem; }
     .blog-wrapper .text h4:after {
