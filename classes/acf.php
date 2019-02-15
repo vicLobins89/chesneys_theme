@@ -70,8 +70,8 @@ class CustomACF {
 					</div>
 					<?php
 				else : ?>
-					<div class="col-4">
-						<?php the_post_thumbnail('full'); ?>
+					<div id="post-<?php the_ID(); ?>" class="col-4">
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('folio-thumb'); ?></a>
 						<h2>Blog Post</h2>
 						<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
 						<?php the_excerpt(); ?>
