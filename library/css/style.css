@@ -1328,14 +1328,13 @@ HEADER STYLES
     border: 2px solid #b5b5b5;
     border-radius: 2px;
     box-shadow: none; }
-    .searchbox div.asl_w .probox .promagnifier .innericon input,
-    .searchbox div.asl_w .probox .prosettings .innericon input,
-    .searchbox div.asl_w .probox .proloading input {
-      font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; }
     .searchbox div.asl_w .probox .promagnifier .innericon svg,
     .searchbox div.asl_w .probox .prosettings .innericon svg,
     .searchbox div.asl_w .probox .proloading svg {
       width: 18px; }
+  .searchbox #ajaxsearchlite1 .probox .proinput input,
+  .searchbox div.asl_w .probox .proinput input {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; }
 
 .logo {
   display: block;
