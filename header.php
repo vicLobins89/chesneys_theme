@@ -53,9 +53,7 @@
 					'menu_class' => 'nav socket-nav cf',
 					'theme_location' => 'socket-nav'
 				));
-				global $woocommerce;
-				$cart_url = $woocommerce->wc_get_cart_url();
-				echo '<a href="'.$cart_url.'" class="rhs-link">Basket</a>';
+				echo '<a href="'.wc_get_cart_url().'" class="rhs-link">Basket</a>';
 				?>
 				</nav>
 
