@@ -53,24 +53,25 @@ class CustomACF {
 			<section class="blog-wrapper cf">
 			<?php while ( $arr_posts->have_posts() ) :
 				$arr_posts->the_post();
-				if( $row == 1 ) :
-					if ( has_post_thumbnail() ) {
-						$thumb_bg = ' style="background: url(';
-						$thumb_bg .= get_the_post_thumbnail_url(get_the_ID(),'full');
-						$thumb_bg .= ') center/cover no-repeat"';
-					}
-					?>
-					<div id="post-<?php the_ID(); ?>" class="row entry-content cf blog-module" <?php echo $thumb_bg; ?>>
-						<div class="cf">
-							<h2>Blog Post</h2>
-							<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
-							<?php the_excerpt(); ?>
-							<a href="<?php the_permalink(); ?>" class="primary-btn">Read More</a>
-						</div>
+		
+				if ( has_post_thumbnail() ) {
+					$thumb_bg = ' style="background: url(';
+					$thumb_bg .= get_the_post_thumbnail_url(get_the_ID(),'full');
+					$thumb_bg .= ') center/cover no-repeat"';
+				}
+				?>
+				<div id="post-<?php the_ID(); ?>" class="row entry-content cf blog-module" <?php echo $thumb_bg; ?>>
+					<div class="cf">
+						<h2>Blog Post</h2>
+						<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
+						<?php the_excerpt(); ?>
+						<a href="<?php the_permalink(); ?>" class="primary-btn">Read More</a>
 					</div>
-					<?php
-					echo ( $row > 1 ) ? '<h3 class="h2">EXPLORE MORE POSTS</h3>' : '';
-				else : ?>
+				</div>
+				<?php
+		
+				if( $row > 1 ) : ?>
+					<h3 class="h2">EXPLORE MORE POSTS</h3>
 					<div id="post-<?php the_ID(); ?>" class="col-4">
 						<a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('folio-thumb'); ?></a>
 						<div class="text">
