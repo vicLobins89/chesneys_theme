@@ -1145,7 +1145,8 @@ LAYOUT & GRID STYLES
     padding: 1rem;
     font-size: .7rem; }
     .blog-wrapper .text h4 {
-      font-family: "Univers", Helvetica, Arial, sans-serif; }
+      font-family: "Univers", Helvetica, Arial, sans-serif;
+      font-size: 1.2em; }
       .blog-wrapper .text h4:after {
         margin-left: 0;
         left: 0;
