@@ -885,20 +885,20 @@ NAVIGATION STYLES
 		margin: 0;
 		padding: .7rem 0;
 		text-align: center;
-		
-		.menu-item {
-			color: $light-brown;
-			text-transform: uppercase;
-			font-family: $sans-serif;
-			margin: 0 1rem;
-			
-			&:hover, &:focus {
-				color: $brown;
-			}
-			
-			a {
-				color: inherit;
-			}
+	}
+	
+	.menu-item {
+		color: $light-brown;
+		text-transform: uppercase;
+		font-family: $sans-serif;
+		margin: 0 1rem;
+
+		&:hover, &:focus {
+			color: $brown;
+		}
+
+		a {
+			color: inherit;
 		}
 	}
 	

@@ -53,7 +53,9 @@
 					'menu_class' => 'nav socket-nav cf',
 					'theme_location' => 'socket-nav'
 				));
-				echo '<a href="'.wc_get_cart_url().'" class="rhs-link">Basket</a>';
+				echo '<div class="rhs-links">';
+				echo '<a href="'.wc_get_cart_url().'" class="menu-item">Basket</a>';
+				echo '</div>';
 				?>
 				</nav>
 

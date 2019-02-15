@@ -1541,15 +1541,15 @@ NAVIGATION STYLES
     margin: 0;
     padding: .7rem 0;
     text-align: center; }
-    .socket .socket-nav .menu-item {
-      color: #f5f3f1;
-      text-transform: uppercase;
-      font-family: "Univers", Helvetica, Arial, sans-serif;
-      margin: 0 1rem; }
-      .socket .socket-nav .menu-item:hover, .socket .socket-nav .menu-item:focus {
-        color: #cbc3bb; }
-      .socket .socket-nav .menu-item a {
-        color: inherit; }
+  .socket .menu-item {
+    color: #f5f3f1;
+    text-transform: uppercase;
+    font-family: "Univers", Helvetica, Arial, sans-serif;
+    margin: 0 1rem; }
+    .socket .menu-item:hover, .socket .menu-item:focus {
+      color: #cbc3bb; }
+    .socket .menu-item a {
+      color: inherit; }
 
 /*********************
 POSTS & CONTENT STYLES
