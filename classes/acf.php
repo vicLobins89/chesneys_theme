@@ -75,7 +75,7 @@ class CustomACF {
 						<a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('folio-thumb'); ?></a>
 						<div class="text">
 							<h4 class="h2">Blog Post</h4>
-							<h5 class="entry-title p"><em><?php the_title(); ?></em></h5>
+							<h5 class="entry-title p"><?php the_title(); ?></h5>
 							<a href="<?php the_permalink(); ?>" class="primary-btn alt">Read More</a>
 						</div>
 					</div>

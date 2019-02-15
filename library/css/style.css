@@ -1127,7 +1127,10 @@ LAYOUT & GRID STYLES
       background: rgba(0, 0, 0, 0.7); }
   .blog-wrapper .more {
     text-align: center;
-    font-size: 1.35em; }
+    font-size: 1.35em;
+    margin: 2.5rem 0 2rem; }
+  .blog-wrapper .col-4 {
+    padding-bottom: 2.5rem; }
   .blog-wrapper .thumb {
     float: left;
     width: 50%; }
