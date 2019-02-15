@@ -50,7 +50,7 @@ class CustomACF {
 		$arr_posts = new WP_Query( $args );
 
 		if ( $arr_posts->have_posts() ) : $row = 1; ?>
-			<section class="blog-wrapper">
+			<section class="blog-wrapper cf">
 			<?php while ( $arr_posts->have_posts() ) :
 				$arr_posts->the_post();
 				if( $row == 1 ) :
@@ -69,13 +69,15 @@ class CustomACF {
 						</div>
 					</div>
 					<?php
+					echo ( $row > 1 ) ? '<h3 class="h2">EXPLORE MORE POSTS</h3>' : '';
 				else : ?>
 					<div id="post-<?php the_ID(); ?>" class="col-4">
-						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('folio-thumb'); ?></a>
-						<h2>Blog Post</h2>
-						<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
-						<?php the_excerpt(); ?>
-						<a href="<?php the_permalink(); ?>" class="primary-btn">Read More</a>
+						<a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('folio-thumb'); ?></a>
+						<div class="text">
+							<h2>Blog Post</h2>
+							<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
+							<a href="<?php the_permalink(); ?>" class="primary-btn">Read More</a>
+						</div>
 					</div>
 				<?php endif;
 			$row ++; endwhile; ?>
