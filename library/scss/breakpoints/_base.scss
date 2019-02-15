@@ -637,12 +637,7 @@ HEADER STYLES
 			height: 2rem;
 			
 			.proinput {
-				input,
-				input::-webkit-input-placeholder,
-				input::-moz-placeholder,
-				input:-ms-input-placeholder,
-				input:-moz-placeholder,
-				input::placeholder {
+				input {
 					font-family: $serif;
 					font-size: .85rem;
 					height: 2rem;
