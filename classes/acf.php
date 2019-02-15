@@ -49,25 +49,30 @@ class CustomACF {
 		}
 		$arr_posts = new WP_Query( $args );
 
-		if ( $arr_posts->have_posts() ) :
+		if ( $arr_posts->have_posts() ) : $row = 1;
 			while ( $arr_posts->have_posts() ) :
 				$arr_posts->the_post();
-				if ( has_post_thumbnail() ) {
-					$thumb_bg = ' style="background: url(';
-					$thumb_bg .= get_the_post_thumbnail_url(get_the_ID(),'full');
-					$thumb_bg .= ') center/cover no-repeat"';
-				}
-				?>
-				<section id="post-<?php the_ID(); ?>" class="row entry-content cf blog-module" <?php echo $thumb_bg; ?>>
-					<div class="cf">
-						<h2>Blog Post</h2>
-						<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
-						<?php the_excerpt(); ?>
-						<a href="<?php the_permalink(); ?>" class="primary-btn">Read More</a>
-					</div>
-				</section>
-				<?php
-			endwhile;
+				if( $row == 1 ) :
+					if ( has_post_thumbnail() ) {
+						$thumb_bg = ' style="background: url(';
+						$thumb_bg .= get_the_post_thumbnail_url(get_the_ID(),'full');
+						$thumb_bg .= ') center/cover no-repeat"';
+					}
+					?>
+					<section id="post-<?php the_ID(); ?>" class="row entry-content cf blog-module" <?php echo $thumb_bg; ?>>
+						<div class="cf">
+							<h2>Blog Post</h2>
+							<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
+							<?php the_excerpt(); ?>
+							<a href="<?php the_permalink(); ?>" class="primary-btn">Read More</a>
+						</div>
+					</section>
+					<?php
+				else : ?>
+					<h4 class="h2">Explore more posts</h4>
+					
+				<?php endif;
+			$row ++; endwhile;
 		endif;
 		wp_reset_postdata();
 	}
