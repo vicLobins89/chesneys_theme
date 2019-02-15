@@ -1333,33 +1333,13 @@ HEADER STYLES
     .searchbox div.asl_w .probox {
       height: 2rem; }
       .searchbox #ajaxsearchlite1 .probox .proinput input,
-      .searchbox #ajaxsearchlite1 .probox .proinput input::-webkit-input-placeholder,
-      .searchbox #ajaxsearchlite1 .probox .proinput input::-moz-placeholder,
-      .searchbox #ajaxsearchlite1 .probox .proinput input:-ms-input-placeholder,
-      .searchbox #ajaxsearchlite1 .probox .proinput input:-moz-placeholder,
-      .searchbox #ajaxsearchlite1 .probox .proinput input::placeholder,
-      .searchbox div.asl_w .probox .proinput input,
-      .searchbox div.asl_w .probox .proinput input::-webkit-input-placeholder,
-      .searchbox div.asl_w .probox .proinput input::-moz-placeholder,
-      .searchbox div.asl_w .probox .proinput input:-ms-input-placeholder,
-      .searchbox div.asl_w .probox .proinput input:-moz-placeholder,
-      .searchbox div.asl_w .probox .proinput input::placeholder {
+      .searchbox div.asl_w .probox .proinput input {
         font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
         font-size: .85rem;
         height: 2rem;
         text-shadow: none; }
         .searchbox #ajaxsearchlite1 .probox .proinput input.autocomplete,
-        .searchbox #ajaxsearchlite1 .probox .proinput input::-webkit-input-placeholder.autocomplete,
-        .searchbox #ajaxsearchlite1 .probox .proinput input::-moz-placeholder.autocomplete,
-        .searchbox #ajaxsearchlite1 .probox .proinput input:-ms-input-placeholder.autocomplete,
-        .searchbox #ajaxsearchlite1 .probox .proinput input:-moz-placeholder.autocomplete,
-        .searchbox #ajaxsearchlite1 .probox .proinput input::placeholder.autocomplete,
-        .searchbox div.asl_w .probox .proinput input.autocomplete,
-        .searchbox div.asl_w .probox .proinput input::-webkit-input-placeholder.autocomplete,
-        .searchbox div.asl_w .probox .proinput input::-moz-placeholder.autocomplete,
-        .searchbox div.asl_w .probox .proinput input:-ms-input-placeholder.autocomplete,
-        .searchbox div.asl_w .probox .proinput input:-moz-placeholder.autocomplete,
-        .searchbox div.asl_w .probox .proinput input::placeholder.autocomplete {
+        .searchbox div.asl_w .probox .proinput input.autocomplete {
           opacity: 0; }
       .searchbox #ajaxsearchlite1 .probox .promagnifier,
       .searchbox div.asl_w .probox .promagnifier {
