@@ -1142,7 +1142,7 @@ LAYOUT & GRID STYLES
   .blog-wrapper .text {
     float: right;
     width: 42%;
-    padding: 1rem;
+    padding: .75rem 1rem;
     font-size: .7rem; }
     .blog-wrapper .text h4 {
       font-family: "Univers", Helvetica, Arial, sans-serif;
