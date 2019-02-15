@@ -61,7 +61,7 @@
 
 				<div id="inner-header" class="cf">
 					
-					<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+					<div class="searchbox"><?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?></div>
 					
 					<?php
 					if($options['logo']){

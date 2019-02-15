@@ -619,6 +619,13 @@ HEADER STYLES
 	}
 }
 
+.searchbox {
+	position: absolute;
+	width: 100%;
+	max-width: 15rem;
+	right: 5rem;
+}
+
 .logo {
 	display: block;
 	font-size: 0;
