@@ -49,14 +49,9 @@ class CustomACF {
 		}
 		$arr_posts = new WP_Query( $args );
 
-		if ( $arr_posts->have_posts() ) : $row = 1;
-			if( $row == 1 ) :
-				echo 1;
-			else :
-				echo 2;
-			endif;
-			
-			while ( $arr_posts->have_posts() ) :
+		if ( $arr_posts->have_posts() ) : $row = 1; ?>
+			<section class="blog-wrapper">
+			<?php while ( $arr_posts->have_posts() ) :
 				$arr_posts->the_post();
 				if( $row == 1 ) :
 					if ( has_post_thumbnail() ) {
@@ -65,25 +60,27 @@ class CustomACF {
 						$thumb_bg .= ') center/cover no-repeat"';
 					}
 					?>
-					<section id="post-<?php the_ID(); ?>" class="row entry-content cf blog-module" <?php echo $thumb_bg; ?>>
+					<div id="post-<?php the_ID(); ?>" class="row entry-content cf blog-module" <?php echo $thumb_bg; ?>>
 						<div class="cf">
 							<h2>Blog Post</h2>
 							<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
 							<?php the_excerpt(); ?>
 							<a href="<?php the_permalink(); ?>" class="primary-btn">Read More</a>
 						</div>
-					</section>
+					</div>
 					<?php
 				else : ?>
 					<div class="col-4">
+						<?php the_post_thumbnail('full'); ?>
 						<h2>Blog Post</h2>
 						<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
 						<?php the_excerpt(); ?>
 						<a href="<?php the_permalink(); ?>" class="primary-btn">Read More</a>
 					</div>
 				<?php endif;
-			$row ++; endwhile;
-		endif;
+			$row ++; endwhile; ?>
+			</section>
+		<?php endif;
 		wp_reset_postdata();
 	}
 	
