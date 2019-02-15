@@ -602,7 +602,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 *********************/
 .primary-btn, .image-link + p, .image-link .wp-caption-text, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, a.secondary-btn {
   position: relative;
-  min-width: 12rem;
+  min-width: 12em;
   display: inline-block;
   text-decoration: none;
   color: #fff;
@@ -614,7 +614,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1;
-  padding: 1.3rem 2rem 1rem;
+  padding: 1.3em 2em 1em;
   margin: 1rem 0;
   cursor: pointer;
   text-align: center;
@@ -1134,7 +1134,14 @@ LAYOUT & GRID STYLES
   .blog-wrapper .text {
     float: right;
     width: 50%;
-    padding: 1rem; }
+    padding: 1rem;
+    font-size: .7rem; }
+    .blog-wrapper .text h4:after {
+      margin-left: 0;
+      left: 0;
+      bottom: -6px; }
+    .blog-wrapper .text .entry-title {
+      font-size: 2em; }
   .blog-wrapper img {
     max-width: 100%; }
 
