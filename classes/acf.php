@@ -50,6 +50,12 @@ class CustomACF {
 		$arr_posts = new WP_Query( $args );
 
 		if ( $arr_posts->have_posts() ) : $row = 1;
+			if( $row == 1 ) :
+				echo 1;
+			else :
+				echo 2;
+			endif;
+			
 			while ( $arr_posts->have_posts() ) :
 				$arr_posts->the_post();
 				if( $row == 1 ) :
