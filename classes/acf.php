@@ -70,13 +70,13 @@ class CustomACF {
 					</div>
 					<?php
 				else : 
-					echo ( $row == 2 ) ? '<h3 class="h2">EXPLORE MORE POSTS</h3>' : ''; ?>
-					<div id="post-<?php the_ID(); ?>" class="col-4">
+					echo ( $row == 2 ) ? '<h3 class="h2 more">EXPLORE MORE POSTS</h3>' : ''; ?>
+					<div id="post-<?php the_ID(); ?>" class="col-4 cf">
 						<a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('folio-thumb'); ?></a>
 						<div class="text">
-							<h2>Blog Post</h2>
-							<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
-							<a href="<?php the_permalink(); ?>" class="primary-btn">Read More</a>
+							<h4>Blog Post</h4>
+							<h5 class="entry-title p"><em><?php the_title(); ?></em></h5>
+							<a href="<?php the_permalink(); ?>" class="primary-btn alt">Read More</a>
 						</div>
 					</div>
 				<?php endif;

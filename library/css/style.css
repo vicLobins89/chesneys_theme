@@ -636,6 +636,12 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, a.comment-reply-link:hover, #submit:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, a.comment-reply-link:focus, #submit:focus, .wp-caption:hover .primary-btn, .wp-caption:hover .image-link + p, .wp-caption:hover .image-link .wp-caption-text, .image-link .wp-caption:hover .wp-caption-text, .wp-caption:hover a.comment-reply-link, .wp-caption:hover #submit, a.primary-btn:hover, .image-link a.wp-caption-text:hover, a.comment-reply-link:hover, a#submit:hover, a.primary-btn:focus, .image-link a.wp-caption-text:focus, a.comment-reply-link:focus, a#submit:focus, .wp-caption:hover a.primary-btn, .wp-caption:hover .image-link a.wp-caption-text, .image-link .wp-caption:hover a.wp-caption-text, .wp-caption:hover a.comment-reply-link, .wp-caption:hover a#submit {
     background-color: #fff;
     color: #53575a; }
+  .primary-btn.alt, .image-link + p.alt, .image-link .alt.wp-caption-text, a.alt.comment-reply-link, .alt#submit, a.primary-btn.alt, .image-link a.alt.wp-caption-text, a.alt.comment-reply-link, a.alt#submit {
+    border-color: #000;
+    color: #000; }
+    .primary-btn.alt:hover, .image-link + p.alt:hover, .image-link .alt.wp-caption-text:hover, a.alt.comment-reply-link:hover, .alt#submit:hover, .primary-btn.alt:focus, .image-link + p.alt:focus, .image-link .alt.wp-caption-text:focus, a.alt.comment-reply-link:focus, .alt#submit:focus, .wp-caption:hover .primary-btn.alt, .wp-caption:hover .image-link + p.alt, .wp-caption:hover .image-link .alt.wp-caption-text, .image-link .wp-caption:hover .alt.wp-caption-text, .wp-caption:hover a.alt.comment-reply-link, .wp-caption:hover .alt#submit, a.primary-btn.alt:hover, .image-link a.alt.wp-caption-text:hover, a.alt.comment-reply-link:hover, a.alt#submit:hover, a.primary-btn.alt:focus, .image-link a.alt.wp-caption-text:focus, a.alt.comment-reply-link:focus, a.alt#submit:focus, .wp-caption:hover a.primary-btn.alt, .wp-caption:hover .image-link a.alt.wp-caption-text, .image-link .wp-caption:hover a.alt.wp-caption-text, .wp-caption:hover a.alt.comment-reply-link, .wp-caption:hover a.alt#submit {
+      background-color: #000;
+      color: #fff; }
 
 .secondary-btn, a.secondary-btn {
   background-color: #fff;
@@ -1119,6 +1125,17 @@ LAYOUT & GRID STYLES
       left: 0;
       top: 0;
       background: rgba(0, 0, 0, 0.7); }
+  .blog-wrapper .more {
+    text-align: center;
+    font-size: 1.35em; }
+  .blog-wrapper .thumb {
+    float: left;
+    width: 50%; }
+  .blog-wrapper .text {
+    float: right;
+    width: 50%;
+    padding: 1rem;
+    font-size: .8rem; }
 
 .flex {
   display: inline-block;

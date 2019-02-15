@@ -374,6 +374,27 @@ LAYOUT & GRID STYLES
 			background: rgba(0,0,0,0.7);
 		}
 	}
+	
+	.more {
+		text-align: center;
+		font-size: 1.35em;
+	}
+	
+	.col-4 {
+		
+	}
+	
+	.thumb {
+		float: left;
+		width: 50%;
+	}
+	
+	.text {
+		float: right;
+		width: 50%;
+		padding: 1rem;
+		font-size: .8rem;
+	}
 }
 
 .flex {
