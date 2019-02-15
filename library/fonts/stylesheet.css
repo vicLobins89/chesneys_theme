@@ -22,3 +22,10 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Univers Cond';
+    src: url('Univers-Condensed.woff2') format('woff2'),
+        url('Univers-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

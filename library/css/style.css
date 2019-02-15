@@ -1187,7 +1187,7 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: 1.5em;
-  font-family: "Univers", Helvetica, Arial, sans-serif;
+  font-family: "Univers Cond", "Univers", Helvetica, Arial, sans-serif;
   font-weight: normal;
   margin: .35em 0 .75em;
   text-transform: uppercase;
@@ -1550,6 +1550,10 @@ NAVIGATION STYLES
       color: #cbc3bb; }
     .socket .menu-item a {
       color: inherit; }
+  .socket .rhs-links {
+    position: absolute;
+    right: 5rem;
+    top: .7rem; }
 
 /*********************
 POSTS & CONTENT STYLES

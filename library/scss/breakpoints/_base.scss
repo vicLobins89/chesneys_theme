@@ -449,7 +449,7 @@ h1, .h1 {
 
 h2, .h2 {
 	font-size: 1.5em;
-	font-family: $sans-serif;
+	font-family: $condensed;
 	font-weight: normal;
 	margin: .35em 0 .75em;
 	text-transform: uppercase;
@@ -902,8 +902,10 @@ NAVIGATION STYLES
 		}
 	}
 	
-	.rhs-link {
-		
+	.rhs-links {
+		position: absolute;
+		right: 5rem;
+		top: .7rem;
 	}
 }
 
