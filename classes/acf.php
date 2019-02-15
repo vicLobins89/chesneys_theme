@@ -69,8 +69,12 @@ class CustomACF {
 					</section>
 					<?php
 				else : ?>
-					<h4 class="h2">Explore more posts</h4>
-					
+					<div class="col-4">
+						<h2>Blog Post</h2>
+						<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
+						<?php the_excerpt(); ?>
+						<a href="<?php the_permalink(); ?>" class="primary-btn">Read More</a>
+					</div>
 				<?php endif;
 			$row ++; endwhile;
 		endif;
