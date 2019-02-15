@@ -1131,11 +1131,11 @@ LAYOUT & GRID STYLES
     margin: 2.5rem 0 2rem; }
   .blog-wrapper .col-4 {
     padding-bottom: 2.5rem;
-    width: 26%; }
+    width: 27.333%; }
     .blog-wrapper .col-4.post-item-1 {
-      margin-left: 11%; }
+      margin-left: 9%; }
     .blog-wrapper .col-4.post-item-3 {
-      margin-right: 11%; }
+      margin-right: 9%; }
   .blog-wrapper .thumb {
     float: left;
     width: 50%; }
@@ -1149,7 +1149,7 @@ LAYOUT & GRID STYLES
       left: 0;
       bottom: -6px; }
     .blog-wrapper .text .entry-title {
-      font-size: 2em; }
+      font-size: 1.5em; }
   .blog-wrapper img {
     max-width: 100%; }
 
