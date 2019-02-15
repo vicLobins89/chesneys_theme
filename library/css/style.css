@@ -1321,7 +1321,19 @@ HEADER STYLES
   position: absolute;
   width: 100%;
   max-width: 15rem;
-  right: 5rem; }
+  right: 6.25rem;
+  top: 10px; }
+  .searchbox div.asl_w {
+    border: 2px solid #b5b5b5;
+    border-radius: 2px; }
+    .searchbox div.asl_w .probox .promagnifier .innericon input,
+    .searchbox div.asl_w .probox .prosettings .innericon input,
+    .searchbox div.asl_w .probox .proloading input {
+      font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; }
+    .searchbox div.asl_w .probox .promagnifier .innericon svg,
+    .searchbox div.asl_w .probox .prosettings .innericon svg,
+    .searchbox div.asl_w .probox .proloading svg {
+      width: 18px; }
 
 .logo {
   display: block;
