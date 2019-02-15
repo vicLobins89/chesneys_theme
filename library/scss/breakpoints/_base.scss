@@ -385,11 +385,11 @@ LAYOUT & GRID STYLES
 		padding-bottom: 2.5rem;
 		width: 26%;
 		
-		&:first-child {
+		&.post-item-1 {
 			margin-left: 11%;
 		}
 		
-		&:last-child {
+		&.post-item-3 {
 			margin-right: 11%;
 		}
 	}

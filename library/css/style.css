@@ -1132,9 +1132,9 @@ LAYOUT & GRID STYLES
   .blog-wrapper .col-4 {
     padding-bottom: 2.5rem;
     width: 26%; }
-    .blog-wrapper .col-4:first-child {
+    .blog-wrapper .col-4.post-item-1 {
       margin-left: 11%; }
-    .blog-wrapper .col-4:last-child {
+    .blog-wrapper .col-4.post-item-3 {
       margin-right: 11%; }
   .blog-wrapper .thumb {
     float: left;

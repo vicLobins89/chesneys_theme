@@ -71,7 +71,7 @@ class CustomACF {
 					<?php
 				else : 
 					echo ( $row == 2 ) ? '<h3 class="h2 more">EXPLORE MORE POSTS</h3>' : ''; ?>
-					<div id="post-<?php the_ID(); ?>" class="col-4 cf col-<?php echo $row-1; ?>">
+					<div id="post-<?php the_ID(); ?>" class="col-4 cf post-item-<?php echo $row-1; ?>">
 						<a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('folio-thumb'); ?></a>
 						<div class="text">
 							<h4 class="h2">Blog Post</h4>
