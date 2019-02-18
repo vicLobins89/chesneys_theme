@@ -345,6 +345,7 @@ LAYOUT & GRID STYLES
 		> .cf {
 			position: relative;
 			width: 100%;
+			max-width: calc(1400px - 2rem);
 			height: 0;
 			padding-top: 48.76%;
 		}
