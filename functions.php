@@ -242,4 +242,10 @@ function woocommerce_category_image() {
 }
 add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
 
+function my_theme_woocommerce_taxonomy_archive_description($category) {
+    $category_id = $category->term_id;
+    echo '<div class="term-description">' . category_description( $category_id ). '</div>';
+}
+add_action( 'woocommerce_after_subcategory_title', 'my_theme_woocommerce_taxonomy_archive_description');
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

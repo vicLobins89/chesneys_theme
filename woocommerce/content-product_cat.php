@@ -42,7 +42,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 * @hooked woocommerce_template_loop_category_title - 10
 	 */
 	do_action( 'woocommerce_shop_loop_subcategory_title', $category );
-	do_action( 'woocommerce_shop_loop_subcategory_description', $category );
 	/**
 	 * woocommerce_after_subcategory_title hook.
 	 */
