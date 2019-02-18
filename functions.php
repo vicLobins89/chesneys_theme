@@ -247,7 +247,7 @@ function woocommerce_category_image() {
 		<?php endif;
 	}
 }
-add_action( 'woocommerce_after_main_content', 'woocommerce_category_image', 2 );
+add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
 
 // Display subcat descriptions
 function my_theme_woocommerce_taxonomy_archive_description($category) {
