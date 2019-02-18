@@ -13,8 +13,10 @@ $acfClass = new CustomACF();
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							
 							<?php
-							$menu_breadcrumb = new Menu_Breadcrumb( 'main-nav' );   // 'main' is the Menu Location
-							$menu_breadcrumb->render( ' &raquo; ', '<p class="menu-breadcrumb">', '</p>' );
+							if( !is_front_page() ) {
+								$menu_breadcrumb = new Menu_Breadcrumb( 'main-nav' );   // 'main' is the Menu Location
+								$menu_breadcrumb->render( ' &raquo; ', '<p class="menu-breadcrumb"><a href="'.home_url().'">Homepage</a>">', '</p>' );	
+							}
 							?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
