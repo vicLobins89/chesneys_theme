@@ -239,12 +239,13 @@ function woocommerce_category_image() {
 		    echo '<img src="' . $image . '" alt="' . $cat->name . '" />';
 		}
 		
-	  	if( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-			<div class="featured-copy">
-				<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-				<?php do_action( 'woocommerce_archive_description' ); ?>
-	  		</div>
-		<?php endif;
+		$cat_desc = term_description( $cat->term_id, 'product_cat' );
+		$subtitle = '<p class="description">'.$cat_desc.'</p>';
+		
+	  	?> <div class="featured-copy">
+			<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+			<?php echo $subtitle; ?>
+		</div> <?php
 	}
 }
 add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
