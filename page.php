@@ -14,8 +14,8 @@ $acfClass = new CustomACF();
 							
 							<?php
 							if( !is_front_page() ) {
-								$menu_breadcrumb = new Menu_Breadcrumb( 'main-nav' );   // 'main' is the Menu Location
-								$menu_breadcrumb->render( ' &raquo; ', '<p class="menu-breadcrumb"><a href="'.home_url().'">Homepage</a>">', '</p>' );	
+								$menu_breadcrumb = new Menu_Breadcrumb( 'main-nav' );
+								$menu_breadcrumb->render( ' &sol;&sol; ', '<p class="menu-breadcrumb"><a href="'.home_url().'">Homepage</a> // ', '</p>' );	
 							}
 							?>
 
