@@ -13,11 +13,11 @@ class CustomACF {
 				$moduleBackground .= ') center/cover no-repeat"';
 			}
 			?>
-			<section class="row entry-content cf module module-<?php echo $post->post_name; ?>" <?php echo $moduleBackground; ?>>
-				<div class="cf"><div class="inner-module">
+			<section class="module module-<?php echo $post->post_name; ?>" <?php echo $moduleBackground; ?>>
+				<div class="inner-module">
 					<h2 class="lhs"><?php the_title(); ?></h2>
 					<?php the_content(); ?>
-				</div></div>
+				</div>
 			</section>
 			<?php wp_reset_postdata();
 		}
