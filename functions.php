@@ -217,6 +217,7 @@ add_filter( 'body_class', 'add_slug_body_class' );
 
 // Breadcrumbs
 function my_breadcrumb( $separator = ' &gt; ') {
+	$locations = get_nav_menu_locations();
 	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
 		$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 		$items = wp_get_nav_menu_items($menu->term_id);
