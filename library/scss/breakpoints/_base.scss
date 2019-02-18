@@ -520,6 +520,11 @@ h2, .h2 {
 		height: 1px;
 		background: $text-color;
 		
+		.lhs & {
+			left: 0;
+			margin-left: 0;
+		}
+		
 		.blog-module & {
 			background: $white;
 		}
@@ -1032,7 +1037,7 @@ POSTS & CONTENT STYLES
 	left: 2rem;
 	padding: 2rem;
 	width: 30%;
-	background: $brown;
+	background: $light-brown;
 }
 
 .page-title {
