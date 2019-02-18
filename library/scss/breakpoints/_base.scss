@@ -561,13 +561,14 @@ h2, .h2 {
 		height: 1px;
 		background: $text-color;
 		
-		.blog-module & {
+		.blog-module &,
+		.module-spares-and-accessories & {
 			background: $white;
 		}
 	}
 	
 	&.lhs:after,
-	.module-spares-and-accessories &:after {
+	.module-design-a-fireplace &:after {
 		left: 0;
 		margin-left: 0;
 	}

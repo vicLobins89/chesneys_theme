@@ -1268,9 +1268,9 @@ h2, .h2 {
     width: 3rem;
     height: 1px;
     background: #142128; }
-    .blog-module h2:after, .blog-module .h2:after {
+    .blog-module h2:after, .module-spares-and-accessories h2:after, .blog-module .h2:after, .module-spares-and-accessories .h2:after {
       background: #fff; }
-  h2.lhs:after, .module-spares-and-accessories h2:after, .h2.lhs:after, .module-spares-and-accessories .h2:after {
+  h2.lhs:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .module-design-a-fireplace .h2:after {
     left: 0;
     margin-left: 0; }
 
