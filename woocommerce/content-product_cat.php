@@ -46,10 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	//show category description
 	$term_object = get_queried_object();
 	?>
-	<div class="woocommerce-category-description">
-		<div class="title"><?php echo $term_object->name; ?></div>
-		<div class="description"><?php echo $term_object->description; ?></div>
-	</div>
+	<p class="description"><?php echo $term_object->description; ?></p>
 	
 	<?php
 	/**
