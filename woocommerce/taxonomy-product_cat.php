@@ -29,7 +29,8 @@ $args = array(
    'taxonomy' => 'product_cat'
 );
 $subcats = get_categories($args);
+print_r($subcats);
 
-if( is_product_category( $subcats ) ) {
-	wc_get_template( 'archive-product.php' );
-}
+//if( is_product_category( $subcats ) ) {
+//	wc_get_template( 'archive-product.php' );
+//}
