@@ -36,6 +36,7 @@ function woocommerce_subcats_from_parentcat_by_name($parent_cat_name) {
 
 	foreach ($subcats as $sc) {
 		array_push($subcat_names, $sc->slug);
+		woocommerce_subcats_from_parentcat_by_name($sc->slug);
 	}
 	
 	return $subcat_names;
