@@ -1060,6 +1060,8 @@ LAYOUT & GRID STYLES
   width: 100%;
   margin: 0 auto; }
 
+.row.wrap {
+  max-width: 1000px; }
 .row.full {
   padding: 0; }
   .row.full [class*="col-"] {
