@@ -1241,11 +1241,11 @@ h2, .h2 {
     width: 3rem;
     height: 1px;
     background: #142128; }
-    .lhs h2:after, .lhs .h2:after {
-      left: 0;
-      margin-left: 0; }
     .blog-module h2:after, .blog-module .h2:after {
       background: #fff; }
+  h2.lhs:after, .h2.lhs:after {
+    left: 0;
+    margin-left: 0; }
 
 h3, .h3 {
   font-size: 1.75em;
