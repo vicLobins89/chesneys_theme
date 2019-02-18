@@ -205,7 +205,7 @@ function bones_fonts() {
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
 
-//Page Slug Body Class
+// Page Slug Body Class
 function add_slug_body_class( $classes ) {
 	global $post;
 	if( isset( $post ) ) {
@@ -215,6 +215,20 @@ function add_slug_body_class( $classes ) {
 }
 add_filter( 'body_class', 'add_slug_body_class' );
 
+// Breadcrumbs
+function my_breadcrumb($theme_location = 'main', $separator = ' &gt; ') {
+
+    $items = wp_get_nav_menu_items($theme_location);
+    _wp_menu_item_classes_by_context( $items ); // Set up the class variables, including current-classes
+    $crumbs = array();
+
+    foreach($items as $item) {
+        if ($item->current_item_ancestor || $item->current) {
+            $crumbs[] = "<a href=\"{$item->url}\" title=\"{$item->title}\">{$item->title}</a>";
+        }
+    }
+    echo implode($separator, $crumbs);
+}
 
 // Page Excerpt
 add_post_type_support( 'page', 'excerpt' );

@@ -11,6 +11,8 @@ $acfClass = new CustomACF();
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							
+							<?php my_breadcrumb('main-nav'); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 								
@@ -19,8 +21,11 @@ $acfClass = new CustomACF();
 								<section class="row entry-content cf top" itemprop="articleBody">
 									<div class="cf">
 									<?php the_post_thumbnail('full'); ?>
-									<h1><?php the_title(); ?></h1>
-									<?php the_content(); ?>
+									
+									<div class="featured-copy">
+										<h1><?php the_title(); ?></h1>
+										<?php the_content(); ?>
+									</div>
 									</div>
 								</section>
 

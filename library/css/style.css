@@ -926,7 +926,7 @@ hr {
     font-size: 3.75em; }
 
 #wpcf7-f257-p2-o1,
-#wpcf7-f257-p13-o1, .full-features {
+#wpcf7-f257-p13-o1 {
   padding: 1rem;
   width: 60%;
   height: 80%;
@@ -949,15 +949,15 @@ hr {
   overflow-y: scroll; }
   @media only screen and (max-width: 767px) {
     #wpcf7-f257-p2-o1,
-    #wpcf7-f257-p13-o1, .full-features {
+    #wpcf7-f257-p13-o1 {
       width: 100%;
       height: 100%;
       left: 0;
       top: 0;
       padding: 0; } }
   #wpcf7-f257-p2-o1 form,
-  #wpcf7-f257-p13-o1 form, .full-features form, #wpcf7-f257-p2-o1 > div:not(.screen-reader-response),
-  #wpcf7-f257-p13-o1 > div:not(.screen-reader-response), .full-features > div:not(.screen-reader-response) {
+  #wpcf7-f257-p13-o1 form, #wpcf7-f257-p2-o1 > div:not(.screen-reader-response),
+  #wpcf7-f257-p13-o1 > div:not(.screen-reader-response) {
     width: 100%;
     margin: auto;
     padding: 3rem 3rem 0;
@@ -966,37 +966,37 @@ hr {
     border-radius: 4px;
     border: 1px solid #999999; }
   .active#wpcf7-f257-p2-o1,
-  .active#wpcf7-f257-p13-o1, .active.full-features {
+  .active#wpcf7-f257-p13-o1 {
     z-index: 999;
     opacity: 1;
     visibility: visible; }
   #wpcf7-f257-p2-o1 .dates,
-  #wpcf7-f257-p13-o1 .dates, .full-features .dates {
+  #wpcf7-f257-p13-o1 .dates {
     border: 3px solid #ff8700;
     border-radius: 4px;
     padding: 2rem; }
   @media only screen and (min-width: 768px) {
     #wpcf7-f257-p2-o1 p.date-from,
-    #wpcf7-f257-p13-o1 p.date-from, .full-features p.date-from, #wpcf7-f257-p2-o1 p.date-to,
-    #wpcf7-f257-p13-o1 p.date-to, .full-features p.date-to {
+    #wpcf7-f257-p13-o1 p.date-from, #wpcf7-f257-p2-o1 p.date-to,
+    #wpcf7-f257-p13-o1 p.date-to {
       width: 49% !important;
       display: inline-block;
       margin: 0 1.4% 0 0; } }
   #wpcf7-f257-p2-o1 p.date-from span,
-  #wpcf7-f257-p13-o1 p.date-from span, .full-features p.date-from span, #wpcf7-f257-p2-o1 p.date-from input,
-  #wpcf7-f257-p13-o1 p.date-from input, .full-features p.date-from input, #wpcf7-f257-p2-o1 p.date-to span,
-  #wpcf7-f257-p13-o1 p.date-to span, .full-features p.date-to span, #wpcf7-f257-p2-o1 p.date-to input,
-  #wpcf7-f257-p13-o1 p.date-to input, .full-features p.date-to input {
+  #wpcf7-f257-p13-o1 p.date-from span, #wpcf7-f257-p2-o1 p.date-from input,
+  #wpcf7-f257-p13-o1 p.date-from input, #wpcf7-f257-p2-o1 p.date-to span,
+  #wpcf7-f257-p13-o1 p.date-to span, #wpcf7-f257-p2-o1 p.date-to input,
+  #wpcf7-f257-p13-o1 p.date-to input {
     display: block; }
   #wpcf7-f257-p2-o1 p.date-to,
-  #wpcf7-f257-p13-o1 p.date-to, .full-features p.date-to {
+  #wpcf7-f257-p13-o1 p.date-to {
     margin-right: 0; }
   #wpcf7-f257-p2-o1 input:not([type="submit"]),
-  #wpcf7-f257-p13-o1 input:not([type="submit"]), .full-features input:not([type="submit"]), #wpcf7-f257-p2-o1 textarea,
-  #wpcf7-f257-p13-o1 textarea, .full-features textarea {
+  #wpcf7-f257-p13-o1 input:not([type="submit"]), #wpcf7-f257-p2-o1 textarea,
+  #wpcf7-f257-p13-o1 textarea {
     border: 1px solid #cccccc; }
   #wpcf7-f257-p2-o1:before,
-  #wpcf7-f257-p13-o1:before, .full-features:before {
+  #wpcf7-f257-p13-o1:before {
     content: '';
     position: fixed;
     background: rgba(0, 0, 0, 0.7);
@@ -1637,15 +1637,8 @@ POSTS & CONTENT STYLES
   position: relative;
   font-size: 1rem; }
 
-.featured-image {
-  width: 270%;
-  margin-left: -85%;
-  position: relative;
-  overflow: hidden;
-  font-size: 0; }
-
-.full-features > div {
-  background: #fff; }
+.featured-copy {
+  position: absolute; }
 
 .page-title {
   font-size: .8rem;

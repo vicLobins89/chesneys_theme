@@ -1020,20 +1020,8 @@ POSTS & CONTENT STYLES
 	font-size: 1rem;
 }
 
-.featured-image {
-	width: 270%;
-    margin-left: -85%;
-	position: relative;
-	overflow: hidden;
-	font-size: 0;
-}
-
-.full-features {
-	@extend %overlay;
-	
-	> div {
-		background: $white;
-	}
+.featured-copy {
+	position: absolute;
 }
 
 .page-title {
