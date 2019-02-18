@@ -43,9 +43,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 */
 	do_action( 'woocommerce_shop_loop_subcategory_title', $category );
 	
-	do_action( 'woocommerce_archive_description', $category );
-//	do_action( 'woocommerce_archive_description' );
-
+	//show category description
+	$term_object = get_queried_object();
+	?>
+	<div class="woocommerce-category-description">
+		<div class="title"><?php echo $term_object->name; ?></div>
+		<div class="description"><?php echo $term_object->description; ?></div>
+	</div>
+	
+	<?php
 	/**
 	 * woocommerce_after_subcategory_title hook.
 	 */
