@@ -19,22 +19,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-$cats_by_name = get_term_by('name', 'fireplaces', 'product_cat');
-$product_cat_ID = $cats_by_name->term_id;
-$args = array(
-   'hierarchical' => 1,
-   'show_option_none' => '',
-   'hide_empty' => 0,
-   'parent' => $product_cat_ID,
-   'taxonomy' => 'product_cat'
-);
-$subcats = get_categories($args);
-$subcat_names = array('fireplaces');
+function woocommerce_subcats_from_parentcat_by_name($parent_cat_name) {
+	$ids_by_name = get_term_by('name', $parent_cat_name, 'product_cat');
+	$product_cat_ID = $ids_by_name->term_id;
+	$args = array(
+		'hierarchical' => 1,
+		'show_option_none' => '',
+		'hide_empty' => 0,
+		'parent' => $product_cat_ID,
+		'taxonomy' => 'product_cat'
+	);
+	$subcats = get_categories($args);
+	$subcat_names = array($parent_cat_name);
 
-foreach ($subcats as $sc) {
-	array_push($subcat_names, $sc->slug);
+	foreach ($subcats as $sc) {
+		array_push($subcat_names, $sc->slug);
+	}
+	
+	return $subcat_names;
 }
 
-if( is_product_category( $subcat_names ) ) {
+if( is_product_category( woocommerce_subcats_from_parentcat_by_name('fireplaces') ) ) {
 	wc_get_template( 'archive-product.php' );
 }
