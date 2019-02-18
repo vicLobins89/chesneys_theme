@@ -1133,7 +1133,9 @@ LAYOUT & GRID STYLES
         height: 100%;
         left: 0;
         top: 0;
-        background: rgba(0, 0, 0, 0.5); }
+        background: rgba(0, 0, 0, 0.3); }
+    .module.module-spares-and-accessories .inner-module {
+      position: relative; }
     .module.module-spares-and-accessories p {
       width: 70%;
       margin: 1rem auto 2rem; }
