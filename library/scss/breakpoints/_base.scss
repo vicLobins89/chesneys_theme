@@ -374,6 +374,11 @@ LAYOUT & GRID STYLES
 			color: #fff;
 			position: relative;
 		}
+		
+		p:last-child,
+		.primary-btn {
+			margin: 0;
+		}
 	}
 }
 

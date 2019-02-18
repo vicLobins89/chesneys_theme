@@ -1125,6 +1125,14 @@ LAYOUT & GRID STYLES
       text-align: center;
       color: #fff;
       position: relative; }
+    .module.module-spares-and-accessories p:last-child,
+    .module.module-spares-and-accessories .primary-btn,
+    .module.module-spares-and-accessories .image-link + p,
+    .module.module-spares-and-accessories .image-link .wp-caption-text,
+    .image-link .module.module-spares-and-accessories .wp-caption-text,
+    .module.module-spares-and-accessories a.comment-reply-link,
+    .module.module-spares-and-accessories #submit {
+      margin: 0; }
 
 .blog-wrapper {
   background: #f5f3f1; }
