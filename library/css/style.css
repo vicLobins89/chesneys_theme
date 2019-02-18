@@ -1340,6 +1340,9 @@ HEADER STYLES
         .searchbox #ajaxsearchlite1 .probox .proinput input.autocomplete,
         .searchbox div.asl_w .probox .proinput input.autocomplete {
           opacity: 0; }
+      .searchbox #ajaxsearchlite1 .probox .proclose svg,
+      .searchbox div.asl_w .probox .proclose svg {
+        margin-top: -8px; }
       .searchbox #ajaxsearchlite1 .probox .promagnifier,
       .searchbox div.asl_w .probox .promagnifier {
         height: 2rem; }
