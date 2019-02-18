@@ -1125,6 +1125,15 @@ LAYOUT & GRID STYLES
       text-align: center;
       color: #fff;
       position: relative; }
+      .module.module-spares-and-accessories > .cf:before, .module.module-spares-and-accessories > .comment-respond:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5); }
     .module.module-spares-and-accessories p {
       width: 70%;
       margin: 1rem auto 2rem; }
