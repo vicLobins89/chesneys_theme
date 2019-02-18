@@ -375,9 +375,15 @@ LAYOUT & GRID STYLES
 			position: relative;
 		}
 		
+		p {
+			width: 70%;
+    		margin: 1rem auto 2rem;
+		}
+		
 		p:last-child,
 		.primary-btn {
 			margin: 0;
+			font-size: 1em;
 		}
 	}
 }

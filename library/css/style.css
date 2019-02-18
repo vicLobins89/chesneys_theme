@@ -1125,6 +1125,9 @@ LAYOUT & GRID STYLES
       text-align: center;
       color: #fff;
       position: relative; }
+    .module.module-spares-and-accessories p {
+      width: 70%;
+      margin: 1rem auto 2rem; }
     .module.module-spares-and-accessories p:last-child,
     .module.module-spares-and-accessories .primary-btn,
     .module.module-spares-and-accessories .image-link + p,
@@ -1132,7 +1135,8 @@ LAYOUT & GRID STYLES
     .image-link .module.module-spares-and-accessories .wp-caption-text,
     .module.module-spares-and-accessories a.comment-reply-link,
     .module.module-spares-and-accessories #submit {
-      margin: 0; }
+      margin: 0;
+      font-size: 1em; }
 
 .blog-wrapper {
   background: #f5f3f1; }
