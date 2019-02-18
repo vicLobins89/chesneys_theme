@@ -1025,7 +1025,18 @@ POSTS & CONTENT STYLES
 	font-size: 1rem;
 }
 
+.menu-breadcrumb {
+	text-transform: uppercase;
+	font-family: $sans-serif;
+	font-size: .85em;
+	padding: 0 3rem;
+	width: 88%;
+	margin: .85em auto;
+}
+
 .featured {
+	padding-top: 0;
+	
 	> div {
 		position: relative;
 	}
