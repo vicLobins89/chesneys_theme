@@ -1655,14 +1655,14 @@ POSTS & CONTENT STYLES
   position: relative;
   padding: 0 1rem; }
 
-.featured-copy {
+.featured-copy, .module.module-design-a-fireplace {
   position: absolute;
   top: 2.5rem;
   left: 2rem;
   padding: 2rem;
   width: 30%;
   background: #f5f3f1; }
-  .featured-copy p {
+  .featured-copy p, .module.module-design-a-fireplace p {
     margin: 2rem 0; }
 
 .page-title {
