@@ -109,15 +109,17 @@ if ( woocommerce_product_loop() ) {
 	$prCatId = ( !empty($term->term_id) ) ? $term->term_id : 15;
 	$prCatName = ( !empty($term->slug) ) ? $term->slug : $code;
 	
+	echo 'fire';
+	
 	if( get_cat_ID($prCatName) ) {
-		$acfClass->render_blog($prCatName);
+//		$acfClass->render_blog($prCatName);
 		$acfClass->render_portfolio($prCatName);
 	} else {
 		$parentCats = get_ancestors($prCatId, 'product_cat');
 		foreach($parentCats as $parentCat){
 			$category = get_term_by('id', $parentCat, 'product_cat');
 			if( get_cat_ID($category->slug) ) {
-				$acfClass->render_blog($category->slug);
+//				$acfClass->render_blog($category->slug);
 				$acfClass->render_portfolio($category->slug);
 				break;
 			}
