@@ -1649,7 +1649,8 @@ POSTS & CONTENT STYLES
   margin: .85em auto; }
 
 .featured.top {
-  padding-top: 0; }
+  padding-top: 0;
+  padding-bottom: 0; }
 .featured > div {
   position: relative; }
 
