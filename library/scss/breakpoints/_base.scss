@@ -1020,8 +1020,19 @@ POSTS & CONTENT STYLES
 	font-size: 1rem;
 }
 
+.featured {
+	> div {
+		position: relative;
+	}
+}
+
 .featured-copy {
 	position: absolute;
+	top: 2.5rem;
+	left: 2rem;
+	padding: 2rem;
+	width: 30%;
+	background: $brown;
 }
 
 .page-title {

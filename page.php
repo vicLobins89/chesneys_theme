@@ -23,12 +23,12 @@ $acfClass = new CustomACF();
 								
 							<?php // MAIN CONTENT ?>
 							<?php if( has_post_thumbnail() && is_page() ) : ?>
-								<section class="row entry-content cf top" itemprop="articleBody">
+								<section class="row entry-content cf top featured" itemprop="articleBody">
 									<div class="cf">
 									<?php the_post_thumbnail('full'); ?>
 									
 									<div class="featured-copy">
-										<h1><?php the_title(); ?></h1>
+										<h1 class="h2"><?php the_title(); ?></h1>
 										<?php the_content(); ?>
 									</div>
 									</div>

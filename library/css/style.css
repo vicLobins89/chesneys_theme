@@ -1637,8 +1637,16 @@ POSTS & CONTENT STYLES
   position: relative;
   font-size: 1rem; }
 
+.featured > div {
+  position: relative; }
+
 .featured-copy {
-  position: absolute; }
+  position: absolute;
+  top: 2.5rem;
+  left: 2rem;
+  padding: 2rem;
+  width: 30%;
+  background: #cbc3bb; }
 
 .page-title {
   font-size: .8rem;
