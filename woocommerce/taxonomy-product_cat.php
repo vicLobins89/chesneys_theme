@@ -23,6 +23,8 @@ function woocommerce_subcats_from_parentcat_by_name($parent_cat_name) {
 	$ids_by_name = get_term_by('name', $parent_cat_name, 'product_cat');
 	$product_cat_ID = $ids_by_name->term_id;
 	$args = array(
+		"hide_empty" => 0,
+		'include' => 'all',
 		'hierarchical' => 1,
 		'show_option_none' => '',
 		'hide_empty' => 0,
