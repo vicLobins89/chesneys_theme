@@ -236,6 +236,7 @@ function woocommerce_category_image() {
 	    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
 	    $image = wp_get_attachment_url( $thumbnail_id );
 	    if ( $image ) {
+			?> <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1> <?php
 		    echo '<img src="' . $image . '" alt="' . $cat->name . '" />';
 		}
 	}
