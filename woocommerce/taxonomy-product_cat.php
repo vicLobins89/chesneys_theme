@@ -41,6 +41,8 @@ function woocommerce_subcats_from_parentcat_by_name($parent_cat_name) {
 	return $subcat_names;
 }
 
+print_r( woocommerce_subcats_from_parentcat_by_name('fireplaces') );
+
 if( is_product_category( woocommerce_subcats_from_parentcat_by_name('fireplaces') ) ) {
 	wc_get_template( 'archive-product.php' );
 }
