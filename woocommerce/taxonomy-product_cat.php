@@ -19,6 +19,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if( is_product_category( array( 'fireplaces' ) ) ) {
+$cats_by_name = get_term_by('name', 'fireplaces', 'product_cat');
+$product_cat_ID = $cats_by_name->term_id;
+$args = array(
+   'hierarchical' => 1,
+   'show_option_none' => '',
+   'hide_empty' => 0,
+   'parent' => $product_cat_ID,
+   'taxonomy' => 'product_cat'
+);
+$subcats = get_categories($args);
+
+if( is_product_category( $subcats ) ) {
 	wc_get_template( 'archive-product.php' );
 }
