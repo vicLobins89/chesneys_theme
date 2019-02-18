@@ -337,6 +337,8 @@ LAYOUT & GRID STYLES
 }
 
 .module {
+	position: relative;
+	
 	&.module-design-a-fireplace {
 		width: 100%;
 		height: 0;
