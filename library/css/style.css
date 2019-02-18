@@ -1694,8 +1694,9 @@ POSTS & CONTENT STYLES
   text-transform: uppercase;
   font-family: "Univers", Helvetica, Arial, sans-serif;
   font-size: .85em;
-  padding: 0 4rem;
-  width: 88%;
+  padding: 0 1rem;
+  width: 90%;
+  max-width: 1400px;
   margin: .85em auto; }
 
 .featured.top {
