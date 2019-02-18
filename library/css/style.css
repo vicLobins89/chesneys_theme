@@ -1644,7 +1644,7 @@ POSTS & CONTENT STYLES
   text-transform: uppercase;
   font-family: "Univers", Helvetica, Arial, sans-serif;
   font-size: .85em;
-  padding: 0 3rem;
+  padding: 0 4rem;
   width: 88%;
   margin: .85em auto; }
 
@@ -1652,7 +1652,8 @@ POSTS & CONTENT STYLES
   padding-top: 0;
   padding-bottom: 0; }
 .featured > div {
-  position: relative; }
+  position: relative;
+  padding: 0 1rem; }
 
 .featured-copy {
   position: absolute;

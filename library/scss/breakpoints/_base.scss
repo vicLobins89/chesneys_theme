@@ -1029,7 +1029,7 @@ POSTS & CONTENT STYLES
 	text-transform: uppercase;
 	font-family: $sans-serif;
 	font-size: .85em;
-	padding: 0 3rem;
+	padding: 0 4rem;
 	width: 88%;
 	margin: .85em auto;
 }
@@ -1042,6 +1042,7 @@ POSTS & CONTENT STYLES
 	
 	> div {
 		position: relative;
+		padding: 0 1rem;
 	}
 }
 
