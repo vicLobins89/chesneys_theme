@@ -215,26 +215,6 @@ function add_slug_body_class( $classes ) {
 }
 add_filter( 'body_class', 'add_slug_body_class' );
 
-// Breadcrumbs
-function my_breadcrumb( $separator = ' &gt; ') {
-	$locations = get_nav_menu_locations();
-	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
-		$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
-		$items = wp_get_nav_menu_items($menu->term_id);
-	}
-																						   
-//	$items = wp_get_nav_menu_items($theme_location);
-    _wp_menu_item_classes_by_context( $items ); // Set up the class variables, including current-classes
-    $crumbs = array();
-
-    foreach($items as $item) {
-        if ($item->current_item_ancestor || $item->current) {
-            $crumbs[] = "<a href=\"{$item->url}\" title=\"{$item->title}\">{$item->title}</a>";
-        }
-    }
-    echo implode($separator, $crumbs);
-}
-
 // Page Excerpt
 add_post_type_support( 'page', 'excerpt' );
 
