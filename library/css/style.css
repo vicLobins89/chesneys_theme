@@ -1650,6 +1650,8 @@ POSTS & CONTENT STYLES
   padding: 2rem;
   width: 30%;
   background: #f5f3f1; }
+  .featured-copy p {
+    margin: 2rem 0; }
 
 .page-title {
   font-size: .8rem;
