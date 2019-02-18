@@ -29,8 +29,12 @@ $args = array(
    'taxonomy' => 'product_cat'
 );
 $subcats = get_categories($args);
-print_r($subcats);
+$subcat_names = array();
 
-//if( is_product_category( $subcats ) ) {
-//	wc_get_template( 'archive-product.php' );
-//}
+foreach ($subcats as $sc) {
+	array_push($subcat_names, $sc->slug);
+}
+
+if( is_product_category( $subcat_names ) ) {
+	wc_get_template( 'archive-product.php' );
+}
