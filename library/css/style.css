@@ -1293,9 +1293,11 @@ h2, .h2 {
     background: #142128; }
     .blog-module h2:after, .module-spares-and-accessories h2:after, .blog-module .h2:after, .module-spares-and-accessories .h2:after {
       background: #fff; }
-  h2.lhs:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .module-design-a-fireplace .h2:after {
+  h2.lhs:after, h2.woocommerce-loop-category__title:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .h2.woocommerce-loop-category__title:after, .module-design-a-fireplace .h2:after {
     left: 0;
     margin-left: 0; }
+  h2.woocommerce-loop-category__title .count, .h2.woocommerce-loop-category__title .count {
+    display: none; }
 
 h3, .h3 {
   font-size: 1.75em;

@@ -594,9 +594,14 @@ h2, .h2 {
 	}
 	
 	&.lhs:after,
+	&.woocommerce-loop-category__title:after,
 	.module-design-a-fireplace &:after {
 		left: 0;
 		margin-left: 0;
+	}
+	
+	&.woocommerce-loop-category__title .count {
+		display: none;
 	}
 }
 
