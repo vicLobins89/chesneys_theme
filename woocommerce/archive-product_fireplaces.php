@@ -30,6 +30,9 @@ $acfClass = new CustomACF();
  */
 do_action( 'woocommerce_before_main_content' );
 
+$menu_breadcrumb = new Menu_Breadcrumb( 'main-nav' );
+$menu_breadcrumb->render( ' &sol;&sol; ', '<p class="menu-breadcrumb"><a href="'.home_url().'">Homepage</a> // ', '</p>' );	
+
 ?>
 <header class="row entry-content cf woocommerce-products-header featured">
 	<div class="cf">
