@@ -240,7 +240,7 @@ function woocommerce_category_image() {
 		}
 	}
 }
-add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
+add_action( 'woocommerce_show_page_title', 'woocommerce_category_image', 2 );
 
 // Display subcat descriptions
 function my_theme_woocommerce_taxonomy_archive_description($category) {
