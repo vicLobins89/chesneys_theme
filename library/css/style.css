@@ -1103,22 +1103,20 @@ LAYOUT & GRID STYLES
 
 .module {
   position: relative; }
-  .module.module-design-a-fireplace {
-    padding-top: 0; }
-    .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
-      position: relative;
-      width: 100%;
-      max-width: calc(1400px - 2rem);
-      height: 0;
-      padding-top: 48.76%; }
-    .module.module-design-a-fireplace .inner-module {
-      top: auto !important;
-      bottom: 2.5rem; }
-      .module.module-design-a-fireplace .inner-module p:last-child {
-        margin: 0; }
-      .module.module-design-a-fireplace .inner-module .primary-btn, .module.module-design-a-fireplace .inner-module .image-link + p, .module.module-design-a-fireplace .inner-module .image-link .wp-caption-text, .image-link .module.module-design-a-fireplace .inner-module .wp-caption-text, .module.module-design-a-fireplace .inner-module a.comment-reply-link, .module.module-design-a-fireplace .inner-module #submit {
-        font-size: 1rem;
-        margin: 0; }
+  .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
+    position: relative;
+    width: 100%;
+    max-width: calc(1400px - 2rem);
+    height: 0;
+    padding-top: 48.76%; }
+  .module.module-design-a-fireplace .inner-module {
+    top: auto !important;
+    bottom: 2.5rem; }
+    .module.module-design-a-fireplace .inner-module p:last-child {
+      margin: 0; }
+    .module.module-design-a-fireplace .inner-module .primary-btn, .module.module-design-a-fireplace .inner-module .image-link + p, .module.module-design-a-fireplace .inner-module .image-link .wp-caption-text, .image-link .module.module-design-a-fireplace .inner-module .wp-caption-text, .module.module-design-a-fireplace .inner-module a.comment-reply-link, .module.module-design-a-fireplace .inner-module #submit {
+      font-size: 1rem;
+      margin: 0; }
 
 .blog-wrapper {
   background: #f5f3f1; }

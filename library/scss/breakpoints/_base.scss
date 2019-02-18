@@ -339,9 +339,7 @@ LAYOUT & GRID STYLES
 .module {
 	position: relative;
 	
-	&.module-design-a-fireplace {
-		padding-top: 0;
-		
+	&.module-design-a-fireplace {		
 		> .cf {
 			position: relative;
 			width: 100%;
