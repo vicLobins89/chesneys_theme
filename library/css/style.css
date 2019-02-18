@@ -1135,7 +1135,7 @@ LAYOUT & GRID STYLES
     .image-link .module.module-spares-and-accessories .wp-caption-text,
     .module.module-spares-and-accessories a.comment-reply-link,
     .module.module-spares-and-accessories #submit {
-      margin: 0;
+      margin: 0 auto;
       font-size: 1em; }
 
 .blog-wrapper {
@@ -1697,7 +1697,7 @@ POSTS & CONTENT STYLES
 .featured-copy, .module.module-design-a-fireplace .inner-module {
   position: absolute;
   top: 2.5rem;
-  left: 2rem;
+  left: 3rem;
   padding: 2rem;
   width: 30%;
   background: #f5f3f1; }
