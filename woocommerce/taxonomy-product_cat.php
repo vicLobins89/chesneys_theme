@@ -29,7 +29,7 @@ $args = array(
    'taxonomy' => 'product_cat'
 );
 $subcats = get_categories($args);
-$subcat_names = array();
+$subcat_names = array('fireplaces');
 
 foreach ($subcats as $sc) {
 	array_push($subcat_names, $sc->slug);
