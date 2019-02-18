@@ -1099,6 +1099,11 @@ LAYOUT & GRID STYLES
   .row.folio-module .entry-title + p {
     margin: .5rem 0; }
 
+.module.module-design-a-fireplace {
+  width: 100%;
+  height: 0;
+  padding-top: calc(1858px / 906px * 100%); }
+
 .blog-wrapper {
   background: #f5f3f1; }
   .blog-wrapper .blog-module {
@@ -1655,14 +1660,14 @@ POSTS & CONTENT STYLES
   position: relative;
   padding: 0 1rem; }
 
-.featured-copy, .module.module-design-a-fireplace {
+.featured-copy, .module.module-design-a-fireplace .inner-module {
   position: absolute;
   top: 2.5rem;
   left: 2rem;
   padding: 2rem;
   width: 30%;
   background: #f5f3f1; }
-  .featured-copy p, .module.module-design-a-fireplace p {
+  .featured-copy p, .module.module-design-a-fireplace .inner-module p {
     margin: 2rem 0; }
 
 .page-title {
