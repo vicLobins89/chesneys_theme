@@ -236,12 +236,11 @@ function woocommerce_category_image() {
 	    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
 	    $image = wp_get_attachment_url( $thumbnail_id );
 	    if ( $image ) {
-			?> <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1> <?php
 		    echo '<img src="' . $image . '" alt="' . $cat->name . '" />';
 		}
 	}
 }
-add_action( 'woocommerce_show_page_title', 'woocommerce_category_image', 2 );
+add_action( 'woocommerce_before_main_content', 'woocommerce_category_image', 2 );
 
 // Display subcat descriptions
 function my_theme_woocommerce_taxonomy_archive_description($category) {
