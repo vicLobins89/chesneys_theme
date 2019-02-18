@@ -1104,7 +1104,7 @@ LAYOUT & GRID STYLES
   .module.module-design-a-fireplace {
     width: 100%;
     height: 0;
-    padding-top: calc(100 * (906px / 1858px)); }
+    padding-top: 48.76%; }
     .module.module-design-a-fireplace .inner-module {
       top: auto;
       bottom: 2.5rem; }
