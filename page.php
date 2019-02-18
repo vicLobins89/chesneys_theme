@@ -12,7 +12,10 @@ $acfClass = new CustomACF();
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							
-							<?php if ( function_exists( 'menu_breadcrumb') ) { menu_breadcrumb( 'main-nav' ); } ?>
+							<?php
+							$menu_breadcrumb = new Menu_Breadcrumb( 'main-nav' );   // 'main' is the Menu Location
+							$menu_breadcrumb->render( ' &raquo; ', '<p class="menu-breadcrumb">', '</p>' );
+							?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 								
