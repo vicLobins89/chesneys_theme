@@ -1035,7 +1035,9 @@ POSTS & CONTENT STYLES
 }
 
 .featured {
-	padding-top: 0;
+	&.top {
+		padding-top: 0;
+	}
 	
 	> div {
 		position: relative;

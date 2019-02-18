@@ -1648,10 +1648,10 @@ POSTS & CONTENT STYLES
   width: 88%;
   margin: .85em auto; }
 
-.featured {
+.featured.top {
   padding-top: 0; }
-  .featured > div {
-    position: relative; }
+.featured > div {
+  position: relative; }
 
 .featured-copy {
   position: absolute;
