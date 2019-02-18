@@ -248,8 +248,8 @@ function woocommerce_category_image() {
 		</div> <?php
 	}
 }
-remove_action( 'woocommerce_archive_description', 'action_woocommerce_archive_description', 10, 2 );
-add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
+remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
+add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 15 );
 
 // Display subcat descriptions
 function my_theme_woocommerce_taxonomy_archive_description($category) {
