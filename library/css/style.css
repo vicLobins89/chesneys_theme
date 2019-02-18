@@ -1117,6 +1117,14 @@ LAYOUT & GRID STYLES
     .module.module-design-a-fireplace .inner-module .primary-btn, .module.module-design-a-fireplace .inner-module .image-link + p, .module.module-design-a-fireplace .inner-module .image-link .wp-caption-text, .image-link .module.module-design-a-fireplace .inner-module .wp-caption-text, .module.module-design-a-fireplace .inner-module a.comment-reply-link, .module.module-design-a-fireplace .inner-module #submit {
       font-size: 1rem;
       margin: 0; }
+  .module.module-spares-and-accessories {
+    padding: 0; }
+    .module.module-spares-and-accessories > .cf, .module.module-spares-and-accessories > .comment-respond {
+      max-width: none;
+      padding: 7.5% 0;
+      text-align: center;
+      color: #fff;
+      position: relative; }
 
 .blog-wrapper {
   background: #f5f3f1; }
@@ -1262,7 +1270,7 @@ h2, .h2 {
     background: #142128; }
     .blog-module h2:after, .blog-module .h2:after {
       background: #fff; }
-  h2.lhs:after, .h2.lhs:after {
+  h2.lhs:after, .module-spares-and-accessories h2:after, .h2.lhs:after, .module-spares-and-accessories .h2:after {
     left: 0;
     margin-left: 0; }
 

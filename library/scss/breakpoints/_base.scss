@@ -339,7 +339,7 @@ LAYOUT & GRID STYLES
 .module {
 	position: relative;
 	
-	&.module-design-a-fireplace {		
+	&.module-design-a-fireplace {	
 		> .cf {
 			position: relative;
 			width: 100%;
@@ -361,6 +361,18 @@ LAYOUT & GRID STYLES
 				font-size: 1rem;
 				margin: 0;
 			}
+		}
+	}
+	
+	&.module-spares-and-accessories {
+		padding: 0;
+		
+		> .cf {
+			max-width: none;
+			padding: 7.5% 0;
+			text-align: center;
+			color: #fff;
+			position: relative;
 		}
 	}
 }
@@ -554,7 +566,8 @@ h2, .h2 {
 		}
 	}
 	
-	&.lhs:after {
+	&.lhs:after,
+	.module-spares-and-accessories &:after {
 		left: 0;
 		margin-left: 0;
 	}

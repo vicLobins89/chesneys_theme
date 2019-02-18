@@ -16,7 +16,7 @@ class CustomACF {
 			<section class="row entry-content cf module module-<?php echo $post->post_name; ?>">
 				<div class="cf" <?php echo $moduleBackground; ?>>
 					<div class="inner-module">
-						<h2 class="lhs"><?php the_title(); ?></h2>
+						<h2><?php the_title(); ?></h2>
 						<?php the_content(); ?>
 					</div>
 				</div>
