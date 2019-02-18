@@ -216,8 +216,13 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 // Breadcrumbs
-function my_breadcrumb($theme_location = 'main-nav', $separator = ' &gt; ') {
-	$items = wp_get_nav_menu_items($theme_location);
+function my_breadcrumb( $separator = ' &gt; ') {
+	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+		$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+		$items = wp_get_nav_menu_items($menu->term_id);
+	}
+																						   
+//	$items = wp_get_nav_menu_items($theme_location);
     _wp_menu_item_classes_by_context( $items ); // Set up the class variables, including current-classes
     $crumbs = array();
 
