@@ -24,10 +24,7 @@ function woocommerce_subcats_from_parentcat_by_name($parent_cat_name) {
 	$product_cat_ID = $ids_by_name->term_id;
 	$args = array(
 		"hide_empty" => 0,
-		'include' => 'all',
-		'hierarchical' => 1,
 		'show_option_none' => '',
-		'hide_empty' => 0,
 		'parent' => $product_cat_ID,
 		'taxonomy' => 'product_cat'
 	);
@@ -36,7 +33,6 @@ function woocommerce_subcats_from_parentcat_by_name($parent_cat_name) {
 
 	foreach ($subcats as $sc) {
 		array_push($subcat_names, $sc->slug);
-		woocommerce_subcats_from_parentcat_by_name($sc->slug);
 	}
 	
 	return $subcat_names;
