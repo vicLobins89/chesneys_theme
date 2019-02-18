@@ -248,6 +248,7 @@ function woocommerce_category_image() {
 		</div> <?php
 	}
 }
+remove_action( 'woocommerce_archive_description' );
 add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
 
 // Display subcat descriptions
