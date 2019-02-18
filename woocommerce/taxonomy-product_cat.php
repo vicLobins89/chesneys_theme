@@ -19,4 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-wc_get_template( 'archive-product.php' );
+if( is_product_category( array( 'fireplaces' ) ) ) {
+	wc_get_template( 'archive-product.php' );
+}
