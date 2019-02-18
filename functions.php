@@ -259,6 +259,6 @@ function my_theme_woocommerce_taxonomy_archive_description($category) {
 add_action( 'woocommerce_after_subcategory_title', 'my_theme_woocommerce_taxonomy_archive_description');
 
 // Remove breadcrumbs
-emove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
