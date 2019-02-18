@@ -243,7 +243,7 @@ function woocommerce_category_image() {
 		$subtitle = '<p class="description">'.$cat_desc.'</p>';
 		
 	  	?> <div class="featured-copy">
-			<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+			<h1 class="h2 lhs"><?php woocommerce_page_title(); ?></h1>
 			<?php echo $subtitle; ?>
 		</div> <?php
 	}
