@@ -84,10 +84,16 @@ if ( woocommerce_product_loop() ) {
 	if($rows) {
 		foreach($rows as $row) {
 			$modules = $row['module'];
-			$blog_feed = $row['blog_feed'];
-			$portfolio_feed = $row['portfolio_feed'];
+			$blog_feeds = $row['blog_feed'];
+			$portfolio_feeds = $row['portfolio_feed'];
 			foreach($modules as $module) {
 				$acfClass->render_modules($module['module_block']);
+			}
+			foreach($blog_feeds as $blog_feed ) {
+				$acfClass->render_blog($blog_feed['choose_category']);
+			}
+			foreach($portfolio_feeds as $portfolio_feed) {
+				$acfClass->render_portfolio($portfolio_feed['choose_portfolio']);
 			}
 		}
 	}
