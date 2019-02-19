@@ -1296,8 +1296,10 @@ h2, .h2 {
   h2.lhs:after, h2.woocommerce-loop-category__title:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .h2.woocommerce-loop-category__title:after, .module-design-a-fireplace .h2:after {
     left: 0;
     margin-left: 0; }
-  h2.woocommerce-loop-category__title .count, .h2.woocommerce-loop-category__title .count {
-    display: none; }
+  h2.woocommerce-loop-category__title, .h2.woocommerce-loop-category__title {
+    padding: 0; }
+    h2.woocommerce-loop-category__title .count, .h2.woocommerce-loop-category__title .count {
+      display: none; }
 
 h3, .h3 {
   font-size: 1.75em;
@@ -1929,6 +1931,14 @@ POSTS & CONTENT STYLES
   .tags a {
     color: #666666;
     text-decoration: none; }
+
+.woocommerce ul.products li.product a {
+  display: block;
+  background: none;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out; }
+  .woocommerce ul.products li.product a:hover, .woocommerce ul.products li.product a:focus {
+    background: #f5f3f1; }
 
 /******************************************************************
 PAGE NAVI STYLES

@@ -600,8 +600,12 @@ h2, .h2 {
 		margin-left: 0;
 	}
 	
-	&.woocommerce-loop-category__title .count {
-		display: none;
+	&.woocommerce-loop-category__title {
+		padding: 0;
+		
+		.count {
+			display: none;
+		}
 	}
 }
 
@@ -1426,6 +1430,22 @@ POSTS & CONTENT STYLES
 	a {
 		color: lighten($black, 40%);
 		text-decoration: none;
+	}
+}
+
+.woocommerce {
+	ul.products {
+		li.product {
+			a {
+				display: block;
+				background: none;
+				@include transition(background 0.3s ease-in-out);
+				
+				&:hover, &:focus {
+					background: $light-brown;
+				}
+			}
+		}
 	}
 }
 
