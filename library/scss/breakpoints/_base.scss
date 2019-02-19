@@ -1456,6 +1456,11 @@ POSTS & CONTENT STYLES
 }
 
 .woocommerce {
+	.woocommerce-result-count,
+	.woocommerce-ordering {
+		display: none;
+	}
+	
 	ul.products {
 		li.product {
 			a {
