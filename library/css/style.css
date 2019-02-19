@@ -1066,6 +1066,8 @@ LAYOUT & GRID STYLES
   padding: 0; }
   .row.full [class*="col-"] {
     padding: 0; }
+.row.shop-loop {
+  padding-bottom: 0; }
 .row.folio-module .folio-item .text {
   padding: .5rem .75rem 1.5rem;
   background: #fff;
@@ -1158,7 +1160,8 @@ LAYOUT & GRID STYLES
       margin-bottom: 0; }
     .module.module-need-help .inner-module .primary-btn.inline, .module.module-need-help .inner-module .image-link + p.inline, .module.module-need-help .inner-module .image-link .inline.wp-caption-text, .image-link .module.module-need-help .inner-module .inline.wp-caption-text, .module.module-need-help .inner-module a.inline.comment-reply-link, .module.module-need-help .inner-module .inline#submit {
       margin: 1rem 1.5rem 0;
-      font-size: 1rem; }
+      font-size: .9rem;
+      min-width: 14rem; }
 
 .blog-wrapper {
   background: #f5f3f1; }
@@ -1302,7 +1305,7 @@ h2, .h2 {
     width: 3rem;
     height: 1px;
     background: #142128; }
-    .blog-module h2:after, .module-spares-and-accessories h2:after, .blog-module .h2:after, .module-spares-and-accessories .h2:after {
+    .blog-module h2:after, .module-spares-and-accessories h2:after, .module-need-help h2:after, .blog-module .h2:after, .module-spares-and-accessories .h2:after, .module-need-help .h2:after {
       background: #fff; }
   h2.lhs:after, h2.woocommerce-loop-category__title:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .h2.woocommerce-loop-category__title:after, .module-design-a-fireplace .h2:after {
     left: 0;

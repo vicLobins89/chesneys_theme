@@ -278,6 +278,10 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
+	&.shop-loop {
+		padding-bottom: 0;
+	}
+	
 	&.folio-module {
 		.folio-item {
 			.text {
@@ -416,7 +420,8 @@ LAYOUT & GRID STYLES
 			
 			.primary-btn.inline {
 				margin: 1rem 1.5rem 0;
-				font-size: 1rem;
+				font-size: .9rem;
+				min-width: 14rem;
 			}
 		}
 	}
@@ -607,7 +612,8 @@ h2, .h2 {
 		background: $text-color;
 		
 		.blog-module &,
-		.module-spares-and-accessories & {
+		.module-spares-and-accessories &,
+		.module-need-help & {
 			background: $white;
 		}
 	}

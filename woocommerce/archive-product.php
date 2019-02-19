@@ -53,7 +53,7 @@ if ( woocommerce_product_loop() ) {
 	 */
 	do_action( 'woocommerce_before_shop_loop' );
 	?>
-	<section class="entry-content row cf"><div class="cf"><div class="col-12">
+	<section class="entry-content row cf shop-loop"><div class="cf"><div class="col-12">
 	<?php
 	woocommerce_product_loop_start();
 
