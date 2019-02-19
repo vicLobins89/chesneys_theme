@@ -124,7 +124,10 @@ if ( woocommerce_product_loop() ) {
 	$parent_cats = get_ancestors($term->term_id, 'product_cat');
 	$category = get_term_by('id', $parent_cats[0], 'product_cat');
 	if( get_term_meta($term->term_id, 'display_type', true) == 'products' ||  get_term_meta($term->term_id, 'display_type', true) == null) {
+		echo '<section class="row entry-content cf"><div class="cf"><div class="col-12">';
+		echo '<h2>You might also like<h2>';
 		echo do_shortcode('[products category="'.$category->slug.'" limit="3" columns="3" class="related-products"]');
+		echo '</section></div></div>';
 	}
 	
 	// Blog / Case Study Posts (Automation)
