@@ -287,4 +287,11 @@ if (!function_exists('loop_columns')) {
 }
 add_filter('loop_shop_columns', 'loop_columns', 999);
 
+// Description on archive
+function excerpt_in_product_archives() {
+    the_excerpt();
+}
+add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 40 );
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
