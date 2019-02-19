@@ -25,24 +25,17 @@ class CustomACF {
 		}
 	}
 	
-	public function render_blog($post_cat = null) {
-		$post_num = get_sub_field('post_count');
-		$all_cats = get_sub_field('all_categories');
-		$post_category = ($all_cats) ? 'all' : get_sub_field('choose_category');
+	public function render_blog($blog_feed = null) {
+		$all_cats = ($blog_feed['all_categories']) ? $blog_feed['all_categories'] : get_sub_field('all_categories');
+		$post_category = ($blog_feed['choose_portfolio']) ? $blog_feed['choose_portfolio'] : get_sub_field('choose_portfolio');
+		$post_num = ($blog_feed['post_count']) ? $blog_feed['post_count'] : get_sub_field('post_count');
 		
 		global $post;
-		if( $post_category == 'all' ) {
+		if( $all_cats == true ) {
 			$args = array(
 				'post_type' => 'post',
 				'post_status' => 'publish',
 				'posts_per_page' => $post_num,
-			);
-		} elseif( isset($post_cat) || !is_null($post_cat) ) {
-			$args = array(
-				'post_type' => 'post',
-				'post_status' => 'publish',
-				'category_name' => $post_cat,
-				'posts_per_page' => 1,
 			);
 		} else {
 			$args = array(

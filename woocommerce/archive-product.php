@@ -106,32 +106,32 @@ if ( woocommerce_product_loop() ) {
 		}
 	}
 	
-	// Blog / Case Study Posts
+	// Blog / Case Study Posts (Automation)
 	// Getting URL
-//	$r = $_SERVER['REQUEST_URI'];
-//	$r = explode('/', $r);
-//	$r = array_filter($r);
-//	$r = array_merge($r, array());
-//	$code = ( !empty($r[1]) ) ? $r[1] : 'fireplaces';
+	/*$r = $_SERVER['REQUEST_URI'];
+	$r = explode('/', $r);
+	$r = array_filter($r);
+	$r = array_merge($r, array());
+	$code = ( !empty($r[1]) ) ? $r[1] : 'fireplaces';
 	
 	// Getting Category Name
-//	$prCatId = ( !empty($term->term_id) ) ? $term->term_id : 15;
-//	$prCatName = ( !empty($term->slug) ) ? $term->slug : $code;
-//	
-//	if( get_cat_ID($prCatName) ) {
-//		$acfClass->render_blog($prCatName);
-//		$acfClass->render_portfolio($prCatName);
-//	} else {
-//		$parentCats = get_ancestors($prCatId, 'product_cat');
-//		foreach($parentCats as $parentCat){
-//			$category = get_term_by('id', $parentCat, 'product_cat');
-//			if( get_cat_ID($category->slug) ) {
-//				$acfClass->render_blog($category->slug);
-//				$acfClass->render_portfolio($category->slug);
-//				break;
-//			}
-//		}
-//	}
+	$prCatId = ( !empty($term->term_id) ) ? $term->term_id : 15;
+	$prCatName = ( !empty($term->slug) ) ? $term->slug : $code;
+	
+	if( get_cat_ID($prCatName) ) {
+		$acfClass->render_blog($prCatName);
+		$acfClass->render_portfolio($prCatName);
+	} else {
+		$parentCats = get_ancestors($prCatId, 'product_cat');
+		foreach($parentCats as $parentCat){
+			$category = get_term_by('id', $parentCat, 'product_cat');
+			if( get_cat_ID($category->slug) ) {
+				$acfClass->render_blog($category->slug);
+				$acfClass->render_portfolio($category->slug);
+				break;
+			}
+		}
+	}*/
 } else {
 	/**
 	 * Hook: woocommerce_no_products_found.
