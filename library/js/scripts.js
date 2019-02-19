@@ -21,6 +21,13 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
+	// Add image-link to caption
+	$('a.image-link').each(function(){
+		var url = $(this).attr("href");
+		$(this).next('.wp-caption').attr('onclick','window.location="'+url+'";');
+	});
+	
+	// Fix breadcrumb link
 	$('.menu-breadcrumb a:contains("Fireplaces")').each(function(){
 		var oldUrl = $(this).attr("href");
 		var newUrl = oldUrl.replace("/category/fireplaces", "/fireplaces");
