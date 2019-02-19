@@ -25,7 +25,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <li <?php wc_product_class(); ?>>
-	<?php get_sidebar('product_info'); ?>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
