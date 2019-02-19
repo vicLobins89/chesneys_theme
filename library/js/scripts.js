@@ -15,18 +15,13 @@ function updateViewportDimensions() {
 // setting the viewport width
 var viewport = updateViewportDimensions();
 
-var link = document.querySelector('.woocommerce-loop-product__link');
-link.href = '';
-
 jQuery(document).ready(function($) {
 	
 	"use strict";
 	
 	viewport = updateViewportDimensions();
 	
-	$('.menu-breadcrumb aa[href*="/test/"]').css('color', 'black');
-	
-	$('a[href*="/test/"]').attr('href');
+	$('a.woocommerce-loop-product__link').removeAttr("href");
 	
 	$('.menu-breadcrumb a:contains("Fireplaces")').each(function(){
 		var oldUrl = $(this).attr("href");
