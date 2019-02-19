@@ -122,7 +122,7 @@ if ( woocommerce_product_loop() ) {
 	
 	// Related products
 	if( get_term_meta($term->term_id, 'display_type', true) == 'products' ||  get_term_meta($term->term_id, 'display_type', true) == null) {
-		echo do_shortcode('[products limit="3" columns="3" class="related-products"]');
+		echo do_shortcode('[products category="reproduction" limit="3" columns="3" class="related-products"]');
 	}
 	
 	// Blog / Case Study Posts (Automation)
