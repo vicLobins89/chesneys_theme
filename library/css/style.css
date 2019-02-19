@@ -1935,10 +1935,10 @@ POSTS & CONTENT STYLES
   transition: background 0.3s ease-in-out; }
   .woocommerce ul.products li.product a:hover, .woocommerce ul.products li.product a:focus {
     background: #f5f3f1; }
-.woocommerce ul.products li.product.woocommerce-loop-category__title {
+.woocommerce ul.products li.product .woocommerce-loop-category__title {
   padding: 0;
   margin: 0 1rem; }
-  .woocommerce ul.products li.product.woocommerce-loop-category__title .count {
+  .woocommerce ul.products li.product .woocommerce-loop-category__title .count {
     display: none; }
 .woocommerce ul.products li.product p {
   margin: 0 1rem; }
