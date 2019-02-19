@@ -281,19 +281,19 @@ add_filter('loop_shop_columns', 'loop_columns', 999);
 
 // Description on archive
 function excerpt($limit) {
-  $excerpt = explode(' ', get_the_excerpt(), $limit);
-  if (count($excerpt)>=$limit) {
-    array_pop($excerpt);
-    $excerpt = implode(" ",$excerpt).'...';
-  } else {
-    $excerpt = implode(" ",$excerpt);
-  }	
-  $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
-  return $excerpt;
+	$excerpt = explode(' ', get_the_excerpt(), $limit);
+	if (count($excerpt)>=$limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ",$excerpt).'...';
+	} else {
+		$excerpt = implode(" ",$excerpt);
+	}	
+	$excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+	return $excerpt;
 }
 
 function excerpt_in_product_archives() {
-    echo excerpt(10);
+    echo '<p>'.excerpt(20).'</p>';
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 40 );
 
