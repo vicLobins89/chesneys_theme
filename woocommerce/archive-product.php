@@ -119,7 +119,7 @@ if ( woocommerce_product_loop() ) {
 			}
 		}
 	}
-	print_r(get_term_meta($term->term_id, 'display_type'));
+	print_r(get_term_meta($term->term_id, 'display_type', true));
 	if( get_term_meta($term->term_id, 'display_type') == 'products' ) {
 		echo 'helo';
 	}
