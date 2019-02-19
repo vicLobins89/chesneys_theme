@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 	
 	$('a[href*="/test/"]').attr('href');
 	
-	$('.menu-breadcrumb a[href*="/category/fireplaces"]').each(function(){
+	$('.menu-breadcrumb a:contains("Fireplaces")').each(function(){
 		var oldUrl = $(this).attr("href");
 		var newUrl = oldUrl.replace("/category/fireplaces", "/fireplaces");
 		$(this).attr("href", newUrl);
