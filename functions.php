@@ -260,14 +260,13 @@ add_action( 'woocommerce_after_subcategory_title', 'my_theme_woocommerce_taxonom
 
 // Breadcrumbs
 function jk_woocommerce_breadcrumbs($defaults) {
-	print_r($defaults);
     return array(
-		'delimiter'   => ' &#47; ',
-		'wrap_before' => '<nav class="woocommerce-breadcrumb" itemprop="breadcrumb">',
-		'wrap_after'  => '</nav>',
+		'delimiter'   => ' &#47;&#47; ',
+		'wrap_before' => '<p class="menu-breadcrumb" itemprop="breadcrumb">',
+		'wrap_after'  => '</p>',
 		'before'      => '',
 		'after'       => '',
-		'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+		'home'        => _x( 'Homepage', 'breadcrumb', 'woocommerce' ),
 	);
 }
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
