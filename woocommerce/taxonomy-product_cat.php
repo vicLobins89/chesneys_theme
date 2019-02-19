@@ -38,8 +38,10 @@ function woocommerce_subcats_from_parentcat_by_name($parent_cat_name) {
 	return $subcat_names;
 }
 
-if( is_product_category( woocommerce_subcats_from_parentcat_by_name('fireplaces') ) ) {
-	wc_get_template( 'archive-product_fireplaces.php' );
-} else {
-	wc_get_template( 'archive-product.php' );
-}
+wc_get_template( 'archive-product.php' );
+
+//if( is_product_category( woocommerce_subcats_from_parentcat_by_name('fireplaces') ) ) {
+//	wc_get_template( 'archive-product_fireplaces.php' );
+//} else {
+//	wc_get_template( 'archive-product.php' );
+//}
