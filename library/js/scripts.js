@@ -21,8 +21,6 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
-	$('a.woocommerce-loop-product__link').removeAttr("href");
-	
 	$('.menu-breadcrumb a:contains("Fireplaces")').each(function(){
 		var oldUrl = $(this).attr("href");
 		var newUrl = oldUrl.replace("/category/fireplaces", "/fireplaces");
