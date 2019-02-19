@@ -1464,6 +1464,10 @@ POSTS & CONTENT STYLES
 	
 	ul.products {
 		li.product {
+			.attachment-woocommerce_thumbnail {
+				width: 100%;
+			}
+			
 			a {
 				display: block;
 				background: none;
