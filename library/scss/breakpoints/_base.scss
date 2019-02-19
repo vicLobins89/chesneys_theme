@@ -1511,6 +1511,10 @@ POSTS & CONTENT STYLES
 		visibility: hidden;
 		@include transition(all 0.3s ease-in-out);
 		
+		p {
+			
+		}
+		
 		a {
 			color: inherit;
 		}
