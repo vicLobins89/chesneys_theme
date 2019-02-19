@@ -873,7 +873,7 @@ NAVIGATION STYLES
 		
 		&.separator,
 		&.separator a {
-			cursor: none;
+			cursor: default;
 		}
 		
 		> a {
@@ -937,7 +937,7 @@ NAVIGATION STYLES
 		ul.sub-menu,
 		ul.children {
 			position: absolute;
-			top: 4rem;
+			top: 3.6rem;
 			left: 0;
 			height: 16rem;
 			overflow: visible;

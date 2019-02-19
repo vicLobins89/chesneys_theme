@@ -271,4 +271,12 @@ function jk_woocommerce_breadcrumbs($defaults) {
 }
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 
+// Rows
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 3;
+	}
+}
+add_filter('loop_shop_columns', 'loop_columns', 999);
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

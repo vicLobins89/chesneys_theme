@@ -1509,7 +1509,7 @@ NAVIGATION STYLES
     vertical-align: middle;
     color: #766e63; }
     .primary-nav > li.separator, .primary-nav > li.separator a {
-      cursor: none; }
+      cursor: default; }
     .primary-nav > li > a {
       color: inherit;
       outline: none; }
@@ -1554,7 +1554,7 @@ NAVIGATION STYLES
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {
       position: absolute;
-      top: 4rem;
+      top: 3.6rem;
       left: 0;
       height: 16rem;
       overflow: visible;
