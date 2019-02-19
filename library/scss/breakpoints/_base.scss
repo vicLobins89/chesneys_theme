@@ -1517,12 +1517,12 @@ POSTS & CONTENT STYLES
 		@include transition(all 0.3s ease-in-out);
 		
 		a {
-			color: inherit;
+			color: inherit !important;
 			margin: 1.5rem 0;
 			font-family: $sans-serif;
 			text-decoration: dotted !important;
 			background: none !important;
-			font: 1rem;
+			font-size: 1rem;
 			
 			&:hover {
 				text-decoration: underline !important;

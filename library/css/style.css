@@ -1983,12 +1983,12 @@ POSTS & CONTENT STYLES
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   .woocommerce .hover-text a {
-    color: inherit;
+    color: inherit !important;
     margin: 1.5rem 0;
     font-family: "Univers", Helvetica, Arial, sans-serif;
     text-decoration: dotted !important;
     background: none !important;
-    font: 1rem; }
+    font-size: 1rem; }
     .woocommerce .hover-text a:hover {
       text-decoration: underline !important; }
 
