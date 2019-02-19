@@ -21,6 +21,8 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
+	$('.menu-breadcrumb a:nth-child(2)').css('color', 'black');
+	
 	// Menu
 	$('.menu-button').on('click', function(){
 		$(this).parents('.header').toggleClass('active');

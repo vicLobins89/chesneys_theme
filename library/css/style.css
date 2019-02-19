@@ -1720,6 +1720,9 @@ POSTS & CONTENT STYLES
   .featured-copy p, .module.module-design-a-fireplace .inner-module p {
     margin: 2rem 0; }
 
+.custom-content {
+  margin: 2.5rem auto 0; }
+
 .page-title {
   font-size: .8rem;
   z-index: 100; }
