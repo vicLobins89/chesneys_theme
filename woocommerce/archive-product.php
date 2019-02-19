@@ -126,7 +126,7 @@ if ( woocommerce_product_loop() ) {
 	if( get_term_meta($term->term_id, 'display_type', true) == 'products' ||  get_term_meta($term->term_id, 'display_type', true) == null) {
 		echo '<section class="row entry-content cf"><div class="cf"><div class="col-12">';
 		echo '<h2 style="text-align: center;">You might also like</h2><p>&nbsp;</p>';
-		echo do_shortcode('[products category="'.$category->slug.'" limit="3" columns="3" class="related-products"]');
+		echo do_shortcode('[products orderby="rand" category="'.$category->slug.'" limit="3" columns="3" class="related-products"]');
 		echo '</section></div></div>';
 	}
 	
