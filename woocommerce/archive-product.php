@@ -37,7 +37,7 @@ do_action( 'woocommerce_before_main_content' );
 		<?php
 		do_action( 'woocommerce_archive_description' );
 		$custom_content = get_field('custom_content', $term);
-		echo '<div class="custom-content">'.$custom_content.'</div>';
+		echo '<div class="custom-content narrow-para">'.$custom_content.'</div>';
 		?>
 	</div>
 </header>
