@@ -21,7 +21,15 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
-	$('.menu-breadcrumb a:nth-child(2)').css('color', 'black');
+	$('.menu-breadcrumb aa[href*="/test/"]').css('color', 'black');
+	
+	$('a[href*="/test/"]').attr('href');
+	
+	$('.menu-breadcrumb a[href*="/category/fireplaces"]').each(function(){
+		var oldUrl = $(this).attr("href");
+		var newUrl = oldUrl.replace("/category/fireplaces", "/fireplaces");
+		$(this).attr("href", newUrl);
+	});
 	
 	// Menu
 	$('.menu-button').on('click', function(){
