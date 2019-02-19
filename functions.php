@@ -259,6 +259,17 @@ function my_theme_woocommerce_taxonomy_archive_description($category) {
 add_action( 'woocommerce_after_subcategory_title', 'my_theme_woocommerce_taxonomy_archive_description');
 
 // Breadcrumbs
-//remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+function jk_woocommerce_breadcrumbs($defaults) {
+	print_r($defaults);
+    return array(
+		'delimiter'   => ' &#47; ',
+		'wrap_before' => '<nav class="woocommerce-breadcrumb" itemprop="breadcrumb">',
+		'wrap_after'  => '</nav>',
+		'before'      => '',
+		'after'       => '',
+		'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+	);
+}
+add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
