@@ -119,9 +119,11 @@ if ( woocommerce_product_loop() ) {
 			}
 		}
 	}
-	print_r(get_term_meta($term->term_id, 'display_type', true));
-	if( get_term_meta($term->term_id, 'display_type') == 'products' ) {
+
+	if( get_term_meta($term->term_id, 'display_type', true) == 'products' ||  get_term_meta($term->term_id, 'display_type', true) == null) {
 		echo 'helo';
+	} else {
+		echo 'bye';
 	}
 	
 	// Blog / Case Study Posts (Automation)
