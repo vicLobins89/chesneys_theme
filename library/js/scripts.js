@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
 	// Add image-link to caption
 	$('a.image-link').each(function(){
 		var url = $(this).attr("href");
-		$(this).next('.wp-caption').attr('onclick','window.location="'+url+'";');
+		$(this).next('.wp-caption-text').attr('onclick','window.location="'+url+'";');
 	});
 	
 	// Fix breadcrumb link
