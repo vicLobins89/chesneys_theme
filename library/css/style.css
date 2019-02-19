@@ -1986,8 +1986,11 @@ POSTS & CONTENT STYLES
     color: inherit;
     margin: 1.5rem 0;
     font-family: "Univers", Helvetica, Arial, sans-serif;
-    text-decoration: underline !important;
-    background: none !important; }
+    text-decoration: dotted !important;
+    background: none !important;
+    font: 1rem; }
+    .woocommerce .hover-text a:hover {
+      text-decoration: underline !important; }
 
 /******************************************************************
 PAGE NAVI STYLES
