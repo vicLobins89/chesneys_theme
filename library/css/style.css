@@ -1157,7 +1157,8 @@ LAYOUT & GRID STYLES
     .module.module-need-help .inner-module p:last-child {
       margin-bottom: 0; }
     .module.module-need-help .inner-module .primary-btn.inline, .module.module-need-help .inner-module .image-link + p.inline, .module.module-need-help .inner-module .image-link .inline.wp-caption-text, .image-link .module.module-need-help .inner-module .inline.wp-caption-text, .module.module-need-help .inner-module a.inline.comment-reply-link, .module.module-need-help .inner-module .inline#submit {
-      margin: 1rem 2rem 0; }
+      margin: 1rem 1.5rem 0;
+      font-size: 1rem; }
 
 .blog-wrapper {
   background: #f5f3f1; }
