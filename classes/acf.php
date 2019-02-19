@@ -91,30 +91,17 @@ class CustomACF {
 		wp_reset_postdata();
 	}
 	
-	public function render_portfolio($folio_cat = null) {
-		$post_num = get_sub_field('post_count');
-		$all_cats = get_sub_field('all_categories');
-		$folio_category = ($all_cats) ? 'all' : get_sub_field('choose_portfolio');
+	public function render_portfolio($portfolio_feed = null) {
+		$all_cats = ($portfolio_feed['all_categories']) ? $portfolio_feed['all_categories'] : get_sub_field('all_categories');
+		$folio_category = ($portfolio_feed['choose_portfolio']) ? $portfolio_feed['choose_portfolio'] : et_sub_field('choose_portfolio');
+		$post_num = ($portfolio_feed['post_count']) ? $portfolio_feed['post_count'] : get_sub_field('post_count');
 		
 		global $post;
-		if( $folio_category == 'all' ) {
+		if( $all_cats == true ) {
 			$args2 = array(
 				'post_type' => 'case_study',
 				'post_status' => 'publish',
 				'posts_per_page' => $post_num
-			);
-		} elseif( isset($folio_cat) || !is_null($folio_cat) ) {
-			$args2 = array(
-				'post_type' => 'case_study',
-				'post_status' => 'publish',
-				'posts_per_page' => 5,
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'portfolio_cat',
-						'field'    => 'slug',
-						'terms'    => $folio_cat
-					)
-				)
 			);
 		} else {
 			$args2 = array(
