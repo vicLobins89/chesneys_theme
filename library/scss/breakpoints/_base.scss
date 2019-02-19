@@ -282,6 +282,14 @@ LAYOUT & GRID STYLES
 		padding-bottom: 0;
 	}
 	
+	&.related-products {
+		text-align: center;
+		
+		p {
+			margin: 1.5rem 0;
+		}
+	}
+	
 	&.folio-module {
 		.folio-item {
 			.text {
