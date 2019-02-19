@@ -122,6 +122,7 @@ if ( woocommerce_product_loop() ) {
 	
 	// Related products
 	$parent_cats = get_ancestors($term->term_id, 'product_cat');
+	print_r($parent_cats);
 	if( get_term_meta($term->term_id, 'display_type', true) == 'products' ||  get_term_meta($term->term_id, 'display_type', true) == null) {
 		echo do_shortcode('[products category="'.$parent_cats[0]->slug.'" limit="3" columns="3" class="related-products"]');
 	}
