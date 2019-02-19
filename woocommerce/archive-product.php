@@ -92,13 +92,13 @@ if ( woocommerce_product_loop() ) {
 				}
 			}
 			
-			if( isset($blog_feeds) ) {
+			if( is_array($blog_feeds) || is_object($blog_feeds) ) {
 				foreach($blog_feeds as $blog_feed ) {
 					$acfClass->render_blog($blog_feed);
 				}
 			}
 			
-			if( isset($portfolio_feeds) ) {
+			if( is_array($portfolio_feeds) || is_object($portfolio_feeds) ) {
 				foreach($portfolio_feeds as $portfolio_feed) {
 					$acfClass->render_portfolio($portfolio_feed);
 				}
