@@ -283,7 +283,7 @@ add_filter('loop_shop_columns', 'loop_columns', 999);
 function excerpt_in_product_archives() {
     the_excerpt();
 }
-add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 40 );
+add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 10 );
 
 // Short desc limit
 function prefix_filter_woocommerce_short_description( $post_post_excerpt ) { 
