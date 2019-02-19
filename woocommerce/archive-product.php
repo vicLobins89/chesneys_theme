@@ -93,6 +93,7 @@ if ( woocommerce_product_loop() ) {
 //				$acfClass->render_blog($blog_feed['choose_category']);
 //			}
 			foreach($portfolio_feeds as $portfolio_feed) {
+				print_r($portfolio_feed);
 				$acfClass->render_portfolio($portfolio_feed['choose_portfolio']);
 			}
 		}
