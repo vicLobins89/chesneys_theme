@@ -37,7 +37,7 @@ do_action( 'woocommerce_before_main_content' );
 		<?php
 		do_action( 'woocommerce_archive_description' );
 		$custom_content = get_field('custom_content', $term);
-		echo $custom_content;
+		echo '<div class="custom-content">'.$custom_content.'</div>';
 		?>
 	</div>
 </header>
@@ -52,7 +52,9 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
 	do_action( 'woocommerce_before_shop_loop' );
-
+	?>
+	<section class="entry-content row cf">
+	<?php
 	woocommerce_product_loop_start();
 
 	if ( wc_get_loop_prop( 'total' ) ) {
@@ -71,7 +73,9 @@ if ( woocommerce_product_loop() ) {
 	}
 
 	woocommerce_product_loop_end();
-
+	?>
+	</section>
+	<?php
 	/**
 	 * Hook: woocommerce_after_shop_loop.
 	 *
