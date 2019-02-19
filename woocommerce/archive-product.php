@@ -120,7 +120,9 @@ if ( woocommerce_product_loop() ) {
 		}
 	}
 	
-	print_r(get_term_meta($term->term_id, 'display_type'));
+	if( get_term_meta($term->term_id, 'display_type') == 'products' || !isset(get_term_meta($term->term_id, 'display_type')) ) {
+		echo 'helo';
+	}
 	
 	// Blog / Case Study Posts (Automation)
 	// Getting URL
