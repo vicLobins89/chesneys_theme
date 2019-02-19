@@ -1520,7 +1520,8 @@ POSTS & CONTENT STYLES
 			color: inherit;
 			margin: 1.5rem 0;
 			font-family: $sans-serif;
-			text-decoration: underline;
+			text-decoration: underline !important;
+			background: none !important;
 		}
 	}
 }
