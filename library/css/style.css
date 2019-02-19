@@ -1719,6 +1719,9 @@ POSTS & CONTENT STYLES
 .featured > div {
   position: relative;
   padding: 0 1rem; }
+.featured img {
+  width: 100%;
+  height: auto; }
 
 .featured-copy, .module.module-design-a-fireplace .inner-module {
   position: absolute;
