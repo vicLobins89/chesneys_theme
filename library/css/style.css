@@ -1956,6 +1956,7 @@ POSTS & CONTENT STYLES
     background: #f5f3f1;
     color: #142128; }
 .woocommerce ul.products li.product .woocommerce-loop-category__title {
+  font-family: "Univers", Helvetica, Arial, sans-serif;
   padding: 0;
   margin: 0 1rem; }
   .woocommerce ul.products li.product .woocommerce-loop-category__title .count {
