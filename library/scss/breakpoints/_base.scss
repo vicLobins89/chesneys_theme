@@ -1513,14 +1513,14 @@ POSTS & CONTENT STYLES
 		color: $white;
 		opacity: 0;
 		visibility: hidden;
+		padding: 2rem;
 		@include transition(all 0.3s ease-in-out);
-		
-		p {
-			
-		}
 		
 		a {
 			color: inherit;
+			margin: 1.5rem 0;
+			font-family: $sans-serif;
+			text-decoration: underline;
 		}
 	}
 }
