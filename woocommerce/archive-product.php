@@ -22,6 +22,11 @@ require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
 $term = get_queried_object();
 
+if( term_is_ancestor_of(16, $term->term_id, 'product_cat') ) {
+	remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
+	remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 20);
+}
+
 /**
  * Hook: woocommerce_before_main_content.
  *
