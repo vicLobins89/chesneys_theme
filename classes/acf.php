@@ -92,6 +92,7 @@ class CustomACF {
 	}
 	
 	public function render_portfolio($portfolio_feed = null) {
+		print_r($portfolio_feed);
 		$all_cats = ($portfolio_feed['all_categories']) ? $portfolio_feed['all_categories'] : get_sub_field('all_categories');
 		$folio_category = ($portfolio_feed['choose_portfolio']) ? $portfolio_feed['choose_portfolio'] : get_sub_field('choose_portfolio');
 		$post_num = ($portfolio_feed['post_count']) ? $portfolio_feed['post_count'] : get_sub_field('post_count');
