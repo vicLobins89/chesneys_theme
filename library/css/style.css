@@ -1069,6 +1069,7 @@ LAYOUT & GRID STYLES
 .row.shop-loop {
   padding-bottom: 0; }
 .row.related-products {
+  padding-bottom: 0;
   text-align: center; }
   .row.related-products p {
     margin: 1.5rem 0; }
