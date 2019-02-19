@@ -27,7 +27,7 @@ class CustomACF {
 	
 	public function render_blog($blog_feed = null) {
 		$all_cats = ($blog_feed['all_categories']) ? $blog_feed['all_categories'] : get_sub_field('all_categories');
-		$post_category = ($blog_feed['choose_portfolio']) ? $blog_feed['choose_portfolio'] : get_sub_field('choose_portfolio');
+		$post_category = ($blog_feed['choose_category']) ? $blog_feed['choose_category'] : get_sub_field('choose_category');
 		$post_num = ($blog_feed['post_count']) ? $blog_feed['post_count'] : get_sub_field('post_count');
 		
 		global $post;
