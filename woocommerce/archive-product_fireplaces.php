@@ -31,7 +31,7 @@ $acfClass = new CustomACF();
 do_action( 'woocommerce_before_main_content' );
 
 ?>
-<header class="row entry-content cf woocommerce-products-header featured">
+<header class="row entry-content cf woocommerce-products-header featured top">
 	<div class="cf">
 		<?php do_action( 'woocommerce_archive_description' ); ?>
 	</div>

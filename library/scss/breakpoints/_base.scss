@@ -871,6 +871,11 @@ NAVIGATION STYLES
 		vertical-align: middle;
 		color: $dark-brown;
 		
+		&.separator,
+		&.separator a {
+			cursor: none;
+		}
+		
 		> a {
 			color: inherit;
 			outline: none;

@@ -1508,6 +1508,8 @@ NAVIGATION STYLES
     margin: 0;
     vertical-align: middle;
     color: #766e63; }
+    .primary-nav > li.separator, .primary-nav > li.separator a {
+      cursor: none; }
     .primary-nav > li > a {
       color: inherit;
       outline: none; }
