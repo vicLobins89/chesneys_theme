@@ -599,14 +599,6 @@ h2, .h2 {
 		left: 0;
 		margin-left: 0;
 	}
-	
-	&.woocommerce-loop-category__title {
-		padding: 0;
-		
-		.count {
-			display: none;
-		}
-	}
 }
 
 h3, .h3 {
@@ -1444,6 +1436,19 @@ POSTS & CONTENT STYLES
 				&:hover, &:focus {
 					background: $light-brown;
 				}
+			}
+			
+			&.woocommerce-loop-category__title {
+				padding: 0;
+				margin: 0 1rem;
+
+				.count {
+					display: none;
+				}
+			}
+			
+			p {
+				margin: 0 1rem;
 			}
 		}
 	}
