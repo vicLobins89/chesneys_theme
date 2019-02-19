@@ -26,13 +26,13 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 ?>
 <li <?php wc_product_class(); ?>>
 	<div class="hover-text">
-		<p>Detailed product information for this fireplace will be available online soon.</p>
-
-		<a href="#">DOWNLOAD A BROCHURE</a>
-
-		<a href="#">REQUEST A CALL-BACK</a>
-
-		<a href="#">FIND A STOCKIST</a>
+		<?php
+		$post_id = 986;
+		$queried_post = get_post($post_id);
+		$title = $queried_post->post_title;
+		echo $title;
+		echo $queried_post->post_content;
+		?>
 	</div>
 	<?php
 	/**
