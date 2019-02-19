@@ -15,6 +15,8 @@ function updateViewportDimensions() {
 // setting the viewport width
 var viewport = updateViewportDimensions();
 
+document.querySelector('.woocommerce-loop-product__link').link.href = '';
+
 jQuery(document).ready(function($) {
 	
 	"use strict";
