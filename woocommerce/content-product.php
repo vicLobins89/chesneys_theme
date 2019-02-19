@@ -18,6 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 global $product;
+$term = get_queried_object();
 
 // Ensure visibility.
 if ( empty( $product ) || ! $product->is_visible() ) {
@@ -25,14 +26,15 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <li <?php wc_product_class(); ?>>
-	<div class="hover-text">
-		<?php
-		// Adding product info content block
+	<?php
+	if( term_is_ancestor_of(16, $term->term_id, 'product_cat') ) {
+		echo '<div class="hover-text">';
 		$post_id = 1003;
 		$queried_post = get_post($post_id);
 		echo $queried_post->post_content;
-		?>
-	</div>
+		echo '</div>';
+	}
+	?>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
