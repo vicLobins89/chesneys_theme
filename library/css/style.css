@@ -1947,7 +1947,8 @@ POSTS & CONTENT STYLES
 .woocommerce .woocommerce-ordering {
   display: none; }
 .woocommerce ul.products li.product .attachment-woocommerce_thumbnail {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 1rem; }
 .woocommerce ul.products li.product a {
   display: block;
   background: none;
