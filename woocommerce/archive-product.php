@@ -20,6 +20,7 @@ defined( 'ABSPATH' ) || exit;
 get_header( 'shop' );
 require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
+$term = get_queried_object();
 
 /**
  * Hook: woocommerce_before_main_content.
@@ -33,7 +34,11 @@ do_action( 'woocommerce_before_main_content' );
 ?>
 <header class="row entry-content cf woocommerce-products-header featured top">
 	<div class="cf">
-		<?php do_action( 'woocommerce_archive_description' ); ?>
+		<?php
+		do_action( 'woocommerce_archive_description' );
+		$custom_content = get_field('custom_content', $term);
+		echo $custom_content;
+		?>
 	</div>
 </header>
 <?php
@@ -73,8 +78,6 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_pagination - 10
 	 */
 	do_action( 'woocommerce_after_shop_loop' );
-	
-	$term = get_queried_object();
 	
 	// Modules
 	$rows = get_field('rows', $term);
