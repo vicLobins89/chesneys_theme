@@ -401,6 +401,24 @@ LAYOUT & GRID STYLES
 			font-size: 1em;
 		}
 	}
+	
+	&.module-need-help {
+		background: $dark-gray;
+		color: $white;
+    	text-align: center;
+		padding-top: 5%;
+		padding-bottom: 5%;
+		
+		.inner-module {
+			p:last-child {
+				margin-bottom: 0;
+			}
+			
+			.primary-btn.inline {
+				margin: 1rem 2rem 0;
+			}
+		}
+	}
 }
 
 .blog-wrapper {

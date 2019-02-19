@@ -1148,6 +1148,16 @@ LAYOUT & GRID STYLES
     .module.module-spares-and-accessories #submit {
       margin: 0 auto;
       font-size: 1em; }
+  .module.module-need-help {
+    background: #142128;
+    color: #fff;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%; }
+    .module.module-need-help .inner-module p:last-child {
+      margin-bottom: 0; }
+    .module.module-need-help .inner-module .primary-btn.inline, .module.module-need-help .inner-module .image-link + p.inline, .module.module-need-help .inner-module .image-link .inline.wp-caption-text, .image-link .module.module-need-help .inner-module .inline.wp-caption-text, .module.module-need-help .inner-module a.inline.comment-reply-link, .module.module-need-help .inner-module .inline#submit {
+      margin: 1rem 2rem 0; }
 
 .blog-wrapper {
   background: #f5f3f1; }
