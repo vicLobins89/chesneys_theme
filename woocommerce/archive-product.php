@@ -122,7 +122,7 @@ if ( woocommerce_product_loop() ) {
 	
 	// Related products
 	$parent_cats = get_ancestors($term->term_id, 'product_cat');
-	$category = get_term_by('id', $parent_cats[0] 'product_cat');
+	$category = get_term_by('id', $parent_cats[0], 'product_cat');
 	print_r($category);
 	
 	if( get_term_meta($term->term_id, 'display_type', true) == 'products' ||  get_term_meta($term->term_id, 'display_type', true) == null) {
