@@ -25,6 +25,15 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <li <?php wc_product_class(); ?>>
+	<div class="hover-text">
+		<p>Detailed product information for this fireplace will be available online soon.</p>
+
+		<a href="#">DOWNLOAD A BROCHURE</a>
+
+		<a href="#">REQUEST A CALL-BACK</a>
+
+		<a href="#">FIND A STOCKIST</a>
+	</div>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
