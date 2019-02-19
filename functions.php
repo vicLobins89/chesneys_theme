@@ -285,5 +285,12 @@ function excerpt_in_product_archives() {
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 40 );
 
+function rh_woocommerce_short_description($post_excerpt){
+    if (is_product()) {
+        $post_excerpt = substr($post_excerpt, 0, 10);
+    }
+    return $post_excerpt;
+}
+add_filter('woocommerce_short_description', 'rh_woocommerce_short_description', 10, 1);
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

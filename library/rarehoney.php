@@ -279,7 +279,7 @@ function bones_excerpt_more($more) {
 }
 
 function excerptLength($length) {
-    return 10;
+    return 20;
 }
 add_filter('excerpt_length', 'excerptLength');
 
