@@ -278,12 +278,6 @@ function loop_columns() {
 }
 add_filter('loop_shop_columns', 'loop_columns', 999);
 
-function new_loop_shop_per_page( $cols ) {
-	$cols = 9;
-	return $cols;
-}
-add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
-
 // Description on archive
 function excerpt($limit) {
 	$excerpt = explode(' ', get_the_excerpt(), $limit);
