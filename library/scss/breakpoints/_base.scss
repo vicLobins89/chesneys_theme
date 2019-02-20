@@ -1190,12 +1190,16 @@ POSTS & CONTENT STYLES
 		left: auto;
 		background: none;
 		
-		h2 {
+		.h2 {
 			text-align: center;
 			
 			&:after {
 				margin-left: -1.5rem;
 				left: 50%;
+			}
+			
+			+ p {
+				font-size: 160%;
 			}
 		}
 	}
