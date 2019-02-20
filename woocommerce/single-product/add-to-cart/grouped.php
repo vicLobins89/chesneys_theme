@@ -51,6 +51,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 						case 'label':
 							$value  = '<label for="product-' . esc_attr( $grouped_product_child->get_id() ) . '">';
 							$value .= $grouped_product_child->is_visible() ? '<a href="' . esc_url( apply_filters( 'woocommerce_grouped_product_list_link', $grouped_product_child->get_permalink(), $grouped_product_child->get_id() ) ) . '">' . $grouped_product_child->get_name() . '</a>' : $grouped_product_child->get_name();
+							$value .= '<span>'.$grouped_product_child->get_sku().'</span>';
 							$value .= '</label>';
 							break;
 						case 'desc':
