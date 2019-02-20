@@ -20,6 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+$term = get_queried_object();
+
 get_header( 'shop' ); ?>
 
 	<?php
@@ -32,11 +34,16 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_before_main_content' );
 	?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( have_posts() ) : the_post();
 
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+			if( term_is_ancestor_of(67, $term->term_id, 'product_cat') || is_product_category(67) ) {
+				// Spares
+				wc_get_template_part( 'content', 'single-product_spares' );
+			} else {
+				wc_get_template_part( 'content', 'single-product' );
+			}
 
-		<?php endwhile; // end of the loop. ?>
+		endwhile; // end of the loop. ?>
 
 	<?php
 		/**

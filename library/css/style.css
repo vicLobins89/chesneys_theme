@@ -2034,6 +2034,8 @@ POSTS & CONTENT STYLES
     .woocommerce ul.products li.product a:not(.button):hover, .woocommerce ul.products li.product a:not(.button):focus {
       background: #f5f3f1;
       color: #142128; }
+  .woocommerce ul.products li.product .button {
+    margin: 0; }
   .woocommerce ul.products li.product .woocommerce-loop-category__title,
   .woocommerce ul.products li.product .woocommerce-loop-product__title {
     font-family: "Univers", Helvetica, Arial, sans-serif;
