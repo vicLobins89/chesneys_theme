@@ -37,7 +37,7 @@ get_header( 'shop' ); ?>
 	?>
 
 		<?php while ( have_posts() ) : the_post();
-
+			print_r($categories);
 			if ( in_array( 'spares', $categories ) ) {
 			  echo 'In audio';
 			  wc_get_template_part( 'content', 'single-product_spares' );
