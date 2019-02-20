@@ -1579,10 +1579,14 @@ POSTS & CONTENT STYLES
 				
 				.category-name {
 					font-family: $sans-serif;
+					text-transform: uppercase;
+    				font-size: .75em;
 				}
 				
 				.woocommerce-loop-product__title {
 					font-family: $serif;
+					text-transform: none;
+    				font-size: 1.25em;
 					
 					&:after {
 						bottom: auto;
