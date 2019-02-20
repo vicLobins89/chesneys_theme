@@ -292,7 +292,7 @@ function excerpt($limit) {
 }
 
 function excerpt_in_product_archives() {
-	if( excerpt() ) {
+	if( get_the_excerpt() ) {
 		echo '<p>'.excerpt(20).'</p>';
 	}
 }
