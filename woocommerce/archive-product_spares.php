@@ -22,6 +22,13 @@ require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
 $term = get_queried_object();
 
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 4;
+	}
+}
+add_filter('loop_shop_columns', 'loop_columns', 999);
+
 /**
  * Hook: woocommerce_before_main_content.
  *
