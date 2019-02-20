@@ -1974,7 +1974,7 @@ POSTS & CONTENT STYLES
   .woocommerce ul.products li.product .woocommerce-loop-product__title {
     font-family: "Univers", Helvetica, Arial, sans-serif;
     padding: 0;
-    margin: 0 1rem; }
+    margin: 0 1rem 1.25rem; }
     .woocommerce ul.products li.product .woocommerce-loop-category__title .count,
     .woocommerce ul.products li.product .woocommerce-loop-product__title .count {
       display: none; }
