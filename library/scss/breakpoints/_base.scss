@@ -1205,16 +1205,16 @@ POSTS & CONTENT STYLES
 				margin-right: auto !important;
 			}
 		}
-		
-		.spares-thumbs {
-			.wp-caption {
-				width: 31% !important;
-				margin-right: 2%;
-				
-				&:last-child {
-					margin-right: 0;
-				}
-			}
+	}
+}
+
+.spares-thumbs {
+	.wp-caption {
+		width: 31% !important;
+		margin-right: 2%;
+
+		&:last-child {
+			margin-right: 0;
 		}
 	}
 }

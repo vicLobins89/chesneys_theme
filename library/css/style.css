@@ -1765,11 +1765,12 @@ POSTS & CONTENT STYLES
         max-width: 70%;
         margin-left: auto !important;
         margin-right: auto !important; }
-    .stove-spares-header .featured-copy .spares-thumbs .wp-caption, .stove-spares-header .module.module-outdoor-living-shop .inner-module .spares-thumbs .wp-caption, .module.module-outdoor-living-shop .stove-spares-header .inner-module .spares-thumbs .wp-caption, .stove-spares-header .module.module-design-a-fireplace .inner-module .spares-thumbs .wp-caption, .module.module-design-a-fireplace .stove-spares-header .inner-module .spares-thumbs .wp-caption {
-      width: 31% !important;
-      margin-right: 2%; }
-      .stove-spares-header .featured-copy .spares-thumbs .wp-caption:last-child, .stove-spares-header .module.module-outdoor-living-shop .inner-module .spares-thumbs .wp-caption:last-child, .module.module-outdoor-living-shop .stove-spares-header .inner-module .spares-thumbs .wp-caption:last-child, .stove-spares-header .module.module-design-a-fireplace .inner-module .spares-thumbs .wp-caption:last-child, .module.module-design-a-fireplace .stove-spares-header .inner-module .spares-thumbs .wp-caption:last-child {
-        margin-right: 0; }
+
+.spares-thumbs .wp-caption {
+  width: 31% !important;
+  margin-right: 2%; }
+  .spares-thumbs .wp-caption:last-child {
+    margin-right: 0; }
 
 .custom-content {
   margin: 2.5rem auto 0; }
