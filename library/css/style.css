@@ -1108,18 +1108,18 @@ LAYOUT & GRID STYLES
 
 .module {
   position: relative; }
-  .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
+  .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
     position: relative;
     width: 100%;
     max-width: calc(1400px - 2rem);
     height: 0;
     padding-top: 48.76%; }
-  .module.module-design-a-fireplace .inner-module {
+  .module.module-outdoor-living-shop .inner-module, .module.module-design-a-fireplace .inner-module {
     top: auto !important;
     bottom: 2.5rem; }
-    .module.module-design-a-fireplace .inner-module p:last-child {
+    .module.module-outdoor-living-shop .inner-module p:last-child, .module.module-design-a-fireplace .inner-module p:last-child {
       margin: 0; }
-    .module.module-design-a-fireplace .inner-module .primary-btn, .module.module-design-a-fireplace .inner-module .image-link + p, .module.module-design-a-fireplace .inner-module .image-link .wp-caption-text, .image-link .module.module-design-a-fireplace .inner-module .wp-caption-text, .module.module-design-a-fireplace .inner-module a.comment-reply-link, .module.module-design-a-fireplace .inner-module #submit {
+    .module.module-outdoor-living-shop .inner-module .primary-btn, .module.module-outdoor-living-shop .inner-module .image-link + p, .module.module-outdoor-living-shop .inner-module .image-link .wp-caption-text, .image-link .module.module-outdoor-living-shop .inner-module .wp-caption-text, .module.module-outdoor-living-shop .inner-module a.comment-reply-link, .module.module-outdoor-living-shop .inner-module #submit, .module.module-design-a-fireplace .inner-module .primary-btn, .module.module-design-a-fireplace .inner-module .image-link + p, .module.module-design-a-fireplace .inner-module .image-link .wp-caption-text, .image-link .module.module-design-a-fireplace .inner-module .wp-caption-text, .module.module-design-a-fireplace .inner-module a.comment-reply-link, .module.module-design-a-fireplace .inner-module #submit {
       font-size: 1rem;
       margin: 0; }
   .module.module-spares-and-accessories {
@@ -1310,7 +1310,7 @@ h2, .h2 {
     background: #142128; }
     .blog-module h2:after, .module-spares-and-accessories h2:after, .module-need-help h2:after, .blog-module .h2:after, .module-spares-and-accessories .h2:after, .module-need-help .h2:after {
       background: #fff; }
-  h2.lhs:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .h2.woocommerce-loop-category__title:after, .h2.woocommerce-loop-product__title:after, .module-design-a-fireplace .h2:after {
+  h2.lhs:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .h2.woocommerce-loop-category__title:after, .h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop .h2:after, .module-design-a-fireplace .h2:after {
     left: 0;
     margin-left: 0; }
 
@@ -1728,16 +1728,16 @@ POSTS & CONTENT STYLES
   width: 100%;
   height: auto; }
 
-.featured-copy, .module.module-design-a-fireplace .inner-module {
+.featured-copy, .module.module-outdoor-living-shop .inner-module, .module.module-design-a-fireplace .inner-module {
   position: absolute;
   top: 2.5rem;
   left: 3rem;
   padding: 2rem;
   width: 30%;
   background: #f5f3f1; }
-  .featured-copy p, .module.module-design-a-fireplace .inner-module p {
+  .featured-copy p, .module.module-outdoor-living-shop .inner-module p, .module.module-design-a-fireplace .inner-module p {
     margin: 2rem 0; }
-  .stove-spares-header .featured-copy, .stove-spares-header .module.module-design-a-fireplace .inner-module, .module.module-design-a-fireplace .stove-spares-header .inner-module {
+  .stove-spares-header .featured-copy, .stove-spares-header .module.module-outdoor-living-shop .inner-module, .module.module-outdoor-living-shop .stove-spares-header .inner-module, .stove-spares-header .module.module-design-a-fireplace .inner-module, .module.module-design-a-fireplace .stove-spares-header .inner-module {
     position: relative;
     width: auto;
     top: auto;
