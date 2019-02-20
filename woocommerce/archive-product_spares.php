@@ -30,7 +30,7 @@ add_filter('loop_shop_columns', 'spares_loop_columns', 999);
 
 // Button text
 function custom_woocommerce_product_add_to_cart_text()  {
-	return __( 'Buy spares', 'woocommerce' );
+	return __( 'View spares', 'woocommerce' );
 }
 add_filter( 'woocommerce_product_add_to_cart_text', 'custom_woocommerce_product_add_to_cart_text' );
 
