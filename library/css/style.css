@@ -600,7 +600,7 @@ Quick video guide:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.primary-btn, .image-link + p, .image-link .wp-caption-text, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, a.secondary-btn {
+.primary-btn, .image-link + p, .image-link .wp-caption-text, .woocommerce ul.products li.product .button, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, a.secondary-btn {
   position: relative;
   min-width: 12em;
   display: inline-block;
@@ -622,24 +622,24 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   outline: none;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, a.comment-reply-link:hover, #submit:hover, .secondary-btn:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus {
+  .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, .woocommerce ul.products li.product .button:hover, a.comment-reply-link:hover, #submit:hover, .secondary-btn:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, .woocommerce ul.products li.product .button:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus {
     color: #fff;
     text-decoration: none; }
-  .primary-btn a, .image-link + p a, .image-link .wp-caption-text a, a.comment-reply-link a, #submit a, .secondary-btn a {
+  .primary-btn a, .image-link + p a, .image-link .wp-caption-text a, .woocommerce ul.products li.product .button a, a.comment-reply-link a, #submit a, .secondary-btn a {
     color: inherit !important;
     text-decoration: inherit !important; }
 
-.primary-btn, .image-link + p, .image-link .wp-caption-text, a.comment-reply-link, #submit, a.primary-btn, .image-link a.wp-caption-text, a.comment-reply-link, a#submit {
+.primary-btn, .image-link + p, .image-link .wp-caption-text, .woocommerce ul.products li.product .button, a.comment-reply-link, #submit, a.primary-btn, .image-link a.wp-caption-text, .woocommerce ul.products li.product a.button, a.comment-reply-link, a#submit {
   background-color: none;
   border-color: #fff;
   color: #fff; }
-  .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, a.comment-reply-link:hover, #submit:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, a.comment-reply-link:focus, #submit:focus, .wp-caption:hover .primary-btn, .wp-caption:hover .image-link + p, .wp-caption:hover .image-link .wp-caption-text, .image-link .wp-caption:hover .wp-caption-text, .wp-caption:hover a.comment-reply-link, .wp-caption:hover #submit, a.primary-btn:hover, .image-link a.wp-caption-text:hover, a.comment-reply-link:hover, a#submit:hover, a.primary-btn:focus, .image-link a.wp-caption-text:focus, a.comment-reply-link:focus, a#submit:focus, .wp-caption:hover a.primary-btn, .wp-caption:hover .image-link a.wp-caption-text, .image-link .wp-caption:hover a.wp-caption-text, .wp-caption:hover a.comment-reply-link, .wp-caption:hover a#submit {
+  .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, .woocommerce ul.products li.product .button:hover, a.comment-reply-link:hover, #submit:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, .woocommerce ul.products li.product .button:focus, a.comment-reply-link:focus, #submit:focus, .wp-caption:hover .primary-btn, .wp-caption:hover .image-link + p, .wp-caption:hover .image-link .wp-caption-text, .image-link .wp-caption:hover .wp-caption-text, .wp-caption:hover .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .wp-caption:hover .button, .wp-caption:hover a.comment-reply-link, .wp-caption:hover #submit, a.primary-btn:hover, .image-link a.wp-caption-text:hover, .woocommerce ul.products li.product a.button:hover, a.comment-reply-link:hover, a#submit:hover, a.primary-btn:focus, .image-link a.wp-caption-text:focus, .woocommerce ul.products li.product a.button:focus, a.comment-reply-link:focus, a#submit:focus, .wp-caption:hover a.primary-btn, .wp-caption:hover .image-link a.wp-caption-text, .image-link .wp-caption:hover a.wp-caption-text, .wp-caption:hover .woocommerce ul.products li.product a.button, .woocommerce ul.products li.product .wp-caption:hover a.button, .wp-caption:hover a.comment-reply-link, .wp-caption:hover a#submit {
     background-color: #fff;
     color: #53575a; }
-  .primary-btn.alt, .image-link + p.alt, .image-link .alt.wp-caption-text, a.alt.comment-reply-link, .alt#submit, a.primary-btn.alt, .image-link a.alt.wp-caption-text, a.alt.comment-reply-link, a.alt#submit {
+  .primary-btn.alt, .image-link + p.alt, .image-link .alt.wp-caption-text, .woocommerce ul.products li.product .alt.button, a.alt.comment-reply-link, .alt#submit, a.primary-btn.alt, .image-link a.alt.wp-caption-text, .woocommerce ul.products li.product a.alt.button, a.alt.comment-reply-link, a.alt#submit {
     border-color: #000;
     color: #000; }
-    .primary-btn.alt:hover, .image-link + p.alt:hover, .image-link .alt.wp-caption-text:hover, a.alt.comment-reply-link:hover, .alt#submit:hover, .primary-btn.alt:focus, .image-link + p.alt:focus, .image-link .alt.wp-caption-text:focus, a.alt.comment-reply-link:focus, .alt#submit:focus, .wp-caption:hover .primary-btn.alt, .wp-caption:hover .image-link + p.alt, .wp-caption:hover .image-link .alt.wp-caption-text, .image-link .wp-caption:hover .alt.wp-caption-text, .wp-caption:hover a.alt.comment-reply-link, .wp-caption:hover .alt#submit, a.primary-btn.alt:hover, .image-link a.alt.wp-caption-text:hover, a.alt.comment-reply-link:hover, a.alt#submit:hover, a.primary-btn.alt:focus, .image-link a.alt.wp-caption-text:focus, a.alt.comment-reply-link:focus, a.alt#submit:focus, .wp-caption:hover a.primary-btn.alt, .wp-caption:hover .image-link a.alt.wp-caption-text, .image-link .wp-caption:hover a.alt.wp-caption-text, .wp-caption:hover a.alt.comment-reply-link, .wp-caption:hover a.alt#submit {
+    .primary-btn.alt:hover, .image-link + p.alt:hover, .image-link .alt.wp-caption-text:hover, .woocommerce ul.products li.product .alt.button:hover, a.alt.comment-reply-link:hover, .alt#submit:hover, .primary-btn.alt:focus, .image-link + p.alt:focus, .image-link .alt.wp-caption-text:focus, .woocommerce ul.products li.product .alt.button:focus, a.alt.comment-reply-link:focus, .alt#submit:focus, .wp-caption:hover .primary-btn.alt, .wp-caption:hover .image-link + p.alt, .wp-caption:hover .image-link .alt.wp-caption-text, .image-link .wp-caption:hover .alt.wp-caption-text, .wp-caption:hover .woocommerce ul.products li.product .alt.button, .woocommerce ul.products li.product .wp-caption:hover .alt.button, .wp-caption:hover a.alt.comment-reply-link, .wp-caption:hover .alt#submit, a.primary-btn.alt:hover, .image-link a.alt.wp-caption-text:hover, .woocommerce ul.products li.product a.alt.button:hover, a.alt.comment-reply-link:hover, a.alt#submit:hover, a.primary-btn.alt:focus, .image-link a.alt.wp-caption-text:focus, .woocommerce ul.products li.product a.alt.button:focus, a.alt.comment-reply-link:focus, a.alt#submit:focus, .wp-caption:hover a.primary-btn.alt, .wp-caption:hover .image-link a.alt.wp-caption-text, .image-link .wp-caption:hover a.alt.wp-caption-text, .wp-caption:hover .woocommerce ul.products li.product a.alt.button, .woocommerce ul.products li.product .wp-caption:hover a.alt.button, .wp-caption:hover a.alt.comment-reply-link, .wp-caption:hover a.alt#submit {
       background-color: #000;
       color: #fff; }
 
@@ -1119,7 +1119,7 @@ LAYOUT & GRID STYLES
     bottom: 2.5rem; }
     .module.module-outdoor-living-shop .inner-module p:last-child, .module.module-design-a-fireplace .inner-module p:last-child {
       margin: 0; }
-    .module.module-outdoor-living-shop .inner-module .primary-btn, .module.module-outdoor-living-shop .inner-module .image-link + p, .module.module-outdoor-living-shop .inner-module .image-link .wp-caption-text, .image-link .module.module-outdoor-living-shop .inner-module .wp-caption-text, .module.module-outdoor-living-shop .inner-module a.comment-reply-link, .module.module-outdoor-living-shop .inner-module #submit, .module.module-design-a-fireplace .inner-module .primary-btn, .module.module-design-a-fireplace .inner-module .image-link + p, .module.module-design-a-fireplace .inner-module .image-link .wp-caption-text, .image-link .module.module-design-a-fireplace .inner-module .wp-caption-text, .module.module-design-a-fireplace .inner-module a.comment-reply-link, .module.module-design-a-fireplace .inner-module #submit {
+    .module.module-outdoor-living-shop .inner-module .primary-btn, .module.module-outdoor-living-shop .inner-module .image-link + p, .module.module-outdoor-living-shop .inner-module .image-link .wp-caption-text, .image-link .module.module-outdoor-living-shop .inner-module .wp-caption-text, .module.module-outdoor-living-shop .inner-module .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .module.module-outdoor-living-shop .inner-module .button, .module.module-outdoor-living-shop .inner-module a.comment-reply-link, .module.module-outdoor-living-shop .inner-module #submit, .module.module-design-a-fireplace .inner-module .primary-btn, .module.module-design-a-fireplace .inner-module .image-link + p, .module.module-design-a-fireplace .inner-module .image-link .wp-caption-text, .image-link .module.module-design-a-fireplace .inner-module .wp-caption-text, .module.module-design-a-fireplace .inner-module .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .module.module-design-a-fireplace .inner-module .button, .module.module-design-a-fireplace .inner-module a.comment-reply-link, .module.module-design-a-fireplace .inner-module #submit {
       font-size: 1rem;
       margin: 0; }
   .module.module-accessories-and-fuel, .module.module-spares-and-accessories {
@@ -1149,12 +1149,16 @@ LAYOUT & GRID STYLES
     .module.module-accessories-and-fuel .image-link + p,
     .module.module-accessories-and-fuel .image-link .wp-caption-text,
     .image-link .module.module-accessories-and-fuel .wp-caption-text,
+    .module.module-accessories-and-fuel .woocommerce ul.products li.product .button,
+    .woocommerce ul.products li.product .module.module-accessories-and-fuel .button,
     .module.module-accessories-and-fuel a.comment-reply-link,
     .module.module-accessories-and-fuel #submit, .module.module-spares-and-accessories p:last-child,
     .module.module-spares-and-accessories .primary-btn,
     .module.module-spares-and-accessories .image-link + p,
     .module.module-spares-and-accessories .image-link .wp-caption-text,
     .image-link .module.module-spares-and-accessories .wp-caption-text,
+    .module.module-spares-and-accessories .woocommerce ul.products li.product .button,
+    .woocommerce ul.products li.product .module.module-spares-and-accessories .button,
     .module.module-spares-and-accessories a.comment-reply-link,
     .module.module-spares-and-accessories #submit {
       margin: 0 auto;
@@ -1167,7 +1171,7 @@ LAYOUT & GRID STYLES
     padding-bottom: 5%; }
     .module.module-need-help .inner-module p:last-child {
       margin-bottom: 0; }
-    .module.module-need-help .inner-module .primary-btn.inline, .module.module-need-help .inner-module .image-link + p.inline, .module.module-need-help .inner-module .image-link .inline.wp-caption-text, .image-link .module.module-need-help .inner-module .inline.wp-caption-text, .module.module-need-help .inner-module a.inline.comment-reply-link, .module.module-need-help .inner-module .inline#submit {
+    .module.module-need-help .inner-module .primary-btn.inline, .module.module-need-help .inner-module .image-link + p.inline, .module.module-need-help .inner-module .image-link .inline.wp-caption-text, .image-link .module.module-need-help .inner-module .inline.wp-caption-text, .module.module-need-help .inner-module .woocommerce ul.products li.product .inline.button, .woocommerce ul.products li.product .module.module-need-help .inner-module .inline.button, .module.module-need-help .inner-module a.inline.comment-reply-link, .module.module-need-help .inner-module .inline#submit {
       margin: 1rem 1.5rem 0;
       font-size: .9rem;
       min-width: 14rem; }
@@ -1187,7 +1191,7 @@ LAYOUT & GRID STYLES
     .blog-wrapper .blog-module p {
       width: 70%;
       margin: 1rem auto 2rem; }
-    .blog-wrapper .blog-module .primary-btn, .blog-wrapper .blog-module .image-link + p, .blog-wrapper .blog-module .image-link .wp-caption-text, .image-link .blog-wrapper .blog-module .wp-caption-text, .blog-wrapper .blog-module a.comment-reply-link, .blog-wrapper .blog-module #submit {
+    .blog-wrapper .blog-module .primary-btn, .blog-wrapper .blog-module .image-link + p, .blog-wrapper .blog-module .image-link .wp-caption-text, .image-link .blog-wrapper .blog-module .wp-caption-text, .blog-wrapper .blog-module .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .blog-wrapper .blog-module .button, .blog-wrapper .blog-module a.comment-reply-link, .blog-wrapper .blog-module #submit {
       margin: 0; }
     .blog-wrapper .blog-module:before {
       content: '';
@@ -1968,13 +1972,13 @@ POSTS & CONTENT STYLES
   .woocommerce ul.products li.product .attachment-woocommerce_thumbnail {
     width: 100%;
     margin-bottom: 1rem; }
-  .woocommerce ul.products li.product a {
+  .woocommerce ul.products li.product a:not(.button) {
     display: block;
     background: none;
     padding-bottom: 10px;
     -webkit-transition: background 0.3s ease-in-out;
     transition: background 0.3s ease-in-out; }
-    .woocommerce ul.products li.product a:hover, .woocommerce ul.products li.product a:focus {
+    .woocommerce ul.products li.product a:not(.button):hover, .woocommerce ul.products li.product a:not(.button):focus {
       background: #f5f3f1;
       color: #142128; }
   .woocommerce ul.products li.product .woocommerce-loop-category__title,

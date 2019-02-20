@@ -1492,7 +1492,7 @@ POSTS & CONTENT STYLES
 				margin-bottom: 1rem;
 			}
 			
-			a {
+			a:not(.button) {
 				display: block;
 				background: none;
 				padding-bottom: 10px;
@@ -1502,6 +1502,10 @@ POSTS & CONTENT STYLES
 					background: $light-brown;
 					color: $text-color;
 				}
+			}
+			
+			.button {
+				@extend .primary-btn;
 			}
 			
 			.woocommerce-loop-category__title,

@@ -34,6 +34,13 @@ function custom_woocommerce_product_add_to_cart_text()  {
 }
 add_filter( 'woocommerce_product_add_to_cart_text', 'custom_woocommerce_product_add_to_cart_text' );
 
+// Price 
+function bbloomer_grouped_price_range_delete( $price, $product, $child_prices ) {
+	$price = '';
+	return $price;
+}
+add_filter( 'woocommerce_grouped_price_html', 'bbloomer_grouped_price_range_delete', 10, 3 );
+
 /**
  * Hook: woocommerce_before_main_content.
  *
