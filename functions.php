@@ -218,6 +218,7 @@ add_filter( 'body_class', 'add_slug_body_class' );
 // Page Excerpt
 add_post_type_support( 'page', 'excerpt' );
 
+
 // WOOCOMMERCE
 function mytheme_add_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
@@ -272,10 +273,8 @@ function jk_woocommerce_breadcrumbs($defaults) {
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 
 // Rows + products
-if (!function_exists('loop_columns')) {
-	function loop_columns() {
-		return 3;
-	}
+function loop_columns() {
+	return 3;
 }
 add_filter('loop_shop_columns', 'loop_columns', 999);
 
