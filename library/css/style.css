@@ -706,6 +706,17 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
       width: 3rem;
       height: 1px;
       background: #fff; }
+  .image-link.alt.current {
+    cursor: default; }
+    .image-link.alt.current:before {
+      background: rgba(0, 0, 0, 0); }
+    .image-link.alt.current:after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 1rem;
+      background: #f5f3f1; }
 
 .hover-link {
   display: block;
