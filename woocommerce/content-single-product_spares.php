@@ -30,7 +30,7 @@ if ( post_password_required() ) {
 }
 
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class('entry-content row cf'); ?>>
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class('entry-content wrap row cf'); ?>>
 
 	<?php
 		/**

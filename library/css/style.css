@@ -2024,7 +2024,9 @@ POSTS & CONTENT STYLES
   cursor: default;
   max-height: 0; }
 .woocommerce .product_cat-stove-spares .woocommerce-product-gallery__image img {
-  margin: 2rem auto; }
+  margin: 2rem auto;
+  display: block;
+  width: 90%; }
 .woocommerce .product_cat-stove-spares .price {
   display: none; }
 .woocommerce .woocommerce-result-count,
