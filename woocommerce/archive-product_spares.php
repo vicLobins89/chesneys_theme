@@ -28,12 +28,6 @@ function spares_loop_columns() {
 }
 add_filter('loop_shop_columns', 'spares_loop_columns', 999);
 
-function spares_loop_shop_per_page( $cols ) {
-	$cols = -1;
-	return $cols;
-}
-add_filter( 'loop_shop_per_page', 'spares_loop_shop_per_page', 20 );
-
 /**
  * Hook: woocommerce_before_main_content.
  *
