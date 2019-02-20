@@ -1514,6 +1514,23 @@ POSTS & CONTENT STYLES
 	.product_cat-stove-spares {
 		.product_title {
 			@extend .h2;
+			text-align: center;
+		}
+		
+		.woocommerce-product-gallery__image {
+			a {
+				pointer-events: none;
+				cursor: default;
+				max-height: 0;
+			}
+			
+			img {
+				margin: 2rem auto;
+			}
+		}
+		
+		.price {
+			display: none;
 		}
 	}
 	

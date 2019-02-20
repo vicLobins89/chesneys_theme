@@ -2017,6 +2017,16 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
+.woocommerce .product_cat-stove-spares .product_title {
+  text-align: center; }
+.woocommerce .product_cat-stove-spares .woocommerce-product-gallery__image a {
+  pointer-events: none;
+  cursor: default;
+  max-height: 0; }
+.woocommerce .product_cat-stove-spares .woocommerce-product-gallery__image img {
+  margin: 2rem auto; }
+.woocommerce .product_cat-stove-spares .price {
+  display: none; }
 .woocommerce .woocommerce-result-count,
 .woocommerce .woocommerce-ordering {
   display: none; }
