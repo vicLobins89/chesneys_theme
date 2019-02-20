@@ -29,10 +29,6 @@ if ( post_password_required() ) {
 	return;
 }
 
-global $product;
-
-$attachment_ids = $product->get_gallery_image_ids();
-
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('entry-content row cf'); ?>>
 
@@ -49,6 +45,9 @@ $attachment_ids = $product->get_gallery_image_ids();
 	<div class="cf">
 		<?php		
 		function show_first_gallery_image() {
+			global $product;
+			$attachment_ids = $product->get_gallery_image_ids();
+			
 			if ( $attachment_ids && $product->get_image_id() ) {
 				foreach ( $attachment_ids as $attachment_id ) {
 					echo wc_get_gallery_image_html( $attachment_id, true );
