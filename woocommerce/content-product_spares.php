@@ -18,14 +18,13 @@
 defined( 'ABSPATH' ) || exit;
 
 global $product;
-$term = get_queried_object();
 
 // Ensure visibility.
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li <?php wc_product_class(); ?>>124
+<li <?php wc_product_class(); ?>>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
@@ -47,6 +46,19 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 *
 	 * @hooked woocommerce_template_loop_product_title - 10
 	 */
+	$product_cats = wp_get_post_terms($product->id, 'product_cat');
+    $count = count($product_cats);
+    foreach($product_cats as $key => $cat) {
+        echo $cat->name;
+        if($key < ($count-1))
+        {
+            echo ', ';
+        }
+        else
+        {
+            echo '<br/>';
+        }
+    }
 	do_action( 'woocommerce_shop_loop_item_title' );
 
 	/**

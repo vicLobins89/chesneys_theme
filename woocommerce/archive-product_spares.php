@@ -71,7 +71,7 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
 	?>
-	<section class="entry-content row cf shop-loop"><div class="cf"><div class="col-12">
+	<section class="entry-content row cf shop-loop spares-shop-loop"><div class="cf"><div class="col-12">
 	<?php
 	
 	do_action( 'woocommerce_before_shop_loop' );
