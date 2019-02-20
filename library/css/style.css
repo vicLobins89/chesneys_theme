@@ -1971,6 +1971,15 @@ POSTS & CONTENT STYLES
   .woocommerce ul.products li.product .attachment-woocommerce_thumbnail {
     width: 100%;
     margin-bottom: 1rem; }
+  .woocommerce ul.products li.product a:not(.button) {
+    display: block;
+    background: none;
+    padding-bottom: 10px;
+    -webkit-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out; }
+    .woocommerce ul.products li.product a:not(.button):hover, .woocommerce ul.products li.product a:not(.button):focus {
+      background: #f5f3f1;
+      color: #142128; }
   .woocommerce ul.products li.product .woocommerce-loop-category__title,
   .woocommerce ul.products li.product .woocommerce-loop-product__title {
     font-family: "Univers", Helvetica, Arial, sans-serif;
@@ -1985,15 +1994,12 @@ POSTS & CONTENT STYLES
   .woocommerce ul.products li.product:hover .hover-text, .woocommerce ul.products li.product:focus .hover-text {
     opacity: 1;
     visibility: visible; }
-.woocommerce ul.products li.product:not(.product-type-grouped) a:not(.button) {
-  display: block;
-  background: none;
-  padding-bottom: 10px;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out; }
-  .woocommerce ul.products li.product:not(.product-type-grouped) a:not(.button):hover, .woocommerce ul.products li.product:not(.product-type-grouped) a:not(.button):focus {
-    background: #f5f3f1;
-    color: #142128; }
+  .woocommerce ul.products li.product.product-type-grouped .woocommerce-loop-category__title,
+  .woocommerce ul.products li.product.product-type-grouped .woocommerce-loop-product__title,
+  .woocommerce ul.products li.product.product-type-grouped p {
+    margin-left: 0; }
+  .woocommerce ul.products li.product.product-type-grouped a:not(.button):hover, .woocommerce ul.products li.product.product-type-grouped a:not(.button):focus {
+    background: none; }
 .woocommerce .hover-text {
   position: absolute;
   width: 100%;

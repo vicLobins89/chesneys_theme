@@ -1492,6 +1492,18 @@ POSTS & CONTENT STYLES
 				margin-bottom: 1rem;
 			}
 			
+			a:not(.button) {
+				display: block;
+				background: none;
+				padding-bottom: 10px;
+				@include transition(background 0.3s ease-in-out);
+				
+				&:hover, &:focus {
+					background: $light-brown;
+					color: $text-color;
+				}
+			}
+			
 			.button {
 				@extend .secondary-btn;
 			}
@@ -1518,18 +1530,18 @@ POSTS & CONTENT STYLES
 					visibility: visible;
 				}
 			}
-		}
-		
-		li.product:not(.product-type-grouped) {
-			a:not(.button) {
-				display: block;
-				background: none;
-				padding-bottom: 10px;
-				@include transition(background 0.3s ease-in-out);
+			
+			&.product-type-grouped {
+				.woocommerce-loop-category__title,
+				.woocommerce-loop-product__title,
+				p {
+					margin-left: 0;
+				}
 				
-				&:hover, &:focus {
-					background: $light-brown;
-					color: $text-color;
+				a:not(.button) {
+					&:hover, &:focus {
+						background: none;
+					}
 				}
 			}
 		}
