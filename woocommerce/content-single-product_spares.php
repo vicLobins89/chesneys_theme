@@ -56,6 +56,8 @@ if ( post_password_required() ) {
 		};     
 		add_action( 'woocommerce_single_product_summary', 'show_first_gallery_image', 7 );
 		
+		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+		
 		/**
 		 * Hook: woocommerce_single_product_summary.
 		 *
