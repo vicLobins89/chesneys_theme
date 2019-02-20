@@ -241,11 +241,10 @@ function woocommerce_category_image() {
 		}
 		
 		$cat_desc = term_description( $cat->term_id, 'product_cat' );
-		$subtitle = '<p class="description">'.$cat_desc.'</p>';
 		
 	  	?> <div class="featured-copy">
 			<h1 class="h2 lhs"><?php woocommerce_page_title(); ?></h1>
-			<?php echo $subtitle; ?>
+			<?php echo $cat_desc; ?>
 		</div> <?php
 	}
 }

@@ -1751,9 +1751,15 @@ POSTS & CONTENT STYLES
   .stove-spares-header .featured-copy, .stove-spares-header .module.module-outdoor-living-shop .inner-module, .module.module-outdoor-living-shop .stove-spares-header .inner-module, .stove-spares-header .module.module-design-a-fireplace .inner-module, .module.module-design-a-fireplace .stove-spares-header .inner-module {
     position: relative;
     width: auto;
+    padding: 0;
     top: auto;
     left: auto;
     background: none; }
+    .stove-spares-header .featured-copy h2, .stove-spares-header .module.module-outdoor-living-shop .inner-module h2, .module.module-outdoor-living-shop .stove-spares-header .inner-module h2, .stove-spares-header .module.module-design-a-fireplace .inner-module h2, .module.module-design-a-fireplace .stove-spares-header .inner-module h2 {
+      text-align: center; }
+      .stove-spares-header .featured-copy h2:after, .stove-spares-header .module.module-outdoor-living-shop .inner-module h2:after, .module.module-outdoor-living-shop .stove-spares-header .inner-module h2:after, .stove-spares-header .module.module-design-a-fireplace .inner-module h2:after, .module.module-design-a-fireplace .stove-spares-header .inner-module h2:after {
+        margin-left: -1.5rem;
+        left: 50%; }
 
 .custom-content {
   margin: 2.5rem auto 0; }
