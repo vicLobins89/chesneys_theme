@@ -1739,6 +1739,7 @@ POSTS & CONTENT STYLES
     margin: 2rem 0; }
   .stove-spares-header .featured-copy, .stove-spares-header .module.module-design-a-fireplace .inner-module, .module.module-design-a-fireplace .stove-spares-header .inner-module {
     position: relative;
+    width: auto;
     top: auto;
     left: auto;
     background: none; }
