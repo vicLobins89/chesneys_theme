@@ -32,7 +32,7 @@ $term = get_queried_object();
 do_action( 'woocommerce_before_main_content' );
 
 ?>
-<header class="row entry-content cf woocommerce-products-header">
+<header class="row entry-content cf woocommerce-products-header stove-spares-header">
 	<div class="cf">
 		<?php
 		do_action( 'woocommerce_archive_description' );
