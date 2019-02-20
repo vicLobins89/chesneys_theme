@@ -80,14 +80,15 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 .secondary-btn, a.secondary-btn {
 	@extend %btn;
-	background-color: $white;
-	border-color: $meta-gray;
-	color: $meta-gray;
+	background-color: $teal;
+	border-color: $teal;
+	color: $white;
 
 	&:hover,
 	&:focus {
-		background-color: $meta-gray;
-		color: $white;
+		background-color: none;
+		border-color: $teal;
+		color: $teal;
 	}
 	
 	&.alt {
