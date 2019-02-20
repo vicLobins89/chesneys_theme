@@ -691,8 +691,19 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     border: none;
     transform: none;
     top: auto;
-    bottom: 1rem;
-    left: 1rem; }
+    bottom: 2rem;
+    left: 2rem;
+    text-align: left;
+    padding: 0; }
+    .image-link.alt + p:after, .image-link.alt .wp-caption-text:after {
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -10px;
+      width: 3rem;
+      height: 1px;
+      background: #142128; }
 
 .hover-link {
   display: block;
@@ -1774,7 +1785,8 @@ POSTS & CONTENT STYLES
 
 .spares-thumbs .wp-caption {
   width: 31% !important;
-  margin-right: 3.5%; }
+  margin-right: 3.5%;
+  float: left; }
   .spares-thumbs .wp-caption:last-child {
     margin-right: 0; }
 
