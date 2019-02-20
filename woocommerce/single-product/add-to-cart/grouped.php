@@ -84,7 +84,9 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							$value = $grouped_product_child->get_price_html() . wc_get_stock_html( $grouped_product_child );
 							break;
 						case 'cart':
+							ob_start();
 							do_action( 'woocommerce_after_add_to_cart_form' );
+							$value = ob_get_clean();
 							break;
 						default:
 							$value = '';
