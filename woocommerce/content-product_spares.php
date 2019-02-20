@@ -48,16 +48,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	$product_cats = wp_get_post_terms($product->get_id(), 'product_cat');
     $count = count($product_cats);
-	echo '<p>';
-    foreach($product_cats as $key => $cat) {
-        echo $cat->name;
-        if($key < ($count-1)) {
-            echo ', ';
-        }
-        else {
-            echo '<br/>';
-        }
-    }
+	echo '<p class="category_name">';
+	echo $product_cats[1]->name;
 	echo '</p>';
 	do_action( 'woocommerce_shop_loop_item_title' );
 
