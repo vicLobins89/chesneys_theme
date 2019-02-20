@@ -19,29 +19,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-function woocommerce_subcats_from_parentcat_by_name($parent_cat_name) {
-	$ids_by_name = get_term_by('name', $parent_cat_name, 'product_cat');
-	$product_cat_ID = $ids_by_name->term_id;
-	$args = array(
-		"hide_empty" => 0,
-		'show_option_none' => '',
-		'parent' => $product_cat_ID,
-		'taxonomy' => 'product_cat'
-	);
-	$subcats = get_categories($args);
-	$subcat_names = array($parent_cat_name);
+$term = get_queried_object();
 
-	foreach ($subcats as $sc) {
-		array_push($subcat_names, $sc->slug);
-	}
-	
-	return $subcat_names;
+if( term_is_ancestor_of(16, $term->term_id, 'product_cat') || term_is_ancestor_of(56, $term->term_id, 'product_cat') ) {
+	// Frireplaces & Stoves
+	wc_get_template( 'archive-product_fireplaces.php' );
+} elseif( term_is_ancestor_of(67, $term->term_id, 'product_cat') ) {
+	// Spares
+	wc_get_template( 'archive-product_spares.php' );
+} elseif( term_is_ancestor_of(63, $term->term_id, 'product_cat') ) {
+	// Outdoor
+	wc_get_template( 'archive-product_outdoor.php' );
+} else {
+	wc_get_template( 'archive-product.php' );
 }
-
-wc_get_template( 'archive-product.php' );
-
-//if( is_product_category( woocommerce_subcats_from_parentcat_by_name('fireplaces') ) ) {
-//	wc_get_template( 'archive-product_fireplaces.php' );
-//} else {
-//	wc_get_template( 'archive-product.php' );
-//}

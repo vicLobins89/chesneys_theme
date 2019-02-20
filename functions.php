@@ -271,13 +271,19 @@ function jk_woocommerce_breadcrumbs($defaults) {
 }
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 
-// Rows
+// Rows + products
 if (!function_exists('loop_columns')) {
 	function loop_columns() {
 		return 3;
 	}
 }
 add_filter('loop_shop_columns', 'loop_columns', 999);
+
+function new_loop_shop_per_page( $cols ) {
+	$cols = 9;
+	return $cols;
+}
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 
 // Description on archive
 function excerpt($limit) {

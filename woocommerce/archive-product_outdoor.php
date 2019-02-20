@@ -32,7 +32,7 @@ $term = get_queried_object();
 do_action( 'woocommerce_before_main_content' );
 
 ?>
-<header class="row entry-content cf woocommerce-products-header">
+<header class="row entry-content cf woocommerce-products-header featured top">
 	<div class="cf">
 		<?php
 		do_action( 'woocommerce_archive_description' );
@@ -111,6 +111,43 @@ if ( woocommerce_product_loop() ) {
 			}
 		}
 	}
+	
+	// Related products
+	if( get_term_meta($term->term_id, 'display_type', true) == 'products' ||  get_term_meta($term->term_id, 'display_type', true) == null) {
+		$parent_cats = get_ancestors($term->term_id, 'product_cat');
+		$category = get_term_by('id', $parent_cats[0], 'product_cat');
+		echo '<section class="row entry-content cf related-products"><div class="cf"><div class="col-12">';
+		echo '<h2>You might also like</h2><p>Ariptimus fue et vitioca tquerra vivis, nem merissent grate, ceni sintere mo</p>';
+		echo do_shortcode('[products orderby="rand" category="'.$category->slug.'" limit="3" columns="3" class="related-products"]');
+		echo '</section></div></div>';
+	}
+	
+	// Blog / Case Study Posts (Automation)
+	// Getting URL
+	/*$r = $_SERVER['REQUEST_URI'];
+	$r = explode('/', $r);
+	$r = array_filter($r);
+	$r = array_merge($r, array());
+	$code = ( !empty($r[1]) ) ? $r[1] : 'fireplaces';
+	
+	// Getting Category Name
+	$prCatId = ( !empty($term->term_id) ) ? $term->term_id : 15;
+	$prCatName = ( !empty($term->slug) ) ? $term->slug : $code;
+	
+	if( get_cat_ID($prCatName) ) {
+		$acfClass->render_blog($prCatName);
+		$acfClass->render_portfolio($prCatName);
+	} else {
+		$parentCats = get_ancestors($prCatId, 'product_cat');
+		foreach($parentCats as $parentCat){
+			$category = get_term_by('id', $parentCat, 'product_cat');
+			if( get_cat_ID($category->slug) ) {
+				$acfClass->render_blog($category->slug);
+				$acfClass->render_portfolio($category->slug);
+				break;
+			}
+		}
+	}*/
 } else {
 	/**
 	 * Hook: woocommerce_no_products_found.

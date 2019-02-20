@@ -20,6 +20,13 @@ defined( 'ABSPATH' ) || exit;
 get_header( 'shop' );
 require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
+$term = get_queried_object();
+
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 20);
+remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
+remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
 
 /**
  * Hook: woocommerce_before_main_content.
@@ -33,7 +40,11 @@ do_action( 'woocommerce_before_main_content' );
 ?>
 <header class="row entry-content cf woocommerce-products-header featured top">
 	<div class="cf">
-		<?php do_action( 'woocommerce_archive_description' ); ?>
+		<?php
+		do_action( 'woocommerce_archive_description' );
+		$custom_content = get_field('custom_content', $term);
+		echo '<div class="custom-content narrow-para">'.$custom_content.'</div>';
+		?>
 	</div>
 </header>
 <?php
@@ -46,6 +57,10 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_result_count - 20
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
+	?>
+	<section class="entry-content row cf shop-loop"><div class="cf"><div class="col-12">
+	<?php
+	
 	do_action( 'woocommerce_before_shop_loop' );
 
 	woocommerce_product_loop_start();
@@ -66,7 +81,9 @@ if ( woocommerce_product_loop() ) {
 	}
 
 	woocommerce_product_loop_end();
-
+	?>
+	</div></div></section>
+	<?php
 	/**
 	 * Hook: woocommerce_after_shop_loop.
 	 *
@@ -74,22 +91,46 @@ if ( woocommerce_product_loop() ) {
 	 */
 	do_action( 'woocommerce_after_shop_loop' );
 	
-	$term = get_queried_object();
-	
 	// Modules
 	$rows = get_field('rows', $term);
 	if($rows) {
 		foreach($rows as $row) {
 			$modules = $row['module'];
-			foreach($modules as $module) {
-				$acfClass->render_modules($module['module_block']);
+			$blog_feeds = $row['blog_feed'];
+			$portfolio_feeds = $row['portfolio_feed'];
+			if( isset($modules) ) {
+				foreach($modules as $module) {
+					$acfClass->render_modules($module['module_block']);
+				}
+			}
+			
+			if( is_array($blog_feeds) || is_object($blog_feeds) ) {
+				foreach($blog_feeds as $blog_feed ) {
+					$acfClass->render_blog($blog_feed);
+				}
+			}
+			
+			if( is_array($portfolio_feeds) || is_object($portfolio_feeds) ) {
+				foreach($portfolio_feeds as $portfolio_feed) {
+					$acfClass->render_portfolio($portfolio_feed);
+				}
 			}
 		}
 	}
 	
-	// Blog / Case Study Posts
+	// Related products
+	if( get_term_meta($term->term_id, 'display_type', true) == 'products' ||  get_term_meta($term->term_id, 'display_type', true) == null) {
+		$parent_cats = get_ancestors($term->term_id, 'product_cat');
+		$category = get_term_by('id', $parent_cats[0], 'product_cat');
+		echo '<section class="row entry-content cf related-products"><div class="cf"><div class="col-12">';
+		echo '<h2>You might also like</h2><p>Ariptimus fue et vitioca tquerra vivis, nem merissent grate, ceni sintere mo</p>';
+		echo do_shortcode('[products orderby="rand" category="'.$category->slug.'" limit="3" columns="3" class="related-products"]');
+		echo '</section></div></div>';
+	}
+	
+	// Blog / Case Study Posts (Automation)
 	// Getting URL
-	$r = $_SERVER['REQUEST_URI'];
+	/*$r = $_SERVER['REQUEST_URI'];
 	$r = explode('/', $r);
 	$r = array_filter($r);
 	$r = array_merge($r, array());
@@ -100,17 +141,19 @@ if ( woocommerce_product_loop() ) {
 	$prCatName = ( !empty($term->slug) ) ? $term->slug : $code;
 	
 	if( get_cat_ID($prCatName) ) {
+		$acfClass->render_blog($prCatName);
 		$acfClass->render_portfolio($prCatName);
 	} else {
 		$parentCats = get_ancestors($prCatId, 'product_cat');
 		foreach($parentCats as $parentCat){
 			$category = get_term_by('id', $parentCat, 'product_cat');
 			if( get_cat_ID($category->slug) ) {
+				$acfClass->render_blog($category->slug);
 				$acfClass->render_portfolio($category->slug);
 				break;
 			}
 		}
-	}
+	}*/
 } else {
 	/**
 	 * Hook: woocommerce_no_products_found.
