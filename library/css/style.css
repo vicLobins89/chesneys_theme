@@ -2054,6 +2054,13 @@ POSTS & CONTENT STYLES
     margin-left: 0; }
   .woocommerce ul.products li.product.product-type-grouped a:not(.button):hover, .woocommerce ul.products li.product.product-type-grouped a:not(.button):focus {
     background: none; }
+  .woocommerce ul.products li.product.product-type-grouped .category-name {
+    font-family: "Univers", Helvetica, Arial, sans-serif; }
+  .woocommerce ul.products li.product.product-type-grouped .woocommerce-loop-product__title {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; }
+    .woocommerce ul.products li.product.product-type-grouped .woocommerce-loop-product__title:after {
+      bottom: auto;
+      top: -14px; }
 .woocommerce .hover-text {
   position: absolute;
   width: 100%;

@@ -48,7 +48,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	$product_cats = wp_get_post_terms($product->get_id(), 'product_cat');
     $count = count($product_cats);
-	echo '<p class="category_name">';
+	echo '<p class="category-name">';
 	echo $product_cats[1]->name;
 	echo '</p>';
 	

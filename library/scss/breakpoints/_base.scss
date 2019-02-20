@@ -1576,6 +1576,19 @@ POSTS & CONTENT STYLES
 						background: none;
 					}
 				}
+				
+				.category-name {
+					font-family: $sans-serif;
+				}
+				
+				.woocommerce-loop-product__title {
+					font-family: $serif;
+					
+					&:after {
+						bottom: auto;
+    					top: -14px;
+					}
+				}
 			}
 		}
 	}
