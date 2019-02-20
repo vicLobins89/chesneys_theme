@@ -36,26 +36,18 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_before_main_content' );
 	?>
 
-		<?php while ( have_posts() ) : the_post();
-			print_r($categories);
-			if ( in_array( 'spares', $categories ) ) {
-			  echo 'In audio';
-			  wc_get_template_part( 'content', 'single-product_spares' );
-			} elseif ( in_array( 'elektro', $categories ) ) {
-			  echo 'In elektro';
-			  wc_get_template_part( 'content', 'single-product' );
-			} else {
-			  echo 'some blabla';
-			}
+	<?php 
+		while ( have_posts() ) : the_post();
+		//print_r($categories);
 
-//			if( term_is_ancestor_of(67, $term->term_id, 'product_cat') || is_product_category(67) ) {
-//				// Spares
-//				wc_get_template_part( 'content', 'single-product_spares' );
-//			} else {
-//				wc_get_template_part( 'content', 'single-product' );
-//			}
+		if ( in_array( 'stove-spares', $categories ) ) {
+			wc_get_template_part( 'content', 'single-product_spares' );
+		} else {
+			wc_get_template_part( 'content', 'single-product' );
+		}
 
-		endwhile; // end of the loop. ?>
+		endwhile; // end of the loop. 
+	?>
 
 	<?php
 		/**
