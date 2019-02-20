@@ -22,6 +22,7 @@ require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
 $term = get_queried_object();
 
+// Number of rows + products
 function spares_loop_columns() {
 	return 4;
 }

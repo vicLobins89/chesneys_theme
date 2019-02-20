@@ -272,7 +272,7 @@ function jk_woocommerce_breadcrumbs($defaults) {
 }
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 
-// Rows + products
+// Number of rows + products
 function loop_columns() {
 	return 3;
 }
