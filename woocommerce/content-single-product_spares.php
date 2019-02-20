@@ -55,6 +55,7 @@ if ( post_password_required() ) {
 			}
 		};     
 		add_action( 'woocommerce_single_product_summary', 'show_first_gallery_image', 7 );
+		add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 		
 		/**
 		 * Hook: woocommerce_single_product_summary.
