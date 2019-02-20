@@ -51,6 +51,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	echo '<p class="category_name">';
 	echo $product_cats[1]->name;
 	echo '</p>';
+	
 	do_action( 'woocommerce_shop_loop_item_title' );
 
 	/**

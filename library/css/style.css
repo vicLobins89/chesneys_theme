@@ -1071,6 +1071,8 @@ LAYOUT & GRID STYLES
     padding: 0; }
 .row.shop-loop {
   padding-bottom: 0; }
+.row.spares-shop-loop {
+  background: #f5f3f1; }
 .row.related-products {
   padding-bottom: 0;
   text-align: center; }
