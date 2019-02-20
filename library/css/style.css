@@ -688,6 +688,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     .wp-caption:hover .image-link:before {
       background: rgba(0, 0, 0, 0); }
   .image-link.alt + p, .image-link.alt .wp-caption-text {
+    font-weight: normal;
     border: none;
     transform: none;
     top: auto;
@@ -706,6 +707,8 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
       width: 3rem;
       height: 1px;
       background: #fff; }
+  .image-link.alt:before {
+    background: rgba(0, 0, 0, 0.5); }
   .image-link.alt.current {
     cursor: default; }
     .image-link.alt.current:before {

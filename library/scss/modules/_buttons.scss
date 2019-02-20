@@ -143,6 +143,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 	
 	&.alt {
 		+ p, .wp-caption-text {
+			font-weight: normal;
 			border: none;
 			transform: none;
 			top: auto;
@@ -163,6 +164,10 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 				height: 1px;
 				background: $white;
 			}
+		}
+		
+		&:before {
+			background: rgba(0,0,0,0.5);
 		}
 		
 		&.current {
