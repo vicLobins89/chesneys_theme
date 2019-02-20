@@ -28,6 +28,11 @@ if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
 }
+
+global $product;
+
+$attachment_ids = $product->get_gallery_image_ids();
+
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('cf'); ?>>
 
@@ -38,11 +43,17 @@ if ( post_password_required() ) {
 		 * @hooked woocommerce_show_product_sale_flash - 10
 		 * @hooked woocommerce_show_product_images - 20
 		 */
-		do_action( 'woocommerce_before_single_product_summary' );
+		// do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
 	<div class="summary entry-summary">
 		<?php
+		if ( $attachment_ids && $product->get_image_id() ) {
+			foreach ( $attachment_ids as $attachment_id ) {
+				echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', wc_get_gallery_image_html( $attachment_id ), $attachment_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
+			}
+		}
+		
 			/**
 			 * Hook: woocommerce_single_product_summary.
 			 *
