@@ -46,7 +46,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 *
 	 * @hooked woocommerce_template_loop_product_title - 10
 	 */
-	$product_cats = wp_get_post_terms($product->id, 'product_cat');
+	$product_cats = wp_get_post_terms($product->get_id(), 'product_cat');
     $count = count($product_cats);
     foreach($product_cats as $key => $cat) {
         echo $cat->name;
