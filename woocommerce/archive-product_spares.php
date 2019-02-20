@@ -28,6 +28,12 @@ function spares_loop_columns() {
 }
 add_filter('loop_shop_columns', 'spares_loop_columns', 999);
 
+// Button text
+function custom_woocommerce_product_add_to_cart_text()  {
+	return __( 'Buy spares', 'woocommerce' );
+}
+add_filter( 'woocommerce_product_add_to_cart_text', 'custom_woocommerce_product_add_to_cart_text' );
+
 /**
  * Hook: woocommerce_before_main_content.
  *
