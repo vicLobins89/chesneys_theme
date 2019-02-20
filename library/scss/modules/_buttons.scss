@@ -142,7 +142,13 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 	}
 	
 	&.alt {
-		
+		+ p, .wp-caption-text {
+			border: none;
+			transform: none;
+			top: auto;
+			bottom: 1rem;
+			left: 1rem;
+		}
 	}
 }
 

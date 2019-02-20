@@ -687,6 +687,12 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     transition: background 0.3s ease-in-out; }
     .wp-caption:hover .image-link:before {
       background: rgba(0, 0, 0, 0); }
+  .image-link.alt + p, .image-link.alt .wp-caption-text {
+    border: none;
+    transform: none;
+    top: auto;
+    bottom: 1rem;
+    left: 1rem; }
 
 .hover-link {
   display: block;
@@ -1768,7 +1774,7 @@ POSTS & CONTENT STYLES
 
 .spares-thumbs .wp-caption {
   width: 31% !important;
-  margin-right: 2%; }
+  margin-right: 3.5%; }
   .spares-thumbs .wp-caption:last-child {
     margin-right: 0; }
 
