@@ -650,7 +650,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   font-size: .8em;
   font-weight: normal; }
   .secondary-btn:hover, .woocommerce ul.products li.product .button:hover, .secondary-btn:focus, .woocommerce ul.products li.product .button:focus, a.secondary-btn:hover, .woocommerce ul.products li.product a.button:hover, a.secondary-btn:focus, .woocommerce ul.products li.product a.button:focus {
-    background-color: none;
+    background: none;
     border-color: #4b858e;
     color: #4b858e; }
   .secondary-btn.alt, .woocommerce ul.products li.product .alt.button, a.secondary-btn.alt, .woocommerce ul.products li.product a.alt.button {
