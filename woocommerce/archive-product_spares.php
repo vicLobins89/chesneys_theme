@@ -94,15 +94,17 @@ if ( woocommerce_product_loop() ) {
 	}
 
 	woocommerce_product_loop_end();
-	?>
-	</div></div></section>
-	<?php
+	
 	/**
 	 * Hook: woocommerce_after_shop_loop.
 	 *
 	 * @hooked woocommerce_pagination - 10
 	 */
 	do_action( 'woocommerce_after_shop_loop' );
+	
+	?>
+	</div></div></section>
+	<?php
 	
 	// Modules
 	$rows = get_field('rows', $term);
