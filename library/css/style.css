@@ -1322,12 +1322,12 @@ a {
 /******************************************************************
 H1, H2, H3, H4, H5, P STYLES
 ******************************************************************/
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+h1, .h1, h2, .h2, .woocommerce .product_cat-stove-spares .product_title, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   line-height: 1.2; }
-  h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
+  h1 a, .h1 a, h2 a, .h2 a, .woocommerce .product_cat-stove-spares .product_title a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
     text-decoration: none; }
-  h1:first-of-type, .h1:first-of-type, h2:first-of-type, .h2:first-of-type, h3:first-of-type, .h3:first-of-type, h4:first-of-type, .h4:first-of-type, h5:first-of-type, .h5:first-of-type {
+  h1:first-of-type, .h1:first-of-type, h2:first-of-type, .h2:first-of-type, .woocommerce .product_cat-stove-spares .product_title:first-of-type, h3:first-of-type, .h3:first-of-type, h4:first-of-type, .h4:first-of-type, h5:first-of-type, .h5:first-of-type {
     margin-top: 0; }
 
 h1, .h1 {
@@ -1336,14 +1336,14 @@ h1, .h1 {
   line-height: 1.2;
   margin-top: 0; }
 
-h2, .h2 {
+h2, .h2, .woocommerce .product_cat-stove-spares .product_title {
   font-size: 1.5em;
   font-family: "Univers Cond", "Univers", Helvetica, Arial, sans-serif;
   font-weight: normal;
   margin: .35em 0 .75em;
   text-transform: uppercase;
   position: relative; }
-  h2:after, .h2:after {
+  h2:after, .h2:after, .woocommerce .product_cat-stove-spares .product_title:after {
     display: block;
     position: absolute;
     content: '';
@@ -1353,9 +1353,9 @@ h2, .h2 {
     width: 3rem;
     height: 1px;
     background: #142128; }
-    .blog-module h2:after, .module-accessories-and-fuel h2:after, .module-spares-and-accessories h2:after, .module-need-help h2:after, .blog-module .h2:after, .module-accessories-and-fuel .h2:after, .module-spares-and-accessories .h2:after, .module-need-help .h2:after {
+    .blog-module h2:after, .module-accessories-and-fuel h2:after, .module-spares-and-accessories h2:after, .module-need-help h2:after, .blog-module .h2:after, .blog-module .woocommerce .product_cat-stove-spares .product_title:after, .woocommerce .product_cat-stove-spares .blog-module .product_title:after, .module-accessories-and-fuel .h2:after, .module-accessories-and-fuel .woocommerce .product_cat-stove-spares .product_title:after, .woocommerce .product_cat-stove-spares .module-accessories-and-fuel .product_title:after, .module-spares-and-accessories .h2:after, .module-spares-and-accessories .woocommerce .product_cat-stove-spares .product_title:after, .woocommerce .product_cat-stove-spares .module-spares-and-accessories .product_title:after, .module-need-help .h2:after, .module-need-help .woocommerce .product_cat-stove-spares .product_title:after, .woocommerce .product_cat-stove-spares .module-need-help .product_title:after {
       background: #fff; }
-  h2.lhs:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .h2.woocommerce-loop-category__title:after, .h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop .h2:after, .module-design-a-fireplace .h2:after {
+  h2.lhs:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .woocommerce .product_cat-stove-spares .lhs.product_title:after, .h2.woocommerce-loop-category__title:after, .woocommerce .product_cat-stove-spares .woocommerce-loop-category__title.product_title:after, .h2.woocommerce-loop-product__title:after, .woocommerce .product_cat-stove-spares .woocommerce-loop-product__title.product_title:after, .module-outdoor-living-shop .h2:after, .module-outdoor-living-shop .woocommerce .product_cat-stove-spares .product_title:after, .woocommerce .product_cat-stove-spares .module-outdoor-living-shop .product_title:after, .module-design-a-fireplace .h2:after, .module-design-a-fireplace .woocommerce .product_cat-stove-spares .product_title:after, .woocommerce .product_cat-stove-spares .module-design-a-fireplace .product_title:after {
     left: 0;
     margin-left: 0; }
 
@@ -1789,12 +1789,12 @@ POSTS & CONTENT STYLES
     top: auto;
     left: auto;
     background: none; }
-    .stove-spares-header .featured-copy .h2, .stove-spares-header .module.module-outdoor-living-shop .inner-module .h2, .module.module-outdoor-living-shop .stove-spares-header .inner-module .h2, .stove-spares-header .module.module-design-a-fireplace .inner-module .h2, .module.module-design-a-fireplace .stove-spares-header .inner-module .h2 {
+    .stove-spares-header .featured-copy .h2, .stove-spares-header .module.module-outdoor-living-shop .inner-module .h2, .module.module-outdoor-living-shop .stove-spares-header .inner-module .h2, .stove-spares-header .module.module-design-a-fireplace .inner-module .h2, .module.module-design-a-fireplace .stove-spares-header .inner-module .h2, .stove-spares-header .featured-copy .woocommerce .product_cat-stove-spares .product_title, .woocommerce .product_cat-stove-spares .stove-spares-header .featured-copy .product_title, .stove-spares-header .module.module-outdoor-living-shop .inner-module .woocommerce .product_cat-stove-spares .product_title, .woocommerce .product_cat-stove-spares .stove-spares-header .module.module-outdoor-living-shop .inner-module .product_title, .module.module-outdoor-living-shop .stove-spares-header .inner-module .woocommerce .product_cat-stove-spares .product_title, .woocommerce .product_cat-stove-spares .module.module-outdoor-living-shop .stove-spares-header .inner-module .product_title, .stove-spares-header .module.module-design-a-fireplace .inner-module .woocommerce .product_cat-stove-spares .product_title, .woocommerce .product_cat-stove-spares .stove-spares-header .module.module-design-a-fireplace .inner-module .product_title, .module.module-design-a-fireplace .stove-spares-header .inner-module .woocommerce .product_cat-stove-spares .product_title, .woocommerce .product_cat-stove-spares .module.module-design-a-fireplace .stove-spares-header .inner-module .product_title {
       text-align: center; }
-      .stove-spares-header .featured-copy .h2:after, .stove-spares-header .module.module-outdoor-living-shop .inner-module .h2:after, .module.module-outdoor-living-shop .stove-spares-header .inner-module .h2:after, .stove-spares-header .module.module-design-a-fireplace .inner-module .h2:after, .module.module-design-a-fireplace .stove-spares-header .inner-module .h2:after {
+      .stove-spares-header .featured-copy .h2:after, .stove-spares-header .module.module-outdoor-living-shop .inner-module .h2:after, .module.module-outdoor-living-shop .stove-spares-header .inner-module .h2:after, .stove-spares-header .module.module-design-a-fireplace .inner-module .h2:after, .module.module-design-a-fireplace .stove-spares-header .inner-module .h2:after, .stove-spares-header .featured-copy .woocommerce .product_cat-stove-spares .product_title:after, .woocommerce .product_cat-stove-spares .stove-spares-header .featured-copy .product_title:after, .stove-spares-header .module.module-outdoor-living-shop .inner-module .woocommerce .product_cat-stove-spares .product_title:after, .woocommerce .product_cat-stove-spares .stove-spares-header .module.module-outdoor-living-shop .inner-module .product_title:after, .module.module-outdoor-living-shop .stove-spares-header .inner-module .woocommerce .product_cat-stove-spares .product_title:after, .woocommerce .product_cat-stove-spares .module.module-outdoor-living-shop .stove-spares-header .inner-module .product_title:after, .stove-spares-header .module.module-design-a-fireplace .inner-module .woocommerce .product_cat-stove-spares .product_title:after, .woocommerce .product_cat-stove-spares .stove-spares-header .module.module-design-a-fireplace .inner-module .product_title:after, .module.module-design-a-fireplace .stove-spares-header .inner-module .woocommerce .product_cat-stove-spares .product_title:after, .woocommerce .product_cat-stove-spares .module.module-design-a-fireplace .stove-spares-header .inner-module .product_title:after {
         margin-left: -1.5rem;
         left: 50%; }
-      .stove-spares-header .featured-copy .h2 + p, .stove-spares-header .module.module-outdoor-living-shop .inner-module .h2 + p, .module.module-outdoor-living-shop .stove-spares-header .inner-module .h2 + p, .stove-spares-header .module.module-design-a-fireplace .inner-module .h2 + p, .module.module-design-a-fireplace .stove-spares-header .inner-module .h2 + p {
+      .stove-spares-header .featured-copy .h2 + p, .stove-spares-header .module.module-outdoor-living-shop .inner-module .h2 + p, .module.module-outdoor-living-shop .stove-spares-header .inner-module .h2 + p, .stove-spares-header .module.module-design-a-fireplace .inner-module .h2 + p, .module.module-design-a-fireplace .stove-spares-header .inner-module .h2 + p, .stove-spares-header .featured-copy .woocommerce .product_cat-stove-spares .product_title + p, .woocommerce .product_cat-stove-spares .stove-spares-header .featured-copy .product_title + p, .stove-spares-header .module.module-outdoor-living-shop .inner-module .woocommerce .product_cat-stove-spares .product_title + p, .woocommerce .product_cat-stove-spares .stove-spares-header .module.module-outdoor-living-shop .inner-module .product_title + p, .module.module-outdoor-living-shop .stove-spares-header .inner-module .woocommerce .product_cat-stove-spares .product_title + p, .woocommerce .product_cat-stove-spares .module.module-outdoor-living-shop .stove-spares-header .inner-module .product_title + p, .stove-spares-header .module.module-design-a-fireplace .inner-module .woocommerce .product_cat-stove-spares .product_title + p, .woocommerce .product_cat-stove-spares .stove-spares-header .module.module-design-a-fireplace .inner-module .product_title + p, .module.module-design-a-fireplace .stove-spares-header .inner-module .woocommerce .product_cat-stove-spares .product_title + p, .woocommerce .product_cat-stove-spares .module.module-design-a-fireplace .stove-spares-header .inner-module .product_title + p {
         font-size: 160%;
         max-width: 70%;
         margin-left: auto !important;

@@ -1511,6 +1511,12 @@ POSTS & CONTENT STYLES
 }
 
 .woocommerce {
+	.product_cat-stove-spares {
+		.product_title {
+			@extend .h2;
+		}
+	}
+	
 	.woocommerce-result-count,
 	.woocommerce-ordering {
 		display: none;
