@@ -150,6 +150,8 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 			left: 2rem;
 			text-align: left;
 			padding: 0;
+			background: none !important;
+			color: $white !important;
 			
 			&:after {
 				display: block;

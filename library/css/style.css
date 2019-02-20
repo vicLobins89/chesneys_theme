@@ -694,7 +694,9 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     bottom: 2rem;
     left: 2rem;
     text-align: left;
-    padding: 0; }
+    padding: 0;
+    background: none !important;
+    color: #fff !important; }
     .image-link.alt + p:after, .image-link.alt .wp-caption-text:after {
       display: block;
       position: absolute;
