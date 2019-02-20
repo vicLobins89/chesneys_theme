@@ -1761,7 +1761,10 @@ POSTS & CONTENT STYLES
         margin-left: -1.5rem;
         left: 50%; }
       .stove-spares-header .featured-copy .h2 + p, .stove-spares-header .module.module-outdoor-living-shop .inner-module .h2 + p, .module.module-outdoor-living-shop .stove-spares-header .inner-module .h2 + p, .stove-spares-header .module.module-design-a-fireplace .inner-module .h2 + p, .module.module-design-a-fireplace .stove-spares-header .inner-module .h2 + p {
-        font-size: 160%; }
+        font-size: 160%;
+        max-width: 70%;
+        margin-left: auto !important;
+        margin-right: auto !important; }
 
 .custom-content {
   margin: 2.5rem auto 0; }
