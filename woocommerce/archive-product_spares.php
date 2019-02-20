@@ -56,7 +56,7 @@ do_action( 'woocommerce_before_main_content' );
 		<?php
 		do_action( 'woocommerce_archive_description' );
 		$custom_content = get_field('custom_content', $term);
-		echo '<div class="col-12">'.$custom_content.'</div>';
+		echo '<div class="col-12 spares-thumbs">'.$custom_content.'</div>';
 		?>
 	</div>
 </header>
