@@ -1492,18 +1492,6 @@ POSTS & CONTENT STYLES
 				margin-bottom: 1rem;
 			}
 			
-			a:not(.button) {
-				display: block;
-				background: none;
-				padding-bottom: 10px;
-				@include transition(background 0.3s ease-in-out);
-				
-				&:hover, &:focus {
-					background: $light-brown;
-					color: $text-color;
-				}
-			}
-			
 			.button {
 				@extend .secondary-btn;
 			}
@@ -1528,6 +1516,20 @@ POSTS & CONTENT STYLES
 				.hover-text {
 					opacity: 1;
 					visibility: visible;
+				}
+			}
+		}
+		
+		li.product:not(.product-type-grouped) {
+			a:not(.button) {
+				display: block;
+				background: none;
+				padding-bottom: 10px;
+				@include transition(background 0.3s ease-in-out);
+				
+				&:hover, &:focus {
+					background: $light-brown;
+					color: $text-color;
 				}
 			}
 		}
