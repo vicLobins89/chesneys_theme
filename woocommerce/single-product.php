@@ -20,7 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-$term = get_queried_object();
+global $post;
+$terms = wp_get_post_terms( $post->ID, 'product_cat' );
+foreach ( $terms as $term ) $categories[] = $term->slug;
 
 get_header( 'shop' ); ?>
 
@@ -36,12 +38,22 @@ get_header( 'shop' ); ?>
 
 		<?php while ( have_posts() ) : the_post();
 
-			if( term_is_ancestor_of(67, $term->term_id, 'product_cat') || is_product_category(67) ) {
-				// Spares
-				wc_get_template_part( 'content', 'single-product_spares' );
+			if ( in_array( 'spares', $categories ) ) {
+			  echo 'In audio';
+			  wc_get_template_part( 'content', 'single-product_spares' );
+			} elseif ( in_array( 'elektro', $categories ) ) {
+			  echo 'In elektro';
+			  wc_get_template_part( 'content', 'single-product' );
 			} else {
-				wc_get_template_part( 'content', 'single-product' );
+			  echo 'some blabla';
 			}
+
+//			if( term_is_ancestor_of(67, $term->term_id, 'product_cat') || is_product_category(67) ) {
+//				// Spares
+//				wc_get_template_part( 'content', 'single-product_spares' );
+//			} else {
+//				wc_get_template_part( 'content', 'single-product' );
+//			}
 
 		endwhile; // end of the loop. ?>
 
