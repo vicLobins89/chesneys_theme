@@ -378,6 +378,7 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
+	&.module-accessories-and-fuel,
 	&.module-spares-and-accessories {
 		padding: 0;
 		
@@ -622,6 +623,7 @@ h2, .h2 {
 		background: $text-color;
 		
 		.blog-module &,
+		.module-accessories-and-fuel &,
 		.module-spares-and-accessories &,
 		.module-need-help & {
 			background: $white;
