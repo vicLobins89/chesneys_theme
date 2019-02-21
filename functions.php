@@ -310,10 +310,18 @@ function sip_alphabetical_shop_ordering( $sort_args ) {
 add_filter( 'woocommerce_get_catalog_ordering_args', 'sip_alphabetical_shop_ordering' );
 
 function sip_custom_wc_catalog_orderby( $sortby ) {
-	$sortby['alphabetical'] = 'Sort by name: Alphabetical';
+	$sortby['alphabetical'] = 'Sort by name: alphabetical';
 	return $sortby;
 }
 add_filter( 'woocommerce_default_catalog_orderby_options', 'sip_custom_wc_catalog_orderby' );
 add_filter( 'woocommerce_catalog_orderby', 'sip_custom_wc_catalog_orderby' );
+
+// Changing "Default Sorting" to "Recommended sorting" on shop and product settings pages
+function sip_update_sorting_name( $catalog_orderby ) {
+	$catalog_orderby = str_replace("Default sorting", "Recommended sorting", $catalog_orderby);
+	return $catalog_orderby;
+}
+add_filter( 'woocommerce_catalog_orderby', 'sip_update_sorting_name' );
+add_filter( 'woocommerce_default_catalog_orderby_options', 'sip_update_sorting_name' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
