@@ -21,12 +21,18 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
-	$('#down').on('click', function(e){
+	$('#up').on('click', function(e){
 		e.preventDefault();
 		var value = $(this).next('.quantity').find('input').val();
 		value = parseInt(value) + 1;
 		$(this).next('.quantity').find('input').val(value);
-		console.log(value);
+	});
+	
+	$('#down').on('click', function(e){
+		e.preventDefault();
+		var value = $(this).next('.quantity').find('input').val();
+		value = parseInt(value) - 1;
+		$(this).next('.quantity').find('input').val(value);
 	});
 	
 	// Add image-link to caption
