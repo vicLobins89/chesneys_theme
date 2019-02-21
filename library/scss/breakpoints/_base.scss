@@ -1511,6 +1511,10 @@ POSTS & CONTENT STYLES
 }
 
 .woocommerce {
+	.single_add_to_cart_button {
+		@extend .secondary-btn;
+	}
+	
 	.spares-product {
 		.product_title {
 			@extend .h2;
@@ -1546,6 +1550,10 @@ POSTS & CONTENT STYLES
 				
 				&.woocommerce-grouped-product-list-item__label {
 					padding-left: 1.5rem;
+				}
+				
+				&.woocommerce-grouped-product-list-item__desc {
+					font-family: $sans-serif;
 				}
 				
 				&:first-child {

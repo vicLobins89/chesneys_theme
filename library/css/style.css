@@ -600,7 +600,7 @@ Quick video guide:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.primary-btn, .image-link + p, .image-link .wp-caption-text, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, .woocommerce ul.products li.product .button, a.secondary-btn {
+.primary-btn, .image-link + p, .image-link .wp-caption-text, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, .woocommerce .single_add_to_cart_button, .woocommerce ul.products li.product .button, a.secondary-btn {
   position: relative;
   min-width: 12em;
   display: inline-block;
@@ -622,10 +622,10 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   outline: none;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, a.comment-reply-link:hover, #submit:hover, .secondary-btn:hover, .woocommerce ul.products li.product .button:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus, .woocommerce ul.products li.product .button:focus {
+  .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, a.comment-reply-link:hover, #submit:hover, .secondary-btn:hover, .woocommerce .single_add_to_cart_button:hover, .woocommerce ul.products li.product .button:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus, .woocommerce .single_add_to_cart_button:focus, .woocommerce ul.products li.product .button:focus {
     color: #fff;
     text-decoration: none; }
-  .primary-btn a, .image-link + p a, .image-link .wp-caption-text a, a.comment-reply-link a, #submit a, .secondary-btn a, .woocommerce ul.products li.product .button a {
+  .primary-btn a, .image-link + p a, .image-link .wp-caption-text a, a.comment-reply-link a, #submit a, .secondary-btn a, .woocommerce .single_add_to_cart_button a, .woocommerce ul.products li.product .button a {
     color: inherit !important;
     text-decoration: inherit !important; }
 
@@ -643,21 +643,21 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
       background-color: #000;
       color: #fff; }
 
-.secondary-btn, .woocommerce ul.products li.product .button, a.secondary-btn, .woocommerce ul.products li.product a.button {
+.secondary-btn, .woocommerce .single_add_to_cart_button, .woocommerce ul.products li.product .button, a.secondary-btn, .woocommerce a.single_add_to_cart_button, .woocommerce ul.products li.product a.button {
   background-color: #4b858e;
   border-color: #4b858e;
   color: #fff;
   font-size: .8em;
   font-weight: normal; }
-  .secondary-btn:hover, .woocommerce ul.products li.product .button:hover, .secondary-btn:focus, .woocommerce ul.products li.product .button:focus, a.secondary-btn:hover, .woocommerce ul.products li.product a.button:hover, a.secondary-btn:focus, .woocommerce ul.products li.product a.button:focus {
+  .secondary-btn:hover, .woocommerce .single_add_to_cart_button:hover, .woocommerce ul.products li.product .button:hover, .secondary-btn:focus, .woocommerce .single_add_to_cart_button:focus, .woocommerce ul.products li.product .button:focus, a.secondary-btn:hover, .woocommerce a.single_add_to_cart_button:hover, .woocommerce ul.products li.product a.button:hover, a.secondary-btn:focus, .woocommerce a.single_add_to_cart_button:focus, .woocommerce ul.products li.product a.button:focus {
     background: none;
     border-color: #4b858e;
     color: #4b858e; }
-  .secondary-btn.alt, .woocommerce ul.products li.product .alt.button, a.secondary-btn.alt, .woocommerce ul.products li.product a.alt.button {
+  .secondary-btn.alt, .woocommerce .alt.single_add_to_cart_button, .woocommerce ul.products li.product .alt.button, a.secondary-btn.alt, .woocommerce a.alt.single_add_to_cart_button, .woocommerce ul.products li.product a.alt.button {
     width: 50%;
     border: 3px solid #ff8700;
     font-weight: bold; }
-    .secondary-btn.alt:hover, .woocommerce ul.products li.product .alt.button:hover, .secondary-btn.alt:focus, .woocommerce ul.products li.product .alt.button:focus, a.secondary-btn.alt:hover, .woocommerce ul.products li.product a.alt.button:hover, a.secondary-btn.alt:focus, .woocommerce ul.products li.product a.alt.button:focus {
+    .secondary-btn.alt:hover, .woocommerce .alt.single_add_to_cart_button:hover, .woocommerce ul.products li.product .alt.button:hover, .secondary-btn.alt:focus, .woocommerce .alt.single_add_to_cart_button:focus, .woocommerce ul.products li.product .alt.button:focus, a.secondary-btn.alt:hover, .woocommerce a.alt.single_add_to_cart_button:hover, .woocommerce ul.products li.product a.alt.button:hover, a.secondary-btn.alt:focus, .woocommerce a.alt.single_add_to_cart_button:focus, .woocommerce ul.products li.product a.alt.button:focus {
       background-color: #ff8700;
       color: #fff; }
 
@@ -2038,6 +2038,8 @@ POSTS & CONTENT STYLES
     vertical-align: top; }
     .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__label {
       padding-left: 1.5rem; }
+    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__desc {
+      font-family: "Univers", Helvetica, Arial, sans-serif; }
     .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td:first-child {
       text-align: left;
       font-size: 1.2em; }
