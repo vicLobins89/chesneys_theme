@@ -21,10 +21,11 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
-	$('#down').click(function(e){
+	$('#down').on('click', function(e){
 		e.preventDefault();
 		var value = $(this).next('.quantity').find('input').val();
 		value = parseInt(value) + 1;
+		$(this).next('.quantity').find('input').val(value);
 		console.log(value);
 	});
 	
