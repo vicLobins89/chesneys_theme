@@ -31,8 +31,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				'label',
 				'desc',
 				'quantity',
-				'price',
-				'cart'
+				'price'
 			), $product );
 
 			foreach ( $grouped_products as $key=>$grouped_product_child ) {
@@ -84,9 +83,10 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							break;
 						case 'price':
 							$value = $grouped_product_child->get_price_html() . wc_get_stock_html( $grouped_product_child );
+							$value .= '<button type="submit" class="secondary-btn"> '. esc_html( $product->single_add_to_cart_text() ) . '</button>';
 							break;
 						case 'cart':
-							$value = '<button type="submit" class="single_add_to_cart_button button alt"> '. esc_html( $product->single_add_to_cart_text() ) . '</button>';
+							$value = '<button type="submit" class="secondary-btn"> '. esc_html( $product->single_add_to_cart_text() ) . '</button>';
 							break;
 						default:
 							$value = '';

@@ -1511,7 +1511,7 @@ POSTS & CONTENT STYLES
 }
 
 .woocommerce {
-	.single_add_to_cart_button {
+	button.single_add_to_cart_button {
 		@extend .secondary-btn;
 	}
 	
