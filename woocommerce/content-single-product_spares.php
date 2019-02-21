@@ -91,5 +91,6 @@ if ( post_password_required() ) {
 <?php do_action( 'woocommerce_after_single_product' ); ?>
 
 <?php // Need help module
-$acfClass->render_modules(986);
+$queried_post = get_post(986);
+$acfClass->render_modules($queried_post);
 ?>
