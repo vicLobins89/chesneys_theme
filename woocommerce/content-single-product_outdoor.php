@@ -39,7 +39,7 @@ if ( post_password_required() ) {
 	<div class="cf">
 		<img width="1859" height="1235" src="<?php echo get_field('featured_image'); ?>" class="attachment-full size-full wp-post-image" alt="">							
 		<div class="featured-copy">
-			<h1 class="h2 lhs"><?php echo $product->post->post_title; ?></h1>
+			<h1 class="h2 lhs"><?php echo $product->get_name(); ?></h1>
 			<p><?php echo get_field('featured_copy'); ?></p>
 		</div>
 	</div>
