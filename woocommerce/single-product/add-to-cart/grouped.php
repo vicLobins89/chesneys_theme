@@ -68,7 +68,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							} else {
 								do_action( 'woocommerce_before_add_to_cart_quantity' );
 								
-								echo '<a id="down" href="#">-</a>';
+								echo '<a class="down" href="#">-</a>';
 								woocommerce_quantity_input( array(
 									'input_name'  => 'quantity[' . $grouped_product_child->get_id() . ']',
 									//'input_value' => isset( $_POST['quantity'][ $grouped_product_child->get_id() ] ) ? wc_stock_amount( wc_clean( wp_unslash( $_POST['quantity'][ $grouped_product_child->get_id() ] ) ) ) : 0, // WPCS: CSRF ok, input var okay, sanitization ok.
@@ -76,7 +76,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 									'min_value'   => apply_filters( 'woocommerce_quantity_input_min', 0, $grouped_product_child ),
 									'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $grouped_product_child->get_max_purchase_quantity(), $grouped_product_child ),
 								) );
-								echo '<a id="up" href="#">+</a>';
+								echo '<a class="up" href="#">+</a>';
 								
 								do_action( 'woocommerce_after_add_to_cart_quantity' );
 							}

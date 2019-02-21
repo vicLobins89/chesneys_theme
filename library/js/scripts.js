@@ -21,14 +21,14 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
-	$('#up').on('click', function(e){
+	$('.up').on('click', function(e){
 		e.preventDefault();
 		var value = $(this).prev('.quantity').find('input').val();
 		value = parseInt(value) + 1;
 		$(this).prev('.quantity').find('input').val(value);
 	});
 	
-	$('#down').on('click', function(e){
+	$('.down').on('click', function(e){
 		e.preventDefault();
 		var value = $(this).next('.quantity').find('input').val();
 		value = parseInt(value) - 1;
