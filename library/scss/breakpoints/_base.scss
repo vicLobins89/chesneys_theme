@@ -1541,6 +1541,17 @@ POSTS & CONTENT STYLES
 			
 			td {
 				padding: 3.5em 1.5em 1.5em;
+				font-weight: normal;
+				
+				&:first-child {
+					font-size: 1.2em;
+					
+					span {
+						display: block;
+						font-family: $sans-serif;
+						font-size: 75%;
+					}
+				}
 			}
 
 			tr {
@@ -1548,10 +1559,11 @@ POSTS & CONTENT STYLES
 					counter-increment: section;
 					content: counter(section);
 					position: absolute;
-					width: 100%;
+					width: calc(100% - 3em);
 					border-bottom: 1px solid $text-color;
 					left: 1.5em;
-					top: 10px;
+					padding: 15px 0 0;
+					font-family: $sans-serif;
 				}
 
 				&:nth-child(even) {

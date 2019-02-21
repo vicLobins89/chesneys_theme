@@ -2033,15 +2033,23 @@ POSTS & CONTENT STYLES
   counter-reset: section;
   position: relative; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td {
-    padding: 3.5em 1.5em 1.5em; }
+    padding: 3.5em 1.5em 1.5em;
+    font-weight: normal; }
+    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td:first-child {
+      font-size: 1.2em; }
+      .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td:first-child span {
+        display: block;
+        font-family: "Univers", Helvetica, Arial, sans-serif;
+        font-size: 75%; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:before {
     counter-increment: section;
     content: counter(section);
     position: absolute;
-    width: 100%;
+    width: calc(100% - 3em);
     border-bottom: 1px solid #142128;
     left: 1.5em;
-    top: 10px; }
+    padding: 15px 0 0;
+    font-family: "Univers", Helvetica, Arial, sans-serif; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(even) {
     background: #fff; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(odd) {
