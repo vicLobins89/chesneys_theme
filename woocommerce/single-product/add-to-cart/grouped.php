@@ -41,7 +41,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				$post               = $post_object; // WPCS: override ok.
 				setup_postdata( $post );
 
-				echo '<tr id="product-' . esc_attr( $grouped_product_child->get_id() ) . '" class="woocommerce-grouped-product-list-item ' . esc_attr( implode( ' ', wc_get_product_class( '', $grouped_product_child->get_id() ) ) ) . '"><div class="counter">'.($key+1).'</div>';
+				echo '<tr id="product-' . esc_attr( $grouped_product_child->get_id() ) . '" class="woocommerce-grouped-product-list-item ' . esc_attr( implode( ' ', wc_get_product_class( '', $grouped_product_child->get_id() ) ) ) . '">';
 
 				// Output columns for each product.
 				foreach ( $grouped_product_columns as $column_id ) {
@@ -93,7 +93,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							break;
 					}
 
-					echo '<td class="woocommerce-grouped-product-list-item__' . esc_attr( $column_id ) . '">' . apply_filters( 'woocommerce_grouped_product_list_column_' . $column_id, $value, $grouped_product_child ) . '</td>'; // WPCS: XSS ok.
+					echo '<div class="counter">'.($key+1).'</div><td class="woocommerce-grouped-product-list-item__' . esc_attr( $column_id ) . '">' . apply_filters( 'woocommerce_grouped_product_list_column_' . $column_id, $value, $grouped_product_child ) . '</td>'; // WPCS: XSS ok.
 
 					do_action( 'woocommerce_grouped_product_list_after_' . $column_id, $grouped_product_child );
 				}
