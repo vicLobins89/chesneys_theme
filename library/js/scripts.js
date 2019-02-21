@@ -21,6 +21,10 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
+	$('#down').click(function(){
+		$(this).next('.quantity').find('input').html(function(i, val) { return +val+1; });
+	});
+	
 	// Add image-link to caption
 	$('a.image-link').each(function(){
 		var url = $(this).attr("href");
