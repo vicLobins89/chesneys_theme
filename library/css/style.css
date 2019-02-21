@@ -2064,17 +2064,17 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
-.woocommerce .qty-btn, .woocommerce .quantity {
+.woocommerce .spares-product .qty-btn, .woocommerce .spares-product .quantity {
   display: inline-block; }
-.woocommerce .quantity {
+.woocommerce .spares-product .quantity {
   width: 2rem; }
-  .woocommerce .quantity input {
+  .woocommerce .spares-product .quantity input {
     background: none;
     padding-left: 0;
     padding-right: 0;
     width: 2rem !important; }
-  .woocommerce .quantity input[type=number]::-webkit-inner-spin-button,
-  .woocommerce .quantity input[type=number]::-webkit-outer-spin-button {
+  .woocommerce .spares-product .quantity input[type=number]::-webkit-inner-spin-button,
+  .woocommerce .spares-product .quantity input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0; }
 .woocommerce .spares-product .product_title {
