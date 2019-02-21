@@ -67,7 +67,8 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 								echo '<input type="checkbox" name="' . esc_attr( 'quantity[' . $grouped_product_child->get_id() . ']' ) . '" value="1" class="wc-grouped-product-add-to-cart-checkbox" />';
 							} else {
 								do_action( 'woocommerce_before_add_to_cart_quantity' );
-
+								
+								echo '<a id="down" href="#" onclick="updateSpinner(this);">-</a>';
 								woocommerce_quantity_input( array(
 									'input_name'  => 'quantity[' . $grouped_product_child->get_id() . ']',
 									//'input_value' => isset( $_POST['quantity'][ $grouped_product_child->get_id() ] ) ? wc_stock_amount( wc_clean( wp_unslash( $_POST['quantity'][ $grouped_product_child->get_id() ] ) ) ) : 0, // WPCS: CSRF ok, input var okay, sanitization ok.
@@ -75,7 +76,8 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 									'min_value'   => apply_filters( 'woocommerce_quantity_input_min', 0, $grouped_product_child ),
 									'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $grouped_product_child->get_max_purchase_quantity(), $grouped_product_child ),
 								) );
-
+								echo '<a id="up" href="#"  onclick="updateSpinner(this);">+</a>';
+								
 								do_action( 'woocommerce_after_add_to_cart_quantity' );
 							}
 
