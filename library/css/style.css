@@ -1112,13 +1112,20 @@ LAYOUT & GRID STYLES
 .row.outdoor-product-single {
   padding-top: 1rem; }
   .row.outdoor-product-single .col-12 {
-    background: #f5f3f1; }
-  .row.outdoor-product-single .woocommerce-product-gallery img {
-    margin: 0; }
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex; }
+  .row.outdoor-product-single .woocommerce-product-gallery {
+    float: none !important; }
+    .row.outdoor-product-single .woocommerce-product-gallery img {
+      margin: 0; }
   .row.outdoor-product-single .short-desc {
-    float: right;
+    float: none;
     width: 52%;
-    padding: 2rem; }
+    padding: 2rem;
+    background: #f5f3f1; }
 .row.related-products {
   padding-bottom: 0;
   text-align: center; }

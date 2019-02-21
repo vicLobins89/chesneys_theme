@@ -290,19 +290,26 @@ LAYOUT & GRID STYLES
 		padding-top: 1rem;
 		
 		.col-12 {
-			background: $light-brown;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
 		}
 		
 		.woocommerce-product-gallery {
+			float: none !important;
+			
 			img {
 				margin: 0;
 			}
 		}
 		
 		.short-desc {
-			float: right;
+			float: none;
 			width: 52%;
 			padding: 2rem;
+			background: $light-brown;
 			
 			.product_title {
 				@extend .h2.lhs;
