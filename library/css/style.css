@@ -2083,7 +2083,8 @@ POSTS & CONTENT STYLES
     text-decoration: none; }
 
 .woocommerce .qty-btn, .woocommerce .quantity {
-  display: inline-block; }
+  display: inline-block;
+  float: none !important; }
 .woocommerce .quantity {
   width: 2rem; }
   .woocommerce .quantity input {
