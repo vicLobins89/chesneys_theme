@@ -787,16 +787,11 @@ HEADER STYLES
 
 .logo {
 	display: block;
+	max-width: 16rem;
+	width: 90%;
 	font-size: 0;
 	padding: 1.75rem 0 1.25rem;
-	margin: 0;
-	text-align: center;
-	
-	img {
-		max-width: 16rem;
-		height: auto;
-		width: 90%;
-	}
+	margin: 0 auto;
 
 	a {
 		color: $gray;
@@ -1590,7 +1585,7 @@ POSTS & CONTENT STYLES
 				}
 			}
 			
-			&.product-type-grouped {
+			&.spares-product {
 				.woocommerce-loop-category__title,
 				.woocommerce-loop-product__title,
 				p {
@@ -1617,6 +1612,25 @@ POSTS & CONTENT STYLES
 					&:after {
 						bottom: auto;
     					top: -14px;
+					}
+				}
+				
+				.woocommerce-grouped-product-list {
+					counter-reset: section;
+					
+					tr {
+						&:before {
+							counter-increment: section;
+							content: counter(section);
+						}
+						
+						&:nth-child(even) {
+							background: $white;
+						}
+						
+						&:nth-child(odd) {
+							background: $light-brown;
+						}
 					}
 				}
 			}
