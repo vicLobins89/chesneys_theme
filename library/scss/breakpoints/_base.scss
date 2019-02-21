@@ -1515,9 +1515,18 @@ POSTS & CONTENT STYLES
 		@extend .secondary-btn;
 	}
 	
+	.quantity, a.down, a.up {
+		display: inline-block;
+	}
+	
 	.quantity {
+		width: 2rem;
+		
 		input {
-			
+			background: none;
+			padding-left: 0;
+			padding-right: 0;
+			width: 2rem;
 		}
 		
 		input[type=number]::-webkit-inner-spin-button, 
