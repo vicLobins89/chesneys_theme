@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 		var value = $(this).prev('.quantity').find('input').val();
 		value = parseInt(value) + 1;
-		$(this).next('.quantity').find('input').val(value);
+		$(this).prev('.quantity').find('input').val(value);
 	});
 	
 	$('#down').on('click', function(e){
