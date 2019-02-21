@@ -1111,10 +1111,13 @@ LAYOUT & GRID STYLES
   background: #f5f3f1; }
 .row.outdoor-product-single {
   padding-top: 1rem; }
+  .row.outdoor-product-single .col-12 {
+    background: #f5f3f1; }
+  .row.outdoor-product-single .woocommerce-product-gallery img {
+    margin: 0; }
   .row.outdoor-product-single .short-desc {
     float: right;
     width: 52%;
-    background: #f5f3f1;
     padding: 2rem; }
 .row.related-products {
   padding-bottom: 0;

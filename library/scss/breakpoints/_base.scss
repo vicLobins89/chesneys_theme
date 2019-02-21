@@ -289,13 +289,19 @@ LAYOUT & GRID STYLES
 	&.outdoor-product-single {
 		padding-top: 1rem;
 		
+		.col-12 {
+			background: $light-brown;
+		}
+		
 		.woocommerce-product-gallery {
+			img {
+				margin: 0;
+			}
 		}
 		
 		.short-desc {
 			float: right;
 			width: 52%;
-			background: $light-brown;
 			padding: 2rem;
 			
 			.product_title {
