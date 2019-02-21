@@ -1540,12 +1540,16 @@ POSTS & CONTENT STYLES
 			position: relative;
 			
 			td {
-				padding: 3.5em 1.5em 1.5em;
+				padding: 3.5rem 1.5rem 1.5rem;
 				font-weight: normal;
-				text-align: left;
 				vertical-align: top;
 				
+				&.woocommerce-grouped-product-list-item__label {
+					padding-left: 1.5rem;
+				}
+				
 				&:first-child {
+					text-align: left;
 					font-size: 1.2em;
 					
 					span {
