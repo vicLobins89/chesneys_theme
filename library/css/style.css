@@ -2031,18 +2031,20 @@ POSTS & CONTENT STYLES
   position: relative; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td {
     padding: 3.5em 1.5em 1.5em; }
-  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:before {
-    counter-increment: section;
-    content: counter(section);
-    position: absolute;
-    width: 100%;
-    border-bottom: 1px solid #142128;
-    left: 1.5em;
-    top: 10px; }
-  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(even) {
-    background: #fff; }
-  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(odd) {
-    background: #f5f3f1; }
+  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr {
+    position: relative; }
+    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:before {
+      counter-increment: section;
+      content: counter(section);
+      position: absolute;
+      width: 100%;
+      border-bottom: 1px solid #142128;
+      left: 1.5em;
+      top: 10px; }
+    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(even) {
+      background: #fff; }
+    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(odd) {
+      background: #f5f3f1; }
 .woocommerce .woocommerce-result-count,
 .woocommerce .woocommerce-ordering {
   display: none; }

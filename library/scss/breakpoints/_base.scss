@@ -1539,6 +1539,8 @@ POSTS & CONTENT STYLES
 			}
 
 			tr {
+				position: relative;
+				
 				&:before {
 					counter-increment: section;
 					content: counter(section);
