@@ -2028,15 +2028,15 @@ POSTS & CONTENT STYLES
   display: none; }
 .woocommerce .spares-product .woocommerce-grouped-product-list {
   counter-reset: section; }
-  .woocommerce .spares-product .woocommerce-grouped-product-list tr {
-    padding: 1rem; }
-    .woocommerce .spares-product .woocommerce-grouped-product-list tr:before {
-      counter-increment: section;
-      content: counter(section); }
-    .woocommerce .spares-product .woocommerce-grouped-product-list tr:nth-child(even) {
-      background: #fff; }
-    .woocommerce .spares-product .woocommerce-grouped-product-list tr:nth-child(odd) {
-      background: #f5f3f1; }
+  .woocommerce .spares-product .woocommerce-grouped-product-list td {
+    padding: 1.5em; }
+  .woocommerce .spares-product .woocommerce-grouped-product-list tr:before {
+    counter-increment: section;
+    content: counter(section); }
+  .woocommerce .spares-product .woocommerce-grouped-product-list tr:nth-child(even) {
+    background: #fff; }
+  .woocommerce .spares-product .woocommerce-grouped-product-list tr:nth-child(odd) {
+    background: #f5f3f1; }
 .woocommerce .woocommerce-result-count,
 .woocommerce .woocommerce-ordering {
   display: none; }
