@@ -314,6 +314,7 @@ LAYOUT & GRID STYLES
 			
 			.product_title {
 				@extend .h2;
+				@extend .lhs;
 			}
 		}
 	}
