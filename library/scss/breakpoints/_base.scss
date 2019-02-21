@@ -1534,6 +1534,8 @@ POSTS & CONTENT STYLES
 			counter-reset: section;
 
 			tr {
+				padding: 1rem;
+				
 				&:before {
 					counter-increment: section;
 					content: counter(section);
