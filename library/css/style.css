@@ -614,7 +614,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1;
-  padding: 1.3em 0 1em;
+  padding: 1.3em 2em 1em;
   margin: 1rem 0;
   cursor: pointer;
   text-align: center;
@@ -648,7 +648,9 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   border-color: #4b858e;
   color: #fff;
   font-size: .8em;
-  font-weight: normal; }
+  font-weight: normal;
+  padding-left: 0;
+  padding-right: 0; }
   .secondary-btn:hover, .woocommerce button.single_add_to_cart_button:hover, .woocommerce ul.products li.product .button:hover, .secondary-btn:focus, .woocommerce button.single_add_to_cart_button:focus, .woocommerce ul.products li.product .button:focus, a.secondary-btn:hover, .woocommerce ul.products li.product a.button:hover, a.secondary-btn:focus, .woocommerce ul.products li.product a.button:focus {
     background: none;
     border-color: #4b858e;
