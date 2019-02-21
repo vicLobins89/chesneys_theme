@@ -1476,6 +1476,9 @@ HEADER STYLES
   font-size: 0;
   padding: 1.75rem 0 1.25rem;
   margin: 0 auto; }
+  .logo img {
+    max-width: 100%;
+    height: auto; }
   .logo a {
     color: #53575a; }
 
