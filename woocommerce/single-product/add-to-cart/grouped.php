@@ -35,13 +35,13 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				'cart'
 			), $product );
 
-			foreach ( $grouped_products as $grouped_product_child ) {
+			foreach ( $grouped_products as $key=>$grouped_product_child ) {
 				$post_object        = get_post( $grouped_product_child->get_id() );
 				$quantites_required = $quantites_required || ( $grouped_product_child->is_purchasable() && ! $grouped_product_child->has_options() );
 				$post               = $post_object; // WPCS: override ok.
 				setup_postdata( $post );
 
-				echo '<tr id="product-' . esc_attr( $grouped_product_child->get_id() ) . '" class="woocommerce-grouped-product-list-item ' . esc_attr( implode( ' ', wc_get_product_class( '', $grouped_product_child->get_id() ) ) ) . '">';
+				echo '<tr id="product-' . esc_attr( $grouped_product_child->get_id() ) . '" class="woocommerce-grouped-product-list-item ' . esc_attr( implode( ' ', wc_get_product_class( '', $grouped_product_child->get_id() ) ) ) . '"><div class="counter">'.($key+1).'</div>';
 
 				// Output columns for each product.
 				foreach ( $grouped_product_columns as $column_id ) {
