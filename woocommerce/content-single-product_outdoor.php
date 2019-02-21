@@ -16,6 +16,7 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+global $product;
 require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
 
