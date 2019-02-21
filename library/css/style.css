@@ -2059,32 +2059,23 @@ POSTS & CONTENT STYLES
   .woocommerce ul.products li.product:hover .hover-text, .woocommerce ul.products li.product:focus .hover-text {
     opacity: 1;
     visibility: visible; }
-  .woocommerce ul.products li.product.spares-product .woocommerce-loop-category__title,
-  .woocommerce ul.products li.product.spares-product .woocommerce-loop-product__title,
-  .woocommerce ul.products li.product.spares-product p {
+  .woocommerce ul.products li.product.product-type-grouped .woocommerce-loop-category__title,
+  .woocommerce ul.products li.product.product-type-grouped .woocommerce-loop-product__title,
+  .woocommerce ul.products li.product.product-type-grouped p {
     margin-left: 0; }
-  .woocommerce ul.products li.product.spares-product a:not(.button):hover, .woocommerce ul.products li.product.spares-product a:not(.button):focus {
+  .woocommerce ul.products li.product.product-type-grouped a:not(.button):hover, .woocommerce ul.products li.product.product-type-grouped a:not(.button):focus {
     background: none; }
-  .woocommerce ul.products li.product.spares-product .category-name {
+  .woocommerce ul.products li.product.product-type-grouped .category-name {
     font-family: "Univers", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-size: .75em; }
-  .woocommerce ul.products li.product.spares-product .woocommerce-loop-product__title {
+  .woocommerce ul.products li.product.product-type-grouped .woocommerce-loop-product__title {
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
     text-transform: none;
     font-size: 1.25em; }
-    .woocommerce ul.products li.product.spares-product .woocommerce-loop-product__title:after {
+    .woocommerce ul.products li.product.product-type-grouped .woocommerce-loop-product__title:after {
       bottom: auto;
       top: -14px; }
-  .woocommerce ul.products li.product.spares-product .woocommerce-grouped-product-list {
-    counter-reset: section; }
-    .woocommerce ul.products li.product.spares-product .woocommerce-grouped-product-list tr:before {
-      counter-increment: section;
-      content: counter(section); }
-    .woocommerce ul.products li.product.spares-product .woocommerce-grouped-product-list tr:nth-child(even) {
-      background: #fff; }
-    .woocommerce ul.products li.product.spares-product .woocommerce-grouped-product-list tr:nth-child(odd) {
-      background: #f5f3f1; }
 .woocommerce .hover-text {
   position: absolute;
   width: 100%;

@@ -1585,7 +1585,7 @@ POSTS & CONTENT STYLES
 				}
 			}
 			
-			&.spares-product {
+			&.product-type-grouped {
 				.woocommerce-loop-category__title,
 				.woocommerce-loop-product__title,
 				p {
@@ -1612,25 +1612,6 @@ POSTS & CONTENT STYLES
 					&:after {
 						bottom: auto;
     					top: -14px;
-					}
-				}
-				
-				.woocommerce-grouped-product-list {
-					counter-reset: section;
-					
-					tr {
-						&:before {
-							counter-increment: section;
-							content: counter(section);
-						}
-						
-						&:nth-child(even) {
-							background: $white;
-						}
-						
-						&:nth-child(odd) {
-							background: $light-brown;
-						}
 					}
 				}
 			}
