@@ -1706,6 +1706,10 @@ POSTS & CONTENT STYLES
 	.woocommerce-result-count,
 	.woocommerce-ordering {
 		display: none;
+		
+		.spares-shop-loop & {
+			display: block;
+		}
 	}
 	
 	ul.products {

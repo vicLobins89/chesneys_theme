@@ -2132,9 +2132,11 @@ POSTS & CONTENT STYLES
     background: #fff; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(odd) {
     background: #f5f3f1; }
-.woocommerce .woocommerce-result-count,
-.woocommerce .woocommerce-ordering {
+.woocommerce .woocommerce-result-count, .woocommerce .woocommerce-ordering {
   display: none; }
+  .spares-shop-loop .woocommerce .woocommerce-result-count,
+  .spares-shop-loop .woocommerce .woocommerce-ordering {
+    display: block; }
 .woocommerce ul.products li.product {
   text-align: left; }
   .woocommerce ul.products li.product .attachment-woocommerce_thumbnail {
