@@ -43,7 +43,7 @@ if ( post_password_required() ) {
 			<p><?php echo get_field('featured_copy'); ?></p>
 		</div>
 		
-		<h2 style="text-align: center; margin-top: 2rem;">Product Spec</h2>
+		<h2 style="text-align: center; margin-top: 1.5rem;">Product Spec</h2>
 		<p style="text-align: center;"><?php echo get_field('product_spec'); ?></p>
 	</div>
 </section>
@@ -74,7 +74,10 @@ if ( post_password_required() ) {
 		 * @hooked WC_Structured_Data::generate_product_data() - 60
 		 */
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+		
+		echo '<div>';
 		do_action( 'woocommerce_single_product_summary' );
+		echo '</div>';
 		?>
 	</div></div>
 
