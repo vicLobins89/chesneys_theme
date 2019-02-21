@@ -16,7 +16,8 @@
  */
 
 defined( 'ABSPATH' ) || exit;
-
+require_once(__DIR__.'/../classes/acf.php');
+$acfClass = new CustomACF();
 global $product;
 $term = get_queried_object();
 
@@ -29,9 +30,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	<?php // Fireplaces hover info
 	if( term_is_ancestor_of(16, $term->term_id, 'product_cat') ) {
 		echo '<div class="hover-text">';
-		$post_id = 1003;
-		$queried_post = get_post($post_id);
-		echo $queried_post->post_content;
+		$queried_post = get_post(1003);
+		$acfClass->render_modules($queried_post);
 		echo '</div>';
 	}
 	?>
