@@ -49,7 +49,7 @@ if ( post_password_required() ) {
 </section>
 <?php endif; ?>
 
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class('entry-content row cf outdoor-product '); ?>>
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class('entry-content row cf outdoor-product-single '); ?>>
 
 	<div class="cf"><div class="col-12">
 		<?php
@@ -75,7 +75,7 @@ if ( post_password_required() ) {
 		 */
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 		
-		echo '<div>';
+		echo '<div class="short-desc">';
 		do_action( 'woocommerce_single_product_summary' );
 		echo '</div>';
 		?>

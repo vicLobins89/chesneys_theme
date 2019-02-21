@@ -286,8 +286,24 @@ LAYOUT & GRID STYLES
 		background: $light-brown;
 	}
 	
-	&.outdoor-product {
+	&.outdoor-product-single {
 		padding-top: 1rem;
+		
+		.woocommerce-product-gallery {
+			float: left;
+			width: 50%;
+		}
+		
+		.short-desc {
+			float: right;
+			width: 50%;
+			background: $light-brown;
+			padding: 2rem;
+			
+			.product_title {
+				@extend .h2.lhs;
+			}
+		}
 	}
 	
 	&.related-products {

@@ -1109,8 +1109,16 @@ LAYOUT & GRID STYLES
   padding-bottom: 0; }
 .row.spares-shop-loop {
   background: #f5f3f1; }
-.row.outdoor-product {
+.row.outdoor-product-single {
   padding-top: 1rem; }
+  .row.outdoor-product-single .woocommerce-product-gallery {
+    float: left;
+    width: 50%; }
+  .row.outdoor-product-single .short-desc {
+    float: right;
+    width: 50%;
+    background: #f5f3f1;
+    padding: 2rem; }
 .row.related-products {
   padding-bottom: 0;
   text-align: center; }
@@ -1395,7 +1403,7 @@ h2, .h2, .woocommerce .spares-product .product_title {
     background: #142128; }
     .blog-module h2:after, .module-accessories-and-fuel h2:after, .module-accessories-and-fuel-spares h2:after, .module-spares-and-accessories h2:after, .module-need-help h2:after, .blog-module .h2:after, .blog-module .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .blog-module .product_title:after, .module-accessories-and-fuel .h2:after, .module-accessories-and-fuel .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-accessories-and-fuel .product_title:after, .module-accessories-and-fuel-spares .h2:after, .module-accessories-and-fuel-spares .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-accessories-and-fuel-spares .product_title:after, .module-spares-and-accessories .h2:after, .module-spares-and-accessories .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-spares-and-accessories .product_title:after, .module-need-help .h2:after, .module-need-help .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-need-help .product_title:after {
       background: #fff; }
-  h2.lhs:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .woocommerce .spares-product .lhs.product_title:after, .h2.woocommerce-loop-category__title:after, .woocommerce .spares-product .woocommerce-loop-category__title.product_title:after, .h2.woocommerce-loop-product__title:after, .woocommerce .spares-product .woocommerce-loop-product__title.product_title:after, .module-outdoor-living-shop .h2:after, .module-outdoor-living-shop .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-outdoor-living-shop .product_title:after, .module-design-a-fireplace .h2:after, .module-design-a-fireplace .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-design-a-fireplace .product_title:after {
+  h2.lhs:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .row.outdoor-product-single .short-desc .product_title:after, .woocommerce .spares-product .lhs.product_title:after, .h2.woocommerce-loop-category__title:after, .woocommerce .spares-product .woocommerce-loop-category__title.product_title:after, .h2.woocommerce-loop-product__title:after, .woocommerce .spares-product .woocommerce-loop-product__title.product_title:after, .module-outdoor-living-shop .h2:after, .module-outdoor-living-shop .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-outdoor-living-shop .product_title:after, .module-design-a-fireplace .h2:after, .module-design-a-fireplace .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-design-a-fireplace .product_title:after {
     left: 0;
     margin-left: 0; }
 
