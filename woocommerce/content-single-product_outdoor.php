@@ -32,6 +32,19 @@ if ( post_password_required() ) {
 }
 
 ?>
+
+<?php if( get_field('featured_image') ) : ?>
+<section class="row entry-content cf top featured" itemprop="articleBody">
+	<div class="cf">
+		<img width="1859" height="1235" src="<?php echo get_field('featured_image'); ?>" class="attachment-full size-full wp-post-image" alt="">							
+		<div class="featured-copy">
+			<h1 class="h2 lhs"><? echo $product->post->post_title; ?></h1>
+			<p><?php echo get_field('featured_copy'); ?></p>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('entry-content row cf outdoor-product '); ?>>
 
 	<?php
