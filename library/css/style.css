@@ -2034,13 +2034,16 @@ POSTS & CONTENT STYLES
   position: relative; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td {
     padding: 3.5em 1.5em 1.5em;
-    font-weight: normal; }
+    font-weight: normal;
+    text-align: left;
+    vertical-align: top; }
     .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td:first-child {
       font-size: 1.2em; }
       .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td:first-child span {
         display: block;
         font-family: "Univers", Helvetica, Arial, sans-serif;
-        font-size: 75%; }
+        font-size: 75%;
+        margin-top: 6px; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:before {
     counter-increment: section;
     content: counter(section);
