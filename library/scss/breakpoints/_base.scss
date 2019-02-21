@@ -1532,15 +1532,21 @@ POSTS & CONTENT STYLES
 		
 		form.cart .woocommerce-grouped-product-list.group_table {
 			counter-reset: section;
+			position: relative;
 			
 			td {
-				padding: 1.5em;
+				padding: 3.5em 1.5em 1.5em;
 			}
 
 			tr {
 				&:before {
 					counter-increment: section;
 					content: counter(section);
+					position: absolute;
+					width: 100%;
+					border-bottom: 1px solid $text-color;
+					left: 1.5em;
+					top: 10px;
 				}
 
 				&:nth-child(even) {

@@ -2027,12 +2027,18 @@ POSTS & CONTENT STYLES
 .woocommerce .spares-product .price {
   display: none; }
 .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table {
-  counter-reset: section; }
+  counter-reset: section;
+  position: relative; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td {
-    padding: 1.5em; }
+    padding: 3.5em 1.5em 1.5em; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:before {
     counter-increment: section;
-    content: counter(section); }
+    content: counter(section);
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #142128;
+    left: 1.5em;
+    top: 10px; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(even) {
     background: #fff; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(odd) {
