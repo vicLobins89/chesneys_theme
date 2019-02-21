@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
 	
 	$('#up').on('click', function(e){
 		e.preventDefault();
-		var value = $(this).next('.quantity').find('input').val();
+		var value = $(this).prev('.quantity').find('input').val();
 		value = parseInt(value) + 1;
 		$(this).next('.quantity').find('input').val(value);
 	});
