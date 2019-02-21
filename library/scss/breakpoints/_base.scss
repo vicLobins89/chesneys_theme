@@ -351,6 +351,32 @@ LAYOUT & GRID STYLES
 			}
 		}
 	}
+	
+	&.image-column {
+		background: $light-brown;
+		
+		&.column-8-4 {
+			.col-6:first-child {
+				width: 66.666%;
+				padding: 0;
+			}
+			
+			.col-6:last-child {
+				width: 33.333%;
+			}
+		}
+		
+		&.column-4-8 {
+			.col-6:first-child {
+				width: 33.333%;
+			}
+			
+			.col-6:last-child {
+				width: 66.666%;
+				padding: 0;
+			}
+		}
+	}
 }
 
 .module {

@@ -1146,6 +1146,18 @@ LAYOUT & GRID STYLES
   font-size: 1.35em; }
   .row.folio-module h3 + p {
     margin: .5rem 0; }
+.row.image-column {
+  background: #f5f3f1; }
+  .row.image-column.column-8-4 .col-6:first-child {
+    width: 66.666%;
+    padding: 0; }
+  .row.image-column.column-8-4 .col-6:last-child {
+    width: 33.333%; }
+  .row.image-column.column-4-8 .col-6:first-child {
+    width: 33.333%; }
+  .row.image-column.column-4-8 .col-6:last-child {
+    width: 66.666%;
+    padding: 0; }
 
 .module {
   position: relative; }
