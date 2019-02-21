@@ -42,6 +42,9 @@ if ( post_password_required() ) {
 			<h1 class="h2 lhs"><?php echo $product->get_name(); ?></h1>
 			<p><?php echo get_field('featured_copy'); ?></p>
 		</div>
+		
+		<h2>Product Spec</h2>
+		<p><?php echo get_field('product_spec'); ?></p>
 	</div>
 </section>
 <?php endif; ?>
@@ -50,15 +53,13 @@ if ( post_password_required() ) {
 
 	<div class="cf"><div class="col-12">
 		<?php
-		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-		
 		/**
 		 * Hook: woocommerce_before_single_product_summary.
 		 *
 		 * @hooked woocommerce_show_product_sale_flash - 10
 		 * @hooked woocommerce_show_product_images - 20
 		 */
-		 do_action( 'woocommerce_before_single_product_summary' );
+		do_action( 'woocommerce_before_single_product_summary' );
 		
 		/**
 		 * Hook: woocommerce_single_product_summary.
@@ -72,7 +73,8 @@ if ( post_password_required() ) {
 		 * @hooked woocommerce_template_single_sharing - 50
 		 * @hooked WC_Structured_Data::generate_product_data() - 60
 		 */
-		 do_action( 'woocommerce_single_product_summary' );
+		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+		do_action( 'woocommerce_single_product_summary' );
 		?>
 	</div></div>
 
