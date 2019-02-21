@@ -1118,7 +1118,8 @@ LAYOUT & GRID STYLES
     display: -o-flex;
     display: flex; }
   .row.outdoor-product-single .woocommerce-product-gallery {
-    float: none !important; }
+    float: none !important;
+    margin-bottom: 0 !important; }
     .row.outdoor-product-single .woocommerce-product-gallery img {
       margin: 0; }
   .row.outdoor-product-single .short-desc {
