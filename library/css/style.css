@@ -1185,15 +1185,15 @@ LAYOUT & GRID STYLES
     .module.module-outdoor-living-shop .inner-module .primary-btn, .module.module-outdoor-living-shop .inner-module .image-link + p, .module.module-outdoor-living-shop .inner-module .image-link .wp-caption-text, .image-link .module.module-outdoor-living-shop .inner-module .wp-caption-text, .module.module-outdoor-living-shop .inner-module a.comment-reply-link, .module.module-outdoor-living-shop .inner-module #submit, .module.module-design-a-fireplace .inner-module .primary-btn, .module.module-design-a-fireplace .inner-module .image-link + p, .module.module-design-a-fireplace .inner-module .image-link .wp-caption-text, .image-link .module.module-design-a-fireplace .inner-module .wp-caption-text, .module.module-design-a-fireplace .inner-module a.comment-reply-link, .module.module-design-a-fireplace .inner-module #submit {
       font-size: 1rem;
       margin: 0; }
-  .module.module-accessories-and-fuel, .module.module-spares-and-accessories {
+  .module.module-accessories-and-fuel, .module.module-accessories-and-fuel-spares, .module.module-spares-and-accessories {
     padding: 0; }
-    .module.module-accessories-and-fuel > .cf, .module.module-accessories-and-fuel > .comment-respond, .module.module-spares-and-accessories > .cf, .module.module-spares-and-accessories > .comment-respond {
+    .module.module-accessories-and-fuel > .cf, .module.module-accessories-and-fuel > .comment-respond, .module.module-accessories-and-fuel-spares > .cf, .module.module-accessories-and-fuel-spares > .comment-respond, .module.module-spares-and-accessories > .cf, .module.module-spares-and-accessories > .comment-respond {
       max-width: none;
       padding: 7.5% 0;
       text-align: center;
       color: #fff;
       position: relative; }
-      .module.module-accessories-and-fuel > .cf:before, .module.module-accessories-and-fuel > .comment-respond:before, .module.module-spares-and-accessories > .cf:before, .module.module-spares-and-accessories > .comment-respond:before {
+      .module.module-accessories-and-fuel > .cf:before, .module.module-accessories-and-fuel > .comment-respond:before, .module.module-accessories-and-fuel-spares > .cf:before, .module.module-accessories-and-fuel-spares > .comment-respond:before, .module.module-spares-and-accessories > .cf:before, .module.module-spares-and-accessories > .comment-respond:before {
         content: '';
         display: block;
         position: absolute;
@@ -1202,9 +1202,9 @@ LAYOUT & GRID STYLES
         left: 0;
         top: 0;
         background: rgba(0, 0, 0, 0.3); }
-    .module.module-accessories-and-fuel .inner-module, .module.module-spares-and-accessories .inner-module {
+    .module.module-accessories-and-fuel .inner-module, .module.module-accessories-and-fuel-spares .inner-module, .module.module-spares-and-accessories .inner-module {
       position: relative; }
-    .module.module-accessories-and-fuel p, .module.module-spares-and-accessories p {
+    .module.module-accessories-and-fuel p, .module.module-accessories-and-fuel-spares p, .module.module-spares-and-accessories p {
       width: 70%;
       margin: 1rem auto 2rem; }
     .module.module-accessories-and-fuel p:last-child,
@@ -1213,7 +1213,13 @@ LAYOUT & GRID STYLES
     .module.module-accessories-and-fuel .image-link .wp-caption-text,
     .image-link .module.module-accessories-and-fuel .wp-caption-text,
     .module.module-accessories-and-fuel a.comment-reply-link,
-    .module.module-accessories-and-fuel #submit, .module.module-spares-and-accessories p:last-child,
+    .module.module-accessories-and-fuel #submit, .module.module-accessories-and-fuel-spares p:last-child,
+    .module.module-accessories-and-fuel-spares .primary-btn,
+    .module.module-accessories-and-fuel-spares .image-link + p,
+    .module.module-accessories-and-fuel-spares .image-link .wp-caption-text,
+    .image-link .module.module-accessories-and-fuel-spares .wp-caption-text,
+    .module.module-accessories-and-fuel-spares a.comment-reply-link,
+    .module.module-accessories-and-fuel-spares #submit, .module.module-spares-and-accessories p:last-child,
     .module.module-spares-and-accessories .primary-btn,
     .module.module-spares-and-accessories .image-link + p,
     .module.module-spares-and-accessories .image-link .wp-caption-text,
@@ -1377,7 +1383,7 @@ h2, .h2, .woocommerce .spares-product .product_title {
     width: 3rem;
     height: 1px;
     background: #142128; }
-    .blog-module h2:after, .module-accessories-and-fuel h2:after, .module-spares-and-accessories h2:after, .module-need-help h2:after, .blog-module .h2:after, .blog-module .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .blog-module .product_title:after, .module-accessories-and-fuel .h2:after, .module-accessories-and-fuel .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-accessories-and-fuel .product_title:after, .module-spares-and-accessories .h2:after, .module-spares-and-accessories .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-spares-and-accessories .product_title:after, .module-need-help .h2:after, .module-need-help .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-need-help .product_title:after {
+    .blog-module h2:after, .module-accessories-and-fuel h2:after, .module-accessories-and-fuel-spares h2:after, .module-spares-and-accessories h2:after, .module-need-help h2:after, .blog-module .h2:after, .blog-module .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .blog-module .product_title:after, .module-accessories-and-fuel .h2:after, .module-accessories-and-fuel .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-accessories-and-fuel .product_title:after, .module-accessories-and-fuel-spares .h2:after, .module-accessories-and-fuel-spares .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-accessories-and-fuel-spares .product_title:after, .module-spares-and-accessories .h2:after, .module-spares-and-accessories .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-spares-and-accessories .product_title:after, .module-need-help .h2:after, .module-need-help .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-need-help .product_title:after {
       background: #fff; }
   h2.lhs:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .woocommerce .spares-product .lhs.product_title:after, .h2.woocommerce-loop-category__title:after, .woocommerce .spares-product .woocommerce-loop-category__title.product_title:after, .h2.woocommerce-loop-product__title:after, .woocommerce .spares-product .woocommerce-loop-product__title.product_title:after, .module-outdoor-living-shop .h2:after, .module-outdoor-living-shop .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-outdoor-living-shop .product_title:after, .module-design-a-fireplace .h2:after, .module-design-a-fireplace .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-design-a-fireplace .product_title:after {
     left: 0;
