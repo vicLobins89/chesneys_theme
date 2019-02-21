@@ -2017,6 +2017,10 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
+.woocommerce .quantity input[type=number]::-webkit-inner-spin-button,
+.woocommerce .quantity input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
 .woocommerce .spares-product .product_title {
   text-align: center; }
 .woocommerce .spares-product .woocommerce-product-gallery__image a {
