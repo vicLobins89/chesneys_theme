@@ -297,7 +297,23 @@ function excerpt_in_product_archives() {
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 40 );
 
-// filter
+//Adding Alphabetical sorting option to shop and product settings pages
+function sip_alphabetical_shop_ordering( $sort_args ) {
+	$orderby_value = isset( $_GET['orderby'] ) ? woocommerce_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
+	if ( 'alphabetical' == $orderby_value ) {
+		$sort_args['orderby'] = 'title';
+		$sort_args['order'] = 'asc';
+		$sort_args['meta_key'] = '';
+	}
+	return $sort_args;
+}
+add_filter( 'woocommerce_get_catalog_ordering_args', 'sip_alphabetical_shop_ordering' );
 
+function sip_custom_wc_catalog_orderby( $sortby ) {
+	$sortby['alphabetical'] = 'Sort by Name: Alphabetical';
+	return $sortby;
+}
+add_filter( 'woocommerce_default_catalog_orderby_options', 'sip_custom_wc_catalog_orderby' );
+add_filter( 'woocommerce_catalog_orderby', 'sip_custom_wc_catalog_orderby' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
