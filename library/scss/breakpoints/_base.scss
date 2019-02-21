@@ -1531,6 +1531,7 @@ POSTS & CONTENT STYLES
 		}
 		
 		form.cart .woocommerce-grouped-product-list.group_table {
+			counter-reset: section;
 			position: relative;
 			
 			td {
@@ -1539,6 +1540,8 @@ POSTS & CONTENT STYLES
 
 			tr {
 				&:before {
+					counter-increment: section;
+					content: counter(section);
 					position: absolute;
 					width: 100%;
 					border-bottom: 1px solid $text-color;
