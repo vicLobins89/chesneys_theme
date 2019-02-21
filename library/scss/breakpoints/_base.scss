@@ -1706,10 +1706,6 @@ POSTS & CONTENT STYLES
 	.woocommerce-result-count,
 	.woocommerce-ordering {
 		display: none;
-		
-		.spares-shop-loop & {
-			display: block;
-		}
 	}
 	
 	ul.products {
@@ -1817,6 +1813,13 @@ POSTS & CONTENT STYLES
 				text-decoration: underline !important;
 			}
 		}
+	}
+}
+
+.spares-shop-loop {
+	.woocommerce-result-count,
+	.woocommerce-ordering {
+			display: block !important;
 	}
 }
 
