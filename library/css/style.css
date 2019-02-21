@@ -1109,6 +1109,8 @@ LAYOUT & GRID STYLES
   padding-bottom: 0; }
 .row.spares-shop-loop {
   background: #f5f3f1; }
+.row.outdoor-product {
+  padding-top: 1rem; }
 .row.related-products {
   padding-bottom: 0;
   text-align: center; }
@@ -2064,8 +2066,6 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
-.woocommerce div.product.outdoor-product {
-  padding-top: 1rem; }
 .woocommerce .spares-product .qty-btn, .woocommerce .spares-product .quantity {
   display: inline-block; }
 .woocommerce .spares-product .quantity {

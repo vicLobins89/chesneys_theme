@@ -286,6 +286,10 @@ LAYOUT & GRID STYLES
 		background: $light-brown;
 	}
 	
+	&.outdoor-product {
+		padding-top: 1rem;
+	}
+	
 	&.related-products {
 		padding-bottom: 0;
 		text-align: center;
@@ -1586,10 +1590,6 @@ POSTS & CONTENT STYLES
 .woocommerce {
 	button.single_add_to_cart_button {
 		@extend .secondary-btn;
-	}
-	
-	div.product.outdoor-product {
-		padding-top: 1rem;
 	}
 	
 	.spares-product {
