@@ -95,6 +95,12 @@ if ( post_password_required() ) {
 	?>
 </div>
 
+<?php if( have_rows('videos') ) : while( have_rows('videos') ) : the_row(); ?>
+<div class="embed-container">
+	<?php the_sub_field('video_url'); ?>
+</div>
+<?php endwhile; endif; ?>
+
 <?php do_action( 'woocommerce_after_single_product' ); ?>
 
 <?php // Need help module
