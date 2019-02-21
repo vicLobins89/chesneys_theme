@@ -2026,16 +2026,16 @@ POSTS & CONTENT STYLES
   width: 90%; }
 .woocommerce .spares-product .price {
   display: none; }
-.woocommerce .spares-product .woocommerce-grouped-product-list.group_table {
+.woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table {
   counter-reset: section; }
-  .woocommerce .spares-product .woocommerce-grouped-product-list.group_table td {
+  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td {
     padding: 1.5em; }
-  .woocommerce .spares-product .woocommerce-grouped-product-list.group_table tr:before {
+  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:before {
     counter-increment: section;
     content: counter(section); }
-  .woocommerce .spares-product .woocommerce-grouped-product-list.group_table tr:nth-child(even) {
+  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(even) {
     background: #fff; }
-  .woocommerce .spares-product .woocommerce-grouped-product-list.group_table tr:nth-child(odd) {
+  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(odd) {
     background: #f5f3f1; }
 .woocommerce .woocommerce-result-count,
 .woocommerce .woocommerce-ordering {
