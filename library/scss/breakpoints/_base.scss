@@ -1515,16 +1515,8 @@ POSTS & CONTENT STYLES
 		@extend .secondary-btn;
 	}
 	
-	.qty-btn {
-		position: absolute;
-		
-		&.up {
-			
-		}
-		
-		&.down {
-			
-		}
+	.qty-btn, .quantity {
+		display: inline-block;
 	}
 	
 	.quantity {
@@ -1592,6 +1584,10 @@ POSTS & CONTENT STYLES
 						font-size: 1.2em;
 						font-weight: bold;
 					}
+				}
+				
+				&.woocommerce-grouped-product-list-item__quantity {
+					padding: 3.5rem 0 1.5rem;
 				}
 				
 				&:first-child {
