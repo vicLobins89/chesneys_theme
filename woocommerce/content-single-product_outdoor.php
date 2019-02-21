@@ -46,6 +46,9 @@ if ( post_password_required() ) {
 
 	<div class="cf">
 		<?php
+		
+		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+		
 		/**
 		 * Hook: woocommerce_single_product_summary.
 		 *
@@ -75,8 +78,3 @@ if ( post_password_required() ) {
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
-
-<?php // Need help module
-$queried_post = get_post(986);
-$acfClass->render_modules($queried_post);
-?>
