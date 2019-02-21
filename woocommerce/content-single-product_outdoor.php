@@ -48,7 +48,7 @@ if ( post_password_required() ) {
 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('entry-content row cf outdoor-product '); ?>>
 
-	<div class="cf">
+	<div class="cf"><div class="col-12">
 		<?php
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 		
@@ -74,7 +74,7 @@ if ( post_password_required() ) {
 		 */
 		 do_action( 'woocommerce_single_product_summary' );
 		?>
-	</div>
+	</div></div>
 
 	<?php
 		/**
