@@ -2082,17 +2082,17 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
-.woocommerce .spares-product .qty-btn, .woocommerce .spares-product .quantity {
+.woocommerce .qty-btn, .woocommerce .quantity {
   display: inline-block; }
-.woocommerce .spares-product .quantity {
+.woocommerce .quantity {
   width: 2rem; }
-  .woocommerce .spares-product .quantity input {
+  .woocommerce .quantity input {
     background: none;
     padding-left: 0;
     padding-right: 0;
     width: 2rem !important; }
-  .woocommerce .spares-product .quantity input[type=number]::-webkit-inner-spin-button,
-  .woocommerce .spares-product .quantity input[type=number]::-webkit-outer-spin-button {
+  .woocommerce .quantity input[type=number]::-webkit-inner-spin-button,
+  .woocommerce .quantity input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0; }
 .woocommerce .spares-product .product_title {
