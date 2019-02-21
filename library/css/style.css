@@ -1339,9 +1339,9 @@ LAYOUT & GRID STYLES
   font-size: 1.25em;
   font-family: "Univers", Helvetica, Arial, sans-serif; }
 .outdoor-products p {
-  margin: 0; }
+  margin: 0 0 7px; }
 .outdoor-products img {
-  margin: 0; }
+  margin: 0 0 8px !important; }
 
 /*********************
 LINK STYLES
