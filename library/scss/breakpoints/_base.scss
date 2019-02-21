@@ -313,7 +313,7 @@ LAYOUT & GRID STYLES
 			background: $light-brown;
 			
 			.product_title {
-				@extend .h2.lhs;
+				@extend .h2;
 			}
 		}
 	}
