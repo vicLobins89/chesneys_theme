@@ -1557,6 +1557,14 @@ POSTS & CONTENT STYLES
 					font-size: .8em;
 				}
 				
+				&.woocommerce-grouped-product-list-item__price {
+					.price {
+						font-family: $sans-serif;
+						font-size: 1.2em;
+						font-weight: bold;
+					}
+				}
+				
 				&:first-child {
 					text-align: left;
 					font-size: 1.2em;
@@ -1580,6 +1588,7 @@ POSTS & CONTENT STYLES
 					left: 1.5em;
 					padding: 15px 0 0;
 					font-family: $sans-serif;
+					font-size: .8em;
 				}
 
 				&:nth-child(even) {

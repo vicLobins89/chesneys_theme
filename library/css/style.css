@@ -2041,6 +2041,10 @@ POSTS & CONTENT STYLES
     .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__desc {
       font-family: "Univers", Helvetica, Arial, sans-serif;
       font-size: .8em; }
+    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__price .price {
+      font-family: "Univers", Helvetica, Arial, sans-serif;
+      font-size: 1.2em;
+      font-weight: bold; }
     .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td:first-child {
       text-align: left;
       font-size: 1.2em; }
@@ -2057,7 +2061,8 @@ POSTS & CONTENT STYLES
     border-bottom: 1px solid #142128;
     left: 1.5em;
     padding: 15px 0 0;
-    font-family: "Univers", Helvetica, Arial, sans-serif; }
+    font-family: "Univers", Helvetica, Arial, sans-serif;
+    font-size: .8em; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(even) {
     background: #fff; }
   .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(odd) {
