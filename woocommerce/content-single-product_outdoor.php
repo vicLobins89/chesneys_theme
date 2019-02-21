@@ -82,17 +82,6 @@ if ( post_password_required() ) {
 		echo '</div>';
 		?>
 	</div></div>
-
-	<?php
-		/**
-		 * Hook: woocommerce_after_single_product_summary.
-		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
-		 * @hooked woocommerce_upsell_display - 15
-		 * @hooked woocommerce_output_related_products - 20
-		 */
-		//do_action( 'woocommerce_after_single_product_summary' );
-	?>
 </div>
 
 <?php
@@ -116,6 +105,19 @@ endwhile; endif; ?>
 <?php if( get_field('extra_content') ) : ?>
 <?php the_field('extra_content'); ?>
 <?php endif; ?>
+
+<?php
+/**
+ * Hook: woocommerce_after_single_product_summary.
+ *
+ * @hooked woocommerce_output_product_data_tabs - 10
+ * @hooked woocommerce_upsell_display - 15
+ * @hooked woocommerce_output_related_products - 20
+ */
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
+do_action( 'woocommerce_after_single_product_summary' );
+?>
 
 <?php // Need help module
 $acc_module = get_post(1254);
