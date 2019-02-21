@@ -1201,7 +1201,7 @@ LAYOUT & GRID STYLES
         height: 100%;
         left: 0;
         top: 0;
-        background: rgba(0, 0, 0, 0.3); }
+        background: rgba(0, 0, 0, 0.4); }
     .module.module-accessories-and-fuel .inner-module, .module.module-accessories-and-fuel-spares .inner-module, .module.module-spares-and-accessories .inner-module {
       position: relative; }
     .module.module-accessories-and-fuel p, .module.module-accessories-and-fuel-spares p, .module.module-spares-and-accessories p {
@@ -1413,6 +1413,9 @@ p, .p {
   font-size: 1.2em;
   margin: 0.85em 0;
   font-weight: normal; }
+
+.sans {
+  font-family: "Univers", Helvetica, Arial, sans-serif; }
 
 .copy-l {
   font-size: 120% !important; }

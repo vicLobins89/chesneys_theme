@@ -444,7 +444,7 @@ LAYOUT & GRID STYLES
 				height: 100%;
 				left: 0;
 				top: 0;
-				background: rgba(0, 0, 0, 0.3);
+				background: rgba(0, 0, 0, 0.4);
 			}
 		}
 		
@@ -719,6 +719,10 @@ p, .p {
 	font-size: 1.2em;
 	margin: 0.85em 0;
 	font-weight: normal;
+}
+
+.sans {
+	font-family: $sans-serif;
 }
 
 .copy-l {
