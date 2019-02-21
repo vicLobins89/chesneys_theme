@@ -27,7 +27,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 ?>
 <li <?php wc_product_class(); ?>>
 	<?php // Fireplaces hover info
-	if( term_is_ancestor_of(16, $term->term_id, 'product_cat') ) {
+	if( isset($term) && term_is_ancestor_of(16, $term->term_id, 'product_cat') ) {
 		echo '<div class="hover-text">';
 		$post_id = 1003;
 		$queried_post = get_post($post_id);
