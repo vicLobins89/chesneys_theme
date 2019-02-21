@@ -1506,7 +1506,7 @@ POSTS & CONTENT STYLES
 }
 
 .woocommerce {
-	.product_cat-stove-spares {
+	.spares-product {
 		.product_title {
 			@extend .h2;
 			text-align: center;
@@ -1528,6 +1528,25 @@ POSTS & CONTENT STYLES
 		
 		.price {
 			display: none;
+		}
+		
+		.woocommerce-grouped-product-list {
+			counter-reset: section;
+
+			tr {
+				&:before {
+					counter-increment: section;
+					content: counter(section);
+				}
+
+				&:nth-child(even) {
+					background: $white;
+				}
+
+				&:nth-child(odd) {
+					background: $light-brown;
+				}
+			}
 		}
 	}
 	
