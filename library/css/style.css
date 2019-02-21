@@ -2059,7 +2059,9 @@ POSTS & CONTENT STYLES
       font-size: 1.2em;
       font-weight: bold; }
     .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__quantity {
-      padding: 3.5rem 0 1.5rem; }
+      padding: 3.5rem 0 1.5rem;
+      width: 5rem;
+      text-align: center; }
     .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td:first-child {
       text-align: left;
       font-size: 1.2em; }
