@@ -365,17 +365,20 @@ LAYOUT & GRID STYLES
 				p, img {
 					padding: 0;
 					margin: 0;
+					font-size: 0;
 				}
 			}
 			
 			.col-6:last-child {
 				width: 33.333%;
+				padding: 2.5rem;
 			}
 		}
 		
 		&.column-4-8 {
 			.col-6:first-child {
 				width: 33.333%;
+				padding: 2.5rem;
 			}
 			
 			.col-6:last-child {
@@ -385,6 +388,7 @@ LAYOUT & GRID STYLES
 				p, img {
 					padding: 0;
 					margin: 0;
+					font-size: 0;
 				}
 			}
 		}
