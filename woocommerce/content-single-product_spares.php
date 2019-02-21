@@ -16,6 +16,8 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+require_once(__DIR__.'/../classes/acf.php');
+$acfClass = new CustomACF();
 
 /**
  * Hook: woocommerce_before_single_product.
@@ -88,10 +90,6 @@ if ( post_password_required() ) {
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
 
-<?php // Fireplaces hover info
-echo '<div class="asd">';
-$post_id = 1003;
-$queried_post = get_post($post_id);
-echo $queried_post->post_content;
-echo '</div>';
+<?php // Need help module
+$acfClass->render_modules(986);
 ?>
