@@ -93,9 +93,24 @@ if ( post_password_required() ) {
 		 */
 		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-		do_action( 'woocommerce_after_single_product_summary' );
+		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+		//do_action( 'woocommerce_after_single_product_summary' );
 	?>
 </div>
+
+<?php
+//function woocommerce_template_product_description() {
+// 	woocommerce_get_template( 'single-product/tabs/description.php' );
+//}
+//add_action( 'woocommerce_single_product_summary', 'woocommerce_template_product_description', 20 );
+
+woocommerce_get_template( 'single-product/tabs/description.php' );
+if( have_rows('product_images') ) : while( have_rows('product_images') ) : the_row();
+$image = get_sub_field('image');
+if( !empty($image) ): ?>
+	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+<?php endif;
+endwhile; endif; ?>
 
 <?php if( have_rows('videos') ) : while( have_rows('videos') ) : the_row(); ?>
 <div class="embed-container">
