@@ -1515,8 +1515,16 @@ POSTS & CONTENT STYLES
 		@extend .secondary-btn;
 	}
 	
-	.quantity, a.down, a.up {
-		display: inline-block;
+	.qty-btn {
+		position: absolute;
+		
+		&.up {
+			
+		}
+		
+		&.down {
+			
+		}
 	}
 	
 	.quantity {

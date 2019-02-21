@@ -2017,8 +2017,8 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
-.woocommerce .quantity, .woocommerce a.down, .woocommerce a.up {
-  display: inline-block; }
+.woocommerce .qty-btn {
+  position: absolute; }
 .woocommerce .quantity {
   width: 2rem; }
   .woocommerce .quantity input {
