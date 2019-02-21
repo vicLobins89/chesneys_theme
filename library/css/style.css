@@ -2025,7 +2025,7 @@ POSTS & CONTENT STYLES
     background: none;
     padding-left: 0;
     padding-right: 0;
-    width: 2rem; }
+    width: 2rem !important; }
   .woocommerce .quantity input[type=number]::-webkit-inner-spin-button,
   .woocommerce .quantity input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
