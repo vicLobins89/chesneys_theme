@@ -2039,7 +2039,8 @@ POSTS & CONTENT STYLES
     .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__label {
       padding-left: 1.5rem; }
     .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__desc {
-      font-family: "Univers", Helvetica, Arial, sans-serif; }
+      font-family: "Univers", Helvetica, Arial, sans-serif;
+      font-size: .8em; }
     .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td:first-child {
       text-align: left;
       font-size: 1.2em; }
