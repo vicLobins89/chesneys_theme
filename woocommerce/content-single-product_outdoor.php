@@ -98,6 +98,7 @@ if ( post_password_required() ) {
 <?php
 echo '<div>';
 wc_get_template( 'single-product/tabs/description.php' );
+wc_get_template( 'single-product/product-thumbnails.php' );
 echo '</div>';
 
 if( have_rows('product_images') ) : while( have_rows('product_images') ) : the_row();
