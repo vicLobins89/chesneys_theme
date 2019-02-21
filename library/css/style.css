@@ -2064,6 +2064,8 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
+.woocommerce div.product.outdoor-product {
+  padding-top: 1rem; }
 .woocommerce .spares-product .qty-btn, .woocommerce .spares-product .quantity {
   display: inline-block; }
 .woocommerce .spares-product .quantity {

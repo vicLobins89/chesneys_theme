@@ -1588,6 +1588,10 @@ POSTS & CONTENT STYLES
 		@extend .secondary-btn;
 	}
 	
+	div.product.outdoor-product {
+		padding-top: 1rem;
+	}
+	
 	.spares-product {
 		.qty-btn, .quantity {
 			display: inline-block;

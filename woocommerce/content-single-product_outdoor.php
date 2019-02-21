@@ -43,8 +43,8 @@ if ( post_password_required() ) {
 			<p><?php echo get_field('featured_copy'); ?></p>
 		</div>
 		
-		<h2>Product Spec</h2>
-		<p><?php echo get_field('product_spec'); ?></p>
+		<h2 style="text-align: center">Product Spec</h2>
+		<p style="text-align: center"><?php echo get_field('product_spec'); ?></p>
 	</div>
 </section>
 <?php endif; ?>
