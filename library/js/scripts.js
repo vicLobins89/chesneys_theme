@@ -22,7 +22,8 @@ jQuery(document).ready(function($) {
 	viewport = updateViewportDimensions();
 	
 	$('#down').click(function(){
-		$(this).next('.quantity').find('input').html(function(i, val) { return +val+1; });
+		var value = $(this).next('.quantity').find('input').val();
+		console.log(value);
 	});
 	
 	// Add image-link to caption
