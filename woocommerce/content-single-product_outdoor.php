@@ -98,7 +98,6 @@ if ( post_password_required() ) {
 <?php
 echo '<div>';
 wc_get_template( 'single-product/tabs/description.php' );
-wc_get_template( 'single-product/product-thumbnails.php' );
 echo '</div>';
 
 if( have_rows('product_images') ) : while( have_rows('product_images') ) : the_row();
@@ -114,9 +113,16 @@ endwhile; endif; ?>
 </div>
 <?php endwhile; endif; ?>
 
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+<?php if( get_field('extra_content') ) : ?>
+<?php the_field('extra_content'); ?>
+<?php endif; ?>
 
 <?php // Need help module
-$ctas_module = get_post(986);
-$acfClass->render_modules($ctas_module);
+$acc_module = get_post(1254);
+$acfClass->render_modules($acc_module);
+
+$help_module = get_post(986);
+$acfClass->render_modules($help_module);
 ?>
+
+<?php do_action( 'woocommerce_after_single_product' ); ?>
