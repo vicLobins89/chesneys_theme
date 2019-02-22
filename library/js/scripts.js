@@ -23,12 +23,13 @@ jQuery(document).ready(function($) {
 	
 	// Video Gallery
 	$('.play').on('click', function(){
-		console.log(true);
 		var $mainVid = $('.main-window iframe').html(),
 			$currentVid = $(this).next().find('iframe').html();
 		
 		$('.main-window').html($currentVid);
         $(this).next().find('iframe').html($mainVid);
+		
+		console.log($mainVid);
 	});
 	
 	// QTY
