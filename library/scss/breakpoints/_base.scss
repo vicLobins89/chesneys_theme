@@ -797,10 +797,13 @@ h2, .h2 {
 		.module-accessories-and-fuel &,
 		.module-accessories-and-fuel-outdoor &,
 		.module-spares-and-accessories &,
-		.module-need-help &,
-		&.white {
+		.module-need-help & {
 			background: $white;
 		}
+	}
+	
+	&.white:after {
+		background: $white;
 	}
 	
 	&.lhs:after,
