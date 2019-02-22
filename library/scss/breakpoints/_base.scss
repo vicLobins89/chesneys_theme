@@ -406,6 +406,24 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
+	&.related-wrapper {
+		background: $light-brown;
+		
+		h2, p {
+			text-align: center;
+		}
+		
+		.woocommerce-loop-product__title {
+			@extend .primary-btn;
+		}
+		
+		.related > h2,
+		.price, 
+		.add_to_cart_button {
+				display: none;
+		}
+	}
+	
 	&.related-products {
 		padding-bottom: 0;
 		text-align: center;
@@ -1961,6 +1979,10 @@ POSTS & CONTENT STYLES
 				text-decoration: underline !important;
 			}
 		}
+	}
+	
+	.button.wc-forward {
+		@extend .secondary-btn;
 	}
 }
 
