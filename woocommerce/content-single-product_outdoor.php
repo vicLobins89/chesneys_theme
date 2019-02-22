@@ -95,9 +95,10 @@ echo '<section class="entry-content row cf product-info-wrapper"><div class="cf"
 
 if( have_rows('product_images') ) : 
 $row = 1;
+while( have_rows('product_images') ) : 
 
 if( $row <= 2 ) :
-	while( have_rows('product_images') ) : 
+	echo '<div class="col-6"></div>';
 	the_row();
 endif;
 
