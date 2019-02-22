@@ -23,9 +23,9 @@ jQuery(document).ready(function($) {
 	
 	// Video Gallery
 	$('.play').on('click', function(){
+		$('iframe').attr('src', $('iframe').attr('src'));
 		var symbol = $(this).next().find('iframe')[0].src.indexOf("?") > -1 ? "&" : "?";
 		$(this).next().find('iframe')[0].src += symbol + "autoplay=1";
-		$('.main-window').find('iframe')[0].src += "autoplay=0";
 		
 		var mainVid = $('.main-window').html(),
 			currentVid = $(this).next().html();
