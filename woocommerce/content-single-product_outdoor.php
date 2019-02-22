@@ -88,18 +88,29 @@ if ( post_password_required() ) {
 $cta_module = get_post(1281);
 $acfClass->render_modules($cta_module);
 
-echo '<div>';
-wc_get_template( 'single-product/tabs/description.php' );
+// Product Details + Images
+echo '<section class="entry-content row cf"><div class="cf">';
+
+echo '<div class="col-6">';
+if( have_rows('product_images') ) : while( have_rows('product_images') ) : the_row();
+	$image = get_sub_field('image');
+	if( !empty($image) ): ?>
+	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+	<?php endif;
+endwhile; endif;
 echo '</div>';
 
-if( have_rows('product_images') ) : while( have_rows('product_images') ) : the_row();
-$image = get_sub_field('image');
-if( !empty($image) ): ?>
-	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-<?php endif;
-endwhile; endif; ?>
+echo '<div class="col-6">';
+echo '<div class="product-description">'.wc_get_template( 'single-product/tabs/description.php' ).'</div>';
+if( get_field('delivery_info') ) {
+	echo '<div class=""delivery-info">'.get_field('delivery_info').'</div>';
+}
+echo '</div>';
 
-<?php if( have_rows('videos') ) : while( have_rows('videos') ) : the_row(); ?>
+echo '</div></div></section>';
+
+// Videos
+if( have_rows('videos') ) : while( have_rows('videos') ) : the_row(); ?>
 <div class="embed-container">
 	<?php the_sub_field('video_url'); ?>
 </div>
