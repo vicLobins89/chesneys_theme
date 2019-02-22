@@ -23,6 +23,8 @@ jQuery(document).ready(function($) {
 	
 	// Video Gallery
 	$('.play').on('click', function(){
+		$(this).next().find('iframe')[0].play();
+		
 		var mainVid = $('.main-window').html(),
 			currentVid = $(this).next().html();
 		

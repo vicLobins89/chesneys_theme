@@ -970,14 +970,16 @@ hr {
 .vid-thumb {
   position: relative;
   display: inline-block;
-  width: 33%; }
+  width: 33%;
+  padding: 2rem 1rem; }
   .vid-thumb .play {
     position: absolute;
     z-index: 50;
     background: rgba(255, 255, 255, 0.4);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    margin: 0; }
 
 #wpcf7-f257-p2-o1,
 #wpcf7-f257-p13-o1 {
