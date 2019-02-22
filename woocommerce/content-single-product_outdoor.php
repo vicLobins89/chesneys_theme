@@ -96,7 +96,7 @@ if( have_rows('product_images') ) : while( have_rows('product_images') ) : the_r
 	$count = 1;
 	$image = get_sub_field('image');
 	if( !empty($image) ) {
-		if( $count < 3 ) {
+		if( $count < 2 ) {
 			echo '<div><img src="'.$image['url'].'" alt="'.$image['alt'].'" /></div>';
 		} else {
 			echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
