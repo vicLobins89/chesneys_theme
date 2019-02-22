@@ -141,6 +141,7 @@ if( $row == 1 ) : ?>
 <?php else : ?>
 
 <div class="aspect-ratio vid-gallery col-4">
+	<div class="play">Play</div>
 	<?php the_sub_field('video_url'); ?>
 </div>
 
