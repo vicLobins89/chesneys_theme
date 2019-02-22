@@ -85,6 +85,9 @@ if ( post_password_required() ) {
 </div>
 
 <?php
+$cta_module = get_post(1281);
+$acfClass->render_modules($cta_module);
+
 echo '<div>';
 wc_get_template( 'single-product/tabs/description.php' );
 echo '</div>';
@@ -119,7 +122,7 @@ remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_di
 do_action( 'woocommerce_after_single_product_summary' );
 ?>
 
-<?php // Need help module
+<?php // Modules
 $acc_module = get_post(1254);
 $acfClass->render_modules($acc_module);
 
