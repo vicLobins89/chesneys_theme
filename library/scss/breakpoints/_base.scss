@@ -288,6 +288,7 @@ LAYOUT & GRID STYLES
 	
 	&.outdoor-product-single {
 		padding-top: 1rem;
+		padding-bottom: 1rem;
 		
 		.col-12 {
 			display: -webkit-flex;
@@ -540,8 +541,19 @@ LAYOUT & GRID STYLES
 	}
 	
 	&.module-outdoor-ctas {
+		padding: 0;
+		
 		h2 {
 			display: none;
+		}
+		
+		p {
+			display: inline-block;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			@include prefix(justify-content, space-evenly, webkit ms);
 		}
 	}
 }
