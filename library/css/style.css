@@ -1222,7 +1222,7 @@ LAYOUT & GRID STYLES
   .row.related-wrapper .related > h2,
   .row.related-wrapper .price,
   .row.related-wrapper .add_to_cart_button,
-  .row.related-wrapper p {
+  .row.related-wrapper .related a p {
     display: none !important; }
 .row.related-products {
   padding-bottom: 0;

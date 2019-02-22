@@ -457,8 +457,8 @@ LAYOUT & GRID STYLES
 		.related > h2,
 		.price, 
 		.add_to_cart_button,
-		p {
-				display: none !important;
+		.related a p {
+			display: none !important;
 		}
 	}
 	
