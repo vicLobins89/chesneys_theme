@@ -96,10 +96,13 @@ echo '<section class="entry-content row cf product-info-wrapper"><div class="cf"
 if( have_rows('product_images') ) : 
 $row = 1;
 while( have_rows('product_images') ) : 
+the_row();
+
+echo '<div class="col-6">';
 
 if( $row <= 2 ) :
-	echo '<div class="col-6"></div>';
-	the_row();
+	echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+	echo '</div>';
 endif;
 
 $row ++; 
