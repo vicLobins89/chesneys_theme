@@ -415,6 +415,7 @@ LAYOUT & GRID STYLES
 		
 		.woocommerce-loop-product__title {
 			@extend .primary-btn;
+			border: none;
 			position: absolute;
 			top: 50%;
 			left: 50%;

@@ -1194,6 +1194,7 @@ LAYOUT & GRID STYLES
   .row.related-wrapper h2, .row.related-wrapper p {
     text-align: center; }
   .row.related-wrapper .woocommerce-loop-product__title {
+    border: none;
     position: absolute;
     top: 50%;
     left: 50%;
