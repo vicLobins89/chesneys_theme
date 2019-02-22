@@ -1221,7 +1221,8 @@ LAYOUT & GRID STYLES
         margin-bottom: 0; }
   .row.related-wrapper .related > h2,
   .row.related-wrapper .price,
-  .row.related-wrapper .add_to_cart_button {
+  .row.related-wrapper .add_to_cart_button,
+  .row.related-wrapper p {
     display: none !important; }
 .row.related-products {
   padding-bottom: 0;
