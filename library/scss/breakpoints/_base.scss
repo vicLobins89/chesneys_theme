@@ -94,6 +94,16 @@ hr {
 	}
 }
 
+.vid-thumb {
+	position: relative;
+	
+	.play {
+		position: absolute;
+		@extend .primary-btn;
+		@extend .primary-btn.alt;
+	}
+}
+
 %overlay {
 	padding: 1rem;
 	width: 60%;

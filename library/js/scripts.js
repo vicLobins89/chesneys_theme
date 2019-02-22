@@ -28,8 +28,6 @@ jQuery(document).ready(function($) {
 		
 		$('.main-window').html(currentVid);
         $(this).next().html(mainVid);
-		
-		console.log(mainVid);
 	});
 	
 	// QTY
