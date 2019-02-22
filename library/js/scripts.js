@@ -21,6 +21,16 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
+	// Video Gallery
+	$('.vid-gallery').on('click', function(){
+		var $mainVid = $('.main-window iframe').html(),
+			$currentVid = $(this).find('iframe').html();
+		
+		$('.main-window').html($currentVid);
+        $(this).html($mainVid);
+	});
+	
+	// QTY
 	$('.up').on('click', function(e){
 		e.preventDefault();
 		var value = $(this).prev('.quantity').find('input').val();

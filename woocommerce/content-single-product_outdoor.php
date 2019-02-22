@@ -134,13 +134,13 @@ while( have_rows('videos') ) : the_row();
 
 if( $row == 1 ) : ?>
 
-<div class="aspect-ratio">
+<div class="aspect-ratio main-window">
 	<?php the_sub_field('video_url'); ?>
 </div>
 
 <?php else : ?>
 
-<div class="aspect-ratio col-4">
+<div class="aspect-ratio vid-gallery col-4">
 	<?php the_sub_field('video_url'); ?>
 </div>
 
