@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
 	viewport = updateViewportDimensions();
 	
 	// Video Gallery
-	$('.vid-gallery').on('click', function(){
+	$('.vid-gallery iframe').on('click', function(){
 		console.log(true);
 		var $mainVid = $('.main-window iframe').html(),
 			$currentVid = $(this).find('iframe').html();
