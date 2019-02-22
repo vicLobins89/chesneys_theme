@@ -1201,9 +1201,20 @@ LAYOUT & GRID STYLES
     margin: 0 !important;
     padding: 1.2rem 1rem 1rem !important; }
   .row.related-wrapper .related {
-    margin-top: 1rem; }
+    margin-top: 2rem; }
     .row.related-wrapper .related .product {
       margin-bottom: 0; }
+      .row.related-wrapper .related .product:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); }
+      .row.related-wrapper .related .product a {
+        padding-bottom: 0; }
+      .row.related-wrapper .related .product img {
+        margin-bottom: 0; }
   .row.related-wrapper .related > h2,
   .row.related-wrapper .price,
   .row.related-wrapper .add_to_cart_button {
