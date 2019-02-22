@@ -419,6 +419,16 @@ LAYOUT & GRID STYLES
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			margin: 0 !important;
+    		padding: 1.2rem 1rem 1rem !important;
+		}
+		
+		.related {
+			margin-top: 1rem;
+			
+			.product {
+				margin-bottom: 0;
+			}
 		}
 		
 		.related > h2,
