@@ -126,16 +126,23 @@ echo '</div></div></section>'; // close section
 $cta_module2 = get_post(1284);
 $acfClass->render_modules($cta_module2);
 
-// Videos
-if( have_rows('videos') ) : while( have_rows('videos') ) : the_row(); ?>
+// Videos + extras
+if( have_rows('videos') || get_field('extra_content') ) : 
+
+echo '<section class="entry-content row cf wrap vids-wrapper"><div class="cf">';
+while( have_rows('videos') ) : the_row(); ?>
+
 <div class="embed-container">
 	<?php the_sub_field('video_url'); ?>
 </div>
-<?php endwhile; endif; ?>
 
-<?php if( get_field('extra_content') ) : ?>
-<?php the_field('extra_content'); ?>
-<?php endif; ?>
+<?php
+endwhile;
+
+the_field('extra_content');
+
+echo '</div></div></section>';
+endif;  // close section ?>
 
 <?php
 /**
