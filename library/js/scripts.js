@@ -25,10 +25,10 @@ jQuery(document).ready(function($) {
 	$('.play').on('click', function(){
 		console.log(true);
 		var $mainVid = $('.main-window iframe').html(),
-			$currentVid = $(this).next('iframe').html();
+			$currentVid = $(this).next().find('iframe').html();
 		
 		$('.main-window').html($currentVid);
-        $(this).parent().html($mainVid);
+        $(this).next().find('iframe').html($mainVid);
 	});
 	
 	// QTY
