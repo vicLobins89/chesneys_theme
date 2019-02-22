@@ -25,6 +25,7 @@ jQuery(document).ready(function($) {
 	$('.play').one('click', function(){
 		var symbol = $(this).next().find('iframe')[0].src.indexOf("?") > -1 ? "&" : "?";
 		$(this).next().find('iframe')[0].src += symbol + "autoplay=1";
+		$('.main-window').find('iframe')[0].src += "autoplay=0";
 		
 		var mainVid = $('.main-window').html(),
 			currentVid = $(this).next().html();
