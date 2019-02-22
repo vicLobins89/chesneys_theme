@@ -958,6 +958,8 @@ hr {
     transform: none;
     left: 0;
     top: 0; }
+  .aspect-ratio.col-4, .vidbg-container.col-4 {
+    width: 33.33%; }
 
 .vidbg-container + div {
   position: absolute;

@@ -73,6 +73,10 @@ hr {
 		left: 0;
 		top: 0;
 	}
+	
+	&.col-4 {
+		width: 33.33%;
+	}
 }
 
 .vidbg-container {
