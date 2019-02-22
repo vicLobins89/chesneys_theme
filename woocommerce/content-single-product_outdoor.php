@@ -102,7 +102,7 @@ endwhile;
 echo '</div>';
 endif;
 
-echo '<div class="col-6">';
+echo '<div class="col-6"><div class="details-inner">';
 
 echo '<div class="product-details">';
 wc_get_template( 'single-product/tabs/description.php' );
@@ -111,7 +111,7 @@ echo '</div>';
 if( get_field('delivery_info') ) {
 	echo '<div class="delivery-info"><p>'.get_field('delivery_info').'</p></div>';
 }
-echo '</div>';
+echo '</div></div>';
 
 echo '</div></div></section>';
 
