@@ -967,6 +967,9 @@ hr {
   .vidbg-container + div h1, .vidbg-container + div .h1 {
     font-size: 3.75em; }
 
+.vids-wrapper {
+  text-align: center; }
+
 .vid-thumb {
   position: relative;
   display: inline-block;
