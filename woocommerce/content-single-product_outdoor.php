@@ -177,7 +177,7 @@ function rh_woocommerce_output_related_products() {
     $content = ob_get_clean();
     if($content) { $output .= $content; }
 
-    echo '<section class="entry-content row cf related-wrapper">' . $output . '</section>';
+    echo '<section class="entry-content row cf related-wrapper"><div class="cf"><div class="col-12">' . $output . '</div></div></section>';
 }
 add_action( 'woocommerce_after_single_product_summary', 'rh_woocommerce_output_related_products', 20);
 
