@@ -596,6 +596,11 @@ LAYOUT & GRID STYLES
 			display: -webkit-flex;
 			display: flex;
 			@include prefix(justify-content, space-evenly, webkit ms);
+			@include prefix(align-items, center, webkit ms);
+			
+			a {
+				vertical-align: middle;
+			}
 		}
 	}
 }
