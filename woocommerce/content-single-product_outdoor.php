@@ -89,7 +89,7 @@ $cta_module = get_post(1281);
 $acfClass->render_modules($cta_module);
 
 // Product Details + Images
-echo '<section class="entry-content row cf"><div class="cf">';
+echo '<section class="entry-content row cf product-info-wrapper"><div class="cf">';
 
 echo '<div class="col-6">';
 if( have_rows('product_images') ) : while( have_rows('product_images') ) : the_row();
@@ -101,7 +101,7 @@ endwhile; endif;
 echo '</div>';
 
 echo '<div class="col-6">';
-echo '<div class="product-description">'.wc_get_template( 'single-product/tabs/description.php' ).'</div>';
+echo '<div class="product-details">'.wc_get_template( 'single-product/tabs/description.php' ).'</div>';
 if( get_field('delivery_info') ) {
 	echo '<div class=""delivery-info">'.get_field('delivery_info').'</div>';
 }
