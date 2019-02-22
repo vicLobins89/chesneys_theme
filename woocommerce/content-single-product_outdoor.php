@@ -103,13 +103,12 @@ $image = get_sub_field('image');
 
 if( $row <= 2 ) {
 	echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+	$row ++;
 } else {
 	echo '</div>';
-	echo '<div class="col-6"><img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+	echo '<div class="col-6"><img src="'.$image['url'].'" alt="'.$image['alt'].'" /></div>';
 }
-echo '</div>';
 
-$row ++; 
 endwhile; 
 endif;
 
