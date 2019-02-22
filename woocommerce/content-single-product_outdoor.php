@@ -92,8 +92,7 @@ $acfClass->render_modules($cta_module);
 echo '<section class="entry-content row cf product-info-wrapper"><div class="cf">';
 
 echo '<div class="col-6">';
-if( have_rows('product_images') ) : while( have_rows('product_images') ) : the_row();
-	$count = 1;
+if( have_rows('product_images') ) : while( have_rows('product_images') ) : $count = 1; the_row();
 	$image = get_sub_field('image');
 	if( !empty($image) ) {
 		if( $count < 2 ) {
