@@ -23,9 +23,11 @@ jQuery(document).ready(function($) {
 	
 	// Video Gallery
 	$('.play').on('click', function(){
-		$('iframe').attr('src', $('iframe').attr('src'));
-		var symbol = $(this).next().find('iframe')[0].src.indexOf("?") > -1 ? "&" : "?";
-		$(this).next().find('iframe')[0].src += symbol + "autoplay=1";
+		var $thisIframe = $(this).next().find('iframe'),
+			symbol = $(this).next().find('iframe')[0].src.indexOf("?") > -1 ? "&" : "?";
+		
+		$thisIframe.attr('src', $thisIframe.attr('src'));
+		$thisIframe[0].src += symbol + "autoplay=1";
 		
 		var mainVid = $('.main-window').html(),
 			currentVid = $(this).next().html();
