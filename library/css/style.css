@@ -1150,8 +1150,22 @@ LAYOUT & GRID STYLES
     display: -webkit-flex;
     display: flex; }
   .row.product-info-wrapper .details-inner {
+    position: relative;
     height: 100%;
-    background: #f5f3f1; }
+    background: #f5f3f1;
+    padding: 2rem; }
+  .row.product-info-wrapper .delivery-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(32% + 2rem);
+    padding: 2rem;
+    border-top: 2rem solid #fff;
+    background: #142128;
+    color: #fff; }
+  .row.product-info-wrapper img:last-child {
+    margin-bottom: 0; }
 .row.related-products {
   padding-bottom: 0;
   text-align: center; }

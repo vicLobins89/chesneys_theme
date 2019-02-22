@@ -109,7 +109,7 @@ wc_get_template( 'single-product/tabs/description.php' );
 echo '</div>';
 
 if( get_field('delivery_info') ) {
-	echo '<div class="delivery-info"><p>'.get_field('delivery_info').'</p></div>';
+	echo '<div class="delivery-info"><h3 class="h2 lhs">Delivery Information</h3><p>'.get_field('delivery_info').'</p></div>';
 }
 echo '</div></div>';
 
