@@ -97,6 +97,7 @@ if( have_rows('product_images') ) :
 $row = 1;
 while( have_rows('product_images') ) : 
 the_row();
+$image = get_sub_field('image');
 
 echo '<div class="col-6">';
 
