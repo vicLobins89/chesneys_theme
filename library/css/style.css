@@ -1127,6 +1127,18 @@ LAYOUT & GRID STYLES
     width: 52%;
     padding: 2rem;
     background: #f5f3f1; }
+    .row.outdoor-product-single .short-desc p strong, .row.outdoor-product-single .short-desc p b {
+      font-family: "Univers", Helvetica, Arial, sans-serif; }
+    .row.outdoor-product-single .short-desc .price {
+      float: left;
+      font-family: "Univers", Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #000; }
+    .row.outdoor-product-single .short-desc form.cart {
+      float: right; }
+      .row.outdoor-product-single .short-desc form.cart .secondary-btn, .row.outdoor-product-single .short-desc form.cart .woocommerce button.single_add_to_cart_button, .woocommerce .row.outdoor-product-single .short-desc form.cart button.single_add_to_cart_button, .row.outdoor-product-single .short-desc form.cart .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .row.outdoor-product-single .short-desc form.cart .button {
+        margin-left: 1rem; }
 .row.related-products {
   padding-bottom: 0;
   text-align: center; }

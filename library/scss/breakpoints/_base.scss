@@ -316,6 +316,28 @@ LAYOUT & GRID STYLES
 				@extend .h2;
 				@extend .lhs;
 			}
+			
+			p {
+				strong, b {
+					font-family: $sans-serif;
+				}
+			}
+			
+			.price {
+				float: left;
+				font-family: $sans-serif;
+				font-weight: bold;
+				font-size: 1.2em;
+				color: $black;
+			}
+			
+			form.cart {
+				float: right;
+				
+				.secondary-btn {
+					margin-left: 1rem;
+				}
+			}
 		}
 	}
 	
