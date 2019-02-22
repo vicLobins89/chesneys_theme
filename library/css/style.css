@@ -974,7 +974,13 @@ hr {
 .vid-thumb {
   position: relative; }
   .vid-thumb .play {
-    position: absolute; }
+    position: absolute;
+    position: absolute;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.4);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 #wpcf7-f257-p2-o1,
 #wpcf7-f257-p13-o1 {
