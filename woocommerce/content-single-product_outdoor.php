@@ -91,18 +91,25 @@ $acfClass->render_modules($cta_module);
 // Product Details + Images
 echo '<section class="entry-content row cf product-info-wrapper"><div class="cf">';
 
-echo '<div class="col-6">';
-if( have_rows('product_images') ) : $row = 1; while( have_rows('product_images') ) : the_row();
-	$image = get_sub_field('image');
-	if( !empty($image) ) {
-		if( $row == 2 ) {
-			echo '<div><img src="'.$image['url'].'" alt="'.$image['alt'].'" /></div>';
-		} else {
-			echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
-		}
-	}
-$row ++; endwhile; endif;
-echo '</div>';
+//echo '<div class="col-6">';
+
+if( have_rows('product_images') ) : 
+$row = 1;
+while( have_rows('product_images') ) : 
+the_row();
+if( $row <= 2 ) {
+	echo '<div class="col-6"></div>';
+}
+$row ++; 
+endwhile; 
+endif;
+
+//if( have_rows('product_images') ) : $row = 1; while( have_rows('product_images') ) : the_row();
+//
+//$row ++; endwhile; endif;
+
+
+//echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
 
 echo '<div class="col-6">';
 
