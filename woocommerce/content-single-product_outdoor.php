@@ -92,23 +92,22 @@ $acfClass->render_modules($cta_module);
 echo '<section class="entry-content row cf product-info-wrapper"><div class="cf">';
 
 echo '<div class="col-6">';
-if( have_rows('product_images') ) : while( have_rows('product_images') ) : $count = 1; the_row();
+if( have_rows('product_images') ) : while( have_rows('product_images') ) : the_row();
 	$image = get_sub_field('image');
 	if( !empty($image) ) {
-		if( $count <= 2 ) {
-			echo '<div><img src="'.$image['url'].'" alt="'.$image['alt'].'" /></div>';
-		} else {
-			echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
-		}
+		echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
 	}
-	$count ++;
 endwhile; endif;
 echo '</div>';
 
 echo '<div class="col-6">';
-echo '<div class="product-details">'.wc_get_template( 'single-product/tabs/description.php' ).'</div>';
+
+echo '<div class="product-details">';
+wc_get_template( 'single-product/tabs/description.php' );
+echo '</div>';
+
 if( get_field('delivery_info') ) {
-	echo '<div class=""delivery-info">'.get_field('delivery_info').'</div>';
+	echo '<div class="delivery-info">'.get_field('delivery_info').'</div>';
 }
 echo '</div>';
 
