@@ -958,10 +958,6 @@ hr {
     transform: none;
     left: 0;
     top: 0; }
-  .aspect-ratio.col-4, .vidbg-container.col-4 {
-    width: 33.33%;
-    padding-bottom: 14%;
-    margin: 2rem 0; }
 
 .vidbg-container + div {
   position: absolute;
@@ -972,9 +968,10 @@ hr {
     font-size: 3.75em; }
 
 .vid-thumb {
-  position: relative; }
+  position: relative;
+  display: inline-block;
+  width: 33%; }
   .vid-thumb .play {
-    position: absolute;
     position: absolute;
     z-index: 50;
     background: rgba(255, 255, 255, 0.4);

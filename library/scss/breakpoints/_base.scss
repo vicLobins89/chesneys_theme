@@ -73,12 +73,6 @@ hr {
 		left: 0;
 		top: 0;
 	}
-	
-	&.col-4 {
-		width: 33.33%;
-		padding-bottom: 14%;
-    	margin: 2rem 0;
-	}
 }
 
 .vidbg-container {
@@ -96,9 +90,10 @@ hr {
 
 .vid-thumb {
 	position: relative;
+	display: inline-block;
+	width: 33%;
 	
 	.play {
-		position: absolute;
 		@extend .primary-btn;
 		@extend .primary-btn.alt;
 		position: absolute;

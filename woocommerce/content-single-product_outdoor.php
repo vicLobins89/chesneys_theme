@@ -142,7 +142,7 @@ if( $row == 1 ) : ?>
 
 <div class="vid-thumb">
 	<div class="play">Play</div>
-	<div class="aspect-ratio vid-gallery col-4">
+	<div class="aspect-ratio vid-gallery">
 		<?php the_sub_field('video_url'); ?>
 	</div>
 </div>
