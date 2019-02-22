@@ -538,6 +538,12 @@ LAYOUT & GRID STYLES
 			}
 		}
 	}
+	
+	&.module-outdoor-ctas {
+		h2 {
+			display: none;
+		}
+	}
 }
 
 .blog-wrapper {

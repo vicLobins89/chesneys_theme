@@ -1270,6 +1270,8 @@ LAYOUT & GRID STYLES
       margin: 1rem 1.5rem 0;
       font-size: .9rem;
       min-width: 14rem; }
+  .module.module-outdoor-ctas h2 {
+    display: none; }
 
 .blog-wrapper {
   background: #f5f3f1; }
