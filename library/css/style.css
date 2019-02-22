@@ -1194,13 +1194,15 @@ LAYOUT & GRID STYLES
   .row.related-wrapper h2, .row.related-wrapper p {
     text-align: center; }
   .row.related-wrapper .woocommerce-loop-product__title {
-    border: none;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0 !important;
     padding: 1.2rem 1rem 1rem !important; }
+    .row.related-wrapper .woocommerce-loop-product__title:after {
+      display: none;
+      content: none; }
   .row.related-wrapper .related {
     margin-top: 2rem; }
     .row.related-wrapper .related .product {
