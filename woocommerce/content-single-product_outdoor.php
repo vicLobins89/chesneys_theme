@@ -128,15 +128,25 @@ $acfClass->render_modules($cta_module2);
 
 // Videos + extras
 if( have_rows('videos') || get_field('extra_content') ) : 
-
+$row = 1;
 echo '<section class="entry-content row cf wrap vids-wrapper"><div class="cf">';
-while( have_rows('videos') ) : the_row(); ?>
+while( have_rows('videos') ) : the_row();
 
-<div class="embed-container">
+if( $row == 1 ) : ?>
+
+<div class="aspect-ratio">
 	<?php the_sub_field('video_url'); ?>
 </div>
 
-<?php
+<?php else : ?>
+
+<div class="aspect-ratio col-4">
+	<?php the_sub_field('video_url'); ?>
+</div>
+
+<?php endif;
+
+$row ++;
 endwhile;
 
 the_field('extra_content');
