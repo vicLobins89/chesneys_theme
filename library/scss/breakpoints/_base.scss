@@ -797,7 +797,8 @@ h2, .h2 {
 		.module-accessories-and-fuel &,
 		.module-accessories-and-fuel-outdoor &,
 		.module-spares-and-accessories &,
-		.module-need-help & {
+		.module-need-help &,
+		&.white {
 			background: $white;
 		}
 	}
