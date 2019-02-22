@@ -181,6 +181,16 @@ function rh_woocommerce_output_related_products() {
 }
 add_action( 'woocommerce_after_single_product_summary', 'rh_woocommerce_output_related_products', 20);
 
+function my_text_strings( $translated_text, $text, $domain ) {
+    switch ( $translated_text ) {
+        case 'Related Products' :
+            $translated_text = __( 'Check out these related products', 'woocommerce' );
+            break;
+    }
+    return $translated_text;
+}
+add_filter( 'gettext', 'my_text_strings', 20, 3 );
+
 do_action( 'woocommerce_after_single_product_summary' );
 ?>
 
