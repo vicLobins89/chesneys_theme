@@ -169,7 +169,7 @@ remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_pr
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
 
-function woocommerce_output_related_products() {
+function rh_woocommerce_output_related_products() {
     $output = null;
 
     ob_start();
@@ -179,7 +179,7 @@ function woocommerce_output_related_products() {
 
     echo '<div class="clear"></div>' . $output;
 }
-add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+add_action( 'woocommerce_after_single_product_summary', 'rh_woocommerce_output_related_products', 20);
 
 do_action( 'woocommerce_after_single_product_summary' );
 ?>
