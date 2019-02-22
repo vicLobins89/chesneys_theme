@@ -96,7 +96,7 @@ echo '<section class="entry-content row cf product-info-wrapper"><div class="cf"
 if( have_rows('product_images') ) : 
 $row = 1;
 
-echo '<div class="col-6">';
+echo '<div class="col-6 first">';
 
 while( have_rows('product_images') ) : the_row();
 $image = get_sub_field('image');
@@ -105,8 +105,9 @@ if( $row <= 2 ) {
 	echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
 } else {
 	echo '</div>';
-	echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+	echo '<div class="col-6"><img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
 }
+echo '</div>';
 
 $row ++; 
 endwhile; 
