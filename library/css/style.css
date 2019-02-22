@@ -1193,10 +1193,15 @@ LAYOUT & GRID STYLES
   background: #f5f3f1; }
   .row.related-wrapper h2, .row.related-wrapper p {
     text-align: center; }
+  .row.related-wrapper .woocommerce-loop-product__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .row.related-wrapper .related > h2,
   .row.related-wrapper .price,
   .row.related-wrapper .add_to_cart_button {
-    display: none; }
+    display: none !important; }
 .row.related-products {
   padding-bottom: 0;
   text-align: center; }

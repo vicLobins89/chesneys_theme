@@ -415,12 +415,16 @@ LAYOUT & GRID STYLES
 		
 		.woocommerce-loop-product__title {
 			@extend .primary-btn;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 		
 		.related > h2,
 		.price, 
 		.add_to_cart_button {
-				display: none;
+				display: none !important;
 		}
 	}
 	
