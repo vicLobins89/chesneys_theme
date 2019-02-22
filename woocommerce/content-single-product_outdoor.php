@@ -93,10 +93,16 @@ echo '<section class="entry-content row cf product-info-wrapper"><div class="cf"
 
 echo '<div class="col-6">';
 if( have_rows('product_images') ) : while( have_rows('product_images') ) : the_row();
+	$count = 1;
 	$image = get_sub_field('image');
-	if( !empty($image) ): ?>
-	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-	<?php endif;
+	if( !empty($image) ) {
+		if( $count < 3 ) {
+			echo '<div><img src="'.$image['url'].'" alt="'.$image['alt'].'" /></div>';
+		} else {
+			echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+		}
+	}
+	$count ++;
 endwhile; endif;
 echo '</div>';
 
