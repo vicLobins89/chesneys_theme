@@ -24,10 +24,10 @@ jQuery(document).ready(function($) {
 	// Video Gallery
 	$('.play').on('click', function(){
 		var mainVid = $('.main-window').html(),
-			currentVid = $(this).next().find('iframe').html();
+			currentVid = $(this).next().html();
 		
 		$('.main-window').html(currentVid);
-        $(this).next().find('iframe').html(mainVid);
+        $(this).next().html(mainVid);
 		
 		console.log(mainVid);
 	});
