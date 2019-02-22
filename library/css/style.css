@@ -1143,6 +1143,9 @@ LAYOUT & GRID STYLES
 .row.product-info-wrapper {
   padding-top: 1rem;
   padding-bottom: 1rem; }
+  .row.product-info-wrapper h3 {
+    font-family: "Univers", Helvetica, Arial, sans-serif;
+    font-size: 1.2em; }
   .row.product-info-wrapper > .cf, .row.product-info-wrapper > .comment-respond {
     display: inline-block;
     display: -webkit-box;
@@ -1164,8 +1167,6 @@ LAYOUT & GRID STYLES
     border-top: 2rem solid #fff;
     background: #142128;
     color: #fff; }
-    .row.product-info-wrapper .delivery-info h3 {
-      font-family: "Univers", Helvetica, Arial, sans-serif; }
   .row.product-info-wrapper img:last-child {
     margin-bottom: 0; }
 .row.related-products {

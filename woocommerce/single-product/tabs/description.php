@@ -27,7 +27,7 @@ $heading = esc_html( apply_filters( 'woocommerce_product_description_heading', _
 ?>
 
 <?php if ( $heading ) : ?>
-  <h2 class="lhs"><?php echo $heading; ?></h2>
+  <h3 class="h2 lhs"><?php echo $heading; ?></h3>
 <?php endif; ?>
 
 <?php the_content(); ?>
