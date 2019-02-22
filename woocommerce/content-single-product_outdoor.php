@@ -92,12 +92,16 @@ $acfClass->render_modules($cta_module);
 echo '<section class="entry-content row cf product-info-wrapper"><div class="cf">';
 
 echo '<div class="col-6">';
-if( have_rows('product_images') ) : while( have_rows('product_images') ) : the_row();
+if( have_rows('product_images') ) : $row = 1; while( have_rows('product_images') ) : the_row();
 	$image = get_sub_field('image');
 	if( !empty($image) ) {
-		echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+		if( $row == 2 ) {
+			echo '<div><img src="'.$image['url'].'" alt="'.$image['alt'].'" /></div>';
+		} else {
+			echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+		}
 	}
-endwhile; endif;
+$row ++; endwhile; endif;
 echo '</div>';
 
 echo '<div class="col-6">';
