@@ -1164,6 +1164,8 @@ LAYOUT & GRID STYLES
     border-top: 2rem solid #fff;
     background: #142128;
     color: #fff; }
+    .row.product-info-wrapper .delivery-info h3 {
+      font-family: "Univers", Helvetica, Arial, sans-serif; }
   .row.product-info-wrapper img:last-child {
     margin-bottom: 0; }
 .row.related-products {
