@@ -2065,6 +2065,19 @@ POSTS & CONTENT STYLES
 
 #text_slider {
 	color: $white;
+	
+	.sa_hover_container {
+		font-size: 80%;
+		
+		p:first-child {
+			font-size: 130%;
+			font-style: italic;
+			
+			+ p {
+				font-size: 100%;
+			}
+		}
+	}
 }
 
 /******************************************************************

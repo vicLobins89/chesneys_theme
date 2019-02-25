@@ -2373,6 +2373,13 @@ POSTS & CONTENT STYLES
 
 #text_slider {
   color: #fff; }
+  #text_slider .sa_hover_container {
+    font-size: 80%; }
+    #text_slider .sa_hover_container p:first-child {
+      font-size: 130%;
+      font-style: italic; }
+      #text_slider .sa_hover_container p:first-child + p {
+        font-size: 100%; }
 
 /******************************************************************
 PAGE NAVI STYLES
