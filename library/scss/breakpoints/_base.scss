@@ -2092,6 +2092,35 @@ POSTS & CONTENT STYLES
 	}
 }
 
+.team-member {
+	.col-6 {
+		background: $light-brown;
+	}
+	
+	.text {
+		width: 50%;
+		float: right;
+		padding: 2rem;
+	}
+	
+	img {
+		margin: 0;
+		padding: 0;
+		width: 50%;
+		float: left;
+	}
+	
+	h4 {
+		@extend .lhs;
+		@extend .sans;
+		font-size: 80%;
+	}
+	
+	.name {
+		font-size: 150%;
+	}
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/

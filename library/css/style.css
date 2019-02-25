@@ -1556,7 +1556,7 @@ h2, .h2, .row.outdoor-product-single .short-desc .product_title, .woocommerce .s
       background: #fff; }
   h2.white:after, .h2.white:after, .row.outdoor-product-single .short-desc .white.product_title:after, .woocommerce .spares-product .white.product_title:after {
     background: #fff; }
-  h2.lhs:after, .row.outdoor-product-single .short-desc h2.product_title:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .row.outdoor-product-single .short-desc .product_title:after, .woocommerce .spares-product .lhs.product_title:after, .h2.woocommerce-loop-category__title:after, .row.outdoor-product-single .short-desc .woocommerce-loop-category__title.product_title:after, .woocommerce .spares-product .woocommerce-loop-category__title.product_title:after, .h2.woocommerce-loop-product__title:after, .row.outdoor-product-single .short-desc .woocommerce-loop-product__title.product_title:after, .woocommerce .spares-product .woocommerce-loop-product__title.product_title:after, .module-outdoor-living-shop .h2:after, .module-outdoor-living-shop .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-outdoor-living-shop .product_title:after, .module-outdoor-living-shop .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-outdoor-living-shop .product_title:after, .module-design-a-fireplace .h2:after, .module-design-a-fireplace .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-design-a-fireplace .product_title:after, .module-design-a-fireplace .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-design-a-fireplace .product_title:after {
+  h2.lhs:after, .row.outdoor-product-single .short-desc h2.product_title:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .row.outdoor-product-single .short-desc .product_title:after, .woocommerce .spares-product .lhs.product_title:after, .woocommerce .spares-product .team-member h4.product_title:after, .team-member .woocommerce .spares-product h4.product_title:after, .team-member h4.h2:after, .h2.woocommerce-loop-category__title:after, .row.outdoor-product-single .short-desc .woocommerce-loop-category__title.product_title:after, .woocommerce .spares-product .woocommerce-loop-category__title.product_title:after, .h2.woocommerce-loop-product__title:after, .row.outdoor-product-single .short-desc .woocommerce-loop-product__title.product_title:after, .woocommerce .spares-product .woocommerce-loop-product__title.product_title:after, .module-outdoor-living-shop .h2:after, .module-outdoor-living-shop .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-outdoor-living-shop .product_title:after, .module-outdoor-living-shop .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-outdoor-living-shop .product_title:after, .module-design-a-fireplace .h2:after, .module-design-a-fireplace .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-design-a-fireplace .product_title:after, .module-design-a-fireplace .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-design-a-fireplace .product_title:after {
     left: 0;
     margin-left: 0; }
 
@@ -1585,7 +1585,7 @@ p, .p {
   margin: 0.85em 0;
   font-weight: normal; }
 
-.sans {
+.sans, .team-member h4 {
   font-family: "Univers", Helvetica, Arial, sans-serif !important; }
 
 .copy-l {
@@ -2386,6 +2386,22 @@ POSTS & CONTENT STYLES
     border: 2px solid #f5f3f1 !important; }
   #text_slider.sa_owl_theme .owl-dots .active span {
     background-color: #f5f3f1 !important; }
+
+.team-member .col-6 {
+  background: #f5f3f1; }
+.team-member .text {
+  width: 50%;
+  float: right;
+  padding: 2rem; }
+.team-member img {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  float: left; }
+.team-member h4 {
+  font-size: 80%; }
+.team-member .name {
+  font-size: 150%; }
 
 /******************************************************************
 PAGE NAVI STYLES
