@@ -2078,6 +2078,18 @@ POSTS & CONTENT STYLES
 			}
 		}
 	}
+	
+	&.sa_owl_theme {
+		.owl-dots .owl-dot span {
+			width: 15px !important;
+			height: 15px !important;
+			border: 2px solid $light-brown !important;
+		}
+		
+		.owl-dots .active span {
+			background-color: $dark-gray !important;
+		}
+	}
 }
 
 /******************************************************************

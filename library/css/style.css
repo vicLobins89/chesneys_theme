@@ -2380,6 +2380,12 @@ POSTS & CONTENT STYLES
       font-style: italic; }
       #text_slider .sa_hover_container p:first-child + p {
         font-size: 130%; }
+  #text_slider.sa_owl_theme .owl-dots .owl-dot span {
+    width: 15px !important;
+    height: 15px !important;
+    border: 2px solid #f5f3f1 !important; }
+  #text_slider.sa_owl_theme .owl-dots .active span {
+    background-color: #142128 !important; }
 
 /******************************************************************
 PAGE NAVI STYLES
