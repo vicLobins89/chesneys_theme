@@ -1411,6 +1411,11 @@ LAYOUT & GRID STYLES
   font-size: 150%;
   margin-top: 1rem; }
 
+.cta-box {
+  padding: 2rem; }
+  .cta-box.black {
+    background: #142128; }
+
 .blog-wrapper {
   background: #f5f3f1; }
   .blog-wrapper .blog-module {

@@ -736,6 +736,14 @@ LAYOUT & GRID STYLES
 	}
 }
 
+.cta-box {
+	padding: 2rem;
+	
+	&.black {
+		background: $dark-gray;
+	}
+}
+
 .blog-wrapper {
 	background: $light-brown;
 	
