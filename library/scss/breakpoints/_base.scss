@@ -867,9 +867,9 @@ LAYOUT & GRID STYLES
 		background: $light-brown;
 		
 		img {
-			margin-top: 3rem;
+			margin-top: 3rem !important;
 
-			&:first-child { margin-top: 0; }
+			&:first-child { margin-top: 0 !important; }
 		}
 	}
 }

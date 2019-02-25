@@ -1513,9 +1513,9 @@ LAYOUT & GRID STYLES
   border: 1.5rem solid #fff;
   background: #f5f3f1; }
   .equal-height .col-6 img {
-    margin-top: 3rem; }
+    margin-top: 3rem !important; }
     .equal-height .col-6 img:first-child {
-      margin-top: 0; }
+      margin-top: 0 !important; }
 
 .image-left .col-6:first-child {
   padding: 0;
