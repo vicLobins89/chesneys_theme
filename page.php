@@ -14,7 +14,7 @@ $acfClass = new CustomACF();
 							
 							<?php
 							if( !is_front_page() ) {
-								$menu_breadcrumb = new Menu_Breadcrumb( 'main-nav' );
+								$menu_breadcrumb = new Menu_Breadcrumb( 'socket-nav' );
 								$menu_breadcrumb->render( ' &sol;&sol; ', '<p class="menu-breadcrumb"><a href="'.home_url().'">Homepage</a> // ', '</p>' );
 							} elseif( !is_front_page() && is_page('about-us') ) {
 								$menu_breadcrumb = new Menu_Breadcrumb( 'socket-nav' );
