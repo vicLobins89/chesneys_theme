@@ -2288,7 +2288,7 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
-.woocommerce form:not(.shop_table) .quantity nput[type=number]::-webkit-inner-spin-button,
+.woocommerce form:not(.shop_table) .quantity input[type=number]::-webkit-inner-spin-button,
 .woocommerce form:not(.shop_table) .quantity input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0; }
