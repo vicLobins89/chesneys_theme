@@ -2003,6 +2003,12 @@ NAVIGATION STYLES
     position: absolute;
     right: 2rem;
     top: .7rem; }
+  .socket .sub-menu {
+    position: absolute;
+    margin: 0;
+    display: none !important; }
+    .socket .sub-menu li {
+      display: block; }
 
 /*********************
 POSTS & CONTENT STYLES

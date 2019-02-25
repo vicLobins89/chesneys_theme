@@ -1524,6 +1524,16 @@ NAVIGATION STYLES
 		right: 2rem;
 		top: .7rem;
 	}
+	
+	.sub-menu {
+		position: absolute;
+		margin: 0;
+		display: none !important;
+		
+		li {
+			display: block;
+		}
+	}
 }
 
 
