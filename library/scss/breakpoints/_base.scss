@@ -741,6 +741,7 @@ LAYOUT & GRID STYLES
 	
 	&.black {
 		background: $dark-gray;
+		color: $white;
 	}
 }
 
@@ -1707,6 +1708,13 @@ POSTS & CONTENT STYLES
 .entry-content {
 	padding: 2rem;
 	font-size: .9rem;
+	
+	[class*="col-"] .p,
+	[class*="col-"] p {
+		&:first-child {
+			margin-top: 0;
+		}
+	}
 
 	ul, ol, table, dl {}
 

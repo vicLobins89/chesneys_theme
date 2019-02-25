@@ -1414,7 +1414,8 @@ LAYOUT & GRID STYLES
 .cta-box {
   padding: 2rem; }
   .cta-box.black {
-    background: #142128; }
+    background: #142128;
+    color: #fff; }
 
 .blog-wrapper {
   background: #f5f3f1; }
@@ -2127,6 +2128,9 @@ POSTS & CONTENT STYLES
 .entry-content {
   padding: 2rem;
   font-size: .9rem; }
+  .entry-content [class*="col-"] .p:first-child,
+  .entry-content [class*="col-"] p:first-child {
+    margin-top: 0; }
   .entry-content ul {
     list-style-type: disc;
     margin-bottom: 2em;
