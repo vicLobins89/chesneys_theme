@@ -1521,6 +1521,9 @@ LAYOUT & GRID STYLES
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
+.equal-height.image-left p, .equal-height.image-left img {
+  margin: 0;
+  font-size: 0; }
 
 .outdoor-products h4 {
   font-size: 1em;

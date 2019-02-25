@@ -883,7 +883,10 @@ LAYOUT & GRID STYLES
 	}
 	
 	&.image-left {
-		
+		p, img {
+			margin: 0;
+			font-size: 0;
+		}
 	}
 }
 
