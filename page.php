@@ -13,7 +13,7 @@ $acfClass = new CustomACF();
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							
 							<?php
-							if( !is_front_page() && !is_page('about-us') ) {
+							if( !is_front_page() && !is_tree(91) ) {
 								$menu_breadcrumb = new Menu_Breadcrumb( 'main-nav' );
 								$menu_breadcrumb->render( ' &sol;&sol; ', '<p class="menu-breadcrumb"><a href="'.home_url().'">Homepage</a> // ', '</p>' );
 							} elseif( !is_front_page() ) {
