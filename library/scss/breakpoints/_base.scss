@@ -714,6 +714,42 @@ LAYOUT & GRID STYLES
 			}
 		}
 	}
+	
+	&.module-our-team {
+		h2 {
+			text-align: center;
+		}
+	}
+}
+
+.team-members {
+	.col-6 > .cf {
+		background: $light-brown;
+	}
+	
+	.text {
+		width: 50%;
+		float: right;
+		padding: 2rem;
+	}
+	
+	img {
+		margin: 0;
+		padding: 0;
+		width: 50%;
+		float: left;
+	}
+	
+	h4 {
+		@extend .lhs;
+		@extend .sans;
+		font-size: 80%;
+	}
+	
+	.name {
+		font-size: 150%;
+		margin-top: 1rem;
+	}
 }
 
 .blog-wrapper {
@@ -2089,36 +2125,6 @@ POSTS & CONTENT STYLES
 		.owl-dots .active span {
 			background-color: $light-brown !important;
 		}
-	}
-}
-
-.team-members {
-	.col-6 > .cf {
-		background: $light-brown;
-	}
-	
-	.text {
-		width: 50%;
-		float: right;
-		padding: 2rem;
-	}
-	
-	img {
-		margin: 0;
-		padding: 0;
-		width: 50%;
-		float: left;
-	}
-	
-	h4 {
-		@extend .lhs;
-		@extend .sans;
-		font-size: 80%;
-	}
-	
-	.name {
-		font-size: 150%;
-		margin-top: 1rem;
 	}
 }
 
