@@ -2070,11 +2070,11 @@ POSTS & CONTENT STYLES
 		font-size: 80%;
 		
 		p:first-child {
-			font-size: 130%;
+			font-size: 200%;
 			font-style: italic;
 			
 			+ p {
-				font-size: 100%;
+				font-size: 130%;
 			}
 		}
 	}
