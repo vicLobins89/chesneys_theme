@@ -873,14 +873,14 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
-	.image-left {
+	&.image-left {
 		.col-6:last-child {
 			padding-left: 2.5rem;
 			padding-right: 2.5rem;
 		}
 	}
 	
-	.image-right {
+	&.image-right {
 		.col-6:first-child {
 			padding-left: 2.5rem;
 			padding-right: 2.5rem;

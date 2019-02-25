@@ -1516,10 +1516,10 @@ LAYOUT & GRID STYLES
     margin-top: 3rem !important; }
     .equal-height .col-6 img:first-child {
       margin-top: 0 !important; }
-.equal-height .image-left .col-6:last-child {
+.equal-height.image-left .col-6:last-child {
   padding-left: 2.5rem;
   padding-right: 2.5rem; }
-.equal-height .image-right .col-6:first-child {
+.equal-height.image-right .col-6:first-child {
   padding-left: 2.5rem;
   padding-right: 2.5rem; }
 
