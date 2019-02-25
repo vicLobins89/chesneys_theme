@@ -939,7 +939,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-family: $sans-serif;
+	font-family: $sans-serif !important;
 	font-size: 1.75em;
 	font-weight: normal;
 	margin: 1em 0 0.5em;
