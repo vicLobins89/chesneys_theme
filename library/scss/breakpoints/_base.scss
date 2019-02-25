@@ -533,16 +533,31 @@ LAYOUT & GRID STYLES
 			background: $light-brown;
 		}
 		
-		&.image-left img,
-		&.image-left p,
-		img {
-			padding: 0;
-			margin: 0;
-			font-size: 0;
+		&.image-left {
+			.col-6:first-child {
+				padding: 0;
+				
+				p, img {
+					padding: 0;
+					margin: 0;
+					font-size: 0;
+				}
+			}
 		}
 		
-		&.column-8-4,
-		&.image-left {
+		&.image-right {
+			.col-6:last-child {
+				padding: 0;
+				
+				p, img {
+					padding: 0;
+					margin: 0;
+					font-size: 0;
+				}
+			}
+		}
+		
+		&.column-8-4 {
 			.col-6:first-child {
 				width: 66.666%;
 				padding: 0;
@@ -560,8 +575,7 @@ LAYOUT & GRID STYLES
 			}
 		}
 		
-		&.column-4-8,
-		&.image-right {
+		&.column-4-8 {
 			.col-6:first-child {
 				width: 33.333%;
 				padding: 2.5rem;
