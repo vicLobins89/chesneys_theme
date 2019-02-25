@@ -54,7 +54,11 @@
 					'theme_location' => 'socket-nav'
 				));
 				echo '<div class="rhs-links">';
-				echo '<a href="'.wc_get_cart_url().'" class="menu-item basket" title="View your shopping cart"><span>'.sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ).'</span>Basket</a>';
+				echo '<a href="'.wc_get_cart_url().'" class="menu-item basket" title="View your shopping cart">';
+				if( WC()->cart->get_cart_contents_count() !== 0 ) {
+					echo '<span>'.sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ).'</span>';
+				}
+				echo 'Basket</a>';
 				echo '</div>';
 				?>
 				</nav>
