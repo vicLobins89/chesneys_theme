@@ -2024,7 +2024,8 @@ NAVIGATION STYLES
     height: 12px;
     color: #fff;
     text-align: center;
-    background: #ef292e; }
+    background: #ef292e;
+    border-radius: 50%; }
 
 /*********************
 POSTS & CONTENT STYLES
