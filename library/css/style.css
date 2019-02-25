@@ -1847,7 +1847,6 @@ NAVIGATION STYLES
       opacity: 1;
       visibility: visible; }
     .primary-nav > li:after {
-      content: '';
       position: absolute;
       background: none;
       width: 100%;
