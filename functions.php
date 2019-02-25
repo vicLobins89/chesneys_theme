@@ -306,65 +306,6 @@ function excerpt_in_product_archives() {
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 40 );
 
-//Adding Alphabetical sorting option to shop and product settings pages
-add_action( 'widgets_init', 'wb_extra_widgets' );
-/**
- * Register new Widget area for Product Cat sort dropdown.
- */
-function wb_extra_widgets() {
-	register_sidebar( array(
-		'id'            => 'prod_sort',
-		'name'          => __( 'Product Cat Sort', 'themename' ),
-		'description'   => __( 'This site below Shop Title', 'themename' ),
-		'before_widget'	=> '<div>',
-		'after_widget'	=> '</div>',
-		'before_title'  => '<h3 class="widgettitle">',
-		'after_title'   => '</h3>'
-	) );
-}
-add_action( 'woocommerce_before_shop_loop','wb_prod_sort' ); // Hook it after headline and before loop
-/**
- * Position the Product Category Sort dropdown.
- */
-function wb_prod_sort() {
-	if ( is_active_sidebar( 'prod_sort' ) ) {
-		dynamic_sidebar( 'prod_sort' );
-	}
-}
-	
-	
-function patricks_woocommerce_catalog_orderby( $orderby ) {
-	unset($orderby["price"]);
-	unset($orderby["price-desc"]);
-	return $orderby;
-}
-add_filter( "woocommerce_catalog_orderby", "patricks_woocommerce_catalog_orderby", 20 );
 
-
-function sip_alphabetical_shop_ordering( $sort_args ) {
-	$orderby_value = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
-	if ( 'alphabetical' == $orderby_value ) {
-		$sort_args['orderby'] = 'title';
-		$sort_args['order'] = 'asc';
-		$sort_args['meta_key'] = '';
-	}
-	return $sort_args;
-}
-add_filter( 'woocommerce_get_catalog_ordering_args', 'sip_alphabetical_shop_ordering' );
-
-function sip_custom_wc_catalog_orderby( $sortby ) {
-	$sortby['alphabetical'] = 'Alphabetical';
-	return $sortby;
-}
-add_filter( 'woocommerce_default_catalog_orderby_options', 'sip_custom_wc_catalog_orderby' );
-add_filter( 'woocommerce_catalog_orderby', 'sip_custom_wc_catalog_orderby' );
-
-// Changing "Default Sorting" to "Recommended sorting" on shop and product settings pages
-function sip_update_sorting_name( $catalog_orderby ) {
-	$catalog_orderby = str_replace("Default sorting", "View by", $catalog_orderby);
-	return $catalog_orderby;
-}
-add_filter( 'woocommerce_catalog_orderby', 'sip_update_sorting_name' );
-add_filter( 'woocommerce_default_catalog_orderby_options', 'sip_update_sorting_name' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
