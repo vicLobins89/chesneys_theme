@@ -1313,7 +1313,7 @@ NAVIGATION STYLES
 		color: $dark-brown;
 		
 		&.separator,
-		&.separator a {
+		&.separator > a {
 			cursor: default;
 		}
 		
@@ -1541,6 +1541,21 @@ NAVIGATION STYLES
 		
 		li {
 			display: block;
+		}
+	}
+	
+	.basket {
+		span {
+			display: inline-block;
+			margin-right: 8px;
+			font-size: 12px;
+			line-height: 1;
+			vertical-align: middle;
+			width: 12px;
+			height: 12px;
+			color: $white;
+			text-align: center;
+			background: $red;
 		}
 	}
 }

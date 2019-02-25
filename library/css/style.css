@@ -1831,7 +1831,7 @@ NAVIGATION STYLES
     margin: 0;
     vertical-align: middle;
     color: #766e63; }
-    .primary-nav > li.separator, .primary-nav > li.separator a {
+    .primary-nav > li.separator, .primary-nav > li.separator > a {
       cursor: default; }
     .primary-nav > li > a {
       color: inherit;
@@ -2014,6 +2014,17 @@ NAVIGATION STYLES
     display: none !important; }
     .socket .sub-menu li {
       display: block; }
+  .socket .basket span {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 12px;
+    line-height: 1;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    color: #fff;
+    text-align: center;
+    background: #ef292e; }
 
 /*********************
 POSTS & CONTENT STYLES
