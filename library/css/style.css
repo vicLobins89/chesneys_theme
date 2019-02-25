@@ -1561,7 +1561,6 @@ h2, .h2, .row.outdoor-product-single .short-desc .product_title, .woocommerce .s
     margin-left: 0; }
 
 h3, .h3 {
-  font-family: "Univers", Helvetica, Arial, sans-serif !important;
   font-size: 1.75em;
   font-weight: normal;
   margin: 1em 0 0.5em; }
@@ -1587,7 +1586,7 @@ p, .p {
   font-weight: normal; }
 
 .sans {
-  font-family: "Univers", Helvetica, Arial, sans-serif; }
+  font-family: "Univers", Helvetica, Arial, sans-serif !important; }
 
 .copy-l {
   font-size: 120% !important; }
