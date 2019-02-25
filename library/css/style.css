@@ -1411,7 +1411,7 @@ LAYOUT & GRID STYLES
   float: right;
   padding: 2rem; }
 .team-members img {
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
   width: 50%;
   float: left; }
