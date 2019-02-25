@@ -1016,9 +1016,13 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-size: 1.75em;
+	font-size: 1.35em;
 	font-weight: normal;
 	margin: 1em 0 0.5em;
+	
+	&.h2 {
+		font-size: 1.1em;
+	}
 	
 	+ h4 {
 		margin-top: 2rem !important;
