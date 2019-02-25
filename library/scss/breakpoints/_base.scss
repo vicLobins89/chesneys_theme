@@ -2093,7 +2093,7 @@ POSTS & CONTENT STYLES
 }
 
 .team-members {
-	.col-6 {
+	.col-6 > .cf {
 		background: $light-brown;
 	}
 	
@@ -2118,6 +2118,7 @@ POSTS & CONTENT STYLES
 	
 	.name {
 		font-size: 150%;
+		margin-top: 1rem;
 	}
 }
 

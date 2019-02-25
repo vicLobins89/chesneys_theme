@@ -21,13 +21,13 @@ class CustomACF {
 						<?php if( have_rows('team_members') ) : ?>
 						<div class="team-members cf">
 							<?php while( have_rows('team_members') ) : the_row(); ?>
-							<div class="col-6 cf">
-								<img src="<?php echo get_sub_field('photo'); ?>" alt="<?php echo get_sub_field('name'); ?>">
+							<div class="col-6">
+								<div class="cf"><img src="<?php echo get_sub_field('photo'); ?>" alt="<?php echo get_sub_field('name'); ?>">
 								<div class="text">
 									<h4 class="h2"><?php echo get_sub_field('role'); ?></h4>
 									<p class="name"><?php echo get_sub_field('name'); ?></p>
 									<p><?php echo get_sub_field('bio'); ?></p>
-								</div>
+								</div></div>
 							</div>
 							<?php endwhile; ?>
 						</div>

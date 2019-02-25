@@ -2387,7 +2387,7 @@ POSTS & CONTENT STYLES
   #text_slider.sa_owl_theme .owl-dots .active span {
     background-color: #f5f3f1 !important; }
 
-.team-members .col-6 {
+.team-members .col-6 > .cf, .team-members .col-6 > .comment-respond {
   background: #f5f3f1; }
 .team-members .text {
   width: 50%;
@@ -2401,7 +2401,8 @@ POSTS & CONTENT STYLES
 .team-members h4 {
   font-size: 80%; }
 .team-members .name {
-  font-size: 150%; }
+  font-size: 150%;
+  margin-top: 1rem; }
 
 /******************************************************************
 PAGE NAVI STYLES
