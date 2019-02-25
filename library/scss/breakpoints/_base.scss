@@ -861,6 +861,11 @@ LAYOUT & GRID STYLES
 		display: -webkit-flex;
 		display: flex;
 	}
+	
+	.col-6 {
+		border: 1.5rem solid $white;
+		background: $light-gray;
+	}
 }
 
 .image-left {

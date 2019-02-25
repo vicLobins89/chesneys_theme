@@ -1509,6 +1509,9 @@ LAYOUT & GRID STYLES
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
+.equal-height .col-6 {
+  border: 1.5rem solid #fff;
+  background: #e5e5e5; }
 
 .image-left .col-6:first-child {
   padding: 0; }
