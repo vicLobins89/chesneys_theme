@@ -2371,6 +2371,9 @@ POSTS & CONTENT STYLES
 .spares-shop-loop .woocommerce-ordering {
   display: block !important; }
 
+#text_slider {
+  color: #fff; }
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
