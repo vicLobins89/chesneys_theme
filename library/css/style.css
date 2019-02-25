@@ -1512,16 +1512,22 @@ LAYOUT & GRID STYLES
 .equal-height .col-6 {
   border: 1.5rem solid #fff;
   background: #e5e5e5; }
+.equal-height img {
+  margin-top: 3rem; }
+  .equal-height img:first-child {
+    margin-top: 0; }
 
 .image-left .col-6:first-child {
-  padding: 0; }
+  padding: 0;
+  background: none; }
   .image-left .col-6:first-child p, .image-left .col-6:first-child img {
     padding: 0;
     margin: 0;
     font-size: 0; }
 
 .image-right .col-6:last-child {
-  padding: 0; }
+  padding: 0;
+  background: none; }
   .image-right .col-6:last-child p, .image-right .col-6:last-child img {
     padding: 0;
     margin: 0;

@@ -866,11 +866,18 @@ LAYOUT & GRID STYLES
 		border: 1.5rem solid $white;
 		background: $light-gray;
 	}
+	
+	img {
+		margin-top: 3rem;
+		
+		&:first-child { margin-top: 0; }
+	}
 }
 
 .image-left {
 	.col-6:first-child {
 		padding: 0;
+		background: none;
 
 		p, img {
 			padding: 0;
@@ -883,6 +890,7 @@ LAYOUT & GRID STYLES
 .image-right {
 	.col-6:last-child {
 		padding: 0;
+		background: none;
 
 		p, img {
 			padding: 0;
