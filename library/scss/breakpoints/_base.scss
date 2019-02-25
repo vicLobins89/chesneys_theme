@@ -872,6 +872,20 @@ LAYOUT & GRID STYLES
 			&:first-child { margin-top: 0 !important; }
 		}
 	}
+	
+	.image-left {
+		.col-6:last-child {
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+		}
+	}
+	
+	.image-right {
+		.col-6:first-child {
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+		}
+	}
 }
 
 .image-left {
