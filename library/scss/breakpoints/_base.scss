@@ -543,6 +543,10 @@ LAYOUT & GRID STYLES
 					font-size: 0;
 				}
 			}
+			
+			.col-6:last-child {
+				padding: 2.5rem;
+			}
 		}
 		
 		&.image-right {
@@ -554,6 +558,10 @@ LAYOUT & GRID STYLES
 					margin: 0;
 					font-size: 0;
 				}
+			}
+			
+			.col-6:first-child {
+				padding: 2.5rem;
 			}
 		}
 		

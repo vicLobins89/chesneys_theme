@@ -1269,12 +1269,16 @@ LAYOUT & GRID STYLES
     padding: 0;
     margin: 0;
     font-size: 0; }
+.row.image-column.image-left .col-6:last-child {
+  padding: 2.5rem; }
 .row.image-column.image-right .col-6:last-child {
   padding: 0; }
   .row.image-column.image-right .col-6:last-child p, .row.image-column.image-right .col-6:last-child img {
     padding: 0;
     margin: 0;
     font-size: 0; }
+.row.image-column.image-right .col-6:first-child {
+  padding: 2.5rem; }
 .row.image-column.column-8-4 .col-6:first-child {
   width: 66.666%;
   padding: 0; }
