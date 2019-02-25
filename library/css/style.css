@@ -1612,11 +1612,9 @@ h2, .h2, .row.outdoor-product-single .short-desc .product_title, .woocommerce .s
     margin-left: 0; }
 
 h3, .h3 {
-  font-size: 1.35em;
+  font-size: 1.375em;
   font-weight: normal;
   margin: 1em 0 0.5em; }
-  h3.h2, .row.outdoor-product-single .short-desc h3.product_title, .woocommerce .spares-product h3.product_title, .h3.h2, .row.outdoor-product-single .short-desc .h3.product_title, .woocommerce .spares-product .h3.product_title {
-    font-size: 1.1em; }
   h3 + h4, .h3 + h4 {
     margin-top: 2rem !important; }
 
