@@ -49,7 +49,7 @@ img {
 		margin: auto;
 	}
 	
-	.entry-content [class*="col-"] & {
+	.entry-content:not(.product-info-wrapper) [class*="col-"] & {
 		margin-bottom: 0;
 	}
 }

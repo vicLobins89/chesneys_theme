@@ -937,7 +937,7 @@ img {
   img.aligncenter {
     display: block;
     margin: auto; }
-  .entry-content [class*="col-"] img {
+  .entry-content:not(.product-info-wrapper) [class*="col-"] img {
     margin-bottom: 0; }
 
 hr {
