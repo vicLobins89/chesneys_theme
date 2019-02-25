@@ -937,6 +937,8 @@ img {
   img.aligncenter {
     display: block;
     margin: auto; }
+  [class*="col-"] img {
+    margin-bottom: 0; }
 
 hr {
   margin: 2em 0;

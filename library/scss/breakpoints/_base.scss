@@ -48,6 +48,10 @@ img {
 		display: block;
 		margin: auto;
 	}
+	
+	[class*="col-"] & {
+		margin-bottom: 0;
+	}
 }
 
 hr {
