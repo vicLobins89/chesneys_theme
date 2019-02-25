@@ -1934,6 +1934,16 @@ POSTS & CONTENT STYLES
 		@extend .secondary-btn;
 	}
 	
+	form:not(.shop_table) {
+		.quantity {
+			nput[type=number]::-webkit-inner-spin-button, 
+			input[type=number]::-webkit-outer-spin-button {
+				-webkit-appearance: none; 
+				margin: 0; 
+			}
+		}
+	}
+	
 	.qty-btn, .quantity {
 		display: inline-block;
 		float: none !important;
@@ -1947,12 +1957,6 @@ POSTS & CONTENT STYLES
 			padding-left: 0;
 			padding-right: 0;
 			width: 2rem !important;
-		}
-
-		input[type=number]::-webkit-inner-spin-button, 
-		input[type=number]::-webkit-outer-spin-button { 
-			-webkit-appearance: none; 
-			margin: 0; 
 		}
 	}
 	

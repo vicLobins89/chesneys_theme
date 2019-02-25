@@ -2288,6 +2288,10 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
+.woocommerce form:not(.shop_table) .quantity nput[type=number]::-webkit-inner-spin-button,
+.woocommerce form:not(.shop_table) .quantity input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
 .woocommerce .qty-btn, .woocommerce .quantity {
   display: inline-block;
   float: none !important; }
@@ -2298,10 +2302,6 @@ POSTS & CONTENT STYLES
     padding-left: 0;
     padding-right: 0;
     width: 2rem !important; }
-  .woocommerce .quantity input[type=number]::-webkit-inner-spin-button,
-  .woocommerce .quantity input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0; }
 .woocommerce .spares-product .product_title {
   text-align: center; }
 .woocommerce .spares-product .woocommerce-product-gallery__image a {
