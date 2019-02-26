@@ -111,13 +111,15 @@ endif; // close images
 
 echo '<div class="col-6"><div class="details-inner">';
 
-echo '<div class="product-details">';
-wc_get_template( 'single-product/tabs/description.php' );
-echo '</div>';
-
-if( get_field('delivery_info') ) {
-	echo '<div class="delivery-info"><h3 class="h2 lhs white">Delivery Information</h3><p>'.get_field('delivery_info').'</p></div>';
+if( !empty(get_the_content()) ) {
+	echo '<div class="product-details">';
+	wc_get_template( 'single-product/tabs/description.php' );
+	echo '</div>';
 }
+
+//if( get_field('delivery_info') ) {
+//	echo '<div class="delivery-info"><h3 class="h2 lhs white">Delivery Information</h3><p>'.get_field('delivery_info').'</p></div>';
+//}
 echo '</div></div>'; // close inner
 
 echo '</div></div></section>'; // close section
