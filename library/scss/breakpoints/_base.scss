@@ -2017,7 +2017,7 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
-	form:not(.shop_table) {
+	form:not(.shop_table):not(.woocommerce-cart-form) {
 		.quantity {
 			input[type=number]::-webkit-inner-spin-button, 
 			input[type=number]::-webkit-outer-spin-button {
