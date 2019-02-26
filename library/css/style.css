@@ -2403,23 +2403,6 @@ POSTS & CONTENT STYLES
   .woocommerce ul.products li.product:hover .hover-text, .woocommerce ul.products li.product:focus .hover-text {
     opacity: 1;
     visibility: visible; }
-  .woocommerce ul.products li.product.product-type-grouped .woocommerce-loop-category__title,
-  .woocommerce ul.products li.product.product-type-grouped .woocommerce-loop-product__title,
-  .woocommerce ul.products li.product.product-type-grouped p {
-    margin-left: 0; }
-  .woocommerce ul.products li.product.product-type-grouped a:not(.button):hover, .woocommerce ul.products li.product.product-type-grouped a:not(.button):focus {
-    background: none; }
-  .woocommerce ul.products li.product.product-type-grouped .category-name {
-    font-family: "Univers", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: .75em; }
-  .woocommerce ul.products li.product.product-type-grouped .woocommerce-loop-product__title {
-    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
-    text-transform: none;
-    font-size: 1.25em; }
-    .woocommerce ul.products li.product.product-type-grouped .woocommerce-loop-product__title:after {
-      bottom: auto;
-      top: -14px; }
 .woocommerce .hover-text {
   position: absolute;
   width: 100%;
@@ -2444,6 +2427,23 @@ POSTS & CONTENT STYLES
 .spares-shop-loop .woocommerce-result-count,
 .spares-shop-loop .woocommerce-ordering {
   display: block !important; }
+.spares-shop-loop .product .woocommerce-loop-category__title,
+.spares-shop-loop .product .woocommerce-loop-product__title,
+.spares-shop-loop .product p {
+  margin-left: 0; }
+.spares-shop-loop .product a:not(.button):hover, .spares-shop-loop .product a:not(.button):focus {
+  background: none; }
+.spares-shop-loop .product .category-name {
+  font-family: "Univers", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: .75em; }
+.spares-shop-loop .product .woocommerce-loop-product__title {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+  text-transform: none;
+  font-size: 1.25em; }
+  .spares-shop-loop .product .woocommerce-loop-product__title:after {
+    bottom: auto;
+    top: -14px; }
 
 #text_slider {
   color: #fff; }
