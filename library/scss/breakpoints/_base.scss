@@ -1848,6 +1848,8 @@ POSTS & CONTENT STYLES
 				background: $dark-gray;
 				color: $white;
 				font-family: $condensed;
+				font-family: 1.2em;
+				text-transform: uppercase;
 			}
 		}
 	}
@@ -1966,6 +1968,16 @@ POSTS & CONTENT STYLES
 .woocommerce {
 	button.single_add_to_cart_button {
 		@extend .secondary-btn;
+	}
+	
+	table.shop_table {
+		border-radius: 0;
+		
+		td {
+			border-top: 1px solid $light-brown;
+			border-right: 1px solid $light-brown;
+			padding: 1rem;
+		}
 	}
 	
 	form:not(.shop_table) {
