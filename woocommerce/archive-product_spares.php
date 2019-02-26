@@ -33,6 +33,8 @@ function custom_woocommerce_product_add_to_cart_text()  {
 	global $product;
 	if( $product->is_type( 'grouped' ) ){
 		return __( 'View spares', 'woocommerce' );
+	} else {
+		return __( 'View item', 'woocommerce' );
 	}
 }
 add_filter( 'woocommerce_product_add_to_cart_text', 'custom_woocommerce_product_add_to_cart_text' );
