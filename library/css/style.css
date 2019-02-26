@@ -2553,20 +2553,24 @@ POSTS & CONTENT STYLES
 #add_payment_method ul.order_details,
 .woocommerce-cart ul.order_details,
 .woocommerce-checkout ul.order_details {
-  padding: 0; }
+  padding: 0;
+  border: 1px solid #766e63; }
   #add_payment_method ul.order_details li,
   .woocommerce-cart ul.order_details li,
   .woocommerce-checkout ul.order_details li {
     margin: 0;
-    padding: 1rem;
+    padding: 0;
     width: 25%; }
     #add_payment_method ul.order_details li p,
     .woocommerce-cart ul.order_details li p,
     .woocommerce-checkout ul.order_details li p {
-      padding: 1rem; }
+      padding: 1rem;
+      font-size: .9em;
+      font-weight: normal; }
       #add_payment_method ul.order_details li p.heading,
       .woocommerce-cart ul.order_details li p.heading,
       .woocommerce-checkout ul.order_details li p.heading {
+        font-size: 1.2em;
         color: #fff;
         font-family: "Univers Cond", "Univers", Helvetica, Arial, sans-serif;
         text-transform: uppercase;

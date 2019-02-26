@@ -2376,16 +2376,20 @@ POSTS & CONTENT STYLES
 	
 	ul.order_details {
 		padding: 0;
+		border: 1px solid $dark-brown;
 		
 		li {
 			margin: 0;
-			padding: 1rem;
+			padding: 0;
 			width: 25%;
 			
 			p {
 				padding: 1rem;
+				font-size: .9em;
+				font-weight: normal;
 				
 				&.heading {
+					font-size: 1.2em;
 					color: $white;
 					font-family: $condensed;
 					text-transform: uppercase;
