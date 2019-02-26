@@ -16,7 +16,7 @@ $acfClass = new CustomACF();
 							if( !is_front_page() && !is_tree(91) && !is_tree(93) && !is_page(array( 'Basket', 'Checkout' )) ) {
 								$menu_breadcrumb = new Menu_Breadcrumb( 'main-nav' );
 								$menu_breadcrumb->render( ' &sol;&sol; ', '<p class="menu-breadcrumb"><a href="'.home_url().'">Homepage</a> // ', '</p>' );
-							} elseif( !is_front_page() ) {
+							} elseif( !is_front_page() && !is_page(array( 'Basket', 'Checkout' )) ) {
 								$menu_breadcrumb = new Menu_Breadcrumb( 'socket-nav' );
 								$menu_breadcrumb->render( ' &sol;&sol; ', '<p class="menu-breadcrumb"><a href="'.home_url().'">Homepage</a> // ', '</p>' );
 							}
