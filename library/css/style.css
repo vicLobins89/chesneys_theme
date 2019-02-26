@@ -2233,6 +2233,10 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
+.woocommerce .woocommerce-info {
+  border-color: #4b858e; }
+  .woocommerce .woocommerce-info::before {
+    color: #1e85be; }
 .woocommerce .cart-collaterals .cart_totals {
   margin: 2rem 0; }
   .woocommerce .cart-collaterals .cart_totals h2 {
@@ -2242,7 +2246,7 @@ POSTS & CONTENT STYLES
     color: #fff;
     font-family: "Univers Cond", "Univers", Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
-  .woocommerce .cart-collaterals .cart_totals tr:last-child th {
+  .woocommerce .cart-collaterals .cart_totals tr:last-child th, .woocommerce .cart-collaterals .cart_totals tr:last-child td {
     border-bottom: none; }
   .woocommerce .cart-collaterals .cart_totals tr th {
     width: 10rem;

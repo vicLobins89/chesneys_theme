@@ -1971,6 +1971,14 @@ POSTS & CONTENT STYLES
 		@extend .secondary-btn;
 	}
 	
+	.woocommerce-info {
+		border-color: $teal;
+		
+		&::before {
+			color: #1e85be;
+		}
+	}
+	
 	.cart-collaterals .cart_totals {
 		margin: 2rem 0;
 		
@@ -1989,7 +1997,7 @@ POSTS & CONTENT STYLES
 		
 		tr {
 			&:last-child {
-				th {
+				th, td {
 					border-bottom: none;
 				}
 			}
