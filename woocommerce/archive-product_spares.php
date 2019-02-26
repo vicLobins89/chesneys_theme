@@ -85,6 +85,7 @@ if ( woocommerce_product_loop() ) {
 	<div class="cf">
 	<?php
 	if( term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) {
+		do_action( 'woocommerce_sidebar' );
 		echo '<div class="col-8">';
 	} else {
 		echo '<div class="col-12">';
@@ -120,13 +121,6 @@ if ( woocommerce_product_loop() ) {
 	
 	?>
 	</div><!-- col -->
-	
-	<?php
-	if( term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) {
-		do_action( 'woocommerce_sidebar' );
-	}
-	?>
-	
 	</div><!-- cf -->
 	</section><!-- section -->
 	<?php
