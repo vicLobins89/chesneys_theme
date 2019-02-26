@@ -81,8 +81,14 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
 	?>
-	<section class="entry-content row cf shop-loop spares-shop-loop"><div class="cf"><div class="col-12">
+	<section class="entry-content row cf shop-loop spares-shop-loop">
+	<div class="cf">
 	<?php
+	if( term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) {
+		echo '<div class="col-8">';
+	} else {
+		echo '<div class="col-12">';
+	}
 	
 	do_action( 'woocommerce_before_shop_loop' );
 
@@ -113,7 +119,16 @@ if ( woocommerce_product_loop() ) {
 	do_action( 'woocommerce_after_shop_loop' );
 	
 	?>
-	</div></div></section>
+	</div><!-- col -->
+	
+	<?php
+	if( term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) {
+		do_action( 'woocommerce_sidebar' );
+	}
+	?>
+	
+	</div><!-- cf -->
+	</section><!-- section -->
 	<?php
 	
 	// Modules
@@ -157,14 +172,5 @@ if ( woocommerce_product_loop() ) {
  * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
  */
 do_action( 'woocommerce_after_main_content' );
-
-/**
- * Hook: woocommerce_sidebar.
- *
- * @hooked woocommerce_get_sidebar - 10
- */
-if( term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) {
-	do_action( 'woocommerce_sidebar' );
-}
 
 get_footer( 'shop' );
