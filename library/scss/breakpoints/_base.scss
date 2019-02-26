@@ -2110,6 +2110,10 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
+	.woocommerce-shipping-fields {
+		margin: 2rem 0;
+	}
+	
 	form:not(.shop_table):not(.woocommerce-cart-form) {
 		.quantity {
 			input[type=number]::-webkit-inner-spin-button, 
