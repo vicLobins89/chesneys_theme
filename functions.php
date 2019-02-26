@@ -242,7 +242,7 @@ require_once( 'woocommerce/checkout-functions.php' );
 function woocommerce_category_image() {
 	$term = get_queried_object();
 	
-    if ( is_product_category() && (!term_is_ancestor_of(63, $term->term_id, 'product_cat') || !is_product_category(63)) ){
+    if ( is_product_category() && !is_product_category(63) ){
 	    global $wp_query;
 	    $cat = $wp_query->get_queried_object();
 	    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
