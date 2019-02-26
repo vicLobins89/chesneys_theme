@@ -2005,6 +2005,11 @@ POSTS & CONTENT STYLES
 		button.button:disabled[disabled] {
 			padding: 1.3em 2em 1em;
 		}
+		
+		.coupon .input-text {
+			height: 2.9rem;
+    		width: 8rem;
+		}
 	}
 	
 	form:not(.shop_table) {

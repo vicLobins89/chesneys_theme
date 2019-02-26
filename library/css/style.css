@@ -2252,6 +2252,9 @@ POSTS & CONTENT STYLES
   .woocommerce table.shop_table button.button:disabled,
   .woocommerce table.shop_table button.button:disabled[disabled] {
     padding: 1.3em 2em 1em; }
+  .woocommerce table.shop_table .coupon .input-text {
+    height: 2.9rem;
+    width: 8rem; }
 .woocommerce form:not(.shop_table) .quantity input[type=number]::-webkit-inner-spin-button,
 .woocommerce form:not(.shop_table) .quantity input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
