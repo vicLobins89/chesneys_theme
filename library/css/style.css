@@ -2233,6 +2233,11 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
+.woocommerce .cart-collaterals .cart_totals {
+  width: 58%;
+  margin: 2rem 0; }
+  .woocommerce .cart-collaterals .cart_totals h2 {
+    margin-bottom: 2rem; }
 .woocommerce table.shop_table {
   border-radius: 0; }
   .woocommerce table.shop_table th {

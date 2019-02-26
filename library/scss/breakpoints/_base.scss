@@ -1971,6 +1971,15 @@ POSTS & CONTENT STYLES
 		@extend .secondary-btn;
 	}
 	
+	.cart-collaterals .cart_totals {
+		width: 58%;
+		margin: 2rem 0;
+		
+		h2 {
+			margin-bottom: 2rem;
+		}
+	}
+	
 	table.shop_table {
 		border-radius: 0;
 		
