@@ -2424,24 +2424,24 @@ POSTS & CONTENT STYLES
     .woocommerce .hover-text a:hover {
       text-decoration: underline !important; }
 
-.spares-shop-loop .woocommerce-result-count,
-.spares-shop-loop .woocommerce-ordering {
+.woocommerce .spares-shop-loop .woocommerce-result-count,
+.woocommerce .spares-shop-loop .woocommerce-ordering {
   display: block !important; }
-.spares-shop-loop ul.products .product .woocommerce-loop-category__title,
-.spares-shop-loop ul.products .product .woocommerce-loop-product__title,
-.spares-shop-loop ul.products .product p {
+.woocommerce .spares-shop-loop ul.products .product .woocommerce-loop-category__title,
+.woocommerce .spares-shop-loop ul.products .product .woocommerce-loop-product__title,
+.woocommerce .spares-shop-loop ul.products .product p {
   margin-left: 0; }
-.spares-shop-loop ul.products .product a:not(.button):hover, .spares-shop-loop ul.products .product a:not(.button):focus {
+.woocommerce .spares-shop-loop ul.products .product a:not(.button):hover, .woocommerce .spares-shop-loop ul.products .product a:not(.button):focus {
   background: none; }
-.spares-shop-loop ul.products .product .category-name {
+.woocommerce .spares-shop-loop ul.products .product .category-name {
   font-family: "Univers", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: .75em; }
-.spares-shop-loop ul.products .product .woocommerce-loop-product__title {
+.woocommerce .spares-shop-loop ul.products .product .woocommerce-loop-product__title {
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
   text-transform: none;
   font-size: 1.25em; }
-  .spares-shop-loop ul.products .product .woocommerce-loop-product__title:after {
+  .woocommerce .spares-shop-loop ul.products .product .woocommerce-loop-product__title:after {
     bottom: auto;
     top: -14px; }
 
