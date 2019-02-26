@@ -2267,7 +2267,8 @@ POSTS & CONTENT STYLES
       .woocommerce .cart-collaterals .cart_totals ul#shipping_method li label span {
         font-weight: bold; }
 .woocommerce table.shop_table {
-  border-radius: 0; }
+  border-radius: 0;
+  border: 1px solid #766e63; }
   .woocommerce table.shop_table th {
     border-right: 1px solid #766e63;
     padding: 1rem; }
