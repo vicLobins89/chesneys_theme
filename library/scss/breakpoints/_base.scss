@@ -1971,12 +1971,6 @@ POSTS & CONTENT STYLES
 		@extend .secondary-btn;
 	}
 	
-	#add_payment_method table.cart img,
-	.woocommerce-cart table.cart img,
-	.woocommerce-checkout table.cart img {
-		width: 5rem;
-	}
-	
 	table.shop_table {
 		border-radius: 0;
 		
@@ -1988,6 +1982,12 @@ POSTS & CONTENT STYLES
 			border-top: 1px solid $light-brown;
 			border-right: 1px solid $dark-brown;
 			padding: 1rem;
+			
+			&.product-thumbnail {
+				.attachment-woocommerce_thumbnail {
+					width: 5rem;
+				}
+			}
 		}
 		
 		&.woocommerce-cart-form__contents {
@@ -2008,7 +2008,7 @@ POSTS & CONTENT STYLES
 		
 		.coupon .input-text {
 			height: 2.9rem;
-    		width: 8rem;
+    		width: 8rem !important;
 		}
 	}
 	

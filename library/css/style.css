@@ -2233,10 +2233,6 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
-.woocommerce #add_payment_method table.cart img,
-.woocommerce .woocommerce-cart table.cart img,
-.woocommerce .woocommerce-checkout table.cart img {
-  width: 5rem; }
 .woocommerce table.shop_table {
   border-radius: 0; }
   .woocommerce table.shop_table th {
@@ -2245,6 +2241,8 @@ POSTS & CONTENT STYLES
     border-top: 1px solid #f5f3f1;
     border-right: 1px solid #766e63;
     padding: 1rem; }
+    .woocommerce table.shop_table td.product-thumbnail .attachment-woocommerce_thumbnail {
+      width: 5rem; }
   .woocommerce table.shop_table.woocommerce-cart-form__contents td:first-child {
     width: 3rem; }
   .woocommerce table.shop_table .button {
@@ -2254,7 +2252,7 @@ POSTS & CONTENT STYLES
     padding: 1.3em 2em 1em; }
   .woocommerce table.shop_table .coupon .input-text {
     height: 2.9rem;
-    width: 8rem; }
+    width: 8rem !important; }
 .woocommerce form:not(.shop_table) .quantity input[type=number]::-webkit-inner-spin-button,
 .woocommerce form:not(.shop_table) .quantity input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
