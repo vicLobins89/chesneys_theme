@@ -169,7 +169,7 @@ function main_woocommerce_output_related_products() {
 }
 //add_action( 'woocommerce_after_single_product_summary', 'main_woocommerce_output_related_products', 20);
 
-$cat = get_the_terms( $product->ID, 'product_cat' );
+$cat = get_the_terms( $product->get_id(), 'product_cat' );
 foreach ($cat as $categoria) {
 	if($categoria->parent == 0){
 	   echo $categoria->name;
