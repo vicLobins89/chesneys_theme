@@ -2424,6 +2424,16 @@ POSTS & CONTENT STYLES
     .woocommerce .hover-text a:hover {
       text-decoration: underline !important; }
 
+.widget_product_categories {
+  margin: 0;
+  padding: 1rem;
+  background: #fff;
+  font-family: "Univers", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #142128; }
+  .widget_product_categories ul {
+    padding: 0; }
+
 .woocommerce .spares-shop-loop .woocommerce-result-count,
 .woocommerce .spares-shop-loop .woocommerce-ordering {
   display: block !important; }
@@ -2453,6 +2463,8 @@ POSTS & CONTENT STYLES
     display: none; }
 .woocommerce .spares-shop-loop ul.products .product.product-type-simple .woocommerce-loop-product__title {
   min-height: 3em; }
+.woocommerce .spares-shop-loop .product-categories > li.cat-item:first-child > a {
+  display: none; }
 .woocommerce .spares-shop-loop .product-categories > li.cat-item:not(.current-cat):not(.cat-parent) {
   display: none; }
 

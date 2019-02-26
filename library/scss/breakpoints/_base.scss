@@ -2157,6 +2157,27 @@ POSTS & CONTENT STYLES
 	}
 }
 
+.widget_product_categories {
+	margin: 0;
+	padding: 1rem;
+	background: $white;
+	font-family: $sans-serif;
+	text-transform: uppercase;
+	color: $text-color;
+	
+	h4 {
+		
+	}
+	
+	ul {
+		padding: 0;
+		
+		li {
+			
+		}
+	}
+}
+
 .woocommerce .spares-shop-loop {
 	.woocommerce-result-count,
 	.woocommerce-ordering {
@@ -2213,6 +2234,10 @@ POSTS & CONTENT STYLES
 	
 	.product-categories {
 		> li.cat-item {
+			&:first-child > a {
+				display: none;
+			}
+			
 			&:not(.current-cat):not(.cat-parent) {
 				display: none;
 			}
