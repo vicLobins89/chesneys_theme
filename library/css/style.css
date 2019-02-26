@@ -2448,17 +2448,23 @@ POSTS & CONTENT STYLES
 #add_payment_method #payment,
 .woocommerce-cart #payment,
 .woocommerce-checkout #payment {
-  background: #142128; }
+  background: #142128;
+  border-radius: 0; }
   #add_payment_method #payment ul.payment_methods,
   .woocommerce-cart #payment ul.payment_methods,
   .woocommerce-checkout #payment ul.payment_methods {
     padding: 0; }
+    #add_payment_method #payment ul.payment_methods label,
+    .woocommerce-cart #payment ul.payment_methods label,
+    .woocommerce-checkout #payment ul.payment_methods label {
+      color: #fff;
+      padding: 1rem 2rem; }
     #add_payment_method #payment ul.payment_methods .payment_box,
     .woocommerce-cart #payment ul.payment_methods .payment_box,
     .woocommerce-checkout #payment ul.payment_methods .payment_box {
       background: #fff;
       margin: 0;
-      padding: 0; }
+      padding: 1rem; }
 
 .widget.widget_product_categories {
   margin: 0;

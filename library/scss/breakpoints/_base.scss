@@ -2333,14 +2333,20 @@ POSTS & CONTENT STYLES
 .woocommerce-checkout {
 	#payment {
 		background: $dark-gray;
+		border-radius: 0;
 		
 		ul.payment_methods {
 			padding: 0;
 			
+			label {
+				color: $white;
+				padding: 1rem 2rem;
+			}
+			
 			.payment_box {
 				background: $white;
 				margin: 0;
-				padding: 0;
+				padding: 1rem;
 			}
 		}
 	}
