@@ -2573,7 +2573,8 @@ POSTS & CONTENT STYLES
       #add_payment_method ul.order_details li p.heading,
       .woocommerce-cart ul.order_details li p.heading,
       .woocommerce-checkout ul.order_details li p.heading {
-        font-size: 1.2em;
+        font-size: 1.5em;
+        font-weight: bold;
         color: #fff;
         font-family: "Univers Cond", "Univers", Helvetica, Arial, sans-serif;
         text-transform: uppercase;
