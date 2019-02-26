@@ -2441,6 +2441,7 @@ POSTS & CONTENT STYLES
   text-transform: uppercase;
   color: #142128; }
   .widget.widget_product_categories h4 {
+    font-size: 1em;
     font-weight: bold;
     border: none; }
   .widget.widget_product_categories > ul {
@@ -2457,7 +2458,7 @@ POSTS & CONTENT STYLES
       padding: 0; }
       .widget.widget_product_categories > ul ul li {
         list-style-type: none;
-        font-size: 1rem;
+        font-size: .75em;
         border-top: 1px solid #142128;
         margin-bottom: 1.5rem;
         padding-top: 10px; }
