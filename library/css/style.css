@@ -2252,6 +2252,8 @@ POSTS & CONTENT STYLES
     background: #fff;
     border-bottom: 1px solid #766e63;
     font-size: 1rem; }
+  .woocommerce .cart-collaterals .cart_totals p {
+    font-size: 1rem; }
   .woocommerce .cart-collaterals .cart_totals .order-total th, .woocommerce .cart-collaterals .cart_totals .order-total td {
     background: #f5f3f1; }
   .woocommerce .cart-collaterals .cart_totals .wc-forward {
