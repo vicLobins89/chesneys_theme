@@ -2433,15 +2433,15 @@ POSTS & CONTENT STYLES
   color: #142128; }
   .widget.widget_product_categories h4 {
     font-weight: bold; }
-  .widget.widget_product_categories ul {
+  .widget.widget_product_categories > ul {
     padding: 0;
     margin: 0;
     border: none !important; }
-    .widget.widget_product_categories ul > li {
+    .widget.widget_product_categories > ul > li {
       border: none !important;
       margin: 0;
       padding: 0; }
-    .widget.widget_product_categories ul ul li {
+    .widget.widget_product_categories > ul ul li {
       list-style-type: none;
       font-size: 1rem;
       border-top: 1px solid #142128;
