@@ -34,7 +34,7 @@ function custom_woocommerce_product_add_to_cart_text()  {
 	if( $product->is_type( 'grouped' ) ){
 		return __( 'View spares', 'woocommerce' );
 	} else {
-		return __( 'View', 'woocommerce' );
+		return __( 'Add to cart', 'woocommerce' );
 	}
 }
 add_filter( 'woocommerce_product_add_to_cart_text', 'custom_woocommerce_product_add_to_cart_text' );
