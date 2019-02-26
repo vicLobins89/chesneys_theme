@@ -1998,6 +1998,8 @@ POSTS & CONTENT STYLES
 		
 		.button {
 			@extend .secondary-btn;
+			margin: 0;
+			padding: 1.3em 2em 1em;
 		}
 	}
 	
