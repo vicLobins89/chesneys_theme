@@ -2342,6 +2342,7 @@ POSTS & CONTENT STYLES
 			label {
 				color: $white;
 				font-family: $condensed;
+				text-transform: uppercase;
 				padding: 2rem 1rem;
 			}
 			
@@ -2355,6 +2356,10 @@ POSTS & CONTENT STYLES
 					display: none;
 				}
 			}
+		}
+		
+		.button {
+			width: 100%;
 		}
 	}
 }

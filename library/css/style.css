@@ -2460,6 +2460,7 @@ POSTS & CONTENT STYLES
     .woocommerce-checkout #payment ul.payment_methods label {
       color: #fff;
       font-family: "Univers Cond", "Univers", Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
       padding: 2rem 1rem; }
     #add_payment_method #payment ul.payment_methods .payment_box,
     .woocommerce-cart #payment ul.payment_methods .payment_box,
@@ -2472,6 +2473,10 @@ POSTS & CONTENT STYLES
       .woocommerce-checkout #payment ul.payment_methods .payment_box:before {
         content: none;
         display: none; }
+  #add_payment_method #payment .button,
+  .woocommerce-cart #payment .button,
+  .woocommerce-checkout #payment .button {
+    width: 100%; }
 
 .widget.widget_product_categories {
   margin: 0;
