@@ -155,11 +155,11 @@ remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_pr
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
 
-function rh_woocommerce_output_related_products() {
+function main_woocommerce_output_related_products() {
     $output = null;
 
     ob_start();
-    woocommerce_related_products(3,3,'rand'); 
+    woocommerce_related_products(3,3,'rand');
     $content = ob_get_clean();
     if($content) { $output .= $content; }
 
@@ -168,7 +168,7 @@ function rh_woocommerce_output_related_products() {
     echo $output;
     echo '</div></div></section>';
 }
-add_action( 'woocommerce_after_single_product_summary', 'rh_woocommerce_output_related_products', 20);
+add_action( 'woocommerce_after_single_product_summary', 'main_woocommerce_output_related_products', 20);
 
 do_action( 'woocommerce_after_single_product_summary' );
 ?>
