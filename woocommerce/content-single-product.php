@@ -169,7 +169,7 @@ function main_woocommerce_output_related_products() {
 }
 add_action( 'woocommerce_after_single_product_summary', 'main_woocommerce_output_related_products', 20);
 
-do_action( 'woocommerce_after_single_product_summary' );
+//do_action( 'woocommerce_after_single_product_summary' );
 ?>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
