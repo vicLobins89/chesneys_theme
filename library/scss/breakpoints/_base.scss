@@ -1987,18 +1987,26 @@ POSTS & CONTENT STYLES
 			}
 		}
 		
-		tr th {
-			width: 10rem;
-			border-right: 1px solid $dark-brown;
-			border-bottom: 1px solid $dark-brown;
-			background: $white;
-			font-size: 1rem;
-		}
-		
-		tr td {
-			background: $white;
-			border-bottom: 1px solid $dark-brown;
-			font-size: 1rem;
+		tr {
+			&:last-child {
+				th {
+					border-bottom: none;
+				}
+			}
+			
+			th {
+				width: 10rem;
+				border-right: 1px solid $dark-brown;
+				border-bottom: 1px solid $dark-brown;
+				background: $white;
+				font-size: 1rem;
+			}
+			
+			td {
+				background: $white;
+				border-bottom: 1px solid $dark-brown;
+				font-size: 1rem;
+			}
 		}
 		
 		p {
