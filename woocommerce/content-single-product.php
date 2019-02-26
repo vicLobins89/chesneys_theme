@@ -152,8 +152,8 @@ $acfClass->render_modules($acc_module);
 
 $cat = get_the_terms( $product->get_id(), 'product_cat' );
 $parent_cat;
-foreach ($cat as $categoria) {
-	if($categoria->parent == 0){
+foreach ($cat as $category) {
+	if($category->parent == 0){
 	   $parent_cat = $category->slug;
 	}
 }
