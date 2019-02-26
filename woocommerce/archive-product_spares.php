@@ -24,7 +24,11 @@ $term = get_queried_object();
 
 // Number of rows + products
 function spares_loop_columns() {
-	return 4;
+	if( term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) {
+		return 3;
+	} else {
+		return 4;
+	}
 }
 add_filter('loop_shop_columns', 'spares_loop_columns', 999);
 
