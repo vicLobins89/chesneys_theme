@@ -1163,7 +1163,8 @@ LAYOUT & GRID STYLES
       .row.outdoor-product-single .short-desc form.cart .secondary-btn, .row.outdoor-product-single .short-desc form.cart .woocommerce button.single_add_to_cart_button, .woocommerce .row.outdoor-product-single .short-desc form.cart button.single_add_to_cart_button, .row.outdoor-product-single .short-desc form.cart .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .row.outdoor-product-single .short-desc form.cart .button, .row.outdoor-product-single .short-desc form.cart .woocommerce .button.wc-forward, .woocommerce .row.outdoor-product-single .short-desc form.cart .button.wc-forward {
         margin-left: 1rem; }
 .row.product-info-wrapper {
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  padding-top: 0; }
   .row.product-info-wrapper h3 {
     font-family: "Univers", Helvetica, Arial, sans-serif;
     font-size: 1.2em; }
