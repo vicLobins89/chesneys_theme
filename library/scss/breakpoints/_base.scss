@@ -2145,7 +2145,7 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
-	.spares-product {		
+	.spares-product {
 		.product_title {
 			@extend .h2;
 			text-align: center;
@@ -2325,6 +2325,24 @@ POSTS & CONTENT STYLES
 		display: inline-block;
 		padding-right: 1rem;
 		padding-left: 1rem;
+	}
+}
+
+#add_payment_method,
+.woocommerce-cart,
+.woocommerce-checkout {
+	#payment {
+		background: $dark-gray;
+		
+		ul.payment_methods {
+			padding: 0;
+			
+			.payment_box {
+				background: $white;
+				margin: 0;
+				padding: 0;
+			}
+		}
 	}
 }
 
