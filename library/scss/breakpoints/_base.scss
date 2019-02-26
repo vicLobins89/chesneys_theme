@@ -1856,7 +1856,6 @@ POSTS & CONTENT STYLES
 	}
 
 	tr {
-
 		&:nth-child(even) {
 			background-color: $light-brown;
 		}
@@ -2097,6 +2096,16 @@ POSTS & CONTENT STYLES
 		.coupon .input-text {
 			height: 2.9rem;
     		width: 8rem !important;
+		}
+		
+		&.woocommerce-checkout-review-order-table {
+			tbody tr {
+				background: $white;
+			}
+			
+			tfoot tr {
+				background: $light-brown;
+			}
 		}
 	}
 	
