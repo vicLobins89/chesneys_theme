@@ -55,7 +55,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							break;
 						case 'desc':
 							$value  = '<label for="product-' . esc_attr( $grouped_product_child->get_id() ) . '">';
-							$value .= $grouped_product_child->is_visible() ? '<a href="' . esc_url( apply_filters( 'woocommerce_grouped_product_list_link', $grouped_product_child->get_permalink(), $grouped_product_child->get_id() ) ) . '">' . $grouped_product_child->get_description() . '</a>' : $grouped_product_child->get_description();
+							$value .= $grouped_product_child->is_visible() ? '<a href="' . esc_url( apply_filters( 'woocommerce_grouped_product_list_link', $grouped_product_child->get_permalink(), $grouped_product_child->get_id() ) ) . '">' . $grouped_product_child->get_short_description() . '</a>' : $grouped_product_child->get_short_description();
 							$value .= '</label>';
 							break;
 						case 'quantity':
