@@ -158,13 +158,13 @@ function main_woocommerce_output_related_products() {
     $output = null;
 
     ob_start();
-    woocommerce_related_products(3,3,'rand');
+//    woocommerce_related_products(3,3,'rand');
     $relatedContent = ob_get_clean();
     if($relatedContent) { $output .= $relatedContent; }
 
     echo '<section class="entry-content row cf related-wrapper"><div class="cf"><div class="col-12">';
-    echo '<h2>You might also like</h2><p>Compare our HEAT range and find the best model for you</p>';
-    echo $output;
+    echo '<h2>You might also like</h2><p>Ariptimus fue et vitioca tquerra vivis, nem merissent grate, ceni sintere mo</p>';
+    woocommerce_related_products(3,3,'rand');
     echo '</div></div></section>';
 }
 add_action( 'woocommerce_after_single_product_summary', 'main_woocommerce_output_related_products', 20);
