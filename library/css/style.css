@@ -2434,9 +2434,11 @@ POSTS & CONTENT STYLES
   .widget.widget_product_categories h4 {
     font-weight: bold; }
   .widget.widget_product_categories ul {
-    padding: 0; }
+    padding: 0;
+    margin: 0;
+    border: none !important; }
     .widget.widget_product_categories ul > li {
-      border: none;
+      border: none !important;
       margin: 0;
       padding: 0; }
     .widget.widget_product_categories ul li {

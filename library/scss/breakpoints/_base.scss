@@ -2171,9 +2171,11 @@ POSTS & CONTENT STYLES
 	
 	ul {
 		padding: 0;
+		margin: 0;
+		border: none !important;
 		
 		> li {
-			border: none;
+			border: none !important;
 			margin: 0;
 			padding: 0;
 		}
