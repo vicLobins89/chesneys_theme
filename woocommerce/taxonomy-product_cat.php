@@ -28,7 +28,7 @@ if( term_is_ancestor_of(16, $term->term_id, 'product_cat') || term_is_ancestor_o
 	// Spares
 	wc_get_template( 'archive-product_spares.php' );
 } elseif( term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) {
-	// Spares
+	// Fuel & Acc
 	wc_get_template( 'archive-product_spares.php' );
 } elseif( term_is_ancestor_of(63, $term->term_id, 'product_cat') || is_product_category(63) ) {
 	// Outdoor

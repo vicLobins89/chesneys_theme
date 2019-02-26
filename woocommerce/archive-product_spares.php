@@ -38,6 +38,7 @@ function custom_woocommerce_product_add_to_cart_text()  {
 	} else {
 		return __( 'View', 'woocommerce' );
 	}
+	echo $product->get_stock_quantity();
 }
 add_filter( 'woocommerce_product_add_to_cart_text', 'custom_woocommerce_product_add_to_cart_text' );
 
