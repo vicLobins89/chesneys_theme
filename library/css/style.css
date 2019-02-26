@@ -2307,7 +2307,8 @@ POSTS & CONTENT STYLES
     width: 8rem !important; }
   .woocommerce table.shop_table.woocommerce-checkout-review-order-table tbody tr {
     background: #fff; }
-  .woocommerce table.shop_table.woocommerce-checkout-review-order-table tfoot tr {
+  .woocommerce table.shop_table.woocommerce-checkout-review-order-table tfoot tr,
+  .woocommerce table.shop_table.woocommerce-checkout-review-order-table tfoot tr th {
     background: #f5f3f1; }
 .woocommerce form:not(.shop_table):not(.woocommerce-cart-form) .quantity input[type=number]::-webkit-inner-spin-button,
 .woocommerce form:not(.shop_table):not(.woocommerce-cart-form) .quantity input[type=number]::-webkit-outer-spin-button {

@@ -2103,7 +2103,8 @@ POSTS & CONTENT STYLES
 				background: $white;
 			}
 			
-			tfoot tr {
+			tfoot tr,
+			tfoot tr th {
 				background: $light-brown;
 			}
 		}
