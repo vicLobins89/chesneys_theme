@@ -1237,7 +1237,8 @@ LAYOUT & GRID STYLES
   text-align: center; }
   .row.related-products p {
     margin: 1.5rem 0; }
-  .row.related-products .price {
+  .row.related-products .price,
+  .row.related-products .add_to_cart_button {
     display: none !important; }
 .row.folio-module .folio-item .text {
   padding: .5rem .75rem 1.5rem;
