@@ -101,14 +101,14 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 	}
 	
 	&.alt {
-		background-color: $brown;
-		border-color: $brown;
+		background-color: $light-brown;
+		border-color: $light-brown;
 		color: $dark-gray;
 		
 		&:hover,
 		&:focus,
 		.wp-caption:hover & {
-			border-color: $brown;
+			border-color: $light-brown;
 			color: $dark-gray;
 		}
 	}

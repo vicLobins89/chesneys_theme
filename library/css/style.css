@@ -699,8 +699,8 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .woocommerce-checkout form a.button.cancel, a.secondary-btn.alt, .woocommerce table.shop_table a.alt.button, .woocommerce ul.products li.product a.alt.button, .woocommerce a.alt.button.wc-forward, #add_payment_method form a.button.cancel,
   .woocommerce-cart form a.button.cancel,
   .woocommerce-checkout form a.button.cancel {
-    background-color: #cbc3bb;
-    border-color: #cbc3bb;
+    background-color: #f5f3f1;
+    border-color: #f5f3f1;
     color: #142128; }
     .secondary-btn.alt:hover, .woocommerce button.alt.single_add_to_cart_button:hover, .woocommerce table.shop_table .alt.button:hover, .woocommerce ul.products li.product .alt.button:hover, .woocommerce .alt.button.wc-forward:hover, #add_payment_method form input.alt.button:hover,
     .woocommerce-cart form input.alt.button:hover,
@@ -727,7 +727,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     .woocommerce-cart form .wp-caption:hover a.button.cancel,
     .wp-caption:hover .woocommerce-checkout form a.button.cancel,
     .woocommerce-checkout form .wp-caption:hover a.button.cancel {
-      border-color: #cbc3bb;
+      border-color: #f5f3f1;
       color: #142128; }
 
 .image-link {
