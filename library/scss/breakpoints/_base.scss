@@ -2164,6 +2164,10 @@ POSTS & CONTENT STYLES
 	}
 	
 	ul.products .product {
+		.woocommerce-loop-product__link {
+			min-height: 25rem;
+		}
+		
 		.woocommerce-loop-category__title,
 		.woocommerce-loop-product__title,
 		p {
@@ -2197,6 +2201,7 @@ POSTS & CONTENT STYLES
 			font-family: $sans-serif;
 			color: $dark-gray;
 			font-size: 1.2em;
+			font-weight: bold;
 			
 			+ p {
 				display: none;
