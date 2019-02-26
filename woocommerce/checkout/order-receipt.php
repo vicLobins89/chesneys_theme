@@ -23,21 +23,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <ul class="order_details">
 	<li class="order">
-		<?php esc_html_e( 'Order number:', 'woocommerce' ); ?>
-		<strong><?php echo esc_html( $order->get_order_number() ); ?></strong>
+		<p class="heading"><?php esc_html_e( 'Order number:', 'woocommerce' ); ?></p>
+		<p><strong><?php echo esc_html( $order->get_order_number() ); ?></strong></p>
 	</li>
 	<li class="date">
-		<?php esc_html_e( 'Date:', 'woocommerce' ); ?>
-		<strong><?php echo esc_html( wc_format_datetime( $order->get_date_created() ) ); ?></strong>
+		<p class="heading"><?php esc_html_e( 'Date:', 'woocommerce' ); ?></p>
+		<p><strong><?php echo esc_html( wc_format_datetime( $order->get_date_created() ) ); ?></strong></p>
 	</li>
 	<li class="total">
-		<?php esc_html_e( 'Total:', 'woocommerce' ); ?>
-		<strong><?php echo wp_kses_post( $order->get_formatted_order_total() ); ?></strong>
+		<p class="heading"><?php esc_html_e( 'Total:', 'woocommerce' ); ?></p>
+		<p><strong><?php echo wp_kses_post( $order->get_formatted_order_total() ); ?></strong></p>
 	</li>
 	<?php if ( $order->get_payment_method_title() ) : ?>
 	<li class="method">
-		<?php esc_html_e( 'Payment method:', 'woocommerce' ); ?>
-		<strong><?php echo wp_kses_post( $order->get_payment_method_title() ); ?></strong>
+		<p class="heading"><?php esc_html_e( 'Payment method:', 'woocommerce' ); ?></p>
+		<p><strong><?php echo wp_kses_post( $order->get_payment_method_title() ); ?></strong></p>
 	</li>
 	<?php endif; ?>
 </ul>

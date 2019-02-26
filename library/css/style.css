@@ -727,6 +727,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     .woocommerce-cart form .wp-caption:hover a.button.cancel,
     .wp-caption:hover .woocommerce-checkout form a.button.cancel,
     .woocommerce-checkout form .wp-caption:hover a.button.cancel {
+      background: none;
       border-color: #f5f3f1;
       color: #142128; }
 
