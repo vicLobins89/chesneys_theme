@@ -149,27 +149,35 @@ $acfClass->render_modules($acc_module);
  * @hooked woocommerce_upsell_display - 15
  * @hooked woocommerce_output_related_products - 20
  */
-remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
-remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
-remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
-remove_action('woocommerce_after_single_product_summary', 'rh_woocommerce_output_related_products', 20);
+//remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+//remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
+//remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+//remove_action('woocommerce_after_single_product_summary', 'rh_woocommerce_output_related_products', 20);
 
 function main_woocommerce_output_related_products() {
     $output = null;
 
     ob_start();
-//    woocommerce_related_products(3,3,'rand');
+    woocommerce_related_products(3,3,'rand');
     $relatedContent = ob_get_clean();
     if($relatedContent) { $output .= $relatedContent; }
 
     echo '<section class="entry-content row cf related-wrapper"><div class="cf"><div class="col-12">';
     echo '<h2>You might also like</h2><p>Ariptimus fue et vitioca tquerra vivis, nem merissent grate, ceni sintere mo</p>';
-    woocommerce_related_products(3,3,'rand');
+    echo $output;
     echo '</div></div></section>';
 }
-add_action( 'woocommerce_after_single_product_summary', 'main_woocommerce_output_related_products', 20);
+//add_action( 'woocommerce_after_single_product_summary', 'main_woocommerce_output_related_products', 20);
 
-do_action( 'woocommerce_after_single_product_summary' );
+$term = get_queried_object();
+$parent_cats = get_ancestors($term->term_id, 'product_cat');
+$category = get_term_by('id', $parent_cats[0], 'product_cat');
+echo '<section class="row entry-content cf related-products"><div class="cf"><div class="col-12">';
+echo '<h2>You might also like</h2><p>Ariptimus fue et vitioca tquerra vivis, nem merissent grate, ceni sintere mo</p>';
+echo do_shortcode('[products orderby="rand" category="'.$category->slug.'" limit="3" columns="3" class="related-products"]');
+echo '</section></div></div>';
+
+//do_action( 'woocommerce_after_single_product_summary' );
 ?>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
