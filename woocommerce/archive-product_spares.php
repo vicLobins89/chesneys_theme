@@ -47,7 +47,7 @@ function bbloomer_grouped_price_range_delete( $price, $product, $child_prices ) 
 	}
 	return $price;
 }
-add_filter( 'woocommerce_grouped_price_html', 'bbloomer_grouped_price_range_delete', 10, 3 );
+//add_filter( 'woocommerce_grouped_price_html', 'bbloomer_grouped_price_range_delete', 10, 3 );
 
 /**
  * Hook: woocommerce_before_main_content.
