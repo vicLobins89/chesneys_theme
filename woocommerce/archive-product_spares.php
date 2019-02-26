@@ -163,6 +163,8 @@ do_action( 'woocommerce_after_main_content' );
  *
  * @hooked woocommerce_get_sidebar - 10
  */
-//do_action( 'woocommerce_sidebar' );
+if( term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) {
+	do_action( 'woocommerce_sidebar' );
+}
 
 get_footer( 'shop' );
