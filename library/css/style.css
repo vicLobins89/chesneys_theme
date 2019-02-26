@@ -2432,7 +2432,8 @@ POSTS & CONTENT STYLES
   text-transform: uppercase;
   color: #142128; }
   .widget.widget_product_categories h4 {
-    font-weight: bold; }
+    font-weight: bold;
+    border: none; }
   .widget.widget_product_categories > ul {
     padding: 0;
     margin: 0;
@@ -2440,13 +2441,17 @@ POSTS & CONTENT STYLES
     .widget.widget_product_categories > ul > li {
       border: none !important;
       margin: 0;
+      padding: 0;
+      list-style-type: none; }
+    .widget.widget_product_categories > ul ul {
+      border: none;
       padding: 0; }
-    .widget.widget_product_categories > ul ul li {
-      list-style-type: none;
-      font-size: 1rem;
-      border-top: 1px solid #142128;
-      margin-bottom: 1.5rem;
-      padding-top: 10px; }
+      .widget.widget_product_categories > ul ul li {
+        list-style-type: none;
+        font-size: 1rem;
+        border-top: 1px solid #142128;
+        margin-bottom: 1.5rem;
+        padding-top: 10px; }
 
 .woocommerce .spares-shop-loop .woocommerce-result-count,
 .woocommerce .spares-shop-loop .woocommerce-ordering {
