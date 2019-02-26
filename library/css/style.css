@@ -2550,6 +2550,42 @@ POSTS & CONTENT STYLES
   .woocommerce-cart #payment .button,
   .woocommerce-checkout #payment .button {
     width: 100%; }
+#add_payment_method ul.order_details,
+.woocommerce-cart ul.order_details,
+.woocommerce-checkout ul.order_details {
+  padding: 0; }
+  #add_payment_method ul.order_details li,
+  .woocommerce-cart ul.order_details li,
+  .woocommerce-checkout ul.order_details li {
+    margin: 0;
+    padding: 1rem;
+    width: 25%; }
+    #add_payment_method ul.order_details li p,
+    .woocommerce-cart ul.order_details li p,
+    .woocommerce-checkout ul.order_details li p {
+      padding: 1rem; }
+      #add_payment_method ul.order_details li p.heading,
+      .woocommerce-cart ul.order_details li p.heading,
+      .woocommerce-checkout ul.order_details li p.heading {
+        color: #fff;
+        font-family: "Univers Cond", "Univers", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        background: #142128; }
+  #add_payment_method ul.order_details + p,
+  .woocommerce-cart ul.order_details + p,
+  .woocommerce-checkout ul.order_details + p {
+    text-align: center; }
+
+.woocommerce-order-pay .secondary-btn, .woocommerce-order-pay .woocommerce button.single_add_to_cart_button, .woocommerce .woocommerce-order-pay button.single_add_to_cart_button, .woocommerce-order-pay .woocommerce table.shop_table .button, .woocommerce table.shop_table .woocommerce-order-pay .button, .woocommerce-order-pay .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .woocommerce-order-pay .button, .woocommerce-order-pay .woocommerce .button.wc-forward, .woocommerce .woocommerce-order-pay .button.wc-forward, .woocommerce-order-pay #add_payment_method form input.button.alt, #add_payment_method form .woocommerce-order-pay input.button.alt,
+.woocommerce-order-pay .woocommerce-cart form input.button.alt,
+.woocommerce-cart form .woocommerce-order-pay input.button.alt,
+.woocommerce-order-pay .woocommerce-checkout form input.button.alt,
+.woocommerce-checkout form .woocommerce-order-pay input.button.alt, .woocommerce-order-pay #add_payment_method form a.button.cancel, #add_payment_method form .woocommerce-order-pay a.button.cancel,
+.woocommerce-order-pay .woocommerce-cart form a.button.cancel,
+.woocommerce-cart form .woocommerce-order-pay a.button.cancel,
+.woocommerce-order-pay .woocommerce-checkout form a.button.cancel,
+.woocommerce-checkout form .woocommerce-order-pay a.button.cancel {
+  width: 48%; }
 
 .widget.widget_product_categories {
   margin: 0;
