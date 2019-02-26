@@ -46,7 +46,7 @@ if ( post_password_required() ) {
 		<img width="1859" height="1235" src="<?php //echo get_field('featured_image'); ?>" class="attachment-full size-full wp-post-image" alt="">							
 		<div class="featured-copy">
 			<h1 class="h2 lhs"><?php //echo $product->get_name(); ?></h1>
-			<p><?php echo //get_field('featured_copy'); ?></p>
+			<p><?php //echo get_field('featured_copy'); ?></p>
 		</div>
 		
 		<h2 style="text-align: center; margin-top: 1.5rem;">Product Spec</h2>
