@@ -2248,7 +2248,9 @@ POSTS & CONTENT STYLES
   .woocommerce table.shop_table.woocommerce-cart-form__contents td:first-child {
     width: 3rem; }
   .woocommerce table.shop_table .button {
-    margin: 0;
+    margin: 0; }
+  .woocommerce table.shop_table button.button:disabled,
+  .woocommerce table.shop_table button.button:disabled[disabled] {
     padding: 1.3em 2em 1em; }
 .woocommerce form:not(.shop_table) .quantity input[type=number]::-webkit-inner-spin-button,
 .woocommerce form:not(.shop_table) .quantity input[type=number]::-webkit-outer-spin-button {
