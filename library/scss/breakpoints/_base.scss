@@ -1845,8 +1845,9 @@ POSTS & CONTENT STYLES
 	thead {
 		tr {
 			th {
-				background: $gray;
+				background: $dark-gray;
 				color: $white;
+				font-family: $condensed;
 			}
 		}
 	}

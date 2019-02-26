@@ -14,11 +14,6 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 INPUTS
 *********************/
 
-#wpcf7-f257-p2-o1,
-#wpcf7-f257-p13-o1 {
-	@extend %overlay;
-}
-
 .wpcf7-form {
 	width: 73%;
     margin: 2rem auto;
@@ -69,7 +64,7 @@ textarea,
 	margin: 0 auto 14px;
 	font-size: 1em;
 	font-weight: 400;
-	color: lighten($black, 20%);
+	color: $text-color;
 	vertical-align: middle;
 	box-shadow: none;
 	border: none;
