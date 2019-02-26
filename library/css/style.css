@@ -2166,7 +2166,8 @@ POSTS & CONTENT STYLES
     background: #142128;
     color: #fff;
     font-family: "Univers Cond", "Univers", Helvetica, Arial, sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-weight: normal;
     text-transform: uppercase; }
   .entry-content tr:nth-child(even) {
     background-color: #e5e5e5; }
@@ -2236,10 +2237,14 @@ POSTS & CONTENT STYLES
   border-radius: 0; }
   .woocommerce table.shop_table th {
     border-right: 1px solid #cbc3bb; }
+    .woocommerce table.shop_table th:first-child {
+      border-right: none; }
   .woocommerce table.shop_table td {
     border-top: 1px solid #f5f3f1;
     border-right: 1px solid #cbc3bb;
     padding: 1rem; }
+  .woocommerce table.shop_table.woocommerce-cart-form__contents td:first-child {
+    width: 3rem; }
 .woocommerce form:not(.shop_table) .quantity input[type=number]::-webkit-inner-spin-button,
 .woocommerce form:not(.shop_table) .quantity input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;

@@ -1848,7 +1848,8 @@ POSTS & CONTENT STYLES
 				background: $dark-gray;
 				color: $white;
 				font-family: $condensed;
-				font-size: 1.2em;
+				font-size: 1.1em;
+				font-weight: normal;
 				text-transform: uppercase;
 			}
 		}
@@ -1975,12 +1976,22 @@ POSTS & CONTENT STYLES
 		
 		th {
 			border-right: 1px solid $brown;
+			
+			&:first-child {
+				border-right: none;
+			}
 		}
 		
 		td {
 			border-top: 1px solid $light-brown;
 			border-right: 1px solid $brown;
 			padding: 1rem;
+		}
+		
+		&.woocommerce-cart-form__contents {
+			td:first-child {
+				width: 3rem;
+			}
 		}
 	}
 	
