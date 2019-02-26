@@ -2247,9 +2247,12 @@ POSTS & CONTENT STYLES
   .woocommerce .cart-collaterals .cart_totals tr th {
     width: 10rem;
     border-right: 1px solid #766e63;
-    border-bottom: 1px solid #766e63; }
-  .woocommerce .cart-collaterals .cart_totals tr:not(.woocommerce-shipping-totals) th, .woocommerce .cart-collaterals .cart_totals tr:not(.woocommerce-shipping-totals) td {
+    border-bottom: 1px solid #766e63;
     background: #fff; }
+  .woocommerce .cart-collaterals .cart_totals tr td {
+    background: #fff; }
+  .woocommerce .cart-collaterals .cart_totals .order-total th, .woocommerce .cart-collaterals .cart_totals .order-total td {
+    background: #f5f3f1; }
 .woocommerce table.shop_table {
   border-radius: 0; }
   .woocommerce table.shop_table th {

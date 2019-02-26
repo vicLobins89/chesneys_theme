@@ -1993,11 +1993,16 @@ POSTS & CONTENT STYLES
 			width: 10rem;
 			border-right: 1px solid $dark-brown;
 			border-bottom: 1px solid $dark-brown;
+			background: $white;
 		}
 		
-		tr:not(.woocommerce-shipping-totals) {
+		tr td {
+			background: $white;
+		}
+		
+		.order-total {
 			th, td {
-				background: $white;
+				background: $light-brown;
 			}
 		}
 	}
