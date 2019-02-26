@@ -1163,7 +1163,6 @@ LAYOUT & GRID STYLES
       .row.outdoor-product-single .short-desc form.cart .secondary-btn, .row.outdoor-product-single .short-desc form.cart .woocommerce button.single_add_to_cart_button, .woocommerce .row.outdoor-product-single .short-desc form.cart button.single_add_to_cart_button, .row.outdoor-product-single .short-desc form.cart .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .row.outdoor-product-single .short-desc form.cart .button, .row.outdoor-product-single .short-desc form.cart .woocommerce .button.wc-forward, .woocommerce .row.outdoor-product-single .short-desc form.cart .button.wc-forward {
         margin-left: 1rem; }
 .row.product-info-wrapper {
-  padding-top: 1rem;
   padding-bottom: 1rem; }
   .row.product-info-wrapper h3 {
     font-family: "Univers", Helvetica, Arial, sans-serif;
@@ -1383,7 +1382,7 @@ LAYOUT & GRID STYLES
       font-size: .9rem;
       min-width: 14rem; }
   .module.module-ctas, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
-    padding: 0; }
+    padding: 0 0 1rem 0; }
     .module.module-ctas h2, .module.module-outdoor-ctas h2, .module.module-outdoor-ctas-2 h2 {
       display: none; }
     .module.module-ctas p, .module.module-outdoor-ctas p, .module.module-outdoor-ctas-2 p {

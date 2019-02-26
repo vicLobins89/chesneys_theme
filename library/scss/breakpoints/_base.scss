@@ -370,7 +370,6 @@ LAYOUT & GRID STYLES
 	}
 	
 	&.product-info-wrapper {
-		padding-top: 1rem;
 		padding-bottom: 1rem;
 		
 		h3 {
@@ -694,7 +693,7 @@ LAYOUT & GRID STYLES
 	&.module-ctas,
 	&.module-outdoor-ctas,
 	&.module-outdoor-ctas-2 {
-		padding: 0;
+		padding: 0 0 1rem 0;
 		
 		h2 {
 			display: none;
