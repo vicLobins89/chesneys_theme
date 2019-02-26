@@ -2435,10 +2435,16 @@ POSTS & CONTENT STYLES
     font-weight: bold; }
   .widget.widget_product_categories ul {
     padding: 0; }
+    .widget.widget_product_categories ul > li {
+      border: none;
+      margin: 0;
+      padding: 0; }
     .widget.widget_product_categories ul li {
       list-style-type: none;
       font-size: 1rem;
-      border-bottom: 1px solid #142128; }
+      border-top: 1px solid #142128;
+      margin-bottom: 1.5rem;
+      padding-top: 10px; }
 
 .woocommerce .spares-shop-loop .woocommerce-result-count,
 .woocommerce .spares-shop-loop .woocommerce-ordering {
