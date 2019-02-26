@@ -2363,13 +2363,15 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
-	.button.alt {
-		@extend .secondary-btn;
-	}
+	form {
+		input.button.alt {
+			@extend .secondary-btn;
+		}
 
-	.button.cancel {
-		@extend .secondary-btn;
-		@extend .secondary-btn.alt;
+		input.button.cancel {
+			@extend .secondary-btn;
+			@extend .secondary-btn.alt;
+		}
 	}
 }
 
