@@ -96,9 +96,9 @@ $cta_module = get_post(1281);
 $acfClass->render_modules($cta_module);
 
 // Product Details + Images
-echo '<section class="entry-content row cf product-info-wrapper"><div class="cf">';
+if( have_rows('product_images') || !empty(get_the_content()) ) :
 
-if( have_rows('product_images') ) : 
+echo '<section class="entry-content row cf product-info-wrapper"><div class="cf">';
 echo '<div class="col-6">';
 
 while( have_rows('product_images') ) : the_row();
@@ -107,22 +107,22 @@ echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
 
 endwhile; 
 echo '</div>';
-endif; // close images
-
-echo '<div class="col-6"><div class="details-inner">';
 
 if( !empty(get_the_content()) ) {
+	echo '<div class="col-6"><div class="details-inner">';
 	echo '<div class="product-details">';
 	wc_get_template( 'single-product/tabs/description.php' );
 	echo '</div>';
 }
 
+echo '</div></div>'; // close inner
+echo '</div></div></section>'; // close section
+
+endif; // close section
+
 //if( get_field('delivery_info') ) {
 //	echo '<div class="delivery-info"><h3 class="h2 lhs white">Delivery Information</h3><p>'.get_field('delivery_info').'</p></div>';
 //}
-echo '</div></div>'; // close inner
-
-echo '</div></div></section>'; // close section
 
 // CTAs Module 2
 $cta_module2 = get_post(1284);
