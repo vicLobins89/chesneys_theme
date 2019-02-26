@@ -1620,7 +1620,9 @@ h2, .h2, .row.outdoor-product-single .short-desc .product_title, .woocommerce .s
     display: none; }
   h2.white:after, .h2.white:after, .row.outdoor-product-single .short-desc .white.product_title:after, .woocommerce .spares-product .white.product_title:after {
     background: #fff; }
-  h2.lhs:after, .row.outdoor-product-single .short-desc h2.product_title:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .row.outdoor-product-single .short-desc .product_title:after, .team-members h4.h2:after, .team-members .woocommerce .spares-product h4.product_title:after, .woocommerce .spares-product .team-members h4.product_title:after, .woocommerce .spares-product .lhs.product_title:after, .h2.woocommerce-loop-category__title:after, .row.outdoor-product-single .short-desc .woocommerce-loop-category__title.product_title:after, .woocommerce .spares-product .woocommerce-loop-category__title.product_title:after, .h2.woocommerce-loop-product__title:after, .row.outdoor-product-single .short-desc .woocommerce-loop-product__title.product_title:after, .woocommerce .spares-product .woocommerce-loop-product__title.product_title:after, .module-outdoor-living-shop .h2:after, .module-outdoor-living-shop .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-outdoor-living-shop .product_title:after, .module-outdoor-living-shop .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-outdoor-living-shop .product_title:after, .module-design-a-fireplace .h2:after, .module-design-a-fireplace .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-design-a-fireplace .product_title:after, .module-design-a-fireplace .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-design-a-fireplace .product_title:after {
+  h2.lhs:after, .row.outdoor-product-single .short-desc h2.product_title:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .row.outdoor-product-single .short-desc .product_title:after, .team-members h4.h2:after, .team-members .woocommerce .spares-product h4.product_title:after, .woocommerce .spares-product .team-members h4.product_title:after, .woocommerce .spares-product .lhs.product_title:after, #add_payment_method .woocommerce-order-details__title:after,
+  .woocommerce-cart .woocommerce-order-details__title:after,
+  .woocommerce-checkout .woocommerce-order-details__title:after, .h2.woocommerce-loop-category__title:after, .row.outdoor-product-single .short-desc .woocommerce-loop-category__title.product_title:after, .woocommerce .spares-product .woocommerce-loop-category__title.product_title:after, .h2.woocommerce-loop-product__title:after, .row.outdoor-product-single .short-desc .woocommerce-loop-product__title.product_title:after, .woocommerce .spares-product .woocommerce-loop-product__title.product_title:after, .module-outdoor-living-shop .h2:after, .module-outdoor-living-shop .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-outdoor-living-shop .product_title:after, .module-outdoor-living-shop .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-outdoor-living-shop .product_title:after, .module-design-a-fireplace .h2:after, .module-design-a-fireplace .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-design-a-fireplace .product_title:after, .module-design-a-fireplace .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-design-a-fireplace .product_title:after {
     left: 0;
     margin-left: 0; }
   h2 + p, .h2 + p, .row.outdoor-product-single .short-desc .product_title + p, .woocommerce .spares-product .product_title + p {
@@ -2384,10 +2386,11 @@ POSTS & CONTENT STYLES
   .woocommerce table.shop_table .coupon .input-text {
     height: 2.9rem;
     width: 8rem !important; }
-  .woocommerce table.shop_table.woocommerce-checkout-review-order-table tbody tr {
+  .woocommerce table.shop_table.woocommerce-checkout-review-order-table tbody tr, .woocommerce table.shop_table.woocommerce-table--order-details tbody tr {
     background: #fff; }
   .woocommerce table.shop_table.woocommerce-checkout-review-order-table tfoot tr,
-  .woocommerce table.shop_table.woocommerce-checkout-review-order-table tfoot tr th {
+  .woocommerce table.shop_table.woocommerce-checkout-review-order-table tfoot tr th, .woocommerce table.shop_table.woocommerce-table--order-details tfoot tr,
+  .woocommerce table.shop_table.woocommerce-table--order-details tfoot tr th {
     background: #f5f3f1; }
 .woocommerce .woocommerce-shipping-fields {
   margin: 2rem 0; }
@@ -2579,6 +2582,10 @@ POSTS & CONTENT STYLES
   .woocommerce-cart ul.order_details + p,
   .woocommerce-checkout ul.order_details + p {
     text-align: center; }
+#add_payment_method .woocommerce-order-details__title,
+.woocommerce-cart .woocommerce-order-details__title,
+.woocommerce-checkout .woocommerce-order-details__title {
+  margin-bottom: 2rem; }
 
 .woocommerce-order-pay .secondary-btn, .woocommerce-order-pay .woocommerce button.single_add_to_cart_button, .woocommerce .woocommerce-order-pay button.single_add_to_cart_button, .woocommerce-order-pay .woocommerce table.shop_table .button, .woocommerce table.shop_table .woocommerce-order-pay .button, .woocommerce-order-pay .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .woocommerce-order-pay .button, .woocommerce-order-pay .woocommerce .button.wc-forward, .woocommerce .woocommerce-order-pay .button.wc-forward, .woocommerce-order-pay #add_payment_method form input.button.alt, #add_payment_method form .woocommerce-order-pay input.button.alt,
 .woocommerce-order-pay .woocommerce-cart form input.button.alt,
