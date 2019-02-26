@@ -110,8 +110,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 								'product_name' => $_product->get_name(),
 							), $_product, false );
 						}
-
+					
+						echo '<a class="qty-btn down" href="#">-</a>';
 						echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
+						echo '<a class="qty-btn up" href="#">+</a>';
 						?>
 						</td>
 

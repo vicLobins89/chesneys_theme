@@ -1984,7 +1984,8 @@ POSTS & CONTENT STYLES
 			padding: 1rem;
 			
 			&.product-thumbnail {
-				.attachment-woocommerce_thumbnail {
+				.attachment-woocommerce_thumbnail,
+				.woocommerce-placeholder {
 					width: 5rem;
 				}
 			}
