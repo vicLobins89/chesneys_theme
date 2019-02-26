@@ -1238,7 +1238,7 @@ LAYOUT & GRID STYLES
   .row.related-products p {
     margin: 1.5rem 0; }
   .row.related-products .price {
-    display: none; }
+    display: none !important; }
 .row.folio-module .folio-item .text {
   padding: .5rem .75rem 1.5rem;
   background: #fff;
