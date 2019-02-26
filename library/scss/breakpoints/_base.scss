@@ -2147,6 +2147,8 @@ POSTS & CONTENT STYLES
 	}
 	
 	.spares-product {
+		padding-top: 1rem;
+		
 		.product_title {
 			@extend .h2;
 			@extend .h2.lhs;
@@ -2164,6 +2166,7 @@ POSTS & CONTENT STYLES
 		.woocommerce-product-gallery__image {
 			float: right;
 			width: 66%;
+			margin-bottom: 2rem;
 			
 			a {
 				pointer-events: none;
@@ -2185,6 +2188,9 @@ POSTS & CONTENT STYLES
 		form.cart .woocommerce-grouped-product-list.group_table {
 			counter-reset: section;
 			position: relative;
+			width: 90%;
+			max-width: 1100px;
+			margin: auto !important;
 			
 			td {
 				padding: 3.5rem 1.5rem 1.5rem;

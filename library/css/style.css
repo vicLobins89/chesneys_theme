@@ -2408,70 +2408,76 @@ POSTS & CONTENT STYLES
     padding-left: 0;
     padding-right: 0;
     width: 2rem !important; }
-.woocommerce .spares-product .product_title {
-  background: #f5f3f1;
-  padding: 3rem 3rem 4rem !important;
-  float: left;
-  width: 33%; }
-  .woocommerce .spares-product .product_title:after {
-    bottom: 3rem;
-    left: 3rem; }
-.woocommerce .spares-product .woocommerce-product-gallery__image {
-  float: right;
-  width: 66%; }
-  .woocommerce .spares-product .woocommerce-product-gallery__image a {
-    pointer-events: none;
-    cursor: default;
-    max-height: 0; }
-  .woocommerce .spares-product .woocommerce-product-gallery__image img {
-    margin: 2rem auto;
-    display: block;
-    width: 90%; }
-.woocommerce .spares-product .price {
-  display: none; }
-.woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table {
-  counter-reset: section;
-  position: relative; }
-  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td {
-    padding: 3.5rem 1.5rem 1.5rem;
-    font-weight: normal;
-    vertical-align: top; }
-    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__label {
-      padding-left: 1.5rem; }
-    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__desc {
-      font-family: "Univers", Helvetica, Arial, sans-serif;
-      font-size: .8em; }
-    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__price .amount {
+.woocommerce .spares-product {
+  padding-top: 1rem; }
+  .woocommerce .spares-product .product_title {
+    background: #f5f3f1;
+    padding: 3rem 3rem 4rem !important;
+    float: left;
+    width: 33%; }
+    .woocommerce .spares-product .product_title:after {
+      bottom: 3rem;
+      left: 3rem; }
+  .woocommerce .spares-product .woocommerce-product-gallery__image {
+    float: right;
+    width: 66%;
+    margin-bottom: 2rem; }
+    .woocommerce .spares-product .woocommerce-product-gallery__image a {
+      pointer-events: none;
+      cursor: default;
+      max-height: 0; }
+    .woocommerce .spares-product .woocommerce-product-gallery__image img {
+      margin: 2rem auto;
       display: block;
-      font-family: "Univers", Helvetica, Arial, sans-serif;
-      font-size: 1.2em;
-      font-weight: bold; }
-    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__quantity {
-      padding: 3rem 0 1.5rem;
-      width: 5rem;
-      text-align: center; }
-    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td:first-child {
-      text-align: left;
-      font-size: 1.2em; }
-      .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td:first-child span {
+      width: 90%; }
+  .woocommerce .spares-product .price {
+    display: none; }
+  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table {
+    counter-reset: section;
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto !important; }
+    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td {
+      padding: 3.5rem 1.5rem 1.5rem;
+      font-weight: normal;
+      vertical-align: top; }
+      .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__label {
+        padding-left: 1.5rem; }
+      .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__desc {
+        font-family: "Univers", Helvetica, Arial, sans-serif;
+        font-size: .8em; }
+      .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__price .amount {
         display: block;
         font-family: "Univers", Helvetica, Arial, sans-serif;
-        font-size: 75%;
-        margin-top: 6px; }
-  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:before {
-    counter-increment: section;
-    content: counter(section);
-    position: absolute;
-    width: calc(100% - 3em);
-    border-bottom: 1px solid #142128;
-    left: 1.5em;
-    padding: 15px 0 0;
-    font-family: "Univers", Helvetica, Arial, sans-serif;
-    font-size: .8em; }
-  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(even) {
-    background: #fff; }
-  .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(odd) {
-    background: #f5f3f1; }
+        font-size: 1.2em;
+        font-weight: bold; }
+      .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td.woocommerce-grouped-product-list-item__quantity {
+        padding: 3rem 0 1.5rem;
+        width: 5rem;
+        text-align: center; }
+      .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td:first-child {
+        text-align: left;
+        font-size: 1.2em; }
+        .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td:first-child span {
+          display: block;
+          font-family: "Univers", Helvetica, Arial, sans-serif;
+          font-size: 75%;
+          margin-top: 6px; }
+    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:before {
+      counter-increment: section;
+      content: counter(section);
+      position: absolute;
+      width: calc(100% - 3em);
+      border-bottom: 1px solid #142128;
+      left: 1.5em;
+      padding: 15px 0 0;
+      font-family: "Univers", Helvetica, Arial, sans-serif;
+      font-size: .8em; }
+    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(even) {
+      background: #fff; }
+    .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr:nth-child(odd) {
+      background: #f5f3f1; }
 .woocommerce .woocommerce-result-count,
 .woocommerce .woocommerce-ordering {
   display: none; }
