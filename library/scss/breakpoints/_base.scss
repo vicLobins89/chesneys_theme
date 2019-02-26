@@ -2157,7 +2157,7 @@ POSTS & CONTENT STYLES
 	}
 }
 
-.widget_product_categories {
+.widget.widget_product_categories {
 	margin: 0;
 	padding: 1rem;
 	background: $white;
@@ -2166,14 +2166,16 @@ POSTS & CONTENT STYLES
 	color: $text-color;
 	
 	h4 {
-		
+		font-weight: bold;
 	}
 	
 	ul {
 		padding: 0;
 		
 		li {
-			
+			list-style-type: none;
+			font-size: 1rem;
+			border-bottom: 1px solid $text-color;
 		}
 	}
 }
