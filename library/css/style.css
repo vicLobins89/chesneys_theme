@@ -2244,9 +2244,12 @@ POSTS & CONTENT STYLES
     color: #fff;
     font-family: "Univers Cond", "Univers", Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
-  .woocommerce .cart-collaterals .cart_totals th {
+  .woocommerce .cart-collaterals .cart_totals tr th {
     width: 10rem;
-    border-right: 1px solid #766e63; }
+    border-right: 1px solid #766e63;
+    border-bottom: 1px solid #766e63; }
+  .woocommerce .cart-collaterals .cart_totals tr td {
+    background: #fff; }
 .woocommerce table.shop_table {
   border-radius: 0; }
   .woocommerce table.shop_table th {

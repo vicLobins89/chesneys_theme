@@ -1989,9 +1989,14 @@ POSTS & CONTENT STYLES
 			}
 		}
 		
-		th {
+		tr th {
 			width: 10rem;
 			border-right: 1px solid $dark-brown;
+			border-bottom: 1px solid $dark-brown;
+		}
+		
+		tr td {
+			background: $white;
 		}
 	}
 	
