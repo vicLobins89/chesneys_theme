@@ -2238,9 +2238,11 @@ POSTS & CONTENT STYLES
   .woocommerce table.shop_table th {
     border-right: 1px solid #766e63; }
   .woocommerce table.shop_table td {
-    border-top: 1px solid #f5f3f1;
+    border-top: 1px solid #766e63;
     border-right: 1px solid #766e63;
     padding: 1rem; }
+    .woocommerce table.shop_table td:last-child {
+      border-right: none; }
     .woocommerce table.shop_table td.product-thumbnail .attachment-woocommerce_thumbnail,
     .woocommerce table.shop_table td.product-thumbnail .woocommerce-placeholder {
       width: 5rem; }

@@ -1979,9 +1979,13 @@ POSTS & CONTENT STYLES
 		}
 		
 		td {
-			border-top: 1px solid $light-brown;
+			border-top: 1px solid $dark-brown;
 			border-right: 1px solid $dark-brown;
 			padding: 1rem;
+			
+			&:last-child {
+				border-right: none;
+			}
 			
 			&.product-thumbnail {
 				.attachment-woocommerce_thumbnail,
