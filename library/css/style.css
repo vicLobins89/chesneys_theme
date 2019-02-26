@@ -2246,12 +2246,22 @@ POSTS & CONTENT STYLES
     width: 10rem;
     border-right: 1px solid #766e63;
     border-bottom: 1px solid #766e63;
-    background: #fff; }
+    background: #fff;
+    font-size: 1rem; }
   .woocommerce .cart-collaterals .cart_totals tr td {
     background: #fff;
-    border-bottom: 1px solid #766e63; }
+    border-bottom: 1px solid #766e63;
+    font-size: 1rem; }
   .woocommerce .cart-collaterals .cart_totals .order-total th, .woocommerce .cart-collaterals .cart_totals .order-total td {
     background: #f5f3f1; }
+  .woocommerce .cart-collaterals .cart_totals .wc-forward {
+    float: right; }
+  .woocommerce .cart-collaterals .cart_totals ul#shipping_method li {
+    font-size: 1rem; }
+    .woocommerce .cart-collaterals .cart_totals ul#shipping_method li label {
+      font-weight: normal; }
+      .woocommerce .cart-collaterals .cart_totals ul#shipping_method li label span {
+        font-weight: bold; }
 .woocommerce table.shop_table {
   border-radius: 0; }
   .woocommerce table.shop_table th {
@@ -2397,6 +2407,10 @@ POSTS & CONTENT STYLES
     font-size: 1rem; }
     .woocommerce .hover-text a:hover {
       text-decoration: underline !important; }
+.woocommerce .button.wc-forward {
+  display: inline-block;
+  padding-right: 1rem;
+  padding-left: 1rem; }
 
 .widget.widget_product_categories {
   margin: 0;
