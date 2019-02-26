@@ -241,23 +241,25 @@ require_once( 'woocommerce/checkout-functions.php' );
 // Display category image on category archive
 function woocommerce_category_image() {
 	$term = get_queried_object();
+	global $wp_query;
+	$cat = $wp_query->get_queried_object();
+	$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+	$image = wp_get_attachment_url( $thumbnail_id );
+	$cat_desc = term_description( $cat->term_id, 'product_cat' );
 	
     if ( is_product_category() && !is_product_category(63) ){
-	    global $wp_query;
-	    $cat = $wp_query->get_queried_object();
-	    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
-	    $image = wp_get_attachment_url( $thumbnail_id );
-		if ( $image ) {
+		if( $image ) {
 		    echo '<img src="' . $image . '" alt="' . $cat->name . '" />';
 		}
-		
-		$cat_desc = term_description( $cat->term_id, 'product_cat' );
 		
 	  	?> <div class="featured-copy">
 			<h1 class="h2 lhs"><?php woocommerce_page_title(); ?></h1>
 			<?php echo $cat_desc; ?>
 		</div> <?php
-	}
+	} else { ?>
+		<h1 class="h2 lhs"><?php woocommerce_page_title(); ?></h1>
+		<?php echo $cat_desc; ?>
+	<?php }
 }
 remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
 add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 15 );
