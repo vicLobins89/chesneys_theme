@@ -2441,7 +2441,7 @@ POSTS & CONTENT STYLES
       border: none !important;
       margin: 0;
       padding: 0; }
-    .widget.widget_product_categories ul li {
+    .widget.widget_product_categories ul ul li {
       list-style-type: none;
       font-size: 1rem;
       border-top: 1px solid #142128;
