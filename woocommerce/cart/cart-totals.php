@@ -29,6 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<tr class="cart-heading">
 			<th><?php _e( 'Cart totals', 'woocommerce' ); ?></th>
+			<td></td>
 		</tr>
 
 		<tr class="cart-subtotal">

@@ -1979,6 +1979,14 @@ POSTS & CONTENT STYLES
 		h2 {
 			margin-bottom: 2rem;
 		}
+		
+		.cart-heading {
+			th, td {
+				background: $dark-gray;
+				color: $white;
+				font-family: $condensed;
+			}
+		}
 	}
 	
 	table.shop_table {
