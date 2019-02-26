@@ -2250,7 +2250,8 @@ POSTS & CONTENT STYLES
     border-bottom: 1px solid #766e63;
     background: #fff; }
   .woocommerce .cart-collaterals .cart_totals tr td {
-    background: #fff; }
+    background: #fff;
+    border-bottom: 1px solid #766e63; }
   .woocommerce .cart-collaterals .cart_totals .order-total th, .woocommerce .cart-collaterals .cart_totals .order-total td {
     background: #f5f3f1; }
 .woocommerce table.shop_table {
