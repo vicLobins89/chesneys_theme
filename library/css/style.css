@@ -2265,7 +2265,8 @@ POSTS & CONTENT STYLES
 .woocommerce table.shop_table {
   border-radius: 0; }
   .woocommerce table.shop_table th {
-    border-right: 1px solid #766e63; }
+    border-right: 1px solid #766e63;
+    padding: 1rem; }
   .woocommerce table.shop_table td {
     border-top: 1px solid #766e63;
     border-right: 1px solid #766e63;
