@@ -2242,7 +2242,11 @@ POSTS & CONTENT STYLES
   .woocommerce .cart-collaterals .cart_totals .cart-heading th, .woocommerce .cart-collaterals .cart_totals .cart-heading td {
     background: #142128;
     color: #fff;
-    font-family: "Univers Cond", "Univers", Helvetica, Arial, sans-serif; }
+    font-family: "Univers Cond", "Univers", Helvetica, Arial, sans-serif;
+    text-transform: uppercase; }
+  .woocommerce .cart-collaterals .cart_totals th {
+    width: 10rem;
+    border-right: 1px solid #766e63; }
 .woocommerce table.shop_table {
   border-radius: 0; }
   .woocommerce table.shop_table th {

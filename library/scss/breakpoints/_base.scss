@@ -1985,7 +1985,13 @@ POSTS & CONTENT STYLES
 				background: $dark-gray;
 				color: $white;
 				font-family: $condensed;
+				text-transform: uppercase;
 			}
+		}
+		
+		th {
+			width: 10rem;
+			border-right: 1px solid $dark-brown;
 		}
 	}
 	
