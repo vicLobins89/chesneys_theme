@@ -2149,10 +2149,17 @@ POSTS & CONTENT STYLES
 	.spares-product {
 		.product_title {
 			@extend .h2;
-			text-align: center;
+			@extend .h2.lhs;
+			background: $light-brown;
+			padding: 2rem;
+			float: left;
+			width: 33%;
 		}
 		
 		.woocommerce-product-gallery__image {
+			float: right;
+			width: 66%;
+			
 			a {
 				pointer-events: none;
 				cursor: default;
