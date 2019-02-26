@@ -67,7 +67,7 @@ textarea,
 	color: $text-color;
 	vertical-align: middle;
 	box-shadow: none;
-	border: 1px solid $light-brown; 
+	border: 1px solid $dark-brown; 
 	width: 100%;
 	font-family: $sans-serif;
 	background-color: $white;
@@ -136,6 +136,10 @@ textarea {
 }
 
 // selects
+.select2-container--default .select2-selection--single {
+	border-color: $dark-brown;
+}
+
 .select2-container .select2-selection--single .select2-selection__rendered {
 	font-family: $sans-serif;
 }

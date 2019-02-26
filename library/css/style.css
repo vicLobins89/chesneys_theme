@@ -832,7 +832,7 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   color: #142128;
   vertical-align: middle;
   box-shadow: none;
-  border: 1px solid #f5f3f1;
+  border: 1px solid #766e63;
   width: 100%;
   font-family: "Univers", Helvetica, Arial, sans-serif;
   background-color: #fff;
@@ -887,6 +887,9 @@ input[type="password"] {
 textarea {
   min-height: 100px;
   max-height: 140px; }
+
+.select2-container--default .select2-selection--single {
+  border-color: #766e63; }
 
 .select2-container .select2-selection--single .select2-selection__rendered {
   font-family: "Univers", Helvetica, Arial, sans-serif; }
