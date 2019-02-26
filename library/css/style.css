@@ -825,14 +825,14 @@ INPUTS
 
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"]:not(#s), input[type="tel"], input[type="color"], select, textarea, .field {
   display: block;
-  padding: 10px 15px;
+  padding: 13px 15px 10px;
   margin: 0 auto 14px;
-  font-size: 1em;
+  font-size: .9em;
   font-weight: 400;
   color: #142128;
   vertical-align: middle;
   box-shadow: none;
-  border: none;
+  border: 1px solid #f5f3f1;
   width: 100%;
   font-family: "Univers", Helvetica, Arial, sans-serif;
   background-color: #fff;
@@ -887,6 +887,9 @@ input[type="password"] {
 textarea {
   min-height: 100px;
   max-height: 140px; }
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  font-family: "Univers", Helvetica, Arial, sans-serif; }
 
 select {
   -webkit-appearance: none;
