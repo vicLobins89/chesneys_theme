@@ -2368,7 +2368,7 @@ POSTS & CONTENT STYLES
 			@extend .secondary-btn;
 		}
 
-		input.button.cancel {
+		a.button.cancel {
 			@extend .secondary-btn;
 			@extend .secondary-btn.alt;
 		}
