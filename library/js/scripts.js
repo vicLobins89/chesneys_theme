@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
 		var value = $(this).prev('.quantity').find('input').val();
 		value = parseInt(value) + 1;
 		$(this).prev('.quantity').find('input').val(value);
-		$('button[name="update_cart"]').removeAttr("disabled");
+		$('button[name=update_cart]').removeAttr("disabled");
 	});
 	
 	$('.down').on('click', function(e){
@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
 		var value = $(this).next('.quantity').find('input').val();
 		value = parseInt(value) - 1;
 		$(this).next('.quantity').find('input').val(value);
-		$('button[name="update_cart"]').removeAttr("disabled");
+		$('button[name=update_cart]').removeAttr("disabled");
 	});
 	
 	// Add image-link to caption
