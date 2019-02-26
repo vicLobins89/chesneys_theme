@@ -2427,8 +2427,6 @@ POSTS & CONTENT STYLES
 .woocommerce .spares-shop-loop .woocommerce-result-count,
 .woocommerce .spares-shop-loop .woocommerce-ordering {
   display: block !important; }
-.woocommerce .spares-shop-loop ul.products .product .woocommerce-loop-product__link {
-  min-height: 25rem; }
 .woocommerce .spares-shop-loop ul.products .product .woocommerce-loop-category__title,
 .woocommerce .spares-shop-loop ul.products .product .woocommerce-loop-product__title,
 .woocommerce .spares-shop-loop ul.products .product p {
@@ -2453,6 +2451,8 @@ POSTS & CONTENT STYLES
   font-weight: bold; }
   .woocommerce .spares-shop-loop ul.products .product .price + p {
     display: none; }
+.woocommerce .spares-shop-loop ul.products .product.product-type-simple .woocommerce-loop-product__title {
+  min-height: 3em; }
 
 #text_slider {
   color: #fff; }
