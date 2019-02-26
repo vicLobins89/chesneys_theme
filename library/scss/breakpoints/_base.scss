@@ -2210,6 +2210,14 @@ POSTS & CONTENT STYLES
 			}
 		}
 	}
+	
+	.product-categories {
+		li.cat-item {
+			&:not(.current-cat):not(.cat-parent) {
+				display: none;
+			}
+		}
+	}
 }
 
 #text_slider {

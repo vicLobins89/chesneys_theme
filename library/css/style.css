@@ -2453,6 +2453,8 @@ POSTS & CONTENT STYLES
     display: none; }
 .woocommerce .spares-shop-loop ul.products .product.product-type-simple .woocommerce-loop-product__title {
   min-height: 3em; }
+.woocommerce .spares-shop-loop .product-categories li.cat-item:not(.current-cat):not(.cat-parent) {
+  display: none; }
 
 #text_slider {
   color: #fff; }
