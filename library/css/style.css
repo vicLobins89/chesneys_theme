@@ -1192,7 +1192,9 @@ LAYOUT & GRID STYLES
   .row.product-info-wrapper img:last-child {
     margin-bottom: 0; }
   .row.product-info-wrapper strong, .row.product-info-wrapper b {
-    font-family: "Univers", Helvetica, Arial, sans-serif; }
+    font-family: "Univers", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: .85em; }
 .row.related-wrapper {
   background: #f5f3f1; }
   .row.related-wrapper h2, .row.related-wrapper p {
