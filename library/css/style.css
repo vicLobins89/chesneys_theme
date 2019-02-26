@@ -2589,7 +2589,8 @@ POSTS & CONTENT STYLES
 .woocommerce-cart form .woocommerce-order-pay a.button.cancel,
 .woocommerce-order-pay .woocommerce-checkout form a.button.cancel,
 .woocommerce-checkout form .woocommerce-order-pay a.button.cancel {
-  width: 48%; }
+  font-size: 1.1em;
+  width: 49%; }
 
 .widget.widget_product_categories {
   margin: 0;

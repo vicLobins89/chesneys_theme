@@ -2103,7 +2103,8 @@ POSTS & CONTENT STYLES
     		width: 8rem !important;
 		}
 		
-		&.woocommerce-checkout-review-order-table {
+		&.woocommerce-checkout-review-order-table,
+		&.woocommerce-table--order-details {
 			tbody tr {
 				background: $white;
 			}
@@ -2402,11 +2403,17 @@ POSTS & CONTENT STYLES
 			text-align: center;
 		}
 	}
+	
+	.woocommerce-order-details__title {
+		@extend .h2.lhs;
+		margin-bottom: 2rem;
+	}
 }
 
 .woocommerce-order-pay {
 	.secondary-btn {
-		width: 48%;
+		font-size: 1.1em;
+		width: 49%;
 	}
 }
 
