@@ -44,7 +44,7 @@ get_header( 'shop' ); ?>
 		} elseif ( in_array( 'outdoor-living', $categories ) ) {
 			wc_get_template_part( 'content', 'single-product_outdoor' );
 		} else {
-			wc_get_template_part( 'content', 'single-product' );
+			wc_get_template_part( 'content', 'single-product_outdoor' );
 		}
 
 		endwhile; // end of the loop. 
