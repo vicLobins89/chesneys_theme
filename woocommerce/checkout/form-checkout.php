@@ -42,7 +42,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 			</div>
 
 			<div class="col-2">
-				<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
+				<h3 id="order_review_heading" class="h2 lhs no-after"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
 				<div id="order_review" class="woocommerce-checkout-review-order">
 					<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 				</div>

@@ -1030,6 +1030,11 @@ h2, .h2 {
 		}
 	}
 	
+	&.no-after:after {
+		content: none;
+		display: none;
+	}
+	
 	&.white:after {
 		background: $white;
 	}
