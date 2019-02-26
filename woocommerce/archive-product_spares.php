@@ -33,7 +33,7 @@ function custom_woocommerce_product_add_to_cart_text()  {
 	global $product;
 	if( $product->is_type( 'grouped' ) ){
 		return __( 'View spares', 'woocommerce' );
-	} elseif( $product->managing_stock() && $product->is_in_stock() ) {
+	} elseif( !$product->managing_stock() && !$product->is_in_stock() ) {
 		return __( 'Add to cart', 'woocommerce' );
 	} else {
 		return __( 'View', 'woocommerce' );
