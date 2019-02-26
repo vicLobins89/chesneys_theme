@@ -2151,9 +2151,14 @@ POSTS & CONTENT STYLES
 			@extend .h2;
 			@extend .h2.lhs;
 			background: $light-brown;
-			padding: 2rem;
+			padding: 3rem 3rem 4rem !important;
 			float: left;
 			width: 33%;
+			
+			&:after {
+				bottom: 3rem;
+				left: 3rem;
+			}
 		}
 		
 		.woocommerce-product-gallery__image {

@@ -2410,9 +2410,12 @@ POSTS & CONTENT STYLES
     width: 2rem !important; }
 .woocommerce .spares-product .product_title {
   background: #f5f3f1;
-  padding: 2rem;
+  padding: 3rem 3rem 4rem !important;
   float: left;
   width: 33%; }
+  .woocommerce .spares-product .product_title:after {
+    bottom: 3rem;
+    left: 3rem; }
 .woocommerce .spares-product .woocommerce-product-gallery__image {
   float: right;
   width: 66%; }
