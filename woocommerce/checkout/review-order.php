@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<thead>
 		<tr>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-			<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
+			<th class="product-total"><?php _e( 'Total (plus delivery)', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
 	<tbody>
