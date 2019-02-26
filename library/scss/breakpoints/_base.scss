@@ -2186,11 +2186,20 @@ POSTS & CONTENT STYLES
 			font-family: $serif;
 			text-transform: none;
 			font-size: 1.25em;
-			height: 3em;
 
 			&:after {
 				bottom: auto;
 				top: -14px;
+			}
+		}
+		
+		.price {
+			font-family: $sans-serif;
+			color: $dark-gray;
+			font-size: 1.2em;
+			
+			+ p {
+				display: none;
 			}
 		}
 	}
