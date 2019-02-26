@@ -33,17 +33,6 @@ if ( post_password_required() ) {
 
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('entry-content wrap row cf spares-product '); ?>>
-
-	<?php
-		/**
-		 * Hook: woocommerce_before_single_product_summary.
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		// do_action( 'woocommerce_before_single_product_summary' );
-	?>
-
 	<div class="cf">
 		<?php		
 		function show_first_gallery_image() {
@@ -57,9 +46,25 @@ if ( post_password_required() ) {
 			}
 		};     
 		add_action( 'woocommerce_single_product_summary', 'show_first_gallery_image', 7 );
-		
+		?>
+	</div>
+</div>
+
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class('entry-content wrap row cf spares-product '); ?>>
+
+	<?php
+		/**
+		 * Hook: woocommerce_before_single_product_summary.
+		 *
+		 * @hooked woocommerce_show_product_sale_flash - 10
+		 * @hooked woocommerce_show_product_images - 20
+		 */
+		// do_action( 'woocommerce_before_single_product_summary' );
+	?>
+
+	<div class="cf">
+		<?php
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-		remove_action( 'woocommerce_single_product_summary', 'WC_Structured_Data::generate_product_data()', 60 );
 		
 		/**
 		 * Hook: woocommerce_single_product_summary.
