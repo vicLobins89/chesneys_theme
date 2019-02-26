@@ -21,7 +21,6 @@ get_header( 'shop' );
 require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
 $term = get_queried_object();
-global $product;
 
 // Number of rows + products
 function spares_loop_columns() {
@@ -31,6 +30,7 @@ add_filter('loop_shop_columns', 'spares_loop_columns', 999);
 
 // Button text
 function custom_woocommerce_product_add_to_cart_text()  {
+	global $product;
 	if( $product->is_type( 'grouped' ) ){
 		return __( 'View spares', 'woocommerce' );
 	}
