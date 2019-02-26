@@ -22,6 +22,40 @@ require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
 $term = get_queried_object();
 
+// Number of rows + products
+function spares_loop_columns() {
+	$term = get_queried_object();
+	if( term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) {
+		return 3;
+	} else {
+		return 4;
+	}
+}
+add_filter('loop_shop_columns', 'spares_loop_columns', 999);
+
+// Button text
+function custom_woocommerce_product_add_to_cart_text()  {
+	global $product;
+	if( $product->is_type( 'grouped' ) ){
+		return __( 'View spares', 'woocommerce' );
+	} elseif( !$product->managing_stock() && !$product->is_in_stock() ) {
+		return __( 'View', 'woocommerce' );
+	} else {
+		return __( 'Add to cart', 'woocommerce' );
+	}
+}
+add_filter( 'woocommerce_product_add_to_cart_text', 'custom_woocommerce_product_add_to_cart_text' );
+
+// Price 
+function bbloomer_grouped_price_range_delete( $price, $product, $child_prices ) {
+	global $product;
+	if( $product->is_type( 'grouped' ) ){
+		$price = '';
+	}
+	return $price;
+}
+add_filter( 'woocommerce_grouped_price_html', 'bbloomer_grouped_price_range_delete', 10, 3 );
+
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -43,39 +77,6 @@ do_action( 'woocommerce_before_main_content' );
 </header>
 <?php
 if ( woocommerce_product_loop() ) {
-	
-	// Number of rows + products
-	function spares_loop_columns() {
-		if( term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) {
-			return 3;
-		} else {
-			return 4;
-		}
-	}
-	add_filter('loop_shop_columns', 'spares_loop_columns', 999);
-
-	// Button text
-	function custom_woocommerce_product_add_to_cart_text()  {
-		global $product;
-		if( $product->is_type( 'grouped' ) ){
-			return __( 'View spares', 'woocommerce' );
-		} elseif( !$product->managing_stock() && !$product->is_in_stock() ) {
-			return __( 'View', 'woocommerce' );
-		} else {
-			return __( 'Add to cart', 'woocommerce' );
-		}
-	}
-	add_filter( 'woocommerce_product_add_to_cart_text', 'custom_woocommerce_product_add_to_cart_text' );
-
-	// Price 
-	function bbloomer_grouped_price_range_delete( $price, $product, $child_prices ) {
-		global $product;
-		if( $product->is_type( 'grouped' ) ){
-			$price = '';
-		}
-		return $price;
-	}
-	add_filter( 'woocommerce_grouped_price_html', 'bbloomer_grouped_price_range_delete', 10, 3 );
 
 	/**
 	 * Hook: woocommerce_before_shop_loop.
