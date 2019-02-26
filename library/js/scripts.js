@@ -33,16 +33,15 @@ jQuery(document).ready(function($) {
 	// QTY
 	$('.qty-btn').on('click', function(e){
 		e.preventDefault();
-		var value = $(this).prev('.quantity').find('input').val();
+		var value = $(this).siblings('.quantity').find('input').val();
 		
 		if( $(this).hasClass('up') ) {
 			value = parseInt(value) + 1;
-			$(this).prev('.quantity').find('input').val(value);
 		} else {
 			value = parseInt(value) - 1;
-			$(this).next('.quantity').find('input').val(value);
 		}
 		
+		$(this).siblings('.quantity').find('input').val(value);
 		$('button[name=update_cart]').removeAttr("disabled");
 	});
 	
