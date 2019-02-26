@@ -169,9 +169,13 @@ function main_woocommerce_output_related_products() {
 }
 //add_action( 'woocommerce_after_single_product_summary', 'main_woocommerce_output_related_products', 20);
 
-$term = get_queried_object();
-$parent_cats = get_ancestors($term->term_id, 'product_cat');
-$category = get_term_by('id', $parent_cats[0], 'product_cat');
+$cat = get_the_terms( $product->ID, 'product_cat' );
+foreach ($cat as $categoria) {
+	if($categoria->parent == 0){
+	   echo $categoria->name;
+	}
+}
+
 echo '<section class="row entry-content cf related-products"><div class="cf"><div class="col-12">';
 echo '<h2>You might also like</h2><p>Ariptimus fue et vitioca tquerra vivis, nem merissent grate, ceni sintere mo</p>';
 echo do_shortcode('[products orderby="rand" category="'.$category->slug.'" limit="3" columns="3" class="related-products"]');
