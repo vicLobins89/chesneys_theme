@@ -1191,6 +1191,8 @@ LAYOUT & GRID STYLES
     color: #fff; }
   .row.product-info-wrapper img:last-child {
     margin-bottom: 0; }
+  .row.product-info-wrapper strong, .row.product-info-wrapper b {
+    font-family: "Univers", Helvetica, Arial, sans-serif; }
 .row.related-wrapper {
   background: #f5f3f1; }
   .row.related-wrapper h2, .row.related-wrapper p {
