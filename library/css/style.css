@@ -2297,6 +2297,8 @@ POSTS & CONTENT STYLES
     width: 3rem; }
   .woocommerce table.shop_table .button {
     margin: 0; }
+  .woocommerce table.shop_table .checkout_coupon button {
+    margin: 0; }
   .woocommerce table.shop_table button.button:disabled,
   .woocommerce table.shop_table button.button:disabled[disabled] {
     padding: 1.3em 2em 1em; }

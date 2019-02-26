@@ -2083,6 +2083,12 @@ POSTS & CONTENT STYLES
 			margin: 0;
 		}
 		
+		.checkout_coupon {
+			button {
+				margin: 0;
+			}
+		}
+		
 		button.button:disabled,
 		button.button:disabled[disabled] {
 			padding: 1.3em 2em 1em;
