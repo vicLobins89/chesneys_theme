@@ -159,8 +159,8 @@ function main_woocommerce_output_related_products() {
 
     ob_start();
     woocommerce_related_products(3,3,'rand');
-    $content = ob_get_clean();
-    if($content) { $output .= $content; }
+    $relatedContent = ob_get_clean();
+    if($relatedContent) { $output .= $relatedContent; }
 
     echo '<section class="entry-content row cf related-wrapper"><div class="cf"><div class="col-12">';
     echo '<h2>You might also like</h2><p>Compare our HEAT range and find the best model for you</p>';
@@ -169,7 +169,7 @@ function main_woocommerce_output_related_products() {
 }
 add_action( 'woocommerce_after_single_product_summary', 'main_woocommerce_output_related_products', 20);
 
-//do_action( 'woocommerce_after_single_product_summary' );
+do_action( 'woocommerce_after_single_product_summary' );
 ?>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
