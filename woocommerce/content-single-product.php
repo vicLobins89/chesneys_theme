@@ -164,8 +164,8 @@ function main_woocommerce_output_related_products() {
     if($content) { $output .= $content; }
 
     echo '<section class="entry-content row cf related-wrapper"><div class="cf"><div class="col-12">';
-    echo '<h2>Other Heat Range Products</h2><p>Compare our HEAT range and find the best model for you</p>';
-    echo $output;
+    echo '<h2>You might also like</h2><p>Compare our HEAT range and find the best model for you</p>';
+    echo do_shortcode('[products orderby="rand" category="'.$category->slug.'" limit="3" columns="3" class="related-products"]');
     echo '</div></div></section>';
 }
 add_action( 'woocommerce_after_single_product_summary', 'main_woocommerce_output_related_products', 20);
