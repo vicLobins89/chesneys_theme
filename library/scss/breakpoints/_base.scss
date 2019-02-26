@@ -2361,6 +2361,15 @@ POSTS & CONTENT STYLES
 		.button {
 			width: 100%;
 		}
+		
+		.button.alt {
+			@extend .secondary-btn;
+		}
+		
+		.button.cancel {
+			@extend .secondary-btn;
+			@extend .secondary-btn.alt;
+		}
 	}
 }
 
