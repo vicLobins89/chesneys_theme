@@ -44,7 +44,7 @@ if ( post_password_required() ) {
 		// do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div class="cf">
+	<div class="cf"><div class="col-12">
 		<?php		
 		function show_first_gallery_image() {
 			global $product;
@@ -74,7 +74,7 @@ if ( post_password_required() ) {
 		 */
 		do_action( 'woocommerce_single_product_summary' );
 		?>
-	</div>
+	</div></div>
 
 	<?php
 		/**
