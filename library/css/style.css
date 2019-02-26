@@ -600,7 +600,7 @@ Quick video guide:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.primary-btn, .image-link + p, .image-link .wp-caption-text, .vid-thumb .play, .row.related-wrapper .woocommerce-loop-product__title, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, .woocommerce button.single_add_to_cart_button, .woocommerce ul.products li.product .button, .woocommerce .button.wc-forward, a.secondary-btn {
+.primary-btn, .image-link + p, .image-link .wp-caption-text, .vid-thumb .play, .row.related-wrapper .woocommerce-loop-product__title, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, .woocommerce button.single_add_to_cart_button, .woocommerce table.shop_table .button, .woocommerce ul.products li.product .button, .woocommerce .button.wc-forward, a.secondary-btn {
   position: relative;
   min-width: 12em;
   display: inline-block;
@@ -622,10 +622,10 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   outline: none;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, .vid-thumb .play:hover, .row.related-wrapper .woocommerce-loop-product__title:hover, a.comment-reply-link:hover, #submit:hover, .secondary-btn:hover, .woocommerce button.single_add_to_cart_button:hover, .woocommerce ul.products li.product .button:hover, .woocommerce .button.wc-forward:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, .vid-thumb .play:focus, .row.related-wrapper .woocommerce-loop-product__title:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus, .woocommerce button.single_add_to_cart_button:focus, .woocommerce ul.products li.product .button:focus, .woocommerce .button.wc-forward:focus {
+  .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, .vid-thumb .play:hover, .row.related-wrapper .woocommerce-loop-product__title:hover, a.comment-reply-link:hover, #submit:hover, .secondary-btn:hover, .woocommerce button.single_add_to_cart_button:hover, .woocommerce table.shop_table .button:hover, .woocommerce ul.products li.product .button:hover, .woocommerce .button.wc-forward:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, .vid-thumb .play:focus, .row.related-wrapper .woocommerce-loop-product__title:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus, .woocommerce button.single_add_to_cart_button:focus, .woocommerce table.shop_table .button:focus, .woocommerce ul.products li.product .button:focus, .woocommerce .button.wc-forward:focus {
     color: #fff;
     text-decoration: none; }
-  .primary-btn a, .image-link + p a, .image-link .wp-caption-text a, .vid-thumb .play a, .row.related-wrapper .woocommerce-loop-product__title a, a.comment-reply-link a, #submit a, .secondary-btn a, .woocommerce button.single_add_to_cart_button a, .woocommerce ul.products li.product .button a, .woocommerce .button.wc-forward a {
+  .primary-btn a, .image-link + p a, .image-link .wp-caption-text a, .vid-thumb .play a, .row.related-wrapper .woocommerce-loop-product__title a, a.comment-reply-link a, #submit a, .secondary-btn a, .woocommerce button.single_add_to_cart_button a, .woocommerce table.shop_table .button a, .woocommerce ul.products li.product .button a, .woocommerce .button.wc-forward a {
     color: inherit !important;
     text-decoration: inherit !important; }
 
@@ -646,7 +646,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     max-width: 19rem;
     padding: .9em 2em 0.5em; }
 
-.secondary-btn, .woocommerce button.single_add_to_cart_button, .woocommerce ul.products li.product .button, .woocommerce .button.wc-forward, a.secondary-btn, .woocommerce ul.products li.product a.button, .woocommerce a.button.wc-forward {
+.secondary-btn, .woocommerce button.single_add_to_cart_button, .woocommerce table.shop_table .button, .woocommerce ul.products li.product .button, .woocommerce .button.wc-forward, a.secondary-btn, .woocommerce table.shop_table a.button, .woocommerce ul.products li.product a.button, .woocommerce a.button.wc-forward {
   background-color: #4b858e;
   border-color: #4b858e;
   color: #fff;
@@ -654,15 +654,15 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   font-weight: normal;
   padding-left: 0;
   padding-right: 0; }
-  .secondary-btn:hover, .woocommerce button.single_add_to_cart_button:hover, .woocommerce ul.products li.product .button:hover, .woocommerce .button.wc-forward:hover, .secondary-btn:focus, .woocommerce button.single_add_to_cart_button:focus, .woocommerce ul.products li.product .button:focus, .woocommerce .button.wc-forward:focus, a.secondary-btn:hover, .woocommerce ul.products li.product a.button:hover, .woocommerce a.button.wc-forward:hover, a.secondary-btn:focus, .woocommerce ul.products li.product a.button:focus, .woocommerce a.button.wc-forward:focus {
+  .secondary-btn:hover, .woocommerce button.single_add_to_cart_button:hover, .woocommerce table.shop_table .button:hover, .woocommerce ul.products li.product .button:hover, .woocommerce .button.wc-forward:hover, .secondary-btn:focus, .woocommerce button.single_add_to_cart_button:focus, .woocommerce table.shop_table .button:focus, .woocommerce ul.products li.product .button:focus, .woocommerce .button.wc-forward:focus, a.secondary-btn:hover, .woocommerce table.shop_table a.button:hover, .woocommerce ul.products li.product a.button:hover, .woocommerce a.button.wc-forward:hover, a.secondary-btn:focus, .woocommerce table.shop_table a.button:focus, .woocommerce ul.products li.product a.button:focus, .woocommerce a.button.wc-forward:focus {
     background: none;
     border-color: #4b858e;
     color: #4b858e; }
-  .secondary-btn.alt, .woocommerce button.alt.single_add_to_cart_button, .woocommerce ul.products li.product .alt.button, .woocommerce .alt.button.wc-forward, a.secondary-btn.alt, .woocommerce ul.products li.product a.alt.button, .woocommerce a.alt.button.wc-forward {
+  .secondary-btn.alt, .woocommerce button.alt.single_add_to_cart_button, .woocommerce table.shop_table .alt.button, .woocommerce ul.products li.product .alt.button, .woocommerce .alt.button.wc-forward, a.secondary-btn.alt, .woocommerce table.shop_table a.alt.button, .woocommerce ul.products li.product a.alt.button, .woocommerce a.alt.button.wc-forward {
     width: 50%;
     border: 3px solid #ff8700;
     font-weight: bold; }
-    .secondary-btn.alt:hover, .woocommerce button.alt.single_add_to_cart_button:hover, .woocommerce ul.products li.product .alt.button:hover, .woocommerce .alt.button.wc-forward:hover, .secondary-btn.alt:focus, .woocommerce button.alt.single_add_to_cart_button:focus, .woocommerce ul.products li.product .alt.button:focus, .woocommerce .alt.button.wc-forward:focus, a.secondary-btn.alt:hover, .woocommerce ul.products li.product a.alt.button:hover, .woocommerce a.alt.button.wc-forward:hover, a.secondary-btn.alt:focus, .woocommerce ul.products li.product a.alt.button:focus, .woocommerce a.alt.button.wc-forward:focus {
+    .secondary-btn.alt:hover, .woocommerce button.alt.single_add_to_cart_button:hover, .woocommerce table.shop_table .alt.button:hover, .woocommerce ul.products li.product .alt.button:hover, .woocommerce .alt.button.wc-forward:hover, .secondary-btn.alt:focus, .woocommerce button.alt.single_add_to_cart_button:focus, .woocommerce table.shop_table .alt.button:focus, .woocommerce ul.products li.product .alt.button:focus, .woocommerce .alt.button.wc-forward:focus, a.secondary-btn.alt:hover, .woocommerce table.shop_table a.alt.button:hover, .woocommerce ul.products li.product a.alt.button:hover, .woocommerce a.alt.button.wc-forward:hover, a.secondary-btn.alt:focus, .woocommerce table.shop_table a.alt.button:focus, .woocommerce ul.products li.product a.alt.button:focus, .woocommerce a.alt.button.wc-forward:focus {
       background-color: #ff8700;
       color: #fff; }
 
@@ -1079,7 +1079,7 @@ LAYOUT & GRID STYLES
       color: #000; }
     .row.outdoor-product-single .short-desc form.cart {
       float: right; }
-      .row.outdoor-product-single .short-desc form.cart .secondary-btn, .row.outdoor-product-single .short-desc form.cart .woocommerce button.single_add_to_cart_button, .woocommerce .row.outdoor-product-single .short-desc form.cart button.single_add_to_cart_button, .row.outdoor-product-single .short-desc form.cart .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .row.outdoor-product-single .short-desc form.cart .button, .row.outdoor-product-single .short-desc form.cart .woocommerce .button.wc-forward, .woocommerce .row.outdoor-product-single .short-desc form.cart .button.wc-forward {
+      .row.outdoor-product-single .short-desc form.cart .secondary-btn, .row.outdoor-product-single .short-desc form.cart .woocommerce button.single_add_to_cart_button, .woocommerce .row.outdoor-product-single .short-desc form.cart button.single_add_to_cart_button, .row.outdoor-product-single .short-desc form.cart .woocommerce table.shop_table .button, .woocommerce table.shop_table .row.outdoor-product-single .short-desc form.cart .button, .row.outdoor-product-single .short-desc form.cart .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .row.outdoor-product-single .short-desc form.cart .button, .row.outdoor-product-single .short-desc form.cart .woocommerce .button.wc-forward, .woocommerce .row.outdoor-product-single .short-desc form.cart .button.wc-forward {
         margin-left: 1rem; }
 .row.product-info-wrapper {
   padding-bottom: 1rem;
@@ -2233,6 +2233,10 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
+.woocommerce #add_payment_method table.cart img,
+.woocommerce .woocommerce-cart table.cart img,
+.woocommerce .woocommerce-checkout table.cart img {
+  width: 5rem; }
 .woocommerce table.shop_table {
   border-radius: 0; }
   .woocommerce table.shop_table th {

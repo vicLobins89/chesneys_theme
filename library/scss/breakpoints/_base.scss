@@ -1971,6 +1971,12 @@ POSTS & CONTENT STYLES
 		@extend .secondary-btn;
 	}
 	
+	#add_payment_method table.cart img,
+	.woocommerce-cart table.cart img,
+	.woocommerce-checkout table.cart img {
+		width: 5rem;
+	}
+	
 	table.shop_table {
 		border-radius: 0;
 		
@@ -1988,6 +1994,10 @@ POSTS & CONTENT STYLES
 			td:first-child {
 				width: 3rem;
 			}
+		}
+		
+		.button {
+			@extend .secondary-btn;
 		}
 	}
 	
