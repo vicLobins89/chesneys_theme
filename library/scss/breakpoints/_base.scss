@@ -2606,13 +2606,7 @@ POSTS & CONTENT STYLES
 	
 	.product-categories {
 		> li.cat-item {
-			font-size: 1rem;
-			
-			a {
-				font-size: .9rem;
-			}
-			
-			&:first-child > a {
+			&.cat-parent > a {
 				display: none;
 			}
 			
