@@ -2326,6 +2326,37 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
+	.outdoor-related {
+		ul.products {
+			li.product {
+				a:not(.button) {
+					h2 {
+						font-family: $serif;
+						
+						&:after {
+							content: none;
+							display: none;
+						}
+					}
+					
+					h2, p {
+						margin: 0;
+					}
+					
+					&:hover, &:focus {
+						background: none;
+					}
+				}
+				
+				.price {
+					font-family: $sans-serif;
+					font-size: 1.2em;
+					color: $text-color;
+				}
+			}
+		}
+	}
+	
 	.hover-text {
 		position: absolute;
 		width: 100%;
