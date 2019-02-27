@@ -731,7 +731,7 @@ LAYOUT & GRID STYLES
 		font-size: 1rem;
 	}
 }
-
+c
 .team-members {
 	.col-6 > .cf {
 		background: $light-brown;
@@ -2437,6 +2437,10 @@ POSTS & CONTENT STYLES
 	
 	.woocommerce-order-details__title {
 		@extend .h2.lhs;
+		margin-bottom: 2rem;
+	}
+	
+	.dealer-code {
 		margin-bottom: 2rem;
 	}
 }

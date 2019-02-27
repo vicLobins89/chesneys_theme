@@ -315,16 +315,30 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 3
 
 // Adding dealer field
 function my_custom_checkout_field( $checkout ) {
-    echo '<div id="my_custom_checkout_field"><h3 class="h2 lhs sans">' . __('Dealer code') . '</h3>';
-    woocommerce_form_field( 'my_field_name', array(
+    echo '<div id="dealer-code"><h3 class="h2 lhs">' . __('Dealer code') . '</h3>';
+    woocommerce_form_field( 'dealer_code', array(
         'type'          => 'text',
         'class'         => array('my-field-class form-row-wide'),
-        'label'         => __('Fill in this field'),
-        'placeholder'   => __('Enter something'),
-        ), $checkout->get_value( 'my_field_name' ));
+        'label'         => __('If you have a dealer code enter it below'),
+        'placeholder'   => __('Your code'),
+        ), $checkout->get_value( 'dealer_code' ));
 
     echo '</div>';
 }
 add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
+
+// Save
+function my_custom_checkout_field_update_order_meta( $order_id ) {
+    if ( ! empty( $_POST['dealer_code'] ) ) {
+        update_post_meta( $order_id, 'My Field', sanitize_text_field( $_POST['dealer_code'] ) );
+    }
+}
+add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
+
+// Display on order
+function my_custom_checkout_field_display_admin_order_meta($order){
+    echo '<p><strong>'.__('My Field').':</strong> ' . get_post_meta( $order->id, 'My Field', true ) . '</p>';
+}
+add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
