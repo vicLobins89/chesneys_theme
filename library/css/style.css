@@ -1524,37 +1524,7 @@ c
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: space-around;
-  -ms-justify-content: space-around;
-  justify-content: space-around;
-  padding: 0;
-  line-height: 30px; }
-  .flex > .cf .flex-panel, .flex > .comment-respond .flex-panel {
-    display: inline-block;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-flex: 1;
-    /* OLD - iOS 6-, Safari 3.1-6 */
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    -webkit-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    width: 100%; }
-    .flex > .cf .flex-panel:before, .flex > .comment-respond .flex-panel:before {
-      content: '';
-      float: left;
-      padding-top: 90%; }
+  display: flex; }
 
 .equal-height > .cf, .equal-height > .comment-respond {
   display: inline-block;

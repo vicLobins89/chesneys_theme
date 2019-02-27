@@ -173,16 +173,9 @@ remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_re
 remove_action('woocommerce_after_single_product_summary', 'main_woocommerce_output_related_products', 20);
 
 function rh_woocommerce_output_related_products() {
-    $output = null;
-
-    ob_start();
-    woocommerce_related_products(3,3);
-    $content = ob_get_clean();
-    if($content) { $output .= $content; }
-
     echo '<section class="entry-content row cf related-wrapper"><div class="cf"><div class="col-12">';
     echo '<h2>Other Heat Range Products</h2><p>Compare our HEAT range and find the best model for you</p>';
-    echo $output;
+    echo do_shortcode('[products orderby="rand" category="outdoor-living" limit="2" columns="2" class="related-products"]');
     echo '</div></div></section>';
 }
 add_action( 'woocommerce_after_single_product_summary', 'rh_woocommerce_output_related_products', 20);
