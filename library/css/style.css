@@ -2676,9 +2676,9 @@ POSTS & CONTENT STYLES
 .woocommerce-cart .woocommerce-order-details__title,
 .woocommerce-checkout .woocommerce-order-details__title {
   margin-bottom: 2rem; }
-#add_payment_method .dealer-code,
-.woocommerce-cart .dealer-code,
-.woocommerce-checkout .dealer-code {
+#add_payment_method #dealer-code,
+.woocommerce-cart #dealer-code,
+.woocommerce-checkout #dealer-code {
   margin-bottom: 2rem; }
 
 .woocommerce-order-pay .secondary-btn, .woocommerce-order-pay .woocommerce button.single_add_to_cart_button, .woocommerce .woocommerce-order-pay button.single_add_to_cart_button,
