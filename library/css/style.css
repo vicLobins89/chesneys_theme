@@ -2526,31 +2526,31 @@ POSTS & CONTENT STYLES
   .woocommerce ul.products li.product:hover .hover-text, .woocommerce ul.products li.product:focus .hover-text {
     opacity: 1;
     visibility: visible; }
-.woocommerce.outdoor-related ul.products li.product a:not(.button) h2, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2 {
+.woocommerce.term-outdoor-living ul.products li.product a:not(.button) h2, .woocommerce.outdoor-related ul.products li.product a:not(.button) h2, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2 {
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
   text-transform: none;
   font-size: 1.35em;
   margin: 1rem 0 .75rem !important; }
-  .woocommerce.outdoor-related ul.products li.product a:not(.button) h2:after, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2:after {
+  .woocommerce.term-outdoor-living ul.products li.product a:not(.button) h2:after, .woocommerce.outdoor-related ul.products li.product a:not(.button) h2:after, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2:after {
     bottom: auto;
     top: -14px; }
-.woocommerce.outdoor-related ul.products li.product a:not(.button) h2, .woocommerce.outdoor-related ul.products li.product a:not(.button) p, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) p {
+.woocommerce.term-outdoor-living ul.products li.product a:not(.button) h2, .woocommerce.term-outdoor-living ul.products li.product a:not(.button) p, .woocommerce.outdoor-related ul.products li.product a:not(.button) h2, .woocommerce.outdoor-related ul.products li.product a:not(.button) p, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) p {
   margin: 0; }
-.woocommerce.outdoor-related ul.products li.product a:not(.button):hover, .woocommerce.outdoor-related ul.products li.product a:not(.button):focus, .woocommerce.outdoor-accessories ul.products li.product a:not(.button):hover, .woocommerce.outdoor-accessories ul.products li.product a:not(.button):focus {
+.woocommerce.term-outdoor-living ul.products li.product a:not(.button):hover, .woocommerce.term-outdoor-living ul.products li.product a:not(.button):focus, .woocommerce.outdoor-related ul.products li.product a:not(.button):hover, .woocommerce.outdoor-related ul.products li.product a:not(.button):focus, .woocommerce.outdoor-accessories ul.products li.product a:not(.button):hover, .woocommerce.outdoor-accessories ul.products li.product a:not(.button):focus {
   background: none; }
-.woocommerce.outdoor-related ul.products li.product .price, .woocommerce.outdoor-accessories ul.products li.product .price {
+.woocommerce.term-outdoor-living ul.products li.product .price, .woocommerce.outdoor-related ul.products li.product .price, .woocommerce.outdoor-accessories ul.products li.product .price {
   font-family: "Univers", Helvetica, Arial, sans-serif;
   font-size: 1.2em;
   color: #142128;
   font-weight: bold;
   margin-top: 1.5rem; }
-.woocommerce.outdoor-related ul.products li.product .category-name, .woocommerce.outdoor-accessories ul.products li.product .category-name {
+.woocommerce.term-outdoor-living ul.products li.product .category-name, .woocommerce.outdoor-related ul.products li.product .category-name, .woocommerce.outdoor-accessories ul.products li.product .category-name {
   font-family: "Univers", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: .75em; }
 .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2.woocommerce-loop-product__title {
   font-size: 1.1em; }
-.woocommerce.term-outdoor-living h2.woocommerce-loop-product__title + p, .woocommerce.outdoor-accessories h2.woocommerce-loop-product__title + p, .woocommerce.ol-related h2.woocommerce-loop-product__title + p {
+.woocommerce.outdoor-accessories h2.woocommerce-loop-product__title + p, .woocommerce.ol-related h2.woocommerce-loop-product__title + p {
   display: none; }
 .woocommerce .hover-text {
   position: absolute;

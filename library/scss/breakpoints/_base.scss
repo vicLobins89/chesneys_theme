@@ -1968,6 +1968,7 @@ POSTS & CONTENT STYLES
 	}
 }
 
+// start woo //
 .woocommerce {
 	button.single_add_to_cart_button,
 	button.woocommerce-Button,
@@ -2314,6 +2315,7 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
+	&.term-outdoor-living,
 	&.outdoor-related,
 	&.outdoor-accessories {
 		ul.products {
@@ -2369,7 +2371,6 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
-	&.term-outdoor-living,
 	&.outdoor-accessories,
 	&.ol-related {
 		h2.woocommerce-loop-product__title {
@@ -2377,6 +2378,10 @@ POSTS & CONTENT STYLES
 				display: none;
 			}
 		}
+	}
+	
+	&.term-outdoor-living {
+		
 	}
 	
 	.hover-text {
