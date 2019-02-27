@@ -1425,6 +1425,8 @@ LAYOUT & GRID STYLES
         vertical-align: middle; }
   .module.module-our-team h2 {
     text-align: center; }
+  .module .primary-btn, .module .image-link + p, .module .image-link .wp-caption-text, .image-link .module .wp-caption-text, .module .vid-thumb .play, .vid-thumb .module .play, .module .row.related-wrapper .woocommerce-loop-product__title, .row.related-wrapper .module .woocommerce-loop-product__title, .module a.comment-reply-link, .module #submit {
+    font-size: 1rem; }
 
 .team-members .col-6 > .cf, .team-members .col-6 > .comment-respond {
   background: #f5f3f1; }
