@@ -2785,7 +2785,7 @@ POSTS & CONTENT STYLES
 .woocommerce .spares-shop-loop .product-categories > li.cat-item {
   font-size: 1rem; }
   .woocommerce .spares-shop-loop .product-categories > li.cat-item a {
-    font-size: .9em; }
+    font-size: .9rem; }
   .woocommerce .spares-shop-loop .product-categories > li.cat-item:first-child > a {
     display: none; }
   .woocommerce .spares-shop-loop .product-categories > li.cat-item:not(.current-cat):not(.cat-parent) {
