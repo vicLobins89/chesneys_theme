@@ -2561,6 +2561,10 @@ POSTS & CONTENT STYLES
   color: #142128;
   font-weight: bold;
   margin-top: 1.5rem; }
+.woocommerce.outdoor-related ul.products li.product .category-name, .woocommerce.outdoor-accessories ul.products li.product .category-name {
+  font-family: "Univers", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: .75em; }
 .woocommerce.outdoor-accessories h2.woocommerce-loop-product__title {
   font-size: 1.1em; }
   .woocommerce.outdoor-accessories h2.woocommerce-loop-product__title + p {
