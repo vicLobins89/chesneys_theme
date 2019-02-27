@@ -2580,6 +2580,10 @@ POSTS & CONTENT STYLES
 				bottom: auto;
 				top: -14px;
 			}
+			
+			+ p {
+				display: none;
+			}
 		}
 		
 		.price {

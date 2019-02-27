@@ -82,10 +82,3 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
 </li>
-<?php
-if( is_page(1470) ) {
-	echo '<p class="category-name">';
-	echo 'hello';
-	echo '</p>';
-}
-?>

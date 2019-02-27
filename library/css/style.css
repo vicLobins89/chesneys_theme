@@ -2771,6 +2771,8 @@ POSTS & CONTENT STYLES
   .woocommerce .spares-shop-loop ul.products .product .woocommerce-loop-product__title:after {
     bottom: auto;
     top: -14px; }
+  .woocommerce .spares-shop-loop ul.products .product .woocommerce-loop-product__title + p {
+    display: none; }
 .woocommerce .spares-shop-loop ul.products .product .price {
   font-family: "Univers", Helvetica, Arial, sans-serif;
   color: #142128;
