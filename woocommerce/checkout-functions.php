@@ -8,6 +8,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$order = new WC_Order( $order_id );
 	$email = $order->get_billing_email();
 	$phone = $order->get_billing_phone();
+	$order_number = $order->get_order_number();
 //	$shipping_type = $order->get_shipping_method();
 
 	// set the address fields
@@ -67,7 +68,7 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		if( $product->get_shipping_class() == 'banbury' ) {
 			$csv_data[] = array(
-				'YourOrderRef' => $order_id,
+				'YourOrderRef' => $order_number,
 				'CustomerName' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
 				'CustomerAddressLine1' => $address['shipping_address_1'],
 				'CustomerAddressLine2' => $address['shipping_address_2'],
@@ -102,7 +103,7 @@ function wdm_send_order_to_ext( $order_id ){
 		'security_hash' => md5( $message_timestamp . $api_key ),
 		'test' => true,
 		'order' => array(
-			'client_ref' => $order_id,
+			'client_ref' => $order_number,
 			'ShippingContact' => array(
 				'name' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
 				'email' => $email,
