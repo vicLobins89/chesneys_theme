@@ -25,7 +25,9 @@ $term = get_queried_object();
 // Number of rows + products
 function spares_loop_columns() {
 	$term = get_queried_object();
-	if( is_product_category(94) || is_product_category(64) ) {
+	if( term_is_ancestor_of(64, $term->term_id, 'product_cat') || is_product_category(64) ) {
+		return 2;
+	} elseif( term_is_ancestor_of(94, $term->term_id, 'product_cat') || is_product_category(94) ) {
 		return 2;
 	} else {
 		return 4;
