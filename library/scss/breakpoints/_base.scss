@@ -607,6 +607,16 @@ LAYOUT & GRID STYLES
 			}
 		}
 	}
+	
+	&.woocommerce-products-header {
+		.h2.center {
+			text-align: center;
+			
+			+ p {
+				text-align: center;
+			}
+		}
+	}
 }
 
 .black-box {

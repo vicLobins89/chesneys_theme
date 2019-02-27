@@ -254,7 +254,8 @@ function woocommerce_category_image() {
 				<?php echo $cat_desc; ?>
 			</div> <?php
 		} else { ?>
-			<h1 class="h2" style="text-align: center;"><?php woocommerce_page_title(); ?></h1>
+	  
+			<h1 class="h2 center"><?php woocommerce_page_title(); ?></h1>
 			<?php echo $cat_desc; ?>
 		<?php }
 	}
