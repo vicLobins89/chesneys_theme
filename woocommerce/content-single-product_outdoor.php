@@ -176,7 +176,7 @@ function rh_woocommerce_output_related_products() {
     $output = null;
 
     ob_start();
-    woocommerce_related_products(2,2,'rand');
+    woocommerce_related_products(3,3);
     $content = ob_get_clean();
     if($content) { $output .= $content; }
 
