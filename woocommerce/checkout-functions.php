@@ -1,8 +1,8 @@
 <?php
 
 // Order Complete Hook
-//add_action('woocommerce_payment_complete', 'wdm_send_order_to_ext');
-add_action('woocommerce_thankyou', 'wdm_send_order_to_ext');
+add_action('woocommerce_payment_complete', 'wdm_send_order_to_ext');
+//add_action('woocommerce_thankyou', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
 	// get order object and order details
 	$order = new WC_Order( $order_id );
