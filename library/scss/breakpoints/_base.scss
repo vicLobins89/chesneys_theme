@@ -2370,11 +2370,17 @@ POSTS & CONTENT STYLES
 	}
 	
 	&.outdoor-accessories {
-		h2.woocommerce-loop-product__title {
-			font-size: 1.1em;
-			
-			 + p {
-				display: none;
+		ul.products {
+			li.product {
+				a:not(.button) {
+					h2.woocommerce-loop-product__title {
+						font-size: 1.1em;
+
+						 + p {
+							display: none;
+						}
+					}
+				}
 			}
 		}
 	}

@@ -2565,9 +2565,9 @@ POSTS & CONTENT STYLES
   font-family: "Univers", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: .75em; }
-.woocommerce.outdoor-accessories h2.woocommerce-loop-product__title {
+.woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2.woocommerce-loop-product__title {
   font-size: 1.1em; }
-  .woocommerce.outdoor-accessories h2.woocommerce-loop-product__title + p {
+  .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2.woocommerce-loop-product__title + p {
     display: none; }
 .woocommerce .hover-text {
   position: absolute;
