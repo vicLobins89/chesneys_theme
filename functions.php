@@ -313,4 +313,18 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archiv
 // Sorting
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 
+// Adding dealer field
+function my_custom_checkout_field( $checkout ) {
+    echo '<div id="my_custom_checkout_field"><h2>' . __('Dealer ') . '</h2>';
+    woocommerce_form_field( 'my_field_name', array(
+        'type'          => 'text',
+        'class'         => array('my-field-class form-row-wide'),
+        'label'         => __('Fill in this field'),
+        'placeholder'   => __('Enter something'),
+        ), $checkout->get_value( 'my_field_name' ));
+
+    echo '</div>';
+}
+add_action( 'woocommerce_checkout_before_customer_details', 'my_custom_checkout_field' );
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
