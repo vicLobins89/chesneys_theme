@@ -2543,16 +2543,16 @@ POSTS & CONTENT STYLES
   .woocommerce ul.products li.product:hover .hover-text, .woocommerce ul.products li.product:focus .hover-text {
     opacity: 1;
     visibility: visible; }
-.woocommerce .outdoor-related ul.products li.product a:not(.button) h2 {
+.woocommerce.outdoor-related ul.products li.product a:not(.button) h2 {
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; }
-  .woocommerce .outdoor-related ul.products li.product a:not(.button) h2:after {
+  .woocommerce.outdoor-related ul.products li.product a:not(.button) h2:after {
     content: none;
     display: none; }
-.woocommerce .outdoor-related ul.products li.product a:not(.button) h2, .woocommerce .outdoor-related ul.products li.product a:not(.button) p {
+.woocommerce.outdoor-related ul.products li.product a:not(.button) h2, .woocommerce.outdoor-related ul.products li.product a:not(.button) p {
   margin: 0; }
-.woocommerce .outdoor-related ul.products li.product a:not(.button):hover, .woocommerce .outdoor-related ul.products li.product a:not(.button):focus {
+.woocommerce.outdoor-related ul.products li.product a:not(.button):hover, .woocommerce.outdoor-related ul.products li.product a:not(.button):focus {
   background: none; }
-.woocommerce .outdoor-related ul.products li.product .price {
+.woocommerce.outdoor-related ul.products li.product .price {
   font-family: "Univers", Helvetica, Arial, sans-serif;
   font-size: 1.2em;
   color: #142128; }
