@@ -330,14 +330,14 @@ add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
 // Save
 function my_custom_checkout_field_update_order_meta( $order_id ) {
     if ( ! empty( $_POST['dealer_code'] ) ) {
-        update_post_meta( $order_id, 'My Field', sanitize_text_field( $_POST['dealer_code'] ) );
+        update_post_meta( $order_id, 'Dealer Code', sanitize_text_field( $_POST['dealer_code'] ) );
     }
 }
 add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
 
 // Display on order
 function my_custom_checkout_field_display_admin_order_meta($order){
-    echo '<p><strong>'.__('Dealer code: ').':</strong> ' . get_post_meta( $order->id, 'dealer_code', true ) . '</p>';
+    echo '<p><strong>'.__('Dealer code: ').':</strong> ' . get_post_meta( $order->get_id(), 'Dealer Code', true ) . '</p>';
 }
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
 
