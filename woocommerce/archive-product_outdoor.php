@@ -22,6 +22,17 @@ require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
 $term = get_queried_object();
 
+// Number of rows + products
+function spares_loop_columns() {
+	$term = get_queried_object();
+	if( is_product_category(94) || is_product_category(64) ) {
+		return 2;
+	} else {
+		return 4;
+	}
+}
+add_filter('loop_shop_columns', 'spares_loop_columns', 999);
+
 /**
  * Hook: woocommerce_before_main_content.
  *
