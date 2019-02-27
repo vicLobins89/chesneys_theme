@@ -325,6 +325,6 @@ function my_custom_checkout_field( $checkout ) {
 
     echo '</div>';
 }
-add_action( 'woocommerce_checkout_before_customer_details', 'my_custom_checkout_field' );
+add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
