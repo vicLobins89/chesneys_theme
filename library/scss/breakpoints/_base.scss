@@ -2362,12 +2362,17 @@ POSTS & CONTENT STYLES
 				a:not(.button) {
 					h2.woocommerce-loop-product__title {
 						font-size: 1.1em;
-
-						 + p {
-							display: none;
-						}
 					}
 				}
+			}
+		}
+	}
+	
+	&.outdoor-accessories,
+	&.ol-related {
+		h2.woocommerce-loop-product__title {
+			+ p {
+				display: none;
 			}
 		}
 	}

@@ -2544,8 +2544,8 @@ POSTS & CONTENT STYLES
   font-size: .75em; }
 .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2.woocommerce-loop-product__title {
   font-size: 1.1em; }
-  .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2.woocommerce-loop-product__title + p {
-    display: none; }
+.woocommerce.outdoor-accessories h2.woocommerce-loop-product__title + p, .woocommerce.ol-related h2.woocommerce-loop-product__title + p {
+  display: none; }
 .woocommerce .hover-text {
   position: absolute;
   width: 100%;
