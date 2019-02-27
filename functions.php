@@ -315,7 +315,7 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 3
 
 // Adding dealer field
 function my_custom_checkout_field( $checkout ) {
-    echo '<div id="my_custom_checkout_field"><h2>' . __('Dealer ') . '</h2>';
+    echo '<div id="my_custom_checkout_field"><h3 class="h2 lhs sans">' . __('Dealer code') . '</h3>';
     woocommerce_form_field( 'my_field_name', array(
         'type'          => 'text',
         'class'         => array('my-field-class form-row-wide'),
@@ -325,6 +325,6 @@ function my_custom_checkout_field( $checkout ) {
 
     echo '</div>';
 }
-add_action( 'woocommerce_checkout_before_order_review', 'my_custom_checkout_field' );
+add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
