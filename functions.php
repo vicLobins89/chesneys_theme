@@ -241,7 +241,7 @@ require_once( 'woocommerce/checkout-functions.php' );
 // Display category image on category archive
 function woocommerce_category_image() {
 	$cat = get_queried_object();
-	if( !$cat->term_id !== '' ) {
+	if( isset($cat->term_id) ) {
 		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
 		$image = wp_get_attachment_url( $thumbnail_id );
 		$cat_desc = term_description( $cat->term_id, 'product_cat' );
