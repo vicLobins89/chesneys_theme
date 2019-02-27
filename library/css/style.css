@@ -1322,6 +1322,11 @@ LAYOUT & GRID STYLES
     margin: 0;
     font-size: 0; }
 
+.black-box {
+  padding: 2rem;
+  background: #142128;
+  color: #fff; }
+
 .module {
   position: relative; }
   .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
