@@ -56,6 +56,11 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 *
 	 * @hooked woocommerce_template_loop_product_title - 10
 	 */
+	$product_cats = wp_get_post_terms($product->get_id(), 'product_cat');
+    $count = count($product_cats);
+	echo '<p class="category-name">';
+	echo $product_cats[1]->name;
+	echo '</p>';
 	do_action( 'woocommerce_shop_loop_item_title' );
 
 	/**

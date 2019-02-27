@@ -2364,8 +2364,12 @@ POSTS & CONTENT STYLES
 	}
 	
 	&.outdoor-accessories {
-		h2.woocommerce-loop-product__title + p {
-			display: none;
+		h2.woocommerce-loop-product__title {
+			font-size: 1.1em;
+			
+			 + p {
+				display: none;
+			}
 		}
 	}
 	
