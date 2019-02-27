@@ -283,6 +283,12 @@ WORDPRESS BODY CLASSES
 .single {}
 .blog, .archive, .single {}
 
+.widecolumn {
+	max-width: 80%;
+    margin: 10% auto;
+    text-align: center;
+}
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -1971,7 +1977,9 @@ POSTS & CONTENT STYLES
 }
 
 .woocommerce {
-	button.single_add_to_cart_button {
+	button.single_add_to_cart_button,
+	button.woocommerce-Button,
+	button[type=submit].woocommerce-Button {
 		@extend .secondary-btn;
 	}
 	
