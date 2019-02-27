@@ -2544,7 +2544,10 @@ POSTS & CONTENT STYLES
     opacity: 1;
     visibility: visible; }
 .woocommerce.outdoor-related ul.products li.product a:not(.button) h2 {
-  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; }
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+  text-transform: none;
+  font-size: 1.35em;
+  margin: 1rem 0 .75rem !important; }
   .woocommerce.outdoor-related ul.products li.product a:not(.button) h2:after {
     content: none;
     display: none; }
@@ -2555,7 +2558,9 @@ POSTS & CONTENT STYLES
 .woocommerce.outdoor-related ul.products li.product .price {
   font-family: "Univers", Helvetica, Arial, sans-serif;
   font-size: 1.2em;
-  color: #142128; }
+  color: #142128;
+  font-weight: bold;
+  margin-top: 1.5rem; }
 .woocommerce .hover-text {
   position: absolute;
   width: 100%;

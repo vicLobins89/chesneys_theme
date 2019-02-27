@@ -2332,6 +2332,9 @@ POSTS & CONTENT STYLES
 				a:not(.button) {
 					h2 {
 						font-family: $serif;
+						text-transform: none;
+						font-size: 1.35em;
+    					margin: 1rem 0 .75rem !important;
 						
 						&:after {
 							content: none;
@@ -2352,6 +2355,8 @@ POSTS & CONTENT STYLES
 					font-family: $sans-serif;
 					font-size: 1.2em;
 					color: $text-color;
+					font-weight: bold;
+					margin-top: 1.5rem;
 				}
 			}
 		}
