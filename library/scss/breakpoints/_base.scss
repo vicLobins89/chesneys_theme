@@ -1055,6 +1055,10 @@ h2, .h2 {
 		background: $white;
 	}
 	
+	&.black:after {
+		background: $black;
+	}
+	
 	&.lhs:after,
 	&.woocommerce-loop-category__title:after,
 	&.woocommerce-loop-product__title:after,
