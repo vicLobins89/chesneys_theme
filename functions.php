@@ -246,10 +246,8 @@ function woocommerce_category_image() {
 		$image = wp_get_attachment_url( $thumbnail_id );
 		$cat_desc = term_description( $cat->term_id, 'product_cat' );
 
-		if ( is_product_category() && !is_product_category(63) ){
-			if( $image ) {
-				echo '<img src="' . $image . '" alt="' . $cat->name . '" />';
-			}
+		if ( is_product_category() && !is_product_category(63) && $image ){
+			echo '<img src="' . $image . '" alt="' . $cat->name . '" />';
 
 			?> <div class="featured-copy">
 				<h1 class="h2 lhs"><?php woocommerce_page_title(); ?></h1>
