@@ -19,6 +19,12 @@ defined( 'ABSPATH' ) || exit;
 require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
 
+// Removing image link
+function wc_remove_link_on_thumbnails( $html ) {
+     return strip_tags( $html,'<img>' );
+}
+add_filter('woocommerce_single_product_image_thumbnail_html','wc_remove_link_on_thumbnails' );
+
 /**
  * Hook: woocommerce_before_single_product.
  *
