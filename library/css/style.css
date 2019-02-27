@@ -1519,7 +1519,7 @@ c
   .blog-wrapper img {
     max-width: 100%; }
 
-.flex {
+.flex > cf {
   display: inline-block;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1533,7 +1533,7 @@ c
   justify-content: space-around;
   padding: 0;
   line-height: 30px; }
-  .flex .flex-panel {
+  .flex > cf .flex-panel {
     display: inline-block;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1551,7 +1551,7 @@ c
     -ms-align-items: center;
     align-items: center;
     width: 100%; }
-    .flex .flex-panel:before {
+    .flex > cf .flex-panel:before {
       content: '';
       float: left;
       padding-top: 90%; }
