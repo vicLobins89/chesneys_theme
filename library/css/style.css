@@ -1711,7 +1711,7 @@ p, .p {
   .copy-s .black-box {
     padding: 2rem; }
     .copy-s .black-box ul {
-      font-size: .9em; }
+      font-size: 1em !important; }
 
 .narrow-para {
   max-width: 70%;
