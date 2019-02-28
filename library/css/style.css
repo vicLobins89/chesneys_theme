@@ -1549,6 +1549,11 @@ c
   display: flex; }
   .flex > .cf .black-box, .flex > .comment-respond .black-box {
     height: 100%; }
+.flex.flex-center {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center; }
 
 .equal-height > .cf, .equal-height > .comment-respond {
   display: inline-block;
