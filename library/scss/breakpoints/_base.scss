@@ -1097,6 +1097,18 @@ p, .p {
 
 .sans {
 	font-family: $sans-serif !important;
+	
+	.serif {
+		font-family: $serif !important;
+	}
+}
+
+.serif {
+	font-family: $serif !important;
+	
+	.sans {
+		font-family: $sans-serif !important;
+	}
 }
 
 .copy-l {
