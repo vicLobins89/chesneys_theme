@@ -2226,9 +2226,9 @@ POSTS & CONTENT STYLES
   .entry-content [class*="col-"] .p:first-child,
   .entry-content [class*="col-"] p:first-child {
     margin-top: 0; }
-  .entry-content ul:not(.product-categories), .entry-content ol {
+  .entry-content ul:not(.product-categories ul), .entry-content ol {
     font-size: .9rem; }
-    .entry-content ul:not(.product-categories) li, .entry-content ol li {
+    .entry-content ul:not(.product-categories ul) li, .entry-content ol li {
       margin-bottom: .8rem; }
   .entry-content ul {
     list-style-type: disc;

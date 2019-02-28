@@ -1825,7 +1825,7 @@ POSTS & CONTENT STYLES
 
 	ul, ol, table, dl {}
 
-	ul:not(.product-categories), ol {
+	ul:not(.product-categories ul), ol {
 		font-size: .9rem;
 
 		li {
