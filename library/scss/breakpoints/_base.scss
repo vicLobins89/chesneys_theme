@@ -1123,6 +1123,18 @@ p, .p {
 	font-size: 200% !important;
 }
 
+.copy-s {
+	font-size: 80%;
+	
+	p {
+		font-size: 1.2rem;
+	}
+	
+	.black-box {
+		padding: 2rem;
+	}
+}
+
 .narrow-para {
 	max-width: 70%;
 	margin-left: auto !important;
@@ -1798,7 +1810,7 @@ POSTS & CONTENT STYLES
 			  text-indent: -5px;
 				
 				&:before {
-				  content: "-";
+				  content: "- ";
 				  text-indent: -5px;
 				}
 			}

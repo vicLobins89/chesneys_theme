@@ -1695,6 +1695,13 @@ p, .p {
 .copy-xxl {
   font-size: 200% !important; }
 
+.copy-s {
+  font-size: 80%; }
+  .copy-s p {
+    font-size: 1.2rem; }
+  .copy-s .black-box {
+    padding: 2rem; }
+
 .narrow-para {
   max-width: 70%;
   margin-left: auto !important;
@@ -2201,7 +2208,7 @@ POSTS & CONTENT STYLES
       .entry-content ul.dashed > li {
         text-indent: -5px; }
         .entry-content ul.dashed > li:before {
-          content: "-";
+          content: "- ";
           text-indent: -5px; }
     .entry-content ul li {
       font-size: 1.15em; }
