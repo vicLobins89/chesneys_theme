@@ -1778,8 +1778,11 @@ POSTS & CONTENT STYLES
 	ul, ol, table, dl {}
 
 	ul, ol {
+		font-size: .9rem;
 
-		li {}
+		li {
+			margin-bottom: .8rem;
+		}
 
 	}
 
@@ -1787,11 +1790,22 @@ POSTS & CONTENT STYLES
 		list-style-type: disc;
 		margin-bottom: 2em;
 		padding-left: 1.25em;
+		
+		&.dashed {
+			list-style-type: none;
 			
+			> li {
+			  text-indent: -5px;
+				
+				&:before {
+				  content: "-";
+				  text-indent: -5px;
+				}
+			}
+		}	
 
 		li {
 			font-size: 1.15em;
-			margin-bottom: 1.5em;
 		}
 	}
 	

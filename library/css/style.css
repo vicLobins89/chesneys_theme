@@ -2188,13 +2188,23 @@ POSTS & CONTENT STYLES
   .entry-content [class*="col-"] .p:first-child,
   .entry-content [class*="col-"] p:first-child {
     margin-top: 0; }
+  .entry-content ul, .entry-content ol {
+    font-size: .9rem; }
+    .entry-content ul li, .entry-content ol li {
+      margin-bottom: .8rem; }
   .entry-content ul {
     list-style-type: disc;
     margin-bottom: 2em;
     padding-left: 1.25em; }
+    .entry-content ul.dashed {
+      list-style-type: none; }
+      .entry-content ul.dashed > li {
+        text-indent: -5px; }
+        .entry-content ul.dashed > li:before {
+          content: "-";
+          text-indent: -5px; }
     .entry-content ul li {
-      font-size: 1.15em;
-      margin-bottom: 1.5em; }
+      font-size: 1.15em; }
   .entry-content .list {
     margin-top: 2.5em;
     padding-left: 0; }
