@@ -1136,6 +1136,12 @@ LAYOUT & GRID STYLES
 
 .row.wrap > .cf, .row.wrap > .comment-respond {
   max-width: 1100px; }
+.row.inline {
+  text-align: center; }
+  .row.inline .primary-btn, .row.inline .image-link + p, .row.inline .image-link .wp-caption-text, .image-link .row.inline .wp-caption-text, .row.inline .vid-thumb .play, .vid-thumb .row.inline .play, .row.inline .row.related-wrapper .woocommerce-loop-product__title, .row.related-wrapper .row.inline .woocommerce-loop-product__title, .row.inline a.comment-reply-link, .row.inline #submit {
+    margin: 1rem 1.5rem 0;
+    font-size: .9rem;
+    min-width: 12rem; }
 .row.full {
   padding: 0; }
   .row.full [class*="col-"] {

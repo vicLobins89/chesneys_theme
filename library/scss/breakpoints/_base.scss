@@ -303,6 +303,16 @@ LAYOUT & GRID STYLES
 		max-width: 1100px;
 	}
 	
+	&.inline {
+		text-align: center;
+		
+		.primary-btn {
+			margin: 1rem 1.5rem 0;
+			font-size: .9rem;
+			min-width: 12rem;
+		}
+	}
+	
 	&.full {
 		padding: 0;
 		
