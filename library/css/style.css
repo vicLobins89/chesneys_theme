@@ -1554,6 +1554,12 @@ c
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center; }
+.flex.flex-center.image-left .col-6:last-child {
+  max-width: 43rem;
+  margin: auto; }
+.flex.flex-center.image-right .col-6:first-child {
+  max-width: 43rem;
+  margin: auto; }
 
 .equal-height > .cf, .equal-height > .comment-respond {
   display: inline-block;

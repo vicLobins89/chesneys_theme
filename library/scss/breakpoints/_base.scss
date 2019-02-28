@@ -905,6 +905,20 @@ c
 		> .cf {
 			@include prefix(align-items, center, webkit moz ms);
 		}
+		
+		&.image-left {
+			.col-6:last-child {
+				max-width: 43rem;
+    			margin: auto;
+			}
+		}
+		
+		&.image-right {
+			.col-6:first-child {
+				max-width: 43rem;
+    			margin: auto;
+			}
+		}
 	}
 }
 
