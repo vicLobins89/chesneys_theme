@@ -1139,6 +1139,10 @@ p, .p {
 	
 	.black-box {
 		padding: 2rem;
+		
+		ul {
+			font-size: .9em;
+		}
 	}
 }
 
@@ -1814,14 +1818,18 @@ POSTS & CONTENT STYLES
 			list-style-type: none;
 			
 			> li {
-			  text-indent: -5px;
+			  text-indent: -10px;
 				
 				&:before {
 				  content: "- ";
-				  text-indent: -5px;
+				  text-indent: -10px;
 				}
 			}
-		}	
+		}
+		
+		&.sans {
+			font-size: .8em;
+		}
 
 		li {
 			font-size: 1.15em;

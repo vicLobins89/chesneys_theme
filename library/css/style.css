@@ -1710,6 +1710,8 @@ p, .p {
     font-size: 1.2rem; }
   .copy-s .black-box {
     padding: 2rem; }
+    .copy-s .black-box ul {
+      font-size: .9em; }
 
 .narrow-para {
   max-width: 70%;
@@ -2215,10 +2217,12 @@ POSTS & CONTENT STYLES
     .entry-content ul.dashed {
       list-style-type: none; }
       .entry-content ul.dashed > li {
-        text-indent: -5px; }
+        text-indent: -10px; }
         .entry-content ul.dashed > li:before {
           content: "- ";
-          text-indent: -5px; }
+          text-indent: -10px; }
+    .entry-content ul.sans {
+      font-size: .8em; }
     .entry-content ul li {
       font-size: 1.15em; }
   .entry-content .list {
