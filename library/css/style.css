@@ -2256,7 +2256,8 @@ POSTS & CONTENT STYLES
     .entry-content ul.sans {
       font-size: .8em; }
     .entry-content ul li {
-      font-size: 1.15em; }
+      font-size: 1.15em;
+      margin-bottom: 6px; }
   .entry-content .list {
     margin-top: 2.5em;
     padding-left: 0; }
