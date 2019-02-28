@@ -75,6 +75,19 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 			background-color: $black;
 			color: $white;
 		}
+		
+		&.invert {
+			background: $black;
+			color: $white;
+			
+			&:hover,
+			&:focus,
+			.wp-caption:hover & {
+				background-clip: none;
+				color: $black;
+				
+			}
+		}
 	}
 	
 	&.multiline {
