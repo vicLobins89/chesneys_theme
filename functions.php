@@ -238,6 +238,15 @@ add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 require_once( 'woocommerce/shop-functions.php' );
 require_once( 'woocommerce/checkout-functions.php' );
 
+// Custom role
+add_role(
+    'trade',
+    __( 'Trade Stockist' ),
+    array(
+        'read' => true,
+    )
+);
+
 // Display category image on category archive
 function woocommerce_category_image() {
 	$cat = get_queried_object();
