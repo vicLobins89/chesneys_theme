@@ -1558,11 +1558,9 @@ c
     .equal-height .col-6 img:first-child {
       margin-top: 0 !important; }
 .equal-height.image-left .col-6:last-child {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem; }
+  padding: 2.5rem; }
 .equal-height.image-right .col-6:first-child {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem; }
+  padding: 2.5rem; }
 
 .image-left .col-6:first-child {
   padding: 0;
@@ -1692,7 +1690,7 @@ p, .p {
     font-family: "Univers", Helvetica, Arial, sans-serif !important; }
 
 .copy-l {
-  font-size: 120% !important; }
+  font-size: 140% !important; }
 
 .copy-xl {
   font-size: 160% !important; }
