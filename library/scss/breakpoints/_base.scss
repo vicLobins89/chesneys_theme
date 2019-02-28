@@ -639,6 +639,7 @@ LAYOUT & GRID STYLES
 	position: relative;
 	
 	&.module-outdoor-living-shop,
+	&.module-glossary,
 	&.module-design-a-fireplace {	
 		> .cf {
 			position: relative;
@@ -1085,6 +1086,7 @@ h2, .h2 {
 	&.woocommerce-loop-category__title:after,
 	&.woocommerce-loop-product__title:after,
 	.module-outdoor-living-shop &:after,
+	.module-glossary &:after,
 	.module-design-a-fireplace &:after {
 		left: 0;
 		margin-left: 0;
@@ -1835,6 +1837,14 @@ POSTS & CONTENT STYLES
 		list-style-type: disc;
 		margin-bottom: 2em;
 		padding-left: 1.25em;
+		
+		&.links {
+			list-style-type: none;
+			
+			> li {
+				text-decoration: underline;
+			}
+		}
 		
 		&.dashed {
 			list-style-type: none;
