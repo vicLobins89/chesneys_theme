@@ -2127,6 +2127,10 @@ POSTS & CONTENT STYLES
   max-width: 1400px;
   margin: .85em auto; }
 
+.page-id-614 .menu-breadcrumb span span:first-child,
+.parent-pageid-614 .menu-breadcrumb span span:first-child {
+  display: none; }
+
 .featured.top {
   padding-top: 0;
   padding-bottom: 0; }

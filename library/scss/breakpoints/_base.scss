@@ -1672,6 +1672,13 @@ POSTS & CONTENT STYLES
 	margin: .85em auto;
 }
 
+.page-id-614,
+.parent-pageid-614 {
+	.menu-breadcrumb span span:first-child {
+		display: none;
+	}
+}
+
 .featured {
 	&.top {
 		padding-top: 0;
