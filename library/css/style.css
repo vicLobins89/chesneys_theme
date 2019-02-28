@@ -1675,6 +1675,16 @@ p, .p {
 .sans, c
 .team-members h4 {
   font-family: "Univers", Helvetica, Arial, sans-serif !important; }
+  .sans .serif, c
+  .team-members h4 .serif {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" !important; }
+
+.serif {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" !important; }
+  .serif .sans, .serif c
+  .team-members h4, c
+  .team-members .serif h4 {
+    font-family: "Univers", Helvetica, Arial, sans-serif !important; }
 
 .copy-l {
   font-size: 120% !important; }
