@@ -902,7 +902,9 @@ c
 	}
 	
 	&.flex-center {
-		@include prefix(align-items, center, webkit moz ms);
+		> .cf {
+			@include prefix(align-items, center, webkit moz ms);
+		}
 	}
 }
 

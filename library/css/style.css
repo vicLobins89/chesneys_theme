@@ -1549,7 +1549,7 @@ c
   display: flex; }
   .flex > .cf .black-box, .flex > .comment-respond .black-box {
     height: 100%; }
-.flex.flex-center {
+.flex.flex-center > .cf, .flex.flex-center > .comment-respond {
   -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
