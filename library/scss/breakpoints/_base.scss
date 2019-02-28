@@ -665,6 +665,7 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
+	&.module-directory-of-chimney-pieces,
 	&.module-accessories-and-fuel,
 	&.module-accessories-and-fuel-outdoor,
 	&.module-spares-and-accessories {
@@ -1061,6 +1062,7 @@ h2, .h2 {
 		background: $text-color;
 		
 		.blog-module &,
+		.module-directory-of-chimney-pieces &,
 		.module-accessories-and-fuel &,
 		.module-accessories-and-fuel-outdoor &,
 		.module-spares-and-accessories &,
