@@ -2324,6 +2324,12 @@ POSTS & CONTENT STYLES
         background: url(../images/icons/icon-wifi.png) no-repeat center left; }
       .entry-content .list.list-icons .icon-wood-fire {
         background: url(../images/icons/icon-wood-fire.png) no-repeat center left; }
+  .entry-content ol {
+    font-size: 1.15em;
+    list-style-type: decimal;
+    padding-left: 1rem; }
+    .entry-content ol li {
+      margin-bottom: 6px; }
   .entry-content table {
     width: 100%;
     border: none;
