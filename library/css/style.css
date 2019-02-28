@@ -2130,6 +2130,9 @@ POSTS & CONTENT STYLES
 .page-id-614 .menu-breadcrumb span span:first-child,
 .parent-pageid-614 .menu-breadcrumb span span:first-child {
   display: none; }
+  .page-id-614 .menu-breadcrumb span span:first-child + .sep,
+  .parent-pageid-614 .menu-breadcrumb span span:first-child + .sep {
+    display: none; }
 
 .featured.top {
   padding-top: 0;

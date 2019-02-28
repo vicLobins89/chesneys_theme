@@ -1676,6 +1676,10 @@ POSTS & CONTENT STYLES
 .parent-pageid-614 {
 	.menu-breadcrumb span span:first-child {
 		display: none;
+		
+		+ .sep {
+			display: none;
+		}
 	}
 }
 
