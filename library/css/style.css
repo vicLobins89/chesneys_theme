@@ -1536,6 +1536,8 @@ c
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
+  .flex > .cf .black-box, .flex > .comment-respond .black-box {
+    height: 100%; }
 
 .equal-height > .cf, .equal-height > .comment-respond {
   display: inline-block;

@@ -885,6 +885,10 @@ c
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
+	
+	.black-box {
+		height: 100%;
+	}
 }
 
 .equal-height {
