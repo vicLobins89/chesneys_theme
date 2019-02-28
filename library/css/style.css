@@ -2226,7 +2226,8 @@ POSTS & CONTENT STYLES
     margin-bottom: 2em;
     padding-left: 1.25em; }
     .entry-content ul.links {
-      list-style-type: none; }
+      list-style-type: none;
+      padding: 0; }
       .entry-content ul.links > li {
         text-decoration: underline; }
     .entry-content ul.dashed {
