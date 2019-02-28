@@ -1696,7 +1696,7 @@ p, .p {
   font-size: 200% !important; }
 
 .copy-s {
-  font-size: 80%; }
+  font-size: 80% !important; }
   .copy-s p {
     font-size: 1.2rem; }
   .copy-s .black-box {
