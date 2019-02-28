@@ -57,6 +57,11 @@ jQuery(document).ready(function($) {
 		var newUrl = oldUrl.replace("/category/fireplaces", "/fireplaces");
 		$(this).attr("href", newUrl);
 	});
+	$('.menu-breadcrumb a:contains("Stoves")').each(function(){
+		var oldUrl = $(this).attr("href");
+		var newUrl = oldUrl.replace("/category/stoves", "/stoves");
+		$(this).attr("href", newUrl);
+	});
 	
 	// Menu
 	$('.menu-button').on('click', function(){
