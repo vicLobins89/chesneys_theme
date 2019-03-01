@@ -12,7 +12,6 @@ class CustomACF {
 				$moduleBackground .= get_the_post_thumbnail_url(get_the_ID(),'full');
 				$moduleBackground .= ') center/cover no-repeat"';
 			}
-			print_r($post);
 			?>
 			<section class="row entry-content cf module module-<?php echo $post->post_name; ?>">
 				<div class="cf" <?php echo (isset($moduleBackground)) ? $moduleBackground : ''; ?>>
