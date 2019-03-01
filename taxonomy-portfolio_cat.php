@@ -27,8 +27,6 @@ $acfClass = new CustomACF();
 							?>
 							
 							<section class="entry-content row post-content cf"><div class="cf"><div class="col-12">
-								
-								<h1 class="archive-title h2"><span><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></span> <?php single_cat_title(); ?></h1>
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
