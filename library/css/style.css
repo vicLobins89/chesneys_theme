@@ -1919,7 +1919,7 @@ NAVIGATION STYLES
   position: relative; }
 
 #news_header {
-  margin-bottom: 1rem; }
+  padding-bottom: 1rem; }
   #news_header > .cf, #news_header > .comment-respond {
     position: relative; }
   #news_header .widget_text {
