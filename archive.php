@@ -1,61 +1,76 @@
-<?php get_header(); ?>
+<?php
+get_header();
+require_once('classes/acf.php');
+$acfClass = new CustomACF();
+?>
 
 			<div id="content">
 
 				<div id="inner-content" class="cf">
 
-						<div id="main" class="col-8 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							
+							<?php get_sidebar('news_header'); ?>
+							
+							<?php
+							$categories = get_categories();
+							if( isset($categories) ) {
+								echo '<div class="cat-list">';
+								foreach($categories as $category) {
+								   echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
+								}
+								echo '</div>';
+							}
+							?>
+							
+							<section class="entry-content row post-content cf"><div class="cf"><div class="col-12">
+
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf col-4' ); ?> role="article">
+								
+								<a class="thumb" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('folio-thumb'); ?></a>
 
-								<section class="entry-content cf">
-									<h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									
-									<p class="byline entry-meta vcard">
-										<?php printf( __( 'Posted', 'bonestheme' ).' %1$s',
-                  							     /* the time the post was published */
-                  							     '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
-                    							); ?>
-									</p>
+								<?php printf( '<h3 class="h2 lhs sans">' . __('', 'bonestheme' ) . '%1$s</h3>' , get_the_category_list(', ') ); ?>
 
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-
-									<?php the_excerpt(); ?>
-
-								</section>
-
+								<a class="copy-l" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+								
 							</article>
 
 							<?php endwhile; ?>
 
-								<?php bones_page_navi(); ?>
+									<?php bones_page_navi(); ?>
 
 							<?php else : ?>
 
 									<article id="post-not-found" class="hentry cf">
-										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+											<header class="article-header">
+												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+											<section class="entry-content">
+												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the archive.php template.', 'bonestheme' ); ?></p>
+												<p><?php _e( 'This is the error message in the index.php template.', 'bonestheme' ); ?></p>
 										</footer>
 									</article>
 
 							<?php endif; ?>
+								
+							</div></div></section>
+							
+							<?php
+							$help_module = get_post(986);
+							$design_module = get_post(968);
+							$acfClass->render_modules($help_module);
+							$acfClass->render_modules($design_module);
+							?>
 
 						</div>
-					
-					<aside class="col-4 cf">
-						<?php get_sidebar(); ?>
-					</aside>
 
 				</div>
 
 			</div>
+
 
 <?php get_footer(); ?>
