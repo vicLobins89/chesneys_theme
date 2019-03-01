@@ -10,6 +10,8 @@ $acfClass = new CustomACF();
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							
+							<?php get_sidebar('news_header'); ?>
+							
 							<section class="entry-content row post-content cf"><div class="cf"><div class="col-12">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
