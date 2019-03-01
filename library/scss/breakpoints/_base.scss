@@ -228,6 +228,22 @@ hr {
 	}
 }
 
+.reveal-copy {
+	background: $white;
+	padding: 3rem;
+	text-align: center;
+	max-height: 0px;
+	@include transition(all 0.3s ease-in-out);
+	
+	&.active {
+		max-height: 300px;
+	}
+	
+	p {
+		margin: 0;
+	}
+}
+
 /********************
 WORDPRESS BODY CLASSES
 ********************/

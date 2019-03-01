@@ -21,6 +21,20 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
+	// Reveal clicks
+	$('.for-you').click(function(){
+		$('.reveal-copy').removeClass('active');
+		$('.reveal-copy .for-you').toggleClass('active');
+	});
+	$('.for-client').click(function(){
+		$('.reveal-copy').removeClass('active');
+		$('.reveal-copy .for-client').toggleClass('active');
+	});
+	$('.for-development').click(function(){
+		$('.reveal-copy').removeClass('active');
+		$('.reveal-copy .for-development').toggleClass('active');
+	});
+	
 	// Video Gallery
 	$('.play').on('click', function(){
 		var mainVid = $('.main-window').html(),

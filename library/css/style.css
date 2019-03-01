@@ -1103,6 +1103,18 @@ hr {
   .close-overlay:after {
     transform: rotate(-45deg); }
 
+.reveal-copy {
+  background: #fff;
+  padding: 3rem;
+  text-align: center;
+  max-height: 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .reveal-copy.active {
+    max-height: 300px; }
+  .reveal-copy p {
+    margin: 0; }
+
 /********************
 WORDPRESS BODY CLASSES
 ********************/
