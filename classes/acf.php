@@ -6,6 +6,7 @@ class CustomACF {
 			// override $post
 			global $post;
 			$post = $post_object;
+			print_r($post);
 			setup_postdata( $post );
 			if( has_post_thumbnail() ) {
 				$moduleBackground = ' style="background: url(';
