@@ -22,6 +22,7 @@ $acfClass = new CustomACF();
 									
 									<div class="featured-copy">
 										<h1 class="h2 lhs"><?php the_title(); ?></h1>
+										<p><?php the_author(); ?></p>
 									</div>
 									</div>
 								</section>
