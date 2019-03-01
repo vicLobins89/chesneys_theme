@@ -24,7 +24,7 @@ $acfClass = new CustomACF();
 								}
 								echo '</div>';
 							}
-							?>asda
+							?>
 							
 							<section class="entry-content row post-content cf"><div class="cf"><div class="col-12">
 
