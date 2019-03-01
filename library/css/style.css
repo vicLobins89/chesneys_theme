@@ -1190,6 +1190,11 @@ LAYOUT & GRID STYLES
   .blog .row.post-content h3, .archive .row.post-content h3 {
     font-size: 1em;
     margin: 1rem 0; }
+  .row.post-content .post a {
+    display: block; }
+  .row.post-content .post img {
+    width: 100%;
+    height: auto; }
 .row.shop-loop {
   padding-bottom: 0; }
 .row.spares-shop-loop {
@@ -1922,11 +1927,6 @@ NAVIGATION STYLES
   #news_header .widget_media_image {
     margin: 0;
     padding: 0; }
-    #news_header .widget_media_image a {
-      display: block; }
-    #news_header .widget_media_image img {
-      width: 100%;
-      height: auto; }
 
 #nav_widget {
   position: absolute;

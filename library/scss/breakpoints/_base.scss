@@ -367,6 +367,17 @@ LAYOUT & GRID STYLES
 				margin: 1rem 0;
 			}
 		}
+		
+		.post {
+			a {
+				display: block;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
 	}
 	
 	&.shop-loop {
@@ -1399,15 +1410,6 @@ NAVIGATION STYLES
 	.widget_media_image {
 		margin: 0;
 		padding: 0;
-		
-		a {
-			display: block;
-		}
-		
-		img {
-			width: 100%;
-			height: auto;
-		}
 	}
 }
 
