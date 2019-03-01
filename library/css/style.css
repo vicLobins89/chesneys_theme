@@ -1190,7 +1190,7 @@ LAYOUT & GRID STYLES
   .blog .row.post-content h3, .archive .row.post-content h3 {
     font-size: 1em;
     margin: 1rem 0; }
-  .row.post-content .post a {
+  .row.post-content .post .thumb {
     display: block; }
   .row.post-content .post img {
     width: 100%;
