@@ -1128,7 +1128,8 @@ hr {
     max-height: 300px;
     visibility: visible; }
   .reveal-copy p {
-    padding: 3rem; }
+    padding: 3rem;
+    margin: 0; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -3210,7 +3211,7 @@ TABLET & SMALLER LAPTOPS
   FONT STYLES
   *********************/
   p, .p {
-    font-size: 1.15em; }
+    font-size: 1.25em; }
 
   /*********************
   HEADER STYLES
