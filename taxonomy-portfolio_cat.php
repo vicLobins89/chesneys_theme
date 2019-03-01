@@ -24,11 +24,11 @@ $acfClass = new CustomACF();
 								}
 								echo '</div>';
 							}
-							?>
+							?>asda
 							
 							<section class="entry-content row post-content cf"><div class="cf"><div class="col-12">
 
-							<?php while (have_posts()) : the_post(); ?>
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf col-4' ); ?> role="article">
 								
@@ -44,7 +44,7 @@ $acfClass = new CustomACF();
 
 									<?php bones_page_navi(); ?>
 
-							<?php //else : ?>
+							<?php else : ?>
 
 									<article id="post-not-found" class="hentry cf">
 											<header class="article-header">
@@ -55,7 +55,7 @@ $acfClass = new CustomACF();
 										</section>
 									</article>
 
-							<?php //endif; ?>
+							<?php endif; ?>
 								
 							</div></div></section>
 							
