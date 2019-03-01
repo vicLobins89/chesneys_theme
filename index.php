@@ -10,7 +10,7 @@ $acfClass = new CustomACF();
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							
-							<section class="entry-content row cf"><div class="cf"><div class="col-12">
+							<section class="entry-content row post-content cf"><div class="cf"><div class="col-12">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -18,9 +18,9 @@ $acfClass = new CustomACF();
 								
 								<?php the_post_thumbnail('folio-thumb'); ?>
 
-								<?php printf( '<h3 class="footer-category">' . __('', 'bonestheme' ) . '%1$s</h3>' , get_the_category_list(', ') ); ?>
+								<?php printf( '<h3 class="h2 lhs sans">' . __('', 'bonestheme' ) . '%1$s</h3>' , get_the_category_list(', ') ); ?>
 
-								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+								<a class="copy-l" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 								
 							</article>
 
