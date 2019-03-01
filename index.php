@@ -46,7 +46,7 @@ $acfClass = new CustomACF();
 								
 							</div></div></section>
 							
-							<?php $acfClass->render_modules('design-a-fireplace'); ?>
+							<?php $acfClass->render_modules(986); ?>
 							<?php $acfClass->render_modules(968); ?>
 
 						</div>
