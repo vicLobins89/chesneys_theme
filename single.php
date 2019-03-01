@@ -36,7 +36,7 @@ $acfClass = new CustomACF();
 											$full_name = "{$fname} {$lname}";
 										}
 
-										echo '<p>'.$full_name.'<br>'.the_date('d-m-Y').'</p>';
+										echo '<p>'.$full_name.'<br>'.get_the_date('d-m-Y').'</p>';
 										?>
 									</div>
 									</div>
