@@ -6,7 +6,7 @@
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							
-							<section class="entry-content row cf">
+							<section class="entry-content row cf"><div class="cf"><div class="col-12">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -40,7 +40,7 @@
 
 							<?php endif; ?>
 								
-							</section>
+							</div></div></section>
 
 						</div>
 
