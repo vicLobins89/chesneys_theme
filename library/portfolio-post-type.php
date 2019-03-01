@@ -61,7 +61,7 @@ function folio_post() {
 	*/
 	
 	// now let's add custom categories (these act like categories)
-	register_taxonomy( 'portfolio_cat', 
+	register_taxonomy( 'portfolio_cat',
 		array('case_study'), /* if you change the name of register_post_type( 'content_block', then you have to change this */
 		array('hierarchical' => true,     /* if this is true, it acts like categories */
 			'labels' => array(
