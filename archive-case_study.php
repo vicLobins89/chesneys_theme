@@ -13,9 +13,10 @@ $acfClass = new CustomACF();
 							<?php get_sidebar('news_header'); ?>
 							
 							<?php
-							$categories = get_terms( 'case_study', array(
-												'hide_empty' => true,
-											) );
+							$categories = get_terms( array(
+								'taxonomy' => 'portfolio_cat',
+								'hide_empty' => true,
+							) );
 							if( isset($categories) ) {
 								echo '<div class="cat-list">';
 								foreach($categories as $category) {
