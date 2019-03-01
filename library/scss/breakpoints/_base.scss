@@ -1399,6 +1399,15 @@ NAVIGATION STYLES
 	.widget_media_image {
 		margin: 0;
 		padding: 0;
+		
+		a {
+			display: block;
+		}
+		
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 }
 

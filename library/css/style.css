@@ -1922,6 +1922,11 @@ NAVIGATION STYLES
   #news_header .widget_media_image {
     margin: 0;
     padding: 0; }
+    #news_header .widget_media_image a {
+      display: block; }
+    #news_header .widget_media_image img {
+      width: 100%;
+      height: auto; }
 
 #nav_widget {
   position: absolute;
