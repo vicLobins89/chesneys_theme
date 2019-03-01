@@ -2,11 +2,11 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="cf">
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							
-							<section class="entry-content cf">
+							<section class="entry-content row cf">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
