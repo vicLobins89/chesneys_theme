@@ -32,7 +32,6 @@ $acfClass = new CustomACF();
 										} elseif( empty( $lname )){
 											$full_name = $fname;
 										} else {
-											//both first name and last name are present
 											$full_name = "{$fname} {$lname}";
 										}
 
