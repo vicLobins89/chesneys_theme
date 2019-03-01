@@ -16,7 +16,7 @@ $acfClass = new CustomACF();
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf col-4' ); ?> role="article">
 								
-								<?php the_post_thumbnail('folio-thumb'); ?>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('folio-thumb'); ?></a>
 
 								<?php printf( '<h3 class="h2 lhs sans">' . __('', 'bonestheme' ) . '%1$s</h3>' , get_the_category_list(', ') ); ?>
 

@@ -360,6 +360,13 @@ LAYOUT & GRID STYLES
 	&.post-content {
 		margin-top: 2rem;
 		background: $light-brown;
+		
+		.blog & {
+			h3 {
+				font-size: 1em;
+				margin: 1rem 0;
+			}
+		}
 	}
 	
 	&.shop-loop {

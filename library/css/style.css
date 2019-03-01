@@ -1187,6 +1187,9 @@ LAYOUT & GRID STYLES
 .row.post-content {
   margin-top: 2rem;
   background: #f5f3f1; }
+  .blog .row.post-content h3, .archive .row.post-content h3 {
+    font-size: 1em;
+    margin: 1rem 0; }
 .row.shop-loop {
   padding-bottom: 0; }
 .row.spares-shop-loop {
