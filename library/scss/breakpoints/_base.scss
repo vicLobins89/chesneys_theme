@@ -1385,9 +1385,14 @@ NAVIGATION STYLES
 }
 
 #news_header {
-	position: relative;
+	margin-bottom: 1rem;
+	
+	> .cf {
+		position: relative;
+	}
 	
 	.widget_text {
+		margin: 0;
 		@extend .featured-copy;
 	}
 	

@@ -1914,7 +1914,11 @@ NAVIGATION STYLES
   position: relative; }
 
 #news_header {
-  position: relative; }
+  margin-bottom: 1rem; }
+  #news_header > .cf, #news_header > .comment-respond {
+    position: relative; }
+  #news_header .widget_text {
+    margin: 0; }
   #news_header .widget_media_image {
     margin: 0;
     padding: 0; }
