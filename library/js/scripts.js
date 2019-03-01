@@ -29,12 +29,12 @@ jQuery(document).ready(function($) {
 	});
 	$('.for-client').click(function(e){
 		e.preventDefault();
-		$('.reveal-copy:(.for-client)').removeClass('active');
+		$('.reveal-copy:not(.for-client)').removeClass('active');
 		$('.reveal-copy.for-client').toggleClass('active');
 	});
 	$('.for-development').click(function(e){
 		e.preventDefault();
-		$('.reveal-copy:(.for-development)').removeClass('active');
+		$('.reveal-copy:not(.for-development)').removeClass('active');
 		$('.reveal-copy.for-development').toggleClass('active');
 	});
 	

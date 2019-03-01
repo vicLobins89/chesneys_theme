@@ -1116,7 +1116,7 @@ hr {
     max-height: 300px;
     visibility: visible; }
   .reveal-copy p {
-    margin: 3rem; }
+    padding: 3rem; }
 
 /********************
 WORDPRESS BODY CLASSES
