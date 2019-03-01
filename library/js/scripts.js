@@ -22,15 +22,18 @@ jQuery(document).ready(function($) {
 	viewport = updateViewportDimensions();
 	
 	// Reveal clicks
-	$('.for-you').click(function(){
+	$('.for-you').click(function(e){
+		e.preventDefault();
 		$('.reveal-copy').removeClass('active');
 		$('.reveal-copy .for-you').toggleClass('active');
 	});
-	$('.for-client').click(function(){
+	$('.for-client').click(function(e){
+		e.preventDefault();
 		$('.reveal-copy').removeClass('active');
 		$('.reveal-copy .for-client').toggleClass('active');
 	});
-	$('.for-development').click(function(){
+	$('.for-development').click(function(e){
+		e.preventDefault();
 		$('.reveal-copy').removeClass('active');
 		$('.reveal-copy .for-development').toggleClass('active');
 	});
