@@ -6,13 +6,13 @@ class CustomACF {
 			// override $post
 			global $post;
 			$post = $post_object;
-			print_r($post);
 			setup_postdata( $post );
 			if( has_post_thumbnail() ) {
 				$moduleBackground = ' style="background: url(';
 				$moduleBackground .= get_the_post_thumbnail_url(get_the_ID(),'full');
 				$moduleBackground .= ') center/cover no-repeat"';
 			}
+			print_r($post);
 			?>
 			<section class="row entry-content cf module module-<?php echo $post->post_name; ?>">
 				<div class="cf" <?php echo (isset($moduleBackground)) ? $moduleBackground : ''; ?>>
