@@ -13,7 +13,9 @@ $acfClass = new CustomACF();
 							<?php get_sidebar('news_header'); ?>
 							
 							<?php
-							$categories = get_categories();
+							$categories = get_terms( 'case_study', array(
+												'hide_empty' => true,
+											) );
 							if( isset($categories) ) {
 								echo '<div class="cat-list">';
 								foreach($categories as $category) {
@@ -24,7 +26,6 @@ $acfClass = new CustomACF();
 							?>
 							
 							<section class="entry-content row post-content cf"><div class="cf"><div class="col-12">
-								<?php post_type_archive_title(); ?>
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
