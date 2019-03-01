@@ -10,8 +10,6 @@ $acfClass = new CustomACF();
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							
-							<?php $acfClass->render_modules(1965); ?>
-							
 							<section class="entry-content row cf"><div class="cf"><div class="col-12">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -47,6 +45,9 @@ $acfClass = new CustomACF();
 							<?php endif; ?>
 								
 							</div></div></section>
+							
+							<?php $acfClass->render_modules(986); ?>
+							<?php $acfClass->render_modules(968); ?>
 
 						</div>
 
