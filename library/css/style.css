@@ -1184,6 +1184,8 @@ LAYOUT & GRID STYLES
   padding: 0; }
   .row.full [class*="col-"] {
     padding: 0; }
+.row.post-content {
+  background: #f5f3f1; }
 .row.shop-loop {
   padding-bottom: 0; }
 .row.spares-shop-loop {

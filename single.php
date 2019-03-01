@@ -33,7 +33,7 @@ $acfClass = new CustomACF();
 								</div></section>
 							<?php endif; // MAIN CONTENT ?>
 
-						<section class="entry-content row cf post-content" itemprop="articleBody">
+						<section class="entry-content row cf wrap post-content" itemprop="articleBody">
 							<?php the_content(); ?>
 						</section> <?php // end article section ?>
 
