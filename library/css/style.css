@@ -1185,6 +1185,7 @@ LAYOUT & GRID STYLES
   .row.full [class*="col-"] {
     padding: 0; }
 .row.post-content {
+  margin-top: 2rem;
   background: #f5f3f1; }
 .row.shop-loop {
   padding-bottom: 0; }

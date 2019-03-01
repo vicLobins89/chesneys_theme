@@ -34,7 +34,11 @@ $acfClass = new CustomACF();
 							<?php endif; // MAIN CONTENT ?>
 
 						<section class="entry-content row cf wrap post-content" itemprop="articleBody">
-							<?php the_content(); ?>
+							<div class="cf">
+								<div class="col-12">
+									<?php the_content(); ?>
+								</div>
+							</div>
 						</section> <?php // end article section ?>
 
 						<?php // ACF FIELDS ?>
