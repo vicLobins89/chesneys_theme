@@ -2895,13 +2895,11 @@ POSTS & CONTENT STYLES
 
 #text_slider {
   color: #fff; }
-  #text_slider .sa_hover_container {
-    font-size: 80%; }
-    #text_slider .sa_hover_container p:first-child {
-      font-size: 200%;
-      font-style: italic; }
-      #text_slider .sa_hover_container p:first-child + p {
-        font-size: 130%; }
+  #text_slider .sa_hover_container p:first-child {
+    font-size: 200%;
+    font-style: italic; }
+    #text_slider .sa_hover_container p:first-child + p {
+      font-size: 130%; }
   #text_slider.sa_owl_theme .owl-dots .owl-dot span {
     width: 15px !important;
     height: 15px !important;
