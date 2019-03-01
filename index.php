@@ -14,8 +14,12 @@ $acfClass = new CustomACF();
 							
 							<?php
 							$categories = get_categories();
-							foreach($categories as $category) {
-							   echo '<div class="col-md-4"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>';
+							if( isset($categories) ) {
+								echo '<div class="cat-list">';
+								foreach($categories as $category) {
+								   echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
+								}
+								echo '</div>';
 							}
 							?>
 							
