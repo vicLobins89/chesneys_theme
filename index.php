@@ -1,10 +1,16 @@
-<?php get_header(); ?>
+<?php
+get_header();
+require_once('classes/acf.php');
+$acfClass = new CustomACF();
+?>
 
 			<div id="content">
 
 				<div id="inner-content" class="cf">
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+							
+							<?php $acfClass->render_modules(1965); ?>
 							
 							<section class="entry-content row cf"><div class="cf"><div class="col-12">
 
@@ -14,7 +20,7 @@
 								
 								<?php the_post_thumbnail('folio-thumb'); ?>
 
-								<?php printf( '<p class="footer-category">' . __('', 'bonestheme' ) . '%1$s</p>' , get_the_category_list(', ') ); ?>
+								<?php printf( '<h3 class="footer-category">' . __('', 'bonestheme' ) . '%1$s</h3>' , get_the_category_list(', ') ); ?>
 
 								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 								
