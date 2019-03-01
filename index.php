@@ -12,6 +12,13 @@ $acfClass = new CustomACF();
 							
 							<?php get_sidebar('news_header'); ?>
 							
+							<?php
+							$categories = get_categories();
+							foreach($categories as $category) {
+							   echo '<div class="col-md-4"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>';
+							}
+							?>
+							
 							<section class="entry-content row post-content cf"><div class="cf"><div class="col-12">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
