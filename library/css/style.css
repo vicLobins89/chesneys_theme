@@ -1612,6 +1612,9 @@ c
 .flex.flex-center.image-right .col-6:first-child {
   max-width: 43rem;
   margin: auto; }
+.flex .aspect-ratio {
+  padding-bottom: 0;
+  height: 100%; }
 
 .equal-height > .cf, .equal-height > .comment-respond {
   display: inline-block;
