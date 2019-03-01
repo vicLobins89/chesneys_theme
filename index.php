@@ -46,8 +46,12 @@ $acfClass = new CustomACF();
 								
 							</div></div></section>
 							
-							<?php $acfClass->render_modules(986); ?>
-							<?php $acfClass->render_modules(968); ?>
+							<?php
+							$help_module = get_post(986);
+							$design_module = get_post(968);
+							$acfClass->render_modules($help_module);
+							$acfClass->render_modules($design_module);
+							?>
 
 						</div>
 
