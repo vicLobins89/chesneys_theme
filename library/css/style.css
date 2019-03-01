@@ -1105,15 +1105,18 @@ hr {
 
 .reveal-copy {
   background: #fff;
-  padding: 3rem;
+  padding: 0;
   text-align: center;
   max-height: 0px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
   .reveal-copy.active {
-    max-height: 300px; }
+    max-height: 300px;
+    visibility: visible; }
   .reveal-copy p {
-    margin: 0; }
+    margin: 3rem; }
 
 /********************
 WORDPRESS BODY CLASSES

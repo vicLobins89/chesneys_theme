@@ -230,17 +230,20 @@ hr {
 
 .reveal-copy {
 	background: $white;
-	padding: 3rem;
+	padding: 0;
 	text-align: center;
 	max-height: 0px;
-	@include transition(all 0.3s ease-in-out);
+	visibility: hidden;
+	overflow: hidden;
+	@include transition(all 0.4s ease-in-out);
 	
 	&.active {
 		max-height: 300px;
+		visibility: visible;
 	}
 	
 	p {
-		margin: 0;
+		margin: 3rem;
 	}
 }
 
