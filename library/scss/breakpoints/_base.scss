@@ -722,6 +722,7 @@ LAYOUT & GRID STYLES
 	&.module-directory-of-chimney-pieces,
 	&.module-accessories-and-fuel,
 	&.module-accessories-and-fuel-outdoor,
+	&.module-stoves,
 	&.module-spares-and-accessories {
 		padding: 0;
 		
@@ -1124,7 +1125,7 @@ h2, .h2 {
 		.module-directory-of-chimney-pieces &,
 		.module-accessories-and-fuel &,
 		.module-accessories-and-fuel-outdoor &,
-		.module-spares-and-accessories &,
+		.module-stoves,
 		.module-need-help & {
 			background: $white;
 		}
