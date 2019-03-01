@@ -2252,6 +2252,8 @@ POSTS & CONTENT STYLES
         max-width: 70%;
         margin-left: auto !important;
         margin-right: auto !important; }
+  .featured-copy .date, .module.module-outdoor-living-shop .inner-module .date, .module.module-glossary .inner-module .date, .module.module-design-a-fireplace .inner-module .date, #news_header .widget_text .date {
+    margin: 0; }
 
 .spares-thumbs .wp-caption {
   width: 31% !important;

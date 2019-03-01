@@ -38,7 +38,7 @@ $acfClass = new CustomACF();
 
 										echo '<p>'.$full_name.'</p>';
 										?>
-										<?php the_date('d-m-Y', '<p>', '</p>'); ?>
+										<?php the_date('d-m-Y', '<p class="date">', '</p>'); ?>
 									</div>
 									</div>
 								</section>
