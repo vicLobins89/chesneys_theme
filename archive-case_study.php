@@ -10,14 +10,17 @@ $acfClass = new CustomACF();
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							
-							<?php get_sidebar('news_header'); ?>
+							<?php get_sidebar('folio_header'); ?>
 							
 							<?php
-							$categories = get_categories();
+							$categories = get_terms( array(
+								'taxonomy' => 'portfolio_cat',
+								'hide_empty' => true,
+							) );
 							if( isset($categories) ) {
 								echo '<div class="cat-list">';
 								foreach($categories as $category) {
-								   echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
+								   echo '<a href="' . get_term_link($category->term_id) . '">' . $category->name . '</a>';
 								}
 								echo '</div>';
 							}
