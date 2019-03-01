@@ -511,8 +511,15 @@ LAYOUT & GRID STYLES
 						@include transition(background 0.3s ease-in-out);
 					}
 					
-					&:hover:before {
-						background: rgba(0,0,0,0);
+					&:hover {
+						h2 {
+							background: $white;
+							color: $text-color;
+						}
+						
+						:before {
+							background: rgba(0,0,0,0);
+						}
 					}
 				}
 				
