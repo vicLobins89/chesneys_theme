@@ -31,7 +31,7 @@ function folio_post() {
 			'description' => __( 'This is a Case Study', 'bonestheme' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
-			'exclude_from_search' => true,
+			'exclude_from_search' => false,
 			'show_ui' => true,
 			'query_var' => true,
 			'menu_position' => 11, /* this is what order you want it to appear in on the left hand side menu */ 
