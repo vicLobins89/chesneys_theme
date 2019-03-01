@@ -1439,6 +1439,11 @@ NAVIGATION STYLES
 		vertical-align: middle;
 		color: $dark-brown;
 		
+		&.menu-item-1007,
+		&.menu-item-579 {
+			color: lighten($dark-brown, 20%);
+		}
+		
 		&.separator,
 		&.separator > a {
 			cursor: default;
