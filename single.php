@@ -22,7 +22,22 @@ $acfClass = new CustomACF();
 									
 									<div class="featured-copy">
 										<h1 class="h2 lhs"><?php the_title(); ?></h1>
-										<p><?php the_author(); ?></p>
+										<?php
+										$fname = get_the_author_meta('first_name');
+										$lname = get_the_author_meta('last_name');
+										$full_name = '';
+
+										if( empty($fname)){
+											$full_name = $lname;
+										} elseif( empty( $lname )){
+											$full_name = $fname;
+										} else {
+											//both first name and last name are present
+											$full_name = "{$fname} {$lname}";
+										}
+
+										echo '<p>'.$full_name.'</p>';
+										?>
 									</div>
 									</div>
 								</section>
