@@ -24,17 +24,17 @@ jQuery(document).ready(function($) {
 	// Reveal clicks
 	$('.for-you').click(function(e){
 		e.preventDefault();
-		$('.reveal-copy').removeClass('active');
+		$('.reveal-copy:not(.for-you)').removeClass('active');
 		$('.reveal-copy .for-you').toggleClass('active');
 	});
 	$('.for-client').click(function(e){
 		e.preventDefault();
-		$('.reveal-copy').removeClass('active');
+		$('.reveal-copy:(.for-client)').removeClass('active');
 		$('.reveal-copy .for-client').toggleClass('active');
 	});
 	$('.for-development').click(function(e){
 		e.preventDefault();
-		$('.reveal-copy').removeClass('active');
+		$('.reveal-copy:(.for-development)').removeClass('active');
 		$('.reveal-copy .for-development').toggleClass('active');
 	});
 	
