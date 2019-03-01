@@ -10,7 +10,7 @@ $acfClass = new CustomACF();
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							
-							<?php get_sidebar('news_header'); ?>
+							<?php get_sidebar('folio_header'); ?>
 							
 							<?php
 							$categories = get_terms( array(
