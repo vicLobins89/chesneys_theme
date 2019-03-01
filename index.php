@@ -5,19 +5,19 @@
 				<div id="inner-content" class="wrap cf">
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+							
+							<section class="entry-content cf">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf col-4' ); ?> role="article">
+								
+								<?php the_post_thumbnail('folio-thumb'); ?>
 
-								<section class="entry-content cf">
-									<?php the_post_thumbnail('folio-thumb'); ?>
-									
-									<?php printf( '<p class="footer-category">' . __('', 'bonestheme' ) . ': %1$s</p>' , get_the_category_list(', ') ); ?>
-									
-									<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-								</section>
+								<?php printf( '<p class="footer-category">' . __('', 'bonestheme' ) . '%1$s</p>' , get_the_category_list(', ') ); ?>
 
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+								
 							</article>
 
 							<?php endwhile; ?>
@@ -39,7 +39,8 @@
 									</article>
 
 							<?php endif; ?>
-
+								
+							</section>
 
 						</div>
 
