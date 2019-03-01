@@ -1295,8 +1295,8 @@ LAYOUT & GRID STYLES
         .row.related-wrapper .related .product a:hover h2 {
           background: #fff;
           color: #142128; }
-        .row.related-wrapper .ol-related .product a:hover :before,
-        .row.related-wrapper .related .product a:hover :before {
+        .row.related-wrapper .ol-related .product a:hover:before,
+        .row.related-wrapper .related .product a:hover:before {
           background: rgba(0, 0, 0, 0); }
       .row.related-wrapper .ol-related .product img,
       .row.related-wrapper .related .product img {
