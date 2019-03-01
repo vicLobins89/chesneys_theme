@@ -2,6 +2,7 @@
 get_header();
 require_once('classes/acf.php');
 $acfClass = new CustomACF();
+global $post;
 ?>
 
 			<div id="content">
