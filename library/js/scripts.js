@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
 		});
 	});
 	
-	$('a.download').click(function(e){
+	$('input.download').click(function(e){
 		e.preventDefault();
 
 		var temporaryDownloadLink = document.createElement("a");
