@@ -24,7 +24,9 @@ jQuery(document).ready(function($) {
 	var value = [];
 	$('.js-brochure-input').on('change', function(i){
 		if( !$(this).is(':checked') ) {
-			value.splice(i, 1);
+			value = jQuery.grep(value, function(val) {
+				return val !== $(this).val();
+			});
 		} else {
 			value.push($(this).val());
 		}
