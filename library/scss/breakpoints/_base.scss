@@ -706,6 +706,7 @@ LAYOUT & GRID STYLES
 	}
 }
 
+.gray-box,
 .black-box {
 	padding: 3rem;
 	background: $dark-gray;
@@ -976,6 +977,7 @@ c
 		display: -webkit-flex;
 		display: flex;
 
+		.gray-box,
 		.black-box {
 			height: 100%;
 		}
@@ -1246,6 +1248,7 @@ p, .p {
 		font-size: 1.2rem;
 	}
 	
+	.gray-box,
 	.black-box {
 		padding: 2rem;
 		

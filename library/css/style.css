@@ -1404,6 +1404,7 @@ LAYOUT & GRID STYLES
   .row.woocommerce-products-header .h2.center + p, .row.woocommerce-products-header .row.outdoor-product-single .short-desc .center.product_title + p, .row.outdoor-product-single .short-desc .row.woocommerce-products-header .center.product_title + p, .row.woocommerce-products-header .woocommerce .spares-product .center.product_title + p, .woocommerce .spares-product .row.woocommerce-products-header .center.product_title + p {
     text-align: center; }
 
+.gray-box,
 .black-box {
   padding: 3rem;
   background: #142128;
@@ -1627,7 +1628,9 @@ c
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
-  .flex > .cf .black-box, .flex > .comment-respond .black-box {
+  .flex > .cf .gray-box, .flex > .comment-respond .gray-box,
+  .flex > .cf .black-box,
+  .flex > .comment-respond .black-box {
     height: 100%; }
 .flex.flex-center > .cf, .flex.flex-center > .comment-respond {
   -webkit-align-items: center;
@@ -1806,8 +1809,10 @@ p, .p {
   font-size: 80% !important; }
   .copy-s p {
     font-size: 1.2rem; }
+  .copy-s .gray-box,
   .copy-s .black-box {
     padding: 2rem; }
+    .copy-s .gray-box ul,
     .copy-s .black-box ul {
       font-size: 1em !important; }
 
