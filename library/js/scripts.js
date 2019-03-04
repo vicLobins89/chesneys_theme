@@ -22,8 +22,8 @@ jQuery(document).ready(function($) {
 	viewport = updateViewportDimensions();
 	
 	var value = [];
-	$('.js-brochure-input').each(function() {
-		$(this).on('change', function(i, el){
+	$('.js-brochure-input').each(function(i, el) {
+		$(this).on('change', function(){
 			if( !$(this).is(':checked') ) {
 				value.splice(i, 1);
 			} else {
