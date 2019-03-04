@@ -25,9 +25,9 @@ jQuery(document).ready(function($) {
 	$('.js-brochure-input').each(function(i) {
 		$(this).on('change', function(){
 			if( !$(this).is(':checked') ) {
-				value.pop($(this).val());
-			} else {
 				value.splice(i, 1);
+			} else {
+				value.push($(this).val());
 			}
 			$('input.brochures').val(value);
 			console.log(value);
