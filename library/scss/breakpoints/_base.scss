@@ -369,6 +369,10 @@ LAYOUT & GRID STYLES
 		}
 		
 		.post {
+			&:nth-child(4n+1) {
+				clear: both;
+			}
+			
 			.thumb {
 				display: block;
 			}
