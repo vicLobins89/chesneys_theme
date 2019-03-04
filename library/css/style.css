@@ -578,9 +578,6 @@ Stylesheet: Grid Stylesheet
   padding: 1rem; }
   [class*="col-"].last-col {
     float: right; }
-  [class*="col-"] [class*="col-"] {
-    padding-top: 0;
-    padding-left: 0; }
 
 /* Mobile Grid Styles */
 @media (max-width: 767px) {
