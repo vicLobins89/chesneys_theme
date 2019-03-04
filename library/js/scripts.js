@@ -25,10 +25,9 @@ jQuery(document).ready(function($) {
 	$('.js-brochure-input').each(function() {
 		$(this).on('change', function(){
 			if( !$(this).is(':checked') ) {
-				$(this).prop("checked");
-				value.push($(this).val());
-			} else {
 				value.pop($(this).val());
+			} else {
+				value.push($(this).val());
 			}
 			$('input.brochures').val(value);
 			console.log(value);
