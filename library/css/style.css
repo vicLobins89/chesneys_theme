@@ -568,9 +568,9 @@ Stylesheet: Grid Stylesheet
 .col-12 {
   width: 100%; }
 
-.column-4-8 .col-6:first-child {
+.column-4-8 > .col-6:first-child {
   width: 33.33%; }
-.column-4-8 .col-6:last-child {
+.column-4-8 > .col-6:last-child {
   width: 66.66%; }
 
 [class*="col-"] {
