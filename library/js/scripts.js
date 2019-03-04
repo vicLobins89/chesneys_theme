@@ -21,13 +21,15 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
-	$('.js-brochure-input').change(function() {
-		var value = $(this).val();
-		
-		if( !$(this).is(':checked') ) {
-			$(this).prop("checked");
-		}
-        $('input.brochures').val(value);
+	$('.js-brochure-input').each(function() {
+		$(this).on('change', function(){
+			var value = $(this).val();
+
+			if( !$(this).is(':checked') ) {
+				$(this).prop("checked");
+			}
+			$('input.brochures').val(value);
+		});
 	});
 	
 	// Reveal clicks
