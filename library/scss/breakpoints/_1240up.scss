@@ -14,6 +14,10 @@ html {
 	> div {
 		max-width: 1400px;
 	}
+	
+	&.image-column > div {
+		max-width: calc(1400px - 2rem);
+	}
 }
 
 .wrap {

@@ -3517,6 +3517,8 @@ LARGE VIEWING SIZE
 
   .entry-content:not(.full) > div {
     max-width: 1400px; }
+  .entry-content:not(.full).image-column > div {
+    max-width: calc(1400px - 2rem); }
 
   .wrap > div {
     max-width: 1080px; } }
