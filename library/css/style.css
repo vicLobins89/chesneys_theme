@@ -1388,6 +1388,8 @@ LAYOUT & GRID STYLES
     margin: .5rem 0; }
 .row.image-column > .cf, .row.image-column > .comment-respond {
   background: #f5f3f1; }
+.row.image-column.reverse > .cf, .row.image-column.reverse > .comment-respond {
+  background: #fff; }
 .row.image-column.image-left .col-6:last-child {
   padding: 2.5rem; }
 .row.image-column.image-right .col-6:first-child {

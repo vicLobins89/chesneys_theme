@@ -660,6 +660,10 @@ LAYOUT & GRID STYLES
 			background: $light-brown;
 		}
 		
+		&.reverse > .cf {
+			background: $white;
+		}
+		
 		&.image-left {
 			.col-6:last-child {
 				padding: 2.5rem;
