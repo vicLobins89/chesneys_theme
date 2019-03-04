@@ -31,6 +31,7 @@ jQuery(document).ready(function($) {
 				value.pop($(this).val());
 			}
 			$('input.brochures').val(value);
+			console.log(value);
 		});
 	});
 	
