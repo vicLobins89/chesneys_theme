@@ -31,6 +31,18 @@ Stylesheet: Grid Stylesheet
 	}
 }
 
+.column-8-4 {
+	.cf > .col-6 {
+		&:first-child {
+			width: 66.66%;
+		}
+		
+		&:last-child {
+			width: 33.33%;
+		}
+	}
+}
+
 [class*="col-"] {
     float: left;
     padding: 1rem;

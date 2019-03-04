@@ -573,6 +573,11 @@ Stylesheet: Grid Stylesheet
 .column-4-8 .cf > .col-6:last-child, .column-4-8 .comment-respond > .col-6:last-child {
   width: 66.66%; }
 
+.column-8-4 .cf > .col-6:first-child, .column-8-4 .comment-respond > .col-6:first-child {
+  width: 66.66%; }
+.column-8-4 .cf > .col-6:last-child, .column-8-4 .comment-respond > .col-6:last-child {
+  width: 33.33%; }
+
 [class*="col-"] {
   float: left;
   padding: 1rem; }
