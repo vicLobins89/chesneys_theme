@@ -1507,18 +1507,21 @@ LAYOUT & GRID STYLES
     .module.module-spares-and-accessories #submit {
       margin: 0 auto;
       font-size: 1em; }
-  .module.module-need-help {
+  .module.module-sign-up, .module.module-need-help {
     background: #142128;
     color: #fff;
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%; }
-    .module.module-need-help .inner-module p:last-child {
+    .module.module-sign-up .inner-module p:last-child, .module.module-need-help .inner-module p:last-child {
       margin-bottom: 0; }
-    .module.module-need-help .inner-module .primary-btn.inline, .module.module-need-help .inner-module .image-link + p.inline, .module.module-need-help .inner-module .image-link .inline.wp-caption-text, .image-link .module.module-need-help .inner-module .inline.wp-caption-text, .module.module-need-help .inner-module .vid-thumb .inline.play, .vid-thumb .module.module-need-help .inner-module .inline.play, .module.module-need-help .inner-module .row.related-wrapper .inline.woocommerce-loop-product__title, .row.related-wrapper .module.module-need-help .inner-module .inline.woocommerce-loop-product__title, .module.module-need-help .inner-module a.inline.comment-reply-link, .module.module-need-help .inner-module .inline#submit {
+    .module.module-sign-up .inner-module .primary-btn.inline, .module.module-sign-up .inner-module .image-link + p.inline, .module.module-sign-up .inner-module .image-link .inline.wp-caption-text, .image-link .module.module-sign-up .inner-module .inline.wp-caption-text, .module.module-sign-up .inner-module .vid-thumb .inline.play, .vid-thumb .module.module-sign-up .inner-module .inline.play, .module.module-sign-up .inner-module .row.related-wrapper .inline.woocommerce-loop-product__title, .row.related-wrapper .module.module-sign-up .inner-module .inline.woocommerce-loop-product__title, .module.module-sign-up .inner-module a.inline.comment-reply-link, .module.module-sign-up .inner-module .inline#submit, .module.module-need-help .inner-module .primary-btn.inline, .module.module-need-help .inner-module .image-link + p.inline, .module.module-need-help .inner-module .image-link .inline.wp-caption-text, .image-link .module.module-need-help .inner-module .inline.wp-caption-text, .module.module-need-help .inner-module .vid-thumb .inline.play, .vid-thumb .module.module-need-help .inner-module .inline.play, .module.module-need-help .inner-module .row.related-wrapper .inline.woocommerce-loop-product__title, .row.related-wrapper .module.module-need-help .inner-module .inline.woocommerce-loop-product__title, .module.module-need-help .inner-module a.inline.comment-reply-link, .module.module-need-help .inner-module .inline#submit {
       margin: 1rem 1.5rem 0;
       font-size: .9rem;
       min-width: 12rem; }
+  .module.module-sign-up {
+    background: #f5f3f1;
+    color: #142128; }
   .module.module-ctas, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
     padding: 0 0 1rem 0; }
     .module.module-ctas h2, .module.module-outdoor-ctas h2, .module.module-outdoor-ctas-2 h2 {

@@ -793,6 +793,7 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
+	&.module-sign-up,
 	&.module-need-help {
 		background: $dark-gray;
 		color: $white;
@@ -811,6 +812,11 @@ LAYOUT & GRID STYLES
 				min-width: 12rem;
 			}
 		}
+	}
+	
+	&.module-sign-up {
+		background: $light-brown;
+		color: $text-color;
 	}
 	
 	&.module-ctas,
