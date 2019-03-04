@@ -817,12 +817,14 @@ LAYOUT & GRID STYLES
 	&.module-sign-up {
 		background: $light-brown;
 		color: $text-color;
+		padding-bottom: 3rem;
 		
 		.wpcf7-form {
 			margin-bottom: 0;
 			
 			input {
 				width: 20rem;
+				height: 3.5rem;
 			}
 		}
 	}

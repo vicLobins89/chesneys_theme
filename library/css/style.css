@@ -1521,11 +1521,13 @@ LAYOUT & GRID STYLES
       min-width: 12rem; }
   .module.module-sign-up {
     background: #f5f3f1;
-    color: #142128; }
+    color: #142128;
+    padding-bottom: 3rem; }
     .module.module-sign-up .wpcf7-form {
       margin-bottom: 0; }
       .module.module-sign-up .wpcf7-form input {
-        width: 20rem; }
+        width: 20rem;
+        height: 3.5rem; }
   .module.module-ctas, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
     padding: 0 0 1rem 0; }
     .module.module-ctas h2, .module.module-outdoor-ctas h2, .module.module-outdoor-ctas-2 h2 {
