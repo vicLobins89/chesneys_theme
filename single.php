@@ -40,8 +40,9 @@ $acfClass = new CustomACF();
 										} else {
 											$full_name = "{$fname} {$lname}";
 										}
-
-										echo '<p>'.$full_name.'<br>'.get_the_date('d-m-Y').'</p>';
+										
+										//echo '<p>'.$full_name.'<br>'.get_the_date('d-m-Y').'</p>';
+										echo '<p>'.get_the_date('d M Y').'</p>';
 										?>
 									</div>
 									</div>
