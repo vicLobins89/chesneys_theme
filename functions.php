@@ -67,7 +67,7 @@ if ( ! isset( $content_width ) ) {
 // Thumbnail sizes
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
-add_image_size( 'folio-portrait', 900, 935, true );
+add_image_size( 'folio-portrait', 602, 665, true );
 add_image_size( 'folio-thumb', 410, 350, true );
 
 /*
