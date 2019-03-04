@@ -23,14 +23,14 @@ jQuery(document).ready(function($) {
 	
 	var value = [];
 	$('.js-brochure-input').on('change', function(){
-		$(this).each(function(i) {
+		$(this).each(function(i, el) {
 			if( !$(this).is(':checked') ) {
 				value.splice(i, 1);
 			} else {
 				value.push($(this).val());
 			}
 			$('input.brochures').val(value);
-			console.log(i);
+			console.log(i + el);
 		});
 	});
 	
