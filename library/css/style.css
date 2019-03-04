@@ -1579,7 +1579,7 @@ LAYOUT & GRID STYLES
   .row.related-products .button {
     display: none !important; }
 .row.folio-module .folio-item .text {
-  height: 8rem;
+  height: 9rem;
   padding: 0.5rem 0.75rem 0.5rem;
   background: #fff;
   -webkit-transition: background 0.3s ease-in-out;

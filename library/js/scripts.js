@@ -22,8 +22,14 @@ jQuery(document).ready(function($) {
 	viewport = updateViewportDimensions();
 	
 	var value = [];
+	var filesForDownload = [];
+	filesForDownload( { path: "/wp-content/uploads/2019/03/main_brochure_2018_uk-online.pdf", name: "main_brochure_2018_uk-online.pdf" } );
+	filesForDownload( { path: "/wp-content/uploads/2019/03/solid_fuel_stove_collection_2017_vol1.pdf", name: "solid_fuel_stove_collection_2017_vol1.pdf" } );
+	filesForDownload( { path: "/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf", name: "Gas-Stove-Brochure-2018-vol1-web.pdf" } );
+	
 	$('.js-brochure-input').each(function(){
-		$(this).on('change', function(){
+		$(this).on('change', function(e){
+			e.preventDefault();
 			var newVal = $(this).val();
 			
 			if( !$(this).is(':checked') ) {
@@ -37,6 +43,25 @@ jQuery(document).ready(function($) {
 			console.log(value);
 		});
 	});
+	
+	$('a.download').click(function(e){
+		e.preventDefault();
+
+		var temporaryDownloadLink = document.createElement("a");
+		temporaryDownloadLink.style.display = 'none';
+
+		document.body.appendChild( temporaryDownloadLink );
+
+		for( var n = 0; n < filesForDownload.length; n++ ) {
+			var download = filesForDownload[n];
+			temporaryDownloadLink.setAttribute( 'href', download.path );
+			temporaryDownloadLink.setAttribute( 'download', download.name );
+
+			temporaryDownloadLink.click();
+		}
+
+		document.body.removeChild( temporaryDownloadLink );
+	} );
 	
 	// Reveal clicks
 	$('.for-you').click(function(e){
