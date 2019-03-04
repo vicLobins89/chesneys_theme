@@ -1038,6 +1038,10 @@ img {
   img.size-full {
     max-width: 100%;
     width: 100%; }
+    img.size-full[class*="col-"] {
+      padding: 0; }
+    img.size-full.col-6 {
+      width: 50%; }
   img.alignleft {
     float: left; }
   img.alignright {
