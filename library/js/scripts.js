@@ -22,12 +22,12 @@ jQuery(document).ready(function($) {
 	viewport = updateViewportDimensions();
 	
 	var value = [];
-	$('.js-brochure-input').each(function(i) {
-		$(this).on('change', function(){
+	$('.js-brochure-input').each(function() {
+		$(this).on('change', function(i){
 			if( !$(this).is(':checked') ) {
 				value.splice(i, 1);
 			} else {
-				value.splice(i, $(this).val(), 0);
+				value.push($(this).val());
 			}
 			$('input.brochures').val(value);
 			console.log(value);
