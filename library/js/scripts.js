@@ -22,10 +22,7 @@ jQuery(document).ready(function($) {
 	viewport = updateViewportDimensions();
 	
 	var value = [];
-	var filesForDownload = [];
-	filesForDownload( { path: "/wp-content/uploads/2019/03/main_brochure_2018_uk-online.pdf", name: "main_brochure_2018_uk-online.pdf" } );
-	filesForDownload( { path: "/wp-content/uploads/2019/03/solid_fuel_stove_collection_2017_vol1.pdf", name: "solid_fuel_stove_collection_2017_vol1.pdf" } );
-	filesForDownload( { path: "/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf", name: "Gas-Stove-Brochure-2018-vol1-web.pdf" } );
+	var filesForDownload = ["/wp-content/uploads/2019/03/main_brochure_2018_uk-online.pdf", "/wp-content/uploads/2019/03/solid_fuel_stove_collection_2017_vol1.pdf", "/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf"];
 	
 	$('.js-brochure-input').each(function(){
 		$(this).on('change', function(e){
@@ -54,8 +51,8 @@ jQuery(document).ready(function($) {
 
 		for( var n = 0; n < filesForDownload.length; n++ ) {
 			var download = filesForDownload[n];
-			temporaryDownloadLink.setAttribute( 'href', download.path );
-			temporaryDownloadLink.setAttribute( 'download', download.name );
+			temporaryDownloadLink.setAttribute( 'href', download.n );
+			temporaryDownloadLink.setAttribute( 'download', download.n );
 
 			temporaryDownloadLink.click();
 		}
