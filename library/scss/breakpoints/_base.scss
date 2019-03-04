@@ -817,6 +817,14 @@ LAYOUT & GRID STYLES
 	&.module-sign-up {
 		background: $light-brown;
 		color: $text-color;
+		
+		.wpcf7-form {
+			margin-bottom: 0;
+			
+			input {
+				width: 20rem;
+			}
+		}
 	}
 	
 	&.module-ctas,
