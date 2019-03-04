@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
 				value.push($(this).val());
 			}
 			$('input.brochures').val(value);
-			console.log(i + el);
+			console.log(i + $(el));
 		});
 	});
 	
