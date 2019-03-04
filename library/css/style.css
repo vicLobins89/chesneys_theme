@@ -1166,6 +1166,10 @@ WORDPRESS BODY CLASSES
 .blog .image-thumb, .archive .image-thumb {
   display: block; }
 
+.case_study img {
+  width: 100%;
+  height: auto; }
+
 .widecolumn {
   max-width: 80%;
   margin: 10% auto;

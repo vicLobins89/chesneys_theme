@@ -308,6 +308,13 @@ WORDPRESS BODY CLASSES
 	}
 }
 
+.case_study {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
 .archive {
 	@extend .blog;
 }
