@@ -1190,10 +1190,13 @@ LAYOUT & GRID STYLES
   .blog .row.post-content h3, .archive .row.post-content h3 {
     font-size: 1em;
     margin: 1rem 0; }
+  .row.post-content .case_study:nth-child(3n+1),
   .row.post-content .post:nth-child(3n+1) {
     clear: both; }
+  .row.post-content .case_study .thumb,
   .row.post-content .post .thumb {
     display: block; }
+  .row.post-content .case_study img,
   .row.post-content .post img {
     width: 100%;
     height: auto; }
