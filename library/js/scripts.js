@@ -21,13 +21,13 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
-	$('input.brochures').val(this.checked);
 	$('.js-brochure-input').change(function() {
-		if(this.checked) {
-            var returnVal = confirm("Are you sure?");
-            $(this).prop("checked", returnVal);
-        }
-        $('input.brochures').val(this.checked);
+		var value = $(this).val();
+		
+		if( !$(this).is(':checked') ) {
+			$(this).prop("checked");
+		}
+        $('input.brochures').val(value);
 	});
 	
 	// Reveal clicks
