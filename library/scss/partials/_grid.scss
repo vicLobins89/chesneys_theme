@@ -38,10 +38,6 @@ Stylesheet: Grid Stylesheet
 	&.last-col {
 		float: right;
 	}
-	
-	> [class*="col-"] {
-		padding: 0;
-	}
 }
 
 /* Mobile Grid Styles */

@@ -578,8 +578,6 @@ Stylesheet: Grid Stylesheet
   padding: 1rem; }
   [class*="col-"].last-col {
     float: right; }
-  [class*="col-"] > [class*="col-"] {
-    padding: 0; }
 
 /* Mobile Grid Styles */
 @media (max-width: 767px) {
@@ -1407,6 +1405,8 @@ LAYOUT & GRID STYLES
 .gray-box {
   padding: 1rem;
   background: #f5f3f1; }
+  .gray-box [class*="col-"] {
+    padding: 0; }
 
 .black-box {
   padding: 3rem;

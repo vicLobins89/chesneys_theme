@@ -709,6 +709,10 @@ LAYOUT & GRID STYLES
 .gray-box {
 	padding: 1rem;
 	background: $light-brown;
+	
+	[class*="col-"] {
+		padding: 0;
+	}
 }
 
 .black-box {
