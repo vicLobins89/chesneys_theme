@@ -1221,6 +1221,27 @@ p, .p {
 	font-weight: normal;
 }
 
+.flair {
+	position: relative;
+	
+	&:after {
+		display: block;
+		position: absolute;
+		content: '';
+		margin-left: -1.5rem;
+		left: 50%;
+		bottom: -10px;
+		width: 3rem;
+		height: 1px;
+		background: $text-color;
+	}
+	
+	&.lhs:after {
+		left: 0;
+		margin-left: 0;
+	}
+}
+
 .sans {
 	font-family: $sans-serif !important;
 	

@@ -1785,6 +1785,23 @@ p, .p {
   margin: 0.85em 0;
   font-weight: normal; }
 
+.flair {
+  position: relative; }
+  .flair:after {
+    display: block;
+    position: absolute;
+    content: '';
+    margin-left: -1.5rem;
+    left: 50%;
+    bottom: -10px;
+    width: 3rem;
+    height: 1px;
+    background: #142128; }
+  .flair.lhs:after, .row.outdoor-product-single .short-desc .flair.product_title:after, c
+  .team-members h4.flair:after {
+    left: 0;
+    margin-left: 0; }
+
 .sans, c
 .team-members h4 {
   font-family: "Univers", Helvetica, Arial, sans-serif !important; }
