@@ -21,12 +21,14 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
+	var value = [];
 	$('.js-brochure-input').each(function() {
 		$(this).on('change', function(){
-			var value = $(this).val();
-
 			if( !$(this).is(':checked') ) {
 				$(this).prop("checked");
+				value.push($(this).val());
+			} else {
+				value.pop($(this).val());
 			}
 			$('input.brochures').val(value);
 		});
