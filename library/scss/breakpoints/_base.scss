@@ -755,6 +755,7 @@ LAYOUT & GRID STYLES
 	&.module-accessories-and-fuel,
 	&.module-accessories-and-fuel-outdoor,
 	&.module-stoves,
+	&.module-outdoor-living,
 	&.module-spares-and-accessories {
 		padding: 0;
 		
@@ -1454,6 +1455,10 @@ NAVIGATION STYLES
 	
 	> .cf {
 		position: relative;
+		
+		> .col-12 {
+			padding-top: 0;
+		}
 	}
 	
 	.widget_text {
