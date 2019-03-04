@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
 	viewport = updateViewportDimensions();
 	
 	var value = [];
-	$('.js-brochure-input').on('change', function(i){
+	$('.js-brochure-input').on('change', function(){
 		if( !$(this).is(':checked') ) {
 			value = jQuery.grep(value, function(val) {
 				return val !== $(this).val();
@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
 			value.push($(this).val());
 		}
 		$('input.brochures').val(value);
-		console.log(i + $(this));
+		console.log(value);
 	});
 	
 	// Reveal clicks
