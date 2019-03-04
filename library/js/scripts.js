@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
 			if( !$(this).is(':checked') ) {
 				value.splice(i, 1);
 			} else {
-				value.push($(this).val());
+				value.splice(i, $(this).val(), 0);
 			}
 			$('input.brochures').val(value);
 			console.log(value);
