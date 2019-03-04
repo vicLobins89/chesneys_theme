@@ -21,6 +21,15 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
+	$('input.brochures').val(this.checked);
+	$('.js-brochure-input').change(function() {
+		if(this.checked) {
+            var returnVal = confirm("Are you sure?");
+            $(this).prop("checked", returnVal);
+        }
+        $('input.brochures').val(this.checked);
+	});
+	
 	// Reveal clicks
 	$('.for-you').click(function(e){
 		e.preventDefault();
