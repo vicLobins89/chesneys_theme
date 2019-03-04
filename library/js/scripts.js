@@ -22,16 +22,20 @@ jQuery(document).ready(function($) {
 	viewport = updateViewportDimensions();
 	
 	var value = [];
-	$('.js-brochure-input').on('change', function(){
-		if( !$(this).is(':checked') ) {
-			value = jQuery.grep(value, function(val) {
-				return val !== $(this).val();
-			});
-		} else {
-			value.push($(this).val());
-		}
-		$('input.brochures').val(value);
-		console.log(value);
+	$('.js-brochure-input').each(function(){
+		$(this).on('change', function(){
+			var newVal = $(this).val();
+			
+			if( !$(this).is(':checked') ) {
+				value = jQuery.grep(value, function(val) {
+					return val !== newVal;
+				});
+			} else {
+				value.push(newVal);
+			}
+			$('input.brochures').val(value);
+			console.log(value);
+		});
 	});
 	
 	// Reveal clicks
