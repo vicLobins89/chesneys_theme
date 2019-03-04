@@ -1406,7 +1406,7 @@ LAYOUT & GRID STYLES
   padding: 1rem;
   background: #f5f3f1; }
   .gray-box [class*="col-"] {
-    padding: 0; }
+    padding: 0 1rem 0 0; }
 
 .black-box {
   padding: 3rem;
