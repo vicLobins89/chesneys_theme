@@ -51,8 +51,8 @@ jQuery(document).ready(function($) {
 
 		for( var n = 0; n < filesForDownload.length; n++ ) {
 			var download = filesForDownload[n];
-			temporaryDownloadLink.setAttribute( 'href', download.n );
-			temporaryDownloadLink.setAttribute( 'download', download.n );
+			temporaryDownloadLink.setAttribute( 'href', download[n] );
+			temporaryDownloadLink.setAttribute( 'download', download[n] );
 
 			temporaryDownloadLink.click();
 		}
