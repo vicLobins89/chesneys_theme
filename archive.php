@@ -10,9 +10,13 @@ $acfClass = new CustomACF();
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							
-							<?php get_sidebar('news_header'); ?>
-							
 							<?php
+							if ( function_exists('yoast_breadcrumb') ) {
+								yoast_breadcrumb( '<p class="menu-breadcrumb">','</p>' );
+							}
+							
+							get_sidebar('news_header');
+							
 							$categories = get_categories();
 							if( isset($categories) ) {
 								echo '<div class="cat-list">';

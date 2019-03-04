@@ -1922,7 +1922,8 @@ NAVIGATION STYLES
 
 #folio_header,
 #news_header {
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  padding-top: 0; }
   #folio_header > .cf, #folio_header > .comment-respond,
   #news_header > .cf,
   #news_header > .comment-respond {

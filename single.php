@@ -11,6 +11,12 @@ $acfClass = new CustomACF();
 					<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						
+						<?php
+						if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb( '<p class="menu-breadcrumb">','</p>' );
+						}
+						?>
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 							

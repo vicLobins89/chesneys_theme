@@ -10,9 +10,13 @@ $acfClass = new CustomACF();
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							
-							<?php get_sidebar('folio_header'); ?>
-							
 							<?php
+							if ( function_exists('yoast_breadcrumb') ) {
+								yoast_breadcrumb( '<p class="menu-breadcrumb">','</p>' );
+							}
+							
+							get_sidebar('folio_header');
+							
 							$categories = get_terms( array(
 								'taxonomy' => 'portfolio_cat',
 								'hide_empty' => true,
