@@ -1801,7 +1801,8 @@ p, .p {
   font-weight: normal; }
 
 .flair {
-  position: relative; }
+  position: relative;
+  text-transform: uppercase; }
   .flair:after {
     display: block;
     position: absolute;
