@@ -36,7 +36,7 @@ class CustomACF {
 						<?php if( have_rows('brochures') ) : ?>
 						<div class="brochures-wrapper cf">
 							<div class="col-4">
-								
+								<?php echo do_shortcode('[contact-form-7 id="2607" title="Brochure request"]'); ?>
 							</div>
 							
 							<div class="col-8 cf">
