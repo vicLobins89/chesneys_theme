@@ -1213,6 +1213,8 @@ WORDPRESS BODY CLASSES
 .search aside ul {
   padding: 1rem;
   margin: 0; }
+.search .pagination {
+  background: #fff; }
 
 .widecolumn {
   max-width: 80%;
