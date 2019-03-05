@@ -328,8 +328,25 @@ WORDPRESS BODY CLASSES
 	@extend .blog;
 }
 
-.search {}
-.search-results {}
+.search {
+	.archive-title {
+		text-align: center;
+	}
+	
+	.search-content {
+		padding: 1rem;
+	}
+	
+	aside ul {
+		padding: 1rem;
+		margin: 0;
+	}
+}
+
+.search-results {
+	
+}
+
 .search-no-results {}
 .search-paged-1 {}
 .error404 {}
