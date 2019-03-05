@@ -3118,6 +3118,22 @@ POSTS & CONTENT STYLES
   width: 100%;
   margin-bottom: 5px; }
 
+.wpsl-search-btn-wrap input#wpsl-search-btn {
+  background-image: none; }
+
+#wpsl-wrap #wpsl-result-list ul {
+  text-align: center; }
+  #wpsl-wrap #wpsl-result-list ul li {
+    text-align: left;
+    display: inline-block;
+    width: 25%;
+    font-size: .8rem; }
+
+.wpsl-store-location .wpsl-direction-wrap,
+.wpsl-store-location .wpsl-contact-details,
+.wpsl-store-location > p > span {
+  display: none; }
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/

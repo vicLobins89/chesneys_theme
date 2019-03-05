@@ -3032,6 +3032,26 @@ POSTS & CONTENT STYLES
 
 .wpsl-search-btn-wrap input#wpsl-search-btn {
 	@extend .secondary-btn;
+	background-image: none;
+}
+
+#wpsl-wrap #wpsl-result-list ul {
+	text-align: center;
+	
+	li {
+		text-align: left;
+		display: inline-block;
+		width: 25%;
+		font-size: .8rem;
+	}
+}
+
+.wpsl-store-location {
+	.wpsl-direction-wrap,
+	.wpsl-contact-details,
+	> p > span {
+		display: none;
+	}
 }
 
 /******************************************************************
