@@ -49,14 +49,14 @@ jQuery(document).ready(function($) {
 	function downloadAll(urls, names) {
 		var link = document.createElement('a');
 
-		link.setAttribute('download', 'dl');
+//		link.setAttribute('download', 'brochure');
 		link.style.display = 'none';
 
 		document.body.appendChild(link);
 
 		for (var i = 0; i < urls.length; i++) {
+			link.setAttribute('download', names[i]);
 			link.setAttribute('href', urls[i]);
-			link.innerHTML = names[i];
 			link.click();
 		}
 
