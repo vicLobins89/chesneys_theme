@@ -42,6 +42,8 @@ $acfClass = new CustomACF();
 							</article>
 
 							<?php endwhile; ?>
+								
+								<?php bones_page_navi(); ?>
 
 							<?php else : ?>
 
@@ -59,7 +61,6 @@ $acfClass = new CustomACF();
 							</div></div></section>
 							
 							<?php
-							bones_page_navi();
 							$help_module = get_post(986);
 							$design_module = get_post(968);
 							$acfClass->render_modules($help_module);
