@@ -1210,7 +1210,7 @@ WORDPRESS BODY CLASSES
   .search .category:hover {
     color: #4b858e; }
 .search .search-title {
-  font-size: 1em;
+  font-size: 1.25em;
   margin-top: 1.3rem !important;
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
   text-transform: none; }
