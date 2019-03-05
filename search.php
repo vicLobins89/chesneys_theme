@@ -30,7 +30,7 @@
 									<?php elseif(get_the_term_list($post->ID, 'product_cat', '', ', ', '') != ''): ?>
 										<h3 class="category flair sans lhs"><?php printf( __( '%1$s', 'bonestheme' ), get_the_term_list($post->ID, 'product_cat', '', ', ', '') ); ?></h3>
 									<?php else: ?>
-										<h3 class="category flair sans lhs"><?php get_post_type(); ?></h3>
+										<h3 class="category flair sans lhs"><?php get_post_type($post->ID); ?></h3>
                   					<?php endif; ?>
 									
 									<h4 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
