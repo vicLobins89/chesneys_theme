@@ -241,6 +241,10 @@ function bones_related_posts() {
 PAGE NAVI
 *********************/
 
+/*********************
+PAGE NAVI
+*********************/
+
 // Numeric Page Navi (built into the theme by default)
 function bones_page_navi() {
   global $wp_query;
