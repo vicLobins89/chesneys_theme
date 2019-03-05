@@ -64,7 +64,7 @@ jQuery(document).ready(function($) {
 	$('input.download').click(function(e){
 		e.preventDefault();
 
-		downloadAll(window.links);
+		downloadAll(links);
 	} );
 	
 	// Reveal clicks
