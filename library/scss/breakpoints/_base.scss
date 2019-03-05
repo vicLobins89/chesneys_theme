@@ -2997,6 +2997,15 @@ POSTS & CONTENT STYLES
 .wpsl-gmap-wrap {
 	float: right;
 	width: 70%;
+	
+	.wpsl-select-wrap {
+		#wpsl-select-wrap,
+		#wpsl-results {
+			display: block;
+			float: none;
+			width: 100%;
+		}
+	}
 }
 
 #wpsl-result-list {
@@ -3011,7 +3020,11 @@ POSTS & CONTENT STYLES
 
 #wpsl-checkbox-filter,
 .wpsl-custom-checkboxes {
-	
+	&.wpsl-checkbox-3-columns {
+		li {
+			margin-bottom: 5px;
+		}
+	}
 }
 
 /******************************************************************
