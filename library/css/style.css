@@ -1233,7 +1233,7 @@ WORDPRESS BODY CLASSES
 
 .error404 #post-not-found {
   text-align: center; }
-.error404 .searchbox {
+.error404 .entry-content .searchbox {
   position: relative;
   width: 50%;
   right: auto;
