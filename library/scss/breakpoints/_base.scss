@@ -3009,26 +3009,9 @@ POSTS & CONTENT STYLES
   float: left;
 }
 
-#wpsl-search-btn,
-#wpsl-search-wrap div {
-  float: left;
-}
-
 #wpsl-checkbox-filter,
 .wpsl-custom-checkboxes {
-  /* display:block; */
-  display: initial;
-}
-
-#wpsl-checkbox-filter li,
-.wpsl-custom-checkboxes li {
-  width: 500px;
-}
-
-#wpsl-checkbox-filter.wpsl-checkbox-3-columns li,
-.wpsl-custom-checkboxes.wpsl-checkbox-3-columns li {
-  /* width: 100%; */
-  padding-bottom: 2px;
+	
 }
 
 /******************************************************************
