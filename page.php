@@ -77,7 +77,7 @@ $acfClass = new CustomACF();
 										<div class="text">
 											<h4><?php echo get_sub_field('title'); ?></h4>
 											<p class="desc"><?php echo get_sub_field('description'); ?></p>
-											<input class="js-brochure-input" name="<?php echo get_sub_field('title'); ?>" type="checkbox" value="<?php echo get_sub_field('pdf'); ?>">
+											<input class="js-brochure-input" id="<?php echo get_sub_field('title'); ?>" name="<?php echo get_sub_field('title'); ?>" type="checkbox" value="<?php echo get_sub_field('pdf'); ?>">
 											<label for="<?php echo get_sub_field('title'); ?>"> Select</label>
 										</div>
 									</div>

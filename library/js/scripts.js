@@ -43,10 +43,24 @@ jQuery(document).ready(function($) {
 	$('input.download').click(function(e){
 		e.preventDefault();
 
-		for( var n = 0; n < value.length; n++ ) {
-			window.open(value[n]);
-		}
+		download('https://chesneys-test-uk.tk/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf','https://chesneys-test-uk.tk/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf');
 	} );
+	
+	var download = function() {
+       for(var i=0; i<arguments.length; i++) {
+         var iframe = $('<iframe style="visibility: collapse;"></iframe>');
+         $('body').append(iframe);
+         var content = iframe[0].contentDocument;
+         var form = '<form action="' + arguments[i] + '" method="GET"></form>';
+         content.write(form);
+         $('form', content).submit();
+         setTimeout((function(iframe) {
+           return function() { 
+             iframe.remove(); 
+           }
+         })(iframe), 2000);
+       }
+     }
 	
 	// Reveal clicks
 	$('.for-you').click(function(e){
