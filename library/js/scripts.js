@@ -22,12 +22,6 @@ jQuery(document).ready(function($) {
 	viewport = updateViewportDimensions();
 	
 	var value = [];
-	var filesForDownload = [
-		{
-			path: "https://chesneys-test-uk.tk/wp-content/uploads/2019/03/main_brochure_2018_uk-online.pdf",
-			name: "Fireplaces.pdf"
-		}
-	];
 	
 	$('.js-brochure-input').each(function(){
 		$(this).on('change', function(e){
@@ -50,20 +44,9 @@ jQuery(document).ready(function($) {
 	$('input.download').click(function(e){
 		e.preventDefault();
 
-		var temporaryDownloadLink = document.createElement("a");
-		temporaryDownloadLink.style.display = 'none';
-
-		document.body.appendChild( temporaryDownloadLink );
-
-		for( var n = 0; n < filesForDownload.length; n++ ) {
-			var download = filesForDownload[n];
-			temporaryDownloadLink.setAttribute( 'href', download[n] );
-			temporaryDownloadLink.setAttribute( 'download', download[n] );
-
-			temporaryDownloadLink.click();
+		for( var n = 0; n < value.length; n++ ) {
+			window.open(value[n]);
 		}
-
-		document.body.removeChild( temporaryDownloadLink );
 	} );
 	
 	// Reveal clicks
