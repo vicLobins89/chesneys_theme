@@ -1217,7 +1217,7 @@ WORDPRESS BODY CLASSES
     width: 100%; }
 .search .pagination {
   background: #fff; }
-.search .post:nth-child(3n+1) {
+.search article:nth-child(3n+1) {
   clear: both; }
 .search .thumb {
   display: block; }
