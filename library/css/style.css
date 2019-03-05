@@ -3094,7 +3094,7 @@ POSTS & CONTENT STYLES
   float: right;
   width: 70%; }
 
-.wpsl-result-list {
+#wpsl-result-list {
   clear: both; }
 
 .wpsl-search.wpsl-checkboxes-enabled {
