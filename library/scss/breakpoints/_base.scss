@@ -333,6 +333,15 @@ WORDPRESS BODY CLASSES
 		text-align: center;
 	}
 	
+	.search-title {
+		font-size: 1em;
+		color: $text-color;
+		
+		&:hover {
+			color: $teal;
+		}
+	}
+	
 	.search-content {
 		padding: 1rem;
 	}

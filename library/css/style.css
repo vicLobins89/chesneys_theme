@@ -1203,6 +1203,11 @@ WORDPRESS BODY CLASSES
 
 .search .archive-title {
   text-align: center; }
+.search .search-title {
+  font-size: 1em;
+  color: #142128; }
+  .search .search-title:hover {
+    color: #4b858e; }
 .search .search-content {
   padding: 1rem; }
 .search aside ul {
