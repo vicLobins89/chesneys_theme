@@ -3002,9 +3002,11 @@ POSTS & CONTENT STYLES
 .wpsl-select-wrap {
 	#wpsl-radius,
 	#wpsl-results {
-		display: block;
+		display: block !important;
 		float: none;
 		width: 100%;
+		padding-top: 4px;
+		height: 3rem;
 	}
 }
 
@@ -3026,6 +3028,10 @@ POSTS & CONTENT STYLES
 			margin-bottom: 5px;
 		}
 	}
+}
+
+.wpsl-search-btn-wrap input#wpsl-search-btn {
+	@extend .secondary-btn;
 }
 
 /******************************************************************
