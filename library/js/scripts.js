@@ -62,11 +62,12 @@ jQuery(document).ready(function($) {
 		document.body.removeChild(link);
 	}
 	
-	$('input.download').click(function(e){
-		e.preventDefault();
-
-		downloadAll(pdfHref, pdfName);
-	} );
+	document.addEventListener( 'wpcf7submit', function( event ) {
+		if ( '2607' === event.detail.contactFormId ) {
+			alert( "The contact form ID is 2607." );
+			downloadAll(pdfHref, pdfName);
+		}
+	}, false );
 	
 	// Reveal clicks
 	$('.for-you').click(function(e){
