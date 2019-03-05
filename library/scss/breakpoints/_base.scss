@@ -1807,6 +1807,7 @@ NAVIGATION STYLES
 		&.hidden {
 			visibility: hidden !important;
 			max-width: 0 !important;
+			max-height: 0 !important;
 			overflow: hidden !important;
 			margin: 0 !important;
 		}
