@@ -362,6 +362,19 @@ WORDPRESS BODY CLASSES
 	.post:nth-child(3n+1) {
 		clear: both;
 	}
+	
+	.thumb {
+		display: block;
+		
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	
+	input[type="submit"] {
+		@extend .secondary-btn;
+	}
 }
 
 .search-results {

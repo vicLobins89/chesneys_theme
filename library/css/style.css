@@ -613,7 +613,7 @@ Quick video guide:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.primary-btn, .image-link + p, .image-link .wp-caption-text, .vid-thumb .play, .row.related-wrapper .woocommerce-loop-product__title, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, .woocommerce button.single_add_to_cart_button,
+.primary-btn, .image-link + p, .image-link .wp-caption-text, .vid-thumb .play, .row.related-wrapper .woocommerce-loop-product__title, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, .search input[type="submit"], .woocommerce button.single_add_to_cart_button,
 .woocommerce button.woocommerce-Button,
 .woocommerce button[type=submit].woocommerce-Button, .woocommerce table.shop_table .button, .woocommerce ul.products li.product .button, .woocommerce .button.wc-forward, #add_payment_method form input.button.alt,
 .woocommerce-cart form input.button.alt,
@@ -643,14 +643,14 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   outline: none;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, .vid-thumb .play:hover, .row.related-wrapper .woocommerce-loop-product__title:hover, a.comment-reply-link:hover, #submit:hover, .secondary-btn:hover, .woocommerce button.single_add_to_cart_button:hover,
+  .primary-btn:hover, .image-link + p:hover, .image-link .wp-caption-text:hover, .vid-thumb .play:hover, .row.related-wrapper .woocommerce-loop-product__title:hover, a.comment-reply-link:hover, #submit:hover, .secondary-btn:hover, .search input[type="submit"]:hover, .woocommerce button.single_add_to_cart_button:hover,
   .woocommerce button.woocommerce-Button:hover, .woocommerce table.shop_table .button:hover, .woocommerce ul.products li.product .button:hover, .woocommerce .button.wc-forward:hover, #add_payment_method form input.button.alt:hover,
   .woocommerce-cart form input.button.alt:hover,
   .woocommerce-checkout form input.button.alt:hover, #add_payment_method form a.button.cancel:hover,
   .woocommerce-cart form a.button.cancel:hover,
   .woocommerce-checkout form a.button.cancel:hover, #add_payment_method button[name=login]:hover,
   .woocommerce-cart button[name=login]:hover,
-  .woocommerce-checkout button[name=login]:hover, .wpsl-search-btn-wrap input#wpsl-search-btn:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, .vid-thumb .play:focus, .row.related-wrapper .woocommerce-loop-product__title:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus, .woocommerce button.single_add_to_cart_button:focus,
+  .woocommerce-checkout button[name=login]:hover, .wpsl-search-btn-wrap input#wpsl-search-btn:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, .vid-thumb .play:focus, .row.related-wrapper .woocommerce-loop-product__title:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus, .search input[type="submit"]:focus, .woocommerce button.single_add_to_cart_button:focus,
   .woocommerce button.woocommerce-Button:focus, .woocommerce table.shop_table .button:focus, .woocommerce ul.products li.product .button:focus, .woocommerce .button.wc-forward:focus, #add_payment_method form input.button.alt:focus,
   .woocommerce-cart form input.button.alt:focus,
   .woocommerce-checkout form input.button.alt:focus, #add_payment_method form a.button.cancel:focus,
@@ -660,7 +660,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .woocommerce-checkout button[name=login]:focus, .wpsl-search-btn-wrap input#wpsl-search-btn:focus {
     color: #fff;
     text-decoration: none; }
-  .primary-btn a, .image-link + p a, .image-link .wp-caption-text a, .vid-thumb .play a, .row.related-wrapper .woocommerce-loop-product__title a, a.comment-reply-link a, #submit a, .secondary-btn a, .woocommerce button.single_add_to_cart_button a,
+  .primary-btn a, .image-link + p a, .image-link .wp-caption-text a, .vid-thumb .play a, .row.related-wrapper .woocommerce-loop-product__title a, a.comment-reply-link a, #submit a, .secondary-btn a, .search input[type="submit"] a, .woocommerce button.single_add_to_cart_button a,
   .woocommerce button.woocommerce-Button a,
   .woocommerce button[type=submit].woocommerce-Button a, .woocommerce table.shop_table .button a, .woocommerce ul.products li.product .button a, .woocommerce .button.wc-forward a, #add_payment_method form input.button.alt a,
   .woocommerce-cart form input.button.alt a,
@@ -695,7 +695,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     max-width: 19rem;
     padding: .9em 2em 0.5em; }
 
-.secondary-btn, .woocommerce button.single_add_to_cart_button,
+.secondary-btn, .search input[type="submit"], .woocommerce button.single_add_to_cart_button,
 .woocommerce button.woocommerce-Button,
 .woocommerce button[type=submit].woocommerce-Button, .woocommerce table.shop_table .button, .woocommerce ul.products li.product .button, .woocommerce .button.wc-forward, #add_payment_method form input.button.alt,
 .woocommerce-cart form input.button.alt,
@@ -713,14 +713,14 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   font-weight: normal;
   padding-left: 0;
   padding-right: 0; }
-  .secondary-btn:hover, .woocommerce button.single_add_to_cart_button:hover,
+  .secondary-btn:hover, .search input[type="submit"]:hover, .woocommerce button.single_add_to_cart_button:hover,
   .woocommerce button.woocommerce-Button:hover, .woocommerce table.shop_table .button:hover, .woocommerce ul.products li.product .button:hover, .woocommerce .button.wc-forward:hover, #add_payment_method form input.button.alt:hover,
   .woocommerce-cart form input.button.alt:hover,
   .woocommerce-checkout form input.button.alt:hover, #add_payment_method form a.button.cancel:hover,
   .woocommerce-cart form a.button.cancel:hover,
   .woocommerce-checkout form a.button.cancel:hover, #add_payment_method button[name=login]:hover,
   .woocommerce-cart button[name=login]:hover,
-  .woocommerce-checkout button[name=login]:hover, .wpsl-search-btn-wrap input#wpsl-search-btn:hover, .secondary-btn:focus, .woocommerce button.single_add_to_cart_button:focus,
+  .woocommerce-checkout button[name=login]:hover, .wpsl-search-btn-wrap input#wpsl-search-btn:hover, .secondary-btn:focus, .search input[type="submit"]:focus, .woocommerce button.single_add_to_cart_button:focus,
   .woocommerce button.woocommerce-Button:focus, .woocommerce table.shop_table .button:focus, .woocommerce ul.products li.product .button:focus, .woocommerce .button.wc-forward:focus, #add_payment_method form input.button.alt:focus,
   .woocommerce-cart form input.button.alt:focus,
   .woocommerce-checkout form input.button.alt:focus, #add_payment_method form a.button.cancel:focus,
@@ -735,7 +735,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     background: none;
     border-color: #4b858e;
     color: #4b858e; }
-  .secondary-btn.alt, .woocommerce button.alt.single_add_to_cart_button,
+  .secondary-btn.alt, .search input.alt[type="submit"], .woocommerce button.alt.single_add_to_cart_button,
   .woocommerce button.alt.woocommerce-Button, .woocommerce table.shop_table .alt.button, .woocommerce ul.products li.product .alt.button, .woocommerce .alt.button.wc-forward, #add_payment_method form input.alt.button,
   .woocommerce-cart form input.alt.button,
   .woocommerce-checkout form input.alt.button, #add_payment_method form a.button.cancel,
@@ -748,21 +748,21 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     background-color: #f5f3f1;
     border-color: #f5f3f1;
     color: #142128; }
-    .secondary-btn.alt:hover, .woocommerce button.alt.single_add_to_cart_button:hover,
+    .secondary-btn.alt:hover, .search input.alt[type="submit"]:hover, .woocommerce button.alt.single_add_to_cart_button:hover,
     .woocommerce button.alt.woocommerce-Button:hover, .woocommerce table.shop_table .alt.button:hover, .woocommerce ul.products li.product .alt.button:hover, .woocommerce .alt.button.wc-forward:hover, #add_payment_method form input.alt.button:hover,
     .woocommerce-cart form input.alt.button:hover,
     .woocommerce-checkout form input.alt.button:hover, #add_payment_method form a.button.cancel:hover,
     .woocommerce-cart form a.button.cancel:hover,
     .woocommerce-checkout form a.button.cancel:hover, #add_payment_method button.alt[name=login]:hover,
     .woocommerce-cart button.alt[name=login]:hover,
-    .woocommerce-checkout button.alt[name=login]:hover, .wpsl-search-btn-wrap input.alt#wpsl-search-btn:hover, .secondary-btn.alt:focus, .woocommerce button.alt.single_add_to_cart_button:focus,
+    .woocommerce-checkout button.alt[name=login]:hover, .wpsl-search-btn-wrap input.alt#wpsl-search-btn:hover, .secondary-btn.alt:focus, .search input.alt[type="submit"]:focus, .woocommerce button.alt.single_add_to_cart_button:focus,
     .woocommerce button.alt.woocommerce-Button:focus, .woocommerce table.shop_table .alt.button:focus, .woocommerce ul.products li.product .alt.button:focus, .woocommerce .alt.button.wc-forward:focus, #add_payment_method form input.alt.button:focus,
     .woocommerce-cart form input.alt.button:focus,
     .woocommerce-checkout form input.alt.button:focus, #add_payment_method form a.button.cancel:focus,
     .woocommerce-cart form a.button.cancel:focus,
     .woocommerce-checkout form a.button.cancel:focus, #add_payment_method button.alt[name=login]:focus,
     .woocommerce-cart button.alt[name=login]:focus,
-    .woocommerce-checkout button.alt[name=login]:focus, .wpsl-search-btn-wrap input.alt#wpsl-search-btn:focus, .wp-caption:hover .secondary-btn.alt, .wp-caption:hover .woocommerce button.alt.single_add_to_cart_button, .woocommerce .wp-caption:hover button.alt.single_add_to_cart_button,
+    .woocommerce-checkout button.alt[name=login]:focus, .wpsl-search-btn-wrap input.alt#wpsl-search-btn:focus, .wp-caption:hover .secondary-btn.alt, .wp-caption:hover .search input.alt[type="submit"], .search .wp-caption:hover input.alt[type="submit"], .wp-caption:hover .woocommerce button.alt.single_add_to_cart_button, .woocommerce .wp-caption:hover button.alt.single_add_to_cart_button,
     .wp-caption:hover .woocommerce button.alt.woocommerce-Button,
     .woocommerce .wp-caption:hover button.alt.woocommerce-Button, .wp-caption:hover .woocommerce table.shop_table .alt.button, .woocommerce table.shop_table .wp-caption:hover .alt.button, .wp-caption:hover .woocommerce ul.products li.product .alt.button, .woocommerce ul.products li.product .wp-caption:hover .alt.button, .wp-caption:hover .woocommerce .alt.button.wc-forward, .woocommerce .wp-caption:hover .alt.button.wc-forward, .wp-caption:hover #add_payment_method form input.alt.button, #add_payment_method form .wp-caption:hover input.alt.button,
     .wp-caption:hover .woocommerce-cart form input.alt.button,
@@ -1219,6 +1219,11 @@ WORDPRESS BODY CLASSES
   background: #fff; }
 .search .post:nth-child(3n+1) {
   clear: both; }
+.search .thumb {
+  display: block; }
+  .search .thumb img {
+    width: 100%;
+    height: auto; }
 
 .widecolumn {
   max-width: 80%;
@@ -1292,7 +1297,7 @@ LAYOUT & GRID STYLES
       color: #000; }
     .row.outdoor-product-single .short-desc form.cart {
       float: right; }
-      .row.outdoor-product-single .short-desc form.cart .secondary-btn, .row.outdoor-product-single .short-desc form.cart .woocommerce button.single_add_to_cart_button, .woocommerce .row.outdoor-product-single .short-desc form.cart button.single_add_to_cart_button,
+      .row.outdoor-product-single .short-desc form.cart .secondary-btn, .row.outdoor-product-single .short-desc form.cart .search input[type="submit"], .search .row.outdoor-product-single .short-desc form.cart input[type="submit"], .row.outdoor-product-single .short-desc form.cart .woocommerce button.single_add_to_cart_button, .woocommerce .row.outdoor-product-single .short-desc form.cart button.single_add_to_cart_button,
       .row.outdoor-product-single .short-desc form.cart .woocommerce button.woocommerce-Button,
       .woocommerce .row.outdoor-product-single .short-desc form.cart button.woocommerce-Button, .row.outdoor-product-single .short-desc form.cart .woocommerce table.shop_table .button, .woocommerce table.shop_table .row.outdoor-product-single .short-desc form.cart .button, .row.outdoor-product-single .short-desc form.cart .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .row.outdoor-product-single .short-desc form.cart .button, .row.outdoor-product-single .short-desc form.cart .woocommerce .button.wc-forward, .woocommerce .row.outdoor-product-single .short-desc form.cart .button.wc-forward, .row.outdoor-product-single .short-desc #add_payment_method form.cart input.button.alt, #add_payment_method .row.outdoor-product-single .short-desc form.cart input.button.alt,
       .row.outdoor-product-single .short-desc .woocommerce-cart form.cart input.button.alt,
@@ -2960,7 +2965,7 @@ POSTS & CONTENT STYLES
       .woocommerce-checkout #payment ul.payment_methods .payment_box:before {
         content: none;
         display: none; }
-  #add_payment_method #payment .secondary-btn, #add_payment_method #payment .woocommerce button.single_add_to_cart_button, .woocommerce #add_payment_method #payment button.single_add_to_cart_button,
+  #add_payment_method #payment .secondary-btn, #add_payment_method #payment .search input[type="submit"], .search #add_payment_method #payment input[type="submit"], #add_payment_method #payment .woocommerce button.single_add_to_cart_button, .woocommerce #add_payment_method #payment button.single_add_to_cart_button,
   #add_payment_method #payment .woocommerce button.woocommerce-Button,
   .woocommerce #add_payment_method #payment button.woocommerce-Button, #add_payment_method #payment .woocommerce table.shop_table .button, .woocommerce table.shop_table #add_payment_method #payment .button, #add_payment_method #payment .woocommerce ul.products li.product .button, .woocommerce ul.products li.product #add_payment_method #payment .button, #add_payment_method #payment .woocommerce .button.wc-forward, .woocommerce #add_payment_method #payment .button.wc-forward, #add_payment_method #payment form input.button.alt, #add_payment_method form #payment input.button.alt,
   .woocommerce-cart form #add_payment_method #payment input.button.alt,
@@ -2968,6 +2973,8 @@ POSTS & CONTENT STYLES
   .woocommerce-cart form #add_payment_method #payment a.button.cancel,
   .woocommerce-checkout form #add_payment_method #payment a.button.cancel, #add_payment_method #payment button[name=login], #add_payment_method #payment .wpsl-search-btn-wrap input#wpsl-search-btn, .wpsl-search-btn-wrap #add_payment_method #payment input#wpsl-search-btn,
   .woocommerce-cart #payment .secondary-btn,
+  .woocommerce-cart #payment .search input[type="submit"],
+  .search .woocommerce-cart #payment input[type="submit"],
   .woocommerce-cart #payment .woocommerce button.single_add_to_cart_button,
   .woocommerce .woocommerce-cart #payment button.single_add_to_cart_button,
   .woocommerce-cart #payment .woocommerce button.woocommerce-Button,
@@ -2990,6 +2997,8 @@ POSTS & CONTENT STYLES
   .woocommerce-cart #payment .wpsl-search-btn-wrap input#wpsl-search-btn,
   .wpsl-search-btn-wrap .woocommerce-cart #payment input#wpsl-search-btn,
   .woocommerce-checkout #payment .secondary-btn,
+  .woocommerce-checkout #payment .search input[type="submit"],
+  .search .woocommerce-checkout #payment input[type="submit"],
   .woocommerce-checkout #payment .woocommerce button.single_add_to_cart_button,
   .woocommerce .woocommerce-checkout #payment button.single_add_to_cart_button,
   .woocommerce-checkout #payment .woocommerce button.woocommerce-Button,
@@ -3055,7 +3064,7 @@ POSTS & CONTENT STYLES
 .woocommerce-checkout #dealer-code {
   margin-bottom: 2rem; }
 
-.woocommerce-order-pay .secondary-btn, .woocommerce-order-pay .woocommerce button.single_add_to_cart_button, .woocommerce .woocommerce-order-pay button.single_add_to_cart_button,
+.woocommerce-order-pay .secondary-btn, .woocommerce-order-pay .search input[type="submit"], .search .woocommerce-order-pay input[type="submit"], .woocommerce-order-pay .woocommerce button.single_add_to_cart_button, .woocommerce .woocommerce-order-pay button.single_add_to_cart_button,
 .woocommerce-order-pay .woocommerce button.woocommerce-Button,
 .woocommerce .woocommerce-order-pay button.woocommerce-Button, .woocommerce-order-pay .woocommerce table.shop_table .button, .woocommerce table.shop_table .woocommerce-order-pay .button, .woocommerce-order-pay .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .woocommerce-order-pay .button, .woocommerce-order-pay .woocommerce .button.wc-forward, .woocommerce .woocommerce-order-pay .button.wc-forward, .woocommerce-order-pay #add_payment_method form input.button.alt, #add_payment_method form .woocommerce-order-pay input.button.alt,
 .woocommerce-order-pay .woocommerce-cart form input.button.alt,
