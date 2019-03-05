@@ -41,6 +41,8 @@
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
 		<div id="container">
+			
+			<?php echo do_shortcode('[geoip_detect2_show_if country="US"] TEXT [/geoip_detect2_show_if]'); ?>
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 				
