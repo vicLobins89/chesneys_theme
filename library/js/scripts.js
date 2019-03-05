@@ -63,7 +63,6 @@ jQuery(document).ready(function($) {
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {
-			alert( "The contact form ID is 2607." );
 			downloadAll(pdfHref, pdfName);
 		}
 	}, false );

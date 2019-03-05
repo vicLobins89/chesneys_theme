@@ -1429,6 +1429,10 @@ LAYOUT & GRID STYLES
     height: auto; }
   .row.brochures-wrapper .col-4:nth-child(3n+1) {
     clear: both; }
+  .row.brochures-wrapper label {
+    font-family: "Univers", Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold; }
 
 .gray-box {
   padding: 1rem;

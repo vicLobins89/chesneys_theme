@@ -72,7 +72,7 @@ $acfClass = new CustomACF();
 									<div class="col-4">
 										<img src="<?php echo get_sub_field('cover'); ?>" alt="<?php echo get_sub_field('title'); ?>">
 										<div class="text">
-											<h4><?php echo get_sub_field('title'); ?></h4>
+											<h4 class="flair lhs"><?php echo get_sub_field('title'); ?></h4>
 											<p class="desc"><?php echo get_sub_field('description'); ?></p>
 											<input class="js-brochure-input" id="<?php echo get_sub_field('title'); ?>" name="<?php echo get_sub_field('title'); ?>" type="checkbox" value="<?php echo get_sub_field('pdf'); ?>">
 											<label for="<?php echo get_sub_field('title'); ?>"> Select</label>
