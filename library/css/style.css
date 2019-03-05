@@ -3131,7 +3131,7 @@ POSTS & CONTENT STYLES
   display: none !important; }
 
 .wpsl-store-location p {
-  margin-bottom: 5px; }
+  margin-bottom: 5px !important; }
 .wpsl-store-location .wpsl-contact-details,
 .wpsl-store-location > p > span {
   display: none !important; }
