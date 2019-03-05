@@ -35,7 +35,7 @@ $acfClass = new CustomACF();
 								
 								<a class="thumb" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('folio-thumb'); ?></a>
 
-								<?php printf( '<h3 class="h2 lhs sans">' . __('', 'bonestheme' ) . '%1$s</h3>' , get_the_category_list(', ') ); ?>
+								<?php printf( '<h3 class="flair lhs sans">' . __('', 'bonestheme' ) . '%1$s</h3>' , get_the_category_list(', ') ); ?>
 
 								<a class="copy-l" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 								

@@ -5,6 +5,10 @@
 				<div id="inner-content" class="cf">
 					
 					<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+					
+					<aside class="col-4 cf">
+						<?php get_sidebar(); ?>
+					</aside>
 
 					<div id="main" class="col-8 cf" role="main">
 
@@ -53,10 +57,6 @@
 							<?php endif; ?>
 
 						</div>
-					
-						<aside class="col-4 cf">
-							<?php get_sidebar(); ?>
-						</aside>
 
 					</div>
 				
