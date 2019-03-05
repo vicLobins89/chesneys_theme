@@ -18,8 +18,9 @@ $acfClass = new CustomACF();
 								$menu_breadcrumb = new Menu_Breadcrumb( 'main-nav' );
 								$menu_breadcrumb->render( ' &sol;&sol; ', '<p class="menu-breadcrumb"><a href="'.home_url().'">Homepage</a> // ', '</p>' );
 							} elseif( !is_front_page() && !is_page($no_breadcrumb) ) {
-								$menu_breadcrumb = new Menu_Breadcrumb( 'socket-nav' );
-								$menu_breadcrumb->render( ' &sol;&sol; ', '<p class="menu-breadcrumb"><a href="'.home_url().'">Homepage</a> // ', '</p>' );
+								if ( function_exists('yoast_breadcrumb') ) {
+									yoast_breadcrumb( '<p class="menu-breadcrumb">','</p>' );
+								}
 							}
 							?>
 
