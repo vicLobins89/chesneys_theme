@@ -2801,10 +2801,10 @@ POSTS & CONTENT STYLES
 			@extend .secondary-btn;
 			@extend .secondary-btn.alt;
 		}
-		
-		input[name="login"] {
-			@extend .secondary-btn;
-		}
+	}
+	
+	input[name="login"] {
+		@extend .secondary-btn;
 	}
 	
 	ul.order_details {
