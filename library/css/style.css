@@ -1231,6 +1231,9 @@ WORDPRESS BODY CLASSES
     width: 100%;
     height: auto; }
 
+.error404 #post-not-found {
+  text-align: center; }
+
 .widecolumn {
   max-width: 80%;
   margin: 10% auto;

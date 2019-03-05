@@ -10,11 +10,11 @@
 
 							<section class="entry-content">
 								
-								<h1><?php _e( 'Page Not Found', 'bonestheme' ); ?></h1>
+								<h1 class="h2 flair"><?php _e( 'Page Not Found', 'bonestheme' ); ?></h1>
 
 								<p><?php _e( 'The page you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
 								
-								<p><?php get_search_form(); ?></p>
+								<div class="searchbox"><?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?></div>
 								
 								<p>Or go back to the <a href="/perrigo">home page</a>.</p>
 

@@ -391,7 +391,13 @@ WORDPRESS BODY CLASSES
 
 .search-no-results {}
 .search-paged-1 {}
-.error404 {}
+
+.error404 {
+	#post-not-found {
+		text-align: center;
+	}
+}
+
 .single {}
 .blog, .archive, .single {}
 
