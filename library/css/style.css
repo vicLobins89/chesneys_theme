@@ -3155,12 +3155,14 @@ POSTS & CONTENT STYLES
 .wpsl-search.wpsl-checkboxes-enabled {
   width: 30%;
   height: 600px;
-  float: left; }
+  float: left;
+  padding: 2rem; }
 
 #wpsl-checkbox-filter.wpsl-checkbox-3-columns li,
 .wpsl-custom-checkboxes.wpsl-checkbox-3-columns li {
   width: 100%;
-  margin-bottom: 5px; }
+  font-size: 1rem;
+  margin-bottom: 8px; }
 
 .wpsl-search-btn-wrap input#wpsl-search-btn {
   background-image: none; }
