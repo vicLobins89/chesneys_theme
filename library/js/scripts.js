@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
 
 		for (var i = 0; i < urls.length; i++) {
 			link.setAttribute('href', urls[i]);
-			link.setAttribute('name', names[i]);
+			link.innerHTML = names[i];
 			link.click();
 		}
 
