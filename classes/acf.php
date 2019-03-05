@@ -32,28 +32,6 @@ class CustomACF {
 							<?php endwhile; ?>
 						</div>
 						<?php endif; ?>
-						
-						<?php if( have_rows('brochures') ) : ?>
-						<div class="brochures-wrapper cf">
-							<div class="col-4">
-								<?php echo do_shortcode('[contact-form-7 id="2607" title="Brochure request"]'); ?>
-							</div>
-							
-							<div class="col-8 cf">
-							<?php while( have_rows('brochures') ) : the_row(); ?>
-								<div class="col-4">
-									<img src="<?php echo get_sub_field('cover'); ?>" alt="<?php echo get_sub_field('name'); ?>">
-									<div class="text">
-										<h4><?php echo get_sub_field('title'); ?></h4>
-										<p class="desc"><?php echo get_sub_field('description'); ?></p>
-										<input class="js-brochure-input" name="<?php echo get_sub_field('title'); ?>" type="checkbox" value="<?php echo get_sub_field('pdf'); ?>">
-										<label for="<?php echo get_sub_field('title'); ?>"> Select</label>
-									</div>
-								</div>
-							<?php endwhile; ?>
-							</div>
-						</div>
-						<?php endif; ?>
 					</div>
 				</div>
 			</section>

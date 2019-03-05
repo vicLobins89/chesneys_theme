@@ -27,7 +27,8 @@ jQuery(document).ready(function($) {
 	$('.js-brochure-input').each(function(){
 		$(this).on('change', function(e){
 			e.preventDefault();
-			var newVal = $(this).val();
+			var newVal = $(this).val(),
+				newName = $(this).attr('name');
 			
 			if( !$(this).is(':checked') ) {
 				value = jQuery.grep(value, function(val) {
@@ -37,7 +38,7 @@ jQuery(document).ready(function($) {
 				value.push(newVal);
 			}
 			$('input.brochures').val(value);
-			console.log(value);
+			console.log(newName);
 		});
 	});
 	
