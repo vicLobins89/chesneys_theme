@@ -266,6 +266,17 @@ add_role(
     )
 );
 
+// Gateways for user roles
+add_filter( 'woocommerce_available_payment_gateways', 'bbloomer_paypal_disable_manager' );
+ 
+function bbloomer_paypal_disable_manager( $available_gateways ) {
+	global $woocommerce;
+	if ( isset( $available_gateways['epdq_checkout'] ) && current_user_can('trade') ) {
+		unset( $available_gateways['epdq_checkout'] );
+	} 
+	return $available_gateways;
+}
+
 // Display category image on category archive
 function woocommerce_category_image() {
 	$cat = get_queried_object();
