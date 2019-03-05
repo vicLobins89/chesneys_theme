@@ -41,8 +41,7 @@ jQuery(document).ready(function($) {
 				pdfHref.push(newHref);
 				pdfName.push(newName);
 			}
-			$('input.brochures').val(pdfHref);
-			console.log(pdfHref);
+			$('input.brochures').val(pdfName);
 		});
 	});
 
