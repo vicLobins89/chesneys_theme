@@ -7,7 +7,7 @@
 					<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 					
 					<aside class="col-4 cf">
-						<?php echo do_shortcode( '[searchandfilter fields="search,post_types,product_cat" types=",select,radio" hierarchical=",0,1" headings="Search,Type,Products" submit_label="Filter"]' ); ?>
+						<?php echo do_shortcode( '[searchandfilter fields="search,post_types" types=",select" headings="Search,Type,Products" submit_label="Filter"]' ); ?>
 					</aside>
 
 					<div id="main" class="col-8 cf" role="main">
