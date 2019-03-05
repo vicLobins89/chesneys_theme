@@ -333,13 +333,17 @@ WORDPRESS BODY CLASSES
 		text-align: center;
 	}
 	
-	.search-title {
+	.category {
 		font-size: 1em;
 		color: $text-color;
 		
 		&:hover {
 			color: $teal;
 		}
+	}
+	
+	.search-title {
+		font-size: 1.1em;
 	}
 	
 	.search-content {

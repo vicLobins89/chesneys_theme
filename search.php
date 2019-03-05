@@ -19,17 +19,19 @@
 								<section class="search-content">
 									<?php if( has_post_thumbnail() ) : ?>
 										<a class="thumb" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('folio-thumb'); ?></a>
+									<?php else : ?>
+										<a class="thumb" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><img src="/wp-content/plugins/woocommerce/assets/images/placeholder.png" alt="<?php the_title_attribute(); ?>"></a>
 									<?php endif; ?>
 									
 									<?php if(get_the_category_list(', ') != ''): ?>
-                  						<h3 class="flair sans lhs"><?php printf( __( '%1$s', 'bonestheme' ), get_the_category_list(', ') ); ?></h3>
+                  						<h3 class="category flair sans lhs"><?php printf( __( '%1$s', 'bonestheme' ), get_the_category_list(', ') ); ?></h3>
                   					<?php endif; ?>
 									
 									<?php if(get_the_term_list($post->ID, 'portfolio_cat', '', ', ', '') != ''): ?>
                   						<?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_term_list($post->ID, 'portfolio_cat', '', ', ', '') ); ?>
                   					<?php endif; ?>
 									
-									<h3 class="search-title entry-title flair lhs sans"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+									<h3 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 								</section>
 
 							</article>
