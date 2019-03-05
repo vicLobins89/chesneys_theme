@@ -1,26 +1,27 @@
 <?php get_header(); ?>
 
-			<div id="content" class="row entry-content wrap push">
+			<div id="content" class="row entry-content push">
 
 				<div id="inner-content" class="cf">
 					
 					<h1 class="archive-title h2"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 					
-					<aside class="col-4 cf">
+					<aside class="col-3 cf">
 						<?php echo do_shortcode( '[searchandfilter fields="search,post_types" types=",select" headings="Search,Type,Products" submit_label="Filter"]' ); ?>
 					</aside>
 
-					<div id="main" class="col-8 cf" role="main">
+					<div id="main" class="col-9 cf" role="main">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class('cf col-4'); ?> role="article">
 
 								<section class="search-content">
+									<?php if( has_post_thumbnail() ) : ?>
+										<a class="thumb" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('folio-thumb'); ?></a>
+									<?php endif; ?>
 									
-									<h3 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									
-									<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonestheme' ) . '</span>' ); ?>
+									<h3 class="search-title entry-title flair lhs"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 								</section>
 
 							</article>
