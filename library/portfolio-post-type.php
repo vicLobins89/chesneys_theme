@@ -41,15 +41,14 @@ function folio_post() {
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'revisions'),
-			'taxonomies' => array('portfolio_cat', 'portfolio_tag'),
+			'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'revisions')
 		) /* end of options */
 	); /* end of register post type */
 	
 	/* this adds your post categories to your custom post type */
-	register_taxonomy_for_object_type( 'category', 'case_study' );
+	//register_taxonomy_for_object_type( 'category', 'case_study' );
 	/* this adds your post tags to your custom post type */
-	register_taxonomy_for_object_type( 'post_tag', 'case_study' );
+	//register_taxonomy_for_object_type( 'post_tag', 'case_study' );
 	
 }
 
