@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
 	function downloadAll(urls, names) {
 		var link = document.createElement('a');
 
-		link.setAttribute('download', null);
+		link.setAttribute('download', 'dl');
 		link.style.display = 'none';
 
 		document.body.appendChild(link);
