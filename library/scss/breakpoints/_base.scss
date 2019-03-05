@@ -358,6 +358,10 @@ WORDPRESS BODY CLASSES
 	.pagination {
 		background: $white;
 	}
+	
+	.post:nth-child(3n+1) {
+		clear: both;
+	}
 }
 
 .search-results {
