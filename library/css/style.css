@@ -2247,7 +2247,9 @@ NAVIGATION STYLES
     .socket .menu-item a {
       color: inherit; }
     .socket .menu-item.hidden {
-      display: none !important; }
+      visibility: hidden !important;
+      max-width: 0 !important;
+      overflow: hidden !important; }
   .socket .rhs-links {
     position: absolute;
     right: 2rem;
