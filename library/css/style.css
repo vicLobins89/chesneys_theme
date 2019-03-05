@@ -3086,14 +3086,6 @@ POSTS & CONTENT STYLES
   #text_slider.sa_owl_theme .owl-dots .active span {
     background-color: #f5f3f1 !important; }
 
-#wpsl-search-wrap {
-  float: left;
-  max-width: 25%; }
-
-.wpsl-store-below #wpsl-gmap {
-  /* float:none; */
-  width: 100%; }
-
 #wpsl-search-wrap input {
   padding-top: 10px; }
 
@@ -3105,13 +3097,12 @@ POSTS & CONTENT STYLES
   clear: both; }
 
 .wpsl-search.wpsl-checkboxes-enabled {
-  max-width: 30%;
+  width: 30%;
   height: 600px;
   float: left; }
 
 #wpsl-search-btn,
 #wpsl-search-wrap div {
-  /* margin-top: 10px; */
   float: left; }
 
 #wpsl-checkbox-filter,
