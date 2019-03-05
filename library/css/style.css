@@ -3079,6 +3079,41 @@ POSTS & CONTENT STYLES
   #text_slider.sa_owl_theme .owl-dots .active span {
     background-color: #f5f3f1 !important; }
 
+#wpsl-search-wrap {
+  float: left;
+  max-width: 25%; }
+
+.wpsl-store-below #wpsl-gmap {
+  /* float:none; */
+  width: 100%; }
+
+#wpsl-search-wrap input {
+  padding-top: 10px; }
+
+.wpsl-search.wpsl-checkboxes-enabled {
+  max-width: 30%;
+  height: 600px;
+  float: left; }
+
+#wpsl-search-btn,
+#wpsl-search-wrap div {
+  /* margin-top: 10px; */
+  float: left; }
+
+#wpsl-checkbox-filter,
+.wpsl-custom-checkboxes {
+  /* display:block; */
+  display: initial; }
+
+#wpsl-checkbox-filter li,
+.wpsl-custom-checkboxes li {
+  width: 500px; }
+
+wpsl-checkbox-filter.wpsl-checkbox-3-columns li,
+.wpsl-custom-checkboxes.wpsl-checkbox-3-columns li {
+  /* width: 100%; */
+  padding-bottom: 2px; }
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
