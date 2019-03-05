@@ -3185,7 +3185,8 @@ PAGE NAVI STYLES
 ******************************************************************/
 .pagination,
 .wp-prev-next {
-  margin: 1.5em 0; }
+  margin: 0;
+  background: #f5f3f1; }
 
 .pagination {
   text-align: center; }

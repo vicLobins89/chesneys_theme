@@ -3079,73 +3079,74 @@ PAGE NAVI STYLES
 
 .pagination,
 .wp-prev-next {
-	margin: 1.5em 0;
+	margin: 0;
+	background: $light-brown;
 }
-	.pagination {
- 		text-align: center;
+.pagination {
+	text-align: center;
 
-    ul {
-      display: inline-block;
-      background-color: $white;
-      white-space: nowrap;
-      padding: 0;
-      clear: both;
-      border-radius: 3px;
-    }
+ul {
+  display: inline-block;
+  background-color: $white;
+  white-space: nowrap;
+  padding: 0;
+  clear: both;
+  border-radius: 3px;
+}
 
-    li {
-      padding: 0;
-      margin: 0;
-      float: left;
-      display: inline;
-      overflow: hidden;
-      border-right: 1px solid $gray;
-		
-		&:last-child {
-			border: none;
-		}
-    }
+li {
+  padding: 0;
+  margin: 0;
+  float: left;
+  display: inline;
+  overflow: hidden;
+  border-right: 1px solid $gray;
 
-    a, span {
-      margin: 0;
-      text-decoration: none;
-      padding: 0;
-      line-height: 1em;
-      font-size: 1em;
-      font-weight: normal;
-      padding: 0.75em;
-      min-width: 1em;
-      display: block;
-      color: $blue;
+	&:last-child {
+		border: none;
+	}
+}
 
-      &:hover, &:focus {
-      	background-color: $blue;
-      	color: $white;
-      }
-    }
+a, span {
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+  line-height: 1em;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.75em;
+  min-width: 1em;
+  display: block;
+  color: $blue;
 
-    .current{
-    	cursor: default;
-    	color: $white;
-		background-color: $blue;
-    }
+  &:hover, &:focus {
+	background-color: $blue;
+	color: $white;
+  }
+}
 
-  } /* end .bones_page_navi */
+.current{
+	cursor: default;
+	color: $white;
+	background-color: $blue;
+}
 
-	/* fallback previous & next links */
-	.wp-prev-next {
+} /* end .bones_page_navi */
 
-		ul {}
+/* fallback previous & next links */
+.wp-prev-next {
 
-		.prev-link {
-			float: left;
-		}
+	ul {}
 
-		.next-link {
-			float: right;
-		}
+	.prev-link {
+		float: left;
+	}
 
-	} /* end .wp-prev-next */
+	.next-link {
+		float: right;
+	}
+
+} /* end .wp-prev-next */
 
 /******************************************************************
 COMMENT STYLES
