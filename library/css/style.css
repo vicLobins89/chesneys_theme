@@ -3092,11 +3092,12 @@ POSTS & CONTENT STYLES
 .wpsl-gmap-wrap {
   float: right;
   width: 70%; }
-  .wpsl-gmap-wrap .wpsl-select-wrap #wpsl-radius,
-  .wpsl-gmap-wrap .wpsl-select-wrap #wpsl-results {
-    display: block;
-    float: none;
-    width: 100%; }
+
+.wpsl-select-wrap #wpsl-radius,
+.wpsl-select-wrap #wpsl-results {
+  display: block;
+  float: none;
+  width: 100%; }
 
 #wpsl-result-list {
   clear: both; }
