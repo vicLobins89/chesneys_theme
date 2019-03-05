@@ -3130,6 +3130,8 @@ POSTS & CONTENT STYLES
 .wpsl-direction-wrap {
   display: none !important; }
 
+.wpsl-store-location p {
+  margin-bottom: 5px; }
 .wpsl-store-location .wpsl-contact-details,
 .wpsl-store-location > p > span {
   display: none !important; }

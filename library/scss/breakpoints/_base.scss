@@ -3051,6 +3051,10 @@ POSTS & CONTENT STYLES
 }
 
 .wpsl-store-location {
+	p {
+		margin-bottom: 5px;
+	}
+	
 	.wpsl-contact-details,
 	> p > span {
 		display: none !important;
