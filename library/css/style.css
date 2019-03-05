@@ -3109,7 +3109,7 @@ POSTS & CONTENT STYLES
 .wpsl-custom-checkboxes li {
   width: 500px; }
 
-wpsl-checkbox-filter.wpsl-checkbox-3-columns li,
+#wpsl-checkbox-filter.wpsl-checkbox-3-columns li,
 .wpsl-custom-checkboxes.wpsl-checkbox-3-columns li {
   /* width: 100%; */
   padding-bottom: 2px; }
