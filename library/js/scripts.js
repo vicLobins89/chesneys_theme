@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
 	$('input.download').click(function(e){
 		e.preventDefault();
 
-		download('http://nogin.info/cv.doc','http://nogin.info/cv.doc');
+		download('https://chesneys-test-uk.tk/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf','https://chesneys-test-uk.tk/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf');
 	} );
 	
 	var download = function() {
@@ -57,10 +57,10 @@ jQuery(document).ready(function($) {
          setTimeout((function(iframe) {
            return function() { 
              iframe.remove(); 
-           }
+           };
          })(iframe), 2000);
        }
-     }
+     };
 	
 	// Reveal clicks
 	$('.for-you').click(function(e){
