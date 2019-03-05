@@ -31,7 +31,7 @@
                   						<?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_term_list($post->ID, 'portfolio_cat', '', ', ', '') ); ?>
                   					<?php endif; ?>
 									
-									<h3 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+									<h4 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
 								</section>
 
 							</article>

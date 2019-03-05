@@ -336,6 +336,7 @@ WORDPRESS BODY CLASSES
 	.category {
 		font-size: 1em;
 		color: $text-color;
+		margin: 1rem 0;
 		
 		&:hover {
 			color: $teal;
@@ -343,7 +344,10 @@ WORDPRESS BODY CLASSES
 	}
 	
 	.search-title {
-		font-size: 1.1em;
+		font-size: 1em;
+		margin-top: 1.3rem !important;
+		font-family: $serif;
+		text-transform: none;
 	}
 	
 	.search-content {

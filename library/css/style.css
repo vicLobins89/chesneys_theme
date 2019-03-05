@@ -1205,11 +1205,15 @@ WORDPRESS BODY CLASSES
   text-align: center; }
 .search .category {
   font-size: 1em;
-  color: #142128; }
+  color: #142128;
+  margin: 1rem 0; }
   .search .category:hover {
     color: #4b858e; }
 .search .search-title {
-  font-size: 1.1em; }
+  font-size: 1em;
+  margin-top: 1.3rem !important;
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+  text-transform: none; }
 .search .search-content {
   padding: 1rem; }
 .search aside ul {
