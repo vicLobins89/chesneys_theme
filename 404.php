@@ -16,7 +16,7 @@
 								
 								<div class="searchbox"><?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?></div>
 								
-								<p>Or go back to the <a href="/perrigo">home page</a>.</p>
+								<p>Or go back to the <a href="<?php echo home_url(); ?>">home page</a>.</p>
 
 							</section>
 
