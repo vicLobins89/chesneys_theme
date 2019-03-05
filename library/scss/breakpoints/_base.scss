@@ -737,6 +737,12 @@ LAYOUT & GRID STYLES
 			width: 100%;
 			height: auto;
 		}
+		
+		.col-4 {
+			&:nth-child(3n+1) {
+				clear: both;
+			}
+		}
 	}
 }
 
@@ -1166,7 +1172,7 @@ a {
 H1, H2, H3, H4, H5, P STYLES
 ******************************************************************/
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+h1, .h1, h2, .h2, h3, .h3, h5, .h5 {
 	text-rendering: optimizelegibility;
 	line-height: 1.2;
 	

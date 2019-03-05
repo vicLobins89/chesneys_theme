@@ -1427,6 +1427,8 @@ LAYOUT & GRID STYLES
   .row.brochures-wrapper img {
     width: 100%;
     height: auto; }
+  .row.brochures-wrapper .col-4:nth-child(3n+1) {
+    clear: both; }
 
 .gray-box {
   padding: 1rem;
@@ -1754,12 +1756,12 @@ a {
 /******************************************************************
 H1, H2, H3, H4, H5, P STYLES
 ******************************************************************/
-h1, .h1, h2, .h2, .row.outdoor-product-single .short-desc .product_title, .woocommerce .spares-product .product_title, h3, .h3, h4, .h4, h5, .h5 {
+h1, .h1, h2, .h2, .row.outdoor-product-single .short-desc .product_title, .woocommerce .spares-product .product_title, h3, .h3, h5, .h5 {
   text-rendering: optimizelegibility;
   line-height: 1.2; }
-  h1 a, .h1 a, h2 a, .h2 a, .row.outdoor-product-single .short-desc .product_title a, .woocommerce .spares-product .product_title a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
+  h1 a, .h1 a, h2 a, .h2 a, .row.outdoor-product-single .short-desc .product_title a, .woocommerce .spares-product .product_title a, h3 a, .h3 a, h5 a, .h5 a {
     text-decoration: none; }
-  h1:first-of-type, .h1:first-of-type, h2:first-of-type, .h2:first-of-type, .row.outdoor-product-single .short-desc .product_title:first-of-type, .woocommerce .spares-product .product_title:first-of-type, h3:first-of-type, .h3:first-of-type, h4:first-of-type, .h4:first-of-type, h5:first-of-type, .h5:first-of-type {
+  h1:first-of-type, .h1:first-of-type, h2:first-of-type, .h2:first-of-type, .row.outdoor-product-single .short-desc .product_title:first-of-type, .woocommerce .spares-product .product_title:first-of-type, h3:first-of-type, .h3:first-of-type, h5:first-of-type, .h5:first-of-type {
     margin-top: 0; }
 
 h1, .h1 {
