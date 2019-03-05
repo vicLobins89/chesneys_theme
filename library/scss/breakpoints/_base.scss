@@ -2070,7 +2070,7 @@ POSTS & CONTENT STYLES
 
 	}
 
-	ul {
+	ul:not(.woocommerce-error) {
 		list-style-type: disc;
 		margin-bottom: 2em;
 		padding-left: 1.25em;

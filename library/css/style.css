@@ -2489,25 +2489,25 @@ POSTS & CONTENT STYLES
     font-size: .9rem; }
     .entry-content ul:not(.product-categories ul) li, .entry-content ol li {
       margin-bottom: .8rem; }
-  .entry-content ul {
+  .entry-content ul:not(.woocommerce-error) {
     list-style-type: disc;
     margin-bottom: 2em;
     padding-left: 1.25em; }
-    .entry-content ul.links {
+    .entry-content ul:not(.woocommerce-error).links {
       list-style-type: none;
       padding: 0; }
-      .entry-content ul.links > li {
+      .entry-content ul:not(.woocommerce-error).links > li {
         text-decoration: underline; }
-    .entry-content ul.dashed {
+    .entry-content ul:not(.woocommerce-error).dashed {
       list-style-type: none; }
-      .entry-content ul.dashed > li {
+      .entry-content ul:not(.woocommerce-error).dashed > li {
         text-indent: -10px; }
-        .entry-content ul.dashed > li:before {
+        .entry-content ul:not(.woocommerce-error).dashed > li:before {
           content: "- ";
           text-indent: -10px; }
-    .entry-content ul.sans {
+    .entry-content ul:not(.woocommerce-error).sans {
       font-size: .8em; }
-    .entry-content ul li {
+    .entry-content ul:not(.woocommerce-error) li {
       font-size: 1.15em;
       margin-bottom: 6px; }
   .entry-content .list {
