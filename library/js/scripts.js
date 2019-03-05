@@ -21,50 +21,52 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
-	var value = [];
+	var pdfHref = [],
+		pdfName = [];
 	
 	$('.js-brochure-input').each(function(){
 		$(this).on('change', function(e){
 			e.preventDefault();
-			var newVal = $(this).val();
+			var newHref = $(this).val(),
+				newName = $(this).attr('name');
 			
 			if( !$(this).is(':checked') ) {
-				value = jQuery.grep(value, function(val) {
-					return val !== newVal;
+				pdfHref = jQuery.grep(pdfHref, function(val) {
+					return val !== newHref;
+				});
+				pdfName = jQuery.grep(pdfName, function(val) {
+					return val !== newName;
 				});
 			} else {
-				value.push(newVal);
+				pdfHref.push(newHref);
+				pdfName.push(newName);
 			}
-			$('input.brochures').val(value);
-			console.log(value);
+			$('input.brochures').val(pdfHref);
+			console.log(pdfHref);
 		});
 	});
-	
-	var links = [
-	  'https://chesneys-test-uk.tk/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf',
-	  'https://chesneys-test-uk.tk/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf'
-	];
 
-	function downloadAll(urls) {
-	  var link = document.createElement('a');
+	function downloadAll(urls, names) {
+		var link = document.createElement('a');
 
-	  link.setAttribute('download', null);
-	  link.style.display = 'none';
+		link.setAttribute('download', null);
+		link.style.display = 'none';
 
-	  document.body.appendChild(link);
+		document.body.appendChild(link);
 
-	  for (var i = 0; i < urls.length; i++) {
-		link.setAttribute('href', urls[i]);
-		link.click();
-	  }
+		for (var i = 0; i < urls.length; i++) {
+			link.setAttribute('href', urls[i]);
+			link.setAttribute('name', names[i]);
+			link.click();
+		}
 
-	  document.body.removeChild(link);
+		document.body.removeChild(link);
 	}
 	
 	$('input.download').click(function(e){
 		e.preventDefault();
 
-		downloadAll(links);
+		downloadAll(pdfHref, pdfName);
 	} );
 	
 	// Reveal clicks
