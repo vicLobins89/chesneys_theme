@@ -3108,6 +3108,7 @@ POSTS & CONTENT STYLES
 
 #wpsl-checkbox-filter.wpsl-checkbox-3-columns li,
 .wpsl-custom-checkboxes.wpsl-checkbox-3-columns li {
+  width: 100%;
   margin-bottom: 5px; }
 
 /******************************************************************
