@@ -40,27 +40,32 @@ jQuery(document).ready(function($) {
 		});
 	});
 	
+	var links = [
+	  'https://chesneys-test-uk.tk/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf',
+	  'https://chesneys-test-uk.tk/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf'
+	];
+
+	function downloadAll(urls) {
+	  var link = document.createElement('a');
+
+	  link.setAttribute('download', null);
+	  link.style.display = 'none';
+
+	  document.body.appendChild(link);
+
+	  for (var i = 0; i < urls.length; i++) {
+		link.setAttribute('href', urls[i]);
+		link.click();
+	  }
+
+	  document.body.removeChild(link);
+	}
+	
 	$('input.download').click(function(e){
 		e.preventDefault();
 
-		download('https://chesneys-test-uk.tk/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf','https://chesneys-test-uk.tk/wp-content/uploads/2019/03/Gas-Stove-Brochure-2018-vol1-web.pdf');
+		downloadAll(window.links);
 	} );
-	
-	var download = function() {
-       for(var i=0; i<arguments.length; i++) {
-         var iframe = $('<iframe style="visibility: collapse;"></iframe>');
-         $('body').append(iframe);
-         var content = iframe[0].contentDocument;
-         var form = '<form action="' + arguments[i] + '" method="GET"></form>';
-         content.write(form);
-         $('form', content).submit();
-         setTimeout((function(iframe) {
-           return function() { 
-             iframe.remove(); 
-           };
-         })(iframe), 2000);
-       }
-     };
 	
 	// Reveal clicks
 	$('.for-you').click(function(e){
