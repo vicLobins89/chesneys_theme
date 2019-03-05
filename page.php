@@ -64,6 +64,7 @@ $acfClass = new CustomACF();
 							<?php $acfClass->page_rows(); ?>
 					
 							<?php if( have_rows('brochures') ) : ?>
+							<section class="row entry-content cf">
 							<div class="brochures-wrapper cf">
 								<div class="col-4">
 									<?php echo do_shortcode('[contact-form-7 id="2607" title="Brochure request"]'); ?>
@@ -72,7 +73,7 @@ $acfClass = new CustomACF();
 								<div class="col-8 cf">
 								<?php while( have_rows('brochures') ) : the_row(); ?>
 									<div class="col-4">
-										<img src="<?php echo get_sub_field('cover'); ?>" alt="<?php echo get_sub_field('name'); ?>">
+										<img src="<?php echo get_sub_field('cover'); ?>" alt="<?php echo get_sub_field('title'); ?>">
 										<div class="text">
 											<h4><?php echo get_sub_field('title'); ?></h4>
 											<p class="desc"><?php echo get_sub_field('description'); ?></p>
@@ -83,6 +84,7 @@ $acfClass = new CustomACF();
 								<?php endwhile; ?>
 								</div>
 							</div>
+							</section>
 							<?php endif; ?>
 
 							</article>
