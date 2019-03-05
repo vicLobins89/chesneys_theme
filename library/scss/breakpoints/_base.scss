@@ -2847,7 +2847,7 @@ POSTS & CONTENT STYLES
 	}
 	
 	.woocommerce-column__title {
-		text-align: center;
+		@extend .lhs;
 	}
 }
 

@@ -1801,10 +1801,14 @@ h2, .h2, .row.outdoor-product-single .short-desc .product_title, .woocommerce .s
     background: #fff; }
   h2.black:after, .h2.black:after, .row.outdoor-product-single .short-desc .black.product_title:after, .woocommerce .spares-product .black.product_title:after {
     background: #000; }
-  h2.lhs:after, .row.outdoor-product-single .short-desc h2.product_title:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-glossary h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .row.outdoor-product-single .short-desc .product_title:after, c
+  h2.lhs:after, .row.outdoor-product-single .short-desc h2.product_title:after, #add_payment_method h2.woocommerce-column__title:after,
+  .woocommerce-cart h2.woocommerce-column__title:after,
+  .woocommerce-checkout h2.woocommerce-column__title:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-glossary h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .row.outdoor-product-single .short-desc .product_title:after, c
   .team-members h4.h2:after, .woocommerce .spares-product .product_title:after, #add_payment_method .woocommerce-order-details__title:after,
   .woocommerce-cart .woocommerce-order-details__title:after,
-  .woocommerce-checkout .woocommerce-order-details__title:after, .h2.woocommerce-loop-category__title:after, .row.outdoor-product-single .short-desc .woocommerce-loop-category__title.product_title:after, .woocommerce .spares-product .woocommerce-loop-category__title.product_title:after, .h2.woocommerce-loop-product__title:after, .row.outdoor-product-single .short-desc .woocommerce-loop-product__title.product_title:after, .woocommerce .spares-product .woocommerce-loop-product__title.product_title:after, .module-outdoor-living-shop .h2:after, .module-outdoor-living-shop .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-outdoor-living-shop .product_title:after, .module-outdoor-living-shop .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-outdoor-living-shop .product_title:after, .module-glossary .h2:after, .module-glossary .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-glossary .product_title:after, .module-glossary .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-glossary .product_title:after, .module-design-a-fireplace .h2:after, .module-design-a-fireplace .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-design-a-fireplace .product_title:after, .module-design-a-fireplace .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-design-a-fireplace .product_title:after {
+  .woocommerce-checkout .woocommerce-order-details__title:after, #add_payment_method .h2.woocommerce-column__title:after, #add_payment_method .row.outdoor-product-single .short-desc .woocommerce-column__title.product_title:after, .row.outdoor-product-single .short-desc #add_payment_method .woocommerce-column__title.product_title:after, #add_payment_method .woocommerce .spares-product .woocommerce-column__title.product_title:after, .woocommerce .spares-product #add_payment_method .woocommerce-column__title.product_title:after,
+  .woocommerce-cart .h2.woocommerce-column__title:after,
+  .woocommerce-checkout .h2.woocommerce-column__title:after, .h2.woocommerce-loop-category__title:after, .row.outdoor-product-single .short-desc .woocommerce-loop-category__title.product_title:after, .woocommerce .spares-product .woocommerce-loop-category__title.product_title:after, .h2.woocommerce-loop-product__title:after, .row.outdoor-product-single .short-desc .woocommerce-loop-product__title.product_title:after, .woocommerce .spares-product .woocommerce-loop-product__title.product_title:after, .module-outdoor-living-shop .h2:after, .module-outdoor-living-shop .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-outdoor-living-shop .product_title:after, .module-outdoor-living-shop .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-outdoor-living-shop .product_title:after, .module-glossary .h2:after, .module-glossary .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-glossary .product_title:after, .module-glossary .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-glossary .product_title:after, .module-design-a-fireplace .h2:after, .module-design-a-fireplace .row.outdoor-product-single .short-desc .product_title:after, .row.outdoor-product-single .short-desc .module-design-a-fireplace .product_title:after, .module-design-a-fireplace .woocommerce .spares-product .product_title:after, .woocommerce .spares-product .module-design-a-fireplace .product_title:after {
     left: 0;
     margin-left: 0; }
 
@@ -1847,7 +1851,9 @@ p, .p {
     height: 1px;
     background: #142128; }
   .flair.lhs:after, .row.outdoor-product-single .short-desc .flair.product_title:after, c
-  .team-members h4.flair:after {
+  .team-members h4.flair:after, #add_payment_method .flair.woocommerce-column__title:after,
+  .woocommerce-cart .flair.woocommerce-column__title:after,
+  .woocommerce-checkout .flair.woocommerce-column__title:after {
     left: 0;
     margin-left: 0; }
 
@@ -2999,10 +3005,6 @@ POSTS & CONTENT STYLES
 .woocommerce-cart #dealer-code,
 .woocommerce-checkout #dealer-code {
   margin-bottom: 2rem; }
-#add_payment_method .woocommerce-column__title,
-.woocommerce-cart .woocommerce-column__title,
-.woocommerce-checkout .woocommerce-column__title {
-  text-align: center; }
 
 .woocommerce-order-pay .secondary-btn, .woocommerce-order-pay .woocommerce button.single_add_to_cart_button, .woocommerce .woocommerce-order-pay button.single_add_to_cart_button,
 .woocommerce-order-pay .woocommerce button.woocommerce-Button,
