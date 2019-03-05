@@ -22,6 +22,14 @@
 									<?php endif; ?>
 									
 									<h3 class="search-title entry-title flair lhs sans"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+									
+									<?php if(get_the_category_list(', ') != ''): ?>
+                  						<?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?>
+                  					<?php endif; ?>
+									
+									<?php if(get_the_term_list($post->ID, 'portfolio_cat', '', ', ', '') != ''): ?>
+                  						<?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_term_list($post->ID, 'portfolio_cat', '', ', ', '') ); ?>
+                  					<?php endif; ?>
 								</section>
 
 							</article>
