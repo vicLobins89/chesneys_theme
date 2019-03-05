@@ -2968,6 +2968,10 @@ POSTS & CONTENT STYLES
     margin: 0;
     padding: 0;
     width: 25%; }
+    #add_payment_method ul.order_details li:nth-child(n+5),
+    .woocommerce-cart ul.order_details li:nth-child(n+5),
+    .woocommerce-checkout ul.order_details li:nth-child(n+5) {
+      width: 100%; }
     #add_payment_method ul.order_details li p,
     .woocommerce-cart ul.order_details li p,
     .woocommerce-checkout ul.order_details li p {
@@ -2995,6 +2999,10 @@ POSTS & CONTENT STYLES
 .woocommerce-cart #dealer-code,
 .woocommerce-checkout #dealer-code {
   margin-bottom: 2rem; }
+#add_payment_method .woocommerce-column__title,
+.woocommerce-cart .woocommerce-column__title,
+.woocommerce-checkout .woocommerce-column__title {
+  text-align: center; }
 
 .woocommerce-order-pay .secondary-btn, .woocommerce-order-pay .woocommerce button.single_add_to_cart_button, .woocommerce .woocommerce-order-pay button.single_add_to_cart_button,
 .woocommerce-order-pay .woocommerce button.woocommerce-Button,

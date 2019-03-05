@@ -2812,6 +2812,10 @@ POSTS & CONTENT STYLES
 			padding: 0;
 			width: 25%;
 			
+			&:nth-child(n+5) {
+				width: 100%;
+			}
+			
 			p {
 				padding: 1rem;
 				font-size: .9em;
@@ -2840,6 +2844,10 @@ POSTS & CONTENT STYLES
 	
 	#dealer-code {
 		margin-bottom: 2rem;
+	}
+	
+	.woocommerce-column__title {
+		text-align: center;
 	}
 }
 
