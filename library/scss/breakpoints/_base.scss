@@ -729,6 +729,15 @@ LAYOUT & GRID STYLES
 			}
 		}
 	}
+	
+	&.brochures-wrapper {
+		padding-top: 0;
+		
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
 }
 
 .gray-box {

@@ -64,8 +64,8 @@ $acfClass = new CustomACF();
 							<?php $acfClass->page_rows(); ?>
 					
 							<?php if( have_rows('brochures') ) : ?>
-							<section class="row entry-content cf">
-							<div class="brochures-wrapper cf">
+							<section class="row entry-content cf brochures-wrapper">
+							<div class="cf">
 								<div class="col-4">
 									<?php echo do_shortcode('[contact-form-7 id="2607" title="Brochure request"]'); ?>
 								</div>

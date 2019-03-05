@@ -1422,6 +1422,11 @@ LAYOUT & GRID STYLES
   text-align: center; }
   .row.woocommerce-products-header .h2.center + p, .row.woocommerce-products-header .row.outdoor-product-single .short-desc .center.product_title + p, .row.outdoor-product-single .short-desc .row.woocommerce-products-header .center.product_title + p, .row.woocommerce-products-header .woocommerce .spares-product .center.product_title + p, .woocommerce .spares-product .row.woocommerce-products-header .center.product_title + p {
     text-align: center; }
+.row.brochures-wrapper {
+  padding-top: 0; }
+  .row.brochures-wrapper img {
+    width: 100%;
+    height: auto; }
 
 .gray-box {
   padding: 1rem;
