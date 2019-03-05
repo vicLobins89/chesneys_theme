@@ -43,7 +43,7 @@
 		<div id="container">
 			
 			<?php echo do_shortcode('[geoip_detect2_show_if country="US"] TEXT [/geoip_detect2_show_if]'); ?>
-			<?php echo do_shortcode('[geoip_detect2_show_if country="UK"] TEXT [/geoip_detect2_show_if]'); ?>
+			<?php echo do_shortcode('[geoip_detect2_show_if country="GB"] TEXT [/geoip_detect2_show_if]'); ?>
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 				
