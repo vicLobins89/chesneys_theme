@@ -41,7 +41,8 @@ function folio_post() {
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'revisions')
+			'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'revisions'),
+			'taxonomies' => array('portfolio_cat', 'portfolio_tag'),
 		) /* end of options */
 	); /* end of register post type */
 	
