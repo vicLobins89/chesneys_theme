@@ -3036,7 +3036,7 @@ POSTS & CONTENT STYLES
 }
 
 #wpsl-wrap #wpsl-result-list ul {
-	text-align: center;
+	//text-align: center;
 	
 	li {
 		text-align: left;
@@ -3046,11 +3046,14 @@ POSTS & CONTENT STYLES
 	}
 }
 
+.wpsl-direction-wrap {
+	display: none !important;
+}
+
 .wpsl-store-location {
-	.wpsl-direction-wrap,
 	.wpsl-contact-details,
 	> p > span {
-		display: none;
+		display: none !important;
 	}
 }
 

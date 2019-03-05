@@ -3121,18 +3121,18 @@ POSTS & CONTENT STYLES
 .wpsl-search-btn-wrap input#wpsl-search-btn {
   background-image: none; }
 
-#wpsl-wrap #wpsl-result-list ul {
-  text-align: center; }
-  #wpsl-wrap #wpsl-result-list ul li {
-    text-align: left;
-    display: inline-block;
-    width: 25%;
-    font-size: .8rem; }
+#wpsl-wrap #wpsl-result-list ul li {
+  text-align: left;
+  display: inline-block;
+  width: 25%;
+  font-size: .8rem; }
 
-.wpsl-store-location .wpsl-direction-wrap,
+.wpsl-direction-wrap {
+  display: none !important; }
+
 .wpsl-store-location .wpsl-contact-details,
 .wpsl-store-location > p > span {
-  display: none; }
+  display: none !important; }
 
 /******************************************************************
 PAGE NAVI STYLES
