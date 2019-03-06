@@ -3617,7 +3617,8 @@ TABLET & SMALLER LAPTOPS
       color: #fff; }
 
   .main-nav {
-    max-height: none; }
+    max-height: none;
+    overflow: visible; }
 
   .primary-nav {
     position: relative;
