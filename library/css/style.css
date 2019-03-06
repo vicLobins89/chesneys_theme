@@ -1999,9 +1999,13 @@ HEADER STYLES
   width: 14%;
   max-width: 15rem;
   right: 1.25rem;
-  top: 10px; }
+  top: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
   .searchbox:hover, .searchbox:focus {
-    width: 100%; }
+    border: 1px solid gray;
+    width: 100%;
+    max-width: 70%; }
   .searchbox #ajaxsearchlite1,
   .searchbox div.asl_w {
     border-radius: 2px;
@@ -2332,9 +2336,8 @@ NAVIGATION STYLES
       overflow: hidden !important;
       margin: 0 !important; }
   .socket .rhs-links {
-    position: absolute;
-    right: 2rem;
-    top: .7rem; }
+    text-align: center;
+    padding: .3rem 0 1rem; }
   .socket .sub-menu {
     position: absolute;
     margin: 0;
@@ -3556,27 +3559,12 @@ TABLET & SMALLER LAPTOPS
     width: 100%;
     max-width: 15rem;
     right: 3.25rem; }
+    .searchbox:hover, .searchbox:focus {
+      border: none;
+      max-width: 15rem; }
     .searchbox #ajaxsearchlite1,
     .searchbox div.asl_w {
       border: 2px solid #b5b5b5; }
-      .searchbox #ajaxsearchlite1 .probox,
-      .searchbox div.asl_w .probox {
-        height: 2rem; }
-        .searchbox #ajaxsearchlite1 .probox .proinput input,
-        .searchbox div.asl_w .probox .proinput input {
-          font-size: .85rem;
-          height: 2rem;
-          text-shadow: none; }
-          .searchbox #ajaxsearchlite1 .probox .proinput input.autocomplete,
-          .searchbox div.asl_w .probox .proinput input.autocomplete {
-            opacity: 0; }
-        .searchbox #ajaxsearchlite1 .probox .promagnifier .innericon svg,
-        .searchbox #ajaxsearchlite1 .probox .prosettings .innericon svg,
-        .searchbox #ajaxsearchlite1 .probox .proloading svg,
-        .searchbox div.asl_w .probox .promagnifier .innericon svg,
-        .searchbox div.asl_w .probox .prosettings .innericon svg,
-        .searchbox div.asl_w .probox .proloading svg {
-          width: 18px; }
 
   /*********************
   NAVIGATION STYLES
@@ -3808,6 +3796,12 @@ TABLET & SMALLER LAPTOPS
       padding: .7rem 0; }
     .socket .menu-item {
       display: block; }
+    .socket .rhs-links {
+      position: absolute;
+      right: 2rem;
+      top: .7rem;
+      text-align: left;
+      padding: 0; }
 
   .mobile-links {
     display: none !important; }
