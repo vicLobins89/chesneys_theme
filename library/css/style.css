@@ -2152,7 +2152,7 @@ NAVIGATION STYLES
     .primary-nav > li.menu-item-1007, .primary-nav > li.menu-item-579 {
       color: #a8a197; }
     .primary-nav > li.separator, .primary-nav > li.separator > a {
-      cursor: default; }
+      display: none; }
     .primary-nav > li > a {
       color: inherit;
       outline: none; }
@@ -3611,6 +3611,7 @@ TABLET & SMALLER LAPTOPS
       .primary-nav > li.menu-item-1007, .primary-nav > li.menu-item-579 {
         color: #a8a197; }
       .primary-nav > li.separator, .primary-nav > li.separator > a {
+        display: block;
         cursor: default; }
       .primary-nav > li > a {
         color: inherit;

@@ -1682,7 +1682,7 @@ NAVIGATION STYLES
 		
 		&.separator,
 		&.separator > a {
-			cursor: default;
+			display: none;
 		}
 		
 		> a {

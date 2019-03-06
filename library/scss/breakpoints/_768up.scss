@@ -118,6 +118,7 @@ NAVIGATION STYLES
 		
 		&.separator,
 		&.separator > a {
+			display: block;
 			cursor: default;
 		}
 		
