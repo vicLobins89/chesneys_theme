@@ -2296,11 +2296,14 @@ NAVIGATION STYLES
 .mobile-links {
   display: inline-block !important;
   text-align: center;
-  width: 32%;
-  background: #142128;
-  color: #fff; }
+  width: 33.333%;
+  background: #53575a;
+  color: #fff !important;
+  float: left; }
   .mobile-links:nth-child(4), .mobile-links:nth-child(5) {
     width: 50%; }
+  .mobile-links a {
+    color: inherit; }
 
 /*********************
 POSTS & CONTENT STYLES
