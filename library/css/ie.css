@@ -281,8 +281,8 @@ NAVIGATION STYLES
       .primary-nav > li > a:hover, .primary-nav > li > a:focus {
         color: #4b858e; }
       .primary-nav > li > a:after {
-        content: none;
-        display: none; }
+        content: none !important;
+        display: none !important; }
     .primary-nav > li:hover > ul.sub-menu,
     .primary-nav > li:hover > ul.children, .primary-nav > li:focus > ul.sub-menu,
     .primary-nav > li:focus > ul.children, .primary-nav > li.active > ul.sub-menu,

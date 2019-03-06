@@ -2108,6 +2108,8 @@ NAVIGATION STYLES
     margin-left: 9px;
     background: url(../images/arrow-right.png) no-repeat center;
     background-size: 7px; }
+  .primary-nav li.menu-item-has-children.active > a:after {
+    transform: rotate(90deg); }
   .primary-nav > li {
     position: relative;
     border: none;
@@ -3621,8 +3623,8 @@ TABLET & SMALLER LAPTOPS
         .primary-nav > li > a:hover, .primary-nav > li > a:focus {
           color: #4b858e; }
         .primary-nav > li > a:after {
-          content: none;
-          display: none; }
+          content: none !important;
+          display: none !important; }
       .primary-nav > li:hover > ul.sub-menu,
       .primary-nav > li:hover > ul.children, .primary-nav > li:focus > ul.sub-menu,
       .primary-nav > li:focus > ul.children, .primary-nav > li.active > ul.sub-menu,

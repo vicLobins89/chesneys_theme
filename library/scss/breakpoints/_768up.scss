@@ -168,8 +168,8 @@ NAVIGATION STYLES
 			}
 			
 			&:after {
-				content: none;
-				display: none;
+				content: none !important;
+				display: none !important;
 			}
 		}
 		

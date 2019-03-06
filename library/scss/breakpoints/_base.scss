@@ -1620,6 +1620,10 @@ NAVIGATION STYLES
 			background: url(../images/arrow-right.png) no-repeat center;
 			background-size: 7px;
 		}
+		
+		&.active > a:after {
+			transform: rotate(90deg);
+		}
 	}
 
 	> li {
