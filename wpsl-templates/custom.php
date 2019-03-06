@@ -66,9 +66,12 @@ if ( $wpsl_settings['show_credits'] ) {
 
 $output .= '</div>' . "\r\n";
 
+return $output;
+
 $query = new WP_Query(array(
     'post_type' => 'wpsl_stores',
-    'post_status' => 'publish'
+    'post_status' => 'publish',
+	'posts_per_page' => -1
 ));
 
 
@@ -80,5 +83,3 @@ while ($query->have_posts()) {
 }
 
 wp_reset_query();
-
-return $output;
