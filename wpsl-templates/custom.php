@@ -58,7 +58,7 @@ $output .= "\t" . '<div id="wpsl-gmap" class="wpsl-gmap-canvas"></div>' . "\r\n"
 //$output .= "\t\t" . '</div>' . "\r\n";
 //$output .= "\t" . '</div>' . "\r\n";
 
-$output .= '<div id="wpsl-result-list" class="wpsl-full-list">' . "\r\n";
+$output .= '<div id="wpsl-result-list-full" class="wpsl-full-list">' . "\r\n";
 
 $output .= '<div id="wpsl-stores" '. $autoload_class .'>' . "\r\n";
 $output .= '<ul>' . "\r\n";

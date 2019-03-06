@@ -3149,7 +3149,9 @@ POSTS & CONTENT STYLES
   padding-top: 4px;
   height: 3rem; }
 
-#wpsl-result-list {
+#wpsl-result-list-full,
+#wpsl-result-list,
+.wpsl-full-list {
   clear: both;
   width: 100% !important;
   margin: 0 !important; }
@@ -3184,9 +3186,6 @@ POSTS & CONTENT STYLES
 
 .wpsl-store-location p {
   margin-bottom: 5px !important; }
-.wpsl-store-location .wpsl-contact-details,
-.wpsl-store-location > p > span {
-  display: none !important; }
 
 /******************************************************************
 PAGE NAVI STYLES
