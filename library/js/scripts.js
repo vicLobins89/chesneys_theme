@@ -71,10 +71,7 @@ jQuery(document).ready(function($) {
 	
 	// Reveal clicks
 	$('.hover-link').on('click', function(){
-		var classes = $(this).attr('class').split(' ');
-		for(var i=0; i<classes.length; i++){
-		 	console.log(classes[i]);
-		}
+		console.log( $(this).attr('class').split(' ')[1] );
 
 	});
 	
