@@ -1624,7 +1624,8 @@ NAVIGATION STYLES
 			> ul.sub-menu,
 			> ul.children {
 				opacity: 1;
-				max-height: 400px;
+				max-height: 100%;
+				max-height: 100vh;
 				visibility: visible
 			}
 		}
@@ -1636,7 +1637,8 @@ NAVIGATION STYLES
 			visibility: hidden;
 			overflow: hidden;
 			text-align: left;
-			max-height: 0px;
+			max-height: 0%;
+			max-height: 0vh;
 			margin: 0;
 			z-index: 8;
 			@include transition (all 0.4s ease-out);
@@ -1648,6 +1650,7 @@ NAVIGATION STYLES
 
 				a {
 					color: inherit;
+					padding-left: 3rem;
 					
 					&:hover,
 					&:focus {
@@ -1674,7 +1677,8 @@ NAVIGATION STYLES
 					> ul.sub-menu,
 					> ul.children {
 						opacity: 1;
-						max-height: 400px;
+						max-height: 100%;
+						max-height: 100vh;
 						visibility: visible
 					}
 				}
@@ -1696,11 +1700,12 @@ NAVIGATION STYLES
 						background: $light-brown;
 						
 						li {
-							float:left;
- 							display:inline;
-							width: 45%;
+ 							display: inline-block;
 							font-size: 1.2rem;
-							padding: .78rem 1.7rem;
+							
+							a {
+								padding-left: 5rem;
+							}
 						}
 					}
 				}

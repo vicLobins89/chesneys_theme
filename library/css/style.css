@@ -2103,7 +2103,8 @@ NAVIGATION STYLES
     .primary-nav > li.active > ul.sub-menu,
     .primary-nav > li.active > ul.children {
       opacity: 1;
-      max-height: 400px;
+      max-height: 100%;
+      max-height: 100vh;
       visibility: visible; }
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {
@@ -2112,7 +2113,8 @@ NAVIGATION STYLES
       visibility: hidden;
       overflow: hidden;
       text-align: left;
-      max-height: 0px;
+      max-height: 0%;
+      max-height: 0vh;
       margin: 0;
       z-index: 8;
       -webkit-transition: all 0.4s ease-out;
@@ -2125,7 +2127,8 @@ NAVIGATION STYLES
         color: #766e63; }
         .primary-nav > li ul.sub-menu li a,
         .primary-nav > li ul.children li a {
-          color: inherit; }
+          color: inherit;
+          padding-left: 3rem; }
           .primary-nav > li ul.sub-menu li a:hover, .primary-nav > li ul.sub-menu li a:focus,
           .primary-nav > li ul.children li a:hover,
           .primary-nav > li ul.children li a:focus {
@@ -2144,7 +2147,8 @@ NAVIGATION STYLES
       .primary-nav > li ul.children > li.active > ul.sub-menu,
       .primary-nav > li ul.children > li.active > ul.children {
         opacity: 1;
-        max-height: 400px;
+        max-height: 100%;
+        max-height: 100vh;
         visibility: visible; }
       .primary-nav > li ul.sub-menu > li > ul.sub-menu,
       .primary-nav > li ul.sub-menu > li > ul.children,
@@ -2176,11 +2180,17 @@ NAVIGATION STYLES
           .primary-nav > li ul.children > li ul.sub-menu ul.children li,
           .primary-nav > li ul.children > li ul.children ul.sub-menu li,
           .primary-nav > li ul.children > li ul.children ul.children li {
-            float: left;
-            display: inline;
-            width: 45%;
-            font-size: 1.2rem;
-            padding: .78rem 1.7rem; }
+            display: inline-block;
+            font-size: 1.2rem; }
+            .primary-nav > li ul.sub-menu > li ul.sub-menu ul.sub-menu li a,
+            .primary-nav > li ul.sub-menu > li ul.sub-menu ul.children li a,
+            .primary-nav > li ul.sub-menu > li ul.children ul.sub-menu li a,
+            .primary-nav > li ul.sub-menu > li ul.children ul.children li a,
+            .primary-nav > li ul.children > li ul.sub-menu ul.sub-menu li a,
+            .primary-nav > li ul.children > li ul.sub-menu ul.children li a,
+            .primary-nav > li ul.children > li ul.children ul.sub-menu li a,
+            .primary-nav > li ul.children > li ul.children ul.children li a {
+              padding-left: 5rem; }
 
 .socket {
   background: #53575a;
