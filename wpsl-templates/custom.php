@@ -74,15 +74,29 @@ while ($query->have_posts()) : $query->the_post();
     $post_id = get_the_ID();
 	
 	$output .= '<li data-store-id="'.$post_id.'">
-		<a class="wpsl-store-details" href="#">'.get_the_title().'</a>
-		<p>'.get_post_meta( $post_id, 'wpsl_address', true ).'</p>
-		<p>'.get_post_meta( $post_id, 'wpsl_address2', true ).'</p>
-		<p>'.get_post_meta( $post_id, 'wpsl_city', true ).'</p>
-		<p>'.get_post_meta( $post_id, 'wpsl_country', true ).'</p>
-		<p>'.get_post_meta( $post_id, 'wpsl_zip', true ).'</p>
-		<p>'.get_post_meta( $post_id, 'wpsl_email', true ).'</p>
-		<p>'.get_post_meta( $post_id, 'wpsl_phone', true ).'</p>
-		<p>'.get_post_meta( $post_id, 'wpsl_url', true ).'</p>
+	
+		<div class="wpsl-store-location">
+			<p>
+				<strong><a target="_blank" href="'.get_post_meta( $post_id, 'wpsl_url', true ).'">'.get_the_title().'</a></strong>
+				
+				<span class="wpsl-street">'.get_post_meta( $post_id, 'wpsl_address', true ).'</span>
+				
+				<span class="wpsl-street">'.get_post_meta( $post_id, 'wpsl_address2', true ).'</span>
+				
+				<span>'.get_post_meta( $post_id, 'wpsl_city', true ).'  '.get_post_meta( $post_id, 'wpsl_zip', true ).'</span>
+				<span class="wpsl-country">'.get_post_meta( $post_id, 'wpsl_country', true ).'</span>
+			</p>
+			<p class="wpsl-contact-details">
+			
+			<span><strong>Phone</strong>: <a href="tel:'.get_post_meta( $post_id, 'wpsl_phone', true ).'">'.get_post_meta( $post_id, 'wpsl_phone', true ).'</a></span>
+			
+			
+			
+			<span><strong>Email</strong>: <a href="mailto:'.get_post_meta( $post_id, 'wpsl_email', true ).'">'.get_post_meta( $post_id, 'wpsl_email', true ).'</a></span>
+			
+			</p>
+			<p><a class="wpsl-store-details" href="#">More info</a></p>
+		</div>
 	</li>' . "\r\n";
 
 endwhile;
