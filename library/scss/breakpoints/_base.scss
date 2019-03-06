@@ -1458,17 +1458,12 @@ HEADER STYLES
 		.primary-nav {
 			max-height: 1000px;
 			max-height: 100vh;
-			padding-top: 8rem;
 			overflow-y: scroll;
 		}
 		
 		.menu-button {
 			position: absolute;
 			z-index: 9999;
-			left: 0;
-			right: 0;
-			left: auto;
-			background-position: -31px 0;
 		}
 	}
 	
