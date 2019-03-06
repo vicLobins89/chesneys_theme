@@ -170,8 +170,13 @@ jQuery(document).ready(function($) {
 				$(this).addClass('active');
 			});
 			
-			$('.primary-nav > li li').click(function(){
-				$('.primary-nav > li li').not(this).removeClass('active');
+			$('.primary-nav > li > ul > li').click(function(){
+				$('.primary-nav > li > ul > li').not(this).removeClass('active');
+				$(this).addClass('active');
+			});
+			
+			$('.primary-nav > li > ul > li > ul > li').click(function(){
+				$('.primary-nav > li > ul > li > ul > li').not(this).removeClass('active');
 				$(this).addClass('active');
 			});
 		} else {

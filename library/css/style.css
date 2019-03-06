@@ -2091,7 +2091,7 @@ NAVIGATION STYLES
     .primary-nav > li.separator, .primary-nav > li.separator > a {
       display: none; }
     .primary-nav > li a {
-      padding: 1rem 1.5rem 1.5rem;
+      padding: 1.5rem;
       display: inline-block; }
     .primary-nav > li > a {
       color: inherit;
@@ -2122,7 +2122,6 @@ NAVIGATION STYLES
       .primary-nav > li ul.children li {
         vertical-align: middle;
         display: block;
-        padding: 1rem 1.5rem;
         color: #766e63; }
         .primary-nav > li ul.sub-menu li a,
         .primary-nav > li ul.children li a {
