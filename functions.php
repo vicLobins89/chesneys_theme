@@ -283,32 +283,6 @@ function custom_templates( $templates ) {
     return $templates;
 }
 
-add_filter( 'wpsl_sql', 'custom_sql' );
-
-function custom_sql() {
-    
-    global $wpdb, $wpsl_settings;
-    
-    // Set a limit for the results and order them by distance.    
-    if ( isset( $_GET['autoload'] ) && $_GET['autoload'] ) {
-        $limit = '';
-		$sql_sort = 'ORDER BY distance '. $limit;
-    } else {
-        $sql_sort = 'HAVING distance < %d ORDER BY distance DESC LIMIT 0, %d';
-    }
-    
-    // The default query that selects store location that fall within the selected radius. 
-    $sql = "SELECT post_lat.meta_value AS lat,
-                   post_lng.meta_value AS lng,
-                   posts.ID     
-              FROM $wpdb->posts AS posts 
-        INNER JOIN $wpdb->postmeta AS post_lat ON post_lat.post_id = posts.ID AND post_lat.meta_key = 'wpsl_lat'
-        INNER JOIN $wpdb->postmeta AS post_lng ON post_lng.post_id = posts.ID AND post_lng.meta_key = 'wpsl_lng'
-             WHERE posts.post_type = 'wpsl_stores' AND posts.post_status = 'publish' $sql_sort";    
-    
-    return $sql;
-}
-
 //WOOCOMMERCE Functions
 require_once( 'woocommerce/shop-functions.php' );
 require_once( 'woocommerce/checkout-functions.php' );
