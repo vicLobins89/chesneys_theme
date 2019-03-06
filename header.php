@@ -78,7 +78,7 @@
 					}
 					?>
 					
-					<a class="menu-button" title="Main Menu"></a>
+					<a class="menu-button" title="Main Menu">Menu</a>
 					<nav class="main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php
 					wp_nav_menu(array(

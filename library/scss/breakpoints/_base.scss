@@ -1529,7 +1529,7 @@ HEADER STYLES
 .logo {
 	display: block;
 	max-width: 16rem;
-	width: 90%;
+	width: 33%;
 	font-size: 0;
 	padding: 1.75rem 0 1.25rem;
 	margin: 0 auto;
@@ -1549,16 +1549,12 @@ NAVIGATION STYLES
 *********************/
 
 .menu-button {
-	float: right;
-	margin: 1.3rem 1.25rem 1.1rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 1rem;
 	line-height: 1;
-    font-size: 2.4em;
-	background-image: url(../images/menu-button.png);
-	background-repeat: no-repeat;
-	background-size: 60px;
-	background-position: 0 0;
-	width: 30px;
-	height: 27px;
+    font-size: 1em;
 	@include transition(all 0.3s ease-in-out);
 }
 
@@ -1878,7 +1874,7 @@ NAVIGATION STYLES
 	
 	.socket-nav {
 		margin: 0;
-		padding: .7rem 0;
+		padding: 1.2rem 0;
 		text-align: center;
 	}
 	
@@ -1887,6 +1883,7 @@ NAVIGATION STYLES
 		text-transform: uppercase;
 		font-family: $sans-serif;
 		margin: 0 1rem;
+		display: inline-block;
 
 		&:hover, &:focus {
 			color: $brown;

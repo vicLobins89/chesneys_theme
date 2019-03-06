@@ -181,6 +181,9 @@ HEADER STYLES
 #inner-header {
   position: relative; }
 
+.logo {
+  width: 90%; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -407,6 +410,10 @@ NAVIGATION STYLES
 
 .socket {
   display: block; }
+  .socket .socket-nav {
+    padding: .7rem 0; }
+  .socket .menu-item {
+    display: block; }
 
 .mobile-links {
   display: none !important; }
