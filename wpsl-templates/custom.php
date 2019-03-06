@@ -73,14 +73,23 @@ $query = new WP_Query(array(
 ));
 
 
-while ($query->have_posts()) {
-    $query->the_post();
+while ($query->have_posts()) : $query->the_post();
     $post_id = get_the_ID();
-	
-    the_title();
-	echo get_post_meta( $post_id, 'wpsl_address', true );
-    echo "<br>";
-}
+	?>
+
+	<div class="col-3">
+		<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
+		<p><?php echo get_post_meta( $post_id, 'wpsl_address', true ); ?></p>
+		<p><?php echo get_post_meta( $post_id, 'wpsl_address2', true ); ?></p>
+		<p><?php echo get_post_meta( $post_id, 'wpsl_city', true ); ?></p>
+		<p><?php echo get_post_meta( $post_id, 'wpsl_country', true ); ?></p>
+		<p><?php echo get_post_meta( $post_id, 'wpsl_zip', true ); ?></p>
+		<p><?php echo get_post_meta( $post_id, 'wpsl_email', true ); ?></p>
+		<p><?php echo get_post_meta( $post_id, 'wpsl_phone', true ); ?></p>
+		<p><?php echo get_post_meta( $post_id, 'wpsl_url', true ); ?></p>
+	</div>
+
+<?php endwhile;
 
 wp_reset_query();
 
