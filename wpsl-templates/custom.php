@@ -75,7 +75,7 @@ while ($query->have_posts()) : $query->the_post();
 	
 	$output .= '<li data-store-id="'.$post_id.'">
 	
-		<div class="wpsl-store-location">
+		<div class="aad-wpsl-store-location">
 			<p>
 				<strong><a target="_blank" href="'.get_post_meta( $post_id, 'wpsl_url', true ).'">'.get_the_title().'</a></strong>
 				
