@@ -70,6 +70,14 @@ jQuery(document).ready(function($) {
 	
 	
 	// Reveal clicks
+	$('.reveal-copy').on('click', function(){
+		var classes = $(this).attr('class').split(' ');
+		for(var i=0; i<classes.length; i++){
+		 	console.log(classes[i]);
+		}
+
+	});
+	
 	$('.for-you').click(function(e){
 		e.preventDefault();
 		$('.hover-link').not(this).removeClass('active');
