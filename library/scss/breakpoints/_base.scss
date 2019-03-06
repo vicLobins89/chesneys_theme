@@ -1575,7 +1575,8 @@ NAVIGATION STYLES
 	margin: 0;
 	max-height: 0px;
     max-height: 0vh;
-	@include transition(all 0.2s ease-in-out);
+	overflow: hidden;
+	@include transition(all 0.6s ease-in-out);
 	
 	.active & {
 		max-height: 1000px;
