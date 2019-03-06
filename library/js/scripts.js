@@ -139,7 +139,7 @@ jQuery(document).ready(function($) {
 		$(this).parents('.header').toggleClass('active');
 	});
 	
-	$('.primary-nav > li.menu-item-has-children').on('hover click', function(){
+	$('.primary-nav > li.menu-item-has-children').hover(function(){
 		$('.primary-nav > li.menu-item-has-children').not(this).removeClass('active');
 		$(this).addClass('active');
 		$('#nav_widget').addClass('active');
@@ -173,6 +173,11 @@ jQuery(document).ready(function($) {
 	$(window).on('resize load', function(){
 		if( viewport.width < 768 ) {
 			$('body').addClass('is-mobile');
+			
+			$('.primary-nav li.menu-item-has-children').click(function(){
+				$('.primary-nav li.menu-item-has-children').not(this).removeClass('active');
+				$(this).toggleClass('active');
+			});
 		} else {
 			$('body').removeClass('is-mobile');
 		}
