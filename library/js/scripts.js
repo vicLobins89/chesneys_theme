@@ -170,8 +170,7 @@ jQuery(document).ready(function($) {
 				var selected = $(this).attr('class').split(' ')[1],
 					selectedHtml = $(this).html();
 
-				$('.hover-link.'+selected+'');
-				console.log(selectedHtml);
+				$('.hover-link.'+selected+'').parent().append(selectedHtml);
 			});
 		} else {
 			$('body').removeClass('is-mobile');
