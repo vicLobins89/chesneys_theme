@@ -1478,7 +1478,7 @@ HEADER STYLES
     	max-width: 70%;
 		
 		input {
-			opacity: 1;
+			opacity: 1 !important;
 		}
 	}
 	
@@ -1496,6 +1496,10 @@ HEADER STYLES
 					height: 2rem;
 					text-shadow: none;
 					opacity: 0;
+					
+					&:hover, &:focus {
+						opacity: 1;
+					}
 					
 					&.autocomplete {
 						opacity: 0;

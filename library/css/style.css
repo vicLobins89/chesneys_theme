@@ -1996,7 +1996,7 @@ HEADER STYLES
     width: 100%;
     max-width: 70%; }
     .searchbox:hover input, .searchbox:focus input {
-      opacity: 1; }
+      opacity: 1 !important; }
   .searchbox #ajaxsearchlite1,
   .searchbox div.asl_w {
     border-radius: 2px;
@@ -2010,6 +2010,10 @@ HEADER STYLES
         height: 2rem;
         text-shadow: none;
         opacity: 0; }
+        .searchbox #ajaxsearchlite1 .probox .proinput input:hover, .searchbox #ajaxsearchlite1 .probox .proinput input:focus,
+        .searchbox div.asl_w .probox .proinput input:hover,
+        .searchbox div.asl_w .probox .proinput input:focus {
+          opacity: 1; }
         .searchbox #ajaxsearchlite1 .probox .proinput input.autocomplete,
         .searchbox div.asl_w .probox .proinput input.autocomplete {
           opacity: 0; }
