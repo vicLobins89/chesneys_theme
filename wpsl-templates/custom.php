@@ -76,7 +76,8 @@ $query = new WP_Query(array(
 while ($query->have_posts()) {
     $query->the_post();
     $post_id = get_the_ID();
-    echo $post_id;
+	
+    the_title();
     echo "<br>";
 }
 
