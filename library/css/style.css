@@ -2101,7 +2101,7 @@ NAVIGATION STYLES
     max-height: 100vh;
     overflow-y: scroll; }
   .primary-nav li {
-    border-bottom: 1px solid #53575a; }
+    border-bottom: 1px solid #e5e5e5; }
     .primary-nav li.menu-item-has-children > a:after {
       content: '';
       width: 6px;
@@ -2493,8 +2493,8 @@ POSTS & CONTENT STYLES
   margin: auto; }
 
 .entry-content {
-  padding: 2rem;
-  font-size: .9rem; }
+  padding: 1.5rem;
+  font-size: 1.1rem; }
   .entry-content [class*="col-"] .p:first-child,
   .entry-content [class*="col-"] p:first-child {
     margin-top: 0; }

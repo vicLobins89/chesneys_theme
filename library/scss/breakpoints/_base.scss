@@ -1611,7 +1611,7 @@ NAVIGATION STYLES
 	}
 	
 	li {
-		border-bottom: 1px solid $gray;
+		border-bottom: 1px solid $light-gray;
 		
 		&.menu-item-has-children {
 			> a:after {
@@ -2113,8 +2113,8 @@ POSTS & CONTENT STYLES
 }
 
 .entry-content {
-	padding: 2rem;
-	font-size: .9rem;
+	padding: 1.5rem;
+	font-size: 1.1rem;
 	
 	[class*="col-"] .p,
 	[class*="col-"] p {
