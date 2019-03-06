@@ -2202,7 +2202,8 @@ NAVIGATION STYLES
         .primary-nav > li ul.children > li ul.children ul.sub-menu li,
         .primary-nav > li ul.children > li ul.children ul.children li {
           display: inline-block;
-          font-size: 1.2rem; }
+          font-size: 1.2rem;
+          width: 100%; }
           .primary-nav > li ul.sub-menu > li ul.sub-menu ul.sub-menu li a,
           .primary-nav > li ul.sub-menu > li ul.sub-menu ul.children li a,
           .primary-nav > li ul.sub-menu > li ul.children ul.sub-menu li a,
@@ -3167,7 +3168,8 @@ POSTS & CONTENT STYLES
 #wpsl-result-list {
   clear: both; }
 
-.wpsl-search.wpsl-checkboxes-enabled {
+.wpsl-search.wpsl-checkboxes-enabled,
+.wpsl-search {
   width: 30%;
   height: 600px;
   float: left;
