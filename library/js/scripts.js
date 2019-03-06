@@ -156,15 +156,15 @@ jQuery(document).ready(function($) {
 			subMenuHeight = $('.primary-nav > li ul.sub-menu').outerHeight();
 		
 		if( viewport.width < 768 ) {
+			$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width('auto');
+			$('#nav_widget').css({
+				"display": 'none'
+			});
+		} else {
 			$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width( menuWidth/3 );
 			$('#nav_widget').css({
 				"top": menuHeight,
 				"padding-top": subMenuHeight
-			});
-		} else {
-			$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width('auto');
-			$('#nav_widget').css({
-				"display": 'none'
 			});
 		}
 	}
