@@ -195,6 +195,9 @@ HEADER STYLES
   .searchbox #ajaxsearchlite1,
   .searchbox div.asl_w {
     border: 2px solid #b5b5b5; }
+    .searchbox #ajaxsearchlite1 .probox .proinput input,
+    .searchbox div.asl_w .probox .proinput input {
+      opacity: 1; }
 
 /*********************
 NAVIGATION STYLES

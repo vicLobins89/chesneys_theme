@@ -142,19 +142,22 @@ jQuery(document).ready(function($) {
 	function menuResize(){
 		var menuWidth = $('.primary-nav').outerWidth(),
 			menuHeight = $('.primary-nav').outerHeight(),
-			subMenuHeight = $('.primary-nav > li ul.sub-menu').outerHeight();
+			subMenuHeight = $('.primary-nav > li ul.sub-menu').outerHeight(),
+			headerHeight = $('.header').outerHeight();
 		
 		if( viewport.width < 768 ) {
 			$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width('auto');
 			$('#nav_widget').css({
 				"display": 'none'
 			});
+			$('#content').css('padding-top', headerHeight);
 		} else {
 			$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width( menuWidth/3 );
 			$('#nav_widget').css({
 				"top": menuHeight,
 				"padding-top": subMenuHeight
 			});
+			$('#content').css('padding-top', 'auto');
 		}
 	}
 	menuResize();

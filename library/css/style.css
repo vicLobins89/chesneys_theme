@@ -1986,13 +1986,15 @@ HEADER STYLES
   width: 14%;
   max-width: 15rem;
   right: 1rem;
-  top: 10px;
+  top: 12px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   .searchbox:hover, .searchbox:focus {
     border: 1px solid gray;
     width: 100%;
     max-width: 70%; }
+    .searchbox:hover input, .searchbox:focus input {
+      opacity: 1; }
   .searchbox #ajaxsearchlite1,
   .searchbox div.asl_w {
     border-radius: 2px;
@@ -2004,7 +2006,8 @@ HEADER STYLES
       .searchbox div.asl_w .probox .proinput input {
         font-size: .85rem;
         height: 2rem;
-        text-shadow: none; }
+        text-shadow: none;
+        opacity: 0; }
         .searchbox #ajaxsearchlite1 .probox .proinput input.autocomplete,
         .searchbox div.asl_w .probox .proinput input.autocomplete {
           opacity: 0; }
@@ -2042,7 +2045,7 @@ NAVIGATION STYLES
   position: absolute;
   left: 0;
   top: 0;
-  margin: 18px 1.5rem;
+  margin: 20px 1.5rem 0;
   line-height: 1;
   font-size: 1em;
   font-family: "Univers", Helvetica, Arial, sans-serif;
@@ -2189,7 +2192,7 @@ NAVIGATION STYLES
           .primary-nav > li ul.children > li ul.sub-menu ul.children li a,
           .primary-nav > li ul.children > li ul.children ul.sub-menu li a,
           .primary-nav > li ul.children > li ul.children ul.children li a {
-            padding: 1rem 0  1rem 5rem; }
+            padding: 1.5rem 0  1.5rem 5rem; }
 
 .socket {
   background: #53575a;
@@ -3518,6 +3521,9 @@ TABLET & SMALLER LAPTOPS
     .searchbox #ajaxsearchlite1,
     .searchbox div.asl_w {
       border: 2px solid #b5b5b5; }
+      .searchbox #ajaxsearchlite1 .probox .proinput input,
+      .searchbox div.asl_w .probox .proinput input {
+        opacity: 1; }
 
   /*********************
   NAVIGATION STYLES

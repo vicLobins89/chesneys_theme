@@ -1467,13 +1467,17 @@ HEADER STYLES
 	width: 14%;
 	max-width: 15rem;
 	right: 1rem;
-    top: 10px;
+    top: 12px;
 	@include transition(all 0.3s ease-in-out);
 	
 	&:hover, &:focus {
 		border: 1px solid gray;
 		width: 100%;
     	max-width: 70%;
+		
+		input {
+			opacity: 1;
+		}
 	}
 	
 	#ajaxsearchlite1,
@@ -1489,6 +1493,7 @@ HEADER STYLES
 					font-size: .85rem;
 					height: 2rem;
 					text-shadow: none;
+					opacity: 0;
 					
 					&.autocomplete {
 						opacity: 0;
@@ -1541,7 +1546,7 @@ NAVIGATION STYLES
 	position: absolute;
 	left: 0;
 	top: 0;
-	margin: 18px 1.5rem;
+	margin: 20px 1.5rem 0;
 	line-height: 1;
     font-size: 1em;
 	font-family: $sans-serif;
@@ -1707,7 +1712,7 @@ NAVIGATION STYLES
 							font-size: 1.2rem;
 							
 							a {
-								padding: 1rem 0  1rem 5rem;
+								padding: 1.5rem 0  1.5rem 5rem;
 							}
 						}
 					}
