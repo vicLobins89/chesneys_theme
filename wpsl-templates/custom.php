@@ -70,7 +70,7 @@ $query = new WP_Query(array(
 	'posts_per_page' => -1
 ));
 
-$output .= '<ul class="stores-list">';
+$output .= '<ul class="stores-list">' . "\r\n";
 while ($query->have_posts()) : $query->the_post();
     $post_id = get_the_ID();
 	
@@ -84,10 +84,10 @@ while ($query->have_posts()) : $query->the_post();
 		<p>'.get_post_meta( $post_id, 'wpsl_email', true ).'</p>
 		<p>'.get_post_meta( $post_id, 'wpsl_phone', true ).'</p>
 		<p>'.get_post_meta( $post_id, 'wpsl_url', true ).'</p>
-	</div>';
+	</li>' . "\r\n";
 
 endwhile;
-$output .= '</ul>';
+$output .= '</ul>' . "\r\n";
 
 wp_reset_query();
 
