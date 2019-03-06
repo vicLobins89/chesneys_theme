@@ -21,6 +21,10 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
+	// Hover links
+	$('.hover-link').on('click', function(e){
+		e.preventDefault();
+	});
 	
 	// Brochure Request
 	var pdfHref = [],
@@ -68,18 +72,6 @@ jQuery(document).ready(function($) {
 		}
 	}, false );
 	
-	
-	// Reveal clicks
-	$('.hover-link').on('click', function(e){
-		e.preventDefault();
-		var selected = $(this).attr('class').split(' ')[1];
-		
-		$('.hover-link').not(this).removeClass('active');
-		$(this).toggleClass('active');
-		
-		$('.reveal-copy:not(.'+selected+')').removeClass('active');
-		$('.reveal-copy.'+selected+'').toggleClass('active');
-	});
 	
 	// Video Gallery
 	$('.play').on('click', function(){
@@ -155,6 +147,7 @@ jQuery(document).ready(function($) {
 		if( viewport.width < 768 ) {
 			$('body').addClass('is-mobile');
 			
+			// Menu
 			$('.primary-nav > li.menu-item-has-children').unbind('mouseenter mouseleave');
 			
 			$('.primary-nav > li').click(function(){
@@ -171,9 +164,19 @@ jQuery(document).ready(function($) {
 				$('.primary-nav > li > ul > li > ul > li').not(this).removeClass('active');
 				$(this).addClass('active');
 			});
+			
+			// Reveal cliks
+			$('.reveal-copy').each(function(){
+				var selected = $(this).attr('class').split(' ')[1],
+					selectedHtml = $(this).html();
+
+				$('.hover-link.'+selected+'');
+				console.log(selectedHtml);
+			});
 		} else {
 			$('body').removeClass('is-mobile');
 			
+			// Menu
 			$('.primary-nav > li.menu-item-has-children').unbind('click');
 			
 			$('.primary-nav > li.menu-item-has-children').hover(function(){
@@ -185,6 +188,17 @@ jQuery(document).ready(function($) {
 			$('#content, #main, .socket, .logo, .primary-nav > li:not(.menu-item-has-children)').hover(function(){
 				$('.primary-nav > li').removeClass('active');
 				$('#nav_widget').removeClass('active');
+			});
+			
+			// Reveal clicks
+			$('.hover-link').on('click', function(){
+				var selected = $(this).attr('class').split(' ')[1];
+
+				$('.hover-link').not(this).removeClass('active');
+				$(this).toggleClass('active');
+
+				$('.reveal-copy:not(.'+selected+')').removeClass('active');
+				$('.reveal-copy.'+selected+'').toggleClass('active');
 			});
 		}
 		menuResize();
