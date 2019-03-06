@@ -64,4 +64,5 @@ if ( $wpsl_settings['show_credits'] ) {
 
 $output .= '</div>' . "\r\n";
 
-return $wpdb->posts;
+print_r($wpdb->posts);
+return $output;
