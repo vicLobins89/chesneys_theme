@@ -986,7 +986,7 @@ LAYOUT & GRID STYLES
 		font-size: 1rem;
 	}
 }
-c
+
 .team-members {
 	.col-6 > .cf {
 		background: $light-brown;
@@ -1030,7 +1030,7 @@ c
 	background: $light-brown;
 	
 	.blog-module {
-		padding: 7.5% 0;
+		padding: 6rem 2rem;
 		text-align: center;
 		color: $white;
 		position: relative;
@@ -1045,7 +1045,7 @@ c
 		}
 
 		p {
-			width: 70%;
+			width: 90%;
 			margin: 1rem auto 2rem;
 		}
 		
@@ -1072,16 +1072,7 @@ c
 	}
 	
 	.col-4 {
-		padding-bottom: 2.5rem;
-		width: 27.333%;
-		
-		&.post-item-1 {
-			margin-left: 9%;
-		}
-		
-		&.post-item-3 {
-			margin-right: 9%;
-		}
+		width: 100%;
 	}
 	
 	.thumb {

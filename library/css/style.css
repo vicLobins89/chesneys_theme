@@ -1660,25 +1660,19 @@ LAYOUT & GRID STYLES
   .module .primary-btn, .module .image-link + p, .module .image-link .wp-caption-text, .image-link .module .wp-caption-text, .module .vid-thumb .play, .vid-thumb .module .play, .module .row.related-wrapper .woocommerce-loop-product__title, .row.related-wrapper .module .woocommerce-loop-product__title, .module a.comment-reply-link, .module #submit {
     font-size: 1rem; }
 
-c
-.team-members .col-6 > .cf, c
-.team-members .col-6 > .comment-respond {
+.team-members .col-6 > .cf, .team-members .col-6 > .comment-respond {
   background: #f5f3f1; }
-c
 .team-members .text {
   width: 50%;
   float: right;
   padding: 2rem; }
-c
 .team-members img {
   margin: 0 !important;
   padding: 0;
   width: 50%;
   float: left; }
-c
 .team-members h4 {
   font-size: 80%; }
-c
 .team-members .name {
   font-size: 150%;
   margin-top: 1rem; }
@@ -1692,7 +1686,7 @@ c
 .blog-wrapper {
   background: #f5f3f1; }
   .blog-wrapper .blog-module {
-    padding: 7.5% 0;
+    padding: 6rem 2rem;
     text-align: center;
     color: #fff;
     position: relative; }
@@ -1702,7 +1696,7 @@ c
     .blog-wrapper .blog-module h3 {
       font-size: 2em; }
     .blog-wrapper .blog-module p {
-      width: 70%;
+      width: 90%;
       margin: 1rem auto 2rem; }
     .blog-wrapper .blog-module .primary-btn, .blog-wrapper .blog-module .image-link + p, .blog-wrapper .blog-module .image-link .wp-caption-text, .image-link .blog-wrapper .blog-module .wp-caption-text, .blog-wrapper .blog-module .vid-thumb .play, .vid-thumb .blog-wrapper .blog-module .play, .blog-wrapper .blog-module .row.related-wrapper .woocommerce-loop-product__title, .row.related-wrapper .blog-wrapper .blog-module .woocommerce-loop-product__title, .blog-wrapper .blog-module a.comment-reply-link, .blog-wrapper .blog-module #submit {
       margin: 0; }
@@ -1720,12 +1714,7 @@ c
     font-size: 1.35em;
     margin: 2.5rem 0 2rem; }
   .blog-wrapper .col-4 {
-    padding-bottom: 2.5rem;
-    width: 27.333%; }
-    .blog-wrapper .col-4.post-item-1 {
-      margin-left: 9%; }
-    .blog-wrapper .col-4.post-item-3 {
-      margin-right: 9%; }
+    width: 100%; }
   .blog-wrapper .thumb {
     float: left;
     width: 58%; }
@@ -1872,8 +1861,7 @@ h2, .h2, .row.outdoor-product-single .short-desc .product_title, .woocommerce .s
     background: #000; }
   h2.lhs:after, .row.outdoor-product-single .short-desc h2.product_title:after, #add_payment_method h2.woocommerce-column__title:after,
   .woocommerce-cart h2.woocommerce-column__title:after,
-  .woocommerce-checkout h2.woocommerce-column__title:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-glossary h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .row.outdoor-product-single .short-desc .product_title:after, c
-  .team-members h4.h2:after, .woocommerce .spares-product .product_title:after, #add_payment_method .woocommerce-order-details__title:after,
+  .woocommerce-checkout h2.woocommerce-column__title:after, h2.woocommerce-loop-category__title:after, h2.woocommerce-loop-product__title:after, .module-outdoor-living-shop h2:after, .module-glossary h2:after, .module-design-a-fireplace h2:after, .h2.lhs:after, .row.outdoor-product-single .short-desc .product_title:after, .team-members h4.h2:after, .woocommerce .spares-product .product_title:after, #add_payment_method .woocommerce-order-details__title:after,
   .woocommerce-cart .woocommerce-order-details__title:after,
   .woocommerce-checkout .woocommerce-order-details__title:after, #add_payment_method .h2.woocommerce-column__title:after, #add_payment_method .row.outdoor-product-single .short-desc .woocommerce-column__title.product_title:after, .row.outdoor-product-single .short-desc #add_payment_method .woocommerce-column__title.product_title:after, #add_payment_method .woocommerce .spares-product .woocommerce-column__title.product_title:after, .woocommerce .spares-product #add_payment_method .woocommerce-column__title.product_title:after,
   .woocommerce-cart .h2.woocommerce-column__title:after,
@@ -1919,25 +1907,20 @@ p, .p {
     width: 3rem;
     height: 1px;
     background: #142128; }
-  .flair.lhs:after, .row.outdoor-product-single .short-desc .flair.product_title:after, c
-  .team-members h4.flair:after, #add_payment_method .flair.woocommerce-column__title:after,
+  .flair.lhs:after, .row.outdoor-product-single .short-desc .flair.product_title:after, .team-members h4.flair:after, #add_payment_method .flair.woocommerce-column__title:after,
   .woocommerce-cart .flair.woocommerce-column__title:after,
   .woocommerce-checkout .flair.woocommerce-column__title:after {
     left: 0;
     margin-left: 0; }
 
-.sans, c
-.team-members h4 {
+.sans, .team-members h4 {
   font-family: "Univers", Helvetica, Arial, sans-serif !important; }
-  .sans .serif, c
-  .team-members h4 .serif {
+  .sans .serif, .team-members h4 .serif {
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" !important; }
 
 .serif {
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" !important; }
-  .serif .sans, .serif c
-  .team-members h4, c
-  .team-members .serif h4 {
+  .serif .sans, .serif .team-members h4, .team-members .serif h4 {
     font-family: "Univers", Helvetica, Arial, sans-serif !important; }
 
 .copy-l {
@@ -3805,6 +3788,18 @@ TABLET & SMALLER LAPTOPS
 
   .gallery.gallery-columns-2 .gallery-item {
     width: 50%; }
+
+  .blog-wrapper .blog-module {
+    padding: 7.5% 0; }
+    .blog-wrapper .blog-module p {
+      width: 70%; }
+  .blog-wrapper .col-4 {
+    padding-bottom: 2.5rem;
+    width: 27.333%; }
+    .blog-wrapper .col-4.post-item-1 {
+      margin-left: 9%; }
+    .blog-wrapper .col-4.post-item-3 {
+      margin-right: 9%; }
 
   /*********************
   SIDEBARS & ASIDES

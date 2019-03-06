@@ -400,6 +400,29 @@ LAYOUT & GRID STYLES
 	}
 }
 
+.blog-wrapper {	
+	.blog-module {
+		padding: 7.5% 0;
+		
+		p {
+			width: 70%;
+		}
+	}
+	
+	.col-4 {
+		padding-bottom: 2.5rem;
+		width: 27.333%;
+		
+		&.post-item-1 {
+			margin-left: 9%;
+		}
+		
+		&.post-item-3 {
+			margin-right: 9%;
+		}
+	}
+}
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
