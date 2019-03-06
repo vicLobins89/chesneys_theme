@@ -2310,7 +2310,8 @@ NAVIGATION STYLES
 
 .socket {
   background: #53575a;
-  font-size: .825rem; }
+  font-size: .825rem;
+  display: none; }
   .socket .socket-nav {
     margin: 0;
     padding: .7rem 0;
@@ -3770,6 +3771,9 @@ TABLET & SMALLER LAPTOPS
         .primary-nav > li ul.children > li:focus > ul.children {
           opacity: 1;
           visibility: visible; }
+
+  .socket {
+    display: block; }
 
   .mobile-links {
     display: none !important; }

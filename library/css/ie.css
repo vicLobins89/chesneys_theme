@@ -405,6 +405,9 @@ NAVIGATION STYLES
         opacity: 1;
         visibility: visible; }
 
+.socket {
+  display: block; }
+
 .mobile-links {
   display: none !important; }
 
