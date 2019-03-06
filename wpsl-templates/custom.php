@@ -49,6 +49,8 @@ $output .= "\t" . '</div>' . "\r\n";
     
 $output .= "\t" . '<div id="wpsl-gmap" class="wpsl-gmap-canvas"></div>' . "\r\n";
 
+
+
 //$output .= "\t" . '<div id="wpsl-result-list">' . "\r\n";
 //$output .= "\t\t" . '<div id="wpsl-stores" '. $autoload_class .'>' . "\r\n";
 //$output .= "\t\t\t" . '<ul></ul>' . "\r\n";
@@ -63,5 +65,20 @@ if ( $wpsl_settings['show_credits'] ) {
 }
 
 $output .= '</div>' . "\r\n";
+
+$query = new WP_Query(array(
+    'post_type' => 'wpsl_stores',
+    'post_status' => 'publish'
+));
+
+
+while ($query->have_posts()) {
+    $query->the_post();
+    $post_id = get_the_ID();
+    echo $post_id;
+    echo "<br>";
+}
+
+wp_reset_query();
 
 return $output;
