@@ -3150,7 +3150,9 @@ POSTS & CONTENT STYLES
   height: 3rem; }
 
 #wpsl-result-list {
-  clear: both; }
+  clear: both;
+  width: 100% !important;
+  margin: 0 !important; }
 
 .wpsl-search.wpsl-checkboxes-enabled,
 .wpsl-search {
