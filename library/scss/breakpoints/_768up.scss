@@ -135,18 +135,8 @@ NAVIGATION STYLES
 	}
 
 	> li {
-		position: relative;
 		border: none;
 		padding: 1rem 1.5rem 1.5rem;
-		line-height: 1.2;
-		margin: 0;
-		vertical-align: middle;
-		color: $dark-brown;
-		
-		&.menu-item-1007,
-		&.menu-item-579 {
-			color: lighten($dark-brown, 20%);
-		}
 		
 		&.separator,
 		&.separator > a {
@@ -159,13 +149,6 @@ NAVIGATION STYLES
 		}
 		
 		> a {
-			color: inherit;
-			outline: none;
-			
-			br {
-				display: block;
-			}
-			
 			&:hover,
 			&:focus {
 				color: $teal;
@@ -228,30 +211,13 @@ NAVIGATION STYLES
 			left: 0;
 			height: 16rem;
 			overflow: visible;
-			background: $brown;
 			opacity: 0;
-			visibility: hidden;
 			text-align: left;
 			max-height: none;
 			padding: 1rem 0;
-			margin: 0;
-			z-index: 8;
-			@include transition (all 0.4s ease-out);
 
 			li {
-				vertical-align: middle;
-				display: block;
 				padding: 1rem 1.5rem;
-				color: $dark-brown;
-
-				a {
-					color: inherit;
-					
-					&:hover,
-					&:focus {
-						color: $gray;
-					}
-				}
 				
 				&.menu-item-has-children {
 					> a:after {
@@ -272,7 +238,6 @@ NAVIGATION STYLES
 				> ul.children {
 					width: 290px;
 					width: 17vw;
-					background: $mid-brown;
 					
 					&:after {
 						content: '';

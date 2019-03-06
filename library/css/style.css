@@ -2114,7 +2114,6 @@ NAVIGATION STYLES
       transform: rotate(90deg); }
   .primary-nav > li {
     position: relative;
-    border: none;
     line-height: 1.2;
     margin: 0;
     vertical-align: middle;
@@ -3610,30 +3609,18 @@ TABLET & SMALLER LAPTOPS
     .primary-nav li {
       border-bottom: none; }
     .primary-nav > li {
-      position: relative;
       border: none;
-      padding: 1rem 1.5rem 1.5rem;
-      line-height: 1.2;
-      margin: 0;
-      vertical-align: middle;
-      color: #766e63; }
-      .primary-nav > li.menu-item-1007, .primary-nav > li.menu-item-579 {
-        color: #a8a197; }
+      padding: 1rem 1.5rem 1.5rem; }
       .primary-nav > li.separator, .primary-nav > li.separator > a {
         display: inline-block;
         cursor: default; }
       .primary-nav > li a {
         padding: 0 !important; }
-      .primary-nav > li > a {
-        color: inherit;
-        outline: none; }
-        .primary-nav > li > a br {
-          display: block; }
-        .primary-nav > li > a:hover, .primary-nav > li > a:focus {
-          color: #4b858e; }
-        .primary-nav > li > a:after {
-          content: none !important;
-          display: none !important; }
+      .primary-nav > li > a:hover, .primary-nav > li > a:focus {
+        color: #4b858e; }
+      .primary-nav > li > a:after {
+        content: none !important;
+        display: none !important; }
       .primary-nav > li:hover > ul.sub-menu,
       .primary-nav > li:hover > ul.children, .primary-nav > li:focus > ul.sub-menu,
       .primary-nav > li:focus > ul.children, .primary-nav > li.active > ul.sub-menu,
@@ -3674,30 +3661,14 @@ TABLET & SMALLER LAPTOPS
         left: 0;
         height: 16rem;
         overflow: visible;
-        background: #cbc3bb;
         opacity: 0;
-        visibility: hidden;
         text-align: left;
         max-height: none;
         padding: 1rem 0;
-        margin: 0;
-        z-index: 8;
-        -webkit-transition: all 0.4s ease-out;
-        transition: all 0.4s ease-out;
         /* highlight sub-menu current page */ }
         .primary-nav > li ul.sub-menu li,
         .primary-nav > li ul.children li {
-          vertical-align: middle;
-          display: block;
-          padding: 1rem 1.5rem;
-          color: #766e63; }
-          .primary-nav > li ul.sub-menu li a,
-          .primary-nav > li ul.children li a {
-            color: inherit; }
-            .primary-nav > li ul.sub-menu li a:hover, .primary-nav > li ul.sub-menu li a:focus,
-            .primary-nav > li ul.children li a:hover,
-            .primary-nav > li ul.children li a:focus {
-              color: #53575a; }
+          padding: 1rem 1.5rem; }
           .primary-nav > li ul.sub-menu li.menu-item-has-children > a:after,
           .primary-nav > li ul.children li.menu-item-has-children > a:after {
             content: '';
@@ -3712,8 +3683,7 @@ TABLET & SMALLER LAPTOPS
         .primary-nav > li ul.children > li > ul.sub-menu,
         .primary-nav > li ul.children > li > ul.children {
           width: 290px;
-          width: 17vw;
-          background: #e0dbd6; }
+          width: 17vw; }
           .primary-nav > li ul.sub-menu > li > ul.sub-menu:after,
           .primary-nav > li ul.sub-menu > li > ul.children:after,
           .primary-nav > li ul.children > li > ul.sub-menu:after,
