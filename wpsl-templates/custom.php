@@ -58,9 +58,9 @@ $output .= "\t" . '<div id="wpsl-gmap" class="wpsl-gmap-canvas"></div>' . "\r\n"
 //$output .= "\t\t" . '</div>' . "\r\n";
 //$output .= "\t" . '</div>' . "\r\n";
 
-$output .= '<div id="wpsl-result-list">' . "\r\n";
+$output .= '<div id="vic-wpsl-result-list">' . "\r\n";
 
-$output .= '<div id="wpsl-stores" '. $autoload_class .'>' . "\r\n";
+$output .= '<div id="vic-wpsl-stores" '. $autoload_class .'>' . "\r\n";
 $output .= '<ul>' . "\r\n";
 
 $query = new WP_Query(array(
@@ -75,7 +75,7 @@ while ($query->have_posts()) : $query->the_post();
 	
 	$output .= '<li data-store-id="'.$post_id.'">
 	
-		<div class="aad-wpsl-store-location">
+		<div class="wpsl-store-location">
 			<p>
 				<strong><a target="_blank" href="'.get_post_meta( $post_id, 'wpsl_url', true ).'">'.get_the_title().'</a></strong>
 				
