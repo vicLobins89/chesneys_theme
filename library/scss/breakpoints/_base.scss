@@ -1604,6 +1604,7 @@ NAVIGATION STYLES
 		
 		a {
 			padding: 1rem 1.5rem 1.5rem;
+			display: inline-block;
 		}
 		
 		> a {
@@ -1670,6 +1671,15 @@ NAVIGATION STYLES
 			}
 			
 			> li {
+				&.active {
+					> ul.sub-menu,
+					> ul.children {
+						opacity: 1;
+						max-height: 400px;
+						visibility: visible
+					}
+				}
+				
 				> ul.sub-menu,
 				> ul.children {
 					background: $mid-brown;
@@ -1693,25 +1703,6 @@ NAVIGATION STYLES
 							font-size: 1.2rem;
 							padding: .78rem 1.7rem;
 						}
-						
-						&:after {
-							content: '';
-							position: absolute;
-							background: $light-brown;
-							height: 100%;
-							top: 0;
-							right: -999%;
-							width: 1000%;
-						}
-					}
-				}
-				
-				&:hover,
-				&:focus {
-					> ul.sub-menu,
-					> ul.children {
-						opacity: 1;
-						visibility: visible
 					}
 				}
 			}

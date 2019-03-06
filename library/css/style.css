@@ -2091,7 +2091,8 @@ NAVIGATION STYLES
     .primary-nav > li.separator, .primary-nav > li.separator > a {
       display: none; }
     .primary-nav > li a {
-      padding: 1rem 1.5rem 1.5rem; }
+      padding: 1rem 1.5rem 1.5rem;
+      display: inline-block; }
     .primary-nav > li > a {
       color: inherit;
       outline: none; }
@@ -2139,6 +2140,13 @@ NAVIGATION STYLES
           margin-left: 9px;
           background: url(../images/arrow-right.png) no-repeat center;
           background-size: 7px; }
+      .primary-nav > li ul.sub-menu > li.active > ul.sub-menu,
+      .primary-nav > li ul.sub-menu > li.active > ul.children,
+      .primary-nav > li ul.children > li.active > ul.sub-menu,
+      .primary-nav > li ul.children > li.active > ul.children {
+        opacity: 1;
+        max-height: 400px;
+        visibility: visible; }
       .primary-nav > li ul.sub-menu > li > ul.sub-menu,
       .primary-nav > li ul.sub-menu > li > ul.children,
       .primary-nav > li ul.children > li > ul.sub-menu,
@@ -2174,30 +2182,6 @@ NAVIGATION STYLES
             width: 45%;
             font-size: 1.2rem;
             padding: .78rem 1.7rem; }
-          .primary-nav > li ul.sub-menu > li ul.sub-menu ul.sub-menu:after,
-          .primary-nav > li ul.sub-menu > li ul.sub-menu ul.children:after,
-          .primary-nav > li ul.sub-menu > li ul.children ul.sub-menu:after,
-          .primary-nav > li ul.sub-menu > li ul.children ul.children:after,
-          .primary-nav > li ul.children > li ul.sub-menu ul.sub-menu:after,
-          .primary-nav > li ul.children > li ul.sub-menu ul.children:after,
-          .primary-nav > li ul.children > li ul.children ul.sub-menu:after,
-          .primary-nav > li ul.children > li ul.children ul.children:after {
-            content: '';
-            position: absolute;
-            background: #f5f3f1;
-            height: 100%;
-            top: 0;
-            right: -999%;
-            width: 1000%; }
-      .primary-nav > li ul.sub-menu > li:hover > ul.sub-menu,
-      .primary-nav > li ul.sub-menu > li:hover > ul.children, .primary-nav > li ul.sub-menu > li:focus > ul.sub-menu,
-      .primary-nav > li ul.sub-menu > li:focus > ul.children,
-      .primary-nav > li ul.children > li:hover > ul.sub-menu,
-      .primary-nav > li ul.children > li:hover > ul.children,
-      .primary-nav > li ul.children > li:focus > ul.sub-menu,
-      .primary-nav > li ul.children > li:focus > ul.children {
-        opacity: 1;
-        visibility: visible; }
 
 .socket {
   background: #53575a;
