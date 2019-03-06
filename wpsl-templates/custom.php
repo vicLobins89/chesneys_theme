@@ -49,16 +49,14 @@ $output .= "\t" . '</div>' . "\r\n";
     
 $output .= "\t" . '<div id="wpsl-gmap" class="wpsl-gmap-canvas"></div>' . "\r\n";
 
-
-
-//$output .= "\t" . '<div id="wpsl-result-list">' . "\r\n";
-//$output .= "\t\t" . '<div id="wpsl-stores" '. $autoload_class .'>' . "\r\n";
-//$output .= "\t\t\t" . '<ul></ul>' . "\r\n";
-//$output .= "\t\t" . '</div>' . "\r\n";
-//$output .= "\t\t" . '<div id="wpsl-direction-details">' . "\r\n";
-//$output .= "\t\t\t" . '<ul></ul>' . "\r\n";
-//$output .= "\t\t" . '</div>' . "\r\n";
-//$output .= "\t" . '</div>' . "\r\n";
+$output .= "\t" . '<div id="wpsl-result-list">' . "\r\n";
+$output .= "\t\t" . '<div id="wpsl-stores" '. $autoload_class .'>' . "\r\n";
+$output .= "\t\t\t" . '<ul></ul>' . "\r\n";
+$output .= "\t\t" . '</div>' . "\r\n";
+$output .= "\t\t" . '<div id="wpsl-direction-details">' . "\r\n";
+$output .= "\t\t\t" . '<ul></ul>' . "\r\n";
+$output .= "\t\t" . '</div>' . "\r\n";
+$output .= "\t" . '</div>' . "\r\n";
 
 if ( $wpsl_settings['show_credits'] ) { 
     $output .= "\t" . '<div class="wpsl-provided-by">'. sprintf( __( "Search provided by %sWP Store Locator%s", "wpsl" ), "<a target='_blank' href='https://wpstorelocator.co'>", "</a>" ) .'</div>' . "\r\n";
@@ -75,21 +73,20 @@ $query = new WP_Query(array(
 
 while ($query->have_posts()) : $query->the_post();
     $post_id = get_the_ID();
-	?>
+	
+	$output .= '<div class="col-3">
+		<a href="'.get_the_permalink().'" rel="bookmark">'.get_the_title().'</a>
+		<p>'.get_post_meta( $post_id, 'wpsl_address', true ).'</p>
+		<p>'.get_post_meta( $post_id, 'wpsl_address2', true ).'</p>
+		<p>'.get_post_meta( $post_id, 'wpsl_city', true ).'</p>
+		<p>'.get_post_meta( $post_id, 'wpsl_country', true ).'</p>
+		<p>'.get_post_meta( $post_id, 'wpsl_zip', true ).'</p>
+		<p>'.get_post_meta( $post_id, 'wpsl_email', true ).'</p>
+		<p>'.get_post_meta( $post_id, 'wpsl_phone', true ).'</p>
+		<p>'.get_post_meta( $post_id, 'wpsl_url', true ).'</p>
+	</div>';
 
-	<div class="col-3">
-		<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
-		<p><?php echo get_post_meta( $post_id, 'wpsl_address', true ); ?></p>
-		<p><?php echo get_post_meta( $post_id, 'wpsl_address2', true ); ?></p>
-		<p><?php echo get_post_meta( $post_id, 'wpsl_city', true ); ?></p>
-		<p><?php echo get_post_meta( $post_id, 'wpsl_country', true ); ?></p>
-		<p><?php echo get_post_meta( $post_id, 'wpsl_zip', true ); ?></p>
-		<p><?php echo get_post_meta( $post_id, 'wpsl_email', true ); ?></p>
-		<p><?php echo get_post_meta( $post_id, 'wpsl_phone', true ); ?></p>
-		<p><?php echo get_post_meta( $post_id, 'wpsl_url', true ); ?></p>
-	</div>
-
-<?php endwhile;
+endwhile;
 
 wp_reset_query();
 
