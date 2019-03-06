@@ -1610,19 +1610,23 @@ NAVIGATION STYLES
 		overflow-y: scroll;
 	}
 	
-	li.menu-item-has-children {
-		> a:after {
-			content: '';
-			width: 6px;
-			height: 10px;
-			display: inline-block;
-			margin-left: 9px;
-			background: url(../images/arrow-right.png) no-repeat center;
-			background-size: 7px;
-		}
+	li {
+		border-bottom: 1px solid $light-brown;
 		
-		&.active > a:after {
-			transform: rotate(90deg);
+		&.menu-item-has-children {
+			> a:after {
+				content: '';
+				width: 6px;
+				height: 10px;
+				display: inline-block;
+				margin-left: 9px;
+				background: url(../images/arrow-right.png) no-repeat center;
+				background-size: 7px;
+			}
+
+			&.active > a:after {
+				transform: rotate(90deg);
+			}
 		}
 	}
 

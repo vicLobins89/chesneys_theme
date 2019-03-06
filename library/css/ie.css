@@ -258,6 +258,8 @@ NAVIGATION STYLES
   overflow: visible;
   /* end .menu li */
   /* highlight current page */ }
+  .primary-nav li {
+    border-bottom: none; }
   .primary-nav > li {
     position: relative;
     border: none;

@@ -2100,16 +2100,18 @@ NAVIGATION STYLES
     max-height: 1000px;
     max-height: 100vh;
     overflow-y: scroll; }
-  .primary-nav li.menu-item-has-children > a:after {
-    content: '';
-    width: 6px;
-    height: 10px;
-    display: inline-block;
-    margin-left: 9px;
-    background: url(../images/arrow-right.png) no-repeat center;
-    background-size: 7px; }
-  .primary-nav li.menu-item-has-children.active > a:after {
-    transform: rotate(90deg); }
+  .primary-nav li {
+    border-bottom: 1px solid #f5f3f1; }
+    .primary-nav li.menu-item-has-children > a:after {
+      content: '';
+      width: 6px;
+      height: 10px;
+      display: inline-block;
+      margin-left: 9px;
+      background: url(../images/arrow-right.png) no-repeat center;
+      background-size: 7px; }
+    .primary-nav li.menu-item-has-children.active > a:after {
+      transform: rotate(90deg); }
   .primary-nav > li {
     position: relative;
     border: none;
@@ -3605,6 +3607,8 @@ TABLET & SMALLER LAPTOPS
     overflow: visible;
     /* end .menu li */
     /* highlight current page */ }
+    .primary-nav li {
+      border-bottom: none; }
     .primary-nav > li {
       position: relative;
       border: none;

@@ -129,6 +129,10 @@ NAVIGATION STYLES
 	margin: 0;
 	max-height: none;
 	overflow: visible;
+	
+	li {
+		border-bottom: none;
+	}
 
 	> li {
 		position: relative;
