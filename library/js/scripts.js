@@ -70,7 +70,7 @@ jQuery(document).ready(function($) {
 	
 	
 	// Reveal clicks
-	$('.reveal-copy').on('click', function(){
+	$('.hover-link').on('click', function(){
 		var classes = $(this).attr('class').split(' ');
 		for(var i=0; i<classes.length; i++){
 		 	console.log(classes[i]);
