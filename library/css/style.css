@@ -2298,6 +2298,7 @@ NAVIGATION STYLES
 .mobile-links {
   display: block;
   max-height: 0px;
+  overflow: hidden;
   -webkit-transition: max-height 0.8s ease-in-out;
   transition: max-height 0.8s ease-in-out; }
   .active .mobile-links {
