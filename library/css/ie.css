@@ -265,6 +265,8 @@ NAVIGATION STYLES
     .primary-nav > li.separator, .primary-nav > li.separator > a {
       display: inline-block;
       cursor: default; }
+    .primary-nav > li a {
+      padding: 0; }
     .primary-nav > li > a {
       color: inherit;
       outline: none; }
