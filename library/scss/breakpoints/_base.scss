@@ -1449,10 +1449,6 @@ HEADER STYLES
 	z-index: 999;
 	@include transition(all 0.14s ease-in-out);
 	
-	.home & {
-		background: none;
-	}
-	
 	&.active {
 		position: fixed;
 		width: 100%;
@@ -1478,8 +1474,7 @@ HEADER STYLES
 	
 	&.scrolled {
 		.is-mobile & {
-			background: $white;
-			@include prefix(box-shadow, 0px 2px 5px 0px rgba(0,0,0,0.75), webkit moz);
+			//@include prefix(box-shadow, 0px 2px 5px 0px rgba(0,0,0,0.75), webkit moz);
 		}
 	}
 }
