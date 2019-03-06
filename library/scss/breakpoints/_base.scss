@@ -1627,10 +1627,6 @@ NAVIGATION STYLES
 				visibility: visible
 			}
 		}
-		
-		> ul.sub-menu,
-		> ul.children {
-		}
 
 		ul.sub-menu,
 		ul.children {
@@ -1639,7 +1635,6 @@ NAVIGATION STYLES
 			visibility: hidden;
 			text-align: left;
 			max-height: 0px;
-			padding: 1rem 0;
 			margin: 0;
 			z-index: 8;
 			@include transition (all 0.4s ease-out);
@@ -1676,19 +1671,7 @@ NAVIGATION STYLES
 			> li {
 				> ul.sub-menu,
 				> ul.children {
-					width: 290px;
-					width: 17vw;
 					background: $mid-brown;
-					
-					&:after {
-						content: '';
-						position: absolute;
-						background: $mid-brown;
-						height: 100%;
-						top: 0;
-						right: -999%;
-						width: 1000%;
-					}
 				}
 				
 				ul.sub-menu,
@@ -1698,9 +1681,6 @@ NAVIGATION STYLES
 					
 					ul.sub-menu,
 					ul.children {
-						clear: both;
-						width: 546px;
-						width: 32vw;
 						font-family: $serif;
 						text-transform: none;
 						background: $light-brown;

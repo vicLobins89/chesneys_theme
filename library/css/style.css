@@ -2111,7 +2111,6 @@ NAVIGATION STYLES
       visibility: hidden;
       text-align: left;
       max-height: 0px;
-      padding: 1rem 0;
       margin: 0;
       z-index: 8;
       -webkit-transition: all 0.4s ease-out;
@@ -2143,20 +2142,7 @@ NAVIGATION STYLES
       .primary-nav > li ul.sub-menu > li > ul.children,
       .primary-nav > li ul.children > li > ul.sub-menu,
       .primary-nav > li ul.children > li > ul.children {
-        width: 290px;
-        width: 17vw;
         background: #e0dbd6; }
-        .primary-nav > li ul.sub-menu > li > ul.sub-menu:after,
-        .primary-nav > li ul.sub-menu > li > ul.children:after,
-        .primary-nav > li ul.children > li > ul.sub-menu:after,
-        .primary-nav > li ul.children > li > ul.children:after {
-          content: '';
-          position: absolute;
-          background: #e0dbd6;
-          height: 100%;
-          top: 0;
-          right: -999%;
-          width: 1000%; }
       .primary-nav > li ul.sub-menu > li ul.sub-menu,
       .primary-nav > li ul.sub-menu > li ul.children,
       .primary-nav > li ul.children > li ul.sub-menu,
@@ -2171,9 +2157,6 @@ NAVIGATION STYLES
         .primary-nav > li ul.children > li ul.sub-menu ul.children,
         .primary-nav > li ul.children > li ul.children ul.sub-menu,
         .primary-nav > li ul.children > li ul.children ul.children {
-          clear: both;
-          width: 546px;
-          width: 32vw;
           font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
           text-transform: none;
           background: #f5f3f1; }
@@ -3664,6 +3647,7 @@ TABLET & SMALLER LAPTOPS
         opacity: 0;
         visibility: hidden;
         text-align: left;
+        max-height: none;
         padding: 1rem 0;
         margin: 0;
         z-index: 8;
