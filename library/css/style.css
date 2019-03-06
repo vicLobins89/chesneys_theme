@@ -860,7 +860,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .hover-link + p, .hover-link .wp-caption-text {
     position: absolute;
     color: #fff;
-    bottom: 0;
+    top: 17.5rem;
     left: 0;
     margin: 0;
     padding: 2rem; }
@@ -3515,6 +3515,10 @@ TABLET & SMALLER LAPTOPS
 
   .vidbg-container {
     padding-bottom: 56%; }
+
+  .hover-link + p {
+    top: auto;
+    bottom: 0; }
 
   /*********************
   FONT STYLES

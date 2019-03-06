@@ -21,6 +21,11 @@ body {
 	padding-bottom: 56%;
 }
 
+.hover-link + p {
+	top: auto;
+	bottom: 0;
+}
+
 /*********************
 FONT STYLES
 *********************/
