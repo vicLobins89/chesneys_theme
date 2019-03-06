@@ -139,7 +139,7 @@ NAVIGATION STYLES
 		
 		&.separator,
 		&.separator > a {
-			display: block;
+			display: inline-block;
 			cursor: default;
 		}
 		
@@ -334,10 +334,6 @@ NAVIGATION STYLES
 	
 	.socket-nav {
 		padding: .7rem 0;
-	}
-	
-	.menu-item {
-		display: block;
 	}
 	
 	.rhs-links {

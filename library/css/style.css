@@ -2055,7 +2055,7 @@ NAVIGATION STYLES
   position: absolute;
   left: 0;
   top: 0;
-  margin: 1rem;
+  margin: 18px 1.5rem;
   line-height: 1;
   font-size: 1em;
   font-family: "Univers", Helvetica, Arial, sans-serif;
@@ -3633,7 +3633,7 @@ TABLET & SMALLER LAPTOPS
       .primary-nav > li.menu-item-1007, .primary-nav > li.menu-item-579 {
         color: #a8a197; }
       .primary-nav > li.separator, .primary-nav > li.separator > a {
-        display: block;
+        display: inline-block;
         cursor: default; }
       .primary-nav > li > a {
         color: inherit;
@@ -3794,8 +3794,6 @@ TABLET & SMALLER LAPTOPS
     display: block; }
     .socket .socket-nav {
       padding: .7rem 0; }
-    .socket .menu-item {
-      display: block; }
     .socket .rhs-links {
       position: absolute;
       right: 2rem;
