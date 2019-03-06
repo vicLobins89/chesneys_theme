@@ -1447,7 +1447,7 @@ HEADER STYLES
 	position: fixed;
 	width: 100%;
 	z-index: 999;
-	@include transition(all 0.14s ease-in-out);
+	@include transition(all 0.6s ease-in-out);
 	
 	&.active {
 		position: fixed;
