@@ -1562,6 +1562,16 @@ NAVIGATION STYLES
 	.active & {
 		z-index: 9999;
 	}
+	
+	&:after {
+		content: '';
+		width: 6px;
+		height: 10px;
+		display: inline-block;
+		margin-left: 9px;
+		background: url(../images/arrow-right.png) no-repeat center;
+		background-size: 7px;
+	}
 }
 
 .main-nav {
@@ -1817,15 +1827,10 @@ NAVIGATION STYLES
 .mobile-links {
 	display: inline-block !important;
     text-align: center;
-    width: 33.333%;
+    width: 50%;
 	background: $gray;
 	color: $white !important;
 	float: left;
-	
-	&:last-child,
-	&:nth-last-child(2) {
-		width: 50%;
-	}
 	
 	a {
 		color: inherit;
