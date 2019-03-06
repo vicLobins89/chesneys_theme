@@ -2109,6 +2109,7 @@ NAVIGATION STYLES
       background: #cbc3bb;
       opacity: 0;
       visibility: hidden;
+      overflow: hidden;
       text-align: left;
       max-height: 0px;
       margin: 0;
