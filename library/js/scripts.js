@@ -154,11 +154,19 @@ jQuery(document).ready(function($) {
 		var menuWidth = $('.primary-nav').outerWidth(),
 			menuHeight = $('.primary-nav').outerHeight(),
 			subMenuHeight = $('.primary-nav > li ul.sub-menu').outerHeight();
-		$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width( menuWidth/3 );
-		$('#nav_widget').css({
-			"top": menuHeight,
-			"padding-top": subMenuHeight
-		});
+		
+		if( viewport.width < 768 ) {
+			$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width( menuWidth/3 );
+			$('#nav_widget').css({
+				"top": menuHeight,
+				"padding-top": subMenuHeight
+			});
+		} else {
+			$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width('auto');
+			$('#nav_widget').css({
+				"display": 'none'
+			});
+		}
 	}
 	menuResize();
 	
