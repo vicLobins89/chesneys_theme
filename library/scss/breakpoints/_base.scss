@@ -1636,6 +1636,11 @@ NAVIGATION STYLES
 
 		ul.sub-menu,
 		ul.children {
+			position: absolute;
+			top: 3.5rem;
+			left: 0;
+			height: 16rem;
+			overflow: visible;
 			background: $brown;
 			opacity: 0;
 			visibility: hidden;
@@ -1677,15 +1682,31 @@ NAVIGATION STYLES
 			> li {
 				> ul.sub-menu,
 				> ul.children {
+					width: 290px;
+					width: 17vw;
 					background: $mid-brown;
+					
+					&:after {
+						content: '';
+						position: absolute;
+						background: $mid-brown;
+						height: 100%;
+						top: 0;
+						right: -999%;
+						width: 1000%;
+					}
 				}
 				
 				ul.sub-menu,
 				ul.children {
+					top: 0;
+    				left: 100%;
 					
 					ul.sub-menu,
 					ul.children {
 						clear: both;
+						width: 546px;
+						width: 32vw;
 						font-family: $serif;
 						text-transform: none;
 						background: $light-brown;
