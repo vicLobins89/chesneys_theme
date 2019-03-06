@@ -1690,8 +1690,11 @@ NAVIGATION STYLES
 				
 				ul.sub-menu,
 				ul.children {
-					top: 0;
-    				left: 100%;
+					li {
+						a {
+							padding-left: 5rem;
+						}
+					}
 					
 					ul.sub-menu,
 					ul.children {
@@ -1704,7 +1707,7 @@ NAVIGATION STYLES
 							font-size: 1.2rem;
 							
 							a {
-								padding-left: 5rem;
+								padding-left: 7rem;
 							}
 						}
 					}
