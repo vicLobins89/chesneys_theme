@@ -49,20 +49,19 @@ $output .= "\t" . '</div>' . "\r\n";
     
 $output .= "\t" . '<div id="wpsl-gmap" class="wpsl-gmap-canvas"></div>' . "\r\n";
 
-$output .= "\t" . '<div id="wpsl-result-list">' . "\r\n";
-$output .= "\t\t" . '<div id="wpsl-stores" '. $autoload_class .'>' . "\r\n";
-$output .= "\t\t\t" . '<ul></ul>' . "\r\n";
-$output .= "\t\t" . '</div>' . "\r\n";
-$output .= "\t\t" . '<div id="wpsl-direction-details">' . "\r\n";
-$output .= "\t\t\t" . '<ul></ul>' . "\r\n";
-$output .= "\t\t" . '</div>' . "\r\n";
-$output .= "\t" . '</div>' . "\r\n";
+//$output .= "\t" . '<div id="wpsl-result-list">' . "\r\n";
+//$output .= "\t\t" . '<div id="wpsl-stores" '. $autoload_class .'>' . "\r\n";
+//$output .= "\t\t\t" . '<ul></ul>' . "\r\n";
+//$output .= "\t\t" . '</div>' . "\r\n";
+//$output .= "\t\t" . '<div id="wpsl-direction-details">' . "\r\n";
+//$output .= "\t\t\t" . '<ul></ul>' . "\r\n";
+//$output .= "\t\t" . '</div>' . "\r\n";
+//$output .= "\t" . '</div>' . "\r\n";
 
-if ( $wpsl_settings['show_credits'] ) { 
-    $output .= "\t" . '<div class="wpsl-provided-by">'. sprintf( __( "Search provided by %sWP Store Locator%s", "wpsl" ), "<a target='_blank' href='https://wpstorelocator.co'>", "</a>" ) .'</div>' . "\r\n";
-}
+$output .= '<div id="wpsl-result-list">' . "\r\n";
 
-$output .= '</div>' . "\r\n";
+$output .= '<div id="wpsl-stores" '. $autoload_class .'>' . "\r\n";
+$output .= '<ul>' . "\r\n";
 
 $query = new WP_Query(array(
     'post_type' => 'wpsl_stores',
@@ -70,7 +69,7 @@ $query = new WP_Query(array(
 	'posts_per_page' => -1
 ));
 
-$output .= '<ul class="stores-list">' . "\r\n";
+
 while ($query->have_posts()) : $query->the_post();
     $post_id = get_the_ID();
 	
@@ -87,8 +86,19 @@ while ($query->have_posts()) : $query->the_post();
 	</li>' . "\r\n";
 
 endwhile;
-$output .= '</ul>' . "\r\n";
 
 wp_reset_query();
+
+$output .= '</ul>' . "\r\n";
+$output .= '</div>' . "\r\n";
+
+$output .= '</div>' . "\r\n";
+
+
+if ( $wpsl_settings['show_credits'] ) { 
+    $output .= "\t" . '<div class="wpsl-provided-by">'. sprintf( __( "Search provided by %sWP Store Locator%s", "wpsl" ), "<a target='_blank' href='https://wpstorelocator.co'>", "</a>" ) .'</div>' . "\r\n";
+}
+
+$output .= '</div>' . "\r\n";
 
 return $output;
