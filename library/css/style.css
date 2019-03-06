@@ -2054,27 +2054,22 @@ NAVIGATION STYLES
     z-index: 9999; }
 
 .main-nav {
-  position: relative;
-  max-height: 0px;
-  overflow: hidden;
-  -webkit-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out; }
-  .active .main-nav {
-    max-height: 800px; }
+  position: relative; }
 
 .nav .menu-item {
   display: block; }
 
 .primary-nav {
-  position: relative;
+  position: fixed;
   display: inline-block;
-  left: 50%;
-  transform: translate(-50%, 0);
-  text-align: center;
   font-family: "Univers", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: .9rem;
   margin: 0;
+  max-height: 0px;
+  max-height: 0vh;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   /* end .menu li */
   /* highlight current page */ }
   .active .primary-nav {
@@ -2296,13 +2291,7 @@ NAVIGATION STYLES
     padding: 5px 0 0; }
 
 .mobile-links {
-  display: block;
-  max-height: 0px;
-  overflow: hidden;
-  -webkit-transition: max-height 0.8s ease-in-out;
-  transition: max-height 0.8s ease-in-out; }
-  .active .mobile-links {
-    max-height: 300px; }
+  display: block; }
 
 /*********************
 POSTS & CONTENT STYLES
@@ -3616,20 +3605,14 @@ TABLET & SMALLER LAPTOPS
       padding: 0;
       color: #fff; }
 
-  .main-nav {
-    max-height: none;
-    overflow: visible; }
-
   .primary-nav {
     position: relative;
-    display: inline-block;
     left: 50%;
     transform: translate(-50%, 0);
     text-align: center;
-    font-family: "Univers", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
     font-size: .9rem;
     margin: 0;
+    max-height: none;
     /* end .menu li */
     /* highlight current page */ }
     .primary-nav > li {
