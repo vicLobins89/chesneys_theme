@@ -1,5 +1,5 @@
 <?php 
-global $wpsl_settings, $wpsl;
+global $wpsl_settings, $wpsl, $wpdb;
 
 $output         = $this->get_custom_css(); 
 $autoload_class = ( !$wpsl_settings['autoload'] ) ? 'class="wpsl-not-loaded"' : '';
@@ -64,4 +64,4 @@ if ( $wpsl_settings['show_credits'] ) {
 
 $output .= '</div>' . "\r\n";
 
-return $output;
+return $wpdb->posts;
