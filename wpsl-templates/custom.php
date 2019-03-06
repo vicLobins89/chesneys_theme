@@ -70,12 +70,12 @@ $query = new WP_Query(array(
 	'posts_per_page' => -1
 ));
 
-
+$output .= '<ul class="stores-list">';
 while ($query->have_posts()) : $query->the_post();
     $post_id = get_the_ID();
 	
-	$output .= '<div class="col-3">
-		<a href="'.get_the_permalink().'" rel="bookmark">'.get_the_title().'</a>
+	$output .= '<li data-store-id="'.$post_id.'">
+		<a class="wpsl-store-details" href="#" rel="bookmark">'.get_the_title().'</a>
 		<p>'.get_post_meta( $post_id, 'wpsl_address', true ).'</p>
 		<p>'.get_post_meta( $post_id, 'wpsl_address2', true ).'</p>
 		<p>'.get_post_meta( $post_id, 'wpsl_city', true ).'</p>
@@ -87,6 +87,7 @@ while ($query->have_posts()) : $query->the_post();
 	</div>';
 
 endwhile;
+$output .= '</ul>';
 
 wp_reset_query();
 
