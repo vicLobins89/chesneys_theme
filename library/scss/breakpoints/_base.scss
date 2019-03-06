@@ -1858,7 +1858,16 @@ NAVIGATION STYLES
 }
 
 .mobile-links {
-	display: block;
+	display: inline-block !important;
+    text-align: center;
+    width: 32%;
+	background: $dark-gray;
+	color: $white;
+	
+	&:nth-child(4),
+	&:nth-child(5) {
+		width: 50%;
+	}
 }
 
 

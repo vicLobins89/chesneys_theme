@@ -2294,7 +2294,13 @@ NAVIGATION STYLES
     padding: 5px 0 0; }
 
 .mobile-links {
-  display: block; }
+  display: inline-block !important;
+  text-align: center;
+  width: 32%;
+  background: #142128;
+  color: #fff; }
+  .mobile-links:nth-child(4), .mobile-links:nth-child(5) {
+    width: 50%; }
 
 /*********************
 POSTS & CONTENT STYLES
