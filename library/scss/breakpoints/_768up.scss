@@ -112,21 +112,14 @@ NAVIGATION STYLES
 	}
 }
 
-.main-nav {
-	max-height: none;
-	overflow: visible;
-}
-
 .primary-nav {
 	position: relative;
-	display: inline-block;
 	left: 50%;
 	transform: translate(-50%, 0);
 	text-align: center;
-	font-family: $sans-serif;
-	text-transform: uppercase;
 	font-size: .9rem;
 	margin: 0;
+	max-height: none;
 
 	> li {
 		position: relative;

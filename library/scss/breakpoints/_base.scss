@@ -1556,13 +1556,6 @@ NAVIGATION STYLES
 
 .main-nav {
 	position: relative;
-	max-height: 0px;
-	overflow: hidden;
-	@include transition(all 0.7s ease-in-out);
-	
-	.active & {
-		max-height: 800px;
-	}
 }
 
 .nav {
@@ -1572,15 +1565,15 @@ NAVIGATION STYLES
 }
 
 .primary-nav {
-	position: relative;
+	position: fixed;
 	display: inline-block;
-	left: 50%;
-	transform: translate(-50%, 0);
-	text-align: center;
 	font-family: $sans-serif;
 	text-transform: uppercase;
 	font-size: .9rem;
 	margin: 0;
+	max-height: 0px;
+    max-height: 0vh;
+	@include transition(all 0.2s ease-in-out);
 	
 	.active & {
 		max-height: 1000px;
@@ -1863,13 +1856,6 @@ NAVIGATION STYLES
 
 .mobile-links {
 	display: block;
-	max-height: 0px;
-	overflow: hidden;
-	@include transition(max-height 0.8s ease-in-out);
-	
-	.active & {
-		max-height: 300px;
-	}
 }
 
 
