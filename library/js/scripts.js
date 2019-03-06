@@ -167,12 +167,12 @@ jQuery(document).ready(function($) {
 			
 			$('.primary-nav > li').click(function(){
 				$('.primary-nav > li').not(this).removeClass('active');
-				$(this).toggleClass('active');
+				$(this).addClass('active');
 			});
 			
 			$('.primary-nav > li li').click(function(){
 				$('.primary-nav > li li').not(this).removeClass('active');
-				$(this).toggleClass('active');
+				$(this).addClass('active');
 			});
 		} else {
 			$('body').removeClass('is-mobile');
