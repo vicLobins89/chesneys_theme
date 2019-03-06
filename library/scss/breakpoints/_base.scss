@@ -1481,10 +1481,14 @@ HEADER STYLES
 
 .searchbox {
 	position: absolute;
-	width: 100%;
+	width: 14%;
 	max-width: 15rem;
-	right: 3.25rem;
+	right: 1.25rem;
     top: 10px;
+	
+	&:hover, &:focus {
+		width: 100%;
+	}
 	
 	#ajaxsearchlite1,
 	div.asl_w {
