@@ -78,6 +78,7 @@ while ($query->have_posts()) {
     $post_id = get_the_ID();
 	
     the_title();
+	echo get_post_meta( $post_id, 'wpsl_address', true );
     echo "<br>";
 }
 
