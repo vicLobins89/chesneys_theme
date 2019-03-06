@@ -21,9 +21,10 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
+	
+	// Brochure Request
 	var pdfHref = [],
 		pdfName = [];
-	
 	$('.js-brochure-input').each(function(){
 		$(this).on('change', function(e){
 			e.preventDefault();
@@ -66,6 +67,7 @@ jQuery(document).ready(function($) {
 			downloadAll(pdfHref, pdfName);
 		}
 	}, false );
+	
 	
 	// Reveal clicks
 	$('.for-you').click(function(e){
