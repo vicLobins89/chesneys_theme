@@ -182,7 +182,37 @@ HEADER STYLES
   position: relative; }
 
 .logo {
-  width: 90%; }
+  width: 90%;
+  padding: 1.75rem 0 1.25rem; }
+
+.searchbox {
+  width: 14%;
+  max-width: 15rem;
+  right: 1.25rem;
+  top: 10px; }
+  .searchbox:hover, .searchbox:focus {
+    width: 100%; }
+  .searchbox #ajaxsearchlite1,
+  .searchbox div.asl_w {
+    border: 2px solid #b5b5b5; }
+    .searchbox #ajaxsearchlite1 .probox,
+    .searchbox div.asl_w .probox {
+      height: 2rem; }
+      .searchbox #ajaxsearchlite1 .probox .proinput input,
+      .searchbox div.asl_w .probox .proinput input {
+        font-size: .85rem;
+        height: 2rem;
+        text-shadow: none; }
+        .searchbox #ajaxsearchlite1 .probox .proinput input.autocomplete,
+        .searchbox div.asl_w .probox .proinput input.autocomplete {
+          opacity: 0; }
+      .searchbox #ajaxsearchlite1 .probox .promagnifier .innericon svg,
+      .searchbox #ajaxsearchlite1 .probox .prosettings .innericon svg,
+      .searchbox #ajaxsearchlite1 .probox .proloading svg,
+      .searchbox div.asl_w .probox .promagnifier .innericon svg,
+      .searchbox div.asl_w .probox .prosettings .innericon svg,
+      .searchbox div.asl_w .probox .proloading svg {
+        width: 18px; }
 
 /*********************
 NAVIGATION STYLES

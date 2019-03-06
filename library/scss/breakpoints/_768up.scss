@@ -41,6 +41,47 @@ HEADER STYLES
 
 .logo {
 	width: 90%;
+	padding: 1.75rem 0 1.25rem;
+}
+
+.searchbox {
+	width: 14%;
+	max-width: 15rem;
+	right: 1.25rem;
+    top: 10px;
+	
+	&:hover, &:focus {
+		width: 100%;
+	}
+	
+	#ajaxsearchlite1,
+	div.asl_w {
+		border: 2px solid #b5b5b5;
+		
+		.probox {
+			height: 2rem;
+			
+			.proinput {
+				input {
+					font-size: .85rem;
+					height: 2rem;
+					text-shadow: none;
+					
+					&.autocomplete {
+						opacity: 0;
+					}
+				}
+			}
+			
+			.promagnifier .innericon,
+			.prosettings .innericon,
+			.proloading {
+				svg  {
+					width: 18px;
+				}
+			}
+		}
+	}
 }
 
 /*********************

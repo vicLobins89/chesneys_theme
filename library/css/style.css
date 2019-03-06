@@ -2002,7 +2002,6 @@ HEADER STYLES
   top: 10px; }
   .searchbox #ajaxsearchlite1,
   .searchbox div.asl_w {
-    border: 2px solid #b5b5b5;
     border-radius: 2px;
     box-shadow: none; }
     .searchbox #ajaxsearchlite1 .probox,
@@ -2035,7 +2034,7 @@ HEADER STYLES
   max-width: 16rem;
   width: 33%;
   font-size: 0;
-  padding: 1.75rem 0 1.25rem;
+  padding: 1.35rem 0;
   margin: 0 auto; }
   .logo img {
     max-width: 100%;
@@ -2053,6 +2052,8 @@ NAVIGATION STYLES
   margin: 1rem;
   line-height: 1;
   font-size: 1em;
+  font-family: "Univers", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
@@ -3546,7 +3547,37 @@ TABLET & SMALLER LAPTOPS
     position: relative; }
 
   .logo {
-    width: 90%; }
+    width: 90%;
+    padding: 1.75rem 0 1.25rem; }
+
+  .searchbox {
+    width: 14%;
+    max-width: 15rem;
+    right: 1.25rem;
+    top: 10px; }
+    .searchbox:hover, .searchbox:focus {
+      width: 100%; }
+    .searchbox #ajaxsearchlite1,
+    .searchbox div.asl_w {
+      border: 2px solid #b5b5b5; }
+      .searchbox #ajaxsearchlite1 .probox,
+      .searchbox div.asl_w .probox {
+        height: 2rem; }
+        .searchbox #ajaxsearchlite1 .probox .proinput input,
+        .searchbox div.asl_w .probox .proinput input {
+          font-size: .85rem;
+          height: 2rem;
+          text-shadow: none; }
+          .searchbox #ajaxsearchlite1 .probox .proinput input.autocomplete,
+          .searchbox div.asl_w .probox .proinput input.autocomplete {
+            opacity: 0; }
+        .searchbox #ajaxsearchlite1 .probox .promagnifier .innericon svg,
+        .searchbox #ajaxsearchlite1 .probox .prosettings .innericon svg,
+        .searchbox #ajaxsearchlite1 .probox .proloading svg,
+        .searchbox div.asl_w .probox .promagnifier .innericon svg,
+        .searchbox div.asl_w .probox .prosettings .innericon svg,
+        .searchbox div.asl_w .probox .proloading svg {
+          width: 18px; }
 
   /*********************
   NAVIGATION STYLES
