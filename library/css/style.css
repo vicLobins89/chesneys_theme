@@ -2128,7 +2128,7 @@ NAVIGATION STYLES
         .primary-nav > li ul.sub-menu li a,
         .primary-nav > li ul.children li a {
           color: inherit;
-          padding-left: 3rem; }
+          padding-left: 2.5rem; }
           .primary-nav > li ul.sub-menu li a:hover, .primary-nav > li ul.sub-menu li a:focus,
           .primary-nav > li ul.children li a:hover,
           .primary-nav > li ul.children li a:focus {
@@ -2159,7 +2159,7 @@ NAVIGATION STYLES
       .primary-nav > li ul.sub-menu > li ul.children li a,
       .primary-nav > li ul.children > li ul.sub-menu li a,
       .primary-nav > li ul.children > li ul.children li a {
-        padding-left: 5rem; }
+        padding-left: 3.5rem; }
       .primary-nav > li ul.sub-menu > li ul.sub-menu ul.sub-menu,
       .primary-nav > li ul.sub-menu > li ul.sub-menu ul.children,
       .primary-nav > li ul.sub-menu > li ul.children ul.sub-menu,
@@ -2189,7 +2189,7 @@ NAVIGATION STYLES
           .primary-nav > li ul.children > li ul.sub-menu ul.children li a,
           .primary-nav > li ul.children > li ul.children ul.sub-menu li a,
           .primary-nav > li ul.children > li ul.children ul.children li a {
-            padding-left: 7rem; }
+            padding: 1rem 0  1rem 5rem; }
 
 .socket {
   background: #53575a;
