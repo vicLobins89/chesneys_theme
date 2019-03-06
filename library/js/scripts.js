@@ -165,7 +165,7 @@ jQuery(document).ready(function($) {
 			
 			$('.primary-nav > li.menu-item-has-children').unbind('mouseenter mouseleave');
 			
-			$('.primary-nav li').click(function(){
+			$('.primary-nav > li, .primary-nav > li li').click(function(){
 				$('.primary-nav li').not(this).removeClass('active');
 				$(this).toggleClass('active');
 			});
