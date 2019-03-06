@@ -272,7 +272,7 @@ NAVIGATION STYLES
       display: inline-block;
       cursor: default; }
     .primary-nav > li a {
-      padding: 0; }
+      padding: 0 !important; }
     .primary-nav > li > a {
       color: inherit;
       outline: none; }

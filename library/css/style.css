@@ -2088,6 +2088,14 @@ NAVIGATION STYLES
     max-height: 1000px;
     max-height: 100vh;
     overflow-y: scroll; }
+  .primary-nav li.menu-item-has-children > a:after {
+    content: '';
+    width: 6px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 9px;
+    background: url(../images/arrow-right.png) no-repeat center;
+    background-size: 7px; }
   .primary-nav > li {
     position: relative;
     border: none;
@@ -2142,15 +2150,6 @@ NAVIGATION STYLES
           .primary-nav > li ul.children li a:hover,
           .primary-nav > li ul.children li a:focus {
             color: #53575a; }
-        .primary-nav > li ul.sub-menu li.menu-item-has-children > a:after,
-        .primary-nav > li ul.children li.menu-item-has-children > a:after {
-          content: '';
-          width: 6px;
-          height: 10px;
-          display: inline-block;
-          margin-left: 9px;
-          background: url(../images/arrow-right.png) no-repeat center;
-          background-size: 7px; }
       .primary-nav > li ul.sub-menu > li.active > ul.sub-menu,
       .primary-nav > li ul.sub-menu > li.active > ul.children,
       .primary-nav > li ul.children > li.active > ul.sub-menu,
@@ -3604,7 +3603,7 @@ TABLET & SMALLER LAPTOPS
         display: inline-block;
         cursor: default; }
       .primary-nav > li a {
-        padding: 0; }
+        padding: 0 !important; }
       .primary-nav > li > a {
         color: inherit;
         outline: none; }
