@@ -91,25 +91,6 @@
 					get_sidebar('nav_widget');
 					?>
 					</nav>
-					
-					<nav role="navigation" class="socket mobile-links" itemscope itemtype="http://schema.org/SiteNavigationElement">
-					<?php
-					wp_nav_menu(array(
-						'container' => false,
-						'container_class' => 'menu cf',
-						'menu' => __( 'Socket Menu', 'bonestheme' ),
-						'menu_class' => 'nav socket-nav cf',
-						'theme_location' => 'socket-nav'
-					));
-					echo '<div class="rhs-links">';
-					echo '<a href="'.wc_get_cart_url().'" class="menu-item basket" title="View your shopping cart">';
-					if( WC()->cart->get_cart_contents_count() !== 0 ) {
-						echo '<span>'.sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ).'</span>';
-					}
-					echo 'Basket</a>';
-					echo '</div>';
-					?>
-					</nav>
 
 				</div>
 
