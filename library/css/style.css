@@ -2354,6 +2354,9 @@ NAVIGATION STYLES
     border-radius: 50%;
     padding: 5px 0 0; }
 
+.mobile-links {
+  display: block; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
