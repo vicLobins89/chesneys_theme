@@ -139,13 +139,13 @@ jQuery(document).ready(function($) {
 		$(this).parents('.header').toggleClass('active');
 	});
 	
-	$('.primary-nav > li.menu-item-has-children').hover(function(){
+	$('.primary-nav > li.menu-item-has-children').on('hover click', function(){
 		$('.primary-nav > li.menu-item-has-children').not(this).removeClass('active');
 		$(this).addClass('active');
 		$('#nav_widget').addClass('active');
 	});
 	
-	$('#content, #main, .socket, .logo, .primary-nav > li:not(.menu-item-has-children)').hover(function(){
+	$('#content, #main, .socket, .logo, .primary-nav > li:not(.menu-item-has-children)').on('hover click', function(){
 		$('.primary-nav > li').removeClass('active');
 		$('#nav_widget').removeClass('active');
 	});

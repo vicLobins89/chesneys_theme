@@ -1614,14 +1614,11 @@ NAVIGATION STYLES
 				display: block;
 			}
 			
-			&:hover,
-			&:focus {
+			&.active {
 				color: $teal;
 			}
 		}
 		
-		&:hover,
-		&:focus,
 		&.active {
 			> ul.sub-menu,
 			> ul.children {
