@@ -280,6 +280,9 @@ NAVIGATION STYLES
         display: block; }
       .primary-nav > li > a:hover, .primary-nav > li > a:focus {
         color: #4b858e; }
+      .primary-nav > li > a:after {
+        content: none;
+        display: none; }
     .primary-nav > li:hover > ul.sub-menu,
     .primary-nav > li:hover > ul.children, .primary-nav > li:focus > ul.sub-menu,
     .primary-nav > li:focus > ul.children, .primary-nav > li.active > ul.sub-menu,

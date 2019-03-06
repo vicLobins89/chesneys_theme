@@ -166,6 +166,11 @@ NAVIGATION STYLES
 			&:focus {
 				color: $teal;
 			}
+			
+			&:after {
+				content: none;
+				display: none;
+			}
 		}
 		
 		&:hover,
