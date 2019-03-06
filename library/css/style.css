@@ -3187,8 +3187,11 @@ POSTS & CONTENT STYLES
 #wpsl-wrap #wpsl-result-list ul li {
   text-align: left;
   display: inline-block;
-  width: 25%;
-  font-size: .8rem; }
+  width: 24%;
+  width: calc(25% - .2rem);
+  font-size: .8rem;
+  padding: 1rem !important;
+  border-bottom: 1px solid #53575a !important; }
 
 .wpsl-direction-wrap {
   display: none !important; }

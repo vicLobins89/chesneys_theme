@@ -3117,8 +3117,11 @@ POSTS & CONTENT STYLES
 	li {
 		text-align: left;
 		display: inline-block;
-		width: 25%;
+		width: 24%;
+		width: calc(25% - .2rem);
 		font-size: .8rem;
+		padding: 1rem !important;
+    	border-bottom: 1px solid $gray !important;
 	}
 }
 
