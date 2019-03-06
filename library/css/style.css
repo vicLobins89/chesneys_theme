@@ -1097,13 +1097,15 @@ hr {
     left: 0;
     top: 0; }
 
-.vidbg-container + div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-  .vidbg-container + div h1, .vidbg-container + div .h1 {
-    font-size: 3.75em; }
+.vidbg-container {
+  padding-bottom: 120%; }
+  .vidbg-container + div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .vidbg-container + div h1, .vidbg-container + div .h1 {
+      font-size: 3.75em; }
 
 .vids-wrapper {
   text-align: center; }
@@ -3490,6 +3492,9 @@ TABLET & SMALLER LAPTOPS
   *********************/
   html {
     font-size: 14px; }
+
+  .vidbg-container {
+    padding-bottom: 56%; }
 
   /*********************
   FONT STYLES

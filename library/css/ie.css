@@ -165,6 +165,9 @@ GENERAL STYLES
 html {
   font-size: 14px; }
 
+.vidbg-container {
+  padding-bottom: 56%; }
+
 /*********************
 FONT STYLES
 *********************/
