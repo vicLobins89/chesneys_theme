@@ -165,8 +165,8 @@ jQuery(document).ready(function($) {
 			
 			$('.primary-nav > li.menu-item-has-children').unbind('mouseenter mouseleave');
 			
-			$('.primary-nav li.menu-item-has-children').click(function(){
-				$('.primary-nav li.menu-item-has-children').not(this).removeClass('active');
+			$('.primary-nav li').click(function(){
+				$('.primary-nav li').not(this).removeClass('active');
 				$(this).toggleClass('active');
 			});
 		} else {
