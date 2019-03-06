@@ -2300,7 +2300,7 @@ NAVIGATION STYLES
   background: #53575a;
   color: #fff !important;
   float: left; }
-  .mobile-links:nth-child(4), .mobile-links:nth-child(5) {
+  .mobile-links:nth-child(n+4) {
     width: 50%; }
   .mobile-links a {
     color: inherit; }

@@ -1865,8 +1865,7 @@ NAVIGATION STYLES
 	color: $white !important;
 	float: left;
 	
-	&:nth-child(4),
-	&:nth-child(5) {
+	&:nth-child(n+4) {
 		width: 50%;
 	}
 	
