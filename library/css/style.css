@@ -1851,8 +1851,7 @@ LAYOUT & GRID STYLES
     order: 2; } }
 .image-left .col-6:first-child {
   padding: 0;
-  background: none;
-  order: 1; }
+  background: none; }
   .image-left .col-6:first-child p, .image-left .col-6:first-child img {
     padding: 0;
     margin: 0;
