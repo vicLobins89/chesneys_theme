@@ -170,10 +170,14 @@ class CustomACF {
 		$bgColour = get_sub_field('bg_colour');
 		$bgImage = get_sub_field('bg_image');
 		$customClass = get_sub_field('class');
-		$customID = (get_sub_field('row_id') ? ' id="#'.get_sub_field('row_id').'" ' : '');
+		$customID;
 		$addClasses = array();
 		$addStyles = array();
 		$styles;
+		
+		if( get_sub_field('row_id') ) {
+			$customID = ' id="#'.get_sub_field('row_id').'"';
+		}
 
 		if( $padding ) {
 			if( $padding['padding_top'] ) { array_push($addStyles, "padding-top: $padding[padding_top];"); }
