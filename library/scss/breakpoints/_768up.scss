@@ -537,7 +537,9 @@ LAYOUT & GRID STYLES
 }
 
 .woocommerce {
-	.spares-product {		
+	.spares-product {
+		padding-top: 1rem;
+		
 		.product_title {
 			float: left;
 			width: 33%;

@@ -2810,7 +2810,7 @@ POSTS & CONTENT STYLES
     padding-right: 0;
     width: 2rem !important; }
 .woocommerce .spares-product {
-  padding-top: 1rem; }
+  padding: 0; }
   .woocommerce .spares-product .product_title {
     background: #f5f3f1;
     padding: 3rem 3rem 4rem !important; }
@@ -3900,12 +3900,14 @@ TABLET & SMALLER LAPTOPS
     width: 66.666%;
     padding: 0; }
 
-  .woocommerce .spares-product .product_title {
-    float: left;
-    width: 33%; }
-  .woocommerce .spares-product .woocommerce-product-gallery__image {
-    float: right;
-    width: 66%; }
+  .woocommerce .spares-product {
+    padding-top: 1rem; }
+    .woocommerce .spares-product .product_title {
+      float: left;
+      width: 33%; }
+    .woocommerce .spares-product .woocommerce-product-gallery__image {
+      float: right;
+      width: 66%; }
 
   /*********************
   SIDEBARS & ASIDES
