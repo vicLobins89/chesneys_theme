@@ -121,12 +121,17 @@ if ( woocommerce_product_loop() ) {
 	// Related products
 	if( get_term_meta($term->term_id, 'display_type', true) == 'products' ||  get_term_meta($term->term_id, 'display_type', true) == null) {
 		$parent_cats = get_ancestors($term->term_id, 'product_cat');
-		$category = get_term_by('id', $parent_cats[0], 'product_cat');
-		print_r($parent_cats);
+		
+		if( !empty($parent_cats) ) {
+			$category = get_term_by('id', $parent_cats[0], 'product_cat');
+			$cat_name = $category->slug;
+		} else {
+			$cat_name = 'fireplaces';
+		}
 		
 		echo '<section class="row entry-content cf related-products"><div class="cf"><div class="col-12">';
 		echo '<h2>You might also like</h2><p>Ariptimus fue et vitioca tquerra vivis, nem merissent grate, ceni sintere mo</p>';
-		echo do_shortcode('[products orderby="rand" category="'.$category->slug.'" limit="3" columns="3" class="related-products"]');
+		echo do_shortcode('[products orderby="rand" category="'.$cat_name.'" limit="3" columns="3" class="related-products"]');
 		echo '</section></div></div>';
 	}
 	
