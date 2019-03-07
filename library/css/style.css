@@ -3282,7 +3282,8 @@ POSTS & CONTENT STYLES
   width: 25%;
   height: 100% !important;
   background: #fff;
-  z-index: 20; }
+  z-index: 20;
+  overflow: hidden; }
 .ssf-main-content#mainContent #ssf_adress_input_box {
   position: absolute;
   top: -173px;
@@ -3292,6 +3293,12 @@ POSTS & CONTENT STYLES
 .ssf-main-content#mainContent .store-locator-bottom-half {
   padding-top: 2rem;
   background: white; }
+.ssf-main-content#mainContent .filter__row {
+  text-align: left; }
+  .ssf-main-content#mainContent .filter__row ul {
+    padding: 0; }
+    .ssf-main-content#mainContent .filter__row ul li {
+      width: 100%; }
 
 /******************************************************************
 PAGE NAVI STYLES

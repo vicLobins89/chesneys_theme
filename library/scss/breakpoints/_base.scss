@@ -3251,6 +3251,7 @@ POSTS & CONTENT STYLES
 		height: 100% !important;
 		background: $white;
 		z-index: 20;
+		overflow: hidden;
 	}
 	
 	#ssf_adress_input_box {
@@ -3264,6 +3265,18 @@ POSTS & CONTENT STYLES
 	.store-locator-bottom-half {
 		padding-top: 2rem;
 		background: white;
+	}
+	
+	.filter__row {
+		text-align: left;
+		
+		ul {
+			padding: 0;
+			
+			li {
+				width: 100%;
+			}
+		}
 	}
 }
 
