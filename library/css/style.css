@@ -3301,6 +3301,33 @@ POSTS & CONTENT STYLES
     padding: 0; }
     .ssf-main-content#mainContent .filter__row ul li {
       width: 100%; }
+.ssf-main-content#mainContent .infobox__marker {
+  margin-left: 0;
+  margin-right: 0;
+  border-color: #142128;
+  background-color: #142128;
+  color: #fff; }
+.ssf-main-content#mainContent .infobox__body {
+  text-align: left; }
+.ssf-main-content#mainContent .infobox__title {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; }
+.ssf-main-content#mainContent .ssf-main-content {
+  font-family: "Univers", Helvetica, Arial, sans-serif; }
+.ssf-main-content#mainContent .main-back-to-top {
+  background-color: #4b858e;
+  color: #fff; }
+.ssf-main-content#mainContent .store-locator__geolocator {
+  color: #4b858e; }
+.ssf-main-content#mainContent .store-locator__map-pin {
+  color: #fff; }
+.ssf-main-content#mainContent #applyFilterOptions,
+.ssf-main-content#mainContent .pagination-btn {
+  background-color: #4b858e;
+  box-shadow: none;
+  border-radius: 0;
+  font-family: "Univers", Helvetica, Arial, sans-serif; }
+.ssf-main-content#mainContent .paginationgrey {
+  background-color: #53575a; }
 
 /******************************************************************
 PAGE NAVI STYLES

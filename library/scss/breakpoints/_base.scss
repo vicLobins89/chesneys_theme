@@ -3282,6 +3282,51 @@ POSTS & CONTENT STYLES
 			}
 		}
 	}
+	
+	.infobox__marker {
+		margin-left: 0;
+		margin-right: 0;
+		border-color: $dark-gray;
+		background-color: $dark-gray;
+		color: $white;
+	}
+	
+	.infobox__body {
+		text-align: left;
+	}
+	
+	.infobox__title {
+		font-family: $serif;
+	}
+	
+	.ssf-main-content {
+		font-family: $sans-serif;
+	}
+	
+	.main-back-to-top {
+		background-color: $teal;
+		color: $white;
+	}
+	
+	.store-locator__geolocator {
+		color: $teal;
+	}
+	
+	.store-locator__map-pin {
+		color: $white;
+	}
+	
+	#applyFilterOptions,
+	.pagination-btn {
+		background-color: $teal;
+		box-shadow: none;
+		border-radius: 0;
+		font-family: $sans-serif;
+	}
+	
+	.paginationgrey {
+		background-color: $gray;
+	}
 }
 
 /******************************************************************
