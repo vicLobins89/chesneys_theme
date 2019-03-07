@@ -1486,8 +1486,12 @@ LAYOUT & GRID STYLES
     padding: 0;
     margin: 0;
     font-size: 0; }
+.row.image-column.column-8-4 .col-6:last-child {
+  order: 2; }
 .row.image-column.column-4-8 .col-6 {
   width: 100%; }
+.row.image-column.column-4-8 .col-6:first-child {
+  order: 2; }
 .row.image-column.column-4-8 .col-6:last-child {
   order: 1; }
   .row.image-column.column-4-8 .col-6:last-child p, .row.image-column.column-4-8 .col-6:last-child img {
