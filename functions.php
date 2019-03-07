@@ -246,6 +246,25 @@ function is_tree($pid) {      // $pid = The ID of the page we're looking for pag
                return false;  // we're elsewhere
 };
 
+// iframes
+function fb_change_mce_options( $initArray ) {
+
+    // Comma separated string od extendes tags.
+    // Command separated string of extended elements.
+    $ext = 'pre[id|name|class|style],iframe[align|longdesc|name|width|height|frameborder|scrolling|marginheight|marginwidth|src]';
+
+    if ( isset( $initArray['extended_valid_elements'] ) ) {
+        $ext = ',' . $ext;
+    }
+    $initArray['extended_valid_elements'] = $ext;
+
+    // Maybe, set tiny parameter verify_html
+    //$initArray['verify_html'] = false;
+
+    return $initArray;
+}
+add_filter( 'tiny_mce_before_init', 'fb_change_mce_options' );
+
 // WOOCOMMERCE
 function mytheme_add_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
