@@ -2782,7 +2782,7 @@ POSTS & CONTENT STYLES
 					h2 {
 						font-family: $serif;
 						text-transform: none;
-						font-size: 1.35em;
+						font-size: 1.5em;
     					margin: 1rem 0 .75rem !important;
 						
 						&:after {
@@ -2811,7 +2811,7 @@ POSTS & CONTENT STYLES
 				.category-name {
 					font-family: $sans-serif;
 					text-transform: uppercase;
-					font-size: .75em;
+					font-size: .9em;
 				}
 			}
 		}
@@ -2822,7 +2822,7 @@ POSTS & CONTENT STYLES
 			li.product {
 				a:not(.button) {
 					h2.woocommerce-loop-product__title {
-						font-size: 1.1em;
+						font-size: 1.2em;
 					}
 				}
 			}

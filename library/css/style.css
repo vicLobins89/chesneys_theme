@@ -2907,7 +2907,7 @@ POSTS & CONTENT STYLES
 .woocommerce.term-outdoor-living ul.products li.product a:not(.button) h2, .woocommerce.outdoor-related ul.products li.product a:not(.button) h2, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2 {
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
   text-transform: none;
-  font-size: 1.35em;
+  font-size: 1.5em;
   margin: 1rem 0 .75rem !important; }
   .woocommerce.term-outdoor-living ul.products li.product a:not(.button) h2:after, .woocommerce.outdoor-related ul.products li.product a:not(.button) h2:after, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2:after {
     bottom: auto;
@@ -2925,9 +2925,9 @@ POSTS & CONTENT STYLES
 .woocommerce.term-outdoor-living ul.products li.product .category-name, .woocommerce.outdoor-related ul.products li.product .category-name, .woocommerce.outdoor-accessories ul.products li.product .category-name {
   font-family: "Univers", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: .75em; }
+  font-size: .9em; }
 .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2.woocommerce-loop-product__title {
-  font-size: 1.1em; }
+  font-size: 1.2em; }
 .woocommerce.outdoor-accessories h2.woocommerce-loop-product__title + p, .woocommerce.ol-related h2.woocommerce-loop-product__title + p {
   display: none; }
 .woocommerce .hover-text {

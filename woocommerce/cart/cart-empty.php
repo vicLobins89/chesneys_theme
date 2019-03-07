@@ -24,8 +24,8 @@ do_action( 'woocommerce_cart_is_empty' );
 
 if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 	<p class="return-to-shop">
-		<a class="secondary-btn" href="<?php echo home_url(); ?>" onclick="history.back();">
-			<?php esc_html_e( 'Back', 'woocommerce' ); ?>
+		<a class="secondary-btn" href="<?php echo home_url(); ?>">
+			<?php esc_html_e( 'Return to Chesneys', 'woocommerce' ); ?>
 		</a>
 	</p>
 <?php endif; ?>
