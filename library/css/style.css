@@ -3259,12 +3259,13 @@ POSTS & CONTENT STYLES
     background-color: #f5f3f1 !important; }
 
 .ssf-main-content#mainContent .store-locator-map {
-  z-index: 10; }
+  z-index: 10;
+  width: 75%; }
 .ssf-main-content#mainContent .ssf-row {
   position: relative;
+  height: 800px;
   margin: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
   max-width: none; }
 .ssf-main-content#mainContent .ssf-column, .ssf-main-content#mainContent .ssf-columns {
   float: none;
@@ -3275,6 +3276,7 @@ POSTS & CONTENT STYLES
 .ssf-main-content#mainContent #filter_left_panel {
   position: absolute;
   left: 0;
+  top: 0;
   padding: 0;
   width: 25%;
   height: 100% !important;
@@ -3286,6 +3288,9 @@ POSTS & CONTENT STYLES
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 20; }
+.ssf-main-content#mainContent .store-locator-bottom-half {
+  padding-top: 2rem;
+  background: white; }
 
 /******************************************************************
 PAGE NAVI STYLES
