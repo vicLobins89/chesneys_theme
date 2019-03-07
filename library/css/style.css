@@ -1822,7 +1822,7 @@ LAYOUT & GRID STYLES
 
 @media only screen and (max-width: 767px) {
   .equal-height {
-    padding: 0; }
+    padding: 0 !important; }
     .equal-height > .cf, .equal-height > .comment-respond {
       -webkit-flex-direction: column;
       -mox-flex-direction: column;
@@ -1837,9 +1837,7 @@ LAYOUT & GRID STYLES
 .equal-height .col-6 {
   background: #f5f3f1; }
   .equal-height .col-6 img {
-    margin-top: 3rem !important; }
-    .equal-height .col-6 img:first-child {
-      margin-top: 0 !important; }
+    margin: 0; }
 .equal-height.image-left .col-6:last-child {
   padding: 2.5rem; }
 .equal-height.image-right .col-6:first-child {
@@ -2346,6 +2344,13 @@ POSTS & CONTENT STYLES
 #news_header {
   padding-bottom: 1rem;
   padding-top: 0; }
+  @media only screen and (max-width: 767px) {
+    #folio_header,
+    #news_header {
+      padding: 0; }
+      #folio_header .col-12,
+      #news_header .col-12 {
+        padding: 0; } }
   #folio_header > .cf, #folio_header > .comment-respond,
   #news_header > .cf,
   #news_header > .comment-respond {
@@ -3939,6 +3944,10 @@ TABLET & SMALLER LAPTOPS
 
   .equal-height .col-6 {
     border: 1.5rem solid #fff; }
+    .equal-height .col-6 img {
+      margin-top: 3rem !important; }
+      .equal-height .col-6 img:first-child {
+        margin-top: 0 !important; }
 
   /*********************
   SIDEBARS & ASIDES

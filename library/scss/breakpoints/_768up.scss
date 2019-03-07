@@ -360,9 +360,6 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 
-#content {
-}
-
 .featured-image {
 	width: 100%;
     margin-left: auto;
@@ -555,6 +552,12 @@ LAYOUT & GRID STYLES
 .equal-height {
 	.col-6 {
 		border: 1.5rem solid $white;
+		
+		img {
+			margin-top: 3rem !important;
+
+			&:first-child { margin-top: 0 !important; }
+		}
 	}
 }
 

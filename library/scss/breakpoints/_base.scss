@@ -1230,7 +1230,7 @@ LAYOUT & GRID STYLES
 
 .equal-height {
 	@media only screen and (max-width: 767px) {
-		padding: 0;
+		padding: 0 !important;
 		
 		> .cf {
 			@include prefix(flex-direction, column, webkit mox ms);
@@ -1249,9 +1249,7 @@ LAYOUT & GRID STYLES
 		background: $light-brown;
 		
 		img {
-			margin-top: 3rem !important;
-
-			&:first-child { margin-top: 0 !important; }
+			margin: 0;
 		}
 	}
 	
@@ -1956,6 +1954,14 @@ POSTS & CONTENT STYLES
 #news_header {
 	padding-bottom: 1rem;
 	padding-top: 0;
+	
+	@media only screen and (max-width: 767px) {
+		padding: 0;
+		
+		.col-12 {
+			padding: 0;
+		}
+	}
 	
 	> .cf {
 		position: relative;
