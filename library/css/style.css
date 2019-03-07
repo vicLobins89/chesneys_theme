@@ -1294,7 +1294,9 @@ LAYOUT & GRID STYLES
       width: 48%;
       float: left;
       clear: both;
-      margin: 0 0 2.992em; } }
+      margin: 0 4% 2.992em 0; }
+      .row.spares-shop-loop ul.products[class*=columns-] li.product:nth-child(2n+1) {
+        margin-right: 0; } }
 .row.outdoor-product-single {
   padding-top: 1rem;
   padding-bottom: 1rem; }
@@ -2054,7 +2056,11 @@ HEADER STYLES
           opacity: 1; }
         .searchbox #ajaxsearchlite1 .probox .proinput input.autocomplete,
         .searchbox div.asl_w .probox .proinput input.autocomplete {
-          opacity: 0; }
+          opacity: 0;
+          top: -6px;
+          position: relative;
+          color: #f5f3f1;
+          opacity: .3; }
       .searchbox #ajaxsearchlite1 .probox .proclose svg,
       .searchbox div.asl_w .probox .proclose svg {
         margin-top: -8px; }

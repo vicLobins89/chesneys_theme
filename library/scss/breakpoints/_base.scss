@@ -493,7 +493,11 @@ LAYOUT & GRID STYLES
 				width: 48%;
 				float: left;
 				clear: both;
-				margin: 0 0 2.992em;
+				margin: 0 4% 2.992em 0;
+				
+				&:nth-child(2n+1) {
+					margin-right: 0;
+				}
 			}
 		}
 	}
@@ -1565,6 +1569,10 @@ HEADER STYLES
 					
 					&.autocomplete {
 						opacity: 0;
+						top: -6px;
+    					position: relative;
+						color: $light-brown;
+						opacity: .3;
 					}
 				}
 			}
