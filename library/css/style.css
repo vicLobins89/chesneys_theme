@@ -2504,25 +2504,25 @@ POSTS & CONTENT STYLES
     font-size: .9rem; }
     .entry-content ul:not(.product-categories ul) li, .entry-content ol li {
       margin-bottom: .8rem; }
-  .entry-content ul:not(.woocommerce-error):not(.products) {
+  .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories) {
     list-style-type: disc;
     margin-bottom: 2em;
     padding-left: 1.25em; }
-    .entry-content ul:not(.woocommerce-error):not(.products).links {
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories).links {
       list-style-type: none;
       padding: 0; }
-      .entry-content ul:not(.woocommerce-error):not(.products).links > li {
+      .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories).links > li {
         text-decoration: underline; }
-    .entry-content ul:not(.woocommerce-error):not(.products).dashed {
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories).dashed {
       list-style-type: none; }
-      .entry-content ul:not(.woocommerce-error):not(.products).dashed > li {
+      .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories).dashed > li {
         text-indent: -10px; }
-        .entry-content ul:not(.woocommerce-error):not(.products).dashed > li:before {
+        .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories).dashed > li:before {
           content: "- ";
           text-indent: -10px; }
-    .entry-content ul:not(.woocommerce-error):not(.products).sans {
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories).sans {
       font-size: .8em; }
-    .entry-content ul:not(.woocommerce-error):not(.products) li {
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories) li {
       font-size: 1.15em;
       margin-bottom: 6px; }
   .entry-content .list {
