@@ -621,7 +621,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 .woocommerce-cart form a.button.cancel,
 .woocommerce-checkout form a.button.cancel, #add_payment_method button[name=login],
 .woocommerce-cart button[name=login],
-.woocommerce-checkout button[name=login], .wpsl-search-btn-wrap input#wpsl-search-btn, a.secondary-btn {
+.woocommerce-checkout button[name=login], a.secondary-btn {
   position: relative;
   min-width: 12em;
   display: inline-block;
@@ -650,14 +650,14 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .woocommerce-cart form a.button.cancel:hover,
   .woocommerce-checkout form a.button.cancel:hover, #add_payment_method button[name=login]:hover,
   .woocommerce-cart button[name=login]:hover,
-  .woocommerce-checkout button[name=login]:hover, .wpsl-search-btn-wrap input#wpsl-search-btn:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, .vid-thumb .play:focus, .row.related-wrapper .woocommerce-loop-product__title:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus, .search input[type="submit"]:focus, .woocommerce button.single_add_to_cart_button:focus,
+  .woocommerce-checkout button[name=login]:hover, .primary-btn:focus, .image-link + p:focus, .image-link .wp-caption-text:focus, .vid-thumb .play:focus, .row.related-wrapper .woocommerce-loop-product__title:focus, a.comment-reply-link:focus, #submit:focus, .secondary-btn:focus, .search input[type="submit"]:focus, .woocommerce button.single_add_to_cart_button:focus,
   .woocommerce button.woocommerce-Button:focus, .woocommerce table.shop_table .button:focus, .woocommerce ul.products li.product .button:focus, .woocommerce .button.wc-forward:focus, #add_payment_method form input.button.alt:focus,
   .woocommerce-cart form input.button.alt:focus,
   .woocommerce-checkout form input.button.alt:focus, #add_payment_method form a.button.cancel:focus,
   .woocommerce-cart form a.button.cancel:focus,
   .woocommerce-checkout form a.button.cancel:focus, #add_payment_method button[name=login]:focus,
   .woocommerce-cart button[name=login]:focus,
-  .woocommerce-checkout button[name=login]:focus, .wpsl-search-btn-wrap input#wpsl-search-btn:focus {
+  .woocommerce-checkout button[name=login]:focus {
     color: #fff;
     text-decoration: none; }
   .primary-btn a, .image-link + p a, .image-link .wp-caption-text a, .vid-thumb .play a, .row.related-wrapper .woocommerce-loop-product__title a, a.comment-reply-link a, #submit a, .secondary-btn a, .search input[type="submit"] a, .woocommerce button.single_add_to_cart_button a,
@@ -668,7 +668,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .woocommerce-cart form a.button.cancel a,
   .woocommerce-checkout form a.button.cancel a, #add_payment_method button[name=login] a,
   .woocommerce-cart button[name=login] a,
-  .woocommerce-checkout button[name=login] a, .wpsl-search-btn-wrap input#wpsl-search-btn a {
+  .woocommerce-checkout button[name=login] a {
     color: inherit !important;
     text-decoration: inherit !important; }
 
@@ -703,7 +703,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 .woocommerce-cart form a.button.cancel,
 .woocommerce-checkout form a.button.cancel, #add_payment_method button[name=login],
 .woocommerce-cart button[name=login],
-.woocommerce-checkout button[name=login], .wpsl-search-btn-wrap input#wpsl-search-btn, a.secondary-btn, .woocommerce table.shop_table a.button, .woocommerce ul.products li.product a.button, .woocommerce a.button.wc-forward, #add_payment_method form a.button.cancel,
+.woocommerce-checkout button[name=login], a.secondary-btn, .woocommerce table.shop_table a.button, .woocommerce ul.products li.product a.button, .woocommerce a.button.wc-forward, #add_payment_method form a.button.cancel,
 .woocommerce-cart form a.button.cancel,
 .woocommerce-checkout form a.button.cancel {
   background-color: #4b858e;
@@ -720,14 +720,14 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .woocommerce-cart form a.button.cancel:hover,
   .woocommerce-checkout form a.button.cancel:hover, #add_payment_method button[name=login]:hover,
   .woocommerce-cart button[name=login]:hover,
-  .woocommerce-checkout button[name=login]:hover, .wpsl-search-btn-wrap input#wpsl-search-btn:hover, .secondary-btn:focus, .search input[type="submit"]:focus, .woocommerce button.single_add_to_cart_button:focus,
+  .woocommerce-checkout button[name=login]:hover, .secondary-btn:focus, .search input[type="submit"]:focus, .woocommerce button.single_add_to_cart_button:focus,
   .woocommerce button.woocommerce-Button:focus, .woocommerce table.shop_table .button:focus, .woocommerce ul.products li.product .button:focus, .woocommerce .button.wc-forward:focus, #add_payment_method form input.button.alt:focus,
   .woocommerce-cart form input.button.alt:focus,
   .woocommerce-checkout form input.button.alt:focus, #add_payment_method form a.button.cancel:focus,
   .woocommerce-cart form a.button.cancel:focus,
   .woocommerce-checkout form a.button.cancel:focus, #add_payment_method button[name=login]:focus,
   .woocommerce-cart button[name=login]:focus,
-  .woocommerce-checkout button[name=login]:focus, .wpsl-search-btn-wrap input#wpsl-search-btn:focus, a.secondary-btn:hover, .woocommerce table.shop_table a.button:hover, .woocommerce ul.products li.product a.button:hover, .woocommerce a.button.wc-forward:hover, #add_payment_method form a.button.cancel:hover,
+  .woocommerce-checkout button[name=login]:focus, a.secondary-btn:hover, .woocommerce table.shop_table a.button:hover, .woocommerce ul.products li.product a.button:hover, .woocommerce a.button.wc-forward:hover, #add_payment_method form a.button.cancel:hover,
   .woocommerce-cart form a.button.cancel:hover,
   .woocommerce-checkout form a.button.cancel:hover, a.secondary-btn:focus, .woocommerce table.shop_table a.button:focus, .woocommerce ul.products li.product a.button:focus, .woocommerce a.button.wc-forward:focus, #add_payment_method form a.button.cancel:focus,
   .woocommerce-cart form a.button.cancel:focus,
@@ -742,7 +742,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .woocommerce-cart form a.button.cancel,
   .woocommerce-checkout form a.button.cancel, #add_payment_method button.alt[name=login],
   .woocommerce-cart button.alt[name=login],
-  .woocommerce-checkout button.alt[name=login], .wpsl-search-btn-wrap input.alt#wpsl-search-btn, a.secondary-btn.alt, .woocommerce table.shop_table a.alt.button, .woocommerce ul.products li.product a.alt.button, .woocommerce a.alt.button.wc-forward, #add_payment_method form a.button.cancel,
+  .woocommerce-checkout button.alt[name=login], a.secondary-btn.alt, .woocommerce table.shop_table a.alt.button, .woocommerce ul.products li.product a.alt.button, .woocommerce a.alt.button.wc-forward, #add_payment_method form a.button.cancel,
   .woocommerce-cart form a.button.cancel,
   .woocommerce-checkout form a.button.cancel {
     background-color: #f5f3f1;
@@ -755,14 +755,14 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     .woocommerce-cart form a.button.cancel:hover,
     .woocommerce-checkout form a.button.cancel:hover, #add_payment_method button.alt[name=login]:hover,
     .woocommerce-cart button.alt[name=login]:hover,
-    .woocommerce-checkout button.alt[name=login]:hover, .wpsl-search-btn-wrap input.alt#wpsl-search-btn:hover, .secondary-btn.alt:focus, .search input.alt[type="submit"]:focus, .woocommerce button.alt.single_add_to_cart_button:focus,
+    .woocommerce-checkout button.alt[name=login]:hover, .secondary-btn.alt:focus, .search input.alt[type="submit"]:focus, .woocommerce button.alt.single_add_to_cart_button:focus,
     .woocommerce button.alt.woocommerce-Button:focus, .woocommerce table.shop_table .alt.button:focus, .woocommerce ul.products li.product .alt.button:focus, .woocommerce .alt.button.wc-forward:focus, #add_payment_method form input.alt.button:focus,
     .woocommerce-cart form input.alt.button:focus,
     .woocommerce-checkout form input.alt.button:focus, #add_payment_method form a.button.cancel:focus,
     .woocommerce-cart form a.button.cancel:focus,
     .woocommerce-checkout form a.button.cancel:focus, #add_payment_method button.alt[name=login]:focus,
     .woocommerce-cart button.alt[name=login]:focus,
-    .woocommerce-checkout button.alt[name=login]:focus, .wpsl-search-btn-wrap input.alt#wpsl-search-btn:focus, .wp-caption:hover .secondary-btn.alt, .wp-caption:hover .search input.alt[type="submit"], .search .wp-caption:hover input.alt[type="submit"], .wp-caption:hover .woocommerce button.alt.single_add_to_cart_button, .woocommerce .wp-caption:hover button.alt.single_add_to_cart_button,
+    .woocommerce-checkout button.alt[name=login]:focus, .wp-caption:hover .secondary-btn.alt, .wp-caption:hover .search input.alt[type="submit"], .search .wp-caption:hover input.alt[type="submit"], .wp-caption:hover .woocommerce button.alt.single_add_to_cart_button, .woocommerce .wp-caption:hover button.alt.single_add_to_cart_button,
     .wp-caption:hover .woocommerce button.alt.woocommerce-Button,
     .woocommerce .wp-caption:hover button.alt.woocommerce-Button, .wp-caption:hover .woocommerce table.shop_table .alt.button, .woocommerce table.shop_table .wp-caption:hover .alt.button, .wp-caption:hover .woocommerce ul.products li.product .alt.button, .woocommerce ul.products li.product .wp-caption:hover .alt.button, .wp-caption:hover .woocommerce .alt.button.wc-forward, .woocommerce .wp-caption:hover .alt.button.wc-forward, .wp-caption:hover #add_payment_method form input.alt.button, #add_payment_method form .wp-caption:hover input.alt.button,
     .wp-caption:hover .woocommerce-cart form input.alt.button,
@@ -776,7 +776,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     .wp-caption:hover .woocommerce-cart button.alt[name=login],
     .woocommerce-cart .wp-caption:hover button.alt[name=login],
     .wp-caption:hover .woocommerce-checkout button.alt[name=login],
-    .woocommerce-checkout .wp-caption:hover button.alt[name=login], .wp-caption:hover .wpsl-search-btn-wrap input.alt#wpsl-search-btn, .wpsl-search-btn-wrap .wp-caption:hover input.alt#wpsl-search-btn, a.secondary-btn.alt:hover, .woocommerce table.shop_table a.alt.button:hover, .woocommerce ul.products li.product a.alt.button:hover, .woocommerce a.alt.button.wc-forward:hover, #add_payment_method form a.button.cancel:hover,
+    .woocommerce-checkout .wp-caption:hover button.alt[name=login], a.secondary-btn.alt:hover, .woocommerce table.shop_table a.alt.button:hover, .woocommerce ul.products li.product a.alt.button:hover, .woocommerce a.alt.button.wc-forward:hover, #add_payment_method form a.button.cancel:hover,
     .woocommerce-cart form a.button.cancel:hover,
     .woocommerce-checkout form a.button.cancel:hover, a.secondary-btn.alt:focus, .woocommerce table.shop_table a.alt.button:focus, .woocommerce ul.products li.product a.alt.button:focus, .woocommerce a.alt.button.wc-forward:focus, #add_payment_method form a.button.cancel:focus,
     .woocommerce-cart form a.button.cancel:focus,
@@ -1328,7 +1328,7 @@ LAYOUT & GRID STYLES
       .row.outdoor-product-single .short-desc form.cart .woocommerce-cart button[name=login],
       .woocommerce-cart .row.outdoor-product-single .short-desc form.cart button[name=login],
       .row.outdoor-product-single .short-desc form.cart .woocommerce-checkout button[name=login],
-      .woocommerce-checkout .row.outdoor-product-single .short-desc form.cart button[name=login], .row.outdoor-product-single .short-desc form.cart .wpsl-search-btn-wrap input#wpsl-search-btn, .wpsl-search-btn-wrap .row.outdoor-product-single .short-desc form.cart input#wpsl-search-btn {
+      .woocommerce-checkout .row.outdoor-product-single .short-desc form.cart button[name=login] {
         margin-left: 1rem; }
 .row.product-info-wrapper {
   padding-bottom: 1rem;
@@ -1530,7 +1530,7 @@ LAYOUT & GRID STYLES
     max-width: calc(1400px - 2rem);
     height: 0;
     padding-top: 80%;
-    margin-bottom: 70%; }
+    margin-bottom: 17rem; }
   .module.module-outdoor-living-shop .inner-module, .module.module-glossary .inner-module, .module.module-design-a-fireplace .inner-module {
     top: auto !important;
     bottom: 2.5rem; }
@@ -2425,6 +2425,9 @@ POSTS & CONTENT STYLES
   .spares-thumbs .wp-caption:last-child {
     margin-right: 0; }
 
+.custom-content.narrow-para {
+  margin-top: 2.5rem !important; }
+
 .custom-content {
   margin: 2.5rem auto 0; }
 
@@ -2491,25 +2494,25 @@ POSTS & CONTENT STYLES
     font-size: .9rem; }
     .entry-content ul:not(.product-categories ul) li, .entry-content ol li {
       margin-bottom: .8rem; }
-  .entry-content ul:not(.woocommerce-error) {
+  .entry-content ul:not(.woocommerce-error):not(.products) {
     list-style-type: disc;
     margin-bottom: 2em;
     padding-left: 1.25em; }
-    .entry-content ul:not(.woocommerce-error).links {
+    .entry-content ul:not(.woocommerce-error):not(.products).links {
       list-style-type: none;
       padding: 0; }
-      .entry-content ul:not(.woocommerce-error).links > li {
+      .entry-content ul:not(.woocommerce-error):not(.products).links > li {
         text-decoration: underline; }
-    .entry-content ul:not(.woocommerce-error).dashed {
+    .entry-content ul:not(.woocommerce-error):not(.products).dashed {
       list-style-type: none; }
-      .entry-content ul:not(.woocommerce-error).dashed > li {
+      .entry-content ul:not(.woocommerce-error):not(.products).dashed > li {
         text-indent: -10px; }
-        .entry-content ul:not(.woocommerce-error).dashed > li:before {
+        .entry-content ul:not(.woocommerce-error):not(.products).dashed > li:before {
           content: "- ";
           text-indent: -10px; }
-    .entry-content ul:not(.woocommerce-error).sans {
+    .entry-content ul:not(.woocommerce-error):not(.products).sans {
       font-size: .8em; }
-    .entry-content ul:not(.woocommerce-error) li {
+    .entry-content ul:not(.woocommerce-error):not(.products) li {
       font-size: 1.15em;
       margin-bottom: 6px; }
   .entry-content .list {
@@ -2834,6 +2837,11 @@ POSTS & CONTENT STYLES
 .woocommerce .woocommerce-result-count,
 .woocommerce .woocommerce-ordering {
   display: none; }
+@media only screen and (max-width: 767px) {
+  .woocommerce ul.products[class*=columns-] li.product:nth-child(2n) {
+    float: none;
+    width: 100%;
+    margin: 0; } }
 .woocommerce ul.products li.product {
   text-align: left; }
   .woocommerce ul.products li.product .attachment-woocommerce_thumbnail {
@@ -2949,7 +2957,7 @@ POSTS & CONTENT STYLES
   .woocommerce-cart form #add_payment_method #payment input.button.alt,
   .woocommerce-checkout form #add_payment_method #payment input.button.alt, #add_payment_method #payment form a.button.cancel, #add_payment_method form #payment a.button.cancel,
   .woocommerce-cart form #add_payment_method #payment a.button.cancel,
-  .woocommerce-checkout form #add_payment_method #payment a.button.cancel, #add_payment_method #payment button[name=login], #add_payment_method #payment .wpsl-search-btn-wrap input#wpsl-search-btn, .wpsl-search-btn-wrap #add_payment_method #payment input#wpsl-search-btn,
+  .woocommerce-checkout form #add_payment_method #payment a.button.cancel, #add_payment_method #payment button[name=login],
   .woocommerce-cart #payment .secondary-btn,
   .woocommerce-cart #payment .search input[type="submit"],
   .search .woocommerce-cart #payment input[type="submit"],
@@ -2972,8 +2980,6 @@ POSTS & CONTENT STYLES
   .woocommerce-cart form #payment a.button.cancel,
   .woocommerce-checkout form .woocommerce-cart #payment a.button.cancel,
   .woocommerce-cart #payment button[name=login],
-  .woocommerce-cart #payment .wpsl-search-btn-wrap input#wpsl-search-btn,
-  .wpsl-search-btn-wrap .woocommerce-cart #payment input#wpsl-search-btn,
   .woocommerce-checkout #payment .secondary-btn,
   .woocommerce-checkout #payment .search input[type="submit"],
   .search .woocommerce-checkout #payment input[type="submit"],
@@ -2995,9 +3001,7 @@ POSTS & CONTENT STYLES
   .woocommerce-cart form .woocommerce-checkout #payment a.button.cancel,
   .woocommerce-checkout #payment form a.button.cancel,
   .woocommerce-checkout form #payment a.button.cancel,
-  .woocommerce-checkout #payment button[name=login],
-  .woocommerce-checkout #payment .wpsl-search-btn-wrap input#wpsl-search-btn,
-  .wpsl-search-btn-wrap .woocommerce-checkout #payment input#wpsl-search-btn {
+  .woocommerce-checkout #payment button[name=login] {
     width: 100%; }
 #add_payment_method ul.order_details,
 .woocommerce-cart ul.order_details,
@@ -3056,7 +3060,7 @@ POSTS & CONTENT STYLES
 .woocommerce-order-pay .woocommerce-cart button[name=login],
 .woocommerce-cart .woocommerce-order-pay button[name=login],
 .woocommerce-order-pay .woocommerce-checkout button[name=login],
-.woocommerce-checkout .woocommerce-order-pay button[name=login], .woocommerce-order-pay .wpsl-search-btn-wrap input#wpsl-search-btn, .wpsl-search-btn-wrap .woocommerce-order-pay input#wpsl-search-btn {
+.woocommerce-checkout .woocommerce-order-pay button[name=login] {
   font-size: 1.1em;
   width: 49%; }
 
@@ -3139,59 +3143,6 @@ POSTS & CONTENT STYLES
     border: 2px solid #f5f3f1 !important; }
   #text_slider.sa_owl_theme .owl-dots .active span {
     background-color: #f5f3f1 !important; }
-
-#wpsl-search-wrap input {
-  padding-top: 10px; }
-
-.wpsl-gmap-wrap {
-  float: right;
-  width: 70%; }
-
-.wpsl-select-wrap #wpsl-radius,
-.wpsl-select-wrap #wpsl-results {
-  display: block !important;
-  float: none;
-  width: 100%;
-  padding-top: 4px;
-  height: 3rem; }
-
-#wpsl-result-list-full,
-#wpsl-result-list,
-.wpsl-full-list {
-  clear: both;
-  width: 100% !important;
-  margin: 0 !important; }
-
-.wpsl-search.wpsl-checkboxes-enabled,
-.wpsl-search {
-  width: 30%;
-  height: 600px;
-  float: left;
-  padding: 2rem; }
-
-#wpsl-checkbox-filter.wpsl-checkbox-3-columns li,
-.wpsl-custom-checkboxes.wpsl-checkbox-3-columns li {
-  width: 100%;
-  font-size: 1rem;
-  margin-bottom: 8px; }
-
-.wpsl-search-btn-wrap input#wpsl-search-btn {
-  background-image: none; }
-
-#wpsl-wrap #wpsl-result-list ul li {
-  text-align: left;
-  display: inline-block;
-  width: 24%;
-  width: calc(25% - .2rem);
-  font-size: .8rem;
-  padding: 1rem !important;
-  border-bottom: 1px solid #53575a !important; }
-
-.wpsl-direction-wrap {
-  display: none !important; }
-
-.wpsl-store-location p {
-  margin-bottom: 5px !important; }
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -3806,7 +3757,8 @@ TABLET & SMALLER LAPTOPS
 
   .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
     height: 0;
-    padding-top: 40%; }
+    padding-top: 40%;
+    margin-bottom: 0; }
 
   /*********************
   LAYOUT & GRID STYLES

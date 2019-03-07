@@ -867,7 +867,7 @@ LAYOUT & GRID STYLES
 			max-width: calc(1400px - 2rem);
 			height: 0;
 			padding-top: 80%;
-   			margin-bottom: 70%;
+   			margin-bottom: 17rem;
 		}
 		
 		.inner-module {
@@ -2034,6 +2034,10 @@ POSTS & CONTENT STYLES
 	}
 }
 
+.custom-content.narrow-para {
+	margin-top: 2.5rem !important;
+}
+
 .custom-content {
 	margin: 2.5rem auto 0;
 }
@@ -2137,7 +2141,7 @@ POSTS & CONTENT STYLES
 
 	}
 
-	ul:not(.woocommerce-error) {
+	ul:not(.woocommerce-error):not(.products) {
 		list-style-type: disc;
 		margin-bottom: 2em;
 		padding-left: 1.25em;
@@ -2672,6 +2676,14 @@ POSTS & CONTENT STYLES
 	}
 	
 	ul.products {
+		&[class*=columns-] li.product:nth-child(2n) {
+			@media only screen and (max-width: 767px) {
+				float: none;
+				width: 100%;
+				margin: 0;
+			}
+		}
+		
 		li.product {
 			text-align: left;
 			
@@ -3065,88 +3077,6 @@ POSTS & CONTENT STYLES
 		.owl-dots .active span {
 			background-color: $light-brown !important;
 		}
-	}
-}
-
-// Stockists
-#wpsl-search-wrap input {
-  padding-top: 10px;
-}
-
-.wpsl-gmap-wrap {
-	float: right;
-	width: 70%;
-}
-
-.wpsl-select-wrap {
-	#wpsl-radius,
-	#wpsl-results {
-		display: block !important;
-		float: none;
-		width: 100%;
-		padding-top: 4px;
-		height: 3rem;
-	}
-}
-
-#wpsl-result-list-full,
-#wpsl-result-list,
-.wpsl-full-list {
-	clear: both;
-	width: 100% !important;
-	margin: 0 !important;
-}
-
-.wpsl-search.wpsl-checkboxes-enabled,
-.wpsl-search {
-	width: 30%;
-	height: 600px;
-	float: left;
-	padding: 2rem;
-}
-
-#wpsl-checkbox-filter,
-.wpsl-custom-checkboxes {
-	&.wpsl-checkbox-3-columns {
-		li {
-			width: 100%;
-			font-size: 1rem;
-			margin-bottom: 8px;
-		}
-	}
-}
-
-.wpsl-search-btn-wrap input#wpsl-search-btn {
-	@extend .secondary-btn;
-	background-image: none;
-}
-
-#wpsl-wrap #wpsl-result-list ul {
-	//text-align: center;
-	
-	li {
-		text-align: left;
-		display: inline-block;
-		width: 24%;
-		width: calc(25% - .2rem);
-		font-size: .8rem;
-		padding: 1rem !important;
-    	border-bottom: 1px solid $gray !important;
-	}
-}
-
-.wpsl-direction-wrap {
-	display: none !important;
-}
-
-.wpsl-store-location {
-	p {
-		margin-bottom: 5px !important;
-	}
-	
-	.wpsl-contact-details,
-	> p > span {
-		//display: none !important;
 	}
 }
 
