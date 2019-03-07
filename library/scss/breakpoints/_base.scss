@@ -495,7 +495,7 @@ LAYOUT & GRID STYLES
 				clear: both;
 				margin: 0 4% 2.992em 0;
 				
-				&:nth-child(2n+1) {
+				&:nth-child(even) {
 					margin-right: 0;
 				}
 			}
