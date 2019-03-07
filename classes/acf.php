@@ -176,7 +176,7 @@ class CustomACF {
 		$styles;
 		
 		if( get_sub_field('row_id') ) {
-			$customID = ' id="#'.get_sub_field('row_id').'"';
+			$customID = ' id="'.get_sub_field('row_id').'"';
 		}
 
 		if( $padding ) {
