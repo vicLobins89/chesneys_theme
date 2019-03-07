@@ -172,6 +172,12 @@ jQuery(document).ready(function($) {
 
 				$('.hover-link.'+selected+'').parent().append(selectedHtml);
 			});
+			
+			$('.hover-link').each(function(){
+				var linkHeight = $(this).outerHeight(),
+					textHeight = $(this).next().outerHeight();
+				$(this).next().css('top', (linkHeight-textHeight));
+			});
 		} else {
 			$('body').removeClass('is-mobile');
 			
