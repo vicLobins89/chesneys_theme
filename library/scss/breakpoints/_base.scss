@@ -1971,12 +1971,14 @@ POSTS & CONTENT STYLES
 		width: 100%;
 		height: auto;
 		@media only screen and (max-width: 767px) {
-			margin: 0;
+			margin: 0 !important;
 		}
 	}
 }
 
 .featured-copy {
+	position: relative;
+	top: -4px;
 	padding: 2rem;
 	background: $light-brown;
 	

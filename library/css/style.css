@@ -2348,10 +2348,12 @@ POSTS & CONTENT STYLES
   height: auto; }
   @media only screen and (max-width: 767px) {
     .featured img {
-      margin: 0; } }
+      margin: 0 !important; } }
 
 .featured-copy, .module.module-outdoor-living-shop .inner-module, .module.module-glossary .inner-module, .module.module-design-a-fireplace .inner-module, #folio_header .widget_text,
 #news_header .widget_text {
+  position: relative;
+  top: -4px;
   padding: 2rem;
   background: #f5f3f1; }
   .featured-copy p, .module.module-outdoor-living-shop .inner-module p, .module.module-glossary .inner-module p, .module.module-design-a-fireplace .inner-module p, #folio_header .widget_text p,
