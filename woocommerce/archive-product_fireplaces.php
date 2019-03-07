@@ -120,7 +120,7 @@ if ( woocommerce_product_loop() ) {
 	
 	// Related products
 	if( get_term_meta($term->term_id, 'display_type', true) == 'products' ||  get_term_meta($term->term_id, 'display_type', true) == null) {
-		$parent_cats = get_ancestors($term->term_id, 'product_cat');
+		$parent_cats = (get_ancestors($term->term_id, 'product_cat') !== '' ? get_ancestors($term->term_id, 'product_cat') : 16);
 		$category = (get_term_by('id', $parent_cats[0], 'product_cat') !== '' ? get_term_by('id', $parent_cats[0], 'product_cat') : 16);
 		echo '<section class="row entry-content cf related-products"><div class="cf"><div class="col-12">';
 		echo '<h2>You might also like</h2><p>Ariptimus fue et vitioca tquerra vivis, nem merissent grate, ceni sintere mo</p>';
