@@ -775,6 +775,8 @@ LAYOUT & GRID STYLES
 			}
 			
 			.col-6:first-child {
+				order: 1;
+				
 				p, img {
 					padding: 0;
 					margin: 0;
@@ -789,6 +791,8 @@ LAYOUT & GRID STYLES
 			}
 			
 			.col-6:last-child {
+				order: 1;
+				
 				p, img {
 					padding: 0;
 					margin: 0;

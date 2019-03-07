@@ -1480,16 +1480,20 @@ LAYOUT & GRID STYLES
   padding: 2.5rem; }
 .row.image-column.column-8-4 .col-6 {
   width: 100%; }
-.row.image-column.column-8-4 .col-6:first-child p, .row.image-column.column-8-4 .col-6:first-child img {
-  padding: 0;
-  margin: 0;
-  font-size: 0; }
+.row.image-column.column-8-4 .col-6:first-child {
+  order: 1; }
+  .row.image-column.column-8-4 .col-6:first-child p, .row.image-column.column-8-4 .col-6:first-child img {
+    padding: 0;
+    margin: 0;
+    font-size: 0; }
 .row.image-column.column-4-8 .col-6 {
   width: 100%; }
-.row.image-column.column-4-8 .col-6:last-child p, .row.image-column.column-4-8 .col-6:last-child img {
-  padding: 0;
-  margin: 0;
-  font-size: 0; }
+.row.image-column.column-4-8 .col-6:last-child {
+  order: 1; }
+  .row.image-column.column-4-8 .col-6:last-child p, .row.image-column.column-4-8 .col-6:last-child img {
+    padding: 0;
+    margin: 0;
+    font-size: 0; }
 .row.image-column .aspect-ratio {
   padding-bottom: 53%; }
 .row.woocommerce-products-header .h2.center, .row.woocommerce-products-header .row.outdoor-product-single .short-desc .center.product_title, .row.outdoor-product-single .short-desc .row.woocommerce-products-header .center.product_title, .row.woocommerce-products-header .woocommerce .spares-product .center.product_title, .woocommerce .spares-product .row.woocommerce-products-header .center.product_title {
