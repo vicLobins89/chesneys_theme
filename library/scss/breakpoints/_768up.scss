@@ -551,6 +551,14 @@ LAYOUT & GRID STYLES
 			width: 66%;
 		}
 	}
+	
+	table.shop_table {
+		&.woocommerce-cart-form__contents {
+			td:first-child {
+				width: 3rem;
+			}
+		}
+	}
 }
 
 .equal-height {

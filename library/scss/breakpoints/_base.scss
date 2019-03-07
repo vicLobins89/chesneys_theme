@@ -2591,14 +2591,6 @@ POSTS & CONTENT STYLES
 			}
 		}
 		
-		&.woocommerce-cart-form__contents {
-			td:first-child {
-				@media only screen and (max-width: 767px) {
-					width: 3rem;
-				}
-			}
-		}
-		
 		.button {
 			@extend .secondary-btn;
 			margin: 0;
