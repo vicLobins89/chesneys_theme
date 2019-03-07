@@ -574,7 +574,7 @@ Stylesheet: Grid Stylesheet
   width: 66.66%; }
 @media only screen and (max-width: 767px) {
   .column-4-8 .cf > .col-6, .column-4-8 .comment-respond > .col-6 {
-    width: 100%; } }
+    width: 100% !important; } }
 
 .column-8-4 .cf > .col-6:first-child, .column-8-4 .comment-respond > .col-6:first-child {
   width: 66.66%; }
@@ -582,7 +582,7 @@ Stylesheet: Grid Stylesheet
   width: 33.33%; }
 @media only screen and (max-width: 767px) {
   .column-8-4 .cf > .col-6, .column-8-4 .comment-respond > .col-6 {
-    width: 100%; } }
+    width: 100% !important; } }
 
 [class*="col-"] {
   float: left;
