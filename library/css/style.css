@@ -1466,6 +1466,9 @@ LAYOUT & GRID STYLES
 @media only screen and (max-width: 767px) {
   .row.folio-module .folio-item:nth-last-child(2), .row.folio-module .folio-item:last-child {
     display: none; } }
+.row.folio-module .folio-item img {
+  width: 100%;
+  height: auto; }
 .row.folio-module .title, .row.folio-module .description {
   text-align: center; }
 .row.folio-module .thumb {
