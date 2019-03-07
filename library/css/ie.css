@@ -468,6 +468,14 @@ POSTS & CONTENT STYLES
   padding: 2rem;
   width: 30%; }
 
+.spares-thumbs .wp-caption {
+  width: 31% !important;
+  margin-right: 3.5%;
+  margin-bottom: 0;
+  float: left; }
+  .spares-thumbs .wp-caption:last-child {
+    margin-right: 0; }
+
 .module.module-outdoor-living-shop > .cf, .module.module-glossary > .cf, .module.module-design-a-fireplace > .cf {
   height: 0;
   padding-top: 40%;
@@ -486,8 +494,6 @@ POSTS & CONTENT STYLES
   -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center; }
-  .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
-    vertical-align: middle; }
 
 /*********************
 LAYOUT & GRID STYLES
@@ -531,6 +537,13 @@ LAYOUT & GRID STYLES
 .row.image-column.column-4-8 .col-6:last-child {
   width: 66.666%;
   padding: 0; }
+
+.woocommerce .spares-product .product_title {
+  float: left;
+  width: 33%; }
+.woocommerce .spares-product .woocommerce-product-gallery__image {
+  float: right;
+  width: 66%; }
 
 /*********************
 SIDEBARS & ASIDES

@@ -1529,7 +1529,7 @@ LAYOUT & GRID STYLES
     margin: 0;
     font-size: 0; }
 .row.image-column .aspect-ratio {
-  padding-bottom: 53%; }
+  padding-bottom: 57%; }
 .row.woocommerce-products-header .h2.center, .row.woocommerce-products-header .row.outdoor-product-single .short-desc .center.product_title, .row.outdoor-product-single .short-desc .row.woocommerce-products-header .center.product_title, .row.woocommerce-products-header .woocommerce .spares-product .center.product_title, .woocommerce .spares-product .row.woocommerce-products-header .center.product_title {
   margin-top: 3rem;
   text-align: center; }
@@ -2466,11 +2466,7 @@ POSTS & CONTENT STYLES
         margin-right: auto !important; }
 
 .spares-thumbs .wp-caption {
-  width: 31% !important;
-  margin-right: 3.5%;
-  float: left; }
-  .spares-thumbs .wp-caption:last-child {
-    margin-right: 0; }
+  margin-bottom: 2rem; }
 
 .custom-content.narrow-para {
   margin-top: 2.5rem !important; }
@@ -2543,25 +2539,25 @@ POSTS & CONTENT STYLES
     font-size: .9rem; }
     .entry-content ul:not(.product-categories ul) li, .entry-content ol li {
       margin-bottom: .8rem; }
-  .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children) {
+  .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers) {
     list-style-type: disc;
     margin-bottom: 2em;
     padding-left: 1.25em; }
-    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children).links {
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers).links {
       list-style-type: none;
       padding: 0; }
-      .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children).links > li {
+      .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers).links > li {
         text-decoration: underline; }
-    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children).dashed {
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers).dashed {
       list-style-type: none; }
-      .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children).dashed > li {
+      .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers).dashed > li {
         text-indent: -10px; }
-        .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children).dashed > li:before {
+        .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers).dashed > li:before {
           content: "- ";
           text-indent: -10px; }
-    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children).sans {
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers).sans {
       font-size: .8em; }
-    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children) li {
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers) li {
       font-size: 1.15em;
       margin-bottom: 6px; }
   .entry-content .list {
@@ -2817,15 +2813,11 @@ POSTS & CONTENT STYLES
   padding-top: 1rem; }
   .woocommerce .spares-product .product_title {
     background: #f5f3f1;
-    padding: 3rem 3rem 4rem !important;
-    float: left;
-    width: 33%; }
+    padding: 3rem 3rem 4rem !important; }
     .woocommerce .spares-product .product_title:after {
       bottom: 3rem;
       left: 3rem; }
   .woocommerce .spares-product .woocommerce-product-gallery__image {
-    float: right;
-    width: 66%;
     margin-bottom: 2rem; }
     .woocommerce .spares-product .woocommerce-product-gallery__image a {
       pointer-events: none;
@@ -3810,6 +3802,14 @@ TABLET & SMALLER LAPTOPS
     padding: 2rem;
     width: 30%; }
 
+  .spares-thumbs .wp-caption {
+    width: 31% !important;
+    margin-right: 3.5%;
+    margin-bottom: 0;
+    float: left; }
+    .spares-thumbs .wp-caption:last-child {
+      margin-right: 0; }
+
   .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
     height: 0;
     padding-top: 40%;
@@ -3828,8 +3828,6 @@ TABLET & SMALLER LAPTOPS
     -webkit-align-items: center;
     -ms-align-items: center;
     align-items: center; }
-    .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
-      vertical-align: middle; }
 
   /*********************
   LAYOUT & GRID STYLES
@@ -3873,6 +3871,13 @@ TABLET & SMALLER LAPTOPS
   .row.image-column.column-4-8 .col-6:last-child {
     width: 66.666%;
     padding: 0; }
+
+  .woocommerce .spares-product .product_title {
+    float: left;
+    width: 33%; }
+  .woocommerce .spares-product .woocommerce-product-gallery__image {
+    float: right;
+    width: 66%; }
 
   /*********************
   SIDEBARS & ASIDES

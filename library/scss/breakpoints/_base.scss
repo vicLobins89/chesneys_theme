@@ -842,7 +842,7 @@ LAYOUT & GRID STYLES
 		}
 		
 		.aspect-ratio {
-			padding-bottom: 53%;
+			padding-bottom: 57%;
 		}
 	}
 	
@@ -2082,13 +2082,7 @@ POSTS & CONTENT STYLES
 
 .spares-thumbs {
 	.wp-caption {
-		width: 31% !important;
-		margin-right: 3.5%;
-		float: left;
-
-		&:last-child {
-			margin-right: 0;
-		}
+		margin-bottom: 2rem;
 	}
 }
 
@@ -2203,7 +2197,7 @@ POSTS & CONTENT STYLES
 
 	}
 
-	ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children) {
+	ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers) {
 		list-style-type: disc;
 		margin-bottom: 2em;
 		padding-left: 1.25em;
@@ -2628,8 +2622,6 @@ POSTS & CONTENT STYLES
 			@extend .h2.lhs;
 			background: $light-brown;
 			padding: 3rem 3rem 4rem !important;
-			float: left;
-			width: 33%;
 			
 			&:after {
 				bottom: 3rem;
@@ -2638,8 +2630,6 @@ POSTS & CONTENT STYLES
 		}
 		
 		.woocommerce-product-gallery__image {
-			float: right;
-			width: 66%;
 			margin-bottom: 2rem;
 			
 			a {

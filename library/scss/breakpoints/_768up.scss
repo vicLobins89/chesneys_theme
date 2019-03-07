@@ -407,6 +407,19 @@ POSTS & CONTENT STYLES
 	width: 30%;
 }
 
+.spares-thumbs {
+	.wp-caption {
+		width: 31% !important;
+		margin-right: 3.5%;
+		margin-bottom: 0;
+		float: left;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
 .module {
 	&.module-outdoor-living-shop,
 	&.module-glossary,
@@ -434,10 +447,6 @@ POSTS & CONTENT STYLES
 			display: flex;
 			@include prefix(justify-content, space-evenly, webkit ms);
 			@include prefix(align-items, center, webkit ms);
-
-			a {
-				vertical-align: middle;
-			}
 		}
 	}
 }
@@ -523,6 +532,20 @@ LAYOUT & GRID STYLES
 				width: 66.666%;
 				padding: 0;
 			}
+		}
+	}
+}
+
+.woocommerce {
+	.spares-product {		
+		.product_title {
+			float: left;
+			width: 33%;
+		}
+		
+		.woocommerce-product-gallery__image {
+			float: right;
+			width: 66%;
 		}
 	}
 }
