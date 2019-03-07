@@ -910,7 +910,9 @@ LAYOUT & GRID STYLES
 	}
 	
 	&.module-glossary {
-		background: $light-brown;
+		@media only screen and (max-width: 767px) {
+			background: $light-brown;
+		}
 	}
 	
 	&.module-outdoor-living-shop,

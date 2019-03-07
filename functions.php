@@ -283,23 +283,14 @@ if (function_exists('geoip_detect2_get_info_from_current_ip')) {
 }
 
 // No Add to cart
-function remove_product_description_add_cart_button(){
-    global $product;
-
-    // Set HERE your category ID, slug or name (or an array)
-    $category = 'fireplaces';
-
-    //Remove Add to Cart button from product description of product with id 1234    
-    if ( has_term( $category, 'product_cat', $product->id ) ) {
-		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+function remove_add_to_cart_buttons() {
+	if( is_product_category( array( 'firepalces', 'stoves'))) { 
+		remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
 	}
-
 }
-add_action('wp','remove_product_description_add_cart_button');
+add_action( 'woocommerce_after_shop_loop_item', 'remove_add_to_cart_buttons', 1 );
 
 //STORE LOCATOR
-add_filter( 'wpsl_templates', 'custom_templates' );
-
 function custom_templates( $templates ) {
 
     $templates[] = array (
@@ -310,6 +301,7 @@ function custom_templates( $templates ) {
 
     return $templates;
 }
+add_filter( 'wpsl_templates', 'custom_templates' );
 
 //WOOCOMMERCE Functions
 require_once( 'woocommerce/shop-functions.php' );
