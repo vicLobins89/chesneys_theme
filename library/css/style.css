@@ -572,11 +572,17 @@ Stylesheet: Grid Stylesheet
   width: 33.33%; }
 .column-4-8 .cf > .col-6:last-child, .column-4-8 .comment-respond > .col-6:last-child {
   width: 66.66%; }
+@media only screen and (max-width: 767px) {
+  .column-4-8 .cf > .col-6, .column-4-8 .comment-respond > .col-6 {
+    width: 100%; } }
 
 .column-8-4 .cf > .col-6:first-child, .column-8-4 .comment-respond > .col-6:first-child {
   width: 66.66%; }
 .column-8-4 .cf > .col-6:last-child, .column-8-4 .comment-respond > .col-6:last-child {
   width: 33.33%; }
+@media only screen and (max-width: 767px) {
+  .column-8-4 .cf > .col-6, .column-8-4 .comment-respond > .col-6 {
+    width: 100%; } }
 
 [class*="col-"] {
   float: left;
@@ -3825,7 +3831,7 @@ TABLET & SMALLER LAPTOPS
     text-transform: uppercase;
     font-family: "Univers", Helvetica, Arial, sans-serif;
     font-size: .85em;
-    padding: 0 1rem;
+    padding: 1rem;
     width: 90%;
     max-width: 1400px;
     margin: .85em auto; }

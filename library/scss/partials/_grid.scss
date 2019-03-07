@@ -28,6 +28,10 @@ Stylesheet: Grid Stylesheet
 		&:last-child {
 			width: 66.66%;
 		}
+		
+		@media only screen and (max-width: 767px) {
+			width: 100%;
+		}
 	}
 }
 
@@ -39,6 +43,10 @@ Stylesheet: Grid Stylesheet
 		
 		&:last-child {
 			width: 33.33%;
+		}
+		
+		@media only screen and (max-width: 767px) {
+			width: 100%;
 		}
 	}
 }
