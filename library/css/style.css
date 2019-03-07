@@ -1844,6 +1844,11 @@ LAYOUT & GRID STYLES
 .equal-height.image-right .col-6:first-child {
   padding: 2.5rem; }
 
+@media only screen and (max-width: 767px) {
+  .image-left .col-6:first-child {
+    order: 1; }
+  .image-left .col-6:last-child {
+    order: 2; } }
 .image-left .col-6:first-child {
   padding: 0;
   background: none;
@@ -1852,17 +1857,15 @@ LAYOUT & GRID STYLES
     padding: 0;
     margin: 0;
     font-size: 0; }
-@media only screen and (max-width: 767px) {
-  .image-left .col-6:last-child {
-    order: 2; } }
 
 @media only screen and (max-width: 767px) {
   .image-right .col-6:first-child {
-    order: 2; } }
+    order: 2; }
+  .image-right .col-6:last-child {
+    order: 1; } }
 .image-right .col-6:last-child {
   padding: 0;
-  background: none;
-  order: 1; }
+  background: none; }
   .image-right .col-6:last-child p, .image-right .col-6:last-child img {
     padding: 0;
     margin: 0;
