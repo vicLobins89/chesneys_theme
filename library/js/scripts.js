@@ -169,7 +169,8 @@ jQuery(document).ready(function($) {
 			$('.reveal-copy').each(function(){
 				var selected = $(this).attr('class').split(' ')[1],
 					selectedHtml = $(this).html();
-
+				
+				$(this).empty();
 				$('.hover-link.'+selected+'').parent().append(selectedHtml);
 			});
 			
