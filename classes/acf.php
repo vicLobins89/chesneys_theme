@@ -170,7 +170,7 @@ class CustomACF {
 		$bgColour = get_sub_field('bg_colour');
 		$bgImage = get_sub_field('bg_image');
 		$customClass = get_sub_field('class');
-		$customID;
+		$customID = '';
 		$addClasses = array();
 		$addStyles = array();
 		$styles;
