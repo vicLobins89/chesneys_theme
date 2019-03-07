@@ -487,6 +487,15 @@ LAYOUT & GRID STYLES
 	
 	&.spares-shop-loop {
 		background: $light-brown;
+		
+		ul.products[class*=columns-] li.product {
+			@media only screen and (max-width: 767px) {
+				width: 48%;
+				float: left;
+				clear: both;
+				margin: 0 0 2.992em;
+			}
+		}
 	}
 	
 	&.outdoor-product-single {
@@ -1024,8 +1033,10 @@ LAYOUT & GRID STYLES
 		p {
 			display: inline-block;
 			
-			@media only screen and (max-width: 767px) {
-				a {
+			a {
+				vertical-align: middle;
+				
+				@media only screen and (max-width: 767px) {
 					min-width: 12rem;
 				}
 			}
