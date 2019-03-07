@@ -3284,6 +3284,8 @@ POSTS & CONTENT STYLES
   background: #fff;
   z-index: 20;
   overflow: hidden; }
+  .ssf-main-content#mainContent #filter_left_panel .filter-radio {
+    height: 100%; }
 .ssf-main-content#mainContent #ssf_adress_input_box {
   position: absolute;
   top: -173px;

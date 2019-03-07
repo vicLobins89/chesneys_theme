@@ -3252,6 +3252,10 @@ POSTS & CONTENT STYLES
 		background: $white;
 		z-index: 20;
 		overflow: hidden;
+		
+		.filter-radio {
+			height: 100%;
+		}
 	}
 	
 	#ssf_adress_input_box {
