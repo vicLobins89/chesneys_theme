@@ -2835,6 +2835,29 @@ POSTS & CONTENT STYLES
     width: 90%;
     max-width: 1100px;
     margin: auto !important; }
+    @media only screen and (max-width: 600px) {
+      .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr {
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flex;
+          display: -o-flex;
+          display: flex;
+          -webkit-flex-direction: column;
+          -moz-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table tr td {
+            width: 100%; } }
     .woocommerce .spares-product form.cart .woocommerce-grouped-product-list.group_table td {
       padding: 3.5rem 1.5rem 1.5rem;
       font-weight: normal;
