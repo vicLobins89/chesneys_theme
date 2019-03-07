@@ -2838,7 +2838,7 @@ POSTS & CONTENT STYLES
 .woocommerce .woocommerce-ordering {
   display: none; }
 @media only screen and (max-width: 767px) {
-  .woocommerce ul.products[class*=columns-] li.product:nth-child(2n) {
+  .woocommerce ul.products[class*=columns-] li.product {
     float: none;
     width: 100%;
     margin: 0; } }

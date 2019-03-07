@@ -2676,7 +2676,7 @@ POSTS & CONTENT STYLES
 	}
 	
 	ul.products {
-		&[class*=columns-] li.product:nth-child(2n) {
+		&[class*=columns-] li.product {
 			@media only screen and (max-width: 767px) {
 				float: none;
 				width: 100%;
