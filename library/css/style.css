@@ -1567,6 +1567,8 @@ LAYOUT & GRID STYLES
     .module + .module {
       padding-top: 0;
       padding-bottom: 0; } }
+  .module.module-glossary {
+    background: #f5f3f1; }
   @media only screen and (max-width: 767px) {
     .module.module-outdoor-living-shop, .module.module-glossary, .module.module-design-a-fireplace {
       padding-left: 0;
