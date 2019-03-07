@@ -1298,6 +1298,12 @@ LAYOUT & GRID STYLES
     display: -ms-flex;
     display: -o-flex;
     display: flex; }
+    @media only screen and (max-width: 767px) {
+      .row.outdoor-product-single .col-12 {
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
   .row.outdoor-product-single .woocommerce-product-gallery {
     float: none !important;
     margin-bottom: 0 !important; }
@@ -1346,6 +1352,12 @@ LAYOUT & GRID STYLES
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex; }
+    @media only screen and (max-width: 767px) {
+      .row.product-info-wrapper > .cf, .row.product-info-wrapper > .comment-respond {
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
   .row.product-info-wrapper .details-inner {
     position: relative;
     height: 100%;
@@ -1671,22 +1683,28 @@ LAYOUT & GRID STYLES
         height: 3.5rem; }
   .module.module-ctas, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
     padding: 0 0 1rem 0; }
+    @media only screen and (max-width: 767px) {
+      .module.module-ctas, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
+        text-align: center; } }
     .module.module-ctas h2, .module.module-outdoor-ctas h2, .module.module-outdoor-ctas-2 h2 {
       display: none; }
     .module.module-ctas p, .module.module-outdoor-ctas p, .module.module-outdoor-ctas-2 p {
-      display: inline-block;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-justify-content: space-evenly;
-      -ms-justify-content: space-evenly;
-      justify-content: space-evenly;
-      -webkit-align-items: center;
-      -ms-align-items: center;
-      align-items: center; }
-      .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
-        vertical-align: middle; }
+      display: inline-block; }
+      @media only screen and (max-width: 767px) {
+        .module.module-ctas p, .module.module-outdoor-ctas p, .module.module-outdoor-ctas-2 p {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-justify-content: space-evenly;
+          -ms-justify-content: space-evenly;
+          justify-content: space-evenly;
+          -webkit-align-items: center;
+          -ms-align-items: center;
+          align-items: center; }
+          .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
+            vertical-align: middle;
+            min-width: 12rem; } }
   .module.module-our-team h2 {
     text-align: center; }
   .module .primary-btn, .module .image-link + p, .module .image-link .wp-caption-text, .image-link .module .wp-caption-text, .module .vid-thumb .play, .vid-thumb .module .play, .module .row.related-wrapper .woocommerce-loop-product__title, .row.related-wrapper .module .woocommerce-loop-product__title, .module a.comment-reply-link, .module #submit {

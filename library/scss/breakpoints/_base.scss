@@ -499,6 +499,10 @@ LAYOUT & GRID STYLES
 			display: -ms-flex;
 			display: -o-flex;
 			display: flex;
+			
+			@media only screen and (max-width: 767px) {
+				@include prefix(flex-direction, column, webkit moz ms);
+			}
 		}
 		
 		.woocommerce-product-gallery {
@@ -560,6 +564,10 @@ LAYOUT & GRID STYLES
 			display: -ms-flexbox;
 			display: -webkit-flex;
 			display: flex;
+			
+			@media only screen and (max-width: 767px) {
+				@include prefix(flex-direction, column, webkit moz ms);
+			}
 		}
 		
 		.details-inner {
@@ -1001,21 +1009,29 @@ LAYOUT & GRID STYLES
 	&.module-outdoor-ctas-2 {
 		padding: 0 0 1rem 0;
 		
+		@media only screen and (max-width: 767px) {
+			text-align: center;
+		}
+		
 		h2 {
 			display: none;
 		}
 		
 		p {
 			display: inline-block;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			@include prefix(justify-content, space-evenly, webkit ms);
-			@include prefix(align-items, center, webkit ms);
 			
-			a {
-				vertical-align: middle;
+			@media only screen and (max-width: 767px) {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				@include prefix(justify-content, space-evenly, webkit ms);
+				@include prefix(align-items, center, webkit ms);
+
+				a {
+					vertical-align: middle;
+					min-width: 12rem;
+				}
 			}
 		}
 	}
