@@ -170,6 +170,7 @@ class CustomACF {
 		$bgColour = get_sub_field('bg_colour');
 		$bgImage = get_sub_field('bg_image');
 		$customClass = get_sub_field('class');
+		$customID = (get_sub_field('row_id') ? ' id="#'.get_sub_field('row_id').'" ' : '');
 		$addClasses = array();
 		$addStyles = array();
 		$styles;
@@ -207,13 +208,13 @@ class CustomACF {
 			echo '<section class="row entry-content cf" style="display: none;">';
 			echo '<div class="cf">';
 		} else if( $layout === 'wrap' ) {
-			echo '<section class="row entry-content wrap cf '.implode(" ", $addClasses).'"'.$styles.'>';
+			echo '<section'.$customID.' class="row entry-content wrap cf '.implode(" ", $addClasses).'"'.$styles.'>';
 			echo '<div class="cf">';
 		} else if( $layout === 'full' ) {
-			echo '<section class="row entry-content full cf '.implode(" ", $addClasses).'"'.$styles.'>';
+			echo '<section'.$customID.' class="row entry-content full cf '.implode(" ", $addClasses).'"'.$styles.'>';
 			echo '<div class="cf">';
 		} else {
-			echo '<section class="row entry-content cf '.implode(" ", $addClasses).'"'.$styles.'>';
+			echo '<section'.$customID.' class="row entry-content cf '.implode(" ", $addClasses).'"'.$styles.'>';
 			echo '<div class="cf">';
 		}
 

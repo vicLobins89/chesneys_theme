@@ -1753,6 +1753,12 @@ LAYOUT & GRID STYLES
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
+  @media only screen and (max-width: 767px) {
+    .flex > .cf, .flex > .comment-respond {
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   .flex > .cf .gray-box, .flex > .comment-respond .gray-box,
   .flex > .cf .black-box,
   .flex > .comment-respond .black-box {

@@ -1134,6 +1134,10 @@ LAYOUT & GRID STYLES
 		display: -ms-flexbox;
 		display: -webkit-flex;
 		display: flex;
+		
+		@media only screen and (max-width: 767px) {
+			@include prefix(flex-direction, column, webkit moz ms);
+		}
 
 		.gray-box,
 		.black-box {
