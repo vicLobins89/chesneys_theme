@@ -1043,7 +1043,8 @@ Stylesheet: Base Mobile Stylesheet
 GENERAL STYLES
 *********************/
 html {
-  font-size: 12px; }
+  font-size: 12px;
+  scroll-behavior: smooth; }
 
 body {
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
@@ -1964,7 +1965,7 @@ p, .p {
   font-size: 160% !important; }
 
 .copy-xxl {
-  font-size: 200% !important; }
+  font-size: 180% !important; }
 
 .copy-s {
   font-size: 80% !important; }
@@ -3492,6 +3493,9 @@ TABLET & SMALLER LAPTOPS
   *********************/
   p, .p {
     font-size: 1.25em; }
+
+  .copy-xxl {
+    font-size: 200% !important; }
 
   /*********************
   HEADER STYLES

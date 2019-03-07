@@ -178,6 +178,9 @@ FONT STYLES
 p, .p {
   font-size: 1.25em; }
 
+.copy-xxl {
+  font-size: 200% !important; }
+
 /*********************
 HEADER STYLES
 *********************/
