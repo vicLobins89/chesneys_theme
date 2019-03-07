@@ -1461,6 +1461,17 @@ LAYOUT & GRID STYLES
     margin: .5rem 0; }
 .row.image-column > .cf, .row.image-column > .comment-respond {
   background: #f5f3f1; }
+  @media only screen and (max-width: 767px) {
+    .row.image-column > .cf, .row.image-column > .comment-respond {
+      display: inline-block;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 .row.image-column.reverse > .cf, .row.image-column.reverse > .comment-respond {
   background: #fff; }
 .row.image-column.image-left .col-6:last-child {
