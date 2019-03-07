@@ -423,6 +423,16 @@ NAVIGATION STYLES
 .mobile-links {
   display: none !important; }
 
+.menu-breadcrumb {
+  display: block;
+  text-transform: uppercase;
+  font-family: "Univers", Helvetica, Arial, sans-serif;
+  font-size: .85em;
+  padding: 0 1rem;
+  width: 90%;
+  max-width: 1400px;
+  margin: .85em auto; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -441,6 +451,19 @@ POSTS & CONTENT STYLES
     .entry-content ul.col-2 li {
       width: 48%;
       display: inline-block; }
+
+.featured.top {
+  padding-top: 0;
+  padding-bottom: 0; }
+.featured > div {
+  padding: 0 1rem; }
+
+.featured-copy {
+  position: absolute;
+  top: 2.5rem;
+  left: 3rem;
+  padding: 2rem;
+  width: 30%; }
 
 /*********************
 LAYOUT & GRID STYLES
@@ -470,6 +493,9 @@ LAYOUT & GRID STYLES
   .blog-wrapper .col-4.post-item-3 {
     margin-right: 9%; }
 
+.row.folio-module .folio-item .text {
+  height: 9rem; }
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -489,6 +515,9 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
+.footer {
+  padding: 2rem 4rem; }
+
 /******************************************************************
 Site Name: Honey
 Author: Vic Lobins

@@ -340,6 +340,17 @@ NAVIGATION STYLES
 	display: none !important;
 }
 
+.menu-breadcrumb {
+	display: block;
+	text-transform: uppercase;
+	font-family: $sans-serif;
+	font-size: .85em;
+	padding: 0 1rem;
+	width: 90%;
+	max-width: 1400px;
+	margin: .85em auto;
+}
+
 
 /*********************
 POSTS & CONTENT STYLES
@@ -373,6 +384,24 @@ POSTS & CONTENT STYLES
 	}
 }
 
+.featured {
+	&.top {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	
+	> div {
+		padding: 0 1rem;
+	}
+}
+
+.featured-copy {
+	position: absolute;
+	top: 2.5rem;
+	left: 3rem;
+	padding: 2rem;
+	width: 30%;
+}
 
 /*********************
 LAYOUT & GRID STYLES
@@ -423,6 +452,16 @@ LAYOUT & GRID STYLES
 	}
 }
 
+.row {
+	&.folio-module {
+		.folio-item {
+			.text {
+				height: 9rem;
+			}
+		}
+	}
+}
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -453,3 +492,6 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
+.footer {
+	padding: 2rem 4rem;
+}

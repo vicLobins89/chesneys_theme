@@ -1424,13 +1424,16 @@ LAYOUT & GRID STYLES
   .row.related-products .button {
     display: none !important; }
 .row.folio-module .folio-item .text {
-  height: 9rem;
+  height: 7rem;
   padding: 0.5rem 0.75rem 0.5rem;
   background: #fff;
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out; }
 .row.folio-module .folio-item:hover .text {
   background: #f5f3f1; }
+@media only screen and (max-width: 767px) {
+  .row.folio-module .folio-item:nth-last-child(2), .row.folio-module .folio-item:last-child {
+    display: none; } }
 .row.folio-module .title, .row.folio-module .description {
   text-align: center; }
 .row.folio-module .thumb {
@@ -2326,13 +2329,7 @@ POSTS & CONTENT STYLES
         margin: 8px 0 0; }
 
 .menu-breadcrumb {
-  text-transform: uppercase;
-  font-family: "Univers", Helvetica, Arial, sans-serif;
-  font-size: .85em;
-  padding: 0 1rem;
-  width: 90%;
-  max-width: 1400px;
-  margin: .85em auto; }
+  display: none; }
 
 .page-id-614 .menu-breadcrumb span span:first-child,
 .parent-pageid-614 .menu-breadcrumb span span:first-child {
@@ -2341,23 +2338,21 @@ POSTS & CONTENT STYLES
   .parent-pageid-614 .menu-breadcrumb span span:first-child + .sep {
     display: none; }
 
-.featured.top {
-  padding-top: 0;
-  padding-bottom: 0; }
+@media only screen and (max-width: 767px) {
+  .featured.top {
+    padding: 0; } }
 .featured > div {
-  position: relative;
-  padding: 0 1rem; }
+  position: relative; }
 .featured img {
   width: 100%;
   height: auto; }
+  @media only screen and (max-width: 767px) {
+    .featured img {
+      margin: 0; } }
 
 .featured-copy, .module.module-outdoor-living-shop .inner-module, .module.module-glossary .inner-module, .module.module-design-a-fireplace .inner-module, #folio_header .widget_text,
 #news_header .widget_text {
-  position: absolute;
-  top: 2.5rem;
-  left: 3rem;
   padding: 2rem;
-  width: 30%;
   background: #f5f3f1; }
   .featured-copy p, .module.module-outdoor-living-shop .inner-module p, .module.module-glossary .inner-module p, .module.module-design-a-fireplace .inner-module p, #folio_header .widget_text p,
   #news_header .widget_text p {
@@ -3383,7 +3378,7 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 .footer {
-  padding: 2rem 4rem;
+  padding: 1rem 2.5rem;
   background: #53575a;
   color: #fff; }
 
@@ -3755,6 +3750,16 @@ TABLET & SMALLER LAPTOPS
   .mobile-links {
     display: none !important; }
 
+  .menu-breadcrumb {
+    display: block;
+    text-transform: uppercase;
+    font-family: "Univers", Helvetica, Arial, sans-serif;
+    font-size: .85em;
+    padding: 0 1rem;
+    width: 90%;
+    max-width: 1400px;
+    margin: .85em auto; }
+
   /*********************
   POSTS & CONTENT STYLES
   *********************/
@@ -3773,6 +3778,20 @@ TABLET & SMALLER LAPTOPS
       .entry-content ul.col-2 li {
         width: 48%;
         display: inline-block; }
+
+  .featured.top {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .featured > div {
+    padding: 0 1rem; }
+
+  .featured-copy, .module.module-outdoor-living-shop .inner-module, .module.module-glossary .inner-module, .module.module-design-a-fireplace .inner-module, #folio_header .widget_text,
+  #news_header .widget_text {
+    position: absolute;
+    top: 2.5rem;
+    left: 3rem;
+    padding: 2rem;
+    width: 30%; }
 
   /*********************
   LAYOUT & GRID STYLES
@@ -3802,6 +3821,9 @@ TABLET & SMALLER LAPTOPS
     .blog-wrapper .col-4.post-item-3 {
       margin-right: 9%; }
 
+  .row.folio-module .folio-item .text {
+    height: 9rem; }
+
   /*********************
   SIDEBARS & ASIDES
   *********************/
@@ -3820,7 +3842,9 @@ TABLET & SMALLER LAPTOPS
 
   /*********************
   FOOTER STYLES
-  *********************/ }
+  *********************/
+  .footer {
+    padding: 2rem 4rem; } }
 /*********************
 DESKTOP
 *********************/
