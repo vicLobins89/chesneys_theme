@@ -2911,7 +2911,7 @@ POSTS & CONTENT STYLES
   margin: 1rem 0 .75rem !important; }
   .woocommerce.term-outdoor-living ul.products li.product a:not(.button) h2:after, .woocommerce.outdoor-related ul.products li.product a:not(.button) h2:after, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2:after {
     bottom: auto;
-    top: -14px; }
+    top: -0.6rem; }
 .woocommerce.term-outdoor-living ul.products li.product a:not(.button) h2, .woocommerce.term-outdoor-living ul.products li.product a:not(.button) p, .woocommerce.outdoor-related ul.products li.product a:not(.button) h2, .woocommerce.outdoor-related ul.products li.product a:not(.button) p, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) p {
   margin: 0; }
 .woocommerce.term-outdoor-living ul.products li.product a:not(.button):hover, .woocommerce.term-outdoor-living ul.products li.product a:not(.button):focus, .woocommerce.outdoor-related ul.products li.product a:not(.button):hover, .woocommerce.outdoor-related ul.products li.product a:not(.button):focus, .woocommerce.outdoor-accessories ul.products li.product a:not(.button):hover, .woocommerce.outdoor-accessories ul.products li.product a:not(.button):focus {
