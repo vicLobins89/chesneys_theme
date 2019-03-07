@@ -1525,7 +1525,8 @@ LAYOUT & GRID STYLES
     width: 100%;
     max-width: calc(1400px - 2rem);
     height: 0;
-    padding-top: 40%; }
+    padding-top: 80%;
+    margin-bottom: 70%; }
   .module.module-outdoor-living-shop .inner-module, .module.module-glossary .inner-module, .module.module-design-a-fireplace .inner-module {
     top: auto !important;
     bottom: 2.5rem; }
@@ -2356,6 +2357,10 @@ POSTS & CONTENT STYLES
   top: -4px;
   padding: 2rem;
   background: #f5f3f1; }
+  @media only screen and (max-width: 767px) {
+    .featured-copy, .module.module-outdoor-living-shop .inner-module, .module.module-glossary .inner-module, .module.module-design-a-fireplace .inner-module, #folio_header .widget_text,
+    #news_header .widget_text {
+      margin-bottom: 1rem; } }
   .featured-copy p, .module.module-outdoor-living-shop .inner-module p, .module.module-glossary .inner-module p, .module.module-design-a-fireplace .inner-module p, #folio_header .widget_text p,
   #news_header .widget_text p {
     margin: 2rem 0; }
@@ -3794,6 +3799,10 @@ TABLET & SMALLER LAPTOPS
     left: 3rem;
     padding: 2rem;
     width: 30%; }
+
+  .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
+    height: 0;
+    padding-top: 40%; }
 
   /*********************
   LAYOUT & GRID STYLES

@@ -861,7 +861,8 @@ LAYOUT & GRID STYLES
 			width: 100%;
 			max-width: calc(1400px - 2rem);
 			height: 0;
-			padding-top: 40%;
+			padding-top: 80%;
+   			margin-bottom: 70%;
 		}
 		
 		.inner-module {
@@ -1981,6 +1982,10 @@ POSTS & CONTENT STYLES
 	top: -4px;
 	padding: 2rem;
 	background: $light-brown;
+	
+	@media only screen and (max-width: 767px) {
+		margin-bottom: 1rem;
+	}
 	
 	p {
 		margin: 2rem 0;
