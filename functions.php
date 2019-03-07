@@ -284,7 +284,7 @@ if (function_exists('geoip_detect2_get_info_from_current_ip')) {
 
 // No Add to cart
 function remove_add_to_cart_buttons() {
-	if( is_product_category( array( 'firepalces', 'stoves'))) { 
+	if( is_product_category( array( 'firepalces', 'stoves'))) {
 		remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
 	}
 }
