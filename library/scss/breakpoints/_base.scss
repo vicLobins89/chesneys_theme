@@ -3218,52 +3218,55 @@ POSTS & CONTENT STYLES
 // store locator
 
 .ssf-main-content#mainContent {
-	.store-locator-map {
-		z-index: 10;
-		width: 75%;
-		left: 25%;
+	@media screen only and (max-width: 767px) {
+		.store-locator-map {
+			z-index: 10;
+			width: 75%;
+			left: 25%;
+		}
+
+		.ssf-row {
+			position: relative;
+			height: 800px;
+			margin: 0;
+			padding: 0;
+			max-width: none;
+		}
+
+		.ssf-column, .ssf-columns {
+			float: none;
+			text-align: center;
+		}
+		
+		#filter_left_panel {
+			position: absolute;
+			left: 0;
+			top: 0;
+			padding: 0;
+			width: 25%;
+			height: 100% !important;
+			background: $white;
+			z-index: 20;
+			overflow: hidden;
+
+			.filter-radio {
+				height: 100%;
+			}
+		}
+
+		#ssf_adress_input_box {
+			position: absolute;
+			top: -173px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			z-index: 20;
+		}
 	}
 	
-	.ssf-row {
-		position: relative;
-		height: 800px;
-		margin: 0;
-		padding: 0;
-		max-width: none;
-	}
-	
-	.ssf-column, .ssf-columns {
-		float: none;
-		text-align: center;
-	}
 	
 	.ssf-panel.shadowed {
 		box-shadow: none;
 		border: 1px solid $light-brown;
-	}
-	
-	#filter_left_panel {
-		position: absolute;
-		left: 0;
-		top: 0;
-		padding: 0;
-		width: 25%;
-		height: 100% !important;
-		background: $white;
-		z-index: 20;
-		overflow: hidden;
-		
-		.filter-radio {
-			height: 100%;
-		}
-	}
-	
-	#ssf_adress_input_box {
-		position: absolute;
-		top: -173px;
-		left: 50%;
-		transform: translate(-50%, 0);
-		z-index: 20;
 	}
 	
 	.store-locator-bottom-half {
