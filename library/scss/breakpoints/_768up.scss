@@ -423,6 +423,23 @@ POSTS & CONTENT STYLES
 		padding-top: 5%;
 		padding-bottom: 5%;
 	}
+	
+	&.module-ctas,
+	&.module-outdoor-ctas,
+	&.module-outdoor-ctas-2 {
+		p {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			@include prefix(justify-content, space-evenly, webkit ms);
+			@include prefix(align-items, center, webkit ms);
+
+			a {
+				vertical-align: middle;
+			}
+		}
+	}
 }
 
 /*********************

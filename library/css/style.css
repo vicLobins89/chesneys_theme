@@ -1314,6 +1314,9 @@ LAYOUT & GRID STYLES
     width: 52%;
     padding: 2rem;
     background: #f5f3f1; }
+    @media only screen and (max-width: 767px) {
+      .row.outdoor-product-single .short-desc {
+        width: 100%; } }
     .row.outdoor-product-single .short-desc p strong, .row.outdoor-product-single .short-desc p b {
       font-family: "Univers", Helvetica, Arial, sans-serif; }
     .row.outdoor-product-single .short-desc .price {
@@ -1691,20 +1694,8 @@ LAYOUT & GRID STYLES
     .module.module-ctas p, .module.module-outdoor-ctas p, .module.module-outdoor-ctas-2 p {
       display: inline-block; }
       @media only screen and (max-width: 767px) {
-        .module.module-ctas p, .module.module-outdoor-ctas p, .module.module-outdoor-ctas-2 p {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-justify-content: space-evenly;
-          -ms-justify-content: space-evenly;
-          justify-content: space-evenly;
-          -webkit-align-items: center;
-          -ms-align-items: center;
-          align-items: center; }
-          .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
-            vertical-align: middle;
-            min-width: 12rem; } }
+        .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
+          min-width: 12rem; } }
   .module.module-our-team h2 {
     text-align: center; }
   .module .primary-btn, .module .image-link + p, .module .image-link .wp-caption-text, .image-link .module .wp-caption-text, .module .vid-thumb .play, .vid-thumb .module .play, .module .row.related-wrapper .woocommerce-loop-product__title, .row.related-wrapper .module .woocommerce-loop-product__title, .module a.comment-reply-link, .module #submit {
@@ -3818,6 +3809,19 @@ TABLET & SMALLER LAPTOPS
   .module.module-sign-up, .module.module-need-help {
     padding-top: 5%;
     padding-bottom: 5%; }
+  .module.module-ctas p, .module.module-outdoor-ctas p, .module.module-outdoor-ctas-2 p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-evenly;
+    -ms-justify-content: space-evenly;
+    justify-content: space-evenly;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center; }
+    .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
+      vertical-align: middle; }
 
   /*********************
   LAYOUT & GRID STYLES

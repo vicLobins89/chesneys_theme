@@ -520,6 +520,10 @@ LAYOUT & GRID STYLES
 			padding: 2rem;
 			background: $light-brown;
 			
+			@media only screen and (max-width: 767px) {
+				width: 100%;
+			}
+			
 			.product_title {
 				@extend .h2;
 				@extend .lhs;
@@ -1021,15 +1025,7 @@ LAYOUT & GRID STYLES
 			display: inline-block;
 			
 			@media only screen and (max-width: 767px) {
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: -webkit-flex;
-				display: flex;
-				@include prefix(justify-content, space-evenly, webkit ms);
-				@include prefix(align-items, center, webkit ms);
-
 				a {
-					vertical-align: middle;
 					min-width: 12rem;
 				}
 			}
