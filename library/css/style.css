@@ -2904,6 +2904,9 @@ POSTS & CONTENT STYLES
   .woocommerce ul.products li.product:hover .hover-text, .woocommerce ul.products li.product:focus .hover-text {
     opacity: 1;
     visibility: visible; }
+@media only screen and (max-width: 767px) {
+  .woocommerce.term-outdoor-living ul.products[class*=columns-] li.product, .woocommerce.outdoor-related ul.products[class*=columns-] li.product, .woocommerce.outdoor-accessories ul.products[class*=columns-] li.product {
+    margin-bottom: 1rem; } }
 .woocommerce.term-outdoor-living ul.products li.product a:not(.button) h2, .woocommerce.outdoor-related ul.products li.product a:not(.button) h2, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2 {
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
   text-transform: none;
