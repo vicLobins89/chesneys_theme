@@ -547,6 +547,9 @@ LAYOUT & GRID STYLES
     float: right;
     width: 66%; }
 
+.equal-height .col-6 {
+  border: 1.5rem solid #fff; }
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
