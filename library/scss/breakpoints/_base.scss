@@ -1259,6 +1259,7 @@ LAYOUT & GRID STYLES
 	.col-6:first-child {
 		padding: 0;
 		background: none;
+		order: 1;
 
 		p, img {
 			padding: 0;
@@ -1266,12 +1267,21 @@ LAYOUT & GRID STYLES
 			font-size: 0;
 		}
 	}
+	
+	.col-6:last-child {
+		order: 2;
+	}
 }
 
 .image-right {
+	.col-6:first-child {
+		order: 2;
+	}
+	
 	.col-6:last-child {
 		padding: 0;
 		background: none;
+		order: 1;
 
 		p, img {
 			padding: 0;

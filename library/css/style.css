@@ -1837,15 +1837,21 @@ LAYOUT & GRID STYLES
 
 .image-left .col-6:first-child {
   padding: 0;
-  background: none; }
+  background: none;
+  order: 1; }
   .image-left .col-6:first-child p, .image-left .col-6:first-child img {
     padding: 0;
     margin: 0;
     font-size: 0; }
+.image-left .col-6:last-child {
+  order: 2; }
 
+.image-right .col-6:first-child {
+  order: 2; }
 .image-right .col-6:last-child {
   padding: 0;
-  background: none; }
+  background: none;
+  order: 1; }
   .image-right .col-6:last-child p, .image-right .col-6:last-child img {
     padding: 0;
     margin: 0;
