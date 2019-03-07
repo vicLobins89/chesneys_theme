@@ -764,11 +764,27 @@ LAYOUT & GRID STYLES
 			.col-6 {
 				width: 100%;
 			}
+			
+			.col-6:first-child {
+				p, img {
+					padding: 0;
+					margin: 0;
+					font-size: 0;
+				}
+			}
 		}
 		
 		&.column-4-8 {
 			.col-6 {
 				width: 100%;
+			}
+			
+			.col-6:last-child {
+				p, img {
+					padding: 0;
+					margin: 0;
+					font-size: 0;
+				}
 			}
 		}
 		
