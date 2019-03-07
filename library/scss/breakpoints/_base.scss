@@ -740,6 +740,10 @@ LAYOUT & GRID STYLES
 	}
 	
 	&.image-column {
+		@media only screen and (max-width: 767px) {
+			padding: 0;
+		}
+		
 		> .cf {
 			background: $light-brown;
 			
@@ -776,6 +780,7 @@ LAYOUT & GRID STYLES
 			
 			.col-6:first-child {
 				order: 1;
+				padding: 0;
 				
 				p, img {
 					padding: 0;
@@ -800,6 +805,7 @@ LAYOUT & GRID STYLES
 			
 			.col-6:last-child {
 				order: 1;
+				padding: 0;
 				
 				p, img {
 					padding: 0;

@@ -1459,6 +1459,9 @@ LAYOUT & GRID STYLES
   font-size: 1.35em; }
   .row.folio-module h3 + p {
     margin: .5rem 0; }
+@media only screen and (max-width: 767px) {
+  .row.image-column {
+    padding: 0; } }
 .row.image-column > .cf, .row.image-column > .comment-respond {
   background: #f5f3f1; }
   @media only screen and (max-width: 767px) {
@@ -1481,7 +1484,8 @@ LAYOUT & GRID STYLES
 .row.image-column.column-8-4 .col-6 {
   width: 100%; }
 .row.image-column.column-8-4 .col-6:first-child {
-  order: 1; }
+  order: 1;
+  padding: 0; }
   .row.image-column.column-8-4 .col-6:first-child p, .row.image-column.column-8-4 .col-6:first-child img {
     padding: 0;
     margin: 0;
@@ -1493,7 +1497,8 @@ LAYOUT & GRID STYLES
 .row.image-column.column-4-8 .col-6:first-child {
   order: 2; }
 .row.image-column.column-4-8 .col-6:last-child {
-  order: 1; }
+  order: 1;
+  padding: 0; }
   .row.image-column.column-4-8 .col-6:last-child p, .row.image-column.column-4-8 .col-6:last-child img {
     padding: 0;
     margin: 0;
