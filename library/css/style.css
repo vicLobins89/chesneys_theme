@@ -1826,6 +1826,12 @@ LAYOUT & GRID STYLES
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
+  @media only screen and (max-width: 767px) {
+    .equal-height > .cf, .equal-height > .comment-respond {
+      -webkit-flex-direction: column;
+      -mox-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 .equal-height .col-6 {
   border: 1.5rem solid #fff;
   background: #f5f3f1; }
@@ -2736,6 +2742,8 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
+.woocommerce .out-of-stock {
+  display: none !important; }
 .woocommerce .woocommerce-info {
   border-color: #4b858e; }
   .woocommerce .woocommerce-info::before {

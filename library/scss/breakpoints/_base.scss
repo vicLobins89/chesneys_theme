@@ -1235,6 +1235,10 @@ LAYOUT & GRID STYLES
 		display: -ms-flexbox;
 		display: -webkit-flex;
 		display: flex;
+		
+		@media only screen and (max-width: 767px) {
+			@include prefix(flex-direction, column, webkit mox ms);
+		}
 	}
 	
 	.col-6 {
@@ -2465,6 +2469,10 @@ POSTS & CONTENT STYLES
 	button.woocommerce-Button,
 	button[type=submit].woocommerce-Button {
 		@extend .secondary-btn;
+	}
+	
+	.out-of-stock {
+		display: none !important;
 	}
 	
 	.woocommerce-info {
