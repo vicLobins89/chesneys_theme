@@ -1554,6 +1554,7 @@ LAYOUT & GRID STYLES
     font-size: .9em;
     font-weight: bold;
     text-transform: uppercase; }
+.row.gmaps .aspect-ratio,
 .row.gmaps .col-6:last-child {
   min-height: 20rem; }
 
@@ -2815,8 +2816,9 @@ POSTS & CONTENT STYLES
     .woocommerce table.shop_table td.product-thumbnail .attachment-woocommerce_thumbnail,
     .woocommerce table.shop_table td.product-thumbnail .woocommerce-placeholder {
       width: 5rem; }
-  .woocommerce table.shop_table.woocommerce-cart-form__contents td:first-child {
-    width: 3rem; }
+  @media only screen and (max-width: 767px) {
+    .woocommerce table.shop_table.woocommerce-cart-form__contents td:first-child {
+      width: 3rem; } }
   .woocommerce table.shop_table .button {
     margin: 0; }
   .woocommerce table.shop_table .checkout_coupon button {
