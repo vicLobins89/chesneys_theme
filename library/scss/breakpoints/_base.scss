@@ -455,7 +455,6 @@ LAYOUT & GRID STYLES
 	
 	&.post-content {
 		margin-top: 2rem;
-		background: $light-brown;
 		
 		.blog & {
 			h3 {
@@ -880,6 +879,12 @@ LAYOUT & GRID STYLES
 			font-size: .9em;
 			font-weight: bold;
 		    text-transform: uppercase;
+		}
+	}
+	
+	&.gmaps {
+		.col-6:last-child {
+			min-height: 20rem;
 		}
 	}
 }
@@ -1429,7 +1434,7 @@ h3, .h3 {
 h4, .h4 {
 	font-size: 1.1em;
 	font-weight: normal;
-	margin: 1.3rem 0 .5rem;
+	margin: 1.5rem 0;
 	font-family: $sans-serif;
 	text-transform: uppercase;
 	

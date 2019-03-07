@@ -1276,8 +1276,7 @@ LAYOUT & GRID STYLES
   .row.full [class*="col-"] {
     padding: 0; }
 .row.post-content {
-  margin-top: 2rem;
-  background: #f5f3f1; }
+  margin-top: 2rem; }
   .blog .row.post-content h3, .archive .row.post-content h3 {
     font-size: 1em;
     margin: 1rem 0; }
@@ -1555,6 +1554,8 @@ LAYOUT & GRID STYLES
     font-size: .9em;
     font-weight: bold;
     text-transform: uppercase; }
+.row.gmaps .col-6:last-child {
+  min-height: 20rem; }
 
 .gray-box {
   padding: 1rem;
@@ -1960,7 +1961,7 @@ h3, .h3 {
 h4, .h4 {
   font-size: 1.1em;
   font-weight: normal;
-  margin: 1.3rem 0 .5rem;
+  margin: 1.5rem 0;
   font-family: "Univers", Helvetica, Arial, sans-serif;
   text-transform: uppercase; }
   h4 + p, .h4 + p {
@@ -3938,6 +3939,8 @@ TABLET & SMALLER LAPTOPS
   .row.image-column.column-4-8 .col-6:last-child {
     width: 66.666%;
     padding: 0; }
+  .row.post-content {
+    background: #f5f3f1; }
 
   .woocommerce .spares-product {
     padding-top: 1rem; }

@@ -537,6 +537,8 @@ LAYOUT & GRID STYLES
 .row.image-column.column-4-8 .col-6:last-child {
   width: 66.666%;
   padding: 0; }
+.row.post-content {
+  background: #f5f3f1; }
 
 .woocommerce .spares-product {
   padding-top: 1rem; }
