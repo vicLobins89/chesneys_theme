@@ -24,8 +24,8 @@ do_action( 'woocommerce_cart_is_empty' );
 
 if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 	<p class="return-to-shop">
-		<a class="secondary-btn" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-			<?php esc_html_e( 'Return to shop', 'woocommerce' ); ?>
+		<a class="secondary-btn" href="<?php echo home_url(); ?>" onclick="history.back();">
+			<?php esc_html_e( 'Back', 'woocommerce' ); ?>
 		</a>
 	</p>
 <?php endif; ?>

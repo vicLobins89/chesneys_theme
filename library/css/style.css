@@ -2517,6 +2517,8 @@ POSTS & CONTENT STYLES
 .entry-content {
   padding: 1.5rem;
   font-size: 1.1rem; }
+  .entry-content .primary-btn, .entry-content .image-link + p, .entry-content .image-link .wp-caption-text, .image-link .entry-content .wp-caption-text, .entry-content .vid-thumb .play, .vid-thumb .entry-content .play, .entry-content .row.related-wrapper .woocommerce-loop-product__title, .row.related-wrapper .entry-content .woocommerce-loop-product__title, .entry-content a.comment-reply-link, .entry-content #submit {
+    font-size: .8em; }
   .entry-content [class*="col-"] .p:first-child,
   .entry-content [class*="col-"] p:first-child {
     margin-top: 0; }
