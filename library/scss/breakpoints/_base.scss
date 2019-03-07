@@ -855,7 +855,12 @@ LAYOUT & GRID STYLES
 	
 	&.module-outdoor-living-shop,
 	&.module-glossary,
-	&.module-design-a-fireplace {	
+	&.module-design-a-fireplace {
+		@media only screen and (max-width: 767px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
 		> .cf {
 			position: relative;
 			width: 100%;

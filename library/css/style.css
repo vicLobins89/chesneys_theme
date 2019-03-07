@@ -1520,6 +1520,10 @@ LAYOUT & GRID STYLES
 
 .module {
   position: relative; }
+  @media only screen and (max-width: 767px) {
+    .module.module-outdoor-living-shop, .module.module-glossary, .module.module-design-a-fireplace {
+      padding-left: 0;
+      padding-right: 0; } }
   .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
     position: relative;
     width: 100%;
