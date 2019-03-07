@@ -1054,6 +1054,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+section, div {
+  outline: none !important; }
+
 #container {
   overflow: hidden; }
 
