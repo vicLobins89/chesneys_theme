@@ -304,7 +304,6 @@ function custom_templates( $templates ) {
 add_filter( 'wpsl_templates', 'custom_templates' );
 
 //WOOCOMMERCE Functions
-require_once( 'woocommerce/shop-functions.php' );
 require_once( 'woocommerce/checkout-functions.php' );
 
 // Custom role
