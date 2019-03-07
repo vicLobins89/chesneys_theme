@@ -853,6 +853,13 @@ LAYOUT & GRID STYLES
 .module {
 	position: relative;
 	
+	+ .module {
+		@media only screen and (max-width: 767px) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+	
 	&.module-outdoor-living-shop,
 	&.module-glossary,
 	&.module-design-a-fireplace {
@@ -934,8 +941,8 @@ LAYOUT & GRID STYLES
 		background: $dark-gray;
 		color: $white;
     	text-align: center;
-		padding-top: 5%;
-		padding-bottom: 5%;
+		padding-top: 15%;
+		padding-bottom: 15%;
 		
 		.inner-module {
 			p:last-child {

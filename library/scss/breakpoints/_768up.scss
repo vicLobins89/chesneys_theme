@@ -403,7 +403,7 @@ POSTS & CONTENT STYLES
 	width: 30%;
 }
 
-.module {	
+.module {
 	&.module-outdoor-living-shop,
 	&.module-glossary,
 	&.module-design-a-fireplace {
@@ -412,6 +412,12 @@ POSTS & CONTENT STYLES
 			padding-top: 40%;
 			margin-bottom: 0;
 		}
+	}
+	
+	&.module-sign-up,
+	&.module-need-help {
+		padding-top: 5%;
+		padding-bottom: 5%;
 	}
 }
 
