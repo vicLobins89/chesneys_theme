@@ -1852,11 +1852,13 @@ LAYOUT & GRID STYLES
     padding: 0;
     margin: 0;
     font-size: 0; }
-.image-left .col-6:last-child {
-  order: 2; }
+@media only screen and (max-width: 767px) {
+  .image-left .col-6:last-child {
+    order: 2; } }
 
-.image-right .col-6:first-child {
-  order: 2; }
+@media only screen and (max-width: 767px) {
+  .image-right .col-6:first-child {
+    order: 2; } }
 .image-right .col-6:last-child {
   padding: 0;
   background: none;

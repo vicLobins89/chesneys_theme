@@ -1278,14 +1278,14 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
-	.col-6:last-child {
-		order: 2;
+	@media only screen and (max-width: 767px) {
+		.col-6:last-child { order: 2; }
 	}
 }
 
 .image-right {
-	.col-6:first-child {
-		order: 2;
+	@media only screen and (max-width: 767px) {
+		.col-6:first-child { order: 2; }
 	}
 	
 	.col-6:last-child {
