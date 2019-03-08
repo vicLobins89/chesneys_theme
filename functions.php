@@ -393,7 +393,6 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archiv
 function winwar_first_sentence( $string ) {
  
     $sentence = preg_split( '/(\.|!|\?)\s/', $string, 2, PREG_SPLIT_DELIM_CAPTURE );
-	print_r($sentence);
 	if( !isset($sentence['1']) ) {
 		return $sentence['0'];
 	} else {
