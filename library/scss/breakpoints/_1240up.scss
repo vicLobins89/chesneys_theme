@@ -25,3 +25,35 @@ html {
 		max-width: 1080px;
 	}
 }
+
+.blog-wrapper {	
+	.blog-module {
+		padding: 7.5% 0;
+		
+		p {
+			width: 70%;
+		}
+	}
+	
+	.col-4 {
+		width: 27.333%;
+		
+		&.post-item-1 {
+			margin-left: 9%;
+		}
+		
+		&.post-item-3 {
+			margin-right: 9%;
+		}
+	}
+	
+	.text {
+		float: right;
+		width: 42%;
+	}
+	
+	.thumb {
+		float: left;
+		width: 58%;
+	}
+}
