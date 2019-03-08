@@ -604,7 +604,7 @@ FOOTER STYLES
   padding: 2rem 4rem; }
 
 .footer-links .nav .menu-item {
-  display: block; }
+  display: block !important; }
 
 /******************************************************************
 Site Name: Honey
