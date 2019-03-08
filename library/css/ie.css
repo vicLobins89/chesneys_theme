@@ -413,6 +413,11 @@ body:not(.is-mobile) .primary-nav {
       body:not(.is-mobile) .primary-nav > li ul.children > li:focus > ul.children {
         opacity: 1;
         visibility: visible; }
+  body:not(.is-mobile) .primary-nav > li.current_page_item > a,
+  body:not(.is-mobile) .primary-nav > li.current-menu-ancestor > a,
+  body:not(.is-mobile) .primary-nav > li.current-menu-item > a,
+  body:not(.is-mobile) .primary-nav > li.current_page_ancestor > a {
+    color: #4b858e; }
 body:not(.is-mobile) .socket {
   display: block; }
   body:not(.is-mobile) .socket .socket-nav {
