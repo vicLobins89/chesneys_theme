@@ -144,8 +144,8 @@ jQuery(document).ready(function($) {
 	menuResize();
 	
 	$(window).on('resize load', function(){
-		if( viewport.width < 768 ) {
-			//$('body').addClass('is-mobile');
+		if( viewport.width < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			$('body').addClass('is-mobile');
 			
 			// Menu
 			$('.primary-nav > li.menu-item-has-children').unbind('mouseenter mouseleave');
@@ -180,7 +180,7 @@ jQuery(document).ready(function($) {
 				$(this).next().css('top', (linkHeight-textHeight));
 			});
 		} else {
-			//$('body').removeClass('is-mobile');
+			$('body').removeClass('is-mobile');
 			
 			// Menu
 			$('.primary-nav > li.menu-item-has-children').unbind('click');
@@ -209,12 +209,6 @@ jQuery(document).ready(function($) {
 		}
 		menuResize();
 	});
-	
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		$('body').addClass('is-mobile');
-	} else {
-		$('body').removeClass('is-mobile');
-	}
 	
 	$(window).on('scroll', function(){
 		if( $(this).scrollTop() >= 100 ) {
