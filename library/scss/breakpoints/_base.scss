@@ -1337,6 +1337,14 @@ LAYOUT & GRID STYLES
 	}
 }
 
+.gallery {
+	&.gallery-columns-4 {
+		.gallery-item {
+			@extend .col-3;
+		}
+	}
+}
+
 /*********************
 LINK STYLES
 *********************/

@@ -539,7 +539,7 @@ Stylesheet: Grid Stylesheet
 .col-2 {
   width: 16.66%; }
 
-.col-3 {
+.col-3, .gallery.gallery-columns-4 .gallery-item {
   width: 25%; }
 
 .col-4 {
