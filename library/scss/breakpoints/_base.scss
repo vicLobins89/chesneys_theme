@@ -1044,6 +1044,7 @@ LAYOUT & GRID STYLES
 	&.module-outdoor-ctas,
 	&.module-outdoor-ctas-2 {
 		padding: 0 0 1rem 0;
+		font-size: .8rem;
 		
 		@media only screen and (max-width: 767px) {
 			text-align: center;
@@ -1058,6 +1059,7 @@ LAYOUT & GRID STYLES
 			
 			a {
 				vertical-align: middle;
+				max-width: 14rem;
 				
 				@media only screen and (max-width: 767px) {
 					min-width: 12rem;

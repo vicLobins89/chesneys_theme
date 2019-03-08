@@ -1715,7 +1715,8 @@ LAYOUT & GRID STYLES
         width: 20rem;
         height: 3.5rem; }
   .module.module-ctas, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
-    padding: 0 0 1rem 0; }
+    padding: 0 0 1rem 0;
+    font-size: .8rem; }
     @media only screen and (max-width: 767px) {
       .module.module-ctas, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
         text-align: center; } }
@@ -1724,7 +1725,8 @@ LAYOUT & GRID STYLES
     .module.module-ctas p, .module.module-outdoor-ctas p, .module.module-outdoor-ctas-2 p {
       display: inline-block; }
       .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
-        vertical-align: middle; }
+        vertical-align: middle;
+        max-width: 14rem; }
         @media only screen and (max-width: 767px) {
           .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
             min-width: 12rem; } }
@@ -3980,6 +3982,29 @@ TABLET & SMALLER LAPTOPS
     background: #f5f3f1; }
   .row.outdoor-product-single {
     padding: 1rem 1.5rem; }
+    .row.outdoor-product-single .woocommerce-product-gallery {
+      width: 66.666%; }
+    .row.outdoor-product-single .cart {
+      position: absolute;
+      bottom: 2rem; }
+      .row.outdoor-product-single .cart .secondary-btn, .row.outdoor-product-single .cart .search input[type="submit"], .search .row.outdoor-product-single .cart input[type="submit"], .row.outdoor-product-single .cart .woocommerce button.single_add_to_cart_button, .woocommerce .row.outdoor-product-single .cart button.single_add_to_cart_button,
+      .row.outdoor-product-single .cart .woocommerce button.woocommerce-Button,
+      .woocommerce .row.outdoor-product-single .cart button.woocommerce-Button, .row.outdoor-product-single .cart .woocommerce table.shop_table .button, .woocommerce table.shop_table .row.outdoor-product-single .cart .button, .row.outdoor-product-single .cart .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .row.outdoor-product-single .cart .button, .row.outdoor-product-single .cart .woocommerce .button.wc-forward, .woocommerce .row.outdoor-product-single .cart .button.wc-forward, .row.outdoor-product-single .cart #add_payment_method form input.button.alt, #add_payment_method form .row.outdoor-product-single .cart input.button.alt,
+      .row.outdoor-product-single .cart .woocommerce-cart form input.button.alt,
+      .woocommerce-cart form .row.outdoor-product-single .cart input.button.alt,
+      .row.outdoor-product-single .cart .woocommerce-checkout form input.button.alt,
+      .woocommerce-checkout form .row.outdoor-product-single .cart input.button.alt, .row.outdoor-product-single .cart #add_payment_method form a.button.cancel, #add_payment_method form .row.outdoor-product-single .cart a.button.cancel,
+      .row.outdoor-product-single .cart .woocommerce-cart form a.button.cancel,
+      .woocommerce-cart form .row.outdoor-product-single .cart a.button.cancel,
+      .row.outdoor-product-single .cart .woocommerce-checkout form a.button.cancel,
+      .woocommerce-checkout form .row.outdoor-product-single .cart a.button.cancel, .row.outdoor-product-single .cart #add_payment_method button[name=login], #add_payment_method .row.outdoor-product-single .cart button[name=login],
+      .row.outdoor-product-single .cart .woocommerce-cart button[name=login],
+      .woocommerce-cart .row.outdoor-product-single .cart button[name=login],
+      .row.outdoor-product-single .cart .woocommerce-checkout button[name=login],
+      .woocommerce-checkout .row.outdoor-product-single .cart button[name=login] {
+        clear: both;
+        width: 100%;
+        margin: 0; }
 
   .woocommerce .spares-product {
     padding-top: 1rem; }

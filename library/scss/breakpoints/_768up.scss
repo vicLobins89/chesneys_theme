@@ -511,6 +511,21 @@ LAYOUT & GRID STYLES
 	
 	&.outdoor-product-single {
 		padding: 1rem 1.5rem;
+		
+		.woocommerce-product-gallery {
+			width: 66.666%;
+		}
+		
+		.cart {
+			position: absolute;
+			bottom: 2rem;
+			
+			.secondary-btn {
+				clear: both;
+				width: 100%;
+			    margin: 0;
+			}
+		}
 	}
 }
 
