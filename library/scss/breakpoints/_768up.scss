@@ -529,11 +529,11 @@ LAYOUT & GRID STYLES
 			}
 		}
 	}
-}
-
-.image-left,
-.image-right {
-	> .cf { @include prefix(flex-direction, row, webkit moz ms); }
+	
+	&.image-left,
+	&.image-right {
+		> .cf { @include prefix(flex-direction, row, webkit moz ms); }
+	}
 }
 
 .woocommerce {

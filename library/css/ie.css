@@ -532,9 +532,7 @@ LAYOUT & GRID STYLES
       clear: both;
       width: 100%;
       margin: 0 !important; }
-
-.image-left > .cf,
-.image-right > .cf {
+.row.image-left > .cf, .row.image-right > .cf {
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
   -ms-flex-direction: row;

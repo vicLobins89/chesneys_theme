@@ -4007,10 +4007,7 @@ TABLET & SMALLER LAPTOPS
         clear: both;
         width: 100%;
         margin: 0 !important; }
-
-  .image-left > .cf, .image-left > .comment-respond,
-  .image-right > .cf,
-  .image-right > .comment-respond {
+  .row.image-left > .cf, .row.image-left > .comment-respond, .row.image-right > .cf, .row.image-right > .comment-respond {
     -webkit-flex-direction: row;
     -moz-flex-direction: row;
     -ms-flex-direction: row;
