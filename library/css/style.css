@@ -1076,7 +1076,7 @@ img {
     img.size-folio-portrait[class*="col-"], img.size-full[class*="col-"] {
       padding: 0; }
     img.size-folio-portrait.col-6, img.size-full.col-6 {
-      width: 50%; }
+      width: 100%; }
   img.alignleft {
     float: left; }
   img.alignright {
@@ -2989,7 +2989,7 @@ POSTS & CONTENT STYLES
       display: none; }
   .woocommerce ul.products li.product p {
     margin: 1.3rem 1rem;
-    font-size: 1em; }
+    font-size: 1.1em; }
   .woocommerce ul.products li.product:hover .hover-text, .woocommerce ul.products li.product:focus .hover-text {
     opacity: 1;
     visibility: visible; }
@@ -4084,6 +4084,12 @@ LARGE VIEWING SIZE
   ******************************************************************/
   html {
     font-size: 17px; }
+
+  img {
+    height: auto;
+    pointer-events: none; }
+    img.size-folio-portrait.col-6, img.size-full.col-6 {
+      width: 50%; }
 
   .entry-content:not(.full) > div {
     max-width: 1400px; }

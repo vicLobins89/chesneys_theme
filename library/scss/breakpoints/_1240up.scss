@@ -10,6 +10,18 @@ html {
 	font-size: 17px;
 }
 
+img {
+	height: auto;
+	pointer-events: none;
+	
+	&.size-folio-portrait,
+	&.size-full {
+		&.col-6 {
+			width: 50%;
+		}
+	}
+}
+
 .entry-content:not(.full) {
 	> div {
 		max-width: 1400px;
