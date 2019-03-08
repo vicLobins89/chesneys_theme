@@ -147,6 +147,36 @@ jQuery(document).ready(function($) {
 	}
 	
 	$(window).on('resize load', function(){
+		if( viewport.width < 768 ) {
+			// Reveal cliks
+			$('.reveal-copy').each(function(){
+				var selected = $(this).attr('class').split(' ')[1],
+					selectedHtml = $(this).html();
+				
+				$(this).empty();
+				$('.hover-link.'+selected+'').parent().append(selectedHtml);
+			});
+			
+			$('.hover-link').each(function(){
+				var linkHeight = $(this).outerHeight(),
+					textHeight = $(this).next().outerHeight();
+				$(this).next().css('top', (linkHeight-textHeight));
+			});
+		} else {
+			// Reveal clicks
+			$('.hover-link').on('click', function(){
+				var selected = $(this).attr('class').split(' ')[1];
+
+				$('.hover-link').not(this).removeClass('active');
+				$(this).toggleClass('active');
+
+				$('.reveal-copy:not(.'+selected+')').removeClass('active');
+				$('.reveal-copy.'+selected+'').toggleClass('active');
+			});
+		}
+	});
+	
+	$(window).on('resize load', function(){
 		if( viewport.width < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 			$('body').addClass('is-mobile');
 			
@@ -167,21 +197,6 @@ jQuery(document).ready(function($) {
 				$('.primary-nav > li > ul > li > ul > li').not(this).removeClass('active');
 				$(this).addClass('active');
 			});
-			
-			// Reveal cliks
-			$('.reveal-copy').each(function(){
-				var selected = $(this).attr('class').split(' ')[1],
-					selectedHtml = $(this).html();
-				
-				$(this).empty();
-				$('.hover-link.'+selected+'').parent().append(selectedHtml);
-			});
-			
-			$('.hover-link').each(function(){
-				var linkHeight = $(this).outerHeight(),
-					textHeight = $(this).next().outerHeight();
-				$(this).next().css('top', (linkHeight-textHeight));
-			});
 		} else {
 			$('body').removeClass('is-mobile');
 			
@@ -197,17 +212,6 @@ jQuery(document).ready(function($) {
 			$('#content, #primary, #main, .socket, .logo, .primary-nav > li:not(.menu-item-has-children)').hover(function(){
 				$('.primary-nav > li').removeClass('active');
 				$('#nav_widget').removeClass('active');
-			});
-			
-			// Reveal clicks
-			$('.hover-link').on('click', function(){
-				var selected = $(this).attr('class').split(' ')[1];
-
-				$('.hover-link').not(this).removeClass('active');
-				$(this).toggleClass('active');
-
-				$('.reveal-copy:not(.'+selected+')').removeClass('active');
-				$('.reveal-copy.'+selected+'').toggleClass('active');
 			});
 		}
 		menuResize();
