@@ -260,6 +260,10 @@ body:not(.is-mobile) {
 						right: -999%;
 						width: 1000%;
 					}
+					
+					&:hover, &:focus {
+						color: $teal;
+					}
 				}
 				
 				ul.sub-menu,
