@@ -566,8 +566,6 @@ LAYOUT & GRID STYLES
 
 .ssf-main-content#mainContent .store-locator-map {
   z-index: 10;
-  width: 75%;
-  left: 25%;
   top: 0; }
 .ssf-main-content#mainContent .ssf-row {
   position: relative;
@@ -575,18 +573,6 @@ LAYOUT & GRID STYLES
   margin: 0;
   padding: 0;
   max-width: none; }
-.ssf-main-content#mainContent #filter_left_panel {
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 0;
-  width: 25%;
-  height: 100% !important;
-  background: #f5f3f1;
-  z-index: 20;
-  overflow: hidden; }
-  .ssf-main-content#mainContent #filter_left_panel .filter-radio {
-    height: 100%; }
 .ssf-main-content#mainContent #ssf_adress_input_box {
   position: absolute;
   top: -173px;
@@ -637,8 +623,23 @@ html {
 .module.module-outdoor-living-shop > .cf, .module.module-glossary > .cf, .module.module-design-a-fireplace > .cf {
   padding-top: 40%; }
 
+.ssf-main-content#mainContent .store-locator-map {
+  width: 75%;
+  left: 25%; }
 .ssf-main-content#mainContent .ssf-row {
   height: 800px; }
+.ssf-main-content#mainContent #filter_left_panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+  width: 25%;
+  height: 100% !important;
+  background: #f5f3f1;
+  z-index: 20;
+  overflow: hidden; }
+  .ssf-main-content#mainContent #filter_left_panel .filter-radio {
+    height: 100%; }
 
 /******************************************************************
 ADDITIONAL IE FIXES

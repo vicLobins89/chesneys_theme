@@ -1387,6 +1387,10 @@ h2, .h2 {
 	text-transform: uppercase;
 	position: relative;
 	
+	.page-find-a-stockist & {
+		font-size: 1.5em;
+	}
+	
 	&:after {
 		display: block;
 		position: absolute;
@@ -3246,6 +3250,7 @@ POSTS & CONTENT STYLES
 	.ssf-panel.shadowed {
 		box-shadow: none;
 		border: 1px solid $light-brown;
+		background: $light-brown;
 	}
 	
 	.store-locator-bottom-half {

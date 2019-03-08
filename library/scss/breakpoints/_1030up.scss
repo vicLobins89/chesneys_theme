@@ -31,7 +31,28 @@ html {
 }
 
 .ssf-main-content#mainContent {
+	.store-locator-map {
+		width: 75%;
+		left: 25%;
+	}
+	
 	.ssf-row {
 		height: 800px;
+	}
+	
+	#filter_left_panel {
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 0;
+		width: 25%;
+		height: 100% !important;
+		background: $light-brown;
+		z-index: 20;
+		overflow: hidden;
+
+		.filter-radio {
+			height: 100%;
+		}
 	}
 }

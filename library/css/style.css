@@ -1936,6 +1936,8 @@ h2, .h2, .row.outdoor-product-single .short-desc .product_title, .woocommerce .s
   margin: .35em 0 .75em;
   text-transform: uppercase;
   position: relative; }
+  .page-find-a-stockist h2, .page-find-a-stockist .h2, .page-find-a-stockist .row.outdoor-product-single .short-desc .product_title, .row.outdoor-product-single .short-desc .page-find-a-stockist .product_title, .page-find-a-stockist .woocommerce .spares-product .product_title, .woocommerce .spares-product .page-find-a-stockist .product_title {
+    font-size: 1.5em; }
   h2:after, .h2:after, .row.outdoor-product-single .short-desc .product_title:after, .woocommerce .spares-product .product_title:after {
     display: block;
     position: absolute;
@@ -3282,7 +3284,8 @@ POSTS & CONTENT STYLES
   text-align: center; }
 .ssf-main-content#mainContent .ssf-panel.shadowed {
   box-shadow: none;
-  border: 1px solid #f5f3f1; }
+  border: 1px solid #f5f3f1;
+  background: #f5f3f1; }
 .ssf-main-content#mainContent .store-locator-bottom-half {
   padding-top: 2rem;
   background: white; }
@@ -4046,8 +4049,6 @@ TABLET & SMALLER LAPTOPS
 
   .ssf-main-content#mainContent .store-locator-map {
     z-index: 10;
-    width: 75%;
-    left: 25%;
     top: 0; }
   .ssf-main-content#mainContent .ssf-row {
     position: relative;
@@ -4055,18 +4056,6 @@ TABLET & SMALLER LAPTOPS
     margin: 0;
     padding: 0;
     max-width: none; }
-  .ssf-main-content#mainContent #filter_left_panel {
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 0;
-    width: 25%;
-    height: 100% !important;
-    background: #f5f3f1;
-    z-index: 20;
-    overflow: hidden; }
-    .ssf-main-content#mainContent #filter_left_panel .filter-radio {
-      height: 100%; }
   .ssf-main-content#mainContent #ssf_adress_input_box {
     position: absolute;
     top: -173px;
@@ -4121,8 +4110,23 @@ DESKTOP
   .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
     padding-top: 40%; }
 
+  .ssf-main-content#mainContent .store-locator-map {
+    width: 75%;
+    left: 25%; }
   .ssf-main-content#mainContent .ssf-row {
-    height: 800px; } }
+    height: 800px; }
+  .ssf-main-content#mainContent #filter_left_panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    width: 25%;
+    height: 100% !important;
+    background: #f5f3f1;
+    z-index: 20;
+    overflow: hidden; }
+    .ssf-main-content#mainContent #filter_left_panel .filter-radio {
+      height: 100%; } }
 /*********************
 LARGE VIEWING SIZE
 *********************/

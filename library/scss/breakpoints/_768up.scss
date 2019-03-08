@@ -588,8 +588,6 @@ LAYOUT & GRID STYLES
 .ssf-main-content#mainContent {
 	.store-locator-map {
 		z-index: 10;
-		width: 75%;
-		left: 25%;
 		top: 0;
 	}
 
@@ -599,22 +597,6 @@ LAYOUT & GRID STYLES
 		margin: 0;
 		padding: 0;
 		max-width: none;
-	}
-
-	#filter_left_panel {
-		position: absolute;
-		left: 0;
-		top: 0;
-		padding: 0;
-		width: 25%;
-		height: 100% !important;
-		background: $light-brown;
-		z-index: 20;
-		overflow: hidden;
-
-		.filter-radio {
-			height: 100%;
-		}
 	}
 
 	#ssf_adress_input_box {
