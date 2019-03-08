@@ -2978,6 +2978,7 @@ POSTS & CONTENT STYLES
   .woocommerce ul.products li.product .woocommerce-loop-category__title,
   .woocommerce ul.products li.product .woocommerce-loop-product__title {
     font-family: "Univers", Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
     padding: 0;
     margin: 0 1rem 1.25rem; }
     .woocommerce ul.products li.product .woocommerce-loop-category__title .count,
@@ -2985,7 +2986,7 @@ POSTS & CONTENT STYLES
       display: none; }
   .woocommerce ul.products li.product p {
     margin: 1.3rem 1rem;
-    font-size: 1.2rem; }
+    font-size: 1em; }
   .woocommerce ul.products li.product:hover .hover-text, .woocommerce ul.products li.product:focus .hover-text {
     opacity: 1;
     visibility: visible; }
@@ -3264,6 +3265,9 @@ POSTS & CONTENT STYLES
   #text_slider.sa_owl_theme .owl-dots .active span {
     background-color: #f5f3f1 !important; }
 
+.ssf-main-content#mainContent .ssf-column, .ssf-main-content#mainContent .ssf-columns {
+  float: none;
+  text-align: center; }
 .ssf-main-content#mainContent .ssf-panel.shadowed {
   box-shadow: none;
   border: 1px solid #f5f3f1; }
@@ -4012,9 +4016,6 @@ TABLET & SMALLER LAPTOPS
     margin: 0;
     padding: 0;
     max-width: none; }
-  .ssf-main-content#mainContent .ssf-column, .ssf-main-content#mainContent .ssf-columns {
-    float: none;
-    text-align: center; }
   .ssf-main-content#mainContent #filter_left_panel {
     position: absolute;
     left: 0;

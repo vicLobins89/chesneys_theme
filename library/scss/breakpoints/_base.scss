@@ -2850,6 +2850,7 @@ POSTS & CONTENT STYLES
 			.woocommerce-loop-category__title,
 			.woocommerce-loop-product__title {
 				font-family: $sans-serif;
+				font-size: 1.2em;
 				padding: 0;
 				margin: 0 1rem 1.25rem;
 
@@ -2860,7 +2861,7 @@ POSTS & CONTENT STYLES
 			
 			p {
 				margin: 1.3rem 1rem;
-    			font-size: 1.2rem;
+    			font-size: 1em;
 			}
 			
 			&:hover, &:focus {
@@ -3226,6 +3227,11 @@ POSTS & CONTENT STYLES
 
 // store locator
 .ssf-main-content#mainContent {
+	.ssf-column, .ssf-columns {
+		float: none;
+		text-align: center;
+	}
+	
 	.ssf-panel.shadowed {
 		box-shadow: none;
 		border: 1px solid $light-brown;

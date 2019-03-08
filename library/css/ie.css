@@ -562,9 +562,6 @@ LAYOUT & GRID STYLES
   margin: 0;
   padding: 0;
   max-width: none; }
-.ssf-main-content#mainContent .ssf-column, .ssf-main-content#mainContent .ssf-columns {
-  float: none;
-  text-align: center; }
 .ssf-main-content#mainContent #filter_left_panel {
   position: absolute;
   left: 0;
