@@ -1109,6 +1109,15 @@ LAYOUT & GRID STYLES
 	}
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1239px) {
+	.cta-wrapper {
+		.col-4:last-child {
+			clear: both;
+			width: 100%;
+		}
+	}
+}
+
 .cta-box {
 	padding: 2rem;
 	
