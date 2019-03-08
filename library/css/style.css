@@ -4084,7 +4084,10 @@ TABLET & SMALLER LAPTOPS
   FOOTER STYLES
   *********************/
   .footer {
-    padding: 2rem 4rem; } }
+    padding: 2rem 4rem; }
+
+  .footer-links .nav .menu-item {
+    display: inline-block; } }
 /*********************
 DESKTOP
 *********************/
