@@ -177,7 +177,12 @@ jQuery(document).ready(function($) {
 			// image-column bg
 			$('.image-column.column-4-8 .col-6:last-child, .image-column.column-8-4 .col-6:first-child').each(function(){
 				var imgSrc = $(this).find('img').attr('src');
-				$(this).css('background', 'url("'+imgSrc+'")');
+				$(this).find('img').css('visibility', 'hidden');
+				$(this).css({
+					'background-image': 'url("'+imgSrc+'")',
+					'background-repeat': 'no-repeat',
+					'background-size': 'cover'
+				});
 			});
 		}
 	});
