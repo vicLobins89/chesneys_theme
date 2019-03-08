@@ -3742,9 +3742,7 @@ TABLET & SMALLER LAPTOPS
       body:not(.is-mobile) .primary-nav > li > a:after {
         content: none !important;
         display: none !important; }
-      body:not(.is-mobile) .primary-nav > li:hover > ul.sub-menu,
-      body:not(.is-mobile) .primary-nav > li:hover > ul.children, body:not(.is-mobile) .primary-nav > li:focus > ul.sub-menu,
-      body:not(.is-mobile) .primary-nav > li:focus > ul.children, body:not(.is-mobile) .primary-nav > li.active > ul.sub-menu,
+      body:not(.is-mobile) .primary-nav > li.active > ul.sub-menu,
       body:not(.is-mobile) .primary-nav > li.active > ul.children {
         opacity: 1;
         visibility: visible; }
