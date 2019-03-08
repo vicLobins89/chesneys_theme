@@ -243,7 +243,7 @@ jQuery(document).ready(function($) {
 				}
 			});
 			
-			('.primary-nav > li.menu-item-has-children li').on('click', function(e){
+			$('.primary-nav > li.menu-item-has-children li').on('click', function(e){
 				e.stopPropagation();
 			});
 		}
