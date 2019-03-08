@@ -141,7 +141,6 @@ jQuery(document).ready(function($) {
 			$('#content, #primary').css('padding-top', 'auto');
 		}
 	}
-	menuResize();
 	
 	$(window).on('resize load', function(){
 		if( viewport.width < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
