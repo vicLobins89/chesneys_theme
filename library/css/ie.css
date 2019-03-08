@@ -184,7 +184,7 @@ p, .p {
 /*********************
 HEADER STYLES
 *********************/
-.header {
+body:not(.is-mobile) .header {
   position: relative;
   font-size: 0.8rem; }
 
