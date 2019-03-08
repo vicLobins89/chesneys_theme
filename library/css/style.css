@@ -1904,6 +1904,11 @@ LAYOUT & GRID STYLES
   width: 100%;
   padding: 1rem;
   margin: 0; }
+  .gallery.gallery-columns-4 .gallery-item .gallery-caption {
+    margin: 0;
+    color: #142128;
+    font-family: "Univers", Helvetica, Arial, sans-serif;
+    font-size: 1.1em; }
 
 /*********************
 LINK STYLES
