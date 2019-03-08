@@ -242,7 +242,11 @@ body:not(.is-mobile) {
 						background-size: 7px;
 					}
 				}
-
+				
+				&:hover,
+				&:focus {
+					color: $teal;
+				}
 			}
 			
 			> li {
@@ -259,10 +263,6 @@ body:not(.is-mobile) {
 						top: 0;
 						right: -999%;
 						width: 1000%;
-					}
-					
-					&:hover, &:focus {
-						color: $teal;
 					}
 				}
 				

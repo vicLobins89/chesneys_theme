@@ -3800,6 +3800,10 @@ TABLET & SMALLER LAPTOPS
             margin-left: 9px;
             background: url(../images/arrow-right.png) no-repeat center;
             background-size: 7px; }
+          body:not(.is-mobile) .primary-nav > li ul.sub-menu li:hover, body:not(.is-mobile) .primary-nav > li ul.sub-menu li:focus,
+          body:not(.is-mobile) .primary-nav > li ul.children li:hover,
+          body:not(.is-mobile) .primary-nav > li ul.children li:focus {
+            color: #4b858e; }
         body:not(.is-mobile) .primary-nav > li ul.sub-menu > li > ul.sub-menu,
         body:not(.is-mobile) .primary-nav > li ul.sub-menu > li > ul.children,
         body:not(.is-mobile) .primary-nav > li ul.children > li > ul.sub-menu,
@@ -3817,14 +3821,6 @@ TABLET & SMALLER LAPTOPS
             top: 0;
             right: -999%;
             width: 1000%; }
-          body:not(.is-mobile) .primary-nav > li ul.sub-menu > li > ul.sub-menu:hover, body:not(.is-mobile) .primary-nav > li ul.sub-menu > li > ul.sub-menu:focus,
-          body:not(.is-mobile) .primary-nav > li ul.sub-menu > li > ul.children:hover,
-          body:not(.is-mobile) .primary-nav > li ul.sub-menu > li > ul.children:focus,
-          body:not(.is-mobile) .primary-nav > li ul.children > li > ul.sub-menu:hover,
-          body:not(.is-mobile) .primary-nav > li ul.children > li > ul.sub-menu:focus,
-          body:not(.is-mobile) .primary-nav > li ul.children > li > ul.children:hover,
-          body:not(.is-mobile) .primary-nav > li ul.children > li > ul.children:focus {
-            color: #4b858e; }
         body:not(.is-mobile) .primary-nav > li ul.sub-menu > li ul.sub-menu,
         body:not(.is-mobile) .primary-nav > li ul.sub-menu > li ul.children,
         body:not(.is-mobile) .primary-nav > li ul.children > li ul.sub-menu,
