@@ -1778,7 +1778,9 @@ LAYOUT & GRID STYLES
       width: 90%;
       margin: 1rem auto 2rem; }
     .blog-wrapper .blog-module .primary-btn, .blog-wrapper .blog-module .image-link + p, .blog-wrapper .blog-module .image-link .wp-caption-text, .image-link .blog-wrapper .blog-module .wp-caption-text, .blog-wrapper .blog-module .vid-thumb .play, .vid-thumb .blog-wrapper .blog-module .play, .blog-wrapper .blog-module .row.related-wrapper .woocommerce-loop-product__title, .row.related-wrapper .blog-wrapper .blog-module .woocommerce-loop-product__title, .blog-wrapper .blog-module a.comment-reply-link, .blog-wrapper .blog-module #submit {
-      margin: 0; }
+      display: block;
+      max-width: 12rem;
+      margin: 2rem auto 0; }
     .blog-wrapper .blog-module:before {
       content: '';
       display: block;
