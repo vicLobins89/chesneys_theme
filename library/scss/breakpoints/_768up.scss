@@ -536,7 +536,13 @@ LAYOUT & GRID STYLES
 			@include prefix(flex-direction, row, webkit moz ms);
 			
 			.page-about-us & {
-				@media only screen and (max-width: 1240px) { @include prefix(flex-direction, column, webkit moz ms); }
+				@media only screen and (max-width: 1240px) { 
+					@include prefix(flex-direction, column, webkit moz ms);
+					
+					.col-6 {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}

@@ -4017,7 +4017,9 @@ TABLET & SMALLER LAPTOPS
       -webkit-flex-direction: column;
       -moz-flex-direction: column;
       -ms-flex-direction: column;
-      flex-direction: column; } }
+      flex-direction: column; }
+      .page-about-us .row.image-left > .cf .col-6, .page-about-us .row.image-left > .comment-respond .col-6, .page-about-us .row.image-right > .cf .col-6, .page-about-us .row.image-right > .comment-respond .col-6 {
+        width: 100%; } }
 
 @media only screen and (min-width: 768px) {
   .woocommerce .spares-product {
