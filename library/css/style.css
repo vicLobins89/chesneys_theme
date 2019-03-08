@@ -4047,7 +4047,8 @@ TABLET & SMALLER LAPTOPS
   .ssf-main-content#mainContent .store-locator-map {
     z-index: 10;
     width: 75%;
-    left: 25%; }
+    left: 25%;
+    top: 0; }
   .ssf-main-content#mainContent .ssf-row {
     position: relative;
     height: 435px;
@@ -4118,7 +4119,10 @@ DESKTOP
     width: 30%; }
 
   .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
-    padding-top: 40%; } }
+    padding-top: 40%; }
+
+  .ssf-main-content#mainContent .ssf-row {
+    height: 800px; } }
 /*********************
 LARGE VIEWING SIZE
 *********************/

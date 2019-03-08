@@ -567,7 +567,8 @@ LAYOUT & GRID STYLES
 .ssf-main-content#mainContent .store-locator-map {
   z-index: 10;
   width: 75%;
-  left: 25%; }
+  left: 25%;
+  top: 0; }
 .ssf-main-content#mainContent .ssf-row {
   position: relative;
   height: 435px;
@@ -635,6 +636,9 @@ html {
 
 .module.module-outdoor-living-shop > .cf, .module.module-glossary > .cf, .module.module-design-a-fireplace > .cf {
   padding-top: 40%; }
+
+.ssf-main-content#mainContent .ssf-row {
+  height: 800px; }
 
 /******************************************************************
 ADDITIONAL IE FIXES
