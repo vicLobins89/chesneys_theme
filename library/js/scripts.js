@@ -145,7 +145,7 @@ jQuery(document).ready(function($) {
 	
 	$(window).on('resize load', function(){
 		if( viewport.width < 768 ) {
-			$('body').addClass('is-mobile');
+			//$('body').addClass('is-mobile');
 			
 			// Menu
 			$('.primary-nav > li.menu-item-has-children').unbind('mouseenter mouseleave');
@@ -180,7 +180,7 @@ jQuery(document).ready(function($) {
 				$(this).next().css('top', (linkHeight-textHeight));
 			});
 		} else {
-			$('body').removeClass('is-mobile');
+			//$('body').removeClass('is-mobile');
 			
 			// Menu
 			$('.primary-nav > li.menu-item-has-children').unbind('click');
