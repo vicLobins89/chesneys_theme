@@ -3983,7 +3983,7 @@ TABLET & SMALLER LAPTOPS
   .row.outdoor-product-single {
     padding: 1rem 1.5rem; }
     .row.outdoor-product-single .woocommerce-product-gallery {
-      width: 66.666%; }
+      width: 66.666% !important; }
     .row.outdoor-product-single .cart {
       float: left;
       margin: 0; }
