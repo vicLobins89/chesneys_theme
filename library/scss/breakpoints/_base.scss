@@ -1340,8 +1340,9 @@ LAYOUT & GRID STYLES
 .gallery {
 	&.gallery-columns-4 {
 		.gallery-item {
-			@extend .col-3;
-			float: left;
+			width: 100%;
+			padding: 1rem;
+			margin: 0;
 		}
 	}
 }

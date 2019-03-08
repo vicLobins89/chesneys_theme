@@ -539,7 +539,7 @@ Stylesheet: Grid Stylesheet
 .col-2 {
   width: 16.66%; }
 
-.col-3, .gallery.gallery-columns-4 .gallery-item {
+.col-3 {
   width: 25%; }
 
 .col-4 {
@@ -1901,7 +1901,9 @@ LAYOUT & GRID STYLES
   margin: 0 0 8px !important; }
 
 .gallery.gallery-columns-4 .gallery-item {
-  float: left; }
+  width: 100%;
+  padding: 1rem;
+  margin: 0; }
 
 /*********************
 LINK STYLES
@@ -3604,23 +3606,13 @@ LARGER MOBILE DEVICES
     clear: both; }
 
   /* end .entry-content */
+  .gallery.gallery-columns-4 .gallery-item {
+    width: 50%; }
+
   /*********************
   FOOTER STYLES
   *********************/
-  /* end .footer-links */
-  /*********************
-  SLIDER STYLES
-  *********************/
-  div#n2-ss-2-align .nextend-thumbnail-default,
-  div#n2-ss-2-align .nextend-thumbnail-inner,
-  div#n2-ss-3-align .nextend-thumbnail-default,
-  div#n2-ss-3-align .nextend-thumbnail-inner {
-    bottom: 1rem !important; }
-    div#n2-ss-2-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
-    div#n2-ss-2-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div,
-    div#n2-ss-3-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
-    div#n2-ss-3-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div {
-      height: 4rem !important; } }
+  /* end .footer-links */ }
 /*********************
 TABLET & SMALLER LAPTOPS
 *********************/
@@ -4081,6 +4073,9 @@ TABLET & SMALLER LAPTOPS
     z-index: 20; }
   .ssf-main-content#mainContent .pad-bottom-2x, .ssf-main-content#mainContent .pad-vertical-2x {
     padding-bottom: 0; }
+
+  .gallery.gallery-columns-4 .gallery-item {
+    width: 25%; }
 
   /*********************
   SIDEBARS & ASIDES

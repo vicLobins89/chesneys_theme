@@ -619,6 +619,14 @@ LAYOUT & GRID STYLES
 	}
 }
 
+.gallery {
+	&.gallery-columns-4 {
+		.gallery-item {
+			width: 25%;
+		}
+	}
+}
+
 /*********************
 SIDEBARS & ASIDES
 *********************/

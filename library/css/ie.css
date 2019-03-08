@@ -135,24 +135,13 @@ POSTS & CONTENT STYLES
   clear: both; }
 
 /* end .entry-content */
+.gallery.gallery-columns-4 .gallery-item {
+  width: 50%; }
+
 /*********************
 FOOTER STYLES
 *********************/
 /* end .footer-links */
-/*********************
-SLIDER STYLES
-*********************/
-div#n2-ss-2-align .nextend-thumbnail-default,
-div#n2-ss-2-align .nextend-thumbnail-inner,
-div#n2-ss-3-align .nextend-thumbnail-default,
-div#n2-ss-3-align .nextend-thumbnail-inner {
-  bottom: 1rem !important; }
-  div#n2-ss-2-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
-  div#n2-ss-2-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div,
-  div#n2-ss-3-align .nextend-thumbnail-default .nextend-thumbnail-scroller-group > div,
-  div#n2-ss-3-align .nextend-thumbnail-inner .nextend-thumbnail-scroller-group > div {
-    height: 4rem !important; }
-
 /******************************************************************
 Site Name: Honey
 Author: Vic Lobins
@@ -592,6 +581,9 @@ LAYOUT & GRID STYLES
   z-index: 20; }
 .ssf-main-content#mainContent .pad-bottom-2x, .ssf-main-content#mainContent .pad-vertical-2x {
   padding-bottom: 0; }
+
+.gallery.gallery-columns-4 .gallery-item {
+  width: 25%; }
 
 /*********************
 SIDEBARS & ASIDES

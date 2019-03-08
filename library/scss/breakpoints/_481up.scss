@@ -40,6 +40,14 @@ POSTS & CONTENT STYLES
 
 } /* end .entry-content */
 
+.gallery {
+	&.gallery-columns-4 {
+		.gallery-item {
+			width: 50%;
+		}
+	}
+}
+
 /*********************
 FOOTER STYLES
 *********************/
@@ -49,22 +57,3 @@ FOOTER STYLES
 		li {}
 	}
 } /* end .footer-links */
-
-
-/*********************
-SLIDER STYLES
-*********************/
-
-div#n2-ss-2-align,
-div#n2-ss-3-align {
-	.nextend-thumbnail-default,
-	.nextend-thumbnail-inner {
-		bottom: 1rem !important;
-		
-		.nextend-thumbnail-scroller-group {	
-			> div {
-				height: 4rem !important;
-			}
-		}
-	}
-}
