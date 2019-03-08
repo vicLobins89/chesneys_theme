@@ -3985,7 +3985,7 @@ TABLET & SMALLER LAPTOPS
     .row.outdoor-product-single .woocommerce-product-gallery {
       width: 66.666% !important; }
     .row.outdoor-product-single .cart {
-      float: left;
+      float: left !important;
       margin: 0; }
       .row.outdoor-product-single .cart .secondary-btn, .row.outdoor-product-single .cart .search input[type="submit"], .search .row.outdoor-product-single .cart input[type="submit"], .row.outdoor-product-single .cart .woocommerce button.single_add_to_cart_button, .woocommerce .row.outdoor-product-single .cart button.single_add_to_cart_button,
       .row.outdoor-product-single .cart .woocommerce button.woocommerce-Button,
@@ -4005,7 +4005,7 @@ TABLET & SMALLER LAPTOPS
         margin: 0;
         clear: both;
         width: 100%;
-        margin: 0; }
+        margin: 0 !important; }
 
   .woocommerce .spares-product {
     padding-top: 1rem; }
