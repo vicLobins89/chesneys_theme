@@ -79,7 +79,7 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-
+body:not(.is-mobile) {
 .menu-button {
 	display: none;
 }
@@ -128,7 +128,6 @@ NAVIGATION STYLES
 	}
 }
 
-body:not(.is-mobile) {
 .primary-nav {
 	position: relative;
 	width: auto;
@@ -324,7 +323,6 @@ body:not(.is-mobile) {
 		}
 	}
 }
-}
 
 .socket {
 	display: block;
@@ -356,7 +354,7 @@ body:not(.is-mobile) {
 	max-width: 1400px;
 	margin: .85em auto;
 }
-
+}
 
 /*********************
 POSTS & CONTENT STYLES
