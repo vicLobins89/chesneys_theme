@@ -242,6 +242,10 @@ jQuery(document).ready(function($) {
 					$('#nav_widget').removeClass('active');
 				}
 			});
+			
+			('.primary-nav > li.menu-item-has-children li').on('click', function(e){
+				e.stopPropagation();
+			});
 		}
 		menuResize();
 	});
