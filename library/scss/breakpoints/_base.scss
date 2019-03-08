@@ -502,8 +502,7 @@ LAYOUT & GRID STYLES
 	}
 	
 	&.outdoor-product-single {
-		padding-top: 1rem;
-		padding-bottom: 1rem;
+		padding: 1rem 0;
 		
 		.col-12 {
 			display: -webkit-flex;
@@ -513,6 +512,7 @@ LAYOUT & GRID STYLES
 			display: flex;
 			
 			@media only screen and (max-width: 767px) {
+				padding: 0;
 				@include prefix(flex-direction, column, webkit moz ms);
 			}
 		}
@@ -2661,7 +2661,13 @@ POSTS & CONTENT STYLES
 	}
 	
 	.spares-product {
-		padding: 0;
+		@media only screen and (max-width: 767px) {
+			padding: 0;
+
+			.col-12 {
+				padding: 0;
+			}
+		}
 		
 		.product_title {
 			@extend .h2;
@@ -2728,6 +2734,9 @@ POSTS & CONTENT STYLES
 						
 						&.woocommerce-grouped-product-list-item__quantity {
 							padding: 1.5rem 1.5rem 0;
+							width: 100%;
+							text-align: left;
+							font-size: 1.5rem;
 						}
 					}
 				}

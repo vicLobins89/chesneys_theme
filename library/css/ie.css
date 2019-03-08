@@ -539,6 +539,8 @@ LAYOUT & GRID STYLES
   padding: 0; }
 .row.post-content {
   background: #f5f3f1; }
+.row.outdoor-product-single {
+  padding: 1rem 1.5rem; }
 
 .woocommerce .spares-product {
   padding-top: 1rem; }
