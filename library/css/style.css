@@ -1900,6 +1900,9 @@ LAYOUT & GRID STYLES
 .outdoor-products img {
   margin: 0 0 8px !important; }
 
+.gallery.gallery-columns-4 .gallery-item {
+  float: left; }
+
 /*********************
 LINK STYLES
 *********************/

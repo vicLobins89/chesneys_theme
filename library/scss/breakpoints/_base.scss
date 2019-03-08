@@ -1341,6 +1341,7 @@ LAYOUT & GRID STYLES
 	&.gallery-columns-4 {
 		.gallery-item {
 			@extend .col-3;
+			float: left;
 		}
 	}
 }
