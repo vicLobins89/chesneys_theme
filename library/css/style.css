@@ -3644,18 +3644,18 @@ TABLET & SMALLER LAPTOPS
     width: 90%;
     padding: 1.75rem 0 1.25rem; }
 
-  .searchbox {
+  body:not(.is-mobile) .searchbox {
     width: 100%;
     max-width: 15rem;
     right: 3.25rem; }
-    .searchbox:hover, .searchbox:focus {
+    body:not(.is-mobile) .searchbox:hover, body:not(.is-mobile) .searchbox:focus {
       border: none;
       max-width: 15rem; }
-    .searchbox #ajaxsearchlite1,
-    .searchbox div.asl_w {
+    body:not(.is-mobile) .searchbox #ajaxsearchlite1,
+    body:not(.is-mobile) .searchbox div.asl_w {
       border: 2px solid #b5b5b5; }
-      .searchbox #ajaxsearchlite1 .probox .proinput input,
-      .searchbox div.asl_w .probox .proinput input {
+      body:not(.is-mobile) .searchbox #ajaxsearchlite1 .probox .proinput input,
+      body:not(.is-mobile) .searchbox div.asl_w .probox .proinput input {
         opacity: 1; }
 
   /*********************
