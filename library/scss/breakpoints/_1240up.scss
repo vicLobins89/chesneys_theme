@@ -26,6 +26,34 @@ html {
 	}
 }
 
+.row {
+	.image-column {
+		&.column-8-4 {
+			.col-6:first-child {
+				width: 66.666%;
+				padding: 0;
+			}
+			
+			.col-6:last-child {
+				width: 33.333%;
+				padding: 2.5rem;
+			}
+		}
+		
+		&.column-4-8 {
+			.col-6:first-child {
+				width: 33.333%;
+				padding: 2.5rem;
+			}
+			
+			.col-6:last-child {
+				width: 66.666%;
+				padding: 0;
+			}
+		}
+	}
+}
+
 .blog-wrapper {	
 	.blog-module {
 		padding: 7.5% 0;
@@ -56,4 +84,8 @@ html {
 		float: left;
 		width: 58%;
 	}
+}
+
+.black-box {
+	padding: 3rem;
 }

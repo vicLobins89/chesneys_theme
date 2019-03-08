@@ -422,10 +422,6 @@ POSTS & CONTENT STYLES
 
 .black-box {
 	padding: 1rem;
-	
-	p:last-child {
-		margin: 0;
-	}
 }
 
 .module {
@@ -505,32 +501,6 @@ LAYOUT & GRID STYLES
 		.folio-item {
 			.text {
 				height: 9rem;
-			}
-		}
-	}
-	
-	&.image-column {
-		&.column-8-4 {
-			.col-6:first-child {
-				width: 66.666%;
-				padding: 0;
-			}
-			
-			.col-6:last-child {
-				width: 33.333%;
-				padding: 2.5rem;
-			}
-		}
-		
-		&.column-4-8 {
-			.col-6:first-child {
-				width: 33.333%;
-				padding: 2.5rem;
-			}
-			
-			.col-6:last-child {
-				width: 66.666%;
-				padding: 0;
 			}
 		}
 	}

@@ -908,6 +908,10 @@ LAYOUT & GRID STYLES
 	padding: 3rem;
 	background: $dark-gray;
 	color: $white;
+	
+	p:last-child {
+		margin: 0;
+	}
 }
 
 .module {

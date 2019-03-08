@@ -471,8 +471,6 @@ POSTS & CONTENT STYLES
 
 .black-box {
   padding: 1rem; }
-  .black-box p:last-child {
-    margin: 0; }
 
 .module.module-outdoor-living-shop > .cf, .module.module-glossary > .cf, .module.module-design-a-fireplace > .cf {
   height: 0;
@@ -519,18 +517,6 @@ LAYOUT & GRID STYLES
 
 .row.folio-module .folio-item .text {
   height: 9rem; }
-.row.image-column.column-8-4 .col-6:first-child {
-  width: 66.666%;
-  padding: 0; }
-.row.image-column.column-8-4 .col-6:last-child {
-  width: 33.333%;
-  padding: 2.5rem; }
-.row.image-column.column-4-8 .col-6:first-child {
-  width: 33.333%;
-  padding: 2.5rem; }
-.row.image-column.column-4-8 .col-6:last-child {
-  width: 66.666%;
-  padding: 0; }
 .row.post-content {
   background: #f5f3f1; }
 .row.outdoor-product-single {

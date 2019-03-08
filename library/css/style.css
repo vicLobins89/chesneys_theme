@@ -1572,6 +1572,8 @@ LAYOUT & GRID STYLES
   padding: 3rem;
   background: #142128;
   color: #fff; }
+  .black-box p:last-child {
+    margin: 0; }
 
 .module {
   position: relative; }
@@ -3921,8 +3923,6 @@ TABLET & SMALLER LAPTOPS
 
   .black-box {
     padding: 1rem; }
-    .black-box p:last-child {
-      margin: 0; }
 
   .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
     height: 0;
@@ -3969,18 +3969,6 @@ TABLET & SMALLER LAPTOPS
 
   .row.folio-module .folio-item .text {
     height: 9rem; }
-  .row.image-column.column-8-4 .col-6:first-child {
-    width: 66.666%;
-    padding: 0; }
-  .row.image-column.column-8-4 .col-6:last-child {
-    width: 33.333%;
-    padding: 2.5rem; }
-  .row.image-column.column-4-8 .col-6:first-child {
-    width: 33.333%;
-    padding: 2.5rem; }
-  .row.image-column.column-4-8 .col-6:last-child {
-    width: 66.666%;
-    padding: 0; }
   .row.post-content {
     background: #f5f3f1; }
   .row.outdoor-product-single {
@@ -4101,6 +4089,19 @@ LARGE VIEWING SIZE
   .wrap > div {
     max-width: 1080px; }
 
+  .row .image-column.column-8-4 .col-6:first-child {
+    width: 66.666%;
+    padding: 0; }
+  .row .image-column.column-8-4 .col-6:last-child {
+    width: 33.333%;
+    padding: 2.5rem; }
+  .row .image-column.column-4-8 .col-6:first-child {
+    width: 33.333%;
+    padding: 2.5rem; }
+  .row .image-column.column-4-8 .col-6:last-child {
+    width: 66.666%;
+    padding: 0; }
+
   .blog-wrapper .blog-module {
     padding: 7.5% 0; }
     .blog-wrapper .blog-module p {
@@ -4116,7 +4117,10 @@ LARGE VIEWING SIZE
     width: 42%; }
   .blog-wrapper .thumb {
     float: left;
-    width: 58%; } }
+    width: 58%; }
+
+  .black-box {
+    padding: 3rem; } }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 *********************/
