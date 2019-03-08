@@ -15,7 +15,8 @@ IMPORTING PARTIALS
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-@import url(../fonts/stylesheet.css);
+@import url(../fonts/Univers/stylesheet.css);
+@import url(../fonts/Baskerville/stylesheet.css);
 article,
 aside,
 details,
@@ -1053,7 +1054,7 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+  font-family: "Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
   line-height: 1.3;
   color: #142128;
   background-color: #fff;
@@ -1224,7 +1225,7 @@ WORDPRESS BODY CLASSES
 .search .search-title {
   font-size: 1.25em;
   margin-top: 1.3rem !important;
-  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+  font-family: "Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
   text-transform: none; }
 .search .search-content {
   padding: 1rem; }
@@ -2002,10 +2003,10 @@ p, .p {
 .sans, .team-members h4 {
   font-family: "Univers", Helvetica, Arial, sans-serif !important; }
   .sans .serif, .team-members h4 .serif {
-    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" !important; }
+    font-family: "Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" !important; }
 
 .serif {
-  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" !important; }
+  font-family: "Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" !important; }
   .serif .sans, .serif .team-members h4, .team-members .serif h4 {
     font-family: "Univers", Helvetica, Arial, sans-serif !important; }
 
@@ -2264,7 +2265,7 @@ NAVIGATION STYLES
       .primary-nav > li ul.children > li ul.sub-menu ul.children,
       .primary-nav > li ul.children > li ul.children ul.sub-menu,
       .primary-nav > li ul.children > li ul.children ul.children {
-        font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+        font-family: "Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
         text-transform: none;
         background: #f5f3f1; }
         .primary-nav > li ul.sub-menu > li ul.sub-menu ul.sub-menu li,
@@ -2994,7 +2995,7 @@ POSTS & CONTENT STYLES
   .woocommerce.term-outdoor-living ul.products[class*=columns-] li.product, .woocommerce.outdoor-related ul.products[class*=columns-] li.product, .woocommerce.outdoor-accessories ul.products[class*=columns-] li.product {
     margin-bottom: 1rem; } }
 .woocommerce.term-outdoor-living ul.products li.product a:not(.button) h2, .woocommerce.outdoor-related ul.products li.product a:not(.button) h2, .woocommerce.outdoor-accessories ul.products li.product a:not(.button) h2 {
-  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+  font-family: "Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
   text-transform: none;
   font-size: 1.5em;
   margin: 1rem 0 .75rem !important; }
@@ -3229,7 +3230,7 @@ POSTS & CONTENT STYLES
   text-transform: uppercase;
   font-size: .75em; }
 .woocommerce .spares-shop-loop ul.products .product .woocommerce-loop-product__title {
-  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+  font-family: "Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
   text-transform: none;
   font-size: 1.25em; }
   .woocommerce .spares-shop-loop ul.products .product .woocommerce-loop-product__title:after {
@@ -3289,7 +3290,7 @@ POSTS & CONTENT STYLES
 .ssf-main-content#mainContent .infobox__body {
   text-align: left; }
 .ssf-main-content#mainContent .infobox__title {
-  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; }
+  font-family: "Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; }
 .ssf-main-content#mainContent .ssf-main-content {
   font-family: "Univers", Helvetica, Arial, sans-serif; }
 .ssf-main-content#mainContent .main-back-to-top {
@@ -3819,7 +3820,7 @@ TABLET & SMALLER LAPTOPS
             clear: both;
             width: 546px;
             width: 32vw;
-            font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+            font-family: "Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
             text-transform: none;
             background: #f5f3f1; }
             body:not(.is-mobile) .primary-nav > li ul.sub-menu > li ul.sub-menu ul.sub-menu li,

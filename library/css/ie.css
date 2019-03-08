@@ -36,7 +36,8 @@ Stylesheet: Typography
 /*********************
 FONTFACE
 *********************/
-@import url(../fonts/stylesheet.css);
+@import url(../fonts/Univers/stylesheet.css);
+@import url(../fonts/Baskerville/stylesheet.css);
 /******************************************************************
 Site Name: Honey
 Author: Vic Lobins
@@ -366,7 +367,7 @@ body:not(.is-mobile) .primary-nav {
           clear: both;
           width: 546px;
           width: 32vw;
-          font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+          font-family: "Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
           text-transform: none;
           background: #f5f3f1; }
           body:not(.is-mobile) .primary-nav > li ul.sub-menu > li ul.sub-menu ul.sub-menu li,
