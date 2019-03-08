@@ -126,7 +126,7 @@ jQuery(document).ready(function($) {
 			subMenuHeight = $('.primary-nav > li ul.sub-menu').outerHeight(),
 			headerHeight = $('.header').outerHeight();
 		
-		if( viewport.width < 768 ) {
+		if( viewport.width < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 			$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width('auto');
 			$('#nav_widget').css({
 				"display": 'none'
