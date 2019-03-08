@@ -197,6 +197,8 @@ jQuery(document).ready(function($) {
 				$('.primary-nav > li > ul > li > ul > li').not(this).removeClass('active');
 				$(this).addClass('active');
 			});
+			
+			console.log($('.image-column.column-4-8 .col-6:last-child, .image-column.column-8-4 .col-6:first-child').find('img').attr('src'));
 		} else {
 			$('body').removeClass('is-mobile');
 			
