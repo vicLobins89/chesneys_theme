@@ -27,7 +27,7 @@ html {
 }
 
 .row {
-	.image-column {
+	&.image-column {
 		&.column-8-4 {
 			.col-6:first-child {
 				width: 66.666%;

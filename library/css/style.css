@@ -4089,16 +4089,16 @@ LARGE VIEWING SIZE
   .wrap > div {
     max-width: 1080px; }
 
-  .row .image-column.column-8-4 .col-6:first-child {
+  .row.image-column.column-8-4 .col-6:first-child {
     width: 66.666%;
     padding: 0; }
-  .row .image-column.column-8-4 .col-6:last-child {
+  .row.image-column.column-8-4 .col-6:last-child {
     width: 33.333%;
     padding: 2.5rem; }
-  .row .image-column.column-4-8 .col-6:first-child {
+  .row.image-column.column-4-8 .col-6:first-child {
     width: 33.333%;
     padding: 2.5rem; }
-  .row .image-column.column-4-8 .col-6:last-child {
+  .row.image-column.column-4-8 .col-6:last-child {
     width: 66.666%;
     padding: 0; }
 
