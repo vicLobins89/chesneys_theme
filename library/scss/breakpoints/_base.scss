@@ -1163,14 +1163,7 @@ LAYOUT & GRID STYLES
 		width: 100%;
 	}
 	
-	.thumb {
-		float: left;
-		width: 58%;
-	}
-	
 	.text {
-		float: right;
-		width: 42%;
 		padding: .75rem 1rem;
 		font-size: .7rem;
 		
@@ -1191,7 +1184,8 @@ LAYOUT & GRID STYLES
 	}
 	
 	img {
-		max-width: 100%;
+		width: 100%;
+		height: auto;
 	}
 }
 

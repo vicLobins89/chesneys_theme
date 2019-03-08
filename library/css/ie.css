@@ -510,11 +510,7 @@ LAYOUT & GRID STYLES
     width: 70%; }
 .blog-wrapper .col-4 {
   padding-bottom: 2.5rem;
-  width: 27.333%; }
-  .blog-wrapper .col-4.post-item-1 {
-    margin-left: 9%; }
-  .blog-wrapper .col-4.post-item-3 {
-    margin-right: 9%; }
+  width: 33.333%; }
 
 .row.folio-module .folio-item .text {
   height: 9rem; }
@@ -618,6 +614,23 @@ html {
 
 .wrap > div {
   max-width: 930px; }
+
+.blog-wrapper .blog-module {
+  padding: 7.5% 0; }
+  .blog-wrapper .blog-module p {
+    width: 70%; }
+.blog-wrapper .col-4 {
+  width: 27.333%; }
+  .blog-wrapper .col-4.post-item-1 {
+    margin-left: 9%; }
+  .blog-wrapper .col-4.post-item-3 {
+    margin-right: 9%; }
+.blog-wrapper .text {
+  float: right;
+  width: 42%; }
+.blog-wrapper .thumb {
+  float: left;
+  width: 58%; }
 
 /******************************************************************
 ADDITIONAL IE FIXES
