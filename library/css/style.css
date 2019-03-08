@@ -1076,7 +1076,8 @@ img {
     img.size-folio-portrait[class*="col-"], img.size-full[class*="col-"] {
       padding: 0; }
     img.size-folio-portrait.col-6, img.size-full.col-6 {
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 1rem; }
   img.alignleft {
     float: left; }
   img.alignright {
@@ -1982,6 +1983,8 @@ p, .p {
   font-size: 1.2em;
   margin: 0.85em 0;
   font-weight: normal; }
+  p + h4, .p + h4 {
+    clear: both; }
 
 .flair {
   position: relative;
@@ -4089,7 +4092,8 @@ LARGE VIEWING SIZE
     height: auto;
     pointer-events: none; }
     img.size-folio-portrait.col-6, img.size-full.col-6 {
-      width: 50%; }
+      width: 50%;
+      margin-bottom: 0; }
 
   .entry-content:not(.full) > div {
     max-width: 1400px; }
