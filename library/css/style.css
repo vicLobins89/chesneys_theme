@@ -4058,7 +4058,6 @@ TABLET & SMALLER LAPTOPS
     max-width: none; }
   .ssf-main-content#mainContent #ssf_adress_input_box {
     position: absolute;
-    top: -173px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 20; }
@@ -4115,6 +4114,8 @@ DESKTOP
     left: 25%; }
   .ssf-main-content#mainContent .ssf-row {
     height: 800px; }
+  .ssf-main-content#mainContent #ssf_adress_input_box {
+    top: -173px; }
   .ssf-main-content#mainContent #filter_left_panel {
     position: absolute;
     left: 0;
