@@ -118,6 +118,21 @@ jQuery(document).ready(function($) {
 		var newUrl = oldUrl.replace("/category/stoves", "/stoves");
 		$(this).attr("href", newUrl);
 	});
+	$('.menu-breadcrumb a:contains("Outdoor Living")').each(function(){
+		var oldUrl = $(this).attr("href");
+		var newUrl = oldUrl.replace("/category/outdoor-living", "/outdoor-living");
+		$(this).attr("href", newUrl);
+	});
+	$('.menu-breadcrumb a:contains("Heat Range")').each(function(){
+		var oldUrl = $(this).attr("href");
+		var newUrl = oldUrl.replace("/category/outdoor-living/heat-range", "/outdoor-living-shop");
+		$(this).attr("href", newUrl);
+	});
+	$('.menu-breadcrumb a:contains("Gourmet Range")').each(function(){
+		var oldUrl = $(this).attr("href");
+		var newUrl = oldUrl.replace("/category/outdoor-living/gourmet-range", "/outdoor-living-shop");
+		$(this).attr("href", newUrl);
+	});
 	
 	// Menu
 	$('.menu-button').on('click', function(){
