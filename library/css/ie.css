@@ -321,7 +321,8 @@ body:not(.is-mobile) .primary-nav {
       /* highlight sub-menu current page */ }
       body:not(.is-mobile) .primary-nav > li ul.sub-menu li,
       body:not(.is-mobile) .primary-nav > li ul.children li {
-        padding: 1rem 1.5rem; }
+        padding: 1rem 1.5rem;
+        width: 100%; }
         body:not(.is-mobile) .primary-nav > li ul.sub-menu li.menu-item-has-children > a:after,
         body:not(.is-mobile) .primary-nav > li ul.children li.menu-item-has-children > a:after {
           content: '';

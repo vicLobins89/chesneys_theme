@@ -1303,7 +1303,7 @@ LAYOUT & GRID STYLES
       .row.spares-shop-loop ul.products[class*=columns-] li.product:nth-child(even) {
         margin-right: 0; } }
 .row.outdoor-product-single {
-  padding: 1rem 0; }
+  padding: 0 0 1rem; }
   .row.outdoor-product-single .col-12 {
     display: -webkit-flex;
     display: -moz-flex;
@@ -3770,7 +3770,8 @@ TABLET & SMALLER LAPTOPS
         /* highlight sub-menu current page */ }
         body:not(.is-mobile) .primary-nav > li ul.sub-menu li,
         body:not(.is-mobile) .primary-nav > li ul.children li {
-          padding: 1rem 1.5rem; }
+          padding: 1rem 1.5rem;
+          width: 100%; }
           body:not(.is-mobile) .primary-nav > li ul.sub-menu li.menu-item-has-children > a:after,
           body:not(.is-mobile) .primary-nav > li ul.children li.menu-item-has-children > a:after {
             content: '';
