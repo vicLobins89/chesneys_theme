@@ -3919,9 +3919,14 @@ TABLET & SMALLER LAPTOPS
     .spares-thumbs .wp-caption:last-child {
       margin-right: 0; }
 
+  .black-box {
+    padding: 1rem; }
+    .black-box p:last-child {
+      margin: 0; }
+
   .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
     height: 0;
-    padding-top: 40%;
+    padding-top: 60%;
     margin-bottom: 0; }
   .module.module-sign-up, .module.module-need-help {
     padding-top: 5%;
@@ -4070,7 +4075,10 @@ DESKTOP
 
   .featured-copy, .module.module-outdoor-living-shop .inner-module, .module.module-glossary .inner-module, .module.module-design-a-fireplace .inner-module, #folio_header .widget_text,
   #news_header .widget_text {
-    width: 30%; } }
+    width: 30%; }
+
+  .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
+    padding-top: 40%; } }
 /*********************
 LARGE VIEWING SIZE
 *********************/

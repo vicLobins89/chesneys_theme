@@ -19,3 +19,13 @@ html {
 .featured-copy {
 	width: 30%;
 }
+
+.module {
+	&.module-outdoor-living-shop,
+	&.module-glossary,
+	&.module-design-a-fireplace {
+		> .cf {
+			padding-top: 40%;
+		}
+	}
+}

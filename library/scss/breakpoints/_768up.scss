@@ -420,13 +420,21 @@ POSTS & CONTENT STYLES
 	}
 }
 
+.black-box {
+	padding: 1rem;
+	
+	p:last-child {
+		margin: 0;
+	}
+}
+
 .module {
 	&.module-outdoor-living-shop,
 	&.module-glossary,
 	&.module-design-a-fireplace {
 		> .cf {
 			height: 0;
-			padding-top: 40%;
+			padding-top: 60%;
 			margin-bottom: 0;
 		}
 	}
