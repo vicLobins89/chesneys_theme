@@ -394,8 +394,8 @@ function winwar_first_sentence( $string ) {
  
     $sentence = preg_split( '/(\.|!|\?)\s/', $string, 2, PREG_SPLIT_DELIM_CAPTURE );
 	print_r($sentence);
-	if( !is_array($sentence) ) {
-		return $sentence;
+	if( !isset($sentence['1']) ) {
+		return $sentence['0'];
 	} else {
 		return $sentence['0'] . $sentence['1'];
 	}
