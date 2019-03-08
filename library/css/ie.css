@@ -459,7 +459,7 @@ POSTS & CONTENT STYLES
   top: 2.5rem;
   left: 3rem;
   padding: 2rem;
-  width: 30%; }
+  width: 50%; }
 
 .spares-thumbs .wp-caption {
   width: 31% !important;
@@ -469,6 +469,10 @@ POSTS & CONTENT STYLES
   .spares-thumbs .wp-caption:last-child {
     margin-right: 0; }
 
+.module.module-outdoor-living-shop > .cf, .module.module-glossary > .cf, .module.module-design-a-fireplace > .cf {
+  height: 0;
+  padding-top: 40%;
+  margin-bottom: 0; }
 .module.module-sign-up, .module.module-need-help {
   padding-top: 5%;
   padding-bottom: 5%; }
@@ -611,10 +615,8 @@ html {
 .wrap > div {
   max-width: 930px; }
 
-.module.module-outdoor-living-shop > .cf, .module.module-glossary > .cf, .module.module-design-a-fireplace > .cf {
-  height: 0;
-  padding-top: 40%;
-  margin-bottom: 0; }
+.featured-copy {
+  width: 30%; }
 
 /******************************************************************
 ADDITIONAL IE FIXES
