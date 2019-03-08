@@ -384,7 +384,7 @@ function excerpt($limit) {
 }
 
 function excerpt_in_product_archives() {
-	if( get_the_excerpt(0) ) {
+	if( get_the_excerpt(-1) ) {
 		echo '<p>'.excerpt().'</p>';
 	}
 }
