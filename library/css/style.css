@@ -1519,24 +1519,24 @@ LAYOUT & GRID STYLES
   width: 100%; }
 .row.image-column.column-8-4 .col-6:first-child {
   padding: 0; }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1239px) {
     .row.image-column.column-8-4 .col-6:first-child {
       order: 1; } }
   .row.image-column.column-8-4 .col-6:first-child p, .row.image-column.column-8-4 .col-6:first-child img {
     padding: 0;
     margin: 0;
     font-size: 0; }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1239px) {
   .row.image-column.column-8-4 .col-6:last-child {
     order: 2; } }
 .row.image-column.column-4-8 .col-6 {
   width: 100%; }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1239px) {
   .row.image-column.column-4-8 .col-6:first-child {
     order: 2; } }
 .row.image-column.column-4-8 .col-6:last-child {
   padding: 0; }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1239px) {
     .row.image-column.column-4-8 .col-6:last-child {
       order: 1; } }
   .row.image-column.column-4-8 .col-6:last-child p, .row.image-column.column-4-8 .col-6:last-child img {
