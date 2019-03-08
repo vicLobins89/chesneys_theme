@@ -785,10 +785,7 @@ LAYOUT & GRID STYLES
 			display: -ms-flexbox;
 			display: -webkit-flex;
 			display: flex;
-			
-			@media only screen and (max-width: 767px) {
-				@include prefix(flex-direction, column, webkit moz ms);
-			}
+			@include prefix(flex-direction, column, webkit moz ms);
 		}
 		
 		&.reverse > .cf {
@@ -813,7 +810,7 @@ LAYOUT & GRID STYLES
 			}
 			
 			.col-6:first-child {
-				order: 1;
+				@media only screen and (max-width: 767px) { order: 1; }
 				padding: 0;
 				
 				p, img {
@@ -824,7 +821,7 @@ LAYOUT & GRID STYLES
 			}
 			
 			.col-6:last-child {
-				order: 2
+				@media only screen and (max-width: 767px) { order: 2 }
 			}
 		}
 		
@@ -834,11 +831,11 @@ LAYOUT & GRID STYLES
 			}
 			
 			.col-6:first-child {
-				order: 2;
+				@media only screen and (max-width: 767px) { order: 2; }
 			}
 			
 			.col-6:last-child {
-				order: 1;
+				@media only screen and (max-width: 767px) { order: 1; }
 				padding: 0;
 				
 				p, img {

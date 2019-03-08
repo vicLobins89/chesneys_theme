@@ -28,6 +28,10 @@ html {
 
 .row {
 	&.image-column {
+		> .cf {
+			@include prefix(flex-direction, row, webkit moz ms);
+		}
+		
 		&.column-8-4 {
 			.col-6:first-child {
 				width: 66.666%;
