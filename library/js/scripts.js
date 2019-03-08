@@ -184,8 +184,6 @@ jQuery(document).ready(function($) {
 					'background-size': 'cover'
 				});
 			});
-			
-			$('#storeLocator__topHalf').height( $('.store-locator-map').outerHeight() );
 		}
 	});
 	
