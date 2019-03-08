@@ -533,7 +533,7 @@ LAYOUT & GRID STYLES
 
 .image-left,
 .image-right {
-	@include prefix(flex-direction, row, webkit moz ms);
+	> .cf { @include prefix(flex-direction, row, webkit moz ms); }
 }
 
 .woocommerce {

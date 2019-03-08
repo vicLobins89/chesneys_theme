@@ -4008,8 +4008,9 @@ TABLET & SMALLER LAPTOPS
         width: 100%;
         margin: 0 !important; }
 
-  .image-left,
-  .image-right {
+  .image-left > .cf, .image-left > .comment-respond,
+  .image-right > .cf,
+  .image-right > .comment-respond {
     -webkit-flex-direction: row;
     -moz-flex-direction: row;
     -ms-flex-direction: row;
