@@ -130,7 +130,7 @@ if ( woocommerce_product_loop() ) {
 		}
 		
 		echo '<section class="row entry-content cf related-products"><div class="cf"><div class="col-12">';
-		echo '<h2>You might also like</h2><p>Ariptimus fue et vitioca tquerra vivis, nem merissent grate, ceni sintere mo</p>';
+		echo '<h2>You might also like</h2>';
 		echo do_shortcode('[products orderby="rand" category="'.$cat_name.'" limit="3" columns="3" class="related-products"]');
 		echo '</section></div></div>';
 	}
