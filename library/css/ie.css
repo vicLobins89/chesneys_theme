@@ -187,14 +187,11 @@ HEADER STYLES
 body:not(.is-mobile) .header {
   position: relative;
   font-size: 0.8rem; }
-
-#inner-header {
+body:not(.is-mobile) #inner-header {
   position: relative; }
-
-.logo {
+body:not(.is-mobile) .logo {
   width: 90%;
   padding: 1.75rem 0 1.25rem; }
-
 body:not(.is-mobile) .searchbox {
   width: 100%;
   max-width: 15rem;
