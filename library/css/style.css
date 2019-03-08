@@ -1077,7 +1077,7 @@ img {
       padding: 0; }
     img.size-folio-portrait.col-6, img.size-full.col-6 {
       width: 100%;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem !important; }
   img.alignleft {
     float: left; }
   img.alignright {
@@ -4093,7 +4093,7 @@ LARGE VIEWING SIZE
     pointer-events: none; }
     img.size-folio-portrait.col-6, img.size-full.col-6 {
       width: 50%;
-      margin-bottom: 0; }
+      margin-bottom: 0 !important; }
 
   .entry-content:not(.full) > div {
     max-width: 1400px; }
