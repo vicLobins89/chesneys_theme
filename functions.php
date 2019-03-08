@@ -385,34 +385,18 @@ function excerpt($limit) {
 
 function excerpt_in_product_archives() {
 	if( get_the_excerpt() ) {
-		echo '<p>'.end_with_sentence(get_the_excerpt()).'</p>';
+		echo '<p>'.get_the_excerpt().'</p>';
 	}
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 7 );
 
-function end_with_sentence( $excerpt ) {
-  $allowed_ends = array('.', '!', '?', '...');
-  $number_sentences = 2;
-  $excerpt_chunk = $excerpt;
-
-  for($i = 0; $i < $number_sentences; $i++){
-      $lowest_sentence_end[$i] = 100000000000000000;
-      foreach( $allowed_ends as $allowed_end)
-      {
-        $sentence_end = strpos( $excerpt_chunk, $allowed_end);
-        if($sentence_end !== false && $sentence_end < $lowest_sentence_end[$i]){
-            $lowest_sentence_end[$i] = $sentence_end + strlen( $allowed_end );
-        }
-        $sentence_end = false;
-      }
-
-      $sentences[$i] = substr( $excerpt_chunk, 0, $lowest_sentence_end[$i]);
-      $excerpt_chunk = substr( $excerpt_chunk, $lowest_sentence_end[$i]);
-  }
-
-  return implode('', $sentences);
+function winwar_first_sentence( $string ) {
+ 
+    $sentence = preg_split( '/(\.|!|\?)\s/', $string, 2, PREG_SPLIT_DELIM_CAPTURE );
+    return $sentence['0'] . $sentence['1'];
+ 
 }
-add_filter('get_the_excerpt', 'end_with_sentence');
+add_filter( 'get_the_excerpt', 'winwar_first_sentence', 10, 1 );
 
 // Sorting
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
