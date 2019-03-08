@@ -3986,7 +3986,8 @@ TABLET & SMALLER LAPTOPS
       width: 66.666% !important; }
     .row.outdoor-product-single .cart {
       float: left !important;
-      margin: 0 !important; }
+      margin: 0 !important;
+      clear: both; }
       .row.outdoor-product-single .cart .secondary-btn, .row.outdoor-product-single .cart .search input[type="submit"], .search .row.outdoor-product-single .cart input[type="submit"], .row.outdoor-product-single .cart .woocommerce button.single_add_to_cart_button, .woocommerce .row.outdoor-product-single .cart button.single_add_to_cart_button,
       .row.outdoor-product-single .cart .woocommerce button.woocommerce-Button,
       .woocommerce .row.outdoor-product-single .cart button.woocommerce-Button, .row.outdoor-product-single .cart .woocommerce table.shop_table .button, .woocommerce table.shop_table .row.outdoor-product-single .cart .button, .row.outdoor-product-single .cart .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .row.outdoor-product-single .cart .button, .row.outdoor-product-single .cart .woocommerce .button.wc-forward, .woocommerce .row.outdoor-product-single .cart .button.wc-forward, .row.outdoor-product-single .cart #add_payment_method form input.button.alt, #add_payment_method form .row.outdoor-product-single .cart input.button.alt,
