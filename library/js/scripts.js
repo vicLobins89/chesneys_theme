@@ -125,12 +125,12 @@ jQuery(document).ready(function($) {
 	});
 	$('.menu-breadcrumb a:contains("Heat Range")').each(function(){
 		var oldUrl = $(this).attr("href");
-		var newUrl = oldUrl.replace("/category/outdoor-living/heat-range", "/outdoor-living-shop");
+		var newUrl = oldUrl.replace("/category/outdoor-living/heat-range", "/outdoor-living/shop");
 		$(this).attr("href", newUrl);
 	});
 	$('.menu-breadcrumb a:contains("Gourmet Range")').each(function(){
 		var oldUrl = $(this).attr("href");
-		var newUrl = oldUrl.replace("/category/outdoor-living/gourmet-range", "/outdoor-living-shop");
+		var newUrl = oldUrl.replace("/category/outdoor-living/gourmet-range", "/outdoor-living/shop");
 		$(this).attr("href", newUrl);
 	});
 	
@@ -227,17 +227,19 @@ jQuery(document).ready(function($) {
 			$('body').removeClass('is-mobile');
 			
 			// Menu
-			$('.primary-nav > li.menu-item-has-children').unbind('click');
+			//$('.primary-nav > li.menu-item-has-children').unbind('click');
+
+			$('html').click(function(){
+				$('.primary-nav > li').removeClass('active');
+				$('#nav_widget').removeClass('active');
+			});
 			
-			$('.primary-nav > li.menu-item-has-children').hover(function(){
+			$('.primary-nav > li.menu-item-has-children').click(function(e){
+				e.preventDefault();
+				e.stopPropagation();
 				$('.primary-nav > li.menu-item-has-children').not(this).removeClass('active');
 				$(this).addClass('active');
 				$('#nav_widget').addClass('active');
-			});
-
-			$('#content, #primary, #main, .socket, .logo, .primary-nav > li:not(.menu-item-has-children)').hover(function(){
-				$('.primary-nav > li').removeClass('active');
-				$('#nav_widget').removeClass('active');
 			});
 		}
 		menuResize();
