@@ -518,7 +518,7 @@ LAYOUT & GRID STYLES
 		
 		.cart {
 			float: left !important;
-			margin: 0 !important;
+			margin: 1rem 0 0 !important;
 			clear: both;
 			
 			.secondary-btn {
@@ -529,6 +529,11 @@ LAYOUT & GRID STYLES
 			}
 		}
 	}
+}
+
+.image-left,
+.image-right {
+	@include prefix(flex-direction, row, webkit moz ms);
 }
 
 .woocommerce {

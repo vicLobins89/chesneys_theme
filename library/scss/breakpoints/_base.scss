@@ -116,7 +116,7 @@ hr {
 .vid-thumb {
 	position: relative;
 	display: inline-block;
-	width: 33%;
+	width: 32%;
 	padding: 2rem 1rem;
 	
 	.play {
@@ -1044,7 +1044,7 @@ LAYOUT & GRID STYLES
 	&.module-outdoor-ctas,
 	&.module-outdoor-ctas-2 {
 		padding: 0 0 1rem 0;
-		font-size: .8rem;
+		font-size: .9rem;
 		
 		@media only screen and (max-width: 767px) {
 			text-align: center;
