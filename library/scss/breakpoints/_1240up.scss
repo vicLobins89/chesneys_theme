@@ -25,6 +25,10 @@ img {
 
 p + h4 { clear: unset; }
 
+.featured-copy {
+	width: 30%;
+}
+
 .entry-content:not(.full) {
 	> div {
 		max-width: 1400px;
@@ -107,4 +111,14 @@ p + h4 { clear: unset; }
 
 .black-box {
 	padding: 3rem;
+}
+
+.module {
+	&.module-outdoor-living-shop,
+	&.module-glossary,
+	&.module-design-a-fireplace {
+		> .cf {
+			padding-top: 40%;
+		}
+	}
 }

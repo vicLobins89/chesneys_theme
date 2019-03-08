@@ -4109,10 +4109,10 @@ DESKTOP
 
   .featured-copy, .module.module-outdoor-living-shop .inner-module, .module.module-glossary .inner-module, .module.module-design-a-fireplace .inner-module, #folio_header .widget_text,
   #news_header .widget_text {
-    width: 30%; }
+    width: 40%; }
 
   .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
-    padding-top: 40%; }
+    padding-top: 50%; }
 
   .ssf-main-content#mainContent .store-locator-map {
     width: 75%;
@@ -4156,6 +4156,10 @@ LARGE VIEWING SIZE
 
   p + h4 {
     clear: unset; }
+
+  .featured-copy, .module.module-outdoor-living-shop .inner-module, .module.module-glossary .inner-module, .module.module-design-a-fireplace .inner-module, #folio_header .widget_text,
+  #news_header .widget_text {
+    width: 30%; }
 
   .entry-content:not(.full) > div {
     max-width: 1400px; }
@@ -4201,7 +4205,10 @@ LARGE VIEWING SIZE
     width: 58%; }
 
   .black-box {
-    padding: 3rem; } }
+    padding: 3rem; }
+
+  .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
+    padding-top: 40%; } }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 *********************/
