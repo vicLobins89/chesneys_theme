@@ -4036,10 +4036,12 @@ TABLET & SMALLER LAPTOPS
       width: 33%; }
     .woocommerce .spares-product .woocommerce-product-gallery__image {
       float: right;
-      width: 66%; }
+      width: 66%; } }
+@media only screen and (min-width: 768px) and (min-width: 769px) {
   .woocommerce table.shop_table.woocommerce-cart-form__contents td:first-child {
-    width: 3rem; }
+    width: 3rem; } }
 
+@media only screen and (min-width: 768px) {
   .equal-height .col-6 {
     border: 1.5rem solid #fff; }
     .equal-height .col-6 img {
