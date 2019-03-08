@@ -585,6 +585,9 @@ Stylesheet: Grid Stylesheet
   .column-8-4 .cf > .col-6, .column-8-4 .comment-respond > .col-6 {
     width: 100% !important; } }
 
+@media only screen and (min-width: 768) and (max-width: 1239px) {
+  .col-2-768 .cf > [class*="col-"], .col-2-768 .comment-respond > [class*="col-"] {
+    width: 50%; } }
 [class*="col-"] {
   float: left;
   padding: 1rem; }
