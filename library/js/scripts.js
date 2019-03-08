@@ -225,9 +225,6 @@ jQuery(document).ready(function($) {
 			});
 		} else {
 			$('body').removeClass('is-mobile');
-			
-			// Menu
-			//$('.primary-nav > li.menu-item-has-children').unbind('click');
 
 			$('html').click(function(){
 				$('.primary-nav > li').removeClass('active');
@@ -238,7 +235,7 @@ jQuery(document).ready(function($) {
 				e.preventDefault();
 				e.stopPropagation();
 				$('.primary-nav > li.menu-item-has-children').not(this).removeClass('active');
-				$(this).addClass('active');
+				$(this).toggleClass('active');
 				$('#nav_widget').addClass('active');
 			});
 		}
