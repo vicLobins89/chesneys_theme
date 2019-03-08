@@ -236,9 +236,7 @@ jQuery(document).ready(function($) {
 				e.stopPropagation();
 				$('.primary-nav > li.menu-item-has-children').not(this).removeClass('active');
 				$(this).toggleClass('active');
-				if( $(this).hasClass('active') ) {
-					$('#nav_widget').addClass('active');
-				}
+				$(this).parent().next().toggleClass('active');
 			});
 		}
 		menuResize();
