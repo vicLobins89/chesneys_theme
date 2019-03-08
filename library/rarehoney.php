@@ -283,4 +283,11 @@ function bones_excerpt_more($more) {
 	//return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'bonestheme' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
 }
 
+add_filter(
+	'the_excerpt',
+	function ($excerpt) {
+		return substr($excerpt,0,strpos($excerpt,'.')+1);
+	}
+);
+
 ?>

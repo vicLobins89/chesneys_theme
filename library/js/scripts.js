@@ -231,12 +231,14 @@ jQuery(document).ready(function($) {
 				$('#nav_widget').removeClass('active');
 			});
 			
-			$('.primary-nav > li.menu-item-has-children').click(function(e){
+			$('.primary-nav > li.menu-item-has-children').on('click', function(e){
 				e.preventDefault();
 				e.stopPropagation();
 				$('.primary-nav > li.menu-item-has-children').not(this).removeClass('active');
 				$(this).toggleClass('active');
-				$('#nav_widget').addClass('active');
+				if( $(this).hasClass('active') ) {
+					$('#nav_widget').addClass('active');
+				}
 			});
 		}
 		menuResize();
