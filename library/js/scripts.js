@@ -225,7 +225,7 @@ jQuery(document).ready(function($) {
 				$('#nav_widget').removeClass('active');
 			});
 		}
-		
+		menuResize();
 	});
 	
 	$(window).on('scroll', function(){
