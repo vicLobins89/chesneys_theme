@@ -15,6 +15,10 @@ function updateViewportDimensions() {
 // setting the viewport width
 var viewport = updateViewportDimensions();
 
+if( viewport.width < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	document.body.className += ' ' + 'is-mobile';
+}
+
 jQuery(document).ready(function($) {
 	
 	"use strict";
