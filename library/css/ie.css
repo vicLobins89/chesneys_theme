@@ -136,7 +136,8 @@ POSTS & CONTENT STYLES
 
 /* end .entry-content */
 .gallery.gallery-columns-4 .gallery-item {
-  width: 50%; }
+  width: 50%;
+  float: left; }
 
 /*********************
 FOOTER STYLES
