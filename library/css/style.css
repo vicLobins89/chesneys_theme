@@ -3919,10 +3919,6 @@ TABLET & SMALLER LAPTOPS
     .spares-thumbs .wp-caption:last-child {
       margin-right: 0; }
 
-  .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
-    height: 0;
-    padding-top: 40%;
-    margin-bottom: 0; }
   .module.module-sign-up, .module.module-need-help {
     padding-top: 5%;
     padding-bottom: 5%; }
@@ -4066,7 +4062,12 @@ DESKTOP
     font-size: 16px; }
 
   .wrap > div {
-    max-width: 930px; } }
+    max-width: 930px; }
+
+  .module.module-outdoor-living-shop > .cf, .module.module-outdoor-living-shop > .comment-respond, .module.module-glossary > .cf, .module.module-glossary > .comment-respond, .module.module-design-a-fireplace > .cf, .module.module-design-a-fireplace > .comment-respond {
+    height: 0;
+    padding-top: 40%;
+    margin-bottom: 0; } }
 /*********************
 LARGE VIEWING SIZE
 *********************/
