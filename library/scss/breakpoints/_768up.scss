@@ -128,6 +128,7 @@ NAVIGATION STYLES
 	}
 }
 
+body:not(.is-mobile) {
 .primary-nav {
 	position: relative;
 	width: auto;
@@ -322,6 +323,7 @@ NAVIGATION STYLES
 			
 		}
 	}
+}
 }
 
 .socket {

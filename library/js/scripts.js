@@ -210,6 +210,12 @@ jQuery(document).ready(function($) {
 		menuResize();
 	});
 	
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$('body').addClass('is-mobile');
+	} else {
+		$('body').removeClass('is-mobile');
+	}
+	
 	$(window).on('scroll', function(){
 		if( $(this).scrollTop() >= 100 ) {
 			$('.header').addClass('scrolled');
