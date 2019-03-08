@@ -74,7 +74,7 @@ class CustomACF {
 					?>
 					<div id="post-<?php the_ID(); ?>" class="row entry-content cf blog-module" <?php echo $thumb_bg; ?>>
 						<div class="cf">
-							<h2>Blog Post</h2>
+							<h2>News Post</h2>
 							<h3 class="entry-title"><em><?php the_title(); ?></em></h3>
 							<?php the_excerpt(); ?>
 							<a href="<?php the_permalink(); ?>" class="primary-btn">Read More</a>
@@ -86,7 +86,7 @@ class CustomACF {
 					<div id="post-<?php the_ID(); ?>" class="col-4 cf post-item-<?php echo $row-1; ?>">
 						<a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('folio-thumb'); ?></a>
 						<div class="text">
-							<h4 class="h2">Blog Post</h4>
+							<h4 class="h2">News Post</h4>
 							<h5 class="entry-title p"><?php the_title(); ?></h5>
 							<a href="<?php the_permalink(); ?>" class="primary-btn alt">Read More</a>
 						</div>
