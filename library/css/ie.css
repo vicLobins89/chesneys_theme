@@ -335,6 +335,10 @@ body:not(.is-mobile) .primary-nav {
         body:not(.is-mobile) .primary-nav > li ul.children li:hover,
         body:not(.is-mobile) .primary-nav > li ul.children li:focus {
           color: #4b858e; }
+          body:not(.is-mobile) .primary-nav > li ul.sub-menu li:hover a, body:not(.is-mobile) .primary-nav > li ul.sub-menu li:focus a,
+          body:not(.is-mobile) .primary-nav > li ul.children li:hover a,
+          body:not(.is-mobile) .primary-nav > li ul.children li:focus a {
+            color: inherit; }
       body:not(.is-mobile) .primary-nav > li ul.sub-menu > li > ul.sub-menu,
       body:not(.is-mobile) .primary-nav > li ul.sub-menu > li > ul.children,
       body:not(.is-mobile) .primary-nav > li ul.children > li > ul.sub-menu,

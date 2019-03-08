@@ -246,6 +246,10 @@ body:not(.is-mobile) {
 				&:hover,
 				&:focus {
 					color: $teal;
+					
+					a {
+						color: inherit;
+					}
 				}
 			}
 			
