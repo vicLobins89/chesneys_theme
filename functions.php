@@ -380,12 +380,12 @@ function excerpt($limit) {
 		$excerpt = implode(" ",$excerpt);
 	}	
 	$excerpt = preg_replace('`[[^]]*]`','',$excerpt);
-	return substr($excerpt,0,strpos($excerpt,'.')+1);
+	return $excerpt;
 }
 
 function excerpt_in_product_archives() {
 	if( get_the_excerpt() ) {
-		echo '<p>'.excerpt(0).'</p>';
+		echo '<p>'.excerpt(20).'</p>';
 	}
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 7 );
