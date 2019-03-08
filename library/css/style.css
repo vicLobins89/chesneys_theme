@@ -2057,7 +2057,7 @@ HEADER STYLES
   width: 14%;
   max-width: 15rem;
   right: 1rem;
-  top: 12px;
+  top: 1.4rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   .searchbox:hover, .searchbox:focus {
@@ -2124,7 +2124,7 @@ NAVIGATION STYLES
   position: absolute;
   left: 0;
   top: 0;
-  margin: 20px 1.5rem 0;
+  margin: 2rem 1.5rem 0;
   line-height: 1;
   font-size: 1em;
   font-family: "Univers", Helvetica, Arial, sans-serif;

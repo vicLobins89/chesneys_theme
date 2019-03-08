@@ -1567,7 +1567,7 @@ HEADER STYLES
 	width: 14%;
 	max-width: 15rem;
 	right: 1rem;
-    top: 12px;
+    top: 1.4rem;
 	@include transition(all 0.3s ease-in-out);
 	
 	&:hover, &:focus {
@@ -1654,7 +1654,7 @@ NAVIGATION STYLES
 	position: absolute;
 	left: 0;
 	top: 0;
-	margin: 20px 1.5rem 0;
+	margin: 2rem 1.5rem 0;
 	line-height: 1;
     font-size: 1em;
 	font-family: $sans-serif;
