@@ -4095,6 +4095,9 @@ LARGE VIEWING SIZE
       width: 50%;
       margin-bottom: 0 !important; }
 
+  p + h4 {
+    clear: unset; }
+
   .entry-content:not(.full) > div {
     max-width: 1400px; }
   .entry-content:not(.full).image-column > div {

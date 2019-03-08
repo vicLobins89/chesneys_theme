@@ -175,7 +175,7 @@ jQuery(document).ready(function($) {
 			});
 			
 			// image-column bg
-			$('.image-column.column-4-8 .col-6:last-child, .image-column.column-8-4 .col-6:first-child').each(function(){
+			$('.image-column.column-4-8 .col-6:last-child, .image-column.column-8-4 .col-6:first-child, .woocommerce-product-gallery').each(function(){
 				var imgSrc = $(this).find('img').attr('src');
 				$(this).find('img').css('visibility', 'hidden');
 				$(this).css({

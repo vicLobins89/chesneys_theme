@@ -23,6 +23,8 @@ img {
 	}
 }
 
+p + h4 { clear: unset; }
+
 .entry-content:not(.full) {
 	> div {
 		max-width: 1400px;
