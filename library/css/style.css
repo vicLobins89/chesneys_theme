@@ -3159,8 +3159,12 @@ POSTS & CONTENT STYLES
   .woocommerce-cart ul.order_details li,
   .woocommerce-checkout ul.order_details li {
     margin: 0;
-    padding: 0;
-    width: 25%; }
+    padding: 0; }
+    @media only screen and (max-width: 767px) {
+      #add_payment_method ul.order_details li,
+      .woocommerce-cart ul.order_details li,
+      .woocommerce-checkout ul.order_details li {
+        width: 25%; } }
     #add_payment_method ul.order_details li:nth-child(n+5),
     .woocommerce-cart ul.order_details li:nth-child(n+5),
     .woocommerce-checkout ul.order_details li:nth-child(n+5) {
@@ -3210,6 +3214,23 @@ POSTS & CONTENT STYLES
 .woocommerce-checkout .woocommerce-order-pay button[name=login] {
   font-size: 1.1em;
   width: 49%; }
+  @media only screen and (max-width: 767px) {
+    .woocommerce-order-pay .secondary-btn, .woocommerce-order-pay .search input[type="submit"], .search .woocommerce-order-pay input[type="submit"], .woocommerce-order-pay .woocommerce button.single_add_to_cart_button, .woocommerce .woocommerce-order-pay button.single_add_to_cart_button,
+    .woocommerce-order-pay .woocommerce button.woocommerce-Button,
+    .woocommerce .woocommerce-order-pay button.woocommerce-Button, .woocommerce-order-pay .woocommerce table.shop_table .button, .woocommerce table.shop_table .woocommerce-order-pay .button, .woocommerce-order-pay .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .woocommerce-order-pay .button, .woocommerce-order-pay .woocommerce .button.wc-forward, .woocommerce .woocommerce-order-pay .button.wc-forward, .woocommerce-order-pay #add_payment_method form input.button.alt, #add_payment_method form .woocommerce-order-pay input.button.alt,
+    .woocommerce-order-pay .woocommerce-cart form input.button.alt,
+    .woocommerce-cart form .woocommerce-order-pay input.button.alt,
+    .woocommerce-order-pay .woocommerce-checkout form input.button.alt,
+    .woocommerce-checkout form .woocommerce-order-pay input.button.alt, .woocommerce-order-pay #add_payment_method form a.button.cancel, #add_payment_method form .woocommerce-order-pay a.button.cancel,
+    .woocommerce-order-pay .woocommerce-cart form a.button.cancel,
+    .woocommerce-cart form .woocommerce-order-pay a.button.cancel,
+    .woocommerce-order-pay .woocommerce-checkout form a.button.cancel,
+    .woocommerce-checkout form .woocommerce-order-pay a.button.cancel, .woocommerce-order-pay #add_payment_method button[name=login], #add_payment_method .woocommerce-order-pay button[name=login],
+    .woocommerce-order-pay .woocommerce-cart button[name=login],
+    .woocommerce-cart .woocommerce-order-pay button[name=login],
+    .woocommerce-order-pay .woocommerce-checkout button[name=login],
+    .woocommerce-checkout .woocommerce-order-pay button[name=login] {
+      width: 100%; } }
 
 .widget.widget_product_categories {
   margin: 0;
