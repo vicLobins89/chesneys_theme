@@ -1101,13 +1101,18 @@ hr {
   height: 0;
   padding-bottom: 56%;
   margin: 0; }
-  .aspect-ratio iframe, .aspect-ratio video, .vidbg-container iframe, .vidbg-container video {
+  .aspect-ratio iframe, .aspect-ratio video, .aspect-ratio .wp-playlist, .vidbg-container iframe, .vidbg-container video, .vidbg-container .wp-playlist {
     position: absolute;
     width: 100% !important;
     height: 100% !important;
     transform: none;
     left: 0;
     top: 0; }
+
+.wp-playlist {
+  margin: 0;
+  padding: 0;
+  border: none; }
 
 .vidbg-container {
   padding-bottom: 120%; }

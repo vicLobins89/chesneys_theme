@@ -84,7 +84,7 @@ hr {
 	padding-bottom: 56%;
 	margin: 0;
 	
-	iframe, video {
+	iframe, video, .wp-playlist {
 		position: absolute;
 		width: 100% !important;
 		height: 100% !important;
@@ -92,6 +92,12 @@ hr {
 		left: 0;
 		top: 0;
 	}
+}
+
+.wp-playlist {
+	margin: 0;
+	padding: 0;
+	border: none;
 }
 
 .vidbg-container {
