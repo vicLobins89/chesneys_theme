@@ -120,17 +120,17 @@ jQuery(document).ready(function($) {
 	});
 	$('.menu-breadcrumb a:contains("Outdoor Living")').each(function(){
 		var oldUrl = $(this).attr("href");
-		var newUrl = oldUrl.replace("/category/outdoor-living", "/outdoor-living");
+		var newUrl = oldUrl.replace("/category/outdoor-living", "/outdoor");
 		$(this).attr("href", newUrl);
 	});
 	$('.menu-breadcrumb a:contains("Heat Range")').each(function(){
 		var oldUrl = $(this).attr("href");
-		var newUrl = oldUrl.replace("/category/outdoor-living/heat-range", "/outdoor-living/shop");
+		var newUrl = oldUrl.replace("/category/outdoor-living/heat-range", "/outdoor/shop");
 		$(this).attr("href", newUrl);
 	});
 	$('.menu-breadcrumb a:contains("Gourmet Range")').each(function(){
 		var oldUrl = $(this).attr("href");
-		var newUrl = oldUrl.replace("/category/outdoor-living/gourmet-range", "/outdoor-living/shop");
+		var newUrl = oldUrl.replace("/category/outdoor-living/gourmet-range", "/outdoor/shop");
 		$(this).attr("href", newUrl);
 	});
 	
