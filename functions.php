@@ -376,7 +376,7 @@ add_filter( 'woocommerce_get_price_suffix', 'bbloomer_price_translatable_suffix'
 
 // Number of rows + products
 function loop_columns() {
-	if ( has_term( 'gas-stoves' )  ) {
+	if ( is_product_category('gas-stoves')  ) {
 		return 2;
 	} else {
 		return 3;
