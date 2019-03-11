@@ -2537,7 +2537,8 @@ POSTS & CONTENT STYLES
   margin-bottom: 2rem; }
 
 .custom-content.narrow-para {
-  margin-top: 2.5rem !important; }
+  margin-top: 2.5rem !important;
+  max-width: 60%; }
 
 .custom-content {
   margin: 2.5rem auto 0; }
