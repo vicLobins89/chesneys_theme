@@ -3072,7 +3072,8 @@ POSTS & CONTENT STYLES
 		li {
 			margin: 0;
 			padding: 0;
-			@media only screen and (max-width: 767px) { width: 25%; }
+			width: 25%;
+			@media only screen and (max-width: 767px) { width: 100%; }
 			
 			&:nth-child(n+5) {
 				width: 100%;

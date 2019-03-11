@@ -3159,12 +3159,13 @@ POSTS & CONTENT STYLES
   .woocommerce-cart ul.order_details li,
   .woocommerce-checkout ul.order_details li {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    width: 25%; }
     @media only screen and (max-width: 767px) {
       #add_payment_method ul.order_details li,
       .woocommerce-cart ul.order_details li,
       .woocommerce-checkout ul.order_details li {
-        width: 25%; } }
+        width: 100%; } }
     #add_payment_method ul.order_details li:nth-child(n+5),
     .woocommerce-cart ul.order_details li:nth-child(n+5),
     .woocommerce-checkout ul.order_details li:nth-child(n+5) {
