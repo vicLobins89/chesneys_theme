@@ -66,7 +66,7 @@ function wdm_send_order_to_ext( $order_id ){
 			}
 		}
 		
-		if( $product->get_shipping_class() == 'banbury' ) {
+		if( $product->get_shipping_class() == 'banbury' || $product->get_shipping_class() == 'banburry-accessories' ) {
 			$csv_data[] = array(
 				'YourOrderRef' => $order_number,
 				'CustomerName' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
@@ -191,7 +191,7 @@ function create_csv_string($csv_data) {
 
 }
 
-function send_csv_mail($csv_data, $body, $to = 'vic@honey.co.uk',  $from = 'noreply@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csv_data, $body, $to = 'vic@honey.co.uk',  $from = 'wordpress@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
 

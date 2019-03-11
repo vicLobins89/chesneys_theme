@@ -359,7 +359,7 @@ function jk_woocommerce_breadcrumbs($defaults) {
 		'wrap_after'  => '</p>',
 		'before'      => '',
 		'after'       => '',
-		'home'        => _x( 'Homepage', 'breadcrumb', 'woocommerce' ),
+		'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
 	);
 }
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );

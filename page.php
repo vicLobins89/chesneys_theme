@@ -16,7 +16,7 @@ $acfClass = new CustomACF();
 							$breadcrumb = array( 'Fireplaces', 'Stoves' );
 							if( !is_front_page() && !is_tree(91) && !is_tree(93) && is_page($breadcrumb) ) {
 								$menu_breadcrumb = new Menu_Breadcrumb( 'main-nav' );
-								$menu_breadcrumb->render( ' &sol;&sol; ', '<p class="menu-breadcrumb"><a href="'.home_url().'">Homepage</a> // ', '</p>' );
+								$menu_breadcrumb->render( ' &sol;&sol; ', '<p class="menu-breadcrumb"><a href="'.home_url().'">Home</a> // ', '</p>' );
 							}
 							?>
 
