@@ -2539,7 +2539,8 @@ POSTS & CONTENT STYLES
         margin-right: auto !important; }
 
 .spares-thumbs .wp-caption {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  font-size: 1.2rem; }
 
 .custom-content.narrow-para {
   margin-top: 2.5rem !important;
@@ -3060,6 +3061,7 @@ POSTS & CONTENT STYLES
   opacity: 0;
   visibility: hidden;
   padding: 2rem;
+  font-size: 1.2rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   .woocommerce .hover-text a {

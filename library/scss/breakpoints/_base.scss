@@ -2171,6 +2171,7 @@ POSTS & CONTENT STYLES
 .spares-thumbs {
 	.wp-caption {
 		margin-bottom: 2rem;
+		font-size: 1.2rem;
 	}
 }
 
@@ -2998,6 +2999,7 @@ POSTS & CONTENT STYLES
 		opacity: 0;
 		visibility: hidden;
 		padding: 2rem;
+		font-size: 1.2rem;
 		@include transition(all 0.3s ease-in-out);
 		
 		a {

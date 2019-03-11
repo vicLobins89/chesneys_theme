@@ -42,7 +42,7 @@ $acfClass = new CustomACF();
 										}
 										
 										//echo '<p>'.$full_name.'<br>'.get_the_date('d-m-Y').'</p>';
-										echo '<p>'.get_the_date('d M Y').'</p>';
+										//echo '<p>'.get_the_date('d M Y').'</p>';
 										?>
 									</div>
 									</div>
