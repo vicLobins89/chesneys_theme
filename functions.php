@@ -364,6 +364,14 @@ function jk_woocommerce_breadcrumbs($defaults) {
 }
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 
+// Inc. Vat on prices
+function cw_change_product_price_display( $price ) {
+	$pric2e .= ' inc. VAT';
+	return $price;
+}
+add_filter( 'woocommerce_get_price_html', 'cw_change_product_price_display' );
+add_filter( 'woocommerce_cart_item_price', 'cw_change_product_price_display' );
+
 // Number of rows + products
 function loop_columns() {
 	return 3;
