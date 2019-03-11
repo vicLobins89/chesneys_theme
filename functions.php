@@ -366,6 +366,8 @@ add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 
 // Inc. Vat on prices
 function bbloomer_price_translatable_suffix( $html, $product, $price, $qty ){
+	$term = get_queried_object();
+	
 	if( term_is_ancestor_of(63, $term->term_id, 'product_cat') || is_product_category(63) || is_product_category(97) || is_product_category(69) ) {
 		 $html .= ' ' . __( 'inc. VAT', 'bbloomer' );
 	}
