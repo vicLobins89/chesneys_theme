@@ -3270,6 +3270,8 @@ POSTS & CONTENT STYLES
         padding-top: 10px; }
         .widget.widget_product_categories > ul ul li.current-cat {
           color: #4b858e; }
+        .widget.widget_product_categories > ul ul li a {
+          color: inherit; }
 
 .woocommerce .spares-shop-loop .woocommerce-result-count,
 .woocommerce .spares-shop-loop .woocommerce-ordering {
