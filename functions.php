@@ -365,17 +365,11 @@ function jk_woocommerce_breadcrumbs($defaults) {
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 
 // Inc. Vat on prices
-function cw_change_product_price_display( $price ) {
-	$term = get_queried_object();
-
-	if( term_is_ancestor_of(63, $term->term_id, 'product_cat') || is_product_category(63) || is_product_category(97) || is_product_category(69) ) {
-		$price .= ' inc. VAT';
-	}
-	
-	return $price;
+function bbloomer_price_translatable_suffix( $html, $product, $price, $qty ){
+    $html .= ' ' . __( 'inc. VAT', 'bbloomer' ) . ' (' . wc_price( wc_get_price_excluding_tax( $product, array( 'qty' => $qty, 'price' => $price ) ) ) . ' ' . __( 'exc. VAT', 'bbloomer' ) . ')';
+    return $html;
 }
-add_filter( 'woocommerce_get_price_html', 'cw_change_product_price_display' );
-add_filter( 'woocommerce_cart_item_price', 'cw_change_product_price_display' );
+add_filter( 'woocommerce_get_price_suffix', 'bbloomer_price_translatable_suffix', 99, 4 );
 
 // Number of rows + products
 function loop_columns() {
