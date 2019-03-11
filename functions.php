@@ -365,11 +365,9 @@ function jk_woocommerce_breadcrumbs($defaults) {
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 
 // Inc. Vat on prices
-function bbloomer_price_translatable_suffix( $html, $product, $price, $qty ){
-	$term = get_queried_object();
-	
-	if( is_product_category(array('heat-accessories', 'fuel', 'outdoor-living', 'gourmet-range', 'heat-range')) ) {
-		 $html .= ' ' . __( 'inc. VAT', 'bbloomer' );
+function bbloomer_price_translatable_suffix( $html, $product ){
+	if ( has_term( 'outdoor-living', 'product_cat' ) ) {
+	   $html .= ' ' . __( 'inc. VAT', 'bbloomer' );
 	}
 	
     return $html;
