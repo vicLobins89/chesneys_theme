@@ -368,7 +368,7 @@ add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 function bbloomer_price_translatable_suffix( $html, $product, $price, $qty ){
 	$term = get_queried_object();
 	
-	if( term_is_ancestor_of(63, $term->term_id, 'product_cat') || is_product_category(63) || is_product_category(97) || is_product_category(69) ) {
+	if( is_product_category(array('heat-accessories', 'fuel', 'outdoor-living', 'gourmet-range', 'heat-range')) ) {
 		 $html .= ' ' . __( 'inc. VAT', 'bbloomer' );
 	}
 	
