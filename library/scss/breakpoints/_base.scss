@@ -2279,7 +2279,7 @@ POSTS & CONTENT STYLES
 
 	}
 
-	ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers) {
+	ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers):not(.order_details) {
 		list-style-type: disc;
 		margin-bottom: 2em;
 		padding-left: 1.25em;

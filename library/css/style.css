@@ -2607,25 +2607,25 @@ POSTS & CONTENT STYLES
     font-size: .9rem; }
     .entry-content ul:not(.product-categories ul) li, .entry-content ol li {
       margin-bottom: .8rem; }
-  .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers) {
+  .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers):not(.order_details) {
     list-style-type: disc;
     margin-bottom: 2em;
     padding-left: 1.25em; }
-    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers).links {
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers):not(.order_details).links {
       list-style-type: none;
       padding: 0; }
-      .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers).links > li {
+      .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers):not(.order_details).links > li {
         text-decoration: underline; }
-    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers).dashed {
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers):not(.order_details).dashed {
       list-style-type: none; }
-      .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers).dashed > li {
+      .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers):not(.order_details).dashed > li {
         text-indent: -10px; }
-        .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers).dashed > li:before {
+        .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers):not(.order_details).dashed > li:before {
           content: "- ";
           text-indent: -10px; }
-    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers).sans {
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers):not(.order_details).sans {
       font-size: .8em; }
-    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers) li {
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers):not(.order_details) li {
       font-size: 1.15em;
       margin-bottom: 6px; }
   .entry-content .list {
