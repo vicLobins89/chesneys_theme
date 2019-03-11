@@ -3268,6 +3268,8 @@ POSTS & CONTENT STYLES
         border-top: 1px solid #142128;
         margin-bottom: 1.5rem;
         padding-top: 10px; }
+        .widget.widget_product_categories > ul ul li.current-cat {
+          color: #4b858e; }
 
 .woocommerce .spares-shop-loop .woocommerce-result-count,
 .woocommerce .spares-shop-loop .woocommerce-ordering {

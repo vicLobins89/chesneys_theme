@@ -3162,9 +3162,13 @@ POSTS & CONTENT STYLES
 			 li {
 				list-style-type: none;
 				font-size: .75em;
-				border-top: 1px solid #142128;
+				border-top: 1px solid $dark-gray;
 				margin-bottom: 1.5rem;
 				padding-top: 10px;
+				 
+				 &.current-cat {
+					 color: $teal;
+				 }
 			}
 		}
 	}
