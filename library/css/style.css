@@ -1109,7 +1109,7 @@ hr {
     left: 0;
     top: 0; }
 
-.wp-playlist {
+.row .wp-playlist {
   margin: 0;
   padding: 0;
   border: none; }
