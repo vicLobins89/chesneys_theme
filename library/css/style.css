@@ -1101,7 +1101,7 @@ hr {
   height: 0;
   padding-bottom: 56%;
   margin: 0; }
-  .aspect-ratio iframe, .aspect-ratio video, .aspect-ratio .wp-playlist, .vidbg-container iframe, .vidbg-container video, .vidbg-container .wp-playlist {
+  .aspect-ratio iframe, .aspect-ratio video, .vidbg-container iframe, .vidbg-container video {
     position: absolute;
     width: 100% !important;
     height: 100% !important;

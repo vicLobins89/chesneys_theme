@@ -36,8 +36,8 @@ function folio_post() {
 			'query_var' => true,
 			'menu_position' => 11, /* this is what order you want it to appear in on the left hand side menu */ 
 			'menu_icon' => 'dashicons-portfolio', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'case_study', 'with_front' => false ), /* you can specify its url slug */
-			'has_archive' => 'case_study', /* you can rename the slug here */
+			'rewrite'	=> array( 'slug' => 'case-study', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'case-study', /* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -79,7 +79,7 @@ function folio_post() {
 			'show_admin_column' => true,
 			'show_ui' => true,
 			'query_var' => true,
-			'rewrite' => array( 'slug' => 'case-slug' ),
+			'rewrite' => array( 'slug' => 'case-studies' ),
 		)
 	);
 	
