@@ -39,6 +39,11 @@
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+		
+		<?php
+		// GTM
+		if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); }
+		?>
 
 		<div id="container">
 			
