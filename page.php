@@ -107,7 +107,7 @@ $acfClass = new CustomACF();
 
 				<li>';
 						echo '<a href="'.get_term_link($category).'" >';
-						echo $category->name . ' Archives';
+						echo get_term_link($category);
 						echo '</a>';
 						echo '</li>';
 					}
