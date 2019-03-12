@@ -85,6 +85,16 @@ $acfClass = new CustomACF();
 							<?php endif; ?>
 
 							</article>
+				
+				<?php
+				$args = array(
+					'taxonomy'   => "product_cat",
+					'number'     => -1,
+					'hide_empty' => false
+				);
+				$product_categories = get_terms($args);
+				print_r($product_categories);
+				?>
 
 							<?php endwhile; endif; ?>
 
