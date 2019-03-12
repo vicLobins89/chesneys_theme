@@ -142,7 +142,7 @@ function display_theme_panel_fields() {
 		'logo_display_alt',
 		'rh-settings-page',
 		'rh-settings-page_section'
-	);
+	);*/
 	
 	add_settings_field(
 		'twitter_url',
@@ -185,6 +185,14 @@ function display_theme_panel_fields() {
 	);
 	
 	add_settings_field(
+		'pinterest_url',
+		'Pinterest Profile URL',
+		'display_pinterest_el',
+		'rh-settings-page',
+		'rh-settings-page_section'
+	);
+	
+	/*add_settings_field(
 		'case_studies_switch',
 		'Enable News Feed',
 		'display_case_studies_el',
@@ -291,6 +299,13 @@ function display_linkedin_el() {
 	$options = get_option('rh_settings');
 	?>
 	<input type='text' name='rh_settings[linkedin_url]' value='<?php echo $options['linkedin_url']; ?>'>
+	<?php
+}
+
+function display_pinterest_el() {
+	$options = get_option('rh_settings');
+	?>
+	<input type='text' name='rh_settings[pinterest_url]' value='<?php echo $options['pinterest_url']; ?>'>
 	<?php
 }
 
