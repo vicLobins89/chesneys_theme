@@ -30,6 +30,12 @@ section, div {
 
 .cookie-notice-container {
 	font-size: 1rem;
+	
+	#cn-notice-text {
+		display: block;
+		max-width: 70%;
+		margin: 1rem auto 0;
+	}
 }
 
 #container {

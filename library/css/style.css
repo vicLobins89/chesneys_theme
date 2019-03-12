@@ -1066,6 +1066,10 @@ section, div {
 
 .cookie-notice-container {
   font-size: 1rem; }
+  .cookie-notice-container #cn-notice-text {
+    display: block;
+    max-width: 70%;
+    margin: 1rem auto 0; }
 
 #container {
   overflow: hidden; }
