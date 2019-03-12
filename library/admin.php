@@ -136,14 +136,6 @@ function display_theme_panel_fields() {
 		'rh-settings-page_section'
 	);
 	
-	/*add_settings_field(
-		'logo_alt',
-		'Alternative Logo',
-		'logo_display_alt',
-		'rh-settings-page',
-		'rh-settings-page_section'
-	);*/
-	
 	add_settings_field(
 		'twitter_url',
 		'Twitter Profile URL',
@@ -192,22 +184,7 @@ function display_theme_panel_fields() {
 		'rh-settings-page_section'
 	);
 	
-	/*add_settings_field(
-		'case_studies_switch',
-		'Enable News Feed',
-		'display_case_studies_el',
-		'rh-settings-page',
-		'rh-settings-page_section'
-	);
-	
-	add_settings_field(
-		'max_width_switch',
-		'Enable Max Width',
-		'display_max_width_el',
-		'rh-settings-page',
-		'rh-settings-page_section'
-	);
-	
+	/*
 	add_settings_field(
 		'copyright_txt',
 		'Copyright Text',
