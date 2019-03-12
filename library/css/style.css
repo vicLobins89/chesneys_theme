@@ -1139,7 +1139,10 @@ hr {
   position: relative;
   display: inline-block;
   width: 32%;
-  padding: 2rem 1rem; }
+  padding: 0 1rem; }
+  @media only screen and (max-width: 767px) {
+    .vid-thumb {
+      width: 100%; } }
   .vid-thumb .play {
     position: absolute;
     z-index: 50;

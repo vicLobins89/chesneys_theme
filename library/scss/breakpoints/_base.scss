@@ -134,7 +134,8 @@ hr {
 	position: relative;
 	display: inline-block;
 	width: 32%;
-	padding: 2rem 1rem;
+	@media only screen and (max-width: 767px) { width: 100%; }
+	padding: 0 1rem;
 	
 	.play {
 		@extend .primary-btn;
