@@ -1064,6 +1064,9 @@ body {
 section, div {
   outline: none !important; }
 
+.cookie-notice-container {
+  font-size: 1rem; }
+
 #container {
   overflow: hidden; }
 
