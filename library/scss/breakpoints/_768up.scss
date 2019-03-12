@@ -662,4 +662,13 @@ FOOTER STYLES
 }
 
 .footer-links .nav .menu-item {
+	&:last-child {
+		.separator {
+			display: none;
+		}
+	}
+	
+	.separator {
+		display: inline;
+	}
 }

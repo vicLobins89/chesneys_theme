@@ -608,6 +608,11 @@ FOOTER STYLES
 .footer {
   padding: 2rem 4rem; }
 
+.footer-links .nav .menu-item:last-child .separator {
+  display: none; }
+.footer-links .nav .menu-item .separator {
+  display: inline; }
+
 /******************************************************************
 Site Name: Honey
 Author: Vic Lobins
