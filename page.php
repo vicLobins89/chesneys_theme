@@ -93,7 +93,9 @@ $acfClass = new CustomACF();
 					'hide_empty' => false
 				);
 				$product_categories = get_terms($args);
-				print_r($product_categories);
+				foreach($product_categories as $product_category) {
+					print_r($product_category);
+				}
 				?>
 
 							<?php endwhile; endif; ?>
