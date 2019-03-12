@@ -1107,7 +1107,8 @@ hr {
     height: 100% !important;
     transform: none;
     left: 0;
-    top: 0; }
+    top: 0;
+    border: none !important; }
 
 .row .wp-playlist {
   margin: 0;
