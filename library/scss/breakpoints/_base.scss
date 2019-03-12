@@ -398,6 +398,10 @@ WORDPRESS BODY CLASSES
 	input[type="submit"] {
 		@extend .secondary-btn;
 	}
+	
+	.postform option[value="content_block"] {
+		display: none !important;
+	}
 }
 
 .search-results {

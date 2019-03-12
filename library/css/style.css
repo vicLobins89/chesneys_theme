@@ -1250,6 +1250,8 @@ WORDPRESS BODY CLASSES
   .search .thumb img {
     width: 100%;
     height: auto; }
+.search .postform option[value="content_block"] {
+  display: none !important; }
 
 .error404 #post-not-found {
   text-align: center; }
