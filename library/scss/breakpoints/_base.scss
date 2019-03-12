@@ -632,8 +632,12 @@ LAYOUT & GRID STYLES
 			color: $white;
 		}
 		
-		img:last-child {
-			margin-bottom: 0;
+		img {
+			width: 100%;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 		
 		strong, b {
@@ -2935,6 +2939,22 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
+	&.term-period-reproductions {
+		ul.products {
+			li.last {
+				&:after {
+					content: 'Explore our collection of bespoke fire surrounds at special prices, whilst stocks last.';
+					display: block;
+					
+				}
+				
+				img {
+					filter: grayscale(100%);
+				}
+			}
+		}
+	}
+	
 	&.term-outdoor-living,
 	&.outdoor-related,
 	&.outdoor-accessories {
@@ -3004,10 +3024,6 @@ POSTS & CONTENT STYLES
 				display: none;
 			}
 		}
-	}
-	
-	&.term-outdoor-living {
-		
 	}
 	
 	.hover-text {

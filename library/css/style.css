@@ -1411,8 +1411,10 @@ LAYOUT & GRID STYLES
     border-top: 2rem solid #fff;
     background: #142128;
     color: #fff; }
-  .row.product-info-wrapper img:last-child {
-    margin-bottom: 0; }
+  .row.product-info-wrapper img {
+    width: 100%; }
+    .row.product-info-wrapper img:last-child {
+      margin-bottom: 0; }
   .row.product-info-wrapper strong, .row.product-info-wrapper b {
     font-family: "Univers", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -3038,6 +3040,11 @@ POSTS & CONTENT STYLES
   .woocommerce ul.products li.product:hover .hover-text, .woocommerce ul.products li.product:focus .hover-text {
     opacity: 1;
     visibility: visible; }
+.woocommerce.term-period-reproductions ul.products li.last:after {
+  content: 'Explore our collection of bespoke fire surrounds at special prices, whilst stocks last.';
+  display: block; }
+.woocommerce.term-period-reproductions ul.products li.last img {
+  filter: grayscale(100%); }
 @media only screen and (max-width: 767px) {
   .woocommerce.term-outdoor-living ul.products[class*=columns-] li.product, .woocommerce.outdoor-related ul.products[class*=columns-] li.product, .woocommerce.outdoor-accessories ul.products[class*=columns-] li.product {
     margin-bottom: 1rem; } }
