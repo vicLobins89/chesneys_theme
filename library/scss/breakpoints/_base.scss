@@ -3716,6 +3716,10 @@ FOOTER STYLES
 			
 			&:last-child {
 				margin-bottom: 0;
+				
+				.separator {
+					display: none;
+				}
 			}
 		}
 	}

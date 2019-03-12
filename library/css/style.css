@@ -3603,6 +3603,8 @@ FOOTER STYLES
           text-decoration: underline; }
       .footer-links .nav .menu-item:last-child {
         margin-bottom: 0; }
+        .footer-links .nav .menu-item:last-child .separator {
+          display: none; }
 
 .social {
   float: right; }
