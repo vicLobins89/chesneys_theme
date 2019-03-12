@@ -57,8 +57,6 @@
 
 		<div id="container">
 			
-			<?php get_sidebar('cookie'); ?>
-			
 			<?php //echo do_shortcode('[geoip_detect2_show_if country="US"] TEXT [/geoip_detect2_show_if]'); ?>
 			<?php //echo do_shortcode('[geoip_detect2_show_if country="GB"] TEXT [/geoip_detect2_show_if]'); ?>
 

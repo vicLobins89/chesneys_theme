@@ -167,16 +167,6 @@ function bones_register_sidebars() {
 		'before_title' => '<h2 class="lhs">',
 		'after_title' => '</h2>',
 	));
-	
-	register_sidebar(array(
-		'id' => 'cookie',
-		'name' => __( 'Cookie Policy', 'bonestheme' ),
-		'description' => __( 'The cookie policy notice.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s cf">',
-		'after_widget' => '</div>',
-		'before_title' => '<h2 class="lhs">',
-		'after_title' => '</h2>',
-	));
 } // don't remove this bracket!
 
 
