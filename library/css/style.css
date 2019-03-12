@@ -1716,7 +1716,7 @@ LAYOUT & GRID STYLES
     padding-bottom: 3rem; }
     .module.module-sign-up .wpcf7-form {
       margin-bottom: 0; }
-      .module.module-sign-up .wpcf7-form input {
+      .module.module-sign-up .wpcf7-form input:not([type=checkbox]) {
         width: 20rem;
         height: 3.5rem; }
   .module.module-ctas, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {

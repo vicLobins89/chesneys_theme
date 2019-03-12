@@ -1039,7 +1039,7 @@ LAYOUT & GRID STYLES
 		.wpcf7-form {
 			margin-bottom: 0;
 			
-			input {
+			input:not([type=checkbox]) {
 				width: 20rem;
 				height: 3.5rem;
 			}
