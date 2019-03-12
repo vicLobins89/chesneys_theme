@@ -3604,10 +3604,17 @@ FOOTER STYLES
       .footer-links .nav .menu-item:last-child {
         margin-bottom: 0; }
 
+.social {
+  float: right; }
+  .social a {
+    color: #fff; }
+
 .copyright {
   float: right;
   text-align: left;
-  font-size: 1rem; }
+  clear: both;
+  font-size: 1rem;
+  margin: 10px 0; }
 
 /*********************
 LARGER MOBILE DEVICES

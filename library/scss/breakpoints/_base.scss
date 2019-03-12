@@ -3721,8 +3721,18 @@ FOOTER STYLES
 	}
 }
 
+.social {
+	float: right;
+	
+	a {
+		color: $white;
+	}
+}
+
 .copyright {
 	float: right;
 	text-align: left;
+	clear: both;
 	font-size: 1rem;
+	margin: 10px 0;
 }
