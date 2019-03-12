@@ -140,11 +140,13 @@ if( $row == 1 ) : ?>
 	<?php the_sub_field('video_url'); ?>
 </div>
 
-<?php elseif( $row == 2 ) : ?>
+<?php else : 
 
-<p class="copy-l" style="text-align: center">For videos on our other products, please see below.</p>
+	if( $row == 2 ) : ?>	
 
-<?php else : ?>
+	<p class="copy-l" style="text-align: center">For videos on our other products, please see below.</p>
+	
+	<?php endif; ?>
 
 <div class="vid-thumb">
 	<div class="play">Play</div>
