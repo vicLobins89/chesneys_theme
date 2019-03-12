@@ -3607,14 +3607,15 @@ FOOTER STYLES
 .social {
   float: right; }
   .social a {
-    color: #fff; }
+    color: #fff;
+    margin-left: 1rem; }
 
 .copyright {
   float: right;
   text-align: left;
   clear: both;
   font-size: 1rem;
-  margin: 10px 0; }
+  margin: 10px 0 0; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -4144,10 +4145,7 @@ TABLET & SMALLER LAPTOPS
   FOOTER STYLES
   *********************/
   .footer {
-    padding: 2rem 4rem; }
-
-  .footer-links .nav .menu-item {
-    display: block !important; } }
+    padding: 2rem 4rem; } }
 /*********************
 DESKTOP
 *********************/

@@ -86,7 +86,8 @@
 						'container_class' => 'menu cf',
 						'menu' => __( 'The Main Menu', 'bonestheme' ),
 						'menu_class' => 'nav primary-nav cf',
-						'theme_location' => 'main-nav'
+						'theme_location' => 'main-nav',
+						'after' => '<span class="separator"> | </span>'
 					));
 					get_sidebar('nav_widget');
 					?>
