@@ -3040,11 +3040,21 @@ POSTS & CONTENT STYLES
   .woocommerce ul.products li.product:hover .hover-text, .woocommerce ul.products li.product:focus .hover-text {
     opacity: 1;
     visibility: visible; }
-.woocommerce.term-period-reproductions ul.products li.last:after {
-  content: 'Explore our collection of bespoke fire surrounds at special prices, whilst stocks last.';
-  display: block; }
-.woocommerce.term-period-reproductions ul.products li.last img {
-  filter: grayscale(100%); }
+.woocommerce.term-period-reproductions ul.products li:last-child a {
+  position: relative; }
+  .woocommerce.term-period-reproductions ul.products li:last-child a:after {
+    content: 'Explore our collection of bespoke fire surrounds at special prices, whilst stocks last.';
+    display: block;
+    position: absolute;
+    top: 22%;
+    width: calc(100% - 2rem);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.8); }
+  .woocommerce.term-period-reproductions ul.products li:last-child a img {
+    filter: grayscale(100%); }
 @media only screen and (max-width: 767px) {
   .woocommerce.term-outdoor-living ul.products[class*=columns-] li.product, .woocommerce.outdoor-related ul.products[class*=columns-] li.product, .woocommerce.outdoor-accessories ul.products[class*=columns-] li.product {
     margin-bottom: 1rem; } }
