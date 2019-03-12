@@ -6,6 +6,16 @@
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-6198567-14"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-6198567-14');
+		</script>
+
 		<meta charset="utf-8">
 
 		<?php // force Internet Explorer to use the latest rendering engine available ?>
@@ -46,6 +56,8 @@
 		?>
 
 		<div id="container">
+			
+			<?php get_sidebar('cookie'); ?>
 			
 			<?php //echo do_shortcode('[geoip_detect2_show_if country="US"] TEXT [/geoip_detect2_show_if]'); ?>
 			<?php //echo do_shortcode('[geoip_detect2_show_if country="GB"] TEXT [/geoip_detect2_show_if]'); ?>
