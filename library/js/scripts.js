@@ -134,6 +134,9 @@ jQuery(document).ready(function($) {
 		$(this).attr("href", newUrl);
 	});
 	
+	// Search dropdown fix
+	$('.postform option[value="post"]').innerHTML('News');
+	
 	// Menu
 	$('.menu-button').on('click', function(){
 		$(this).parents('.header').toggleClass('active');
