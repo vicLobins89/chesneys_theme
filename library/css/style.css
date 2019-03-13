@@ -1752,7 +1752,8 @@ LAYOUT & GRID STYLES
       display: inline-block; }
       .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
         vertical-align: middle;
-        max-width: 14rem; }
+        max-width: 14rem;
+        margin: 0 2rem; }
         @media only screen and (max-width: 767px) {
           .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
             min-width: 12rem; } }
@@ -4052,7 +4053,8 @@ TABLET & SMALLER LAPTOPS
     justify-content: space-evenly;
     -webkit-align-items: center;
     -ms-align-items: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
 
   /*********************
   LAYOUT & GRID STYLES

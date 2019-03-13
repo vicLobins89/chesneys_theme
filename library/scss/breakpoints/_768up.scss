@@ -459,6 +459,7 @@ POSTS & CONTENT STYLES
 			display: flex;
 			@include prefix(justify-content, space-evenly, webkit ms);
 			@include prefix(align-items, center, webkit ms);
+			text-align: center;
 		}
 	}
 }

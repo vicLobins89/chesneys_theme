@@ -490,7 +490,8 @@ POSTS & CONTENT STYLES
   justify-content: space-evenly;
   -webkit-align-items: center;
   -ms-align-items: center;
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
 
 /*********************
 LAYOUT & GRID STYLES
