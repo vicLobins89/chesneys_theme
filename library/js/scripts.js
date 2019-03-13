@@ -135,7 +135,7 @@ jQuery(document).ready(function($) {
 	});
 	
 	// Search dropdown fix
-	$('.postform option[value="post"]').innerHTML('News');
+	$('.postform option[value="post"]').text('News');
 	
 	// Menu
 	$('.menu-button').on('click', function(){
