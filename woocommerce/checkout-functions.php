@@ -101,7 +101,7 @@ function wdm_send_order_to_ext( $order_id ){
 		'half_api_key' => substr( $api_key, 0, 16 ),
 		'message_timestamp' => $message_timestamp,
 		'security_hash' => md5( $message_timestamp . $api_key ),
-		'test' => true,
+		'test' => false,
 		'order' => array(
 			'client_ref' => $order_number,
 			'ShippingContact' => array(
