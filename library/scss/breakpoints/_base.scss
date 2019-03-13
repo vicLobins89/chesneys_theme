@@ -930,6 +930,14 @@ LAYOUT & GRID STYLES
 	[class*="col-"] {
 		padding: 0 1rem 0 0;
 	}
+	
+	h4 {
+		margin-bottom: 2px;
+		
+		&:first-child {
+			margin-top: 0;
+		}
+	}
 }
 
 .black-box {

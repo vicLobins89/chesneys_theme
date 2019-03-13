@@ -1594,6 +1594,10 @@ LAYOUT & GRID STYLES
   background: #f5f3f1; }
   .gray-box [class*="col-"] {
     padding: 0 1rem 0 0; }
+  .gray-box h4 {
+    margin-bottom: 2px; }
+    .gray-box h4:first-child {
+      margin-top: 0; }
 
 .black-box {
   padding: 3rem;
