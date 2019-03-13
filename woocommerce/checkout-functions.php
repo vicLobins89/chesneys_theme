@@ -66,7 +66,14 @@ function wdm_send_order_to_ext( $order_id ){
 			}
 		}
 		
-		if( $product->get_shipping_class() == 'banbury' || $product->get_shipping_class() == 'banburry-accessories' ) {
+		if( 
+			$product->get_shipping_class() == 'clean-burn' || 
+			$product->get_shipping_class() == 'heat-grill' || 
+			$product->get_shipping_class() == 'garden-gourmet' || 
+			$product->get_shipping_class() == 'garden-party' || 
+			$product->get_shipping_class() == 'terrace-gourmet' || 
+			$product->get_shipping_class() == 'banburry-accessories' 
+		) {
 			$csv_data[] = array(
 				'YourOrderRef' => $order_number,
 				'CustomerName' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
