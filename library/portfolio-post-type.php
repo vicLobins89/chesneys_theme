@@ -21,7 +21,7 @@ function folio_post() {
 			'add_new_item' => __( 'Add New Case Study', 'bonestheme' ), /* Add New Display Title */
 			'edit' => __( 'Edit', 'bonestheme' ), /* Edit Dialog */
 			'edit_item' => __( 'Edit Case Study', 'bonestheme' ), /* Edit Display Title */
-			'new_item' => __( 'New Case Studyk', 'bonestheme' ), /* New Display Title */
+			'new_item' => __( 'New Case Study', 'bonestheme' ), /* New Display Title */
 			'view_item' => __( 'View Case Study', 'bonestheme' ), /* View Display Title */
 			'search_items' => __( 'Search Case Studies', 'bonestheme' ), /* Search Custom Type Title */ 
 			'not_found' =>  __( 'Nothing found in the Database.', 'bonestheme' ), /* This displays if there are no entries yet */ 
