@@ -1813,8 +1813,7 @@ NAVIGATION STYLES
 		vertical-align: middle;
 		color: $dark-brown;
 		
-		&.menu-item-1007,
-		&.menu-item-579 {
+		&.lighten {
 			color: lighten($dark-brown, 20%);
 		}
 		

@@ -2245,7 +2245,7 @@ NAVIGATION STYLES
     margin: 0;
     vertical-align: middle;
     color: #766e63; }
-    .primary-nav > li.menu-item-1007, .primary-nav > li.menu-item-579 {
+    .primary-nav > li.lighten {
       color: #a8a197; }
     .primary-nav > li.separator, .primary-nav > li.separator > a {
       display: none; }
