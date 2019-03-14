@@ -80,6 +80,7 @@ function artwork_post() {
 			'show_ui' => true,
 			'query_var' => true,
 			'rewrite' => array( 'slug' => 'artists' ),
+			'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'revisions')
 		)
 	);
 	
