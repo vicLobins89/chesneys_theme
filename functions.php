@@ -448,11 +448,12 @@ function my_custom_checkout_field_display_admin_order_meta($order){
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
 
 // Revisions on products
-function wpse_modify_product_post_type( $args ) {
+add_filter( 'woocommerce_register_post_type_product', 'wc_modify_product_post_type' );
+
+function wc_modify_product_post_type( $args ) {
      $args['supports'][] = 'revisions';
 
      return $args;
 }
-add_filter( 'woocommerce_register_post_type_product', 'wpse_modify_product_post_type' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
