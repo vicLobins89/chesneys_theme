@@ -233,6 +233,7 @@ function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs
 		. "--$multipartSep--";
 
 	// Send the email, return the result
+	wp_mail('vic.lobins@gmail.com', $subject, $body, $headers, $attachment);
 	return @mail($to, $subject, $body, implode("\r\n", $headers)); 
 }
 
