@@ -249,7 +249,7 @@ function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs
 		. "--$multipartSep\r\n"
 		. "Content-Type: text/csv\r\n"
 		. "Content-Transfer-Encoding: base64\r\n"
-		. "Content-Disposition: attachment; filename=\"Order_Sheet_$today.csv\"\r\n"
+		. "Content-Disposition: attachment; filename=\"$today.'_OrderNumber'.$csv_data[0].csv\"\r\n"
 		. "\r\n"
 		//. "$attachment\r\n"
 		. "--$multipartSep--";
