@@ -198,59 +198,39 @@ function create_csv_string($csv_data) {
 
 }
 
-function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs_l@hotmail.co.uk, vic@honey.co.uk',  $from = 'wordpress@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs_l@hotmail.co.uk, vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, adam@chesneys.co.uk',  $from = 'wordpress@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
 
-	$cr = "\n";
+	// This will provide plenty adequate entropy
+	$multipartSep = '-----'.md5(time()).'-----';
 
-    $thisfile = 'file.csv';
+	// Arrays are much more readable
+	$headers = array(
+		"From: $from",
+		"Reply-To: $from",
+		"Content-Type: multipart/mixed; boundary=\"$multipartSep\""
+	);
 
-    $encoded = chunk_split(base64_encode(create_csv_string($csv_data))); 
+	// Make the attachment
+	$attachment = chunk_split(base64_encode(create_csv_string($csv_data))); 
 
-    // create the email and send it off
+	// Make the body of the message
+	$body = "--$multipartSep\r\n"
+		. "Content-Type: text/plain; charset=ISO-8859-1; format=flowed\r\n"
+		. "Content-Transfer-Encoding: 7bit\r\n"
+		. "\r\n"
+		. "$body\r\n"
+		. "--$multipartSep\r\n"
+		. "Content-Type: text/csv\r\n"
+		. "Content-Transfer-Encoding: base64\r\n"
+		. "Content-Disposition: attachment; filename=\"Order_Sheet_$today.csv\"\r\n"
+		. "\r\n"
+		. "$attachment\r\n"
+		. "--$multipartSep--";
 
-    $subject = "File you requested from Chesneys";
-    $from = "wordpress@chesneys.co.uk";
-    $headers = 'MIME-Version: 1.0' . "\n";
-    $headers .= 'Content-Type: multipart/mixed;
-        boundary="----=_NextPart_001_0011_1234ABCD.4321FDAC"' . "\n";
-
-    $message = '
-
-    This is a multi-part message in MIME format.
-
-    ------=_NextPart_001_0011_1234ABCD.4321FDAC
-    Content-Type: text/plain;
-            charset="us-ascii"
-    Content-Transfer-Encoding: 7bit
-
-    Hello
-
-    We have attached for you the PHP script that you requested from Chesneys
-
-    Regards
-
-    ------=_NextPart_001_0011_1234ABCD.4321FDAC
-    Content-Type: application/octet-stream;  name="';
-
-    $message .= "$thisfile";
-    $message .= '"
-    Content-Transfer-Encoding: base64
-    Content-Disposition: attachment; filename="';
-    $message .= "$thisfile";
-    $message .= '"
-
-    ';
-    $message .= "$encoded";
-    $message .= '
-
-    ------=_NextPart_001_0011_1234ABCD.4321FDAC--
-
-    ';
-
-    // now send the email
-    return @mail($to, $subject, $message, $headers, "-f$from");
+	// Send the email, return the result
+	return @mail($to, $subject, $body, implode("\r\n", $headers)); 
 }
 
 ?>
