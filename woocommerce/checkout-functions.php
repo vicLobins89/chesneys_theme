@@ -198,44 +198,59 @@ function create_csv_string($csv_data) {
 
 }
 
-function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs_l@hotmail.co.uk, vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, adam@chesneys.co.uk',  $from = 'wordpress@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs_l@hotmail.co.uk, vic@honey.co.uk',  $from = 'wordpress@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
 
-	$content = chunk_split(base64_encode(create_csv_string($csv_data))); 
+	$cr = "\n";
 
-	$body = "<html>
-	<head>
-	  <title>List of New Price Changes</title>
-	</head>
-	<body><table><tr><td>MAKE</td></tr></table></body></html>";
+    $thisfile = 'file.csv';
 
-	$uid = md5(uniqid(time()));
+    $encoded = chunk_split(base64_encode(create_csv_string($csv_data))); 
 
-	#$header = "From: ".$from_name." <".$from_mail.">\r\n";
-	#$header .= "Reply-To: ".$replyto."\r\n";
-	$header .= "MIME-Version: 1.0\r\n";
-	$header .= "Content-Type: multipart/mixed; boundary=\"".$uid."\"\r\n\r\n";
-	$header .= "This is a multi-part message in MIME format.\r\n";
-	$header .= "--".$uid."\r\n";
-	$header .= "Content-type:text/html; charset=iso-8859-1\r\n";
-	$header .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
-	$header .= $body."\r\n\r\n";
-	$header .= "--".$uid."\r\n";
-	$header .= "Content-Type: text/csv; name=\"Order_Sheet_$today.csv\"\r\n"; // use diff. tyoes here
-	$header .= "Content-Transfer-Encoding: base64\r\n";
-	$header .= "Content-Disposition: attachment; filename=\"Order_Sheet_$today.csv\"\r\n\r\n";
-	$header .= $content."\r\n\r\n";
-	$header .= "--".$uid."--";
+    // create the email and send it off
 
-	return @mail($to, $subject, $body, $header);
-	
-	
-	
-	
-	
+    $subject = "File you requested from Chesneys";
+    $from = "wordpress@chesneys.co.uk";
+    $headers = 'MIME-Version: 1.0' . "\n";
+    $headers .= 'Content-Type: multipart/mixed;
+        boundary="----=_NextPart_001_0011_1234ABCD.4321FDAC"' . "\n";
 
-	
+    $message = '
+
+    This is a multi-part message in MIME format.
+
+    ------=_NextPart_001_0011_1234ABCD.4321FDAC
+    Content-Type: text/plain;
+            charset="us-ascii"
+    Content-Transfer-Encoding: 7bit
+
+    Hello
+
+    We have attached for you the PHP script that you requested from Chesneys
+
+    Regards
+
+    ------=_NextPart_001_0011_1234ABCD.4321FDAC
+    Content-Type: application/octet-stream;  name="';
+
+    $message .= "$thisfile";
+    $message .= '"
+    Content-Transfer-Encoding: base64
+    Content-Disposition: attachment; filename="';
+    $message .= "$thisfile";
+    $message .= '"
+
+    ';
+    $message .= "$encoded";
+    $message .= '
+
+    ------=_NextPart_001_0011_1234ABCD.4321FDAC--
+
+    ';
+
+    // now send the email
+    return @mail($email, $subject, $message, $headers, "-f$from");
 }
 
 ?>
