@@ -9,6 +9,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$email = $order->get_billing_email();
 	$phone = $order->get_billing_phone();
 	$order_number = $order->get_order_number();
+	$shipping_cost = $order->get_total_shipping();
 //	$shipping_type = $order->get_shipping_method();
 
 	// set the address fields
@@ -111,6 +112,8 @@ function wdm_send_order_to_ext( $order_id ){
 		'test' => false,
 		'order' => array(
 			'client_ref' => $order_number,
+			'postage_speed' => 2,
+			'postage_cost' => $shipping_cost,
 			'ShippingContact' => array(
 				'name' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
 				'email' => $email,
