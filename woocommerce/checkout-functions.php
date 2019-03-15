@@ -228,7 +228,7 @@ function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs
 	$header .= $content."\r\n\r\n";
 	$header .= "--".$uid."--";
 
-	mail($to, $subject, $body, $header);
+	return @mail($to, $subject, $body, $header);
 	
 	
 	
