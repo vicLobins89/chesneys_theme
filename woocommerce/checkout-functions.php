@@ -205,14 +205,14 @@ function create_csv($records) {
 	
 	$today = date("d-m-y");
 
-    $filepath = $today.'_OrderNumber'.$record[0].'.csv';
+    $filepath = $today.'_OrderNumber'.$records[0].'.csv';
 
     $fd = fopen($filepath, 'w');
     if($fd === FALSE) {
         die('Failed to open temporary file');
 	}
 
-    fputcsv($fp, array_keys($csv_data[0]));
+    fputcsv($fp, array_keys($records[0]));
     foreach($records as $record) {
         fputcsv($fd, $record);
     }
@@ -255,7 +255,7 @@ function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs
 		. "--$multipartSep--";
 
 	// Send the email, return the result
-	wp_mail($to, $subject, $body, $headers, $attachment);
+	return wp_mail($to, $subject, $body, $headers, $attachment);
 	//return @mail($to, $subject, $body, implode("\r\n", $headers)); 
 }
 
