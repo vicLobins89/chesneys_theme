@@ -198,39 +198,44 @@ function create_csv_string($csv_data) {
 
 }
 
-function send_csv_mail($csv_data, $body, $to = '<vic.lobins@gmail.co.uk>, vitalijs_l@hotmail.co.uk, vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, adam@chesneys.co.uk',  $from = 'wordpress@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs_l@hotmail.co.uk, vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, adam@chesneys.co.uk',  $from = 'wordpress@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
 
-	// This will provide plenty adequate entropy
-	$multipartSep = '-----'.md5(time()).'-----';
+	$content = chunk_split(base64_encode(create_csv_string($csv_data))); 
 
-	// Arrays are much more readable
-	$headers = array(
-		"From: $from",
-		"Reply-To: $from",
-		"Content-Type: multipart/mixed; boundary=\"$multipartSep\""
-	);
+	$body = "<html>
+	<head>
+	  <title>List of New Price Changes</title>
+	</head>
+	<body><table><tr><td>MAKE</td></tr></table></body></html>";
 
-	// Make the attachment
-	$attachment = chunk_split(base64_encode(create_csv_string($csv_data))); 
+	$uid = md5(uniqid(time()));
 
-	// Make the body of the message
-	$body = "--$multipartSep\r\n"
-		. "Content-Type: text/plain; charset=ISO-8859-1; format=flowed\r\n"
-		. "Content-Transfer-Encoding: 7bit\r\n"
-		. "\r\n"
-		. "$body\r\n"
-		. "--$multipartSep\r\n"
-		. "Content-Type: text/csv\r\n"
-		. "Content-Transfer-Encoding: base64\r\n"
-		. "Content-Disposition: attachment; filename=\"Order_Sheet_$today.csv\"\r\n"
-		. "\r\n"
-		. "$attachment\r\n"
-		. "--$multipartSep--";
+	#$header = "From: ".$from_name." <".$from_mail.">\r\n";
+	#$header .= "Reply-To: ".$replyto."\r\n";
+	$header .= "MIME-Version: 1.0\r\n";
+	$header .= "Content-Type: multipart/mixed; boundary=\"".$uid."\"\r\n\r\n";
+	$header .= "This is a multi-part message in MIME format.\r\n";
+	$header .= "--".$uid."\r\n";
+	$header .= "Content-type:text/html; charset=iso-8859-1\r\n";
+	$header .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+	$header .= $body."\r\n\r\n";
+	$header .= "--".$uid."\r\n";
+	$header .= "Content-Type: text/csv; name=\"Order_Sheet_$today.csv\"\r\n"; // use diff. tyoes here
+	$header .= "Content-Transfer-Encoding: base64\r\n";
+	$header .= "Content-Disposition: attachment; filename=\"Order_Sheet_$today.csv\"\r\n\r\n";
+	$header .= $content."\r\n\r\n";
+	$header .= "--".$uid."--";
 
-	// Send the email, return the result
-	return @mail($to, $subject, $body, implode("\r\n", $headers)); 
+	mail($to, $subject, $body, $header);
+	
+	
+	
+	
+	
+
+	
 }
 
 ?>
