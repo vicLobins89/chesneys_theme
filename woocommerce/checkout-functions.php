@@ -198,7 +198,7 @@ function create_csv_string($csv_data) {
 
 }
 
-function send_csv_mail($csv_data, $body, $to = '<vic.lobins@gmail.co.uk>, vitalijs_l@hotmail.co.uk, vic@honey.co.uk',  $from = 'wordpress@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csv_data, $body, $to = '<vic.lobins@gmail.co.uk>, vitalijs_l@hotmail.co.uk, vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, adam@chesneys.co.uk',  $from = 'wordpress@chesneys.co.uk', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
 
