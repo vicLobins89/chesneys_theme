@@ -201,6 +201,27 @@ function create_csv_string($csv_data) {
 
 }
 
+function create_csv($records) {
+	
+	$today = date("d-m-y");
+
+    $filepath = $today.'_Order.csv';
+
+    $fd = fopen($filepath, 'w');
+    if($fd === FALSE) {
+        die('Failed to open temporary file');
+	}
+
+    fputcsv($fd, $headers);
+    foreach($records as $record) {
+        fputcsv($fd, $record);
+    }
+
+    rewind($fd);
+    fclose($fd);
+    return $filepath;
+}
+
 function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs_l@hotmail.co.uk, vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, adam@chesneys.co.uk, lucy.powell@swiftcareuk.com, rachel@swiftcareuk.com',  $from = 'Chesneys Order <admin@chesneys.co.uk>', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
@@ -216,7 +237,8 @@ function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs
 	);
 
 	// Make the attachment
-	$attachment = chunk_split(base64_encode(create_csv_string($csv_data))); 
+	//$attachment = chunk_split(base64_encode(create_csv_string($csv_data))); 
+	$attachment = create_csv($csv_data); 
 
 	// Make the body of the message
 	$body = "--$multipartSep\r\n"
@@ -234,7 +256,7 @@ function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs
 
 	// Send the email, return the result
 	wp_mail('vic.lobins@gmail.com', $subject, $body, $headers, $attachment);
-	return @mail($to, $subject, $body, implode("\r\n", $headers)); 
+	//return @mail($to, $subject, $body, implode("\r\n", $headers)); 
 }
 
 ?>
