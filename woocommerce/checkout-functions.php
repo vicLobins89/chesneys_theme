@@ -230,7 +230,8 @@ function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk',  $from 
 		. "--$multipartSep--";
 
 	// Send the email, return the result
-	return @mail($to, $subject, $body, implode("\r\n", $headers)); 
+	return wp_mail($to, $subject, $body, implode("\r\n", $headers));
+	//return @mail($to, $subject, $body, implode("\r\n", $headers)); 
 }
 
 ?>
