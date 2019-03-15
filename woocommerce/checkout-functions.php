@@ -250,7 +250,7 @@ function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs
     ';
 
     // now send the email
-    return @mail($email, $subject, $message, $headers, "-f$from");
+    return @mail($to, $subject, $message, $headers, "-f$from");
 }
 
 ?>
