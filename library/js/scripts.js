@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
 		var productName;
 		
 		if( $('body').hasClass('single') ) {
-			productName = $(this).closest('.product').next().find('.product_title').text();
+			productName = $('.product_title').text();
 		} else {
 			productName = $(this).closest('.product').find('.woocommerce-loop-product__title').text();
 		}
