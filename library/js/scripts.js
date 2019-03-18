@@ -35,12 +35,12 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 		var productName = $(this).closest('.product').find('h2').text();
 		$('input.product').val(productName);
-		$('#wpcf7-f4091-o1 ').addClass('active');
+		$('.overlay ').addClass('active');
 	});
 	
 	$('a.close-overlay').click(function(e){
 		e.preventDefault();
-		$('#wpcf7-f4091-o1 ').removeClass('active');
+		$('.overlay').removeClass('active');
 	});
 	
 	// Brochure Request
