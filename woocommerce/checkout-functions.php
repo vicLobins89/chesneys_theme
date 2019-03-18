@@ -205,7 +205,7 @@ function create_csv($records) {
 	
 	$today = date("d-m-y");
 
-    $filepath = $today.'_OrderNumber'.$records[0].'.csv';
+    $filepath = $today.'_Order.csv';
 
     $fd = fopen($filepath, 'w');
     if($fd === FALSE) {
@@ -213,8 +213,8 @@ function create_csv($records) {
 	}
 
     fputcsv($fd, array_keys($records[0]));
-    foreach($records as $record) {
-        fputcsv($fd, $record);
+    foreach($records as $record => $value) {
+        fputcsv($fd, $value);
     }
 
     rewind($fd);
@@ -222,7 +222,7 @@ function create_csv($records) {
     return $filepath;
 }
 
-function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs_l@hotmail.co.uk, vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, adam@chesneys.co.uk, lucy.powell@swiftcareuk.com, rachel@swiftcareuk.com',  $from = 'Chesneys Order <admin@chesneys.co.uk>', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs_l@hotmail.co.uk, vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, adam@chesneys.co.uk, lucy.powell@swiftcareuk.com, rachel@swiftcareuk.com',  $from = 'Chesneys Order <no-reply@chesneys.co.uk>', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
 
@@ -238,21 +238,7 @@ function send_csv_mail($csv_data, $body, $to = 'vic.lobins@gmail.co.uk, vitalijs
 
 	// Make the attachment
 	//$attachment = chunk_split(base64_encode(create_csv_string($csv_data))); 
-	$attachment = create_csv($csv_data); 
-
-	// Make the body of the message
-	$body = "--$multipartSep\r\n"
-		. "Content-Type: text/plain; charset=ISO-8859-1; format=flowed\r\n"
-		. "Content-Transfer-Encoding: 7bit\r\n"
-		. "\r\n"
-		. "$body\r\n"
-		//. "--$multipartSep\r\n"
-		//. "Content-Type: text/csv\r\n"
-		//. "Content-Transfer-Encoding: base64\r\n"
-		//. "Content-Disposition: attachment; filename=\"$today.'_OrderNumber'.$csv_data[0].csv\"\r\n"
-		. "\r\n"
-		//. "$attachment\r\n"
-		. "--$multipartSep--";
+	$attachment = create_csv($csv_data);
 
 	// Send the email, return the result
 	return wp_mail($to, $subject, $body, $headers, $attachment);
