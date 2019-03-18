@@ -2204,7 +2204,7 @@ HEADER STYLES
           opacity: 0;
           top: -6px;
           position: relative;
-          color: #f5f3f1;
+          color: #53575a !important;
           opacity: .3; }
       .searchbox #ajaxsearchlite1 .probox .proclose svg,
       .searchbox div.asl_w .probox .proclose svg {
