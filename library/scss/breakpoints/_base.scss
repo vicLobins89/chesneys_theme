@@ -178,12 +178,10 @@ hr {
 	
 	form, > div:not(.screen-reader-response) {
 		width: 100%;
-		margin: auto;
-		padding: 3rem 3rem 0;
+		height: 96%;
+		padding: 1rem;
 		background: #fff;
 		position: relative;
-		border-radius: 4px;
-		border: 1px solid lighten($black, 60%);
 	}
 	
 	&.active {
@@ -235,7 +233,7 @@ hr {
     top: 10px;
     right: 10px;
 	line-height: 1;
-	color: $text-color;
+	color: $white;
 	padding-right: 22px;
 	
 	&:hover:before,

@@ -1182,12 +1182,10 @@ hr {
       padding: 0; } }
   .overlay form, .overlay > div:not(.screen-reader-response) {
     width: 100%;
-    margin: auto;
-    padding: 3rem 3rem 0;
+    height: 96%;
+    padding: 1rem;
     background: #fff;
-    position: relative;
-    border-radius: 4px;
-    border: 1px solid #999999; }
+    position: relative; }
   .overlay.active {
     z-index: 999;
     opacity: 1;
@@ -1222,7 +1220,7 @@ hr {
   top: 10px;
   right: 10px;
   line-height: 1;
-  color: #142128;
+  color: #fff;
   padding-right: 22px; }
   .close-overlay:hover:before, .close-overlay:hover:after {
     background: #ff8700; }
