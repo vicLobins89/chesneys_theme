@@ -212,7 +212,7 @@ function create_csv($records) {
         die('Failed to open temporary file');
 	}
 
-    fputcsv($fp, array_keys($records[0]));
+    fputcsv($fd, array_keys($records[0]));
     foreach($records as $record) {
         fputcsv($fd, $record);
     }
