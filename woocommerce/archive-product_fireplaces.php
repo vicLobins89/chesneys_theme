@@ -83,6 +83,15 @@ if ( woocommerce_product_loop() ) {
 	woocommerce_product_loop_end();
 	?>
 	</div></div></section>
+
+	<?php
+	if( isset($term->term_id) && term_is_ancestor_of(16, $term->term_id, 'product_cat') ) {
+		echo do_shortcode('[contact-form-7 id="4091" title="Request a callback"]');
+	} elseif( isset($term->term_id) && term_is_ancestor_of(56, $term->term_id, 'product_cat') ) {
+		echo do_shortcode('[contact-form-7 id="4091" title="Request a callback"]');
+	}
+	?>
+
 	<?php
 	/**
 	 * Hook: woocommerce_after_shop_loop.
