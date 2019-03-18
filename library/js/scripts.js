@@ -36,6 +36,7 @@ jQuery(document).ready(function($) {
 		var productName = $(this).closest('.product').find('h2').text();
 		$('input.product').val(productName);
 		$('.overlay ').addClass('active');
+		console.log(productName);
 	});
 	
 	$('a.close-overlay').click(function(e){
