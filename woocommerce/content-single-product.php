@@ -76,6 +76,12 @@ if ( post_password_required() ) {
 </div>
 
 <?php
+echo '<div class="overlay"><a href="#" class="close-overlay">Close</a>';
+echo do_shortcode('[contact-form-7 id="4091" title="Request a callback"]');
+echo '</div>';
+?>
+
+<?php
 // CTAs Module 1
 $cta_module = get_post(1409);
 $acfClass->render_modules($cta_module);
