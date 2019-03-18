@@ -33,7 +33,14 @@ jQuery(document).ready(function($) {
 	// Callback
 	$('a.callback').click(function(e){
 		e.preventDefault();
-		var productName = $(this).closest('.product').find('.woocommerce-loop-product__title, .product_title').text();
+		var productName;
+		
+		if( $('body').hasClass('single') ) {
+			productName = $(this).closest('.product').next().find('.product_title').text();
+		} else {
+			productName = $(this).closest('.product').find('.woocommerce-loop-product__title').text();
+		}
+		
 		$('input.product').val(productName);
 		$('.overlay ').addClass('active');
 		console.log(productName);
