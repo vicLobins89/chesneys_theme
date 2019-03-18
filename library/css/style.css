@@ -1223,11 +1223,11 @@ hr {
   color: #fff;
   padding-right: 22px; }
   .close-overlay:hover:before, .close-overlay:hover:after {
-    background: #ff8700; }
+    background: #4b858e; }
   .close-overlay:before, .close-overlay:after {
     content: '';
     position: absolute;
-    background: #142128;
+    background: #fff;
     top: 8px;
     right: 0;
     width: 17px;

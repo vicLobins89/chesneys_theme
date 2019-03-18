@@ -238,14 +238,14 @@ hr {
 	
 	&:hover:before,
 	&:hover:after {
-		background: $orange;
+		background: $teal;
 	}
 	
 	&:before,
 	&:after {
 		content: '';
 		position: absolute;
-		background: $text-color;
+		background: $white;
 		top: 8px;
 		right: 0;
 		width: 17px;
