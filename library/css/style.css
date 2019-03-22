@@ -1792,6 +1792,13 @@ LAYOUT & GRID STYLES
     .module.module-spares-and-accessories #submit {
       margin: 0 auto;
       font-size: 1em; }
+  .module.module-free-delivery h2 {
+    font-size: 2em;
+    letter-spacing: 2px; }
+    .module.module-free-delivery h2:after {
+      display: none; }
+  .module.module-free-delivery p {
+    font-family: "Univers", Helvetica, Arial, sans-serif; }
   .module.module-sign-up, .module.module-need-help {
     background: #142128;
     color: #fff;

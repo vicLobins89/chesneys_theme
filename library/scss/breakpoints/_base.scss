@@ -1041,6 +1041,21 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
+	&.module-free-delivery {
+		h2 {
+			font-size: 2em;
+    		letter-spacing: 2px;
+			
+			&:after {
+				display: none;
+			}
+		}
+		
+		p {
+			font-family: $sans-serif;
+		}
+	}
+	
 	&.module-sign-up,
 	&.module-need-help {
 		background: $dark-gray;
