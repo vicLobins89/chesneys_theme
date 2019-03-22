@@ -1697,15 +1697,15 @@ LAYOUT & GRID STYLES
     .module.module-outdoor-living-shop .inner-module .primary-btn, .module.module-outdoor-living-shop .inner-module .image-link + p, .module.module-outdoor-living-shop .inner-module .image-link .wp-caption-text, .image-link .module.module-outdoor-living-shop .inner-module .wp-caption-text, .module.module-outdoor-living-shop .inner-module .vid-thumb .play, .vid-thumb .module.module-outdoor-living-shop .inner-module .play, .module.module-outdoor-living-shop .inner-module .row.related-wrapper .woocommerce-loop-product__title, .row.related-wrapper .module.module-outdoor-living-shop .inner-module .woocommerce-loop-product__title, .module.module-outdoor-living-shop .inner-module a.comment-reply-link, .module.module-outdoor-living-shop .inner-module #submit, .module.module-glossary .inner-module .primary-btn, .module.module-glossary .inner-module .image-link + p, .module.module-glossary .inner-module .image-link .wp-caption-text, .image-link .module.module-glossary .inner-module .wp-caption-text, .module.module-glossary .inner-module .vid-thumb .play, .vid-thumb .module.module-glossary .inner-module .play, .module.module-glossary .inner-module .row.related-wrapper .woocommerce-loop-product__title, .row.related-wrapper .module.module-glossary .inner-module .woocommerce-loop-product__title, .module.module-glossary .inner-module a.comment-reply-link, .module.module-glossary .inner-module #submit, .module.module-design-a-fireplace .inner-module .primary-btn, .module.module-design-a-fireplace .inner-module .image-link + p, .module.module-design-a-fireplace .inner-module .image-link .wp-caption-text, .image-link .module.module-design-a-fireplace .inner-module .wp-caption-text, .module.module-design-a-fireplace .inner-module .vid-thumb .play, .vid-thumb .module.module-design-a-fireplace .inner-module .play, .module.module-design-a-fireplace .inner-module .row.related-wrapper .woocommerce-loop-product__title, .row.related-wrapper .module.module-design-a-fireplace .inner-module .woocommerce-loop-product__title, .module.module-design-a-fireplace .inner-module a.comment-reply-link, .module.module-design-a-fireplace .inner-module #submit {
       font-size: 1rem;
       margin: 0; }
-  .module.module-directory-of-chimney-pieces, .module.module-accessories-and-fuel, .module.module-accessories-and-fuel-outdoor, .module.module-stoves, .module.module-outdoor-living, .module.module-spares-and-accessories {
+  .module.module-free-delivery, .module.module-directory-of-chimney-pieces, .module.module-accessories-and-fuel, .module.module-accessories-and-fuel-outdoor, .module.module-stoves, .module.module-outdoor-living, .module.module-spares-and-accessories {
     padding: 0; }
-    .module.module-directory-of-chimney-pieces > .cf, .module.module-directory-of-chimney-pieces > .comment-respond, .module.module-accessories-and-fuel > .cf, .module.module-accessories-and-fuel > .comment-respond, .module.module-accessories-and-fuel-outdoor > .cf, .module.module-accessories-and-fuel-outdoor > .comment-respond, .module.module-stoves > .cf, .module.module-stoves > .comment-respond, .module.module-outdoor-living > .cf, .module.module-outdoor-living > .comment-respond, .module.module-spares-and-accessories > .cf, .module.module-spares-and-accessories > .comment-respond {
+    .module.module-free-delivery > .cf, .module.module-free-delivery > .comment-respond, .module.module-directory-of-chimney-pieces > .cf, .module.module-directory-of-chimney-pieces > .comment-respond, .module.module-accessories-and-fuel > .cf, .module.module-accessories-and-fuel > .comment-respond, .module.module-accessories-and-fuel-outdoor > .cf, .module.module-accessories-and-fuel-outdoor > .comment-respond, .module.module-stoves > .cf, .module.module-stoves > .comment-respond, .module.module-outdoor-living > .cf, .module.module-outdoor-living > .comment-respond, .module.module-spares-and-accessories > .cf, .module.module-spares-and-accessories > .comment-respond {
       max-width: none;
       padding: 7.5% 0;
       text-align: center;
       color: #fff;
       position: relative; }
-      .module.module-directory-of-chimney-pieces > .cf:before, .module.module-directory-of-chimney-pieces > .comment-respond:before, .module.module-accessories-and-fuel > .cf:before, .module.module-accessories-and-fuel > .comment-respond:before, .module.module-accessories-and-fuel-outdoor > .cf:before, .module.module-accessories-and-fuel-outdoor > .comment-respond:before, .module.module-stoves > .cf:before, .module.module-stoves > .comment-respond:before, .module.module-outdoor-living > .cf:before, .module.module-outdoor-living > .comment-respond:before, .module.module-spares-and-accessories > .cf:before, .module.module-spares-and-accessories > .comment-respond:before {
+      .module.module-free-delivery > .cf:before, .module.module-free-delivery > .comment-respond:before, .module.module-directory-of-chimney-pieces > .cf:before, .module.module-directory-of-chimney-pieces > .comment-respond:before, .module.module-accessories-and-fuel > .cf:before, .module.module-accessories-and-fuel > .comment-respond:before, .module.module-accessories-and-fuel-outdoor > .cf:before, .module.module-accessories-and-fuel-outdoor > .comment-respond:before, .module.module-stoves > .cf:before, .module.module-stoves > .comment-respond:before, .module.module-outdoor-living > .cf:before, .module.module-outdoor-living > .comment-respond:before, .module.module-spares-and-accessories > .cf:before, .module.module-spares-and-accessories > .comment-respond:before {
         content: '';
         display: block;
         position: absolute;
@@ -1714,12 +1714,22 @@ LAYOUT & GRID STYLES
         left: 0;
         top: 0;
         background: rgba(0, 0, 0, 0.4); }
-    .module.module-directory-of-chimney-pieces .inner-module, .module.module-accessories-and-fuel .inner-module, .module.module-accessories-and-fuel-outdoor .inner-module, .module.module-stoves .inner-module, .module.module-outdoor-living .inner-module, .module.module-spares-and-accessories .inner-module {
+    .module.module-free-delivery .inner-module, .module.module-directory-of-chimney-pieces .inner-module, .module.module-accessories-and-fuel .inner-module, .module.module-accessories-and-fuel-outdoor .inner-module, .module.module-stoves .inner-module, .module.module-outdoor-living .inner-module, .module.module-spares-and-accessories .inner-module {
       position: relative; }
-    .module.module-directory-of-chimney-pieces p, .module.module-accessories-and-fuel p, .module.module-accessories-and-fuel-outdoor p, .module.module-stoves p, .module.module-outdoor-living p, .module.module-spares-and-accessories p {
+    .module.module-free-delivery p, .module.module-directory-of-chimney-pieces p, .module.module-accessories-and-fuel p, .module.module-accessories-and-fuel-outdoor p, .module.module-stoves p, .module.module-outdoor-living p, .module.module-spares-and-accessories p {
       width: 70%;
       margin: 1rem auto 2rem; }
-    .module.module-directory-of-chimney-pieces p:last-child,
+    .module.module-free-delivery p:last-child,
+    .module.module-free-delivery .primary-btn,
+    .module.module-free-delivery .image-link + p,
+    .module.module-free-delivery .image-link .wp-caption-text,
+    .image-link .module.module-free-delivery .wp-caption-text,
+    .module.module-free-delivery .vid-thumb .play,
+    .vid-thumb .module.module-free-delivery .play,
+    .module.module-free-delivery .row.related-wrapper .woocommerce-loop-product__title,
+    .row.related-wrapper .module.module-free-delivery .woocommerce-loop-product__title,
+    .module.module-free-delivery a.comment-reply-link,
+    .module.module-free-delivery #submit, .module.module-directory-of-chimney-pieces p:last-child,
     .module.module-directory-of-chimney-pieces .primary-btn,
     .module.module-directory-of-chimney-pieces .image-link + p,
     .module.module-directory-of-chimney-pieces .image-link .wp-caption-text,
