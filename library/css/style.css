@@ -2132,6 +2132,9 @@ p, .p {
     left: 0;
     margin-left: 0; }
 
+.no-flair:after {
+  display: none !important; }
+
 .sans, .team-members h4 {
   font-family: "Univers", Helvetica, Arial, sans-serif !important; }
   .sans .serif, .team-members h4 .serif {

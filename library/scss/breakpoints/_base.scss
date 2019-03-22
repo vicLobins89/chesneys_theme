@@ -1569,6 +1569,10 @@ p, .p {
 	}
 }
 
+.no-flair:after {
+	display: none !important;
+}
+
 .sans {
 	font-family: $sans-serif !important;
 	
