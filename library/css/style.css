@@ -2145,6 +2145,9 @@ p, .p {
   .serif .sans, .serif .team-members h4, .team-members .serif h4 {
     font-family: "Univers", Helvetica, Arial, sans-serif !important; }
 
+.copy-s {
+  font-size: 80% !important; }
+
 .copy-l {
   font-size: 140% !important; }
 
