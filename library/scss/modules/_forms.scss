@@ -1,4 +1,4 @@
-/******************************************************************
+s/******************************************************************
 Site Name: Honey
 Author: Vic Lobins
 
@@ -126,6 +126,12 @@ textarea,
 
 input[type="number"] {
 	border: none;
+}
+
+input[type="submit"] {
+	&:disabled {
+		opacity: 0.7;
+	}
 }
 
 // spacing out the password (thx @murtaugh)

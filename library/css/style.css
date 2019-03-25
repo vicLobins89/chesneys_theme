@@ -921,31 +921,22 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   .hover-anchor:hover {
     transform: scale(1); }
 
-/******************************************************************
-Site Name: Honey
-Author: Vic Lobins
-
-Stylesheet: Form Styles
-
-Helpful Links:
-http://css-tricks.com/data-uris/
-http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
-
-******************************************************************/
-/*********************
-INPUTS
-*********************/
+s
 .wpcf7-form {
   width: 73%;
   margin: 2rem auto; }
+  s
   .wpcf7-form .your-consent {
     margin-bottom: 2rem;
     display: block; }
   @media only screen and (max-width: 767px) {
+    s
     .wpcf7-form {
       width: 100%; } }
+  s
   .wpcf7-form .wpcf7-list-item {
     margin-left: 0; }
+  s
   .wpcf7-form p {
     margin: 1rem 0; }
 
@@ -1013,6 +1004,9 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 
 input[type="number"] {
   border: none; }
+
+input[type="submit"]:disabled {
+  opacity: 0.7; }
 
 input[type="password"] {
   letter-spacing: 0.3em; }
