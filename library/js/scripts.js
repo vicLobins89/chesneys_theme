@@ -78,7 +78,7 @@ jQuery(document).ready(function($) {
 	});
 	
 	function testChecked() {
-		console.log($("input[type='checkbox']").prop('checked').length);
+		console.log($("input[type='checkbox']:checked").length);
 		
 		if( $("input[type='checkbox']").prop('checked').length > 0) {
 			$('.download').prop('disabled', false);
