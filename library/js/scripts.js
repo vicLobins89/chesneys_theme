@@ -79,7 +79,7 @@ jQuery(document).ready(function($) {
 	
 	testChecked();
 	function testChecked() {
-		console.log($("input[type='checkbox']:checked").length);
+		console.log($(".js-brochure-input:checked").length);
 		
 		if( $("input[type='checkbox']").prop('checked').length > 0) {
 			$('.download').prop('disabled', false);
