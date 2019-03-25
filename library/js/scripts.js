@@ -72,16 +72,22 @@ jQuery(document).ready(function($) {
 				pdfName.push(newName);
 			}
 			$('input.brochures').val(pdfName);
+			
+			testChecked();
 		});
 	});
 	
-	if( $("input[type='checkbox']").prop('checked')) {
-		$('.download').prop('disabled', false);
-		console.log(true);
-	} else {
-		console.log(false);
-		$('.download').prop('disabled', true);
+	function testChecked() {
+		if( $("input[type='checkbox']").prop('checked')) {
+			$('.download').prop('disabled', false);
+			console.log(true);
+		} else {
+			console.log(false);
+			$('.download').prop('disabled', true);
+		}
 	}
+	
+	
 
 	function downloadAll(urls, names) {
 		var link = document.createElement('a');
