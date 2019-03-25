@@ -72,14 +72,14 @@ jQuery(document).ready(function($) {
 				pdfName.push(newName);
 			}
 			$('input.brochures').val(pdfName);
-			
-			if( $("input:checkbox:checked").length > 0) {
-				$('.download').prop('disabled', false);
-			} else {
-				$('.download').prop('disabled', true);
-			}
 		});
 	});
+	
+	if( $("input:checkbox:checked").length > 0) {
+		$('.download').prop('disabled', false);
+	} else {
+		$('.download').prop('disabled', true);
+	}
 
 	function downloadAll(urls, names) {
 		var link = document.createElement('a');
