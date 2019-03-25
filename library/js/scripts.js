@@ -73,13 +73,13 @@ jQuery(document).ready(function($) {
 			}
 			$('input.brochures').val(pdfName);
 		});
+		
+		if( $("input[type='checkbox']:checked").length > 0) {
+			$('.download').prop('disabled', false);
+		} else {
+			$('.download').prop('disabled', true);
+		}
 	});
-	
-	if( $("input:checkbox:checked").length > 0) {
-		$('.download').prop('disabled', false);
-	} else {
-		$('.download').prop('disabled', true);
-	}
 
 	function downloadAll(urls, names) {
 		var link = document.createElement('a');
