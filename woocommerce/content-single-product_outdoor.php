@@ -189,6 +189,12 @@ add_action( 'woocommerce_after_single_product_summary', 'rh_woocommerce_output_r
 do_action( 'woocommerce_after_single_product_summary' );
 ?>
 
+<?php
+echo '<div class="overlay"><a href="#" class="close-overlay">Close</a>';
+echo do_shortcode('[contact-form-7 id="4091" title="Request a callback"]');
+echo '</div>';
+?>
+
 <?php // Modules
 $acc_module = get_post(1254);
 $acfClass->render_modules($acc_module);

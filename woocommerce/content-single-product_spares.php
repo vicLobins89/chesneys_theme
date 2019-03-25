@@ -96,12 +96,6 @@ if ( post_password_required() ) {
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
 
-<?php
-echo '<div class="overlay"><a href="#" class="close-overlay">Close</a>';
-echo do_shortcode('[contact-form-7 id="4091" title="Request a callback"]');
-echo '</div>';
-?>
-
 <?php // Need help module
 $queried_post = get_post(986);
 $acfClass->render_modules($queried_post);
