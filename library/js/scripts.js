@@ -85,6 +85,10 @@ jQuery(document).ready(function($) {
 			$('.download').prop('disabled', true);
 		}
 	}
+	
+	$('.download:disabled').click(function(){
+		console.log('click');
+	});
 
 	function downloadAll(urls, names) {
 		var link = document.createElement('a');
