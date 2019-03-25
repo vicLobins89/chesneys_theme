@@ -75,7 +75,7 @@ jQuery(document).ready(function($) {
 		});
 	});
 	
-	if( $("input[type='checkbox']:checked").length > 0) {
+	if( $("input[type='checkbox']").prop('checked')) {
 		$('.download').prop('disabled', false);
 		console.log(true);
 	} else {
