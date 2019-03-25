@@ -77,6 +77,7 @@ jQuery(document).ready(function($) {
 		});
 	});
 	
+	testChecked();
 	function testChecked() {
 		console.log($("input[type='checkbox']:checked").length);
 		
