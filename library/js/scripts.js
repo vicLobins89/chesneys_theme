@@ -79,6 +79,7 @@ jQuery(document).ready(function($) {
 	
 	testChecked();
 	function testChecked() {
+		console.log($('.js-brochure-input:checked').length);
 		if( $('.js-brochure-input:checked').length > 0) {
 			$('.download').prop('disabled', false);
 		} else {
