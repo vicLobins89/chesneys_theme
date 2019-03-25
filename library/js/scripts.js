@@ -78,6 +78,8 @@ jQuery(document).ready(function($) {
 	});
 	
 	function testChecked() {
+		console.log($("input[type='checkbox']").prop('checked').length);
+		
 		if( $("input[type='checkbox']").prop('checked').length > 0) {
 			$('.download').prop('disabled', false);
 			console.log(true);
@@ -86,8 +88,6 @@ jQuery(document).ready(function($) {
 			$('.download').prop('disabled', true);
 		}
 	}
-	
-	
 
 	function downloadAll(urls, names) {
 		var link = document.createElement('a');
