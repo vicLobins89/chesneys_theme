@@ -3740,6 +3740,9 @@ FOOTER STYLES
   font-size: 1rem;
   margin: 10px 0 0; }
 
+.geoip-country-US .price {
+  display: none !important; }
+
 /*********************
 LARGER MOBILE DEVICES
 *********************/

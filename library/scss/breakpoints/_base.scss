@@ -3813,3 +3813,16 @@ FOOTER STYLES
 	font-size: 1rem;
 	margin: 10px 0 0;
 }
+
+
+// GEO IP
+
+.geoip-country-GB {
+	
+}
+
+.geoip-country-US {
+	.price {
+		display: none !important;
+	}
+}
