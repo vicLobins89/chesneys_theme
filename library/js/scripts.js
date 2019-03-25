@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
 			$('input.brochures').val(pdfName);
 		});
 		
-		if( $("input[type='checkbox']:checked").length > 0) {
+		if( $(this).prop('checked').length > 0) {
 			$('.download').prop('disabled', false);
 			console.log(true);
 		} else {
