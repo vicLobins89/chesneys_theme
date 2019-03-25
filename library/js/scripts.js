@@ -81,11 +81,9 @@ jQuery(document).ready(function($) {
 	function testChecked() {
 		console.log($(".js-brochure-input:checked").length);
 		
-		if( $("input[type='checkbox']").prop('checked').length > 0) {
+		if( $('.js-brochure-input:checked').length > 0) {
 			$('.download').prop('disabled', false);
-			console.log(true);
 		} else {
-			console.log(false);
 			$('.download').prop('disabled', true);
 		}
 	}
