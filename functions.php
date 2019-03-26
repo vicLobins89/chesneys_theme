@@ -309,8 +309,8 @@ function add_privacy_checkbox() {
 		'class' => array('form-row privacy'),
 		'label_class' => array('woocommerce-form__label woocommerce-form__label-for-checkbox checkbox'),
 		'input_class' => array('woocommerce-form__input woocommerce-form__input-checkbox input-checkbox'),
-		'required' => true,
-		'label' => 'Please tick here if you would like to receive news of product updates and special offers from Chesneys. Please see our <a href="/privacy-cookies">Privacy Policy</a> for further information.',
+		'required' => false,
+		'label' => 'Please tick here if you would like to receive news of product updates and special offers from Chesneys. <br>Please see our <a href="/privacy-cookies">Privacy Policy</a> for further information.',
 	));
 }
 add_action( 'woocommerce_review_order_before_submit', 'add_privacy_checkbox', 9 );
