@@ -460,4 +460,10 @@ function wc_modify_product_post_type( $args ) {
      return $args;
 }
 
+// Place order button
+function woo_custom_order_button_text() {
+    return __( 'Proceed to payment', 'woocommerce' );
+}
+add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text' );
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
