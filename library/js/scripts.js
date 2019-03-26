@@ -92,7 +92,7 @@ jQuery(document).ready(function($) {
 	testChecked();
 	
 	$('.submit-overlay.active div').on('click', function(){
-		console.log('click');
+		$(this).append('<div class="error">Please select at least one brochure to download</div>');
 	});
 	
 	function create_zip(files) {

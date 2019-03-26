@@ -949,7 +949,9 @@ s
   .submit-overlay div {
     position: absolute;
     width: 0;
-    height: 0; }
+    height: 0;
+    z-index: 100;
+    cursor: pointer; }
   .submit-overlay.active div {
     width: 100%;
     height: 100%; }
