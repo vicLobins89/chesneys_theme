@@ -72,11 +72,13 @@ jQuery(document).ready(function($) {
 				pdfName.push(newName);
 			}
 			$('input.brochures').val(pdfName);
-			
-			testChecked();
 		});
 	});
 	
+	// Force select on brochure
+	$('input[type="checkbox"]').on('change', function(){
+		testChecked();
+	});
 	testChecked();
 	function testChecked() {
 		if( $('.js-brochure-input:checked').length > 0) {
