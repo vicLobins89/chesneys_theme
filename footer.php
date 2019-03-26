@@ -30,16 +30,46 @@
 						} else {
 							echo '';
 						}
-
-						echo ($options['twitter_url'] != '' ? '<a href="'.$options['twitter_url'].'" target="_blank"><i class="fab fa-twitter"></i></a>' : '');
-
-						echo ($options['facebook_url'] != '' ? '<a href="'.$options['facebook_url'].'" target="_blank"><i class="fab fa-facebook"></i></a>' : '');
-
-						echo ($options['instagram_url'] != '' ? '<a href="'.$options['instagram_url'].'" target="_blank"><i class="fab fa-instagram"></i></a>' : '');
-
-						echo ($options['youtube_url'] != '' ? '<a href="'.$options['youtube_url'].'" target="_blank"><i class="fab fa-youtube"></i></a>' : '');
-
-						echo ($options['pinterest_url'] != '' ? '<a href="'.$options['pinterest_url'].'" target="_blank"><i class="fab fa-pinterest"></i></a>' : '');
+						
+						if( get_field('twitter') ) {
+							echo '<a href="'.get_field('twitter').'" target="_blank"><i class="fab fa-twitter"></i></a>';
+						} elseif( $options['twitter_url'] ) {
+							echo '<a href="'.$options['twitter_url'].'" target="_blank"><i class="fab fa-twitter"></i></a>';
+						} else {
+							echo '';
+						}
+						
+						if( get_field('facebook') ) {
+							echo '<a href="'.$options['facebook'].'" target="_blank"><i class="fab fa-facebook"></i></a>';
+						} elseif( $options['facebook_url'] ) {
+							echo '<a href="'.$options['facebook_url'].'" target="_blank"><i class="fab fa-facebook"></i></a>';
+						} else {
+							echo '';
+						}
+						
+						if( get_field('instagram') ) {
+							echo '<a href="'.get_field('instagram').'" target="_blank"><i class="fab fa-instagram"></i></a>';
+						} elseif( $options['instagram_url'] ) {
+							echo '<a href="'.$options['instagram_url'].'" target="_blank"><i class="fab fa-instagram"></i></a>';
+						} else {
+							echo '';
+						}
+						
+						if( get_field('youtube') ) {
+							echo '<a href="'.get_field('youtube').'" target="_blank"><i class="fab fa-youtube"></i></a>';
+						} elseif( $options['instagram_url'] ) {
+							echo '<a href="'.$options['youtube_url'].'" target="_blank"><i class="fab fa-youtube"></i></a>';
+						} else {
+							echo '';
+						}
+						
+						if( get_field('pinterest') ) {
+							echo '<a href="'.get_field('pinterest').'" target="_blank"><i class="fab fa-pinterest"></i></a>';
+						} elseif( $options['instagram_url'] ) {
+							echo '<a href="'.$options['pinterest_url'].'" target="_blank"><i class="fab fa-pinterest"></i></a>';
+						} else {
+							echo '';
+						}
 
 						echo '</div>';
 					}
