@@ -98,7 +98,7 @@ jQuery(document).ready(function($) {
 		
 		var i;
 		for( i = 0; i < files.length; i++ ) {
-			zip.add(files[i], names[i]);
+			zip.add(files[i]);
 		}
 		content = zip.generate();
 		location.href="data:application/zip;base64," + content;
@@ -122,7 +122,7 @@ jQuery(document).ready(function($) {
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {
-			downloadAll(pdfHref, pdfName);
+			//downloadAll(pdfHref, pdfName);
 			create_zip(pdfHref, pdfName);
 		}
 	}, false );
