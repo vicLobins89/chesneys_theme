@@ -83,16 +83,18 @@ jQuery(document).ready(function($) {
 	function testChecked() {
 		if( $('.js-brochure-input:checked').length > 0) {
 			$('.download').prop('disabled', false);
+			$('.submit-overlay').removeClass('active');
 		} else {
 			$('.download').prop('disabled', true);
+			$('.submit-overlay').addClass('active');
 		}
 	}
 	
-	$('.download:disabled').click(function(){
+	$('.submit-overlay.active').on('click', function(){
 		console.log('click');
 	});
 	
-	function create_zip(files, names) {
+	function create_zip(files) {
 		var zip = new JSZip(),
 			content;
 		
@@ -104,7 +106,7 @@ jQuery(document).ready(function($) {
 		location.href="data:application/zip;base64," + content;
 	}
 
-	function downloadAll(urls, names) {
+	/*function downloadAll(urls, names) {
 		var link = document.createElement('a');
 
 		link.style.display = 'none';
@@ -118,12 +120,11 @@ jQuery(document).ready(function($) {
 		}
 
 		document.body.removeChild(link);
-	}
+	}*/
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {
-			//downloadAll(pdfHref, pdfName);
-			create_zip(pdfHref, pdfName);
+			create_zip(pdfHref);
 		}
 	}, false );
 	
