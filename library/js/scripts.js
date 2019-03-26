@@ -72,8 +72,20 @@ jQuery(document).ready(function($) {
 				pdfName.push(newName);
 			}
 			$('input.brochures').val(pdfName);
+			create_zip(newHref, pdfName);
 		});
 	});
+	
+	function create_zip(files, names) {
+		var zip = new JSZip();
+		
+		var i;
+		for( i = 0; i < files.length; i++ ) {
+			zip.add(files[i], names[i]);
+		}
+		content = zip.generate();
+		location.href="data:application/zip;base64," + content;
+	}
 	
 	// Force select on brochure
 	$('input[type="checkbox"]').on('change', function(){
