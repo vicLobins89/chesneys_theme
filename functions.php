@@ -302,6 +302,26 @@ add_filter( 'wpsl_templates', 'custom_templates' );
 //WOOCOMMERCE Functions
 require_once( 'woocommerce/checkout-functions.php' );
 
+// GDPR Consent
+function add_privacy_checkbox() {
+	woocommerce_form_field( 'privacy_policy', array(
+		'type' => 'checkbox',
+		'class' => array('form-row privacy'),
+		'label_class' => array('woocommerce-form__label woocommerce-form__label-for-checkbox checkbox'),
+		'input_class' => array('woocommerce-form__input woocommerce-form__input-checkbox input-checkbox'),
+		'required' => true,
+		'label' => 'Please tick here if you would like to receive news of product updates and special offers from Chesneys. Please see our <a href="/privacy-cookies">Privacy Policy</a> for further information.',
+	));
+}
+add_action( 'woocommerce_review_order_before_submit', 'add_privacy_checkbox', 9 );
+
+function privacy_checkbox_error_message() {
+	if ( ! (int) isset( $_POST['privacy_policy'] ) ) {
+		wc_add_notice( __( 'You have to agree to our privacy policy in order to proceed' ), 'error' );
+	}
+}
+add_action( 'woocommerce_checkout_process', 'privacy_checkbox_error_message' );
+
 // Custom role
 add_role(
     'trade',
