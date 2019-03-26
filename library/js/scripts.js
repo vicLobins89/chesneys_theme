@@ -91,7 +91,7 @@ jQuery(document).ready(function($) {
 	});
 	testChecked();
 	
-	$('.submit-overlay div').on('click', function(){
+	$('.submit-overlay.active div').on('click', function(){
 		console.log('click');
 	});
 	
