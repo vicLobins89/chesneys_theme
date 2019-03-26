@@ -91,7 +91,7 @@ jQuery(document).ready(function($) {
 	});
 	testChecked();
 	
-	$('.submit-overlay.active div').on('click', function(){
+	$('.submit-overlay.active .click').on('click', function(){
 		$('.submit-overlay').append('<div class="error">Please select at least one brochure to download</div>');
 	});
 	

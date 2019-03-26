@@ -946,13 +946,13 @@ s
 
 .submit-overlay {
   position: relative; }
-  .submit-overlay > div {
+  .submit-overlay .click {
     position: absolute;
     width: 0;
     height: 0;
     z-index: 100;
     cursor: pointer; }
-  .submit-overlay.active > div {
+  .submit-overlay.active .click {
     width: 100%;
     height: 100%; }
   .submit-overlay .error {

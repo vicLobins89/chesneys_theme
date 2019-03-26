@@ -44,7 +44,7 @@ INPUTS
 .submit-overlay {
 	position: relative;
 	
-	> div {
+	.click {
 		position: absolute;
 		width: 0;
 		height: 0;
@@ -53,7 +53,7 @@ INPUTS
 	}
 	
 	&.active {
-		> div {
+		.click {
 			width: 100%;
 			height: 100%;
 		}
