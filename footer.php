@@ -57,7 +57,7 @@
 						
 						if( get_field('youtube') ) {
 							echo '<a href="'.get_field('youtube').'" target="_blank"><i class="fab fa-youtube"></i></a>';
-						} elseif( $options['instagram_url'] ) {
+						} elseif( $options['youtube_url'] ) {
 							echo '<a href="'.$options['youtube_url'].'" target="_blank"><i class="fab fa-youtube"></i></a>';
 						} else {
 							echo '';
