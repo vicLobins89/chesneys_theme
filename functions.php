@@ -464,6 +464,8 @@ function wc_modify_product_post_type( $args ) {
 function woo_custom_order_button_text() {
 	if( !current_user_can('trade') ) {
 		return __( 'Proceed to payment', 'woocommerce' );
+	} else {
+		return __( 'Place order', 'woocommerce' );
 	}
 }
 add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text' );
