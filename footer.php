@@ -23,8 +23,8 @@
 					if( $options['twitter_url'] || $options['facebook_url'] || $options['instagram_url'] || $options['youtube_url'] || $options['linkedin_url'] || $options['pinterest_url']) {
 						echo '<div class="social">';
 						
-						if( get_sub_field('linked_in') ) {
-							echo '<a href="'.get_sub_field('linked_in').'" target="_blank"><i class="fab fa-linkedin-in"></i></a>';
+						if( get_field('linked_in') ) {
+							echo '<a href="'.get_field('linked_in').'" target="_blank"><i class="fab fa-linkedin-in"></i></a>';
 						} elseif( $options['linkedin_url'] ) {
 							echo '<a href="'.$options['linkedin_url'].'" target="_blank"><i class="fab fa-linkedin-in"></i></a>';
 						} else {
