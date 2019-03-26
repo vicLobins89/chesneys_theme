@@ -72,7 +72,7 @@ jQuery(document).ready(function($) {
 				pdfName.push(newName);
 			}
 			$('input.brochures').val(pdfName);
-			create_zip(newHref, pdfName);
+			//create_zip(newHref, pdfName);
 		});
 	});
 	
