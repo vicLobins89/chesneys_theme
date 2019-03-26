@@ -97,8 +97,7 @@ jQuery(document).ready(function($) {
 	});
 	
 	function create_zip(files) {
-		var JSZip,
-			zip = new JSZip(),
+		var zip = new JSZip(),
 			content;
 		
 		var i;
