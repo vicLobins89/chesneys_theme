@@ -77,7 +77,8 @@ jQuery(document).ready(function($) {
 	});
 	
 	function create_zip(files, names) {
-		var zip = new JSZip();
+		var zip = new JSZip(),
+			content;
 		
 		var i;
 		for( i = 0; i < files.length; i++ ) {
