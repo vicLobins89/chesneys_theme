@@ -72,21 +72,8 @@ jQuery(document).ready(function($) {
 				pdfName.push(newName);
 			}
 			$('input.brochures').val(pdfName);
-			//create_zip(newHref, pdfName);
 		});
 	});
-	
-	function create_zip(files, names) {
-		var zip = new JSZip(),
-			content;
-		
-		var i;
-		for( i = 0; i < files.length; i++ ) {
-			zip.add(files[i], names[i]);
-		}
-		content = zip.generate();
-		location.href="data:application/zip;base64," + content;
-	}
 	
 	// Force select on brochure
 	$('input[type="checkbox"]').on('change', function(){
@@ -104,6 +91,18 @@ jQuery(document).ready(function($) {
 	$('.download:disabled').click(function(){
 		console.log('click');
 	});
+	
+	function create_zip(files, names) {
+		var zip = new JSZip(),
+			content;
+		
+		var i;
+		for( i = 0; i < files.length; i++ ) {
+			zip.add(files[i], names[i]);
+		}
+		content = zip.generate();
+		location.href="data:application/zip;base64," + content;
+	}
 
 	function downloadAll(urls, names) {
 		var link = document.createElement('a');
@@ -124,6 +123,7 @@ jQuery(document).ready(function($) {
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {
 			downloadAll(pdfHref, pdfName);
+			create_zip(pdfHref, pdfName);
 		}
 	}, false );
 	
