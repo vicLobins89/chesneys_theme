@@ -80,6 +80,7 @@ jQuery(document).ready(function($) {
 		if( $('.js-brochure-input:checked').length > 0) {
 			$('.download').prop('disabled', false);
 			$('.submit-overlay').removeClass('active');
+			$('.submit-overlay .error').remove();
 		} else {
 			$('.download').prop('disabled', true);
 			$('.submit-overlay').addClass('active');
