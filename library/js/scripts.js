@@ -76,10 +76,6 @@ jQuery(document).ready(function($) {
 	});
 	
 	// Force select on brochure
-	$('input[type="checkbox"]').on('change', function(){
-		testChecked();
-	});
-	testChecked();
 	function testChecked() {
 		if( $('.js-brochure-input:checked').length > 0) {
 			$('.download').prop('disabled', false);
@@ -90,7 +86,12 @@ jQuery(document).ready(function($) {
 		}
 	}
 	
-	$('.submit-overlay.active').on('click', function(){
+	$('input[type="checkbox"]').on('change', function(){
+		testChecked();
+	});
+	testChecked();
+	
+	$('.submit-overlay div').on('click', function(){
 		console.log('click');
 	});
 	
@@ -105,22 +106,6 @@ jQuery(document).ready(function($) {
 		content = zip.generate();
 		location.href="data:application/zip;base64," + content;
 	}
-
-	/*function downloadAll(urls, names) {
-		var link = document.createElement('a');
-
-		link.style.display = 'none';
-
-		document.body.appendChild(link);
-
-		for (var i = 0; i < urls.length; i++) {
-			link.setAttribute('download', names[i]);
-			link.setAttribute('href', urls[i]);
-			link.click();
-		}
-
-		document.body.removeChild(link);
-	}*/
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {

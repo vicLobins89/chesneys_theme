@@ -41,6 +41,23 @@ INPUTS
     display: block;
 }
 
+.submit-overlay {
+	position: relative;
+	
+	div {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	
+	&.active {
+		div {
+			width: 0;
+			height: 0;
+		}
+	}
+}
+
 // setting up defaults
 input[type="text"],
 input[type="password"],

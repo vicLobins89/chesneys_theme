@@ -944,6 +944,16 @@ s
   margin: auto;
   display: block; }
 
+.submit-overlay {
+  position: relative; }
+  .submit-overlay div {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  .submit-overlay.active div {
+    width: 0;
+    height: 0; }
+
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"]:not(#s), input[type="tel"], input[type="color"], select, textarea, .field {
   display: block;
   padding: 13px 15px 10px;
