@@ -1824,7 +1824,7 @@ LAYOUT & GRID STYLES
       margin: 1rem 1.5rem 0;
       font-size: .9rem;
       min-width: 12rem; }
-  .module.module-need-help-2 p {
+  .module.module-need-help-2 form p {
     color: #142128;
     text-align: left; }
   .module.module-sign-up {
