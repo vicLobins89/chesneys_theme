@@ -1057,6 +1057,7 @@ LAYOUT & GRID STYLES
 	}
 	
 	&.module-sign-up,
+	&.module-need-help-2,
 	&.module-need-help {
 		background: $dark-gray;
 		color: $white;
@@ -1480,6 +1481,7 @@ h2, .h2 {
 		.module-accessories-and-fuel-outdoor &,
 		.module-outdoor-living &,
 		.module-stoves &,
+		.module-need-help-2 &,
 		.module-need-help &,
 		.module-spares-and-accessories & {
 			background: $white;
