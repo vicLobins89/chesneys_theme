@@ -1078,6 +1078,13 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
+	&.module-need-help-2 {
+		p {
+			color: $text-color;
+			text-align: left;
+		}
+	}
+	
 	&.module-sign-up {
 		background: $light-brown;
 		color: $text-color;
