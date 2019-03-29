@@ -89,6 +89,7 @@ jQuery(document).ready(function($) {
 	
 	$('input[type="checkbox"]').on('change', function(){
 		testChecked();
+console.log(pdfHref);
 	});
 	testChecked();
 	
@@ -96,21 +97,54 @@ jQuery(document).ready(function($) {
 		$('.submit-overlay').append('<div class="error">Please select at least one brochure to download</div>');
 	});
 	
-	function create_zip(files) {
-		var zip = new JSZip(),
+	function create_zip(names, files) {
+var content;
+var request = $.ajax({
+    url: files[0],
+    type: "GET",
+    contentType: "application/pdf",
+    mimeType:'text/plain; charset=x-user-defined' // <-[1]
+  });
+
+request.done(function( data ) {
+    var zip = new JSZip();
+    zip.add("my_file.pdf", data, { binary: true }); // <- [2]
+    content = zip.generate();
+    location.href = "data:application/zip;base64," + content;
+  }); 
+	/*	var zip = new JSZip(),
 			content;
-		
+
+		zip.folder("brochures");
 		var i;
 		for( i = 0; i < files.length; i++ ) {
 			zip.add(files[i]);
 		}
 		content = zip.generate();
-		location.href="data:application/zip;base64," + content;
+		location.href="data:application/zip;base64," + content;*/
 	}
+
+function downloadAll(urls, names) {
+  var link = document.createElement('a');
+
+  link.style.display = 'none';
+
+  document.body.appendChild(link);
+
+  for (var i = 0; i < urls.length; i++) {
+    link.setAttribute('href', urls[i]);
+link.setAttribute('download', names[i]);
+    link.click();
+  }
+
+  document.body.removeChild(link);
+}
+
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {
-			create_zip(pdfHref);
+			//create_zip(pdfName, pdfHref);
+downloadAll(pdfHref, pdfName);
 		}
 	}, false );
 	
