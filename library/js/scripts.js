@@ -89,7 +89,6 @@ jQuery(document).ready(function($) {
 	
 	$('input[type="checkbox"]').on('change', function(){
 		testChecked();
-console.log(pdfHref);
 	});
 	testChecked();
 	
@@ -98,21 +97,22 @@ console.log(pdfHref);
 	});
 	
 	function create_zip(names, files) {
-var content;
-var request = $.ajax({
-    url: files[0],
-    type: "GET",
-    contentType: "application/pdf",
-    mimeType:'text/plain; charset=x-user-defined' // <-[1]
-  });
+		var content;
+		var request = $.ajax({
+			url: 'https://chesneys.co.uk/wp-content/uploads/2019/03/Main_Brochure_2019_UK-Online.pdf',
+			type: "GET",
+			contentType: "application/pdf",
+			mimeType:'text/plain; charset=x-user-defined' // <-[1]
+		});
 
-request.done(function( data ) {
-    var zip = new JSZip();
-    zip.add("my_file.pdf", data, { binary: true }); // <- [2]
-    content = zip.generate();
-    location.href = "data:application/zip;base64," + content;
-  }); 
-	/*	var zip = new JSZip(),
+		request.done(function( data ) {
+			var zip = new JSZip();
+			zip.add("my_file.pdf", data, { binary: true }); // <- [2]
+			content = zip.generate();
+			location.href = "data:application/zip;base64," + content;
+		});
+		
+		/*var zip = new JSZip(),
 			content;
 
 		zip.folder("brochures");
@@ -124,27 +124,27 @@ request.done(function( data ) {
 		location.href="data:application/zip;base64," + content;*/
 	}
 
-function downloadAll(urls, names) {
-  var link = document.createElement('a');
+	function downloadAll(urls, names) {
+		var link = document.createElement('a');
 
-  link.style.display = 'none';
+		link.style.display = 'none';
 
-  document.body.appendChild(link);
+		document.body.appendChild(link);
 
-  for (var i = 0; i < urls.length; i++) {
-    link.setAttribute('href', urls[i]);
-link.setAttribute('download', names[i]);
-    link.click();
-  }
+		for (var i = 0; i < urls.length; i++) {
+			link.setAttribute('href', urls[i]);
+			link.setAttribute('download', names[i]);
+			link.click();
+		}
 
-  document.body.removeChild(link);
-}
+		document.body.removeChild(link);
+	}
 
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {
-			//create_zip(pdfName, pdfHref);
-downloadAll(pdfHref, pdfName);
+			create_zip(pdfName, pdfHref);
+			downloadAll(pdfHref, pdfName);
 		}
 	}, false );
 	

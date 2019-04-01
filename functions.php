@@ -303,13 +303,7 @@ add_filter( 'wpsl_templates', 'custom_templates' );
 require_once( 'woocommerce/checkout-functions.php' );
 
 // Custom role
-add_role(
-    'trade',
-    __( 'Trade Stockist' ),
-    array(
-        'read' => true,
-    )
-);
+add_role( 'trade', __( 'Trade Stockist' ), array('read' => true,) );
 
 // Gateways for user roles
 function set_trade_gateways( $available_gateways ) {
@@ -322,6 +316,16 @@ function set_trade_gateways( $available_gateways ) {
 	return $available_gateways;
 }
 add_filter( 'woocommerce_available_payment_gateways', 'set_trade_gateways' ); 
+
+// Place order button
+function woo_custom_order_button_text() {
+	if( !current_user_can('trade') ) {
+		return __( 'Proceed to payment', 'woocommerce' );
+	} else {
+		return __( 'Place order', 'woocommerce' );
+	}
+}
+add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text' );
 
 // Display category image on category archive
 function woocommerce_category_image() {
@@ -459,15 +463,5 @@ function wc_modify_product_post_type( $args ) {
 
      return $args;
 }
-
-// Place order button
-function woo_custom_order_button_text() {
-	if( !current_user_can('trade') ) {
-		return __( 'Proceed to payment', 'woocommerce' );
-	} else {
-		return __( 'Place order', 'woocommerce' );
-	}
-}
-add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
