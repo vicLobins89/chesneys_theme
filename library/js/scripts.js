@@ -136,7 +136,7 @@ jQuery(document).ready(function($) {
 		var zip = new JSZip();
 		var brochures = zip.folder("brochures");
 		
-		for( var i = 0; i < files.length; i++ ) {
+		for( var i = 0; i < data.length; i++ ) {
 			brochures.file(data[i]);
 		}
 
