@@ -137,7 +137,7 @@ jQuery(document).ready(function($) {
 		var brochures = zip.folder("brochures");
 		
 		for( var i = 0; i < files.length; i++ ) {
-			brochures.file('mypdf'.i.'.pdf', data[i]);
+			brochures.file(data[i]);
 		}
 
 		zip.generateAsync({type:"blob"}).then(function(content) {
