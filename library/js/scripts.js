@@ -113,73 +113,26 @@ jQuery(document).ready(function($) {
 		document.body.removeChild(link);
 	}
 	
-	var pipedAjaxRequests = function(urls, callback) {
-		var responses = [];
-		var promise = $.Deferred().resolve();
-		
-		_.each(urls, function(url) { 
-			promise = promise.pipe(function () {
-				return $.get(url);
-			}).done(function (response) {
-				responses[url] = response;
-			});
-		});
-
-		promise.done(function () {
-			callback(responses);
-		}).fail(function (err) {
-			callback(responses, err);
-		});
-	};
-	
-	function create_zip_pdf(data, error = 'fail') {
-		console.log(data);
+	function create_zip(names, files) {
 		var zip = new JSZip();
-		var brochures = zip.folder("brochures");
 		
-		for( var i = 0; i < data.length; i++ ) {
-			brochures.file(data[i]);
+		for( var i = 0; i < files.length; i++ ) {
+			var request[i] = $.ajax({
+				url: files[i],
+				type: "GET",
+				contentType: "application/pdf",
+				mimeType:'text/plain; charset=x-user-defined'
+			});
+			
+			request[i].done(function(data) {
+				zip.file(names[i], data, { binary: true });
+			});
 		}
-
+		
 		zip.generateAsync({type:"blob"}).then(function(content) {
 			// see FileSaver.js
 			saveAs(content, "brochures.zip");
 		});
-		
-		console.log(error);
-	}
-	
-	function create_zip(names, files) {
-		var request = $.ajax({
-			url: files[0],
-			type: "GET",
-			contentType: "application/pdf",
-			mimeType:'text/plain; charset=x-user-defined' // <-[1]
-		});
-		
-		request.done(function( data ) {
-			var zip = new JSZip();
-			zip.file("my_file.pdf", data, { binary: true }); // <- [2]
-
-			zip.generateAsync({type:"blob"}).then(function(content) {
-				// see FileSaver.js
-				saveAs(content, "brochures.zip");
-			});
-		});
-		
-//		var zip = new JSZip();
-//
-//		var brochures = zip.folder("brochures");
-//		
-//		for( var i = 0; i < files.length; i++ ) {
-//			brochures.file(names[i], files[i]);
-//			//zip.add(files[i]);
-//		}
-//		
-//		zip.generateAsync({type:"blob"}).then(function(content) {
-//			// see FileSaver.js
-//			saveAs(content, "brochures.zip");
-//		});
 	}
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
