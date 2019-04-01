@@ -114,6 +114,17 @@ jQuery(document).ready(function($) {
 	}
 	
 	function create_zip(names, files) {
+		
+		$.each(files, function (i, item) {
+			$.ajax({
+				url: item,
+				cache: false
+			}).done(function (html) {
+				console.log(html);
+			});
+		});
+		
+		
 		var zip = new JSZip(),
 			request = [];
 		
