@@ -320,12 +320,10 @@ add_filter( 'woocommerce_available_payment_gateways', 'set_trade_gateways' );
 
 // Place order button
 function woo_custom_order_button_text() {
-	if( !current_user_can('trade') ) {
-		return __( 'Proceed to payment', 'woocommerce' );
-	} elseif( !current_user_can('trade40') ) {
-		return __( 'Proceed to payment', 'woocommerce' );
-	} else {
+	if( current_user_can('trade') || current_user_can('trade40') ) {
 		return __( 'Place order', 'woocommerce' );
+	} else {
+		return __( 'Proceed to payment', 'woocommerce' );
 	}
 }
 add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text' );
