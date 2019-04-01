@@ -117,23 +117,19 @@ jQuery(document).ready(function($) {
 		
 		var zip = new JSZip();
 		
-		$.each(files, function (i, item) {
-			$.ajax({
-				url: item,
-				cache: false
-			}).done(function(data) {
-				zip.file(names[i], data, { binary: true });
-			});
-		});
-		
-//		for( var j = 0; j < request.length; j++ ) {
-//			request[j].done(function(data) {
-//				zip.file(names[j], data, { binary: true });
-//			});
-//		}
+		var request = $.ajax({
+			url: files[0],
+			type: "GET",
+			contentType: "application/pdf",
+			mimeType:'text/plain; charset=x-user-defined'
+		});     
+
+		request.done(function( data ) {
+			var zip = new JSZip();
+			zip.file(names[0], data, { binary: true });
+		});  
 		
 		zip.generateAsync({type:"blob"}).then(function(content) {
-			// see FileSaver.js
 			saveAs(content, "brochures.zip");
 		});
 	}
