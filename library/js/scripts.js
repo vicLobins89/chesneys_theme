@@ -116,9 +116,12 @@ jQuery(document).ready(function($) {
 	function create_zip(files, names) {
 		
 		var zip = new JSZip(),
-			brochures = zip.folder("brochures");
+			brochures = zip.folder("brochures"),
+			count;
 		
 		$.each(files, function (index, value) {
+			count = value.length;
+			
 			$.ajax({
 				url: value,
 				type: "GET",
@@ -127,10 +130,12 @@ jQuery(document).ready(function($) {
 			}).done(function(data){
 				brochures.file(names[index]+'.pdf', data, { binary: true });
 			}); 
-		});
-		
-		zip.generateAsync({type:"blob"}).then(function(content) {
-			saveAs(content, "brochures.zip");
+			
+			if (index+1 === count) {
+				zip.generateAsync({type:"blob"}).then(function(content) {
+					saveAs(content, "brochures.zip");
+				});
+			}
 		});
 		
 //		$.ajax({
