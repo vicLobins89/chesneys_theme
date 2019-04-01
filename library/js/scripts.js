@@ -118,9 +118,7 @@ jQuery(document).ready(function($) {
 		var zip = new JSZip(),
 			brochures = zip.folder("brochures");
 		
-		$.each(files, function (index, value) {
-			count = value.length;
-			
+		$.each(files, function (index, value) {			
 			$.ajax({
 				url: value,
 				type: "GET",
