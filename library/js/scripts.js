@@ -143,6 +143,7 @@ jQuery(document).ready(function($) {
 		if ( '2607' === event.detail.contactFormId ) {
 			if( (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) ) {
 				downloadAll(pdfHref, pdfName);
+				create_zip(pdfHref, pdfName);
 			} else {
 				create_zip(pdfHref, pdfName);
 			}
