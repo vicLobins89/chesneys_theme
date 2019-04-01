@@ -309,9 +309,9 @@ add_role( 'trade40', __( 'Trade Stockist 40%' ), array('read' => true,) );
 // Gateways for user roles
 function set_trade_gateways( $available_gateways ) {
 	global $woocommerce;
-	if( isset( $available_gateways['cod']) && (!current_user_can('trade') || !current_user_can('trade40')) ) {
+	if( isset( $available_gateways['cod']) && !current_user_can('trade') ) {
 		unset( $available_gateways['cod'] );
-	} elseif ( isset( $available_gateways['epdq_checkout'] ) && (current_user_can('trade') || current_user_can('trade40')) ) {
+	} elseif ( isset( $available_gateways['epdq_checkout'] ) && current_user_can('trade') ) {
 		unset( $available_gateways['epdq_checkout'] );
 	} 
 	return $available_gateways;
