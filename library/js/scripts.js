@@ -115,30 +115,9 @@ jQuery(document).ready(function($) {
 	
 	function create_zip(files, names) {
 		
-		for (var i = 0; i < files.length; i++) {
-			$.ajax({
-				url: files[i],
-				ajaxI: i,
-				type: "GET",
-				contentType: "application/pdf",
-				mimeType:'text/plain; charset=x-user-defined',
-				success: function(data) {
-					i = this.ajaxI;
-					
-					var zip = new JSZip(),
-						brochures = zip.folder("brochures");
-
-					brochures.file(names[i].'.pdf', data, { binary: true });
-
-					zip.generateAsync({type:"blob"}).then(function(content) {
-						saveAs(content, "brochures.zip");
-					});
-				 },
-				error: function(){
-					console.log('error');
-				}
-			});
-		}
+		$.each(files, function (index, value) {
+			console.log(index + ' ' + value);
+		});
 		
 //		$.ajax({
 //			url: files[0],
