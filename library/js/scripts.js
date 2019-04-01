@@ -115,12 +115,14 @@ jQuery(document).ready(function($) {
 	
 	function create_zip(files, names) {
 		
-		$.ajax({
+		var request = $.ajax({
 			url: files[0],
 			type: "GET",
 			contentType: "application/pdf",
 			mimeType:'text/plain; charset=x-user-defined'
-		}).done(function(data){
+		});     
+
+		request.done(function(data) {
 			var zip = new JSZip(),
 				brochures = zip.folder("brochures");
 			
@@ -129,7 +131,7 @@ jQuery(document).ready(function($) {
 			zip.generateAsync({type:"blob"}).then(function(content) {
 				saveAs(content, "brochures.zip");
 			});
-		}); 
+		});  
 	}
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
