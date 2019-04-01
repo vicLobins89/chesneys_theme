@@ -113,7 +113,7 @@ jQuery(document).ready(function($) {
 		document.body.removeChild(link);
 	}
 	
-	function pipedAjaxRequests(urls, callback) {
+	var pipedAjaxRequests = function(urls, callback) {
 		var responses = {};
 
 		var promise = $.Deferred().resolve();
