@@ -115,23 +115,21 @@ jQuery(document).ready(function($) {
 	
 	function create_zip(files, names) {
 		
-		var request = $.ajax({
-			url: 'https://chesneys.co.uk/wp-content/uploads/2019/03/Main_Brochure_2019_UK-Online.pdf',
+		$.ajax({
+			url: files[0],
 			type: "GET",
 			contentType: "application/pdf",
 			mimeType:'text/plain; charset=x-user-defined'
-		});     
-
-		request.done(function(data) {
+		}).done(function(data){
 			var zip = new JSZip(),
 				brochures = zip.folder("brochures");
 			
-			brochures.file('mypdf.pdf', data, { binary: true });
+			brochures.file(names[0], data, { binary: true });
 			
 			zip.generateAsync({type:"blob"}).then(function(content) {
 				saveAs(content, "brochures.zip");
 			});
-		});  
+		}); 
 	}
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
