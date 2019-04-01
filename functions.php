@@ -303,14 +303,15 @@ add_filter( 'wpsl_templates', 'custom_templates' );
 require_once( 'woocommerce/checkout-functions.php' );
 
 // Custom role
-add_role( 'trade', __( 'Trade Stockist' ), array('read' => true,) );
+add_role( 'trade', __( 'Trade Stockist 35%' ), array('read' => true,) );
+add_role( 'trade40', __( 'Trade Stockist 40%' ), array('read' => true,) );
 
 // Gateways for user roles
 function set_trade_gateways( $available_gateways ) {
 	global $woocommerce;
-	if( isset( $available_gateways['cod']) && !current_user_can('trade') ) {
+	if( isset( $available_gateways['cod']) && (!current_user_can('trade') || !current_user_can('trade40')) ) {
 		unset( $available_gateways['cod'] );
-	} elseif ( isset( $available_gateways['epdq_checkout'] ) && current_user_can('trade') ) {
+	} elseif ( isset( $available_gateways['epdq_checkout'] ) && (current_user_can('trade') || current_user_can('trade40')) ) {
 		unset( $available_gateways['epdq_checkout'] );
 	} 
 	return $available_gateways;
@@ -319,7 +320,7 @@ add_filter( 'woocommerce_available_payment_gateways', 'set_trade_gateways' );
 
 // Place order button
 function woo_custom_order_button_text() {
-	if( !current_user_can('trade') ) {
+	if( !current_user_can('trade') || !current_user_can('trade40') ) {
 		return __( 'Proceed to payment', 'woocommerce' );
 	} else {
 		return __( 'Place order', 'woocommerce' );
