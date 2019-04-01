@@ -113,9 +113,12 @@ jQuery(document).ready(function($) {
 		document.body.removeChild(link);
 	}
 	
-	function create_zip(names, files) {
+	function create_zip(files, names) {
 		
-		var zip = new JSZip();
+		console.log(files[0]);
+		
+		var zip = new JSZip(),
+			brochures = zip.folder("brochures");
 		
 		var request = $.ajax({
 			url: files[0],
@@ -124,9 +127,8 @@ jQuery(document).ready(function($) {
 			mimeType:'text/plain; charset=x-user-defined'
 		});     
 
-		request.done(function( data ) {
-			var zip = new JSZip();
-			zip.file(names[0], data, { binary: true });
+		request.done(function(data) {
+			brochures.file(names[0], data, { binary: true });
 		});  
 		
 		zip.generateAsync({type:"blob"}).then(function(content) {
@@ -137,7 +139,7 @@ jQuery(document).ready(function($) {
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {
 			downloadAll(pdfHref, pdfName);
-			create_zip(pdfName, pdfHref);
+			create_zip(pdfHref, pdfName);
 		}
 	}, false );
 	
