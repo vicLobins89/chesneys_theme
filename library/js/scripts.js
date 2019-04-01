@@ -119,7 +119,7 @@ jQuery(document).ready(function($) {
 			brochures = zip.folder("brochures");
 		
 		var request = $.ajax({
-			url: files[0],
+			url: 'https://chesneys.co.uk/wp-content/uploads/2019/03/Main_Brochure_2019_UK-Online.pdf',
 			type: "GET",
 			contentType: "application/pdf",
 			mimeType:'text/plain; charset=x-user-defined'
