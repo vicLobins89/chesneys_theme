@@ -97,33 +97,39 @@ jQuery(document).ready(function($) {
 	});
 	
 	function create_zip(names, files) {
-		var content;
-		var request = $.ajax({
-			url: 'https://chesneys.co.uk/wp-content/uploads/2019/03/Main_Brochure_2019_UK-Online.pdf',
-			type: "GET",
-			contentType: "application/pdf",
-			mimeType:'text/plain; charset=x-user-defined' // <-[1]
-		});
-
-		request.done(function( data ) {
-			var zip = new JSZip();
-			zip.add("my_file.pdf", data, { binary: true }); // <- [2]
-			content = zip.generate();
-			location.href = "data:application/zip;base64," + content;
-		});
+//		var content;
+//		var request = $.ajax({
+//			url: 'https://chesneys.co.uk/wp-content/uploads/2019/03/Main_Brochure_2019_UK-Online.pdf',
+//			type: "GET",
+//			contentType: "application/pdf",
+//			mimeType:'text/plain; charset=x-user-defined' // <-[1]
+//		});
+//
+//		request.done(function( data ) {
+//			var zip = new JSZip();
+//			zip.add("my_file.pdf", data, { binary: true }); // <- [2]
+//			content = zip.generate();
+//			location.href = "data:application/zip;base64," + content;
+//		});
+//		
+//		console.log(request);
 		
-		console.log(request);
-		
-		/*var zip = new JSZip(),
-			content;
+		var zip = new JSZip();
 
-		zip.folder("brochures");
-		var i;
-		for( i = 0; i < files.length; i++ ) {
-			zip.add(files[i]);
+		var brochures = zip.folder("brochures");
+		
+		for( var i = 0; i < files.length; i++ ) {
+			brochures.file(files[i], imgData, {base64: true});
+			//zip.add(files[i]);
 		}
-		content = zip.generate();
-		location.href="data:application/zip;base64," + content;*/
+		
+		zip.generateAsync({type:"blob"}).then(function(content) {
+			// see FileSaver.js
+			saveAs(content, "brochures.zip");
+		});
+		
+		//content = zip.generate();
+		//location.href="data:application/zip;base64," + content;
 	}
 
 	function downloadAll(urls, names) {
