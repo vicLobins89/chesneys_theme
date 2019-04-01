@@ -133,6 +133,7 @@ jQuery(document).ready(function($) {
 	};
 	
 	function create_zip_pdf(data, error = 'fail') {
+		console.log(data);
 		var zip = new JSZip();
 		var brochures = zip.folder("brochures");
 		
