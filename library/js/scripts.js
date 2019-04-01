@@ -115,23 +115,46 @@ jQuery(document).ready(function($) {
 	
 	function create_zip(files, names) {
 		
-		var request = $.ajax({
-			url: files[0],
-			type: "GET",
-			contentType: "application/pdf",
-			mimeType:'text/plain; charset=x-user-defined'
-		});     
+		for (var i = 0; i < files.length; i++) {
+			$.ajax({
+				url: files[i],
+				ajaxI: i,
+				type: "GET",
+				contentType: "application/pdf",
+				mimeType:'text/plain; charset=x-user-defined',
+				success: function(data) {
+					i = this.ajaxI;
+					
+					var zip = new JSZip(),
+						brochures = zip.folder("brochures");
 
-		request.done(function(data) {
-			var zip = new JSZip(),
-				brochures = zip.folder("brochures");
-			
-			brochures.file(names[0], data, { binary: true });
-			
-			zip.generateAsync({type:"blob"}).then(function(content) {
-				saveAs(content, "brochures.zip");
+					brochures.file(names[i].'.pdf', data, { binary: true });
+
+					zip.generateAsync({type:"blob"}).then(function(content) {
+						saveAs(content, "brochures.zip");
+					});
+				 },
+				error: function(){
+					console.log('error');
+				}
 			});
-		});  
+		}
+		
+//		$.ajax({
+//			url: files[0],
+//			type: "GET",
+//			contentType: "application/pdf",
+//			mimeType:'text/plain; charset=x-user-defined'
+//		}).done(function(data){
+//			var zip = new JSZip(),
+//				brochures = zip.folder("brochures");
+//			
+//			brochures.file(names[0].'.pdf', data, { binary: true });
+//			
+//			zip.generateAsync({type:"blob"}).then(function(content) {
+//				saveAs(content, "brochures.zip");
+//			});
+//		}); 
 	}
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
