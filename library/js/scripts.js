@@ -116,7 +116,23 @@ jQuery(document).ready(function($) {
 	function create_zip(files, names) {
 		
 		$.each(files, function (index, value) {
-			console.log(index + ' ' + value + ' ' + names[index]);
+			console.log(names[index]+'.pdf' + ' ' + value);
+			
+			$.ajax({
+				url: value,
+				type: "GET",
+				contentType: "application/pdf",
+				mimeType:'text/plain; charset=x-user-defined'
+			}).done(function(data){
+				var zip = new JSZip(),
+					brochures = zip.folder("brochures");
+
+				brochures.file(names[index]+'.pdf', data, { binary: true });
+
+				zip.generateAsync({type:"blob"}).then(function(content) {
+					saveAs(content, "brochures.zip");
+				});
+			}); 
 		});
 		
 //		$.ajax({
