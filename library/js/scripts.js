@@ -112,6 +112,8 @@ jQuery(document).ready(function($) {
 			location.href = "data:application/zip;base64," + content;
 		});
 		
+		console.log(request);
+		
 		/*var zip = new JSZip(),
 			content;
 
