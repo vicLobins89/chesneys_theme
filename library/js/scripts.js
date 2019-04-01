@@ -120,14 +120,13 @@ jQuery(document).ready(function($) {
 			count = 0;
 		
 		$.each(files, function(index, value) {
-			count += 1;
-			
 			$.ajax({
 				url: value,
 				type: "GET",
 				contentType: "application/pdf",
 				mimeType:'text/plain; charset=x-user-defined'
 			}).done(function(data){
+				count += 1;
 				brochures.file(names[index]+'.pdf', data, { binary: true });
 				
 				console.log(count + ' ' + files.length);
