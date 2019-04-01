@@ -115,33 +115,22 @@ jQuery(document).ready(function($) {
 	
 	function create_zip(names, files) {
 		
+		var zip = new JSZip();
+		
 		$.each(files, function (i, item) {
 			$.ajax({
 				url: item,
 				cache: false
-			}).done(function (html) {
-				console.log(html);
+			}).done(function(data) {
+				zip.file(names[i], data, { binary: true });
 			});
 		});
 		
-		
-		var zip = new JSZip(),
-			request = [];
-		
-		for( var i = 0; i < files.length; i++ ) {
-			request[i] = $.ajax({
-				url: files[i],
-				type: "GET",
-				contentType: "application/pdf",
-				mimeType:'text/plain; charset=x-user-defined'
-			});
-		}
-		
-		for( var j = 0; j < request.length; j++ ) {
-			request[j].done(function(data) {
-				zip.file(names[j], data, { binary: true });
-			});
-		}
+//		for( var j = 0; j < request.length; j++ ) {
+//			request[j].done(function(data) {
+//				zip.file(names[j], data, { binary: true });
+//			});
+//		}
 		
 		zip.generateAsync({type:"blob"}).then(function(content) {
 			// see FileSaver.js
