@@ -115,8 +115,6 @@ jQuery(document).ready(function($) {
 	
 	function create_zip(files, names) {
 		
-		console.log(files[0]);
-		
 		var zip = new JSZip(),
 			brochures = zip.folder("brochures");
 		
@@ -128,7 +126,7 @@ jQuery(document).ready(function($) {
 		});     
 
 		request.done(function(data) {
-			brochures.file(names[0], data, { binary: true });
+			brochures.file('mypdf.pdf', data, { binary: true });
 		});  
 		
 		zip.generateAsync({type:"blob"}).then(function(content) {
