@@ -309,7 +309,7 @@ add_role( 'trade40', __( 'Trade Stockist 40%' ), array('read' => true,) );
 // Gateways for user roles
 function set_trade_gateways( $available_gateways ) {
 	global $woocommerce;
-	if ( current_user_can('trade') || current_user_can('trade') ) {
+	if ( current_user_can('trade') || current_user_can('trade40') ) {
 		unset( $available_gateways['epdq_checkout'] );
 	} else {
 		unset( $available_gateways['cod'] );
