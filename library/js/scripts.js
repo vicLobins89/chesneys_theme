@@ -119,7 +119,7 @@ jQuery(document).ready(function($) {
 			brochures = zip.folder("brochures"),
 			count = 0;
 		
-		$.each(files, function (index, value) {
+		$.each(files, function(index, value) {
 			count += 1;
 			
 			$.ajax({
@@ -130,7 +130,7 @@ jQuery(document).ready(function($) {
 			}).done(function(data){
 				brochures.file(names[index]+'.pdf', data, { binary: true });
 				
-				console.log(count + ' ' + value.length);
+				console.log(count + ' ' + index.length);
 //				zip.generateAsync({type:"blob"}).then(function(content) {
 //					saveAs(content, "brochures.zip");
 //				});
