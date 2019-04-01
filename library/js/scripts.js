@@ -136,10 +136,16 @@ jQuery(document).ready(function($) {
 		});
 	}
 	
+	
+	var ua = window.navigator.userAgent;
+	var msie = ua.indexOf("MSIE ");
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {
-			//downloadAll(pdfHref, pdfName);
-			create_zip(pdfHref, pdfName);
+			if( (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) ) {
+				downloadAll(pdfHref, pdfName);
+			} else {
+				create_zip(pdfHref, pdfName);
+			}
 		}
 	}, false );
 	
