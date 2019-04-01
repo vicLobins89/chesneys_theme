@@ -114,10 +114,11 @@ jQuery(document).ready(function($) {
 	}
 	
 	function create_zip(names, files) {
-		var zip = new JSZip();
+		var zip = new JSZip(),
+			request = [];
 		
 		for( var i = 0; i < files.length; i++ ) {
-			var request[i] = $.ajax({
+			request[i] = $.ajax({
 				url: files[i],
 				type: "GET",
 				contentType: "application/pdf",
