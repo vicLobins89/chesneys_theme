@@ -114,7 +114,6 @@ jQuery(document).ready(function($) {
 	}
 	
 	function create_zip(files, names) {
-		
 		var zip = new JSZip(),
 			brochures = zip.folder("brochures"),
 			count = 0;
@@ -135,13 +134,11 @@ jQuery(document).ready(function($) {
 				}
 			}); 
 		});
-		
-		
 	}
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {
-			downloadAll(pdfHref, pdfName);
+			//downloadAll(pdfHref, pdfName);
 			create_zip(pdfHref, pdfName);
 		}
 	}, false );
