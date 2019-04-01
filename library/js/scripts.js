@@ -107,8 +107,11 @@ jQuery(document).ready(function($) {
 		request.done(function( data ) {
 			var zip = new JSZip();
 			zip.file("my_file.pdf", data, { binary: true }); // <- [2]
-			content = zip.generate();
-			location.href = "data:application/zip;base64," + content;
+
+			zip.generateAsync({type:"blob"}).then(function(content) {
+				// see FileSaver.js
+				saveAs(content, "brochures.zip");
+			});
 		});
 		
 //		var zip = new JSZip();
