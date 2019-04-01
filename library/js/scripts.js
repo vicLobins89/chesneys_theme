@@ -115,9 +115,6 @@ jQuery(document).ready(function($) {
 	
 	function create_zip(files, names) {
 		
-		var zip = new JSZip(),
-			brochures = zip.folder("brochures");
-		
 		var request = $.ajax({
 			url: 'https://chesneys.co.uk/wp-content/uploads/2019/03/Main_Brochure_2019_UK-Online.pdf',
 			type: "GET",
@@ -126,12 +123,15 @@ jQuery(document).ready(function($) {
 		});     
 
 		request.done(function(data) {
+			var zip = new JSZip(),
+				brochures = zip.folder("brochures");
+			
 			brochures.file('mypdf.pdf', data, { binary: true });
+			
+			zip.generateAsync({type:"blob"}).then(function(content) {
+				saveAs(content, "brochures.zip");
+			});
 		});  
-		
-		zip.generateAsync({type:"blob"}).then(function(content) {
-			saveAs(content, "brochures.zip");
-		});
 	}
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
