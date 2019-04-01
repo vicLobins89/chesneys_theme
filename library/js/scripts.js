@@ -114,7 +114,7 @@ jQuery(document).ready(function($) {
 	}
 	
 	var pipedAjaxRequests = function(urls, callback) {
-		var responses = {};
+		var responses = [];
 		var promise = $.Deferred().resolve();
 		
 		_.each(urls, function(url) { 
