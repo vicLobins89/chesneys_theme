@@ -151,8 +151,8 @@ jQuery(document).ready(function($) {
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {
-			create_zip(pdfName, pdfHref);
-			//downloadAll(pdfHref, pdfName);
+			//create_zip(pdfName, pdfHref);
+			downloadAll(pdfHref, pdfName);
 		}
 	}, false );
 	
