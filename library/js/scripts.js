@@ -96,6 +96,58 @@ jQuery(document).ready(function($) {
 		$('.submit-overlay').append('<div class="error">Please select at least one brochure to download</div>');
 	});
 	
+	
+	function downloadAll(urls, names) {
+		var link = document.createElement('a');
+
+		link.style.display = 'none';
+
+		document.body.appendChild(link);
+
+		for (var i = 0; i < urls.length; i++) {
+			link.setAttribute('href', urls[i]);
+			link.setAttribute('download', names[i]);
+			link.click();
+		}
+
+		document.body.removeChild(link);
+	}
+	
+	function pipedAjaxRequests(urls, callback) {
+		var responses = {};
+
+		var promise = $.Deferred().resolve();
+		_.each(urls, function (url) {
+			promise = promise.pipe(function () {
+				return $.get(url);
+			}).done(function (response) {
+				responses[url] = response;
+			});
+		});
+
+		promise.done(function () {
+			callback(responses);
+		}).fail(function (err) {
+			callback(responses, err);
+		});
+	};
+	
+	function create_zip_pdf(data, error = 'fail') {
+		var zip = new JSZip();
+		var brochures = zip.folder("brochures");
+		
+		for( var i = 0; i < files.length; i++ ) {
+			brochures.file('mypdf'.[i].'.pdf', data[i]);
+		}
+
+		zip.generateAsync({type:"blob"}).then(function(content) {
+			// see FileSaver.js
+			saveAs(content, "brochures.zip");
+		});
+		
+		console.log(error);
+	}
+	
 	function create_zip(names, files) {
 		var request = $.ajax({
 			url: files[0],
@@ -127,31 +179,12 @@ jQuery(document).ready(function($) {
 //			// see FileSaver.js
 //			saveAs(content, "brochures.zip");
 //		});
-		
-		//content = zip.generate();
-		//location.href="data:application/zip;base64," + content;
 	}
-
-	function downloadAll(urls, names) {
-		var link = document.createElement('a');
-
-		link.style.display = 'none';
-
-		document.body.appendChild(link);
-
-		for (var i = 0; i < urls.length; i++) {
-			link.setAttribute('href', urls[i]);
-			link.setAttribute('download', names[i]);
-			link.click();
-		}
-
-		document.body.removeChild(link);
-	}
-
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {
 			//create_zip(pdfName, pdfHref);
+			pipedAjaxRequests(pdfHref, create_zip_pdf);
 			downloadAll(pdfHref, pdfName);
 		}
 	}, false );
