@@ -124,9 +124,11 @@ jQuery(document).ready(function($) {
 				contentType: "application/pdf",
 				mimeType:'text/plain; charset=x-user-defined'
 			});
-			
-			request[i].done(function(data) {
-				zip.file(names[i], data, { binary: true });
+		}
+		
+		for( var j = 0; j < request.length; j++ ) {
+			request[j].done(function(data) {
+				zip.file(names[j], data, { binary: true });
 			});
 		}
 		
