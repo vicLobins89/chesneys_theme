@@ -116,7 +116,7 @@ jQuery(document).ready(function($) {
 	function create_zip(files, names) {
 		
 		$.each(files, function (index, value) {
-			console.log(index + ' ' + value);
+			console.log(index + ' ' + value + ' ' + names[index]);
 		});
 		
 //		$.ajax({
