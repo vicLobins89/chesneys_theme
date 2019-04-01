@@ -130,7 +130,7 @@ jQuery(document).ready(function($) {
 			}).done(function(data){
 				brochures.file(names[index]+'.pdf', data, { binary: true });
 				
-				console.log(count + ' ' + index.length);
+				console.log(count + ' ' + files.length);
 //				zip.generateAsync({type:"blob"}).then(function(content) {
 //					saveAs(content, "brochures.zip");
 //				});
