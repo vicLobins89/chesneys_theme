@@ -128,11 +128,11 @@ jQuery(document).ready(function($) {
 			}).done(function(data){
 				count += 1;
 				brochures.file(names[index]+'.pdf', data, { binary: true });
-				
-				console.log(count + ' ' + files.length);
-//				zip.generateAsync({type:"blob"}).then(function(content) {
-//					saveAs(content, "brochures.zip");
-//				});
+				if( count === files.length ) {
+					zip.generateAsync({type:"blob"}).then(function(content) {
+						saveAs(content, "brochures.zip");
+					});
+				}
 			}); 
 		});
 		
