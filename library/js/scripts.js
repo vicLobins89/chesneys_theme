@@ -119,7 +119,7 @@ jQuery(document).ready(function($) {
 		var brochures = zip.folder("brochures");
 		
 		for( var i = 0; i < files.length; i++ ) {
-			brochures.file(files[i], imgData, {base64: true});
+			brochures.file(names[i], files[i]);
 			//zip.add(files[i]);
 		}
 		
@@ -151,7 +151,7 @@ jQuery(document).ready(function($) {
 	
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '2607' === event.detail.contactFormId ) {
-			//create_zip(pdfName, pdfHref);
+			create_zip(pdfName, pdfHref);
 			downloadAll(pdfHref, pdfName);
 		}
 	}, false );
