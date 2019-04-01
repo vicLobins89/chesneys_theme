@@ -322,6 +322,8 @@ add_filter( 'woocommerce_available_payment_gateways', 'set_trade_gateways' );
 function woo_custom_order_button_text() {
 	if( !current_user_can('trade') ) {
 		return __( 'Proceed to payment', 'woocommerce' );
+	} elseif( !current_user_can('trade40') ) {
+		return __( 'Proceed to payment', 'woocommerce' );
 	} else {
 		return __( 'Place order', 'woocommerce' );
 	}
