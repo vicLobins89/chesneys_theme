@@ -146,9 +146,7 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		if( $shipping_name == 'Standard Delivery' ) {
 			send_api_call($api_data);
-		} elseif( $shipping_name == 'Deliver, Unpack &amp; Position' ) {
-			send_csv_mail($csv_data, "Product Order ");
-		} elseif( $shipping_name == 'Delivery Only' ) {
+		} else {
 			send_csv_mail($csv_data, "Product Order ");
 		}
 	}
@@ -222,7 +220,7 @@ function create_csv($records) {
     return $filepath;
 }
 
-function send_csv_mail($csv_data, $body, $to = 'vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, adam@chesneys.co.uk, stockists@chesneys.co.uk',  $from = 'Chesneys Order <no-reply@chesneys.co.uk>', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csv_data, $body, $to = 'vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, matt@rd-it.com, adam@chesneys.co.uk, stockists@chesneys.co.uk',  $from = 'Chesneys Order <no-reply@chesneys.co.uk>', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
 
