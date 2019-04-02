@@ -443,14 +443,17 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
-	&[class*="module-sign-up"],
-	&[class*="module-need-help"] {
+	&.module-sign-up-2,
+	&.module-sign-up,
+	&.module-need-help-2,
+	&.module-need-help {
 		padding-top: 5%;
 		padding-bottom: 5%;
 	}
 	
 	&.module-ctas,
-	&[class*="module-outdoor-ctas"] {
+	&.module-outdoor-ctas,
+	&.module-outdoor-ctas-2 {
 		p {
 			display: -webkit-box;
 			display: -ms-flexbox;

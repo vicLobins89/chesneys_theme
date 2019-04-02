@@ -1057,8 +1057,10 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
-	&[class*="module-sign-up"]
-	&[class*="module-need-help"] {
+	&.module-sign-up-2,
+	&.module-sign-up,
+	&.module-need-help-2,
+	&.module-need-help {
 		background: $dark-gray;
 		color: $white;
     	text-align: center;
@@ -1085,7 +1087,8 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
-	&[class*="module-sign-up"] {
+	&.module-sign-up-2,
+	&.module-sign-up {
 		background: $light-brown;
 		color: $text-color;
 		padding-bottom: 3rem;
@@ -1101,7 +1104,8 @@ LAYOUT & GRID STYLES
 	}
 	
 	&.module-ctas,
-	&[class*="module-outdoor-ctas"] {
+	&.module-outdoor-ctas,
+	&.module-outdoor-ctas-2 {
 		padding: 0 0 1rem 0;
 		font-size: .9rem;
 		
