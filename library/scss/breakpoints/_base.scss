@@ -24,7 +24,7 @@ body {
   	-moz-osx-font-smoothing: grayscale;
 	cursor: unset !important;
 	
-	&:not(.page-architecture):not(.page-professionals) {
+	&:not(.page-architecture):not(.page-professionals):not(.pum-trigger) {
 		.checkbox-596 {
 			display: none;
 		}
