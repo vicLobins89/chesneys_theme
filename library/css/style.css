@@ -1074,8 +1074,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: unset !important; }
-  body:not(.page-architecture):not(.page-professionals):not(.pum-trigger) .checkbox-596 {
-    display: none; }
 
 section, div {
   outline: none !important; }
