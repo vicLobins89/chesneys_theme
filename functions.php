@@ -476,11 +476,13 @@ add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_
 function my_custom_checkout_field_display_admin_order_meta($order){
 	$userid = $order->get_customer_id();
 	$user_data = get_userdata( $userid );
-	$username = $user_data->user_login;
+	if( !empty($user_data) ) {
+		$username = $user_data->user_login;
+	}
 	
     echo '<p><strong>'.__('Dealer code: ').':</strong> ' . get_post_meta( $order->get_id(), 'Dealer Code', true ) . '</p>';
 	
-	if( !empty($username) ) {
+	if( !empty($user_data) ) {
 		echo '<p><strong>'.__('Username: ').':</strong> ' . $username . '</p>';
 	}
 }
