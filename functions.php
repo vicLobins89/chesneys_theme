@@ -480,6 +480,8 @@ function my_custom_checkout_field_display_admin_order_meta($order){
 		$username = $user_data->user_login;
 	}
 	
+	global $post;
+	
     echo '<p><strong>'.__('Dealer code: ').':</strong> ' . get_post_meta( $order->get_id(), 'Dealer Code', true ) . '</p>';
 	
 	$customer_user = get_post_meta( $post->ID, '_customer_user', true );
