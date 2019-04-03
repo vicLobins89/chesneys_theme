@@ -329,7 +329,7 @@ function woo_custom_order_button_text() {
 add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text' );
 
 // Prices for trade
-add_filter('woocommerce_product_get_price', 'custom_price_trade', 10, 2);
+//add_filter('woocommerce_product_get_price', 'custom_price_trade', 10, 2);
 function custom_price_trade($price, $product) {
     if (!is_user_logged_in()) return $price;
 
