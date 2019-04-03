@@ -476,9 +476,13 @@ add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_
 function my_custom_checkout_field_display_admin_order_meta($order){
 	$userid = $order->get_customer_id();
 	$user_data = get_userdata( $userid );
+	$username = $user_data->user_login;
 	
     echo '<p><strong>'.__('Dealer code: ').':</strong> ' . get_post_meta( $order->get_id(), 'Dealer Code', true ) . '</p>';
-    echo '<p><strong>'.__('Username: ').':</strong> ' . $user_data->user_login . '</p>';
+	
+	if( !empty($username) ) {
+		echo '<p><strong>'.__('Username: ').':</strong> ' . $username . '</p>';
+	}
 }
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
 
