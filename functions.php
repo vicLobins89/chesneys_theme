@@ -336,7 +336,8 @@ function custom_price_trade($price, $product) {
     //check if the product is in a category you want, let say shirts
     if( 
 		has_term( 'stove-spares', 'product_cat', $product->get_id()) ||
-		has_term( 'stove-accessories', 'product_cat', $product->get_id())
+		has_term( 'stove-accessories', 'product_cat', $product->get_id()) ||
+		has_term( 'stone-care', 'product_cat', $product->get_id())
 	) {
         //check if the user has a role of dealer using a helper function, see bellow
         if (has_role_trade('trade')){
