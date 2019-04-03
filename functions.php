@@ -480,13 +480,7 @@ function my_custom_checkout_field_display_admin_order_meta($order){
 		$username = $user_data->user_login;
 	}
 	
-	global $post;
-	
     echo '<p><strong>'.__('Dealer code: ').':</strong> ' . get_post_meta( $order->get_id(), 'Dealer Code', true ) . '</p>';
-	
-	$customer_user = get_post_meta( $post->ID, '_customer_user', true );
-	echo '<p><strong style="display: block;">'.__('Customer Username').':</strong> <a href="user-edit.php?user_id=' . $customer_user . '">' . get_user_meta( $customer_user, 'user_login', true ) . '</a></p>';
-
 	
 	if( !empty($user_data) ) {
 		echo '<p><strong>'.__('Username: ').':</strong> ' . $username . '</p>';
