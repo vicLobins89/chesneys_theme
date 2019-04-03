@@ -375,7 +375,7 @@ function woo_custom_taxonomy_in_body_class( $classes ){
     }
     return $classes;
 }
-add_filter( 'body_class', 'woo_custom_taxonomy_in_body_class' );
+//add_filter( 'body_class', 'woo_custom_taxonomy_in_body_class' );
 
 // Display category image on category archive
 function woocommerce_category_image() {
