@@ -329,7 +329,7 @@ function woo_custom_order_button_text() {
 add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text' );
 
 // Prices for trade
-add_filter('woocommerce_get_price', 'custom_price_trade', 10, 2);
+//add_filter('woocommerce_get_price', 'custom_price_trade', 10, 2);
 function custom_price_trade($price, $product) {
     if (!is_user_logged_in()) return $price;
 
@@ -375,7 +375,7 @@ function woo_custom_taxonomy_in_body_class( $classes ){
     }
     return $classes;
 }
-//add_filter( 'body_class', 'woo_custom_taxonomy_in_body_class' );
+add_filter( 'body_class', 'woo_custom_taxonomy_in_body_class' );
 
 // Display category image on category archive
 function woocommerce_category_image() {
