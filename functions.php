@@ -334,12 +334,18 @@ function custom_price_trade($price, $product) {
     if (!is_user_logged_in()) return $price;
 
     //check if the product is in a category you want, let say shirts
-    if( has_term( 'stove-spares', 'product_cat', $product->get_id()) ) {
+    if( 
+		has_term( 'stove-spares', 'product_cat', $product->get_id()) ||
+		has_term( 'stove-accessories', 'product_cat', $product->get_id()) ||
+	) {
         //check if the user has a role of dealer using a helper function, see bellow
         if (has_role_trade('trade')){
-            //give user 10% of
             $price = $price * 0.65;
-        }
+        } elseif (has_role_trade('trade40')){
+			$price = $price * 0.60;
+		} else {
+			$price = $price;
+		}
     }
     return $price;
 }
