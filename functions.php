@@ -478,7 +478,7 @@ function my_custom_checkout_field_display_admin_order_meta($order){
 	$user_data = get_userdata( $userid );
 	
     echo '<p><strong>'.__('Dealer code: ').':</strong> ' . get_post_meta( $order->get_id(), 'Dealer Code', true ) . '</p>';
-    echo '<p><strong>'.__('Customer code: ').':</strong> ' . $user_data->user_login . '</p>';
+    echo '<p><strong>'.__('Username: ').':</strong> ' . $user_data->user_login . '</p>';
 }
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
 
