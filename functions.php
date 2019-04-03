@@ -328,6 +328,33 @@ function woo_custom_order_button_text() {
 }
 add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text' );
 
+// Prices for trade
+add_filter('woocommerce_get_price', 'custom_price_trade', 10, 2);
+function custom_price_trade($price, $product) {
+    if (!is_user_logged_in()) return $price;
+
+    //check if the product is in a category you want, let say shirts
+    if( has_term( 'stove-spares', 'product_cat' ,$product->ID) ) {
+        //check if the user has a role of dealer using a helper function, see bellow
+        if (has_role_trade('trade')){
+            //give user 10% of
+            $price = $price * 0.65;
+        }
+    }
+    return $price;
+}
+function has_role_trade($role = '',$user_id = null){
+    if ( is_numeric( $user_id ) )
+        $user = get_user_by( 'id',$user_id );
+    else
+        $user = wp_get_current_user();
+
+    if ( empty( $user ) )
+        return false;
+
+    return in_array( $role, (array) $user->roles );
+}
+
 // Parent class in body
 function woo_custom_taxonomy_in_body_class( $classes ){
     $custom_terms = get_the_terms(0, 'product_cat');
