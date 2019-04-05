@@ -3760,6 +3760,11 @@ FOOTER STYLES
 .geoip-country-US .price {
   display: none !important; }
 
+@media only screen and (max-width: 767px) {
+  .pum-container.custom-position {
+    top: auto !important; }
+    .pum-container.custom-position .popmake-content {
+      font-size: 1rem !important; } }
 /*********************
 LARGER MOBILE DEVICES
 *********************/

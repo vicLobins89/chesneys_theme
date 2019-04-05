@@ -3840,3 +3840,16 @@ FOOTER STYLES
 		display: none !important;
 	}
 }
+
+
+// popup
+
+@media only screen and (max-width: 767px) {
+	.pum-container.custom-position {
+		top: auto !important;
+
+		.popmake-content {
+			font-size: 1rem !important;
+		}
+	}
+}
