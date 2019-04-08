@@ -528,7 +528,6 @@ LAYOUT & GRID STYLES
 	}
 	
 	&.outdoor-product-single {
-		position: relative;
 		padding: 0 0 1rem;
 		
 		.col-12 {
@@ -537,6 +536,7 @@ LAYOUT & GRID STYLES
 			display: -ms-flex;
 			display: -o-flex;
 			display: flex;
+			position: relative;
 			
 			@media only screen and (max-width: 767px) {
 				padding: 0;

@@ -1402,14 +1402,14 @@ LAYOUT & GRID STYLES
       .row.spares-shop-loop ul.products[class*=columns-] li.product:nth-child(even) {
         margin-right: 0; } }
 .row.outdoor-product-single {
-  position: relative;
   padding: 0 0 1rem; }
   .row.outdoor-product-single .col-12 {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
-    display: flex; }
+    display: flex;
+    position: relative; }
     @media only screen and (max-width: 767px) {
       .row.outdoor-product-single .col-12 {
         padding: 0;
