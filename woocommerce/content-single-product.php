@@ -87,17 +87,18 @@ $cta_module = get_post(1409);
 $acfClass->render_modules($cta_module);
 
 // Product Details + Images
-if( have_rows('product_images') || !empty(get_the_content()) ) :
-
 echo '<section class="entry-content row cf product-info-wrapper"><div class="cf">';
-echo '<div class="col-6">';
 
-while( have_rows('product_images') ) : the_row();
-$image = get_sub_field('image');
-echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+if( have_rows('product_images') ) {
+	echo '<div class="col-6">';
 
-endwhile; 
-echo '</div>';
+	while( have_rows('product_images') ) : the_row();
+	$image = get_sub_field('image');
+	echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+	endwhile; 
+	
+	echo '</div>';
+}
 
 if( !empty(get_the_content()) ) {
 	echo '<div class="col-6"><div class="details-inner">';
@@ -106,10 +107,9 @@ if( !empty(get_the_content()) ) {
 	echo '</div>';
 }
 
-echo '</div></div>'; // close inner
-echo '</div></div></section>'; // close section
+echo '</div></div></div>'; // close inner
 
-endif; // close section
+echo '</div></section>'; // close section
 
 // Videos + extras
 if( have_rows('videos') || get_field('extra_content') ) : 
