@@ -2598,6 +2598,10 @@ POSTS & CONTENT STYLES
 		@extend .secondary-btn;
 	}
 	
+	.woocommerce-pagination {
+		margin: 1rem 0;
+	}
+	
 	.out-of-stock {
 		display: none !important;
 	}

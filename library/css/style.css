@@ -2919,6 +2919,8 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
+.woocommerce .woocommerce-pagination {
+  margin: 1rem 0; }
 .woocommerce .out-of-stock {
   display: none !important; }
 .woocommerce .woocommerce-info {
