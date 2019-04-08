@@ -2920,6 +2920,10 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
+.woocommerce span.onsale {
+  min-height: 2.236rem;
+  min-width: 3.236rem;
+  background-color: #4b858e; }
 .woocommerce .woocommerce-pagination {
   margin: 1rem 0; }
 .woocommerce .out-of-stock {

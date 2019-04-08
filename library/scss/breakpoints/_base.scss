@@ -2599,6 +2599,12 @@ POSTS & CONTENT STYLES
 		@extend .secondary-btn;
 	}
 	
+	span.onsale {
+		min-height: 2.236rem;
+    	min-width: 3.236rem;
+		background-color: $teal;
+	}
+	
 	.woocommerce-pagination {
 		margin: 1rem 0;
 	}
