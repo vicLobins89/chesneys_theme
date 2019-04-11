@@ -61,7 +61,7 @@ if ( woocommerce_product_loop() ) {
 	<section class="entry-content row cf shop-loop"><div class="cf">
 	<?php
 	if( is_product_category(16) ) {
-		do_action( 'woocommerce_sidebar' );
+		get_sidebar('filter');
 		echo '<div class="col-9">';
 	} else {
 		echo '<div class="col-12">';
