@@ -182,27 +182,27 @@ jQuery(document).ready(function($) {
 	});
 	
 	// Fix breadcrumb link
-	$('.menu-breadcrumb a:contains("Fireplaces")').each(function(){
+	$('.uk-site .menu-breadcrumb a:contains("Fireplaces")').each(function(){
 		var oldUrl = $(this).attr("href");
 		var newUrl = oldUrl.replace("/category/fireplaces", "/fireplaces");
 		$(this).attr("href", newUrl);
 	});
-	$('.menu-breadcrumb a:contains("Stoves")').each(function(){
+	$('.uk-site .menu-breadcrumb a:contains("Stoves")').each(function(){
 		var oldUrl = $(this).attr("href");
 		var newUrl = oldUrl.replace("/category/stoves", "/stoves");
 		$(this).attr("href", newUrl);
 	});
-	$('.menu-breadcrumb a:contains("Outdoor Living")').each(function(){
+	$('.uk-site .menu-breadcrumb a:contains("Outdoor Living")').each(function(){
 		var oldUrl = $(this).attr("href");
 		var newUrl = oldUrl.replace("/category/outdoor-living", "/outdoor");
 		$(this).attr("href", newUrl);
 	});
-	$('.menu-breadcrumb a:contains("Heat Range")').each(function(){
+	$('.uk-site .menu-breadcrumb a:contains("Heat Range")').each(function(){
 		var oldUrl = $(this).attr("href");
 		var newUrl = oldUrl.replace("/category/outdoor-living/heat-range", "/outdoor/shop");
 		$(this).attr("href", newUrl);
 	});
-	$('.menu-breadcrumb a:contains("Gourmet Range")').each(function(){
+	$('.uk-site .menu-breadcrumb a:contains("Gourmet Range")').each(function(){
 		var oldUrl = $(this).attr("href");
 		var newUrl = oldUrl.replace("/category/outdoor-living/gourmet-range", "/outdoor/shop");
 		$(this).attr("href", newUrl);
