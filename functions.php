@@ -3,15 +3,14 @@
 require_once( 'library/rarehoney.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
- require_once( 'library/admin.php' );
+require_once( 'library/admin.php' );
 
 /*********************
 LAUNCH
 *********************/
+$blog_id = get_current_blog_id();
 
 function rarehoney_init() {
-	$blog_id = get_current_blog_id();
-	
 	//Allow editor style.
 	add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
 
@@ -283,14 +282,12 @@ function mytheme_add_woocommerce_support() {
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 // US Restrict
-if (function_exists('geoip_detect2_get_info_from_current_ip')) {
-	$userInfo = geoip_detect2_get_info_from_current_ip();
-	if ($userInfo->country->isoCode == 'US') {
-		remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
-		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
-		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
-		remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
-	}
+$userInfo = geoip_detect2_get_info_from_current_ip();
+if ($userInfo->country->isoCode == 'US') {
+	remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+	remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
 }
 
 //STORE LOCATOR
