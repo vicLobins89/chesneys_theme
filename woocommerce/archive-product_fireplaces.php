@@ -58,8 +58,14 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
 	?>
-	<section class="entry-content row cf shop-loop"><div class="cf"><div class="col-12">
+	<section class="entry-content row cf shop-loop"><div class="cf">
 	<?php
+	if( is_product_category(16) ) {
+		do_action( 'woocommerce_sidebar' );
+		echo '<div class="col-9">';
+	} else {
+		echo '<div class="col-12">';
+	}
 	
 	do_action( 'woocommerce_before_shop_loop' );
 
