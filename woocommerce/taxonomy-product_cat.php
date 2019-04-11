@@ -21,17 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $term = get_queried_object();
 
-if( 
-	term_is_ancestor_of(16, $term->term_id, 'product_cat') ||
-	is_product_category(16) ||
-	term_is_ancestor_of(56, $term->term_id, 'product_cat') ||
-	is_product_category(56) ||
-	term_is_ancestor_of(713, $term->term_id, 'product_cat') ||
-	is_product_category(713)
-) {
-	// Frireplaces & Stoves
-	wc_get_template( 'archive-product_fireplaces.php' );
-} elseif( term_is_ancestor_of(67, $term->term_id, 'product_cat') || is_product_category(67) || term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) {
+if( term_is_ancestor_of(67, $term->term_id, 'product_cat') || is_product_category(67) || term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) {
 	// Spares & Fuel / Acc
 	wc_get_template( 'archive-product_spares.php' );
 } else {

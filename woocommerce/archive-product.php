@@ -21,6 +21,13 @@ get_header( 'shop' );
 require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
 $term = get_queried_object();
+$blog_id = get_current_blog_id();
+
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 20);
+remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
+//remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
+//remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
 
 /**
  * Hook: woocommerce_before_main_content.
@@ -32,7 +39,7 @@ $term = get_queried_object();
 do_action( 'woocommerce_before_main_content' );
 
 ?>
-<header class="row entry-content cf woocommerce-products-header">
+<header class="row entry-content cf woocommerce-products-header featured top">
 	<div class="cf">
 		<?php
 		do_action( 'woocommerce_archive_description' );
@@ -52,8 +59,14 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
 	?>
-	<section class="entry-content row cf shop-loop"><div class="cf"><div class="col-12">
+	<section class="entry-content row cf shop-loop"><div class="cf">
 	<?php
+	if( $blog_id == 5 && (term_is_ancestor_of(67, $term->term_id, 'product_cat') || is_product_category(67)) ) {
+		get_sidebar('filter');
+		echo '<div class="col-9">';
+	} else {
+		echo '<div class="col-12">';
+	}
 	
 	do_action( 'woocommerce_before_shop_loop' );
 
@@ -77,6 +90,19 @@ if ( woocommerce_product_loop() ) {
 	woocommerce_product_loop_end();
 	?>
 	</div></div></section>
+
+	<?php
+	if( isset($term->term_id) && term_is_ancestor_of(16, $term->term_id, 'product_cat') ) {
+		echo '<div class="overlay"><a href="#" class="close-overlay">Close</a>';
+		echo do_shortcode('[contact-form-7 id="4091" title="Request a callback"]');
+		echo '</div>';
+	} elseif( isset($term->term_id) && term_is_ancestor_of(56, $term->term_id, 'product_cat') ) {
+		echo '<div class="overlay"><a href="#" class="close-overlay">Close</a>';
+		echo do_shortcode('[contact-form-7 id="4091" title="Request a callback"]');
+		echo '</div>';
+	}
+	?>
+
 	<?php
 	/**
 	 * Hook: woocommerce_after_shop_loop.
@@ -110,6 +136,23 @@ if ( woocommerce_product_loop() ) {
 				}
 			}
 		}
+	}
+	
+	// Related products
+	if( get_term_meta($term->term_id, 'display_type', true) == 'products' ||  get_term_meta($term->term_id, 'display_type', true) == null) {
+		$parent_cats = get_ancestors($term->term_id, 'product_cat');
+		
+		if( !empty($parent_cats) ) {
+			$category = get_term_by('id', $parent_cats[0], 'product_cat');
+			$cat_name = $category->slug;
+		} else {
+			$cat_name = 'fireplaces';
+		}
+		
+		echo '<section class="row entry-content cf related-products"><div class="cf"><div class="col-12">';
+		echo '<h2>You might also like</h2>';
+		echo do_shortcode('[products orderby="rand" category="'.$cat_name.'" limit="3" columns="3" class="related-products"]');
+		echo '</section></div></div>';
 	}
 } else {
 	/**
