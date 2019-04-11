@@ -2923,6 +2923,8 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
+.woocommerce .woocommerce-variation-add-to-cart {
+  display: none !important; }
 .woocommerce span.onsale {
   min-height: 2.236rem;
   min-width: 3.236rem;

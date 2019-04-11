@@ -2606,6 +2606,10 @@ POSTS & CONTENT STYLES
 		@extend .secondary-btn;
 	}
 	
+	.woocommerce-variation-add-to-cart {
+		display: none !important;
+	}
+	
 	span.onsale {
 		min-height: 2.236rem;
     	min-width: 3.236rem;
