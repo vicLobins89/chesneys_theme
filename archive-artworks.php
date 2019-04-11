@@ -24,7 +24,8 @@ $acfClass = new CustomACF();
 							if( isset($categories) ) {
 								echo '<div class="cat-list">';
 								foreach($categories as $category) {
-								   echo '<a href="' . get_term_link($category->term_id) . '">' . $category->name . '</a>';
+									print_r($category);
+									echo '<a href="' . get_term_link($category->term_id) . '">' . $category->name . '</a>';
 								}
 								echo '</div>';
 							}
@@ -35,7 +36,7 @@ $acfClass = new CustomACF();
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf col-4' ); ?> role="article">
-								123
+								
 								<a class="thumb" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('folio-thumb'); ?></a>
 
 								<?php printf( '<h3 class="flair lhs sans">' . __('', 'bonestheme' ) . '%1$s</h3>' , get_the_term_list($post->ID, 'artists', '', ', ', '') ); ?>
