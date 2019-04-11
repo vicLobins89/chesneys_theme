@@ -25,6 +25,7 @@ $acfClass = new CustomACF();
 									echo '<a href="' . get_term_link($category->term_id) . '">' . $category->name . '</a>';
 									
 									$image = get_field('photo', $category->term_id);
+									print_r($category);
 									print_r($image);
 								}
 								echo '</div>';
