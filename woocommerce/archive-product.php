@@ -61,7 +61,7 @@ if ( woocommerce_product_loop() ) {
 	?>
 	<section class="entry-content row cf shop-loop"><div class="cf">
 	<?php
-	if( $blog_id == 5 && (term_is_ancestor_of(67, $term->term_id, 'product_cat') || is_product_category(67)) ) {
+	if( $blog_id == 5 && (term_is_ancestor_of(16, $term->term_id, 'product_cat') || is_product_category(16)) ) {
 		get_sidebar('filter');
 		echo '<div class="col-9">';
 	} else {
