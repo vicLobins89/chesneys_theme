@@ -502,6 +502,13 @@ LAYOUT & GRID STYLES
 		}
 	}
 	
+	&.woocommerce-products-header {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	
 	&.shop-loop {
 		padding-bottom: 0;
 	}

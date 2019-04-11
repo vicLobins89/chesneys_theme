@@ -1387,6 +1387,9 @@ LAYOUT & GRID STYLES
   .row.post-content .post img {
     width: 100%;
     height: auto; }
+.row.woocommerce-products-header img {
+  width: 100%;
+  height: auto; }
 .row.shop-loop {
   padding-bottom: 0; }
 .row.stove-spares-header {
