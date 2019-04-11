@@ -112,10 +112,11 @@ if( !empty(get_the_content()) ) {
 		echo '<div class="col-12"><div class="details-inner">';
 	}
 	echo '<div class="product-details">';
-	if( $blog_id == 5 ) {
+	if( $blog_id == 5 && $product->is_type( 'variable' ) ) {
 		woocommerce_template_single_add_to_cart();
+	} else {
+		wc_get_template( 'single-product/tabs/description.php' );
 	}
-	wc_get_template( 'single-product/tabs/description.php' );
 	echo '</div>';
 }
 
