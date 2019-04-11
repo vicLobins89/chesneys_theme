@@ -493,6 +493,13 @@ add_filter( 'get_the_excerpt', 'winwar_first_sentence', 10, 1 );
 // Sorting
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 
+// Tags
+function my_woocommerce_taxonomy_args_product_tag( $array ) {
+    $array['hierarchical'] = true;
+    return $array;
+};
+add_filter( 'woocommerce_taxonomy_args_product_tag', 'my_woocommerce_taxonomy_args_product_tag', 10, 1 );
+
 // Adding dealer field
 function my_custom_checkout_field( $checkout ) {
     echo '<div id="dealer-code"><h3 class="h2 lhs no-after">' . __('Dealer code') . '</h3>';
