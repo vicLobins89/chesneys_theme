@@ -37,11 +37,12 @@
 		wp_head();
 		$options = get_option('rh_settings');
 		$blog_id = get_current_blog_id();
+		$blog_class = ( $blog_id == 1 ) ? 'uk-site' : 'us-site';
 		?>
 
 	</head>
 
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<body <?php body_class($blog_class); ?> itemscope itemtype="http://schema.org/WebPage">
 		
 		<?php
 		// GTM
