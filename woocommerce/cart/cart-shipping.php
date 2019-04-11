@@ -46,13 +46,15 @@ $calculator_text          = '';
 			<?php if ( is_cart() ) : ?>
 				<p class="woocommerce-shipping-destination">
 					<?php
-					if ( $formatted_destination ) {
+					echo esc_html__( 'Delivery is between Monday and Friday. Deliveries outside of these times can be arranged but will incur additional cost.', 'woocommerce' );
+					
+					/*if ( $formatted_destination ) {
 						// Translators: $s shipping destination.
 						printf( esc_html__( 'Estimate for %s.', 'woocommerce' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' );
 						$calculator_text = __( 'Change address', 'woocommerce' );
 					} else {
 						echo esc_html__( 'This is only an estimate. Prices will be updated during checkout.', 'woocommerce' );
-					}
+					}*/
 					?>
 				</p>
 			<?php endif; ?>
