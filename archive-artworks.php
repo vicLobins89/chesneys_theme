@@ -2,6 +2,7 @@
 get_header();
 require_once('classes/acf.php');
 $acfClass = new CustomACF();
+$term = get_queried_object();
 ?>
 
 			<div id="content">
@@ -15,7 +16,31 @@ $acfClass = new CustomACF();
 								yoast_breadcrumb( '<p class="menu-breadcrumb">','</p>' );
 							}
 							
-							get_sidebar('folio_header');
+							$rows = get_field('rows', $term);
+							if($rows) {
+								foreach($rows as $row) {
+									$modules = $row['module'];
+									$blog_feeds = $row['blog_feed'];
+									$portfolio_feeds = $row['portfolio_feed'];
+									if( isset($modules) ) {
+										foreach($modules as $module) {
+											$acfClass->render_modules($module['module_block']);
+										}
+									}
+
+									if( is_array($blog_feeds) || is_object($blog_feeds) ) {
+										foreach($blog_feeds as $blog_feed ) {
+											$acfClass->render_blog($blog_feed);
+										}
+									}
+
+									if( is_array($portfolio_feeds) || is_object($portfolio_feeds) ) {
+										foreach($portfolio_feeds as $portfolio_feed) {
+											$acfClass->render_portfolio($portfolio_feed);
+										}
+									}
+								}
+							}
 							
 							$categories = get_terms( array(
 								'taxonomy' => 'artists',
@@ -24,7 +49,6 @@ $acfClass = new CustomACF();
 							if( isset($categories) ) {
 								echo '<div class="cat-list">';
 								foreach($categories as $category) {
-									print_r($category);
 									echo '<a href="' . get_term_link($category->term_id) . '">' . $category->name . '</a>';
 								}
 								echo '</div>';
