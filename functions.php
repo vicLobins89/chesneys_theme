@@ -22,7 +22,7 @@ function rarehoney_init() {
 	//require_once( 'library/custom-post-type.php' );
 	require_once( 'library/blocks-post-type.php' );
 	require_once( 'library/portfolio-post-type.php' );
-	if ( $blog_id == 4 ) {
+	if ( $blog_id == 5 ) {
 		require_once( 'library/artwork-post-type.php' );
 	}
 

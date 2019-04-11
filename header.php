@@ -33,8 +33,11 @@
 		
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 		
-		<?php wp_head(); ?>
-		<?php $options = get_option('rh_settings'); ?>
+		<?php
+		wp_head();
+		$options = get_option('rh_settings');
+		$blog_id = get_current_blog_id();
+		?>
 
 	</head>
 
@@ -61,13 +64,15 @@
 					'menu_class' => 'nav socket-nav cf',
 					'theme_location' => 'socket-nav'
 				));
-				echo '<div class="rhs-links">';
-				echo '<a href="'.wc_get_cart_url().'" class="menu-item basket" title="View your shopping cart">';
-				if( WC()->cart->get_cart_contents_count() !== 0 ) {
-					echo '<span>'.sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ).'</span>';
+				if ( $blog_id == 1 ) {
+					echo '<div class="rhs-links">';
+					echo '<a href="'.wc_get_cart_url().'" class="menu-item basket" title="View your shopping cart">';
+					if( WC()->cart->get_cart_contents_count() !== 0 ) {
+						echo '<span>'.sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ).'</span>';
+					}
+					echo 'Basket</a>';
+					echo '</div>';
 				}
-				echo 'Basket</a>';
-				echo '</div>';
 				?>
 				</nav>
 
