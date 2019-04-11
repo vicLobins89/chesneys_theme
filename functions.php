@@ -431,8 +431,10 @@ add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 
 // Inc. Vat on prices
 function bbloomer_price_translatable_suffix( $html, $product ){
-	if ( has_term( 'outdoor-living', 'product_cat' ) || has_term( 'heat-accessories', 'product_cat' ) || has_term( 'fuel', 'product_cat' )  ) {
-	   $html .= ' ' . __( 'inc. VAT', 'bbloomer' );
+	if ( has_term( 'antique', 'product_cat' )  ) {
+	 	$html .= ' ' . __( 'ex. VAT', 'bbloomer' );
+	} else {
+		$html .= ' ' . __( 'inc. VAT', 'bbloomer' );
 	}
 	
     return $html;
