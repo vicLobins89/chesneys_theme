@@ -140,6 +140,16 @@ function bones_register_sidebars() {
 	));
 	
 	register_sidebar(array(
+		'id' => 'filter',
+		'name' => __( 'Filter', 'bonestheme' ),
+		'description' => __( 'Filter.', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	
+	register_sidebar(array(
 		'id' => 'nav_widget',
 		'name' => __( 'Nav Widget', 'bonestheme' ),
 		'description' => __( 'The widget area in the navigation.', 'bonestheme' ),
