@@ -2,7 +2,6 @@
 get_header();
 require_once('classes/acf.php');
 $acfClass = new CustomACF();
-$term = get_queried_object();
 ?>
 
 			<div id="content">
@@ -16,32 +15,6 @@ $term = get_queried_object();
 								yoast_breadcrumb( '<p class="menu-breadcrumb">','</p>' );
 							}
 							
-							$rows = get_field('rows', $term);
-							if($rows) {
-								foreach($rows as $row) {
-									$modules = $row['module'];
-									$blog_feeds = $row['blog_feed'];
-									$portfolio_feeds = $row['portfolio_feed'];
-									if( isset($modules) ) {
-										foreach($modules as $module) {
-											$acfClass->render_modules($module['module_block']);
-										}
-									}
-
-									if( is_array($blog_feeds) || is_object($blog_feeds) ) {
-										foreach($blog_feeds as $blog_feed ) {
-											$acfClass->render_blog($blog_feed);
-										}
-									}
-
-									if( is_array($portfolio_feeds) || is_object($portfolio_feeds) ) {
-										foreach($portfolio_feeds as $portfolio_feed) {
-											$acfClass->render_portfolio($portfolio_feed);
-										}
-									}
-								}
-							}
-							
 							$categories = get_terms( array(
 								'taxonomy' => 'artists',
 								'hide_empty' => true,
@@ -53,6 +26,10 @@ $term = get_queried_object();
 								}
 								echo '</div>';
 							}
+							
+							$rows = get_field('photo', $category->term_id);
+							print_r($category);
+							print_r($rows);
 							?>
 							
 							<section class="entry-content row post-content cf"><div class="cf"><div class="col-12">
