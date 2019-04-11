@@ -18,7 +18,7 @@ $acfClass = new CustomACF();
 							get_sidebar('folio_header');
 							
 							$categories = get_terms( array(
-								'taxonomy' => 'portfolio_cat',
+								'taxonomy' => 'artists',
 								'hide_empty' => true,
 							) );
 							if( isset($categories) ) {
@@ -38,7 +38,7 @@ $acfClass = new CustomACF();
 								asd
 								<a class="thumb" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('folio-thumb'); ?></a>
 
-								<?php printf( '<h3 class="flair lhs sans">' . __('', 'bonestheme' ) . '%1$s</h3>' , get_the_term_list($post->ID, 'portfolio_cat', '', ', ', '') ); ?>
+								<?php printf( '<h3 class="flair lhs sans">' . __('', 'bonestheme' ) . '%1$s</h3>' , get_the_term_list($post->ID, 'artists', '', ', ', '') ); ?>
 
 								<a class="copy-l" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 								
