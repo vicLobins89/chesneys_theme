@@ -545,7 +545,9 @@ function wc_modify_product_post_type( $args ) {
 }
 
 
-add_filter( 'woocommerce_hide_invisible_variations', '__return_false' );
-add_filter( 'woocommerce_show_variation_price', '__return_true' );
+function ssp_always_show_variation_prices($show, $parent, $variation) {
+	return true;
+}
+add_filter( 'woocommerce_show_variation_price', 'ssp_always_show_variation_prices', 99, 3);
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
