@@ -546,5 +546,6 @@ function wc_modify_product_post_type( $args ) {
 
 
 add_filter( 'woocommerce_hide_invisible_variations', '__return_false' );
+add_filter( 'woocommerce_show_variation_price', '__return_true' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
