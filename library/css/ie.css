@@ -587,6 +587,14 @@ LAYOUT & GRID STYLES
 .gallery.gallery-columns-4 .gallery-item {
   width: 25%; }
 
+.woocommerce ul.products.columns-3 li.product,
+.woocommerce-page ul.products.columns-3 li.product {
+  width: 30.75%; }
+
+.woocommerce-page.columns-3 ul.products li.product,
+.woocommerce.columns-3 ul.products li.product {
+  width: 30.75%; }
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
