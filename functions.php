@@ -544,10 +544,17 @@ function wc_modify_product_post_type( $args ) {
      return $args;
 }
 
+function iconic_variation_is_visible( $bool, $variation_id, $product_id, $variation ) {
 
-function ssp_always_show_variation_prices($show, $parent, $variation) {
-	return true;
+    if( empty( $variation->get_price() ) ) {
+		return true;
+	}
+
+    return $bool;
+
 }
-add_filter( 'woocommerce_show_variation_price', 'ssp_always_show_variation_prices', 99, 3);
+add_filter( 'woocommerce_variation_is_visible', 'iconic_variation_is_visible', 10, 4 );
+add_filter( 'woocommerce_hide_invisible_variations', '__return_false' );
+add_filter( 'woocommerce_show_variation_price', '__return_true' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
