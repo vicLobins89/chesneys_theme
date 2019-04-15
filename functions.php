@@ -544,6 +544,8 @@ function wc_modify_product_post_type( $args ) {
      return $args;
 }
 
+
+// Show variation
 function iconic_variation_is_visible( $bool, $variation_id, $product_id, $variation ) {
 
     if( empty( $variation->get_price() ) ) {
@@ -554,7 +556,5 @@ function iconic_variation_is_visible( $bool, $variation_id, $product_id, $variat
 
 }
 add_filter( 'woocommerce_variation_is_visible', 'iconic_variation_is_visible', 10, 4 );
-add_filter( 'woocommerce_hide_invisible_variations', '__return_false' );
-add_filter( 'woocommerce_show_variation_price', '__return_true' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
