@@ -10,10 +10,10 @@ Stylesheet: Typography
 FONTFACE
 *********************/
 
-@import "../fonts/Univers/stylesheet.css";
-@import "../fonts/Baskerville/stylesheet.css";
+@import "/wp-content/themes/chesneys_theme/library/fonts/Univers/stylesheet.css";
+@import "/wp-content/themes/chesneys_theme/library/fonts/Baskerville/stylesheet.css";
 
 // font stacks
 $sans-serif:        'Univers', Helvetica, Arial, sans-serif;
 $serif:             'Baskerville', Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
-$condensed:				'Univers Cond', $sans-serif;
+$condensed:			'Univers Cond', $sans-serif;
