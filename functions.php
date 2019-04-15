@@ -544,4 +544,7 @@ function wc_modify_product_post_type( $args ) {
      return $args;
 }
 
+
+add_filter( 'woocommerce_hide_invisible_variations', '__return_true' );
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
