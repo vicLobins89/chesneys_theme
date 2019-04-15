@@ -625,6 +625,21 @@ LAYOUT & GRID STYLES
 			height: 100%;
 			background: $light-brown;
 			padding: 2rem;
+			
+			.variations {
+				display: inline-block;
+				
+				td {
+					display: block;
+					width: 300px;
+					padding: 0;
+					
+					&.label {
+						width: 90px;
+						padding: 5px;
+					}
+				}
+			}
 		}
 		
 		.delivery-info {
