@@ -19,7 +19,6 @@ defined( 'ABSPATH' ) || exit;
 global $product;
 require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
-$blog_id = get_current_blog_id();
 
 // Removing image link
 function wc_remove_link_on_thumbnails( $html ) {
@@ -67,7 +66,7 @@ if ( post_password_required() ) {
 		 */
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-		if( $blog_id == 5 && $product->is_type( 'variable' ) ) {
+		if( $product->is_type( 'variable' ) ) {
 			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 		}
 		add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
@@ -115,7 +114,7 @@ if( !empty(get_the_content()) ) {
 		echo '<div class="col-12"><div class="details-inner">';
 	}
 	echo '<div class="product-details">';
-	if( $blog_id == 5 && $product->is_type( 'variable' ) ) {
+	if( $product->is_type( 'variable' ) ) {
 		woocommerce_template_single_add_to_cart();
 	} else {
 		wc_get_template( 'single-product/tabs/description.php' );
