@@ -36,8 +36,8 @@ Stylesheet: Typography
 /*********************
 FONTFACE
 *********************/
-@import url(../fonts/Univers/stylesheet.css);
-@import url(../fonts/Baskerville/stylesheet.css);
+@import url(/wp-content/themes/chesneys_theme/library/fonts/Univers/stylesheet.css);
+@import url(/wp-content/themes/chesneys_theme/library/fonts/Baskerville/stylesheet.css);
 /******************************************************************
 Site Name: Honey
 Author: Vic Lobins
