@@ -86,6 +86,7 @@ if ( woocommerce_product_loop() ) {
 	}
 
 	woocommerce_product_loop_end();
+	woocommerce_pagination();
 	?>
 	</div></div></section>
 
@@ -107,7 +108,7 @@ if ( woocommerce_product_loop() ) {
 	 *
 	 * @hooked woocommerce_pagination - 10
 	 */
-	do_action( 'woocommerce_after_shop_loop' );
+	//do_action( 'woocommerce_after_shop_loop' );
 	
 	// Modules
 	$rows = get_field('rows', $term);
