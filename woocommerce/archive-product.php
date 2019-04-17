@@ -21,7 +21,7 @@ get_header( 'shop' );
 require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
 $term = get_queried_object();
-$term_id = ($term->term_id !== '' ? $term->term_id : 0);
+$term_id =  (!empty($term->term_id) ? $term->term_id : 0);
 $blog_id = get_current_blog_id();
 
 remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
