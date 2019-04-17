@@ -60,13 +60,7 @@ if ( woocommerce_product_loop() ) {
 	?>
 	<section class="entry-content row cf shop-loop"><div class="cf">
 	<?php
-	if( $blog_id == 5 && ( term_is_ancestor_of(16, $term_id, 'product_cat') || is_product_category(16) ) ) {
-		get_sidebar('filter');
-		echo '<div class="col-9">';
-	} elseif( $blog_id == 5 && ( term_is_ancestor_of(68, $term_id, 'product_cat') || is_product_category(68) ) ) {
-		get_sidebar('filter');
-		echo '<div class="col-9">';
-	} elseif( $blog_id == 5 ) {
+	if( $blog_id == 5 && ( !term_is_ancestor_of(713, $term_id, 'product_cat') || !is_product_category(713) ) ) {
 		get_sidebar('filter');
 		echo '<div class="col-9">';
 	} else {
