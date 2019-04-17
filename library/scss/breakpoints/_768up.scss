@@ -240,6 +240,9 @@ NAVIGATION STYLES
 			li {
 				padding: 1rem 1.5rem;
 				width: 100%;
+				@at-root .us-site#{&} {
+					padding: 1rem 2.5rem;
+				}
 				
 				&.menu-item-has-children {
 					> a:after {
