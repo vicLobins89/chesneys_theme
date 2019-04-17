@@ -81,7 +81,7 @@ body:not(.is-mobile) {
 /*********************
 NAVIGATION STYLES
 *********************/
-body:not(.is-mobile) {
+.wordpress:not(.is-mobile) {
 .menu-button {
 	display: none;
 }
@@ -148,7 +148,7 @@ body:not(.is-mobile) {
 	> li {
 		border: none;
 		padding: 1rem 1.5rem 1.5rem;
-		@at-root .us-site.#{&} & {
+		@at-root .us-site#{&} & {
 			padding: 1rem 2.5rem 1.5rem;
 		}
 		
@@ -210,7 +210,7 @@ body:not(.is-mobile) {
 			&:before {
 				left: -299%;
 				width: 300%;
-				.us-site & {
+				@at-root .us-site#{&} & {
 					left: -399%;
     				width: 400%;
 				}
@@ -233,7 +233,7 @@ body:not(.is-mobile) {
 			text-align: left;
 			max-height: none;
 			padding: 1rem 0;
-			.us-site & {
+			@at-root .us-site#{&} & {
 				height: 17rem;
 			}
 

@@ -42,7 +42,7 @@
 
 	</head>
 
-	<body <?php body_class($blog_class); ?> itemscope itemtype="http://schema.org/WebPage">
+	<body <?php body_class('wordpress '.$blog_class); ?> itemscope itemtype="http://schema.org/WebPage">
 		
 		<?php
 		// GTM
