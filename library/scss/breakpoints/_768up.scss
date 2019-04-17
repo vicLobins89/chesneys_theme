@@ -413,6 +413,24 @@ POSTS & CONTENT STYLES
 	&.top {
 		padding-top: 0;
 		padding-bottom: 0;
+		
+		.us-site & {
+			> .cf {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				@include prefix(flex-direction, column, webkit moz ms);
+				
+				.featured-copy {
+					position: relative;
+					width: 100%;
+					left: auto;
+					top: auto;
+				}
+			}
+		}
 	}
 	
 	> div {
