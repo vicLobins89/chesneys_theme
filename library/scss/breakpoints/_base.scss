@@ -2617,6 +2617,8 @@ POSTS & CONTENT STYLES
 .us-site {
 	&.term-accessories .woof_container_product_tag,
 	&.product_parent_cat_accessories .woof_container_product_tag {
+	&.term-mantels .woof_container_product_cat,
+	&.product_parent_cat_mantels .woof_container_product_cat {
 		display: none;
 	}
 }
