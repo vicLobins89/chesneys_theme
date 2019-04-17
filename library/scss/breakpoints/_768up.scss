@@ -148,7 +148,7 @@ body:not(.is-mobile) {
 	> li {
 		border: none;
 		padding: 1rem 1.5rem 1.5rem;
-		&#{&}.us-site & {
+		&#{&}.us-site {
 			padding: 1rem 2.5rem 1.5rem;
 		}
 		
