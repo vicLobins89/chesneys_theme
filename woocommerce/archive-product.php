@@ -21,6 +21,7 @@ get_header( 'shop' );
 require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
 $term = get_queried_object();
+$term_id = ($term->term_id !== '' ? $term->term_id : 0);
 $blog_id = get_current_blog_id();
 
 remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
@@ -59,10 +60,10 @@ if ( woocommerce_product_loop() ) {
 	?>
 	<section class="entry-content row cf shop-loop"><div class="cf">
 	<?php
-	if( $blog_id == 5 && ( term_is_ancestor_of(16, $term->term_id, 'product_cat') || is_product_category(16) ) ) {
+	if( $blog_id == 5 && ( term_is_ancestor_of(16, $term_id, 'product_cat') || is_product_category(16) ) ) {
 		get_sidebar('filter');
 		echo '<div class="col-9">';
-	} elseif( $blog_id == 5 && ( term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) ) {
+	} elseif( $blog_id == 5 && ( term_is_ancestor_of(68, $term_id, 'product_cat') || is_product_category(68) ) ) {
 		get_sidebar('sidebar1');
 		echo '<div class="col-9">';
 	} elseif( $blog_id == 5 ) {
