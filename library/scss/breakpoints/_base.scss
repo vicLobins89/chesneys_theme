@@ -2614,6 +2614,13 @@ POSTS & CONTENT STYLES
 }
 
 // start woo //
+#woof_results_by_ajax {
+	.price,
+	.add_to_cart_button {
+		display: none;
+	}
+}
+
 .woocommerce {
 	button.single_add_to_cart_button,
 	button.woocommerce-Button,
