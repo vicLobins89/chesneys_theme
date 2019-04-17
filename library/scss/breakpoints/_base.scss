@@ -2616,7 +2616,8 @@ POSTS & CONTENT STYLES
 // start woo //
 #woof_results_by_ajax {
 	.price,
-	.add_to_cart_button {
+	.add_to_cart_button,
+	.button.product_type_simple {
 		display: none;
 	}
 }
