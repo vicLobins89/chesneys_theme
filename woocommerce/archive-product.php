@@ -145,8 +145,8 @@ if ( woocommerce_product_loop() ) {
 	}
 	
 	// Related products
-	if( get_term_meta($term->term_id, 'display_type', true) == 'products' ||  get_term_meta($term->term_id, 'display_type', true) == null) {
-		$parent_cats = get_ancestors($term->term_id, 'product_cat');
+	if( get_term_meta($term_id, 'display_type', true) == 'products' ||  get_term_meta($term_id, 'display_type', true) == null) {
+		$parent_cats = get_ancestors($term_id, 'product_cat');
 		
 		if( !empty($parent_cats) ) {
 			$category = get_term_by('id', $parent_cats[0], 'product_cat');
