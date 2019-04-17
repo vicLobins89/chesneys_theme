@@ -2614,8 +2614,11 @@ POSTS & CONTENT STYLES
 }
 
 // start woo //
-.us-site.term-accessories .woof_container_product_tag {
-	display: none;
+.us-site {
+	&.term-accessories .woof_container_product_tag,
+	&.product_parent_cat_accessories .woof_container_product_tag {
+		display: none;
+	}
 }
 
 #woof_results_by_ajax {
