@@ -2625,7 +2625,8 @@ POSTS & CONTENT STYLES
 .woocommerce {
 	button.single_add_to_cart_button,
 	button.woocommerce-Button,
-	button[type=submit].woocommerce-Button {
+	button[type=submit].woocommerce-Button,
+	.button.woof_reset_search_form {
 		@extend .secondary-btn;
 	}
 	
