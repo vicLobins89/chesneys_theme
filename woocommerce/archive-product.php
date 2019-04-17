@@ -98,11 +98,11 @@ if ( woocommerce_product_loop() ) {
 	</div></div></section>
 
 	<?php
-	if( isset($term->term_id) && term_is_ancestor_of(16, $term->term_id, 'product_cat') ) {
+	if( isset($term->term_id) && term_is_ancestor_of(16, $term_id, 'product_cat') ) {
 		echo '<div class="overlay"><a href="#" class="close-overlay">Close</a>';
 		echo do_shortcode('[contact-form-7 id="4091" title="Request a callback"]');
 		echo '</div>';
-	} elseif( isset($term->term_id) && term_is_ancestor_of(56, $term->term_id, 'product_cat') ) {
+	} elseif( isset($term->term_id) && term_is_ancestor_of(56, $term_id, 'product_cat') ) {
 		echo '<div class="overlay"><a href="#" class="close-overlay">Close</a>';
 		echo do_shortcode('[contact-form-7 id="4091" title="Request a callback"]');
 		echo '</div>';
