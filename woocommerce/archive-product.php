@@ -65,6 +65,9 @@ if ( woocommerce_product_loop() ) {
 	} elseif( $blog_id == 5 && ( term_is_ancestor_of(68, $term->term_id, 'product_cat') || is_product_category(68) ) ) {
 		get_sidebar('sidebar1');
 		echo '<div class="col-9">';
+	} elseif( $blog_id == 5 ) {
+		get_sidebar('filter');
+		echo '<div class="col-9">';
 	} else {
 		echo '<div class="col-12">';
 	}
