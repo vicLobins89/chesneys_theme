@@ -414,7 +414,7 @@ POSTS & CONTENT STYLES
 		padding-top: 0;
 		padding-bottom: 0;
 		
-		.us-site & {
+		.us-site.archive & {
 			> .cf {
 				display: -webkit-flex;
 				display: -moz-flex;
@@ -428,6 +428,11 @@ POSTS & CONTENT STYLES
 					width: 100%;
 					left: auto;
 					top: auto;
+					order: 1;
+				}
+				
+				img {
+					order: 2;
 				}
 			}
 		}
