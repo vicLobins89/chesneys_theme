@@ -3836,6 +3836,12 @@ SIDEBARS & ASIDES
     z-index: 999;
     color: $white;
     text-align: center;
+	
+	.secondary-btn {
+		&:hover {
+			background: $white;
+		}
+	}
 }
 
 /*********************
