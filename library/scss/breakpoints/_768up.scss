@@ -630,26 +630,6 @@ LAYOUT & GRID STYLES
 			}
 		}
 	}
-	
-	ul.products {
-		&.columns-4 {
-			li {
-				width: 25%;
-			}
-		}
-		
-		&.columns-3 {
-			li {
-				width: 33.333%;
-			}
-		}
-		
-		&.columns-2 {
-			li {
-				width: 50%;
-			}
-		}
-	}
 }
 
 .equal-height {
