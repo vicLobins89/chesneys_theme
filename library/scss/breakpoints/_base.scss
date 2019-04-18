@@ -2983,6 +2983,20 @@ POSTS & CONTENT STYLES
 				margin: 0;
 			}
 		}
+	
+		&.columns-4 {
+			
+		}
+		
+		&.columns-3 {
+			li:nth-child(3n+3) {
+				margin-right: 0;
+			}
+		}
+		
+		&.columns-2 {
+			
+		}
 		
 		li.product {
 			text-align: left;
