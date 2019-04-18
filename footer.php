@@ -8,6 +8,7 @@ $blog_id = get_current_blog_id();
 <?php
 if( $blog_id == 5 ) {
 	echo do_shortcode('[geoip_detect2_show_if country="GB"] TEXT [/geoip_detect2_show_if]');
+	echo geoip_detect2_get_current_source_description();
 }
 ?>
 
