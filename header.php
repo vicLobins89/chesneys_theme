@@ -13,7 +13,7 @@
 
 		<title><?php wp_title('|'); ?></title>
 		
-		<meta name="google-site-verification" content="googleb7c44ab4898d52d2">
+		<meta name="google-site-verification" content="OZlSgpuvVs_Skx9k5WWYm66d8atMFgT_HgbIGuEt05M" />
 
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
