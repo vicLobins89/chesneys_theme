@@ -5,7 +5,7 @@ $blog_id = get_current_blog_id();
 if( $blog_id == 5 ) {
 	echo do_shortcode('[geoip_detect2_show_if country="GB"] ' . get_sidebar('geo_popup') . ' [/geoip_detect2_show_if]');
 } else {
-	echo do_shortcode('[geoip_detect2_show_if country="US"] ' . get_sidebar('geo_popup') . ' [/geoip_detect2_show_if]');
+	//echo do_shortcode('[geoip_detect2_show_if country="US"] ' . get_sidebar('geo_popup') . ' [/geoip_detect2_show_if]');
 }
 ?>
 
