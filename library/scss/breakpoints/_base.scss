@@ -2984,7 +2984,8 @@ POSTS & CONTENT STYLES
 			}
 		}
 		
-		&.columns-3 {
+		&.columns-3,
+		&.columns-2 {
 			margin: 0 -2rem;
 			
 			li {
