@@ -520,7 +520,7 @@ LAYOUT & GRID STYLES
 	&.spares-shop-loop {
 		background: $light-brown;
 		
-		ul.products[class*=columns-] li {
+		ul.products[class*=columns-] li.product {
 			@media only screen and (max-width: 767px) {
 				width: 48%;
 				float: left;
@@ -2976,7 +2976,7 @@ POSTS & CONTENT STYLES
 	}
 	
 	ul.products {
-		&[class*=columns-] li {
+		&[class*=columns-] li.product {
 			@media only screen and (max-width: 767px) {
 				float: none;
 				width: 100%;
@@ -2997,7 +2997,7 @@ POSTS & CONTENT STYLES
 			}
 		}
 		
-		li {
+		li.product {
 			text-align: left;
 			
 			.attachment-woocommerce_thumbnail {
@@ -3077,13 +3077,13 @@ POSTS & CONTENT STYLES
 	&.outdoor-related,
 	&.outdoor-accessories {
 		ul.products {
-			&[class*=columns-] li {
+			&[class*=columns-] li.product {
 				@media only screen and (max-width: 767px) {
 					margin-bottom: 1rem;
 				}
 			}
 			
-			li {
+			li.product {
 				a:not(.button) {
 					h2 {
 						font-family: $serif;
@@ -3125,7 +3125,7 @@ POSTS & CONTENT STYLES
 	
 	&.outdoor-accessories {
 		ul.products {
-			li {
+			li.product {
 				a:not(.button) {
 					h2.woocommerce-loop-product__title {
 						font-size: 1.2em;
