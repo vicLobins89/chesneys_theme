@@ -2984,6 +2984,17 @@ POSTS & CONTENT STYLES
 			}
 		}
 		
+		&.columns-3 {
+			margin: 0 -2rem;
+			
+			li {
+				display: inline-block;
+				width: 100%;
+				vertical-align: top;
+				padding: 2rem;
+			}
+		}
+		
 		li.product {
 			text-align: left;
 			
