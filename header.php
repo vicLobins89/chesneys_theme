@@ -12,6 +12,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<title><?php wp_title('|'); ?></title>
+		
+		<meta name="google-site-verification" content="googleb7c44ab4898d52d2">
 
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
