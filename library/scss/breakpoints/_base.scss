@@ -3838,7 +3838,7 @@ SIDEBARS & ASIDES
     text-align: center;
 	
 	.secondary-btn {
-		&:hover {
+		&:hover, &:focus {
 			background: $white;
 		}
 	}
