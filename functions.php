@@ -184,7 +184,7 @@ function bones_register_sidebars() {
 		'description' => __( 'The popup if user is visiting from other country.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s cf">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2 class="lhs">',
+		'before_title' => '<h2 class="white">',
 		'after_title' => '</h2>',
 	));
 } // don't remove this bracket!

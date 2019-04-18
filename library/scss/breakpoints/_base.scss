@@ -3828,6 +3828,16 @@ SIDEBARS & ASIDES
 	margin-bottom: 1.5em;
 }
 
+#geo_popup {
+	position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    color: $white;
+    text-align: center;
+}
+
 /*********************
 FOOTER STYLES
 *********************/
