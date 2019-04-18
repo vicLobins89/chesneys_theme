@@ -2988,7 +2988,7 @@ POSTS & CONTENT STYLES
 			li:nth-child(4n+4) {
 				margin-right: 0;
 			}
-			li:nth-child(1n+4) {
+			li:nth-child(4n+1) {
 				clear: both;
 			}
 		}
@@ -2997,7 +2997,7 @@ POSTS & CONTENT STYLES
 			li:nth-child(3n+3) {
 				margin-right: 0;
 			}
-			li:nth-child(1n+3) {
+			li:nth-child(3n+1) {
 				clear: both;
 			}
 		}
@@ -3006,7 +3006,7 @@ POSTS & CONTENT STYLES
 			li:nth-child(2n+2) {
 				margin-right: 0;
 			}
-			li:nth-child(1n+2) {
+			li:nth-child(2n+1) {
 				clear: both;
 			}
 		}
