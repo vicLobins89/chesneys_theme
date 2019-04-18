@@ -2985,7 +2985,9 @@ POSTS & CONTENT STYLES
 		}
 	
 		&.columns-4 {
-			
+			li:nth-child(4n+4) {
+				margin-right: 0;
+			}
 		}
 		
 		&.columns-3 {
@@ -2995,7 +2997,9 @@ POSTS & CONTENT STYLES
 		}
 		
 		&.columns-2 {
-			
+			li:nth-child(2n+2) {
+				margin-right: 0;
+			}
 		}
 		
 		li.product {
