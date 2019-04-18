@@ -26,7 +26,8 @@ jQuery(document).ready(function($) {
 	viewport = updateViewportDimensions();
 	
 	// Geo close button
-	$('#geo_popup .close').click(function(){
+	$('#geo_popup .close').click(function(e){
+		e.preventDefault();
 		$('#geo_popup').remove();
 	});
 	
