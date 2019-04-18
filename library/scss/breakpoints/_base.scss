@@ -2988,17 +2988,26 @@ POSTS & CONTENT STYLES
 			li:nth-child(4n+4) {
 				margin-right: 0;
 			}
+			li:nth-child(1n+4) {
+				clear: both;
+			}
 		}
 		
 		&.columns-3 {
 			li:nth-child(3n+3) {
 				margin-right: 0;
 			}
+			li:nth-child(1n+3) {
+				clear: both;
+			}
 		}
 		
 		&.columns-2 {
 			li:nth-child(2n+2) {
 				margin-right: 0;
+			}
+			li:nth-child(1n+2) {
+				clear: both;
 			}
 		}
 		
