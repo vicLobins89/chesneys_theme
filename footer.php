@@ -3,6 +3,7 @@ $options = get_option('rh_settings');
 $blog_id = get_current_blog_id();
 
 if( $blog_id == 5 ) {
+	print_r( geoip_detect2_get_info_from_current_ip() );
 	echo do_shortcode('[geoip_detect2_show_if country="GB"] Test [/geoip_detect2_show_if]');
 } elseif( $blog_id == 1 ) {
 	//echo do_shortcode('[geoip_detect2_show_if country="US"] ' . get_sidebar('geo_popup') . ' [/geoip_detect2_show_if]');
