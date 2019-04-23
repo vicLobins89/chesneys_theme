@@ -3845,9 +3845,17 @@ SIDEBARS & ASIDES
 }
 
 #filter {
+	background: $gray;
+	
 	.widget {
 		margin: 0;
 		padding: 0;
+	}
+	
+	.woof_list_checkbox {
+		li {
+			font-size: 1rem;
+		}
 	}
 }
 
