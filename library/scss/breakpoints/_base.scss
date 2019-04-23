@@ -3852,6 +3852,11 @@ SIDEBARS & ASIDES
 	
 	> .widget {
 		background: $light-gray;
+		padding: 1rem;
+	}
+	
+	.widgettitle {
+		margin: 0;
 	}
 	
 	.woof_list_checkbox {
