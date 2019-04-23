@@ -3862,6 +3862,11 @@ SIDEBARS & ASIDES
 	.woof_list_checkbox {
 		padding: 0;
 		
+		.woof_childs_list {
+			padding: 0;
+			margin: 0;
+		}
+		
 		li {
 			font-size: 1rem;
 		}
