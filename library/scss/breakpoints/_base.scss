@@ -3866,16 +3866,15 @@ SIDEBARS & ASIDES
 			font-size: 1rem;
 		}
 		
-		> li.woof_childs_list_li {
-			font-family: $sans-serif;
-			text-transform: uppercase;
-			
+		> li.woof_childs_list_li {	
 			> input {
 				display: none;
 				pointer-events: none;
 			}
 			
 			> label {
+				font-family: $sans-serif;
+				text-transform: uppercase;
 				pointer-events: none;
 			}
 		}
