@@ -3845,11 +3845,13 @@ SIDEBARS & ASIDES
 }
 
 #filter {
-	background: $gray;
-	
 	.widget {
 		margin: 0;
 		padding: 0;
+	}
+	
+	> .widget {
+		background: $light-gray;
 	}
 	
 	.woof_list_checkbox {
