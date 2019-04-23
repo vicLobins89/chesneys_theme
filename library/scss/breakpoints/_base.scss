@@ -3873,6 +3873,10 @@ SIDEBARS & ASIDES
 		
 		li {
 			font-size: 1rem;
+			
+			&.parent_li > label {
+				font-family: $sans-serif;
+			}
 		}
 		
 		> li.woof_childs_list_li {
@@ -3898,10 +3902,6 @@ SIDEBARS & ASIDES
 			
 			> .woof_childs_list {
 				margin: 0 !important;
-			}
-			
-			&.parent_li > label {
-				font-family: $sans-serif;
 			}
 		}
 	}
