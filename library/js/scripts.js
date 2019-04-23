@@ -25,9 +25,6 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
-	// Filter classes
-	$('li .woof_childs_list_li:has(ul)').addClass('parent_li');
-	
 	// Geo close button
 	$('#geo_popup .close-geo').click(function(e){
 		e.preventDefault();
@@ -286,9 +283,7 @@ jQuery(document).ready(function($) {
 				});
 			});
 		}
-	});
-	
-	$(window).on('resize load', function(){
+		
 		if( viewport.width < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 			$('body').addClass('is-mobile');
 			
@@ -342,5 +337,10 @@ jQuery(document).ready(function($) {
 		} else {
 			$('.header').removeClass('scrolled');
 		}
+	});
+	
+	$(window).on('load', function(){
+		// Filter classes
+		$('li .woof_childs_list_li:has(ul)').addClass('parent_li');
 	});
 });
