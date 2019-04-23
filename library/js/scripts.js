@@ -25,9 +25,6 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
-	// Filter classes
-	$('li .woof_childs_list_li:has(ul)').addClass('parent_li');
-	
 	// Geo close button
 	$('#geo_popup .close-geo').click(function(e){
 		e.preventDefault();
