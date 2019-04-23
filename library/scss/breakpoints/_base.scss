@@ -3857,6 +3857,7 @@ SIDEBARS & ASIDES
 	
 	.widgettitle {
 		margin: 0;
+		border: none;
 	}
 	
 	.woof_list_checkbox {
@@ -3871,7 +3872,10 @@ SIDEBARS & ASIDES
 			font-size: 1rem;
 		}
 		
-		> li.woof_childs_list_li {	
+		> li.woof_childs_list_li {
+			border-top: 1px solid $black;
+			margin: 0;
+			
 			> input {
 				display: none;
 				pointer-events: none;
@@ -3881,6 +3885,11 @@ SIDEBARS & ASIDES
 				font-family: $sans-serif;
 				text-transform: uppercase;
 				pointer-events: none;
+				margin: 0;
+				
+				.woof_checkbox_count {
+					display: none;
+				}
 			}
 		}
 	}
