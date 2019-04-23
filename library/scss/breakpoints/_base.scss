@@ -2626,6 +2626,7 @@ POSTS & CONTENT STYLES
 #woof_results_by_ajax {
 	.price,
 	.add_to_cart_button,
+	.button.product_type_variable,
 	.button.product_type_simple {
 		display: none;
 	}
@@ -2970,8 +2971,7 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
-	.woocommerce-result-count,
-	.woocommerce-ordering {
+	.woocommerce-result-count {
 		display: none;
 	}
 	
@@ -3877,7 +3877,7 @@ SIDEBARS & ASIDES
 		
 		> li.woof_childs_list_li {
 			border-top: 1px solid $black;
-			margin-top: .5rem !important;
+			margin: .5rem 0 !important;
     		padding-top: .5rem !important;
 			
 			> input {
