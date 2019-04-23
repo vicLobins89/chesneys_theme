@@ -3865,7 +3865,6 @@ SIDEBARS & ASIDES
 		
 		.woof_childs_list {
 			padding: 0;
-			margin: 0;
 		}
 		
 		> .woof_childs_list {
@@ -3878,7 +3877,8 @@ SIDEBARS & ASIDES
 		
 		> li.woof_childs_list_li {
 			border-top: 1px solid $black;
-			margin: 0;
+			margin-top: .5rem !important;
+    		padding-top: .5rem !important;
 			
 			> input {
 				display: none;
@@ -3894,6 +3894,10 @@ SIDEBARS & ASIDES
 				.woof_checkbox_count {
 					display: none;
 				}
+			}
+			
+			> .woof_childs_list {
+				margin: 0 !important;
 			}
 		}
 	}
