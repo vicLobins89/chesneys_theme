@@ -3860,8 +3860,24 @@ SIDEBARS & ASIDES
 	}
 	
 	.woof_list_checkbox {
+		padding: 0;
+		
 		li {
 			font-size: 1rem;
+		}
+		
+		> li.woof_childs_list_li {
+			font-family: $sans-serif;
+			text-transform: uppercase;
+			
+			> input {
+				display: none;
+				pointer-events: none;
+			}
+			
+			> label {
+				pointer-events: none;
+			}
 		}
 	}
 }
