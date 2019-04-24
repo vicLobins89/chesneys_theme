@@ -3921,6 +3921,7 @@ SIDEBARS & ASIDES
 	.woof_childs_list_opener {
 		position: absolute;
     	right: 0;
+		top: 3px;
 		outline: none;
 		
 		span {
@@ -3964,8 +3965,8 @@ SIDEBARS & ASIDES
 			margin-right: 10px;
 			display: inline-block;
 			vertical-align: baseline;
-			width: 10px;
-			height: 10px;
+			width: 8px;
+			height: 8px;
 			border: 1px solid $black;
 		}
 
