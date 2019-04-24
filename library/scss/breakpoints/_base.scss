@@ -3874,6 +3874,7 @@ SIDEBARS & ASIDES
 		
 		li {
 			font-size: .95rem;
+			margin-left: 0 !important;
 		}
 		
 		> li.woof_childs_list_li {
@@ -3925,6 +3926,7 @@ SIDEBARS & ASIDES
 			position: relative;
 			cursor: pointer;
 			padding: 0;
+			margin: 0;
 		}
 
 		// Box.
@@ -3932,10 +3934,9 @@ SIDEBARS & ASIDES
 			content: '';
 			margin-right: 10px;
 			display: inline-block;
-			vertical-align: text-top;
-			width: 15px;
-			height: 15px;
-			background: $white;
+			vertical-align: baseline;
+			width: 10px;
+			height: 10px;
 			border: 1px solid $black;
 		}
 
