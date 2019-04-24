@@ -4018,6 +4018,22 @@ SIDEBARS & ASIDES
 	}
 }
 
+.woof_products_top_panel {
+	li {
+		font-family: $sans-serif;
+		font-size: .85rem;
+		font-weight: bold;
+		
+		.woof_remove_ppi {
+			background: none !important;
+			
+			&:after {
+				content: 'x';
+			}
+		}
+	}
+}
+
 /*********************
 FOOTER STYLES
 *********************/
