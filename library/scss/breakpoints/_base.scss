@@ -3884,6 +3884,11 @@ SIDEBARS & ASIDES
 			> input {
 				display: none;
 				pointer-events: none;
+				
+				&:before {
+					display: none;
+					pointer-events: none;
+				}
 			}
 			
 			> label {
