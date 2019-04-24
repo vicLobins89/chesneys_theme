@@ -3923,9 +3923,26 @@ SIDEBARS & ASIDES
     	right: 0;
 		
 		span {
+			width: 9px;
+			height: 1px;
+			background: $black !important;
+			position: relative;
+			
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 1px;
+				height: 9px;
+				background: $black;
+			}
 			
 			&.woof_is_closed {
+				background: $black !important;
 				
+				&:before {
+					height: 0;
+				}
 			}
 		}
 	}
