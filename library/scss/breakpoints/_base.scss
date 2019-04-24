@@ -4019,16 +4019,21 @@ SIDEBARS & ASIDES
 }
 
 .woof_products_top_panel {
+	margin-top: 0 !important;
+	
 	li {
 		font-family: $sans-serif;
-		font-size: .85rem;
-		font-weight: bold;
+		font-size: .8rem !important;
+		font-weight: 900;
 		
 		.woof_remove_ppi {
 			background: none !important;
 			
-			&:after {
+			&:before {
 				content: 'x';
+				margin-right: 5px;
+				display: inline-block;
+				vertical-align: middle;
 			}
 		}
 	}
