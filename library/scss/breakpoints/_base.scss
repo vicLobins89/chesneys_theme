@@ -3952,7 +3952,7 @@ SIDEBARS & ASIDES
 
 		// Box checked
 		&:checked + label:before {
-			background: #f35429;
+			background: $black;
 		}
 
 		// Disabled state label.
@@ -3969,7 +3969,7 @@ SIDEBARS & ASIDES
 
 		// Checkmark. Could be replaced with an image
 		&:checked + label:after {
-			content: '';
+			content: none;
 			position: absolute;
 			left: 5px;
 			top: 9px;
