@@ -3928,20 +3928,16 @@ SIDEBARS & ASIDES
 			background: $black !important;
 			position: relative;
 			
-			&:before {
-				content: '';
-				display: block;
-				position: absolute;
-				width: 1px;
-				height: 9px;
-				background: $black;
-			}
-			
 			&.woof_is_closed {
 				background: $black !important;
 				
 				&:before {
-					height: 0;
+					content: '';
+					display: block;
+					position: absolute;
+					width: 1px;
+					height: 9px;
+					background: $black;
 				}
 			}
 		}
