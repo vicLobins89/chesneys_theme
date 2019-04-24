@@ -3921,12 +3921,14 @@ SIDEBARS & ASIDES
 	.woof_childs_list_opener {
 		position: absolute;
     	right: 0;
+		outline: none;
 		
 		span {
 			width: 9px;
 			height: 1px;
 			background: $black !important;
 			position: relative;
+			outline: none;
 			
 			&.woof_is_closed {
 				background: $black !important;
@@ -3937,6 +3939,8 @@ SIDEBARS & ASIDES
 					position: absolute;
 					width: 1px;
 					height: 9px;
+					top: -4px;
+   					left: 4px;
 					background: $black;
 				}
 			}
