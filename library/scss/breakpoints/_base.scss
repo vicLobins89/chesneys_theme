@@ -3885,7 +3885,8 @@ SIDEBARS & ASIDES
 				display: none;
 				pointer-events: none;
 				
-				&:before {
+				+ label:before {
+					content: none;
 					display: none;
 					pointer-events: none;
 				}
