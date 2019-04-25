@@ -25,7 +25,7 @@ global $product;
 $shipping_methods = WC()->shipping->get_shipping_methods();
 
 foreach($shipping_methods as $shipping_method){
-	print_r($shipping_method);
+	//print_r($shipping_method);
 }
 
 ?>
