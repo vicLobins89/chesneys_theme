@@ -19,7 +19,10 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 
-$ship_class = $product->get_shipping_class();
+$shipping_class = $product->get_shipping_class();
+$flat_rate = new WC_Shipping_Flat_Rate;
+$symbol = get_woocommerce_currency_symbol();
+echo $symbol . $flat_rate->flat_rates[$shipping_class]['cost'];
 
 if ( ! $product->is_purchasable() ) {
 	return;
@@ -53,13 +56,6 @@ if ( $product->is_in_stock() ) : ?>
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>
 
-	<?php do_action( 'woocommerce_after_add_to_cart_form' );
-
-
-if(is_product_category( 'outdoor-living' ) || cat_is_ancestor_of( 63, get_queried_object()->term_id) ) {
-
-}
-
-?>
+	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
 <?php endif; ?>
