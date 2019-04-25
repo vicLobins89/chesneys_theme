@@ -22,7 +22,7 @@ global $product;
 $shipping_class = $product->get_shipping_class();
 $flat_rate = new WC_Shipping_Flat_Rate;
 $symbol = get_woocommerce_currency_symbol();
-echo $symbol . $flat_rate->flat_rates[$shipping_class]['cost'];
+//echo $symbol . $flat_rate->flat_rates[$shipping_class]['cost'];
 
 if ( ! $product->is_purchasable() ) {
 	return;
