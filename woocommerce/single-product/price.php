@@ -22,10 +22,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-$shipping_methods = WC()->shipping->get_shipping_methods();
+$shipping_class = $product->get_shipping_class();
 
-foreach($shipping_methods as $shipping_method){
-	//print_r($shipping_method);
+$shipping_classes = get_terms( array(
+	'taxonomy' => 'product_shipping_class', 
+	'hide_empty' => false,
+	'slug' => $shipping_class ) );
+
+foreach($shipping_classes as $shipping_class){
+	print_r($shipping_class);
 }
 
 ?>
