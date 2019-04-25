@@ -22,8 +22,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-$shipping_class = $product->get_shipping_class_id();
-print_r($shipping_class);
+$shipping_methods = WC()->shipping->get_shipping_methods();
+
+foreach($shipping_methods as $shipping_method){
+	print_r($shipping_method);
+}
 
 ?>
 <p class="price"><?php echo $product->get_price_html(); ?></p>
