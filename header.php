@@ -14,6 +14,7 @@
 		<title><?php wp_title('|'); ?></title>
 		
 		<meta name="google-site-verification" content="OZlSgpuvVs_Skx9k5WWYm66d8atMFgT_HgbIGuEt05M" />
+		<meta name="msvalidate.01" content="50DF6B110CE7268B54ACF448C9917DE2" />
 
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
