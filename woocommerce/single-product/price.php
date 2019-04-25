@@ -30,7 +30,7 @@ $shipping_classes = get_terms( array(
 	'slug' => $shipping_class ) );
 
 foreach($shipping_classes as $shipping_class){
-	print_r($shipping_class);
+	//print_r($shipping_class);
 }
 
 ?>
