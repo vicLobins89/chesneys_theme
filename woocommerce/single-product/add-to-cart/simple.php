@@ -55,9 +55,9 @@ if ( $product->is_in_stock() ) : ?>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_form' );
 
-print_r($ship_class);
+
 if(is_product_category( 'outdoor-living' ) || cat_is_ancestor_of( 63, get_queried_object()->term_id) ) {
-print_r($ship_class);
+
 }
 
 ?>
