@@ -188,7 +188,7 @@ jQuery(document).ready(function($) {
 	});
 	
 	// Fix breadcrumb link
-	$('.uk-site .menu-breadcrumb a:contains("Fireplaces")').each(function(){
+	/*$('.uk-site .menu-breadcrumb a:contains("Fireplaces")').each(function(){
 		var oldUrl = $(this).attr("href");
 		var newUrl = oldUrl.replace("/category/fireplaces", "/fireplaces");
 		$(this).attr("href", newUrl);
@@ -212,7 +212,7 @@ jQuery(document).ready(function($) {
 		var oldUrl = $(this).attr("href");
 		var newUrl = oldUrl.replace("/category/outdoor-living/gourmet-range", "/outdoor/shop");
 		$(this).attr("href", newUrl);
-	});
+	});*/
 	
 	// Search dropdown fix
 	$('.postform option[value="post"]').text('News');
