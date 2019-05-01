@@ -15,6 +15,18 @@
 		
 		<meta name="google-site-verification" content="OZlSgpuvVs_Skx9k5WWYm66d8atMFgT_HgbIGuEt05M" />
 		<meta name="msvalidate.01" content="50DF6B110CE7268B54ACF448C9917DE2" />
+		
+		<!-- Hotjar Tracking Code for www.chesneys.co.uk -->
+		<script>
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:388474,hjsv:6};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
 
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
