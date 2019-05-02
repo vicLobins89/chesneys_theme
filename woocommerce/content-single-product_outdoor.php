@@ -177,7 +177,9 @@ endif;  // close section ?>
 echo '<section class="entry-content row cf related-wrapper"><div class="cf"><div class="col-12">';
 if( $product->get_upsell_ids() ) {
 	echo '<p>Compare our HEAT range and find the best model for you</p>';
+	echo '<div class="ol-related">';
 	woocommerce_upsell_display(2, 2, 'menu_order', 'asc');
+	echo '</div>';
 } else {
 	echo '<h2>Other Heat Range Products</h2><p>Compare our HEAT range and find the best model for you</p>';
 	echo do_shortcode('[products orderby="rand" category="outdoor-living" limit="2" columns="2" class="ol-related"]');
