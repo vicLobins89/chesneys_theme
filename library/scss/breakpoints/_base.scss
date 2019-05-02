@@ -732,6 +732,18 @@ LAYOUT & GRID STYLES
 					display: none;
 				}
 			}
+			
+			.upsells {
+				> h2 {
+					margin-bottom: 1rem;
+				}
+				
+				.product {
+					.woocommerce-loop-product__title + p {
+						display: none;
+					}
+				}
+			}
 		}
 		
 		.related > h2,
