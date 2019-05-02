@@ -173,10 +173,15 @@ endif;  // close section ?>
  * @hooked woocommerce_upsell_display - 15
  * @hooked woocommerce_output_related_products - 20
  */
-remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
-remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
-remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
-remove_action('woocommerce_after_single_product_summary', 'main_woocommerce_output_related_products', 20);
+
+echo '<section class="entry-content row cf related-wrapper"><div class="cf"><div class="col-12">';
+if( $product->get_upsell_ids() ) {
+	woocommerce_upsell_display(2, 2, 'menu_order', 'asc');
+} else {
+	echo '<h2>Other Heat Range Products</h2><p>Compare our HEAT range and find the best model for you</p>';
+	echo do_shortcode('[products orderby="rand" category="outdoor-living" limit="2" columns="2" class="ol-related"]');
+}
+echo '</div></div></section>';
 
 function rh_woocommerce_output_related_products() {
     echo '<section class="entry-content row cf related-wrapper"><div class="cf"><div class="col-12">';
@@ -184,9 +189,9 @@ function rh_woocommerce_output_related_products() {
 	echo do_shortcode('[products orderby="rand" category="outdoor-living" limit="2" columns="2" class="ol-related"]');
     echo '</div></div></section>';
 }
-add_action( 'woocommerce_after_single_product_summary', 'rh_woocommerce_output_related_products', 20);
+//add_action( 'woocommerce_after_single_product_summary', 'rh_woocommerce_output_related_products', 20);
 
-do_action( 'woocommerce_after_single_product_summary' );
+//do_action( 'woocommerce_after_single_product_summary' );
 ?>
 
 <?php
