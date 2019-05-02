@@ -181,10 +181,11 @@ foreach ($cat as $category) {
 
 echo '<section class="row entry-content cf related-products"><div class="cf"><div class="col-12">';
 echo '<h2>You might also like</h2><p></p>';
-if( $product->get_upsells() ) {
-	woocommerce_upsell_display();
+if( $product->get_upsell_ids() ) {
+	woocommerce_upsell_display(3, 3, 'menu_order', 'asc');
+} else {
+	echo do_shortcode('[products orderby="rand" category="'.$parent_cat.'" limit="3" columns="3" class="related-products"]');
 }
-echo do_shortcode('[products orderby="rand" category="'.$parent_cat.'" limit="3" columns="3" class="related-products"]');
 echo '</section></div></div>';
 
 //do_action( 'woocommerce_after_single_product_summary' );
