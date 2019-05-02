@@ -26,24 +26,8 @@ global $product;
 <p class="price">
 <?php echo $product->get_price_html(); ?>
 <?php
-switch ($product->get_shipping_class()) {
-    case "clean-burn":
-        echo "<br>Plus Delivery & Set Up: £135 inc. VAT";
-        break;
-    case "heat-grill":
-        echo "<br>Plus Delivery & Set Up: £140 inc. VAT";
-        break;
-    case "garden-gourmet":
-        echo "<br>Plus Delivery & Set Up: £150 inc. VAT";
-        break;
-    case "garden-party":
-        echo "<br>Plus Delivery & Set Up: £200 inc. VAT";
-        break;
-    case "terrace-gourmet":
-        echo "<br>Plus Delivery & Set Up: £110 inc. VAT";
-        break;
-    default:
-        echo "";
+if( get_field('delivery_cost') ) {
+	 echo '<br>Plus Delivery & Set Up: £'.get_field('delivery_cost').' inc. VAT';
 }
 ?>
 </p>
