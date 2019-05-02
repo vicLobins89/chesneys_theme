@@ -176,7 +176,6 @@ endif;  // close section ?>
 
 echo '<section class="entry-content row cf related-wrapper"><div class="cf"><div class="col-12">';
 if( $product->get_upsell_ids() ) {
-	echo '<p>Compare our HEAT range and find the best model for you</p>';
 	echo '<div class="ol-related">';
 	woocommerce_upsell_display(2, 2, 'menu_order', 'asc');
 	echo '</div>';
