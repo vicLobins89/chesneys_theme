@@ -11,7 +11,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$order_number = $order->get_order_number();
 	$shipping_cost = $order->get_total_shipping();
 //	$shipping_type = $order->get_shipping_method();
-	$notes = $order->get_customer_order_notes();
+	$notes = $order->get_customer_note();
 
 	// set the address fields
 	$address = array(
