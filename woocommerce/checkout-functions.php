@@ -33,8 +33,6 @@ function wdm_send_order_to_ext( $order_id ){
 		'shipping_country' => $order->get_shipping_country(),
 		'shipping_postcode' => $order->get_shipping_postcode()
 	);
-	
-	$note = $order->wc_get_order_notes();
 
 	// get coupon information (if applicable)
 	$cps = array();
@@ -92,8 +90,7 @@ function wdm_send_order_to_ext( $order_id ){
 				'NoItems' => $item['qty'],
 				'Weight_kg' =>$product->get_weight().'kg',
 				'DeliveryType' => 'Home',
-				'ServiceType' => $service_type,
-				'CustomerNote' => $note
+				'ServiceType' => $service_type
 			);
 		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
 			$api_items[] = array(
