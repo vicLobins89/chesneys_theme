@@ -33,6 +33,8 @@ function wdm_send_order_to_ext( $order_id ){
 		'shipping_country' => $order->get_shipping_country(),
 		'shipping_postcode' => $order->get_shipping_postcode()
 	);
+	
+	$note = $order->wc_get_order_notes();
 
 	// get coupon information (if applicable)
 	$cps = array();
@@ -90,7 +92,8 @@ function wdm_send_order_to_ext( $order_id ){
 				'NoItems' => $item['qty'],
 				'Weight_kg' =>$product->get_weight().'kg',
 				'DeliveryType' => 'Home',
-				'ServiceType' => $service_type
+				'ServiceType' => $service_type,
+				'CustomerNote' => $note
 			);
 		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
 			$api_items[] = array(
@@ -220,7 +223,7 @@ function create_csv($records) {
     return $filepath;
 }
 
-function send_csv_mail($csv_data, $body, $to = 'SwiftcareAdmin@Swiftcareuk.com, matt@rd-it.com, adam@chesneys.co.uk, stockists@chesneys.co.uk',  $from = 'Chesneys Order <no-reply@chesneys.co.uk>', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csv_data, $body, $to = 'vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, matt@rd-it.com, adam@chesneys.co.uk, stockists@chesneys.co.uk',  $from = 'Chesneys Order <no-reply@chesneys.co.uk>', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
 
