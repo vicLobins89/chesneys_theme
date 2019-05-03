@@ -11,6 +11,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$order_number = $order->get_order_number();
 	$shipping_cost = $order->get_total_shipping();
 //	$shipping_type = $order->get_shipping_method();
+	$notes = $order->get_customer_order_notes();
 
 	// set the address fields
 	$address = array(
@@ -90,7 +91,8 @@ function wdm_send_order_to_ext( $order_id ){
 				'NoItems' => $item['qty'],
 				'Weight_kg' =>$product->get_weight().'kg',
 				'DeliveryType' => 'Home',
-				'ServiceType' => $service_type
+				'ServiceType' => $service_type,
+				'CustomerNotes' => $notes
 			);
 		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
 			$api_items[] = array(
