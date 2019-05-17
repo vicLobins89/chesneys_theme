@@ -53,6 +53,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$items = $order->get_items();
 	$csv_data = array();
 	$api_items = array();
+	$api_items_ches = array();
 	
 	foreach( $items as $key => $item) {
 		$item_id = $item['product_id'];
@@ -101,6 +102,12 @@ function wdm_send_order_to_ext( $order_id ){
 				'price' => $item['line_total'],
 			);
 		}
+		
+		$api_items_ches[] = array(
+			'client_ref' => $product->get_sku(),
+			'quantity' => $item['qty'],
+			'price' => $item['line_total'],
+		);
 	}
 	
 	
@@ -141,6 +148,36 @@ function wdm_send_order_to_ext( $order_id ){
 			'items' => $api_items
 		)
 	);
+	
+	//Chesneys API Data
+	$api_data_ches = array(
+		'order' => array(
+			'client_ref' => $order_number,
+			'ShippingContact' => array(
+				'name' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
+				'email' => $email,
+				'phone' => $phone,
+				'address' => $address['shipping_address_1'],
+				'address_contd' => $address['shipping_address_2'],
+				'city' => $address['shipping_city'],
+				'county' => $address['shipping_state'],
+				'country' => $address['shipping_country'],
+				'postcode' => $address['shipping_postcode']
+			),
+			'BillingContact' => array(
+				'name' => $address['billing_first_name'] . ' ' . $address['billing_last_name'],
+				'email' => $email,
+				'phone' => $phone,
+				'address' => $address['billing_address_1'],
+				'address_contd' => $address['billing_address_2'],
+				'city' => $address['billing_city'],
+				'county' => $address['billing_state'],
+				'country' => $address['billing_country'],
+				'postcode' => $address['billing_postcode']
+			),
+			'items' => $api_items_ches
+		)
+	);
 
 	// Iterating through order shipping items
 	foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
@@ -152,6 +189,31 @@ function wdm_send_order_to_ext( $order_id ){
 			send_csv_mail($csv_data, "Product Order ");
 		}
 	}
+}
+
+send_api_call_ches($api_data_ches);
+function send_api_call_ches($data) {
+     $endpoint = "https://core.chesneys.co.uk/wcf/ChesneysWoocommerceService.svc/Test";
+    
+     // JSON
+     $options = array(
+       'http' => array(
+           'method'  => 'POST',
+           'content' => json_encode( $data ),
+           'header'=>  "Content-Type: text/plain\r\n" .
+                           "Accept: application/json\r\n"
+           )
+     );
+ 
+     $context  = stream_context_create( $options );
+     $result = file_get_contents( $endpoint, false, $context );
+     $response = json_decode( $result );
+ 
+     // the handle response
+     if ($response->success != 1) {
+           print_r($response);
+           return;
+     }
 }
 
 function send_api_call($data) {
