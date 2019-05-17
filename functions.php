@@ -457,10 +457,9 @@ add_filter( 'woocommerce_get_price_suffix', 'bbloomer_price_translatable_suffix'
 
 // Number of rows + products
 function loop_columns() {
-	if ( is_product_category('gas-stoves')  ) {
-		return 2;
-	} elseif ( is_product_category('artists-exhibitions')  ) {
-		return 2;
+	if( is_product_category() ) {
+		$term = get_queried_object();
+		return get_field('column_size', $term);
 	} else {
 		return 3;
 	}
