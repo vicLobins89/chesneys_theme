@@ -459,7 +459,12 @@ add_filter( 'woocommerce_get_price_suffix', 'bbloomer_price_translatable_suffix'
 function loop_columns() {
 	if( is_product_category() ) {
 		$term = get_queried_object();
-		return get_field('column_size', $term);
+		$columns =get_field('column_size', $term);
+		if( $columns ) {
+			return $columns;
+		} else {
+			return 3;
+		}
 	} else {
 		return 3;
 	}
