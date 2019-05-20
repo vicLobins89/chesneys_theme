@@ -179,7 +179,7 @@ function wdm_send_order_to_ext( $order_id ){
 		
 //		"currency" => $currency,
 //		"customer_id" => $user_id,
-//		"customer_note" => $notes,
+		"customer_note" => $notes,
 //		"date_created" => $order_date,
 //		"date_created_gmt" => $order_date,
 		"dealer_code" => $dealer_code,
