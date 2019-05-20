@@ -3,6 +3,7 @@
 // Order Complete Hook
 add_action('woocommerce_order_status_processing', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
+	global $woocommerce;
 	// get order object and order details
 	$order = new WC_Order( $order_id );
 	$order_number = $order->get_order_number();
@@ -17,7 +18,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$shipping_cost = $order->get_total_shipping();
 	$shipping_type = $order->get_shipping_method();
 	$notes = $order->get_customer_note();
-	$currency = get_woocommerce_currency_symbol();
+	$currency = get_woocommerce_currency();
 //	$user_id = $order->get_user_id();
 	$dealer_code = get_post_meta( $order_id, 'Dealer Code', true );
 
