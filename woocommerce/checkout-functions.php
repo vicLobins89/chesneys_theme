@@ -120,7 +120,7 @@ function wdm_send_order_to_ext( $order_id ){
 			"product_id" => $item_id,
 			"quantity" => $item['qty'],
 			"sku" => $product->get_sku(),
-			"subtotal" => $product->get_product_subtotal(),
+//			"subtotal" => $product->get_product_subtotal(),
 			"total" => $item['line_total']
 		);
 	}
