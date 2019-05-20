@@ -180,14 +180,14 @@ function wdm_send_order_to_ext( $order_id ){
 		
 //		"currency" => $currency,
 //		"customer_id" => $user_id,
-		"customer_note" => $notes,
+//		"customer_note" => $notes,
 //		"date_created" => $order_date,
 //		"date_created_gmt" => $order_date,
 //		"dealer_code" => $dealer_code,
 //		"discount_total" => $order_discount_total,
 
 //		"id" => $order_id,
-		"number" => $order_number,
+//		"number" => $order_number,
 //		"payment_method" => $payment_method,
 //		"payment_method_title" => $payment_method_title,
 		
