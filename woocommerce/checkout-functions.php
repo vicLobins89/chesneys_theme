@@ -219,7 +219,7 @@ function wdm_send_order_to_ext( $order_id ){
 		}
 	}
 	
-	send_api_call_ches($api_data_ches);
+	//send_api_call_ches($api_data_ches);
 }
 
 function send_api_call_ches($data) {
