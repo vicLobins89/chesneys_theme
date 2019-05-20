@@ -3,14 +3,13 @@
 // Order Complete Hook
 add_action('woocommerce_order_status_processing', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
-	global $woocommerce;
 	// get order object and order details
 	$order = new WC_Order( $order_id );
 	$order_number = $order->get_order_number();
 	$order_date = $order->get_date_created();
 	$order_status = $order->get_status();
 	$order_total = $order->get_total();
-//	$order_discount_total = $order->get_total_discount();
+	$order_discount_total = $order->get_total_discount();
 //	$payment_method = $order->get_payment_method();
 //	$payment_method_title = $order->get_payment_method_title();
 	$email = $order->get_billing_email();
@@ -18,7 +17,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$shipping_cost = $order->get_total_shipping();
 	$shipping_type = $order->get_shipping_method();
 	$notes = $order->get_customer_note();
-	$currency = get_woocommerce_currency();
+//	$currency = get_woocommerce_currency();
 //	$user_id = $order->get_user_id();
 	$dealer_code = get_post_meta( $order_id, 'Dealer Code', true );
 
@@ -177,13 +176,13 @@ function wdm_send_order_to_ext( $order_id ){
 		"billing_postcode" => $address['billing_postcode'],
 		"billing_state" => $address['billing_state'],
 		
-		"currency" => $currency,
+//		"currency" => $currency,
 //		"customer_id" => $user_id,
 		"customer_note" => $notes,
 		"date_created" => $order_date['date'],
 		"date_created_gmt" => $order_date['date'],
 		"dealer_code" => $dealer_code,
-//		"discount_total" => $order_discount_total,
+		"discount_total" => $order_discount_total,
 
 		"id" => $order_id,
 		"number" => $order_number,
