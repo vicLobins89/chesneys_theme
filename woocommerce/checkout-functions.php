@@ -17,7 +17,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$shipping_cost = $order->get_total_shipping();
 	$shipping_type = $order->get_shipping_method();
 	$notes = $order->get_customer_note();
-//	$currency = get_woocommerce_currency();
+	$currency = get_woocommerce_currency();
 //	$user_id = $order->get_user_id();
 	$dealer_code = get_post_meta( $order_id, 'Dealer Code', true );
 
@@ -176,11 +176,11 @@ function wdm_send_order_to_ext( $order_id ){
 		"billing_postcode" => $address['billing_postcode'],
 		"billing_state" => $address['billing_state'],
 		
-//		"currency" => $currency,
+		"currency" => $currency,
 //		"customer_id" => $user_id,
 		"customer_note" => $notes,
-		"date_created" => $order_date[0],
-		"date_created_gmt" => $order_date[0],
+		"date_created" => $order_date,
+		"date_created_gmt" => $order_date,
 		"dealer_code" => $dealer_code,
 //		"discount_total" => $order_discount_total,
 
