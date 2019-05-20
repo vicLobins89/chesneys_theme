@@ -9,7 +9,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$order_date = $order->get_date_created();
 	$order_status = $order->get_status();
 	$order_total = $order->get_total();
-	$order_discount_total = $order->get_total_discount();
+//	$order_discount_total = $order->get_total_discount();
 //	$payment_method = $order->get_payment_method();
 //	$payment_method_title = $order->get_payment_method_title();
 	$email = $order->get_billing_email();
@@ -182,7 +182,7 @@ function wdm_send_order_to_ext( $order_id ){
 		"date_created" => $order_date['date'],
 		"date_created_gmt" => $order_date['date'],
 		"dealer_code" => $dealer_code,
-		"discount_total" => $order_discount_total,
+//		"discount_total" => $order_discount_total,
 
 		"id" => $order_id,
 		"number" => $order_number,
