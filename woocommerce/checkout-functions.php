@@ -8,8 +8,8 @@ function wdm_send_order_to_ext( $order_id ){
 	$order = new WC_Order( $order_id );
 	$order_number = $order->get_order_number();
 //	$order_date = $order->order_date();
-//	$order_status = $order->get_status();
-//	$order_total = $order->get_total();
+	$order_status = $order->get_status();
+	$order_total = $order->get_total();
 //	$order_discount_total = get_total_discount();
 //	$payment_method = $order->get_payment_method();
 //	$payment_method_title = $order->get_payment_method_title();
@@ -116,7 +116,7 @@ function wdm_send_order_to_ext( $order_id ){
 			"id" => $key,
 			"name" => $item['name'],
 			"price" => $product->get_price(),
-			"product_id" => $item_id,
+			"product_id" => $product->get_id(),
 			"quantity" => $item['qty'],
 			"sku" => $product->get_sku(),
 			"subtotal" => ($product->get_price() * $item['qty']),
@@ -201,8 +201,8 @@ function wdm_send_order_to_ext( $order_id ){
 		"shipping_state" =>  $address['shipping_state'],
 		"shipping_total" => $shipping_cost,
 
-//		"status" => $order_status,
-//		"total" => $order_total,
+		"status" => $order_status,
+		"total" => $order_total,
 		
 		'items' => $api_items_ches
 	);
