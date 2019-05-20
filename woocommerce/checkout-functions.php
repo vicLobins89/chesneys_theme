@@ -7,7 +7,7 @@ function wdm_send_order_to_ext( $order_id ){
 	// get order object and order details
 	$order = new WC_Order( $order_id );
 	$order_number = $order->get_order_number();
-//	$order_id = $order->get_order_id();
+	$order_id = $order->get_order_id();
 //	$order_date = $order->order_date();
 //	$order_status = $order->get_status();
 //	$order_total = $order->get_total();
