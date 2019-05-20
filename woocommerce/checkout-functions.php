@@ -6,12 +6,21 @@ add_action('woocommerce_order_status_processing', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
 	// get order object and order details
 	$order = new WC_Order( $order_id );
+	$order_id = $order->get_order_id();
+	$order_date = $order->order_date;
+	$order_number = $order->get_order_number();
+	$order_status = $order->get_status();
+	$order_total = $order->get_total();
+	$payment_method = $order->get_payment_method();
+	$payment_method_title = $order->get_payment_method_title();
 	$email = $order->get_billing_email();
 	$phone = $order->get_billing_phone();
-	$order_number = $order->get_order_number();
 	$shipping_cost = $order->get_total_shipping();
-//	$shipping_type = $order->get_shipping_method();
+	$shipping_type = $order->get_shipping_method();
 	$notes = $order->get_customer_note();
+	$currency = get_woocommerce_currency_symbol();
+	$user_id = $order->get_user_id();
+	$dealer_code = get_post_meta( $order_id, 'Dealer Code', true );
 
 	// set the address fields
 	$address = array(
@@ -104,9 +113,14 @@ function wdm_send_order_to_ext( $order_id ){
 		}
 		
 		$api_items_ches[] = array(
-			'client_ref' => $product->get_sku(),
-			'quantity' => $item['qty'],
-			'price' => $item['line_total'],
+			"id" => $product->get_id(),
+			"name" => $item['name'],
+			"price" => $product->get_price(),
+			"product_id" => $product->get_id(),
+			"quantity" => $item['qty'],
+			"sku" => $product->get_sku(),
+			"subtotal" => $product->get_price(),
+			"total" => $item['line_total']
 		);
 	}
 	
@@ -151,32 +165,46 @@ function wdm_send_order_to_ext( $order_id ){
 	
 	//Chesneys API Data
 	$api_data_ches = array(
-		'order' => array(
-			'client_ref' => $order_number,
-			'ShippingContact' => array(
-				'name' => $address['shipping_first_name'] . ' ' . $address['shipping_last_name'],
-				'email' => $email,
-				'phone' => $phone,
-				'address' => $address['shipping_address_1'],
-				'address_contd' => $address['shipping_address_2'],
-				'city' => $address['shipping_city'],
-				'county' => $address['shipping_state'],
-				'country' => $address['shipping_country'],
-				'postcode' => $address['shipping_postcode']
-			),
-			'BillingContact' => array(
-				'name' => $address['billing_first_name'] . ' ' . $address['billing_last_name'],
-				'email' => $email,
-				'phone' => $phone,
-				'address' => $address['billing_address_1'],
-				'address_contd' => $address['billing_address_2'],
-				'city' => $address['billing_city'],
-				'county' => $address['billing_state'],
-				'country' => $address['billing_country'],
-				'postcode' => $address['billing_postcode']
-			),
-			'items' => $api_items_ches
-		)
+		"billing_address_1" => $address['billing_address_1'],
+		"billing_address_2" => $address['billing_address_2'],
+		"billing_city" => $address['billing_city'],
+		"billing_company" => $address['billing_company'],
+		"billing_country" => $address['billing_country'],
+		"billing_email" => $email,
+		"billing_first_name" => $address['billing_first_name'],
+		"billing_last_name" => $address['billing_last_name'],
+		"billing_phone" => $phone,
+		"billing_postcode" => $address['billing_postcode'],
+		"billing_state" => $address['billing_state'],
+		
+		"currency" => $currency,
+		"customer_id" => $user_id,
+		"customer_note" => $notes,
+		"date_created" => $order_date,
+		"date_created_gmt" => $order_date,
+		"dealer_code" => $dealer_code,
+		"discount_total" => 12.34,
+
+		"id" => $order_id,
+		"number" => $order_number,
+		"payment_method" => $payment_method,
+		"payment_method_title" => $payment_method_title,
+		
+		"shipping_address_1" => $address['shipping_address_1'],
+		"shipping_address_2" => $address['shipping_address_2'],
+		"shipping_city" => $address['shipping_city'],
+		"shipping_company" => $address['shipping_company'],
+		"shipping_country" => $address['shipping_country'],
+		"shipping_first_name" => $address['shipping_first_name'],
+		"shipping_last_name" => $address['shipping_last_name'],
+		"shipping_postcode" => $address['shipping_postcode'],
+		"shipping_state" =>  $address['shipping_state'],
+		"shipping_total" => $shipping_cost,
+
+		"status" => $order_status,
+		"total" => $order_total,
+		
+		'items' => $api_items_ches
 	);
 
 	// Iterating through order shipping items
@@ -194,7 +222,8 @@ function wdm_send_order_to_ext( $order_id ){
 }
 
 function send_api_call_ches($data) {
-     $endpoint = "https://core.chesneys.co.uk/wcf/ChesneysWoocommerceService.svc/Test";
+     //$endpoint = "https://core.chesneys.co.uk/wcf/ChesneysWoocommerceService.svc/Test";
+     $endpoint = "https://en74kwaytzvmt.x.pipedream.net";
     
      // JSON
      $options = array(
