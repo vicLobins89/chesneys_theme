@@ -114,13 +114,13 @@ function wdm_send_order_to_ext( $order_id ){
 		}
 		
 		$api_items_ches[] = array(
-//			"id" => $product->get_id(),
+			"id" => $key,
 			"name" => $item['name'],
-//			"price" => $product->get_price(),
-//			"product_id" => $product->get_id(),
+			"price" => $product->get_price(),
+			"product_id" => $product->get_id(),
 			"quantity" => $item['qty'],
-//			"sku" => $product->get_sku(),
-//			"subtotal" => $product->get_price(),
+			"sku" => $product->get_sku(),
+			"subtotal" => $product->get_price(),
 			"total" => $item['line_total']
 		);
 	}
