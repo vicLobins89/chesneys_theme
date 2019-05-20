@@ -6,7 +6,7 @@ function wdm_send_order_to_ext( $order_id ){
 	// get order object and order details
 	$order = new WC_Order( $order_id );
 	$order_number = $order->get_order_number();
-//	$order_date = $order->order_date();
+	$order_date = $order->order_date();
 	$order_status = $order->get_status();
 	$order_total = $order->get_total();
 //	$order_discount_total = get_total_discount();
@@ -179,8 +179,8 @@ function wdm_send_order_to_ext( $order_id ){
 //		"currency" => $currency,
 //		"customer_id" => $user_id,
 		"customer_note" => $notes,
-//		"date_created" => $order_date,
-//		"date_created_gmt" => $order_date,
+		"date_created" => $order_date,
+		"date_created_gmt" => $order_date,
 		"dealer_code" => $dealer_code,
 //		"discount_total" => $order_discount_total,
 
