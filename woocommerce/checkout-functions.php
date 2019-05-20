@@ -19,6 +19,8 @@ function wdm_send_order_to_ext( $order_id ){
 	$notes = $order->get_customer_note();
 	$currency = get_woocommerce_currency();
 	$user_id = $order->get_user_id();
+	$current_user = wp_get_current_user();
+	$user_login = $current_user->user_login;
 	$dealer_code = get_post_meta( $order_id, 'Dealer Code', true );
 
 	// set the address fields
@@ -178,6 +180,8 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		"currency" => $currency,
 		"customer_id" => $user_id,
+		"customer_username" => $user_login,
+		
 		"customer_note" => $notes,
 		"date_created" => $order_date,
 		"date_created_gmt" => $order_date,
