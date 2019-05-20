@@ -62,7 +62,7 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
 			$shipping_name = $shipping_item_obj->get_name();
-			if( $shipping_name == 'Deliver, Unpack &amp; Position' || $shipping_name == 'Free shipping' ) {
+			if( $shipping_name == 'Deliver, Unpack &amp; Position' || $shipping_name == 'Free Deliver, Unpack and Position' ) {
 				$service_type = 'Deliver, Unpack & Position';
 			} elseif( $shipping_name == 'Delivery Only' ) {
 				$service_type = 'Delivery Only';
