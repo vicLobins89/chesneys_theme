@@ -181,7 +181,6 @@ function wdm_send_order_to_ext( $order_id ){
 		"currency" => $currency,
 		"customer_id" => $user_id,
 		"customer_username" => $user_login,
-		
 		"customer_note" => $notes,
 		"date_created" => $order_date,
 		"date_created_gmt" => $order_date,
@@ -225,16 +224,16 @@ function wdm_send_order_to_ext( $order_id ){
 }
 
 function send_api_call_ches($data) {
-     $endpoint = "https://core.chesneys.co.uk/wcf/ChesneysWoocommerceService.svc/Test";
-//     $endpoint = "https://en74kwaytzvmt.x.pipedream.net/";
+     $endpoint = "https://core.chesneys.co.uk/wcf/ChesneysWoocommerceService.svc/Order";
     
      // JSON
      $options = array(
        'http' => array(
-           'method'  => 'POST',
-           'content' => json_encode( $data ),
-           'header'=>  "Content-Type: text/plain\r\n" .
-                           "Accept: application/json\r\n"
+			'method'  => 'POST',
+			'content' => json_encode( $data ),
+			'header'=>  "Content-Type: text/plain\r\n" .
+						"Accept: application/json\r\n" .
+						"Accept-Charset: UTF-8\r\n"
            )
      );
  
