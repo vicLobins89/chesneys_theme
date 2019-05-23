@@ -3480,6 +3480,10 @@ POSTS & CONTENT STYLES
 	.filter__row {
 		text-align: left;
 		
+		> .ssf-row {
+			height: auto;
+		}
+		
 		ul {
 			padding: 0;
 			
