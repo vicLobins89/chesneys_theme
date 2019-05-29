@@ -359,9 +359,8 @@ jQuery(document).ready(function($) {
 			var hash = window.location.hash.substring(1);
 			
 			if( hash === 'outdoor-living' ) {
-				$('#filter__services .filter__toggler').addClass('is-toggled');
-				$('input[value="default"]').parents('.ssflabel').find('.icon').removeClass('is-checked');
-				$('input[value="Outdoor_Living"]').parents('.ssflabel').find('.icon').addClass('is-checked');
+				$('#filter__services .filter__toggler').trigger('click');
+				$('input[value="Outdoor_Living"]').trigger('click');
 				$('#applyFilterOptions').trigger('click');
 			}
 		}
