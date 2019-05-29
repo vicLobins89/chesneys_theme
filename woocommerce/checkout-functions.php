@@ -101,7 +101,7 @@ function wdm_send_order_to_ext( $order_id ){
 				'ProductCode' => $product->get_sku(),
 				'Decription' => $item['name'],
 				'NoItems' => $item['qty'],
-				'Weight_kg' =>$product->get_weight().'kg',
+				'Weight_kg' =>$product->get_weight(),
 				'DeliveryType' => 'Home',
 				'ServiceType' => $service_type,
 				'CustomerNotes' => $notes
@@ -218,7 +218,7 @@ function wdm_send_order_to_ext( $order_id ){
 		if( $shipping_name == 'Standard Delivery' ) {
 			send_api_call($api_data);
 		} else {
-			send_csv_mail($csv_data, "Product Order ");
+			send_csv_mail($csv_data, "Product Order ", $order_number, $address['shipping_first_name'] . ' ' . $address['shipping_last_name']);
 		}
 	}
 	
@@ -296,11 +296,15 @@ function create_csv_string($csv_data) {
 
 }
 
-function create_csv($records) {
+function create_csv($records, $number = '') {
 	
 	$today = date("d-m-y");
-
-    $filepath = $today.'_Order.csv';
+	
+	if( !empty($number) ) {
+		$filepath = 'OrderNo_'.$number.'.csv';
+	} else {
+		$filepath = $today.'_Order.csv';
+	}
 
     $fd = fopen($filepath, 'w');
     if($fd === FALSE) {
@@ -317,9 +321,13 @@ function create_csv($records) {
     return $filepath;
 }
 
-function send_csv_mail($csv_data, $body, $to = 'vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, matt@rd-it.com, adam@chesneys.co.uk, stockists@chesneys.co.uk',  $from = 'Chesneys Order <no-reply@chesneys.co.uk>', $subject = 'Product Order from Chesneys.co.uk') {
+function send_csv_mail($csv_data, $body, $order_number = '', $customer = '', $to = 'vic@honey.co.uk, SwiftcareAdmin@Swiftcareuk.com, matt@rd-it.com, adam@chesneys.co.uk, stockists@chesneys.co.uk',  $from = 'Chesneys Order <no-reply@chesneys.co.uk>', $subject = 'Product Order from Chesneys.co.uk') {
 	
 	$today = date("d-m-y");
+	
+	if( !empty($order_number) && !empty($customer) ) {
+		$subject = 'Order Number ' . $order_number . ' - From: ' . $customer;
+	}
 
 	// This will provide plenty adequate entropy
 	$multipartSep = '-----'.md5(time()).'-----';
@@ -333,7 +341,7 @@ function send_csv_mail($csv_data, $body, $to = 'vic@honey.co.uk, SwiftcareAdmin@
 
 	// Make the attachment
 	//$attachment = chunk_split(base64_encode(create_csv_string($csv_data))); 
-	$attachment = create_csv($csv_data);
+	$attachment = create_csv($csv_data, $order_number);
 
 	// Send the email, return the result
 	return wp_mail($to, $subject, $body, $headers, $attachment);
