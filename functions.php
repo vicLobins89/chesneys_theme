@@ -525,7 +525,7 @@ function my_custom_checkout_field( $checkout ) {
 
     echo '</div>';
 }
-add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
+add_action( 'woocommerce_review_order_before_payment', 'my_custom_checkout_field' );
 
 // Save
 function my_custom_checkout_field_update_order_meta( $order_id ) {
