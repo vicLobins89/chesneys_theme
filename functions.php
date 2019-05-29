@@ -558,7 +558,7 @@ function my_custom_checkout_field_display_admin_order_meta($order){
 		$username = $user_data->user_login;
 	}
 	
-	echo '<p><strong>'.__('Referrer name: ').':</strong> ' . get_post_meta( $order->get_id(), 'Referrer name', true ) . '</p>';
+	echo '<p><strong>'.__('Referrer name: ').':</strong> ' . get_post_meta( $order->get_id(), 'Referrer Name', true ) . '</p>';
 	
     echo '<p><strong>'.__('Dealer code: ').':</strong> ' . get_post_meta( $order->get_id(), 'Dealer Code', true ) . '</p>';
 	
