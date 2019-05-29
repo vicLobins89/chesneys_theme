@@ -350,6 +350,7 @@ jQuery(document).ready(function($) {
 				$('#filter__services .filter__toggler').addClass('is-toggled');
 				$('input[value="default"]').parents('.ssflabel').find('.icon').removeClass('is-checked');
 				$('input[value="Outdoor_Living"]').parents('.ssflabel').find('.icon').addClass('is-checked');
+				$('#applyFilterOptions').trigger('click');
 			}
 		}
 	});
