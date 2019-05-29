@@ -19,6 +19,9 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+/** @global WC_Checkout $checkout */
+
 ?>
 <table class="shop_table woocommerce-checkout-review-order-table">
 	<thead>
@@ -111,3 +114,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</tfoot>
 </table>
+
+<?php
+do_action( 'woocommerce_after_order_notes', $checkout );
+?>
