@@ -346,6 +346,8 @@ jQuery(document).ready(function($) {
 		if(window.location.hash) {
 			var hash = window.location.hash.substring(1);
 			
+			console.log(hash);
+			
 			if( hash === 'outdoor-living' ) {
 				console.log(hash);
 			}
