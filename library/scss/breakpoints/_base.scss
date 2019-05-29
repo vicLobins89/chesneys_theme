@@ -3322,6 +3322,10 @@ POSTS & CONTENT STYLES
 	
 	#dealer-code {
 		margin-bottom: 2rem;
+		
+		+ #dealer-code {
+			display: none !important;
+		}
 	}
 	
 	.woocommerce-column__title {
