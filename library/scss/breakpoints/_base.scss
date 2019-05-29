@@ -2678,68 +2678,93 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
-	.cart-collaterals .cart_totals {
-		margin: 2rem 0;
-		
-		h2 {
-			margin-bottom: 2rem;
-		}
-		
-		.cart-heading {
-			th, td {
-				background: $dark-gray;
-				color: $white;
-				font-family: $condensed;
-				text-transform: uppercase;
+	.cart-collaterals {
+		.cross-sells {
+			margin: 2rem 0;
+			
+			h2 {
+				color: $black;
+			}
+			
+			p {
+				display: none;
+			}
+			
+			.price {
+				margin: 0 1rem 1.25rem;
+				font-size: 1.4em;
+				color: $black;
+				font-weight: bold;
+			}
+			
+			.button {
+				width: 100%;
 			}
 		}
 		
-		tr {
-			&:last-child {
+		.cart_totals {
+			margin: 2rem 0;
+
+			h2 {
+				margin-bottom: 2rem;
+			}
+
+			.cart-heading {
 				th, td {
-					border-bottom: none;
+					background: $dark-gray;
+					color: $white;
+					font-family: $condensed;
+					text-transform: uppercase;
 				}
 			}
-			
-			th {
-				width: 10rem;
-				border-right: 1px solid $dark-brown;
-				border-bottom: 1px solid $dark-brown;
-				background: $white;
-				font-size: 1rem;
-			}
-			
-			td {
-				background: $white;
-				border-bottom: 1px solid $dark-brown;
-				font-size: 1rem;
-			}
-		}
-		
-		p {
-			font-size: 1rem;
-		}
-		
-		.order-total {
-			th, td {
-				background: $light-brown;
-			}
-		}
-		
-		.wc-forward {
-			float: right;
-			padding-right: 1rem;
-    		padding-left: 1rem;
-		}
-		
-		ul#shipping_method li {
-			font-size: 1rem;
-			
-			label {
-				font-weight: normal;
 
-				span {
-					font-weight: bold;
+			tr {
+				&:last-child {
+					th, td {
+						border-bottom: none;
+					}
+				}
+
+				th {
+					width: 10rem;
+					border-right: 1px solid $dark-brown;
+					border-bottom: 1px solid $dark-brown;
+					background: $white;
+					font-size: 1rem;
+				}
+
+				td {
+					background: $white;
+					border-bottom: 1px solid $dark-brown;
+					font-size: 1rem;
+				}
+			}
+
+			p {
+				font-size: 1rem;
+			}
+
+			.order-total {
+				th, td {
+					background: $light-brown;
+				}
+			}
+
+			.wc-forward {
+				float: right;
+				padding-right: 1rem;
+				padding-left: 1rem;
+			}
+
+			ul#shipping_method li {
+				font-size: 1rem;
+
+				label {
+					font-weight: normal;
+
+					span {
+						font-weight: bold;
+					}
 				}
 			}
 		}
