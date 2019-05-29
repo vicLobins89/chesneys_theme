@@ -515,13 +515,23 @@ add_filter( 'woocommerce_taxonomy_args_product_tag', 'my_woocommerce_taxonomy_ar
 
 // Adding dealer field
 function my_custom_checkout_field( $checkout ) {
-    echo '<div id="dealer-code"><h3 class="h2 lhs no-after">' . __('Dealer code') . '</h3>';
+    echo '<div id="dealer-code"><h3 class="h2 lhs no-after">' . __('Dealer Code') . '</h3>';
     woocommerce_form_field( 'dealer_code', array(
         'type'          => 'text',
         'class'         => array('my-field-class form-row-wide'),
         'label'         => __('If you have a dealer code enter it below'),
         'placeholder'   => __('Your code'),
         ), $checkout->get_value( 'dealer_code' ));
+
+    echo '</div>';
+	
+    echo '<div id="referrer-name"><h3 class="h2 lhs no-after">' . __('Referrer Name') . '</h3>';
+    woocommerce_form_field( 'referrer_name', array(
+        'type'          => 'text',
+        'class'         => array('my-field-class form-row-wide'),
+        'label'         => __('If you have a dealer code enter it below'),
+        'placeholder'   => __('Name'),
+        ), $checkout->get_value( 'referrer_name' ));
 
     echo '</div>';
 }
@@ -532,6 +542,10 @@ function my_custom_checkout_field_update_order_meta( $order_id ) {
     if ( ! empty( $_POST['dealer_code'] ) ) {
         update_post_meta( $order_id, 'Dealer Code', sanitize_text_field( $_POST['dealer_code'] ) );
     }
+	
+    if ( ! empty( $_POST['referrer_name'] ) ) {
+        update_post_meta( $order_id, 'Referrer Name', sanitize_text_field( $_POST['referrer_name'] ) );
+    }
 }
 add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
 
@@ -539,9 +553,12 @@ add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_
 function my_custom_checkout_field_display_admin_order_meta($order){
 	$userid = $order->get_customer_id();
 	$user_data = get_userdata( $userid );
+	
 	if( !empty($user_data) ) {
 		$username = $user_data->user_login;
 	}
+	
+	echo '<p><strong>'.__('Referrer name: ').':</strong> ' . get_post_meta( $order->get_id(), 'Referrer name', true ) . '</p>';
 	
     echo '<p><strong>'.__('Dealer code: ').':</strong> ' . get_post_meta( $order->get_id(), 'Dealer Code', true ) . '</p>';
 	

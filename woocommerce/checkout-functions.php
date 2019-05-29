@@ -22,6 +22,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$current_user = wp_get_current_user();
 	$user_login = $current_user->user_login;
 	$dealer_code = get_post_meta( $order_id, 'Dealer Code', true );
+	$referrer_name = get_post_meta( $order_id, 'Referrer Name', true );
 
 	// set the address fields
 	$address = array(
@@ -185,6 +186,7 @@ function wdm_send_order_to_ext( $order_id ){
 		"date_created" => $order_date,
 		"date_created_gmt" => $order_date,
 		"dealer_code" => $dealer_code,
+		"referrer_name" => $referrer_name,
 		"discount_total" => $order_discount_total,
 
 		"id" => $order_id,

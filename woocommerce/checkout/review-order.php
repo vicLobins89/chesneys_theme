@@ -112,7 +112,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</tfoot>
 </table>
-
-<?php
-do_action( 'woocommerce_after_order_notes', $checkout );
-?>

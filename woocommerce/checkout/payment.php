@@ -19,6 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 if ( ! is_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
+	do_action( 'woocommerce_after_order_notes', $checkout );
 }
 ?>
 <div id="payment" class="woocommerce-checkout-payment">

@@ -3328,6 +3328,14 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
+	#referrer-name {
+		margin-bottom: 2rem;
+		
+		+ #referrer-name {
+			display: none !important;
+		}
+	}
+	
 	.woocommerce-column__title {
 		@extend .lhs;
 	}
