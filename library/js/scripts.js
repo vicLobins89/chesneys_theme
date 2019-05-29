@@ -342,7 +342,19 @@ jQuery(document).ready(function($) {
 	$(window).on('load', function(){
 		// Filter classes
 		$('li .woof_childs_list_li:has(ul)').addClass('parent_li');
-		
+	});
+	
+	var waitForEl = function(selector, callback) {
+		if (jQuery(selector).length) {
+			callback();
+		} else {
+			setTimeout(function() {
+			  waitForEl(selector, callback);
+			}, 100);
+		}
+	};
+
+	waitForEl('.has-searched', function() {
 		if(window.location.hash) {
 			var hash = window.location.hash.substring(1);
 			
