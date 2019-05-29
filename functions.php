@@ -529,7 +529,7 @@ function my_custom_checkout_field( $checkout ) {
     woocommerce_form_field( 'referrer_name', array(
         'type'          => 'text',
         'class'         => array('my-field-class form-row-wide'),
-        'label'         => __('If you have a dealer code enter it below'),
+        'label'         => __('If someone referred you please enter their name below'),
         'placeholder'   => __('Name'),
         ), $checkout->get_value( 'referrer_name' ));
 
