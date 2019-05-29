@@ -339,6 +339,8 @@ jQuery(document).ready(function($) {
 		}
 	});
 	
+	console.log(window.location.hash);
+	
 	$(window).on('load', function(){
 		// Filter classes
 		$('li .woof_childs_list_li:has(ul)').addClass('parent_li');
