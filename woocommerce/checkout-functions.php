@@ -13,7 +13,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$payment_method = $order->get_payment_method();
 	$payment_method_title = $order->get_payment_method_title();
 	$email = $order->get_billing_email();
-	$phone = $order->get_billing_phone();
+	$phone = (string)$order->get_billing_phone();
 	$shipping_cost = $order->get_total_shipping();
 	$shipping_type = $order->get_shipping_method();
 	$notes = $order->get_customer_note();
