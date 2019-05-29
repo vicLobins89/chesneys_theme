@@ -339,8 +339,6 @@ jQuery(document).ready(function($) {
 		}
 	});
 	
-	console.log(window.location.hash);
-	
 	$(window).on('load', function(){
 		// Filter classes
 		$('li .woof_childs_list_li:has(ul)').addClass('parent_li');
@@ -348,10 +346,10 @@ jQuery(document).ready(function($) {
 		if(window.location.hash) {
 			var hash = window.location.hash.substring(1);
 			
-			console.log(hash);
-			
 			if( hash === 'outdoor-living' ) {
-				console.log(hash);
+				$('#filter__services .filter__toggler').addClass('is-toggled');
+				$('input[value="default"]').parents('.ssflabel').find('.icon').removeClass('is-checked');
+				$('input[value="Outdoor_Living"]').parents('.ssflabel').find('.icon').addClass('is-checked');
 			}
 		}
 	});
