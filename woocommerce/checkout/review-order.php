@@ -116,5 +116,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 </table>
 
 <?php
-do_action( 'woocommerce_after_order_notes', $checkout );
+//do_action( 'woocommerce_after_order_notes', $checkout );
 ?>
