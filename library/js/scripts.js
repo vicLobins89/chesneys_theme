@@ -342,5 +342,13 @@ jQuery(document).ready(function($) {
 	$(window).on('load', function(){
 		// Filter classes
 		$('li .woof_childs_list_li:has(ul)').addClass('parent_li');
+		
+		if(window.location.hash) {
+			var hash = window.location.hash.substring(1);
+			
+			if( hash === 'outdoor-living' ) {
+				console.log(hash);
+			}
+		}
 	});
 });
