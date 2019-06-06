@@ -590,4 +590,15 @@ function iconic_variation_is_visible( $bool, $variation_id, $product_id, $variat
 }
 add_filter( 'woocommerce_variation_is_visible', 'iconic_variation_is_visible', 10, 4 );
 
+
+// related
+
+function jk_related_products_args( $args ) {
+	$args['posts_per_page'] = 2; // 2 related products
+	$args['columns'] = 2; // arranged in 2 columns
+	return $args;
+}
+
+add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args', 20 );
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
