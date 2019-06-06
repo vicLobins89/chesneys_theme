@@ -969,6 +969,16 @@ LAYOUT & GRID STYLES
 	p {
 		margin: 0;
 		padding: 10px 0;
+		
+		&:before {
+			display: inline-block;
+			vertical-align: middle;
+			content: '!';
+			border: 1px solid $white;
+			border-radius: 50%;
+			width: 1rem;
+			height: 1rem;
+		}
 	}
 }
 
