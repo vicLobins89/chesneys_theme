@@ -1930,12 +1930,22 @@ LAYOUT & GRID STYLES
     .module.module-designed-around-you .banner-3 {
       display: inline-block;
       width: 30%;
-      vertical-align: top; }
+      vertical-align: top;
+      padding: 0 1.5rem;
+      position: relative; }
       .module.module-designed-around-you .banner-3 img {
         width: auto;
         height: 35px;
         display: block;
         margin: auto; }
+      .module.module-designed-around-you .banner-3:after {
+        position: absolute;
+        width: 1px;
+        height: 10px;
+        background: #fff;
+        right: 0;
+        top: 0;
+        content: ''; }
     .module.module-designed-around-you h2 {
       text-align: center;
       color: #fff;
@@ -1943,8 +1953,10 @@ LAYOUT & GRID STYLES
       .module.module-designed-around-you h2:after {
         content: none; }
     .module.module-designed-around-you h3 {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       margin: 1rem 0; }
+    .module.module-designed-around-you p {
+      font-size: 1.1rem; }
     .module.module-designed-around-you a {
       color: #fff;
       font-family: "Univers", Helvetica, Arial, sans-serif; }
