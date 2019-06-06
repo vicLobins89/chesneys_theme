@@ -1716,7 +1716,8 @@ LAYOUT & GRID STYLES
   text-align: center;
   color: #fff; }
   .disclaimer p {
-    margin: 10px 0; }
+    margin: 0;
+    padding: 10px0; }
 
 .gray-box {
   padding: 1rem;
