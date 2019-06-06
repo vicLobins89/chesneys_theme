@@ -1245,6 +1245,8 @@ LAYOUT & GRID STYLES
 			
 			@media only screen and (max-width: 767px) {
 				width: 100%;
+				padding: 1rem 1.5rem;
+				border-bottom: 1px solid $white;
 				
 				&:after {
 					content: none;

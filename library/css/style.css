@@ -1950,7 +1950,9 @@ LAYOUT & GRID STYLES
         content: none; }
       @media only screen and (max-width: 767px) {
         .module.module-designed-around-you .banner-3 {
-          width: 100%; }
+          width: 100%;
+          padding: 1rem 1.5rem;
+          border-bottom: 1px solid #fff; }
           .module.module-designed-around-you .banner-3:after {
             content: none; } }
     .module.module-designed-around-you h2 {
