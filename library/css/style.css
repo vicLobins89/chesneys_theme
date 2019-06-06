@@ -1719,6 +1719,10 @@ LAYOUT & GRID STYLES
   opacity: .9;
   text-align: center;
   color: #fff; }
+  @media only screen and (max-width: 767px) {
+    .disclaimer {
+      height: auto;
+      position: relative; } }
   .disclaimer p {
     margin: 0;
     padding: 10px 0; }

@@ -974,6 +974,11 @@ LAYOUT & GRID STYLES
 	text-align: center;
 	color: $white;
 	
+	@media only screen and (max-width: 767px) {
+		height: auto;
+		position: relative;
+	}
+	
 	p {
 		margin: 0;
 		padding: 10px 0;
