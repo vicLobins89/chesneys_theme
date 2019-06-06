@@ -1948,6 +1948,11 @@ LAYOUT & GRID STYLES
         content: ''; }
       .module.module-designed-around-you .banner-3:last-child:after {
         content: none; }
+      @media only screen and (max-width: 767px) {
+        .module.module-designed-around-you .banner-3 {
+          width: 100%; }
+          .module.module-designed-around-you .banner-3:after {
+            content: none; } }
     .module.module-designed-around-you h2 {
       text-align: center;
       color: #fff;

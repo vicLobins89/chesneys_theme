@@ -1242,6 +1242,14 @@ LAYOUT & GRID STYLES
 			&:last-child:after {
 				content: none;
 			}
+			
+			@media only screen and (max-width: 767px) {
+				width: 100%;
+				
+				&:after {
+					content: none;
+				}
+			}
 		}
 		
 		h2 {
