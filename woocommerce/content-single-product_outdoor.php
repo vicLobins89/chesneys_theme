@@ -181,7 +181,8 @@ if( $product->get_upsell_ids() ) {
 	echo '</div>';
 } else {
 	echo '<h2>Other Heat Range Products</h2><p>Compare our HEAT range and find the best model for you</p>';
-	echo do_shortcode('[products orderby="rand" category="outdoor-living" limit="2" columns="2" class="ol-related"]');
+	woocommerce_output_related_products(2, 2, 'rand');
+//	echo do_shortcode('[products orderby="rand" category="outdoor-living" limit="2" columns="2" class="ol-related"]');
 }
 echo '</div></div></section>';
 
