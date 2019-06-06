@@ -1150,6 +1150,10 @@ hr {
     left: 0;
     top: 0;
     border: none !important; }
+  .short-vid .aspect-ratio, .short-vid .vidbg-container {
+    padding-bottom: 40%; }
+    .short-vid .aspect-ratio iframe, .short-vid .aspect-ratio video, .short-vid .vidbg-container iframe, .short-vid .vidbg-container video {
+      height: 140% !important; }
 
 .row .wp-playlist {
   margin: 0;

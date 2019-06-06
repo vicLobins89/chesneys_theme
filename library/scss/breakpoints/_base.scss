@@ -104,6 +104,14 @@ hr {
 		top: 0;
 		border: none !important;
 	}
+	
+	.short-vid & {
+		padding-bottom: 40%;
+		
+		iframe, video {
+			height: 140% !important;
+		}
+	}
 }
 
 .row .wp-playlist {
