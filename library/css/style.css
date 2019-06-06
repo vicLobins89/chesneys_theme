@@ -1933,14 +1933,21 @@ LAYOUT & GRID STYLES
       vertical-align: top; }
       .module.module-designed-around-you .banner-3 img {
         width: auto;
-        height: 75px;
+        height: 35px;
         display: block;
         margin: auto; }
     .module.module-designed-around-you h2 {
       text-align: center;
-      color: #fff; }
+      color: #fff;
+      margin-bottom: 2rem; }
       .module.module-designed-around-you h2:after {
         content: none; }
+    .module.module-designed-around-you h3 {
+      font-size: 1.7rem;
+      margin: 1rem 0; }
+    .module.module-designed-around-you a {
+      color: #fff;
+      font-family: "Univers", Helvetica, Arial, sans-serif; }
   .module .primary-btn, .module .image-link + p, .module .image-link .wp-caption-text, .image-link .module .wp-caption-text, .module .vid-thumb .play, .vid-thumb .module .play, .module .row.related-wrapper .woocommerce-loop-product__title, .row.related-wrapper .module .woocommerce-loop-product__title, .module a.comment-reply-link, .module #submit {
     font-size: 1rem; }
 

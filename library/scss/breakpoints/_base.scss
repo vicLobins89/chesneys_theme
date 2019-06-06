@@ -1222,7 +1222,7 @@ LAYOUT & GRID STYLES
 			
 			img {
 				width: auto;
-				height: 75px;
+				height: 35px;
 				display: block;
 				margin: auto;
 			}
@@ -1231,10 +1231,25 @@ LAYOUT & GRID STYLES
 		h2 {
 			text-align: center;
 			color: $white;
+			margin-bottom: 2rem;
 			
 			&:after {
 				content: none;
 			}
+		}
+		
+		h3 {
+			font-size: 1.7rem;
+    		margin: 1rem 0;
+		}
+		
+		p {
+			
+		}
+		
+		a {
+			color: $white;
+			font-family: $sans-serif;
 		}
 	}
 	
