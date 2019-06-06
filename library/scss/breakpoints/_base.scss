@@ -1232,11 +1232,15 @@ LAYOUT & GRID STYLES
 			&:after {
 				position: absolute;
 				width: 1px;
-				height: 10px;
-				background: $white;
-				right: 0;
-				top: 0;
+				height: 50%;
+				background: #fff;
+				right: -1px;
+				bottom: 18%;
 				content: '';
+			}
+			
+			&:last-child:after {
+				content: none;
 			}
 		}
 		

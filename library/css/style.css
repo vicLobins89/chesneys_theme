@@ -1941,11 +1941,13 @@ LAYOUT & GRID STYLES
       .module.module-designed-around-you .banner-3:after {
         position: absolute;
         width: 1px;
-        height: 10px;
+        height: 50%;
         background: #fff;
-        right: 0;
-        top: 0;
+        right: -1px;
+        bottom: 18%;
         content: ''; }
+      .module.module-designed-around-you .banner-3:last-child:after {
+        content: none; }
     .module.module-designed-around-you h2 {
       text-align: center;
       color: #fff;
