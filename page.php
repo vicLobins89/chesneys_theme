@@ -23,7 +23,10 @@ $acfClass = new CustomACF();
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 								
 							<?php // MAIN CONTENT ?>
-							<?php if( has_post_thumbnail() && is_page() ) : ?>
+							<?php
+							$the_content = get_the_content();
+							if( has_post_thumbnail() && is_page() ) :
+							?>
 								<section class="row entry-content cf top featured" itemprop="articleBody">
 									<div class="cf">
 									<?php the_post_thumbnail('full'); ?>
@@ -35,7 +38,7 @@ $acfClass = new CustomACF();
 									</div>
 								</section>
 
-							<?php else :
+							<?php elseif( !empty($the_content) ) :
 								$layout = get_field('editor_layout');
 								if( $layout === 'hide' ) {
 									echo '<section class="row entry-content cf top" style="display: none;">';
