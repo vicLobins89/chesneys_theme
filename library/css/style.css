@@ -1962,6 +1962,8 @@ LAYOUT & GRID STYLES
           width: 100%;
           padding: 1rem 1.5rem;
           border-bottom: 1px solid #fff; }
+          .module.module-designed-around-you .banner-3:last-child {
+            border-bottom: none; }
           .module.module-designed-around-you .banner-3:after {
             content: none; } }
     .module.module-designed-around-you h2 {

@@ -1261,6 +1261,10 @@ LAYOUT & GRID STYLES
 				padding: 1rem 1.5rem;
 				border-bottom: 1px solid $white;
 				
+				&:last-child {
+					border-bottom: none;
+				}
+				
 				&:after {
 					content: none;
 				}
