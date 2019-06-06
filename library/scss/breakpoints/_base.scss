@@ -1213,11 +1213,19 @@ LAYOUT & GRID STYLES
 	&.module-designed-around-you {
 		background: $teal;
 		color: $white;
+		text-align: center;
 		
 		.banner-3 {
 			display: inline-block;
 			width: 30%;
 			vertical-align: top;
+			
+			img {
+				width: auto;
+				height: 75px;
+				display: block;
+				margin: auto;
+			}
 		}
 		
 		h2 {

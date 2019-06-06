@@ -1925,11 +1925,17 @@ LAYOUT & GRID STYLES
     text-align: center; }
   .module.module-designed-around-you {
     background: #4b858e;
-    color: #fff; }
+    color: #fff;
+    text-align: center; }
     .module.module-designed-around-you .banner-3 {
       display: inline-block;
       width: 30%;
       vertical-align: top; }
+      .module.module-designed-around-you .banner-3 img {
+        width: auto;
+        height: 75px;
+        display: block;
+        margin: auto; }
     .module.module-designed-around-you h2 {
       text-align: center;
       color: #fff; }
