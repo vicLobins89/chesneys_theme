@@ -1736,6 +1736,8 @@ LAYOUT & GRID STYLES
       height: 1.35rem;
       font-size: 1.1rem;
       margin-right: .75rem; }
+  .disclaimer a:hover {
+    text-decoration: underline; }
 
 .gray-box {
   padding: 1rem;
