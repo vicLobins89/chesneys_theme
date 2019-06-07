@@ -516,7 +516,7 @@ add_filter( 'woocommerce_taxonomy_args_product_tag', 'my_woocommerce_taxonomy_ar
 
 // Adding dealer field
 function my_custom_checkout_field( $checkout ) {
-    echo '<div id="dealer-code"><h3 class="h2 lhs no-after">' . __('Dealer Code') . '</h3>';
+   echo '<div id="dealer-code"><h3 class="h2 lhs no-after">' . __('Dealer Code') . '</h3>';
     woocommerce_form_field( 'dealer_code', array(
         'type'          => 'text',
         'class'         => array('my-field-class form-row-wide'),
@@ -537,6 +537,27 @@ function my_custom_checkout_field( $checkout ) {
     echo '</div>';
 }
 add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
+
+
+// Checkbox for delivery
+function bbloomer_add_checkout_privacy_policy() {
+    woocommerce_form_field( 'privacy_policy', array(
+       'type'          => 'checkbox',
+       'class'         => array('form-row privacy'),
+       'label_class'   => array('woocommerce-form__label woocommerce-form__label-for-checkbox checkbox'),
+       'input_class'   => array('woocommerce-form__input woocommerce-form__input-checkbox input-checkbox'),
+       'required'      => true,
+       'label'         => 'I accept and have read the <a href="/your-delivery-explained/">Deliveries Explained</a> document',
+    )); 
+}
+add_action( 'woocommerce_review_order_before_submit', 'bbloomer_add_checkout_privacy_policy', 9 );
+   
+function bbloomer_not_approved_privacy() {
+    if ( ! (int) isset( $_POST['privacy_policy'] ) ) {
+        wc_add_notice( __( 'Please read the Deliveries Explained document ' ), 'error' );
+    }
+}
+add_action( 'woocommerce_checkout_process', 'bbloomer_not_approved_privacy' );
 
 
 // Trade notice
