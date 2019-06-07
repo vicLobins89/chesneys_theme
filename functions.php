@@ -552,7 +552,7 @@ function bbloomer_add_content_specific_email( $order, $sent_to_admin, $plain_tex
         echo '<p style="text-align: center;">The prices quoted here are at full retail price & do not include any delivery charges, your discounted price will be confirmed on your order confirmation.</p>';
     }
 }
-add_action( 'woocommerce_email_before_order_table', 'bbloomer_add_content_specific_email', 20, 4 );
+//add_action( 'woocommerce_email_before_order_table', 'bbloomer_add_content_specific_email', 20, 4 );
 
 // Save
 function my_custom_checkout_field_update_order_meta( $order_id ) {
