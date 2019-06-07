@@ -317,13 +317,12 @@ add_filter( 'wpsl_templates', 'custom_templates' );
 require_once( 'woocommerce/checkout-functions.php' );
 
 // Custom role
-add_role( 'trade', __( 'Trade Stockist 35%' ), array('read' => true,) );
-add_role( 'trade40', __( 'Trade Stockist 40%' ), array('read' => true,) );
+add_role( 'trade', __( 'Trade Stockist' ), array('read' => true,) );
 
 // Gateways for user roles
 function set_trade_gateways( $available_gateways ) {
 	global $woocommerce;
-	if ( current_user_can('trade') || current_user_can('trade40') ) {
+	if ( current_user_can('trade') ) {
 		unset( $available_gateways['epdq_checkout'] );
 	} else {
 		unset( $available_gateways['cod'] );
@@ -334,7 +333,7 @@ add_filter( 'woocommerce_available_payment_gateways', 'set_trade_gateways' );
 
 // Place order button
 function woo_custom_order_button_text() {
-	if( current_user_can('trade') || current_user_can('trade40') ) {
+	if( current_user_can('trade') ) {
 		return __( 'Place order', 'woocommerce' );
 	} else {
 		return __( 'Proceed to payment', 'woocommerce' );
@@ -343,7 +342,7 @@ function woo_custom_order_button_text() {
 add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text' );
 
 // Prices for trade
-add_filter('woocommerce_product_get_price', 'custom_price_trade', 10, 2);
+//add_filter('woocommerce_product_get_price', 'custom_price_trade', 10, 2);
 function custom_price_trade($price, $product) {
     if (!is_user_logged_in()) return $price;
 
