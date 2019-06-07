@@ -86,6 +86,11 @@ hr {
 	width: 100%;
 	background: $text-color;
 	border: none;
+    
+    &.small {
+        height: 1px;
+        width: 3rem;
+    }
 }
 
 .aspect-ratio, .vidbg-container {

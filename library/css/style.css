@@ -1135,6 +1135,9 @@ hr {
   width: 100%;
   background: #142128;
   border: none; }
+  hr.small {
+    height: 1px;
+    width: 3rem; }
 
 .aspect-ratio, .vidbg-container {
   position: relative;
