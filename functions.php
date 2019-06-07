@@ -556,7 +556,7 @@ function bbloomer_add_content_specific_email( $order, $sent_to_admin, $plain_tex
 function remove_add_to_cart_for_user_role(){
     $targeted_user_role = 'trade';
     $user_data = get_userdata(get_current_user_id());
-    if ( !in_array( $targeted_user_role, $user_data->roles ) && is_product_category('stoves') ) {
+    if ( !in_array( $targeted_user_role, $user_data->roles ) && is_product_category('wood') ) {
         remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
         remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
     }
