@@ -558,9 +558,9 @@ function remove_add_to_cart_buttons() {
     if ( in_array( 'trade', (array) $user->roles ) ) {
         
     }
-    if( is_product_category('stoves') || is_shop()) {
-            remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
-        }
+    if( is_product_category('stoves')) {
+        add_filter( 'woocommerce_is_purchasable', '__return_false');
+    }
 }
 add_action( 'woocommerce_after_shop_loop_item', 'remove_add_to_cart_buttons', 1 );
 
