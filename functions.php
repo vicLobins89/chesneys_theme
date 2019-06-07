@@ -547,7 +547,7 @@ function bbloomer_add_checkout_privacy_policy() {
        'label_class'   => array('woocommerce-form__label woocommerce-form__label-for-checkbox checkbox'),
        'input_class'   => array('woocommerce-form__input woocommerce-form__input-checkbox input-checkbox'),
        'required'      => true,
-       'label'         => 'I accept and have read the <a href="/your-delivery-explained/">Deliveries Explained</a> document',
+       'label'         => 'I accept and have read the <a href="/your-delivery-explained/" target="_blank">Deliveries Explained</a> document',
     )); 
 }
 add_action( 'woocommerce_review_order_before_submit', 'bbloomer_add_checkout_privacy_policy', 9 );
