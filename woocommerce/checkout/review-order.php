@@ -20,6 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$user = wp_get_current_user();
+if ( in_array( 'trade', (array) $user->roles ) ) {
+    echo '<p style="text-align: center;">Reflected below are retail prices, as a Chesneys stockist your discount will be processed after the order is made.</p>';
+}
+
 ?>
 <table class="shop_table woocommerce-checkout-review-order-table">
 	<thead>
