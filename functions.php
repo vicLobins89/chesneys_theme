@@ -544,7 +544,7 @@ function trade_notice() {
     }
 }
 add_action( 'woocommerce_before_cart_table', 'trade_notice' );
-add_action( 'woocommerce_checkout_before_order_review', 'trade_notice' );
+add_action( 'woocommerce_checkout_before_customer_details', 'trade_notice' );
 
 // Save
 function my_custom_checkout_field_update_order_meta( $order_id ) {
