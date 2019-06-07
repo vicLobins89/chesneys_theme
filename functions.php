@@ -446,6 +446,8 @@ add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 function bbloomer_price_translatable_suffix( $html, $product ){
 	if ( has_term( 'antique', 'product_cat' )  ) {
 	 	$html .= ' ' . __( 'ex. VAT', 'bbloomer' );
+	} elseif ( has_term( 'outdoor-living', 'product_cat' )  ) {
+	 	$html .= ' ' . __( 'inc. VAT, delivery and white glove set up service', 'bbloomer' );
 	} else {
 		$html .= ' ' . __( 'inc. VAT', 'bbloomer' );
 	}
@@ -537,6 +539,7 @@ function my_custom_checkout_field( $checkout ) {
 add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
 
 
+// Trade notice
 function trade_notice() {
     $user = wp_get_current_user();
     if ( in_array( 'trade', (array) $user->roles ) ) {
@@ -553,6 +556,7 @@ function bbloomer_add_content_specific_email( $order, $sent_to_admin, $plain_tex
     }
 }
 //add_action( 'woocommerce_email_before_order_table', 'bbloomer_add_content_specific_email', 20, 4 );
+
 
 // Save
 function my_custom_checkout_field_update_order_meta( $order_id ) {
