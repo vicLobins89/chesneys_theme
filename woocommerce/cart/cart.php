@@ -17,7 +17,13 @@
 
 defined( 'ABSPATH' ) || exit;
 
-do_action( 'woocommerce_before_cart' ); ?>
+do_action( 'woocommerce_before_cart' ); 
+
+$user = wp_get_current_user();
+if ( in_array( 'trade', (array) $user->roles ) ) {
+    echo '<p class="trade-notice"></p>';
+}
+?>
 
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
