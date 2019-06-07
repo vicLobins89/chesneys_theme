@@ -556,10 +556,11 @@ function bbloomer_add_content_specific_email( $order, $sent_to_admin, $plain_tex
 function remove_add_to_cart_buttons() {
     $user = wp_get_current_user();
     if ( in_array( 'trade', (array) $user->roles ) ) {
-        if( is_product_category('stoves') || is_shop()) {
+        
+    }
+    if( is_product_category('stoves') || is_shop()) {
             remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
         }
-    }
 }
 add_action( 'woocommerce_after_shop_loop_item', 'remove_add_to_cart_buttons', 1 );
 
