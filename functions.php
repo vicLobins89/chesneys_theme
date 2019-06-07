@@ -540,11 +540,28 @@ add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
 function trade_notice() {
     $user = wp_get_current_user();
     if ( in_array( 'trade', (array) $user->roles ) ) {
-        echo '<p style="text-align: center;">Reflected below are retail prices, as a Chesneys stockist your discount will be processed after the order is made.</p>';
+        echo '<p style="text-align: center;">The prices quoted here are at full retail price & do not include any delivery charges, your discounted price will be confirmed on your order confirmation.</p>';
     }
 }
-add_action( 'woocommerce_before_cart_table', 'trade_notice' );
-add_action( 'woocommerce_checkout_before_customer_details', 'trade_notice' );
+//add_action( 'woocommerce_before_cart_table', 'trade_notice' );
+//add_action( 'woocommerce_checkout_before_customer_details', 'trade_notice' );
+ 
+function bbloomer_add_content_specific_email( $order, $sent_to_admin, $plain_text, $email ) {
+   if ( $email->id == 'customer_processing_order' ) {
+       
+   }
+}
+//add_action( 'woocommerce_email_before_order_table', 'bbloomer_add_content_specific_email', 20, 4 );
+
+function remove_add_to_cart_buttons() {
+    $user = wp_get_current_user();
+    if ( in_array( 'trade', (array) $user->roles ) ) {
+        if( is_product_category('stoves') || is_shop()) { 
+            remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
+        }
+    }
+}
+add_action( 'woocommerce_after_shop_loop_item', 'remove_add_to_cart_buttons', 1 );
 
 // Save
 function my_custom_checkout_field_update_order_meta( $order_id ) {
