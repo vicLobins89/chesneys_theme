@@ -547,21 +547,12 @@ function trade_notice() {
 //add_action( 'woocommerce_checkout_before_customer_details', 'trade_notice' );
  
 function bbloomer_add_content_specific_email( $order, $sent_to_admin, $plain_text, $email ) {
-   if ( $email->id == 'customer_processing_order' ) {
-       
-   }
-}
-//add_action( 'woocommerce_email_before_order_table', 'bbloomer_add_content_specific_email', 20, 4 );
-
-function remove_add_to_cart_for_user_role(){
-    $targeted_user_role = 'trade';
-    $user_data = get_userdata(get_current_user_id());
-    if ( !in_array( $targeted_user_role, $user_data->roles ) && is_product_category('wood') ) {
-        remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
-        remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+   $user = wp_get_current_user();
+    if ( in_array( 'trade', (array) $user->roles ) ) {
+        echo '<p style="text-align: center;">The prices quoted here are at full retail price & do not include any delivery charges, your discounted price will be confirmed on your order confirmation.</p>';
     }
 }
-add_action('init', 'remove_add_to_cart_for_user_role');
+add_action( 'woocommerce_email_before_order_table', 'bbloomer_add_content_specific_email', 20, 4 );
 
 // Save
 function my_custom_checkout_field_update_order_meta( $order_id ) {
