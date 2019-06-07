@@ -21,7 +21,7 @@ do_action( 'woocommerce_before_cart' );
 
 $user = wp_get_current_user();
 if ( in_array( 'trade', (array) $user->roles ) ) {
-    echo '<p class="trade-notice"></p>';
+    echo '<p style="text-align: center;">Reflected below are retail prices, as a Chesneys stockist your discount will be processed after the order is made.</p>';
 }
 ?>
 
