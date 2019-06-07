@@ -536,6 +536,16 @@ function my_custom_checkout_field( $checkout ) {
 }
 add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
 
+
+function trade_notice() {
+    $user = wp_get_current_user();
+    if ( in_array( 'trade', (array) $user->roles ) ) {
+        echo '<p style="text-align: center;">Reflected below are retail prices, as a Chesneys stockist your discount will be processed after the order is made.</p>';
+    }
+}
+add_action( 'woocommerce_before_cart_table', 'trade_notice' );
+add_action( 'woocommerce_checkout_before_order_review', 'trade_notice' );
+
 // Save
 function my_custom_checkout_field_update_order_meta( $order_id ) {
     if ( ! empty( $_POST['dealer_code'] ) ) {
