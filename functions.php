@@ -553,16 +553,15 @@ function bbloomer_add_content_specific_email( $order, $sent_to_admin, $plain_tex
 }
 //add_action( 'woocommerce_email_before_order_table', 'bbloomer_add_content_specific_email', 20, 4 );
 
-function remove_add_to_cart_buttons() {
-    $user = wp_get_current_user();
-    if ( in_array( 'trade', (array) $user->roles ) ) {
-        
-    }
-    if( is_product_category('stoves')) {
-        add_filter( 'woocommerce_is_purchasable', '__return_false');
+function remove_add_to_cart_for_user_role(){
+    $targeted_user_role = 'trade';
+    $user_data = get_userdata(get_current_user_id());
+    if ( !in_array( $targeted_user_role, $user_data->roles ) && is_product_category('stoves') ) {
+        remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+        remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
     }
 }
-add_action( 'woocommerce_after_shop_loop_item', 'remove_add_to_cart_buttons', 1 );
+add_action('init', 'remove_add_to_cart_for_user_role');
 
 // Save
 function my_custom_checkout_field_update_order_meta( $order_id ) {
