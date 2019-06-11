@@ -2382,7 +2382,9 @@ HEADER STYLES
       .searchbox div.asl_w .probox .promagnifier .innericon svg,
       .searchbox div.asl_w .probox .prosettings .innericon svg,
       .searchbox div.asl_w .probox .proloading svg {
-        width: 18px; }
+        width: 18px;
+        position: absolute;
+        right: 6px; }
 
 .logo {
   display: block;
