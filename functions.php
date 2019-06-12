@@ -487,34 +487,21 @@ function excerpt($limit) {
 
 function excerpt_in_product_archives() {
 	if( get_the_excerpt() ) {
-		echo '<p>'.the_excerpt().'</p>';
+		echo '<p>'.the_excerpt(12).'</p>';
 	}
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 7 );
 
 function winwar_first_sentence( $string ) {
- 
-//    $sentence = preg_split( '/(\.|!|\?)\s/', $string, 2, PREG_SPLIT_DELIM_CAPTURE );
-//	if( !isset($sentence['1']) ) {
-//		return $sentence['0'];
-//	} else {
-//		return $sentence['0'] . $sentence['1'];
-////	}
-//    
-//     if (count($excerpt) >= 12) {
-//        array_pop($excerpt);
-//        $excerpt = implode(" ",$excerpt).'...';
-//    } else {
-//        $excerpt = implode(" ",$excerpt);
-//    }
-//    
-//    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+    $sentence = preg_split( '/(\.|!|\?)\s/', $string, 2, PREG_SPLIT_DELIM_CAPTURE );
     
-    //echo str_word_count($string) . ' - ';
-    return $string;
- 
+	if( !isset($sentence['1']) ) {
+		return $sentence['0'];
+	} else {
+		return $sentence['0'] . $sentence['1'];
+	}
 }
-add_filter( 'get_the_excerpt', 'winwar_first_sentence', 10, 1 );
+//add_filter( 'get_the_excerpt', 'winwar_first_sentence', 10, 1 );
 
 // Sorting
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
