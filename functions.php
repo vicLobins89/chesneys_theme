@@ -487,7 +487,7 @@ function excerpt($limit) {
 
 function excerpt_in_product_archives() {
 	if( get_the_excerpt() ) {
-		echo '<p>'.the_excerpt(12).'</p>';
+		echo '<p>'.excerpt(12).'</p>';
 	}
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 7 );
