@@ -492,7 +492,7 @@ function excerpt_in_product_archives() {
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 7 );
 
-function winwar_first_sentence( $excerpt ) {
+function winwar_first_sentence( $string ) {
  
 //    $sentence = preg_split( '/(\.|!|\?)\s/', $string, 2, PREG_SPLIT_DELIM_CAPTURE );
 //	if( !isset($sentence['1']) ) {
@@ -509,9 +509,10 @@ function winwar_first_sentence( $excerpt ) {
 //    }
 //    
 //    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
-//    $excerpt = explode(' ', get_the_excerpt());
-//    echo count($excerpt);
-//    return $excerpt;
+    
+    $excerpt = explode(' ', $string);
+    echo count($excerpt);
+    return $string;
  
 }
 add_filter( 'get_the_excerpt', 'winwar_first_sentence', 10, 1 );
