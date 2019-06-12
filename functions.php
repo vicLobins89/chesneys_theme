@@ -509,7 +509,8 @@ function winwar_first_sentence( $excerpt ) {
 //    }
 //    
 //    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
-    //echo count($excerpt);
+    $excerpt = explode(' ', get_the_excerpt());
+    echo count($excerpt);
     return $excerpt;
  
 }
