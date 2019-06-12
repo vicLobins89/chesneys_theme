@@ -499,16 +499,16 @@ function winwar_first_sentence( $excerpt ) {
 //		return $sentence['0'];
 //	} else {
 //		return $sentence['0'] . $sentence['1'];
-//	}
-    
-     if (count($excerpt) >= 12) {
-        array_pop($excerpt);
-        $excerpt = implode(" ",$excerpt).'...';
-    } else {
-        $excerpt = implode(" ",$excerpt);
-    }
-    
-    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+////	}
+//    
+//     if (count($excerpt) >= 12) {
+//        array_pop($excerpt);
+//        $excerpt = implode(" ",$excerpt).'...';
+//    } else {
+//        $excerpt = implode(" ",$excerpt);
+//    }
+//    
+//    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
     return $excerpt;
  
 }
