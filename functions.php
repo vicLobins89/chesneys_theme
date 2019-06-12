@@ -511,7 +511,7 @@ function winwar_first_sentence( $string ) {
 //    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
     
     $excerpt = explode(' ', $string);
-    echo count($excerpt);
+    //echo count($excerpt);
     return $string;
  
 }
