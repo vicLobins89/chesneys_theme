@@ -502,7 +502,7 @@ function winwar_first_sentence( $string ) {
 	}
  
 }
-add_filter( 'get_the_excerpt', 'winwar_first_sentence', 10, 1 );
+add_filter( 'get_the_excerpt', excerpt(12), 10, 1 );
 
 // Sorting
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
