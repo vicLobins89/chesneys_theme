@@ -510,7 +510,7 @@ function winwar_first_sentence( $string ) {
 //    
 //    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
     
-    echo str_word_count($string) . ' - ';
+    //echo str_word_count($string) . ' - ';
     return $string;
  
 }
