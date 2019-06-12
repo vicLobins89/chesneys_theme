@@ -492,22 +492,27 @@ function excerpt_in_product_archives() {
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'excerpt_in_product_archives', 7 );
 
-function winwar_first_sentence( $string ) {
+function winwar_first_sentence( $excerpt ) {
  
-    $sentence = preg_split( '/(\.|!|\?)\s/', $string, 2, PREG_SPLIT_DELIM_CAPTURE );
-	if( !isset($sentence['1']) ) {
-		return $sentence['0'];
-	} else {
-		return $sentence['0'] . $sentence['1'];
-	}
+//    $sentence = preg_split( '/(\.|!|\?)\s/', $string, 2, PREG_SPLIT_DELIM_CAPTURE );
+//	if( !isset($sentence['1']) ) {
+//		return $sentence['0'];
+//	} else {
+//		return $sentence['0'] . $sentence['1'];
+//	}
+    
+     if (count($excerpt) >= 12) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'...';
+    } else {
+        $excerpt = implode(" ",$excerpt);
+    }
+    
+    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+    return $excerpt;
  
 }
-//add_filter( 'get_the_excerpt', 'winwar_first_sentence', 10, 1 );
-
-function custom_excerpt_length( $length ) {
-	return 12;
-}
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+add_filter( 'get_the_excerpt', 'winwar_first_sentence', 10, 1 );
 
 // Sorting
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
