@@ -504,6 +504,11 @@ function winwar_first_sentence( $string ) {
 }
 //add_filter( 'get_the_excerpt', 'winwar_first_sentence', 10, 1 );
 
+function custom_excerpt_length( $length ) {
+	return 12;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 // Sorting
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 
