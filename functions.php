@@ -509,9 +509,9 @@ function winwar_first_sentence( $excerpt ) {
 //    }
 //    
 //    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
-    $excerpt = explode(' ', get_the_excerpt());
-    echo count($excerpt);
-    return $excerpt;
+//    $excerpt = explode(' ', get_the_excerpt());
+//    echo count($excerpt);
+//    return $excerpt;
  
 }
 add_filter( 'get_the_excerpt', 'winwar_first_sentence', 10, 1 );
