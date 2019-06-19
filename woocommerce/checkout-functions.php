@@ -232,8 +232,8 @@ function wdm_send_order_to_ext( $order_id ){
 }
 
 function send_api_call_ches($data) {
-     $endpoint = "https://core.chesneys.co.uk/wcf/ChesneysWoocommerceService.svc/Order";
-//     $endpoint = "https://enmqkl0dlihx.x.pipedream.net";
+//     $endpoint = "https://core.chesneys.co.uk/wcf/ChesneysWoocommerceService.svc/Order";
+     $endpoint = "https://enmqkl0dlihx.x.pipedream.net";
     
      // JSON
      $options = array(
