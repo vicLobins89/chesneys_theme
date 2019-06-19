@@ -69,29 +69,28 @@ function wdm_send_order_to_ext( $order_id ){
 	$csv_data = array();
 	$api_items = array();
 	$api_items_ches = array();
+    
+    $service_type;
+    foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
+        $shipping_name = $shipping_item_obj->get_name();
+        if( $shipping_name == 'Deliver, Unpack &amp; Position' ) {
+            $service_type = 'SWIFTCARE';
+        } elseif( $shipping_name == 'Delivery Only' ) {
+            $service_type = 'CHESNEYS TO DISPATCH';
+        } elseif( $shipping_name == 'Free Deliver, Unpack &amp; Position' ) {
+            $service_type = 'FREE DELVIERY';
+        } elseif( $shipping_name == 'Standard Delivery' ) {
+            $service_type = 'JAMES & JAMES';
+        }
+    }
 	
 	foreach( $items as $key => $item) {
 		$item_id = $item['product_id'];
 		$product = new WC_Product($item_id);
-		$service_type;
-		
-		foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
-			$shipping_name = $shipping_item_obj->get_name();
-			if( $shipping_name == 'Deliver, Unpack &amp; Position' || $shipping_name == 'Free Deliver, Unpack &amp; Position' ) {
-				$service_type = 'Deliver, Unpack & Position';
-			} elseif( $shipping_name == 'Delivery Only' ) {
-				$service_type = 'Delivery Only';
-			}
-		}
 		
 		if( 
-			$product->get_shipping_class() == 'clean-burn' || 
-			$product->get_shipping_class() == 'heat-grill' || 
-			$product->get_shipping_class() == 'garden-gourmet' || 
-			$product->get_shipping_class() == 'garden-party' || 
-			$product->get_shipping_class() == 'terrace-gourmet' || 
 			$product->get_shipping_class() == 'banburry' ||
-			$product->get_shipping_class() == 'banburry-accessories' 
+			($product->get_shipping_class() == 'banburry-accessories' && $service_type = 'SWIFTCARE')
 		) {
 			$csv_data[] = array(
 				'YourOrderRef' => $order_number,
@@ -108,7 +107,7 @@ function wdm_send_order_to_ext( $order_id ){
 				'NoItems' => $item['qty'],
 				'Weight_kg' =>$product->get_weight(),
 				'DeliveryType' => 'Home',
-				'ServiceType' => $service_type,
+				'ServiceType' => 'Deliver, Unpack & Position',
 				'CustomerNotes' => $notes
 			);
 		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
@@ -172,6 +171,8 @@ function wdm_send_order_to_ext( $order_id ){
 	
 	//Chesneys API Data
 	$api_data_ches = array(
+        "shipping_type" => $service_type,
+        
 		"billing_address_1" => $address['billing_address_1'],
 		"billing_address_2" => $address['billing_address_2'],
 		"billing_city" => $address['billing_city'],
@@ -222,7 +223,7 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		if( $shipping_name == 'Standard Delivery' ) {
 			send_api_call($api_data);
-		} else {
+		} elseif( 'Deliver, Unpack &amp; Position' ) {
 			send_csv_mail($csv_data, "Product Order ", $order_number, $address['shipping_first_name'] . ' ' . $address['shipping_last_name']);
 		}
 	}
@@ -232,7 +233,7 @@ function wdm_send_order_to_ext( $order_id ){
 
 function send_api_call_ches($data) {
      $endpoint = "https://core.chesneys.co.uk/wcf/ChesneysWoocommerceService.svc/Order";
-//     $endpoint = "https://enrxhpa23tcl7.x.pipedream.net";
+//     $endpoint = "https://enmqkl0dlihx.x.pipedream.net";
     
      // JSON
      $options = array(
