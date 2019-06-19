@@ -75,15 +75,33 @@ function wdm_send_order_to_ext( $order_id ){
     foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
         $shipping_name = $shipping_item_obj->get_name();
         $sn = $shipping_item_obj->get_name();
-        if( $shipping_name == 'Deliver, Unpack &amp; Position' ) {
-            $service_type = 'SWIFTCARE';
-        } elseif( $shipping_name == 'Delivery Only' ) {
-            $service_type = 'CHESNEYS TO DISPATCH';
-        } elseif( $shipping_name == 'Free Deliver, Unpack &amp; Position' ) {
-            $service_type = 'FREE DELVIERY';
-        } elseif( $shipping_name == 'Standard Delivery' ) {
-            $service_type = 'JAMES & JAMES';
+        
+        switch ($shipping_name) {
+            case "Delivery Only":
+                $service_type = 'CHESNEYS TO DISPATCH';
+                break;
+            case "Deliver, Unpack &amp; Position":
+                $service_type = 'SWIFTCARE';
+                break;
+            case "Free Deliver, Unpack &amp; Position":
+                $service_type = 'FREE DELVIERY';
+                break;
+            case "Standard Delivery":
+                $service_type = 'JAMES & JAMES';
+                break;
+            default:
+                $service_type = 'CHESNEYS TO DISPATCH';
         }
+        
+//        if( $shipping_name == 'Deliver, Unpack &amp; Position' ) {
+//            $service_type = 'SWIFTCARE';
+//        } elseif( $shipping_name == 'Delivery Only' ) {
+//            $service_type = 'CHESNEYS TO DISPATCH';
+//        } elseif( $shipping_name == 'Free Deliver, Unpack &amp; Position' ) {
+//            $service_type = 'FREE DELVIERY';
+//        } elseif( $shipping_name == 'Standard Delivery' ) {
+//            $service_type = 'JAMES & JAMES';
+//        }
     }
 	
 	foreach( $items as $key => $item) {
