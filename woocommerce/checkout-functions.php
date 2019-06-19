@@ -110,7 +110,7 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		if( 
 			$product->get_shipping_class() == 'banburry' ||
-			($product->get_shipping_class() == 'banburry-accessories' && $service_type = 'SWIFTCARE')
+			($product->get_shipping_class() == 'banburry-accessories' && $service_type == 'SWIFTCARE')
 		) {
 			$csv_data[] = array(
 				'YourOrderRef' => $order_number,
