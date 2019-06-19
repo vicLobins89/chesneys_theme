@@ -20,7 +20,11 @@ function wdm_send_order_to_ext( $order_id ){
 	$currency = get_woocommerce_currency();
 	$user_id = $order->get_user_id();
 	$current_user = wp_get_current_user();
-	$user_login = $current_user->user_login;
+    if ( $current_user->exists() ) {
+        $user_login = $current_user->user_login;
+    } else {
+        $user_login = '';
+    }
 	$dealer_code = get_post_meta( $order_id, 'Dealer Code', true );
 	$referrer_name = get_post_meta( $order_id, 'Referrer Name', true );
 
@@ -86,6 +90,7 @@ function wdm_send_order_to_ext( $order_id ){
 			$product->get_shipping_class() == 'garden-gourmet' || 
 			$product->get_shipping_class() == 'garden-party' || 
 			$product->get_shipping_class() == 'terrace-gourmet' || 
+			$product->get_shipping_class() == 'banburry' ||
 			$product->get_shipping_class() == 'banburry-accessories' 
 		) {
 			$csv_data[] = array(
