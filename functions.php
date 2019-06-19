@@ -286,6 +286,8 @@ function fb_change_mce_options( $initArray ) {
 add_filter( 'tiny_mce_before_init', 'fb_change_mce_options' );
 
 // WOOCOMMERCE
+add_filter( 'woocommerce_helper_suppress_admin_notices', '__return_true' );
+
 function mytheme_add_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
