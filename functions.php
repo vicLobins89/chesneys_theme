@@ -321,12 +321,23 @@ require_once( 'woocommerce/checkout-functions.php' );
 // Custom role
 add_role( 'trade', __( 'Trade Stockist' ), array('read' => true,) );
 
+// limit billing city field
 function custom_override_checkout_fields( $fields ) { 
     $fields['billing']['billing_city']['maxlength'] = 30;
     $fields['shipping']['shipping_city']['maxlength'] = 30;
     return $fields;
 }
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+// Detect change order status
+function send_email_on_change( $order_id, $old_status, $new_status ){
+    if( $old_status == "cancelled" && ( $new_status == "pending" || $new_status == "processing" ) ) {
+        $body = 'Order number #' . $order_id . ' was changed to ' . $new_status;
+        
+        wp_mail('vic@honey.co.uk, matt@rd-it.com', 'Order Status Change', $body);
+    }
+}
+add_action( 'woocommerce_order_status_changed', 'send_email_on_change', 99, 3 );
 
 // Gateways for user roles
 function set_trade_gateways( $available_gateways ) {
