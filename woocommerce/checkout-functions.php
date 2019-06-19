@@ -71,6 +71,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$api_items_ches = array();
     
     $service_type = '';
+    $swiftcare_only = false;
     foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
         $shipping_name = $shipping_item_obj->get_name();
         
@@ -80,6 +81,7 @@ function wdm_send_order_to_ext( $order_id ){
                 break;
             case "Deliver, Unpack &amp; Position":
                 $service_type .= 'SWIFTCARE';
+                $swiftcare_only = true;
                 break;
             case "Free Deliver, Unpack &amp; Position":
                 $service_type .= 'FREE DELVIERY';
@@ -98,7 +100,7 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		if( 
 			$product->get_shipping_class() == 'banburry' ||
-			($product->get_shipping_class() == 'banburry-accessories' && $service_type == 'SWIFTCARE')
+			($product->get_shipping_class() == 'banburry-accessories' && $swiftcare_only)
 		) {
 			$csv_data[] = array(
 				'YourOrderRef' => $order_number,
