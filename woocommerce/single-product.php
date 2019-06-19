@@ -39,7 +39,7 @@ get_header( 'shop' ); ?>
 	<?php 
 		while ( have_posts() ) : the_post();
 
-		if ( in_array( 'stove-spares', $categories ) ) {
+		if ( in_array( 'stove-spares', $categories ) || in_array( 'heat-spares', $categories ) ) {
 			wc_get_template_part( 'content', 'single-product_spares' );
 		} elseif ( in_array( 'outdoor-living', $categories ) ) {
 			wc_get_template_part( 'content', 'single-product_outdoor' );
