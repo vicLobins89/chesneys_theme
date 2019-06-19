@@ -29,7 +29,7 @@ foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
     }
 }
 
-if ( $cross_sells || $cat_check ) : ?>
+if ( $cross_sells ) : ?>
 
 	<div class="cross-sells">
 
