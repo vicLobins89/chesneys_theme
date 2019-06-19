@@ -337,7 +337,7 @@ function send_email_on_change( $order_id, $old_status, $new_status ){
     if( $old_status == "cancelled" && ( $new_status == "pending" || $new_status == "processing" ) ) {
         $body = 'Order number #' . $order_id . ' was changed to ' . $new_status;
         
-        wp_mail('vic@honey.co.uk, matt@rd-it.com', 'Order Status Change', $body);
+        wp_mail('matt@rd-it.com', 'Order Status Change', $body);
     }
 }
 add_action( 'woocommerce_order_status_changed', 'send_email_on_change', 99, 3 );
