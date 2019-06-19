@@ -76,16 +76,16 @@ function wdm_send_order_to_ext( $order_id ){
         
         switch ($shipping_name) {
             case "Delivery Only":
-                $service_type .= 'CHESNEYS TO DISPATCH ';
+                $service_type .= 'CHESNEYS TO DISPATCH';
                 break;
             case "Deliver, Unpack &amp; Position":
-                $service_type .= 'SWIFTCARE ';
+                $service_type .= 'SWIFTCARE';
                 break;
             case "Free Deliver, Unpack &amp; Position":
-                $service_type .= 'FREE DELVIERY ';
+                $service_type .= 'FREE DELVIERY';
                 break;
             case "Standard Delivery":
-                $service_type .= 'JAMES & JAMES ';
+                $service_type .= 'JAMES & JAMES';
                 break;
             default:
                 $service_type = '';
