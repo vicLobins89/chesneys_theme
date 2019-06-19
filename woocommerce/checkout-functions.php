@@ -71,8 +71,10 @@ function wdm_send_order_to_ext( $order_id ){
 	$api_items_ches = array();
     
     $service_type;
+    $sn;
     foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
         $shipping_name = $shipping_item_obj->get_name();
+        $sn = $shipping_item_obj->get_name();
         if( $shipping_name == 'Deliver, Unpack &amp; Position' ) {
             $service_type = 'SWIFTCARE';
         } elseif( $shipping_name == 'Delivery Only' ) {
@@ -171,7 +173,7 @@ function wdm_send_order_to_ext( $order_id ){
 	
 	//Chesneys API Data
 	$api_data_ches = array(
-        "shipping_type" => $service_type,
+        "shipping_type" => $service_type . $sn,
         
 		"billing_address_1" => $address['billing_address_1'],
 		"billing_address_2" => $address['billing_address_2'],
