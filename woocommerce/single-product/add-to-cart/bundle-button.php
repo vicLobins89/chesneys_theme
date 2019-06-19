@@ -18,4 +18,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-?><button type="submit" class="single_add_to_cart_button button alt"><?php echo $product->single_add_to_cart_text(); ?></button>
+?><button type="submit" class="secondary-btn"><?php echo $product->single_add_to_cart_text(); ?></button>
