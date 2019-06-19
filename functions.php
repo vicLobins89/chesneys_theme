@@ -331,6 +331,9 @@ add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
 // Detect change order status
 function send_email_on_change( $order_id, $old_status, $new_status ){
+    $order = new WC_Order($order_id);
+    $order_id = trim(str_replace('#', '', $order->get_order_number()));
+    
     if( $old_status == "cancelled" && ( $new_status == "pending" || $new_status == "processing" ) ) {
         $body = 'Order number #' . $order_id . ' was changed to ' . $new_status;
         
