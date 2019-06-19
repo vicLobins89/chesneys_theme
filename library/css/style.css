@@ -1491,6 +1491,8 @@ LAYOUT & GRID STYLES
       .row.outdoor-product-single .short-desc form.cart .woocommerce-checkout button[name=login],
       .woocommerce-checkout .row.outdoor-product-single .short-desc form.cart button[name=login] {
         margin-left: 1rem; }
+    .row.outdoor-product-single .short-desc .bundled_product_excerpt {
+      display: none; }
 .row.product-info-wrapper {
   padding-bottom: 1rem;
   padding-top: 0; }
