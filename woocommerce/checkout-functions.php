@@ -232,9 +232,7 @@ function wdm_send_order_to_ext( $order_id ){
 }
 
 function send_api_call_ches($data) {
-     $endpoint = "https://core.chesneys.co.uk/wcf/ChesneysWoocommerceService.svc/Order";
-//     $endpoint = "https://enmqkl0dlihx.x.pipedream.net";
-    
+     $endpoint = array("https://core.chesneys.co.uk/wcf/ChesneysWoocommerceService.svc/Order", "https://enmqkl0dlihx.x.pipedream.net");
      // JSON
      $options = array(
        'http' => array(
@@ -246,15 +244,17 @@ function send_api_call_ches($data) {
            )
      );
  
-     $context  = stream_context_create( $options );
-     $result = file_get_contents( $endpoint, false, $context );
-     $response = json_decode( $result );
- 
-     // the handle response
-     if ($response->success != 1) {
-           print_r($response);
-           return;
-     }
+    $context  = stream_context_create( $options );
+    foreach ($endpoint as $ep) {
+        $result = file_get_contents( $ep, false, $context );
+    }
+    $response = json_decode( $result );
+
+    // the handle response
+    if ($response->success != 1) {
+       print_r($response);
+       return;
+    }
 }
 
 function send_api_call($data) {
