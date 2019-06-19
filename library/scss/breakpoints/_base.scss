@@ -555,6 +555,14 @@ LAYOUT & GRID STYLES
         span.bundle-price {
             display: none;
         }
+        
+        .woocommerce-product-gallery {
+            background: none !important;
+            
+            img {
+                visibility: visible !important;
+            }
+        }
     }
 	
 	&.outdoor-product-single {
