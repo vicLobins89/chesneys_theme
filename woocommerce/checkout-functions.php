@@ -92,16 +92,6 @@ function wdm_send_order_to_ext( $order_id ){
             default:
                 $service_type = 'CHESNEYS TO DISPATCH';
         }
-        
-//        if( $shipping_name == 'Deliver, Unpack &amp; Position' ) {
-//            $service_type = 'SWIFTCARE';
-//        } elseif( $shipping_name == 'Delivery Only' ) {
-//            $service_type = 'CHESNEYS TO DISPATCH';
-//        } elseif( $shipping_name == 'Free Deliver, Unpack &amp; Position' ) {
-//            $service_type = 'FREE DELVIERY';
-//        } elseif( $shipping_name == 'Standard Delivery' ) {
-//            $service_type = 'JAMES & JAMES';
-//        }
     }
 	
 	foreach( $items as $key => $item) {
