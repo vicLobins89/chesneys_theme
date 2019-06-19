@@ -231,7 +231,7 @@ function wdm_send_order_to_ext( $order_id ){
 		
 		if( $shipping_name == 'Standard Delivery' ) {
 			send_api_call($api_data);
-		} elseif( 'Deliver, Unpack &amp; Position' ) {
+		} elseif( $shipping_name == 'Deliver, Unpack &amp; Position' ) {
 			send_csv_mail($csv_data, "Product Order ", $order_number, $address['shipping_first_name'] . ' ' . $address['shipping_last_name']);
 		}
 	}
