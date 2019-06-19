@@ -550,6 +550,12 @@ LAYOUT & GRID STYLES
 			}
 		}
 	}
+    
+    &.product-type-bundle {
+        span.bundle-price {
+            display: none;
+        }
+    }
 	
 	&.outdoor-product-single {
 		padding: 0 0 1rem;

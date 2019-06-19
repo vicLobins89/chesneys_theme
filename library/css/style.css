@@ -1434,6 +1434,8 @@ LAYOUT & GRID STYLES
       margin: 0 4% 2.992em 0; }
       .row.spares-shop-loop ul.products[class*=columns-] li.product:nth-child(even) {
         margin-right: 0; } }
+.row.product-type-bundle span.bundle-price {
+  display: none; }
 .row.outdoor-product-single {
   padding: 0 0 1rem; }
   .row.outdoor-product-single .col-12 {
