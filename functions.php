@@ -448,7 +448,7 @@ add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 function bbloomer_price_translatable_suffix( $html, $product ){
 	if ( has_term( 'antique', 'product_cat' )  ) {
 	 	$html .= ' ' . __( 'ex. VAT', 'bbloomer' );
-	} elseif ( has_term( 'outdoor-living', 'product_cat' )  ) {
+	} elseif ( has_term( 'outdoor-living', 'product_cat' ) && !is_product(8415)  ) {
 	 	$html .= ' ' . __( 'inc. VAT, delivery<br>and white glove set up service', 'bbloomer' );
 	} else {
 		$html .= ' ' . __( 'inc. VAT', 'bbloomer' );
