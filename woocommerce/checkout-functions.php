@@ -173,7 +173,7 @@ function wdm_send_order_to_ext( $order_id ){
 	
 	//Chesneys API Data
 	$api_data_ches = array(
-        "shipping_type" => $service_type . $sn,
+        "shipping_type" => $service_type . ' ' . $sn,
         
 		"billing_address_1" => $address['billing_address_1'],
 		"billing_address_2" => $address['billing_address_2'],
