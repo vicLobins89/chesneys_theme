@@ -321,6 +321,13 @@ require_once( 'woocommerce/checkout-functions.php' );
 // Custom role
 add_role( 'trade', __( 'Trade Stockist' ), array('read' => true,) );
 
+function custom_override_checkout_fields( $fields ) { 
+    $fields['billing']['billing_city']['maxlength'] = 30;
+    $fields['shipping']['shipping_city']['maxlength'] = 30;
+    return $fields;
+}
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
 // Gateways for user roles
 function set_trade_gateways( $available_gateways ) {
 	global $woocommerce;
