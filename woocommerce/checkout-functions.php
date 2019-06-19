@@ -20,7 +20,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$currency = get_woocommerce_currency();
 	$user_id = $order->get_user_id();
 	$current_user = wp_get_current_user();
-    if ( $current_user->exists() ) {
+    if( is_user_logged_in() ) {
         $user_login = $current_user->user_login;
     } else {
         $user_login = '';
