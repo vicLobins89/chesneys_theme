@@ -38,11 +38,11 @@ if ( $cross_sells || $cat_check ) : ?>
 		<?php woocommerce_product_loop_start(); ?>
         
             <?php
-                if( $cat_check ) {
-                    $starter_object = get_post( 8415 );
-                    setup_postdata( $GLOBALS['post'] =& $starter_object );
-                    wc_get_template_part( 'content', 'product' );
-                }
+//                if( $cat_check ) {
+//                    $starter_object = get_post( 8415 );
+//                    setup_postdata( $GLOBALS['post'] =& $starter_object );
+//                    wc_get_template_part( 'content', 'product' );
+//                }
              ?>
 
 			<?php foreach ( $cross_sells as $cross_sell ) : ?>
