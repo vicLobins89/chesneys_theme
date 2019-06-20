@@ -27,6 +27,7 @@ jQuery(document).ready(function($) {
     
     //Filter click action
     $('#woof_results_by_ajax a.page-numbers').on('click', function(){
+        console.log('clicked');
         $('html, body').animate({
             scrollTop: $(".featured.top h2").offset().top
         }, 500);
