@@ -481,6 +481,9 @@ POSTS & CONTENT STYLES
       .us-site.product_parent_cat_mantels .featured.top > .cf .featured-copy h1:after, .us-site.product_parent_cat_mantels .featured.top > .cf .featured-copy .h2:after {
         margin-left: -1.5rem;
         left: 50%; }
+      .us-site.product_parent_cat_mantels .featured.top > .cf .featured-copy p {
+        width: 60%;
+        margin: auto; }
     .us-site.product_parent_cat_mantels .featured.top > .cf img {
       order: 2; }
     .us-site.product_parent_cat_mantels .featured.top > .cf .custom-content {
