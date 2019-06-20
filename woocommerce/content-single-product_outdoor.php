@@ -180,8 +180,8 @@ if( $product->get_upsell_ids() ) {
 	woocommerce_upsell_display(2, 2, 'menu_order', 'asc');
 	echo '</div>';
 } else {
-	echo '<h2>Other Heat Range Products</h2><p>Compare our HEAT range and find the best model for you</p>';
-	woocommerce_output_related_products(4, 3, 'rand');
+	//echo '<h2>Other Heat Range Products</h2><p>Compare our HEAT range and find the best model for you</p>';
+	//woocommerce_output_related_products(2, 2, 'rand');
 }
 echo '</div></div></section>';
 
