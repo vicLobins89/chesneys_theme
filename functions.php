@@ -660,7 +660,6 @@ add_filter( 'woocommerce_variation_is_visible', 'iconic_variation_is_visible', 1
 function jk_related_products_args( $args ) {
 	$args['posts_per_page'] = 2;
 	$args['columns'] = 2;
-	$args['post__not_in'] = array(8415);
 	return $args;
 }
 
