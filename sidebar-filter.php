@@ -1,4 +1,4 @@
-<div id="filter" class="sidebar col-3 cf" role="complementary">
+<div id="filter" class="sidebar col-3 cf" role="complementary" style="display: none;">
 
 	<?php if ( is_active_sidebar( 'filter' ) ) : ?>
 
