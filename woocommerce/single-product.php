@@ -41,7 +41,7 @@ get_header( 'shop' ); ?>
 
 		if ( in_array( 'stove-spares', $categories ) || in_array( 'heat-spares', $categories ) ) {
 			wc_get_template_part( 'content', 'single-product_spares' );
-		} elseif ( in_array( 'outdoor-living', $categories ) || in_array( 'item-packs', $categories ) ) {
+		} elseif ( in_array( 'outdoor-living', $categories ) ) {
 			wc_get_template_part( 'content', 'single-product_outdoor' );
 		} else {
 			wc_get_template_part( 'content', 'single-product' );
