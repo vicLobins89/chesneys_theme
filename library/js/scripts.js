@@ -24,6 +24,11 @@ jQuery(document).ready(function($) {
 	"use strict";
 	
 	viewport = updateViewportDimensions();
+    
+    //Filter click action
+    $('#woof_results_by_ajax a.page-numbers').click(function(){
+        console.log('clicked');
+    });
 	
 	// Geo close button
 	$('#geo_popup .close-geo').click(function(e){
