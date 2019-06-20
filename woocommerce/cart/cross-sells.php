@@ -57,6 +57,10 @@ if ( $cross_sells ) : ?>
 			<?php endforeach; ?>
 
 		<?php woocommerce_product_loop_end(); ?>
+        
+        <?php if( $cat_check ) : ?>
+            <a href="<?php echo home_url('outdoor/accessories'); ?>">Click here to see more Accessories</a>
+        <?php endif; ?>
 
 	</div>
 
