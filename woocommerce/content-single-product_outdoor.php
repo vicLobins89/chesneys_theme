@@ -173,6 +173,7 @@ endif;  // close section ?>
  * @hooked woocommerce_upsell_display - 15
  * @hooked woocommerce_output_related_products - 20
  */
+
 echo '<section class="entry-content row cf related-wrapper"><div class="cf"><div class="col-12">';
 if( $product->get_upsell_ids() ) {
 	echo '<div class="ol-related">';
