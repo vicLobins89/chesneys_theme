@@ -27,8 +27,9 @@ jQuery(document).ready(function($) {
     
     //Add class to tags
     var tagName = $('input.woof_checkbox_term');
-    console.log(tagName.attr('name'));
-    tagName.parent().addClass(tagName.attr('name'));
+    tagName.each(function(){
+       $(this).parent().addClass($(this).attr('name')); 
+    });
 	
 	// Geo close button
 	$('#geo_popup .close-geo').click(function(e){
