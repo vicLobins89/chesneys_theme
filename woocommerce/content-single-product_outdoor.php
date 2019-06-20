@@ -185,6 +185,14 @@ if( $product->get_upsell_ids() ) {
 }
 echo '</div></div></section>';
 
+add_filter( 'woocommerce_related_products', 'exclude_related_products', 10, 3 );
+function exclude_related_products( $related_posts, $product_id, $args ){
+    // HERE set your product IDs to exclude
+    $exclude_ids = array('8415');
+
+    return array_diff( $related_posts, $exclude_ids );
+}
+
 //do_action( 'woocommerce_after_single_product_summary' );
 ?>
 
