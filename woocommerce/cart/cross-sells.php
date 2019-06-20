@@ -59,7 +59,7 @@ if ( $cross_sells ) : ?>
 		<?php woocommerce_product_loop_end(); ?>
         
         <?php if( $cat_check ) : ?>
-            <a href="<?php echo home_url('outdoor/accessories'); ?>">Click here to see more Accessories</a>
+            <a href="<?php echo home_url('outdoor/accessories'); ?>">Click here to see our HEAT Accessories Range</a>
         <?php endif; ?>
 
 	</div>
