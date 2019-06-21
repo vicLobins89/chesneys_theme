@@ -548,12 +548,12 @@ function my_custom_checkout_field( $checkout ) {
 
     echo '</div>';
 	
-    echo '<div id="referrer-name"><h3 class="h2 lhs no-after">' . __('Referrer Name') . '</h3>';
+    echo '<div id="referrer-name"><h3 class="h2 lhs no-after">' . __('Referrer Reference') . '</h3>';
     woocommerce_form_field( 'referrer_name', array(
         'type'          => 'text',
         'class'         => array('my-field-class form-row-wide'),
-        'label'         => __('If someone referred you please enter their full name below'),
-        'placeholder'   => __('Name'),
+        'label'         => __('If someone referred you, please enter their customer number below'),
+        'placeholder'   => __('Referrer'),
         ), $checkout->get_value( 'referrer_name' ));
 
     echo '</div>';
