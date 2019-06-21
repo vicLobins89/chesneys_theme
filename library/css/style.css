@@ -3065,6 +3065,11 @@ POSTS & CONTENT STYLES
 #woof_results_by_ajax .button.product_type_simple {
   display: none; }
 
+.woocommerce #referrer_name_field label {
+  line-height: 1.3;
+  margin-bottom: 10px; }
+  .woocommerce #referrer_name_field label .optional {
+    display: none; }
 .woocommerce .woocommerce-variation-add-to-cart {
   display: none !important; }
 .woocommerce span.onsale {
