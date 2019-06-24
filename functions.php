@@ -665,4 +665,24 @@ function jk_related_products_args( $args ) {
 
 add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args', 20 );
 
+
+// Random sort
+function custom_woocommerce_get_catalog_ordering_args( $args ) {
+  $orderby_value = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
+	if ( 'random_list' == $orderby_value ) {
+		$args['orderby'] = 'rand';
+		$args['order'] = '';
+		$args['meta_key'] = '';
+	}
+	return $args;
+}
+add_filter( 'woocommerce_get_catalog_ordering_args', 'custom_woocommerce_get_catalog_ordering_args' );
+
+function custom_woocommerce_catalog_orderby( $sortby ) {
+	$sortby['random_list'] = 'Random';
+	return $sortby;
+}
+add_filter( 'woocommerce_default_catalog_orderby_options', 'custom_woocommerce_catalog_orderby' );
+add_filter( 'woocommerce_catalog_orderby', 'custom_woocommerce_catalog_orderby' );
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
