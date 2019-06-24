@@ -503,7 +503,7 @@ LAYOUT & GRID STYLES
 		}
 		
 		.case_study,
-		.post {
+		.post {            
 			&:nth-child(3n+1) {
 				clear: both;
 			}
@@ -516,6 +516,12 @@ LAYOUT & GRID STYLES
 				width: 100%;
 				height: auto;
 			}
+            
+            .us-site & {
+                h3, .copy-l {
+                    display: none;
+                }
+            }
 		}
 	}
 	
