@@ -69,7 +69,7 @@ if ( woocommerce_product_loop() ) {
             is_product_category(16) ||
             term_is_ancestor_of(96, $term_id, 'product_cat') || 
             is_product_category(96) ||
-            term_is_ancestor_of(68, $term_id, 'product_cat') || 
+            is_product_category(47) ||
             is_product_category(68)
         ) 
     ) {
