@@ -64,8 +64,8 @@ if ( woocommerce_product_loop() ) {
 		echo '<div class="col-12">';
 	} elseif( $blog_id == 5 ) {
 		get_sidebar('filter');
-//		echo '<div class="col-9">';
-		echo '<div class="col-12">';
+		echo '<div class="col-9">';
+//		echo '<div class="col-12">';
 	} else {
 		echo '<div class="col-12">';
 	}
