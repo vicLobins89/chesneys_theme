@@ -2666,9 +2666,11 @@ POSTS & CONTENT STYLES
     .us-site #folio_header .widget_text, .us-site #news_header .widget_text {
       text-align: center;
       padding: 2rem;
-      margin: 0 0 0 -1.5rem;
-      left: 50%;
+      margin: 0;
       background: #e5e5e5; }
+      .us-site #folio_header .widget_text h2:after, .us-site #news_header .widget_text h2:after {
+        margin-left: -1.5rem;
+        left: 50%; }
   #folio_header .widget_media_image,
   #news_header .widget_media_image {
     margin: 0;
