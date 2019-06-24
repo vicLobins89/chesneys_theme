@@ -65,7 +65,7 @@ if ( woocommerce_product_loop() ) {
 	} elseif(
         $blog_id == 5 && 
         ( 
-            term_is_ancestor_of(16, $term_id, 'product_cat') || 
+            ( term_is_ancestor_of(16, $term_id, 'product_cat') && !is_product_category(702) ) || 
             is_product_category(16) ||
             term_is_ancestor_of(96, $term_id, 'product_cat') || 
             is_product_category(96) ||
