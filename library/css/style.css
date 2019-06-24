@@ -2663,6 +2663,9 @@ POSTS & CONTENT STYLES
       padding-top: 0; }
   #folio_header .widget_text, #news_header .widget_text {
     margin: 0; }
+    .us-site #folio_header .widget_text, .us-site #news_header .widget_text {
+      text-align: center;
+      background: #53575a; }
   #folio_header .widget_media_image,
   #news_header .widget_media_image {
     margin: 0;

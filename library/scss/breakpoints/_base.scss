@@ -2274,6 +2274,11 @@ POSTS & CONTENT STYLES
         .uk-site & {
             @extend .featured-copy;
         }
+		
+        .us-site & {
+            text-align: center;
+            background: $gray;
+        }
 	}
 	
 	.widget_media_image {
