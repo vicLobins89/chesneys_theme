@@ -2270,7 +2270,10 @@ POSTS & CONTENT STYLES
 	
 	.widget_text {
 		margin: 0;
-		@extend .featured-copy;
+		
+        .uk-site & {
+            @extend .featured-copy;
+        }
 	}
 	
 	.widget_media_image {
