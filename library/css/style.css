@@ -1444,6 +1444,8 @@ LAYOUT & GRID STYLES
   background: none !important; }
   .row.product-type-bundle .woocommerce-product-gallery img {
     visibility: visible !important; }
+.row tr.bundled_table_item {
+  display: none; }
 .row.outdoor-product-single {
   padding: 0 0 1rem; }
   .row.outdoor-product-single .col-12 {

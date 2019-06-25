@@ -570,6 +570,10 @@ LAYOUT & GRID STYLES
             }
         }
     }
+    
+    tr.bundled_table_item {
+        display: none;
+    }
 	
 	&.outdoor-product-single {
 		padding: 0 0 1rem;

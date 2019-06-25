@@ -193,33 +193,6 @@ jQuery(document).ready(function($) {
 		$(this).next('.wp-caption-text').attr('onclick','window.location="'+url+'";');
 	});
 	
-	// Fix breadcrumb link
-	/*$('.uk-site .menu-breadcrumb a:contains("Fireplaces")').each(function(){
-		var oldUrl = $(this).attr("href");
-		var newUrl = oldUrl.replace("/category/fireplaces", "/fireplaces");
-		$(this).attr("href", newUrl);
-	});
-	$('.uk-site .menu-breadcrumb a:contains("Stoves")').each(function(){
-		var oldUrl = $(this).attr("href");
-		var newUrl = oldUrl.replace("/category/stoves", "/stoves");
-		$(this).attr("href", newUrl);
-	});
-	$('.uk-site .menu-breadcrumb a:contains("Outdoor Living")').each(function(){
-		var oldUrl = $(this).attr("href");
-		var newUrl = oldUrl.replace("/category/outdoor-living", "/outdoor");
-		$(this).attr("href", newUrl);
-	});
-	$('.uk-site .menu-breadcrumb a:contains("Heat Range")').each(function(){
-		var oldUrl = $(this).attr("href");
-		var newUrl = oldUrl.replace("/category/outdoor-living/heat-range", "/outdoor/shop");
-		$(this).attr("href", newUrl);
-	});
-	$('.uk-site .menu-breadcrumb a:contains("Gourmet Range")').each(function(){
-		var oldUrl = $(this).attr("href");
-		var newUrl = oldUrl.replace("/category/outdoor-living/gourmet-range", "/outdoor/shop");
-		$(this).attr("href", newUrl);
-	});*/
-	
 	// Search dropdown fix
 	$('.postform option[value="post"]').text('News');
 	
