@@ -3288,16 +3288,18 @@ POSTS & CONTENT STYLES
 				position: relative;
 				
 				&:after {
-					content: 'Explore our collection of bespoke fire surrounds at special prices, whilst stocks last.';
-					display: block;
-					position: absolute;
-					top: 23.5%;
-					width: calc(100% - 2rem);
-					color: $white;
-					text-align: center;
-					padding: 1rem;
-					font-size: 1.2rem;
-					background: rgba(0,0,0,0.8);
+                    .uk-site & {
+                        content: 'Explore our collection of bespoke fire surrounds at special prices, whilst stocks last.';
+                        display: block;
+                        position: absolute;
+                        top: 23.5%;
+                        width: calc(100% - 2rem);
+                        color: $white;
+                        text-align: center;
+                        padding: 1rem;
+                        font-size: 1.2rem;
+                        background: rgba(0,0,0,0.8);
+                    }
 				}
 				
 				img {

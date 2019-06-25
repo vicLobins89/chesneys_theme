@@ -3345,7 +3345,7 @@ POSTS & CONTENT STYLES
     visibility: visible; }
 .woocommerce.term-period-reproductions ul.products li:last-child a {
   position: relative; }
-  .woocommerce.term-period-reproductions ul.products li:last-child a:after {
+  .uk-site .woocommerce.term-period-reproductions ul.products li:last-child a:after {
     content: 'Explore our collection of bespoke fire surrounds at special prices, whilst stocks last.';
     display: block;
     position: absolute;
