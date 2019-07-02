@@ -3091,6 +3091,7 @@ POSTS & CONTENT STYLES
   background-color: #4b858e; }
 .woocommerce .woocommerce-pagination {
   margin: 1rem 0; }
+.woocommerce p.stock,
 .woocommerce .out-of-stock {
   display: none !important; }
 .woocommerce .woocommerce-info {
