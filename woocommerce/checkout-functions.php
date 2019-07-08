@@ -124,7 +124,7 @@ function wdm_send_order_to_ext( $order_id ){
 			$api_items[] = array(
 				'client_ref' => $product->get_sku(),
 				'quantity' => $item['qty'],
-				'price' => $item['line_total'],
+				'price' => $product->get_price(),
 			);
 		}
 		
