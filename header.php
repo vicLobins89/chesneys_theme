@@ -53,6 +53,15 @@
 		$options = get_option('rh_settings');
 		$blog_id = get_current_blog_id();
 		$blog_class = ( $blog_id == 1 ) ? 'uk-site' : 'us-site';
+        
+        global $wp;
+        $current_url = add_query_arg( $wp->query_vars, home_url( $wp->request ) );
+        if( $blog_id == 1 ) {
+            echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-gb" />';
+        } else {
+            $current_url = str_replace('.co.uk', '.com', $current_url);
+            echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-us" />';
+        }
 		?>
 
 	</head>
