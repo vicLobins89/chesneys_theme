@@ -57,10 +57,11 @@
         global $wp;
         $current_url = add_query_arg( $wp->query_vars, home_url( $wp->request ) );
         if( $blog_id == 1 ) {
-            echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-gb" />';
-        } else {
             $current_url = str_replace('.co.uk', '.com', $current_url);
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-us" />';
+        } else {
+            $current_url = str_replace('.com', '.co.uk', $current_url);
+            echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-gb" />';
         }
 		?>
 
