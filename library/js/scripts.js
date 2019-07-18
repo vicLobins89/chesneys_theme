@@ -25,7 +25,9 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
     
-    $('.pdf-sheet').click(function(){
+    $('.pdf-sheet').click(function(e){
+        e.preventDefault();
+        
         var doc = new jsPDF();
 
         doc.text('Hello world!', 10, 10);
