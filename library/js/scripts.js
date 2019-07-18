@@ -290,26 +290,39 @@ jQuery(document).ready(function($) {
 				$('#nav_widget').removeClass('active');
 			});
             
-            var menuTrigger = menuTrigger = 'click';
-            if( $('body').hasClass('us-site') ) {
-                menuTrigger = 'mouseover';
+            if( $('body').hasClass('uk-site') ) {
+                $('.primary-nav > li.menu-item-has-children').on('click', function(e){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $('.primary-nav > li.menu-item-has-children').not(this).removeClass('active');
+                    $(this).toggleClass('active');
+                    if( $(this).hasClass('active') ) {
+                        $('#nav_widget').addClass('active');
+                    } else {
+                        $('#nav_widget').removeClass('active');
+                    }
+                });
+
+                $('.primary-nav > li.menu-item-has-children li').on('click', function(e){
+                    e.stopPropagation();
+                });
+            } else {
+                $('.primary-nav > li.menu-item-has-children').on('click', function(e){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $('.primary-nav > li.menu-item-has-children').not(this).removeClass('active');
+                    $(this).toggleClass('active');
+                    if( $(this).hasClass('active') ) {
+                        $('#nav_widget').addClass('active');
+                    } else {
+                        $('#nav_widget').removeClass('active');
+                    }
+                });
+
+                $('.primary-nav > li.menu-item-has-children li').on('click', function(e){
+                    e.stopPropagation();
+                });
             }
-			
-			$('.primary-nav > li.menu-item-has-children').on(''+menuTrigger+'', function(e){
-				e.preventDefault();
-				e.stopPropagation();
-				$('.primary-nav > li.menu-item-has-children').not(this).removeClass('active');
-				$(this).toggleClass('active');
-				if( $(this).hasClass('active') ) {
-					$('#nav_widget').addClass('active');
-				} else {
-					$('#nav_widget').removeClass('active');
-				}
-			});
-			
-			$('.primary-nav > li.menu-item-has-children li').on('click', function(e){
-				e.stopPropagation();
-			});
 		}
 		menuResize();
 	});
