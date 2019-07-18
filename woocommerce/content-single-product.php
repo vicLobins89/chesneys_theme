@@ -198,6 +198,7 @@ function change_wc_related_products_relation_to_and($limit = '4', $meta_query = 
             )
         )
     );
+    print_r( $get_related_products_args );
     return $get_related_products_args;
 }
 
