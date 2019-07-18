@@ -144,11 +144,11 @@ if ( woocommerce_product_loop() ) {
 	if( get_term_meta($term_id, 'display_type', true) == 'products' ||  get_term_meta($term_id, 'display_type', true) == null) {
 		$parent_cats = get_ancestors($term_id, 'product_cat');
 		
-		if( !empty($parent_cats) && $blog_id == 1 ) {
+		if( !empty($parent_cats) ) {
 			$category = get_term_by('id', $parent_cats[0], 'product_cat');
 			$cat_name = $category->slug;
 		} elseif( $blog_id == 5 ) {
-			$cat_name = $term->slug;
+			$cat_name = 'mantels';
 		} else {
 			$cat_name = 'fireplaces';
 		}
