@@ -1095,7 +1095,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   cursor: unset !important; }
 
-.hidden {
+.hidden *:not(a) {
   display: none; }
 
 section, div {
