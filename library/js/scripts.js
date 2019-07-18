@@ -25,6 +25,13 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
     
+    $('.pdf-sheet').click(function(){
+        var doc = new jsPDF();
+
+        doc.text('Hello world!', 10, 10);
+        doc.save('a4.pdf');
+    });
+    
     // Shows drawings on US
     if( $('body').hasClass('us-site') ) {
         $('.drawings-link a').parent().detach().appendTo('.product-details');
