@@ -30,7 +30,9 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
     
     doc.text(pdfTitle, 10, 10);
     doc.addImage(mainImage, 'JPEG', 10, 20, 180, 160);
-    doc.text(shortDesc, 10, 200);
+    doc.text(shortDesc, 10, 200, {
+        width: 180
+    });
     doc.text(description, 10, 220);
     doc.save(''+pdfTitle+'.pdf');
 });
