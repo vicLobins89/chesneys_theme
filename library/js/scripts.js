@@ -24,13 +24,15 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
 
     var doc = new jsPDF(),
         pdfTitle = document.querySelector('.product_title').innerText,
-        mainImage = document.querySelector('.wp-post-image');
-
-    doc.html(document.querySelector('.wp-post-image'), {
-        callback: function (doc) {
-            doc.save();
-        }
-    });
+        mainImage = document.querySelector('.wp-post-image'),
+        description = document.querySelector('.woocommerce-variation-description');
+    
+    description = description.replace(/<[^>]*>?/gm, '');
+    
+    doc.text(pdfTitle, 10, 10);
+    doc.addImage(mainImage, 'JPEG', 10, 20, 180, 160);
+    doc.text(description, 10, 200);
+    doc.save(''+pdfTitle+'.pdf');
 });
 
 jQuery(document).ready(function($) {
