@@ -55,7 +55,6 @@ jQuery(document).ready(function($) {
 		
 		$('input.product').val(productName);
 		$('.overlay ').addClass('active');
-		console.log(productName);
 	});
 	
 	$('a.close-overlay').click(function(e){
@@ -290,8 +289,13 @@ jQuery(document).ready(function($) {
 				$('.primary-nav > li').removeClass('active');
 				$('#nav_widget').removeClass('active');
 			});
+            
+            var menuTrigger = menuTrigger = 'click';
+            if( $('body').hasClass('us-site') ) {
+                menuTrigger = 'mouseover';
+            }
 			
-			$('.primary-nav > li.menu-item-has-children').on('click', function(e){
+			$('.primary-nav > li.menu-item-has-children').on(''+menuTrigger+'', function(e){
 				e.preventDefault();
 				e.stopPropagation();
 				$('.primary-nav > li.menu-item-has-children').not(this).removeClass('active');
