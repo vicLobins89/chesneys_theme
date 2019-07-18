@@ -35,6 +35,8 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
     doc.text(shortDesc, 10, 200, {
         maxWidth: 180
     });
+    doc.setFont("helvetica");
+    doc.setFontSize(16);
     doc.text(description, 10, 220);
     doc.save(''+pdfTitle+'.pdf');
 });
