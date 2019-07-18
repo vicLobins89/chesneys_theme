@@ -30,6 +30,8 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
     
     doc.text(pdfTitle, 10, 10);
     doc.addImage(mainImage, 'JPEG', 10, 20, 180, 160);
+    doc.setFont("helvetica");
+    doc.setFontSize(16);
     doc.text(shortDesc, 10, 200, {
         width: 180
     });
