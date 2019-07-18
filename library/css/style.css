@@ -3958,121 +3958,200 @@ SIDEBARS & ASIDES
   .woocommerce-checkout #geo_popup button[name=login]:focus {
     background: #fff; }
 
-#filter .widget {
-  margin: 0;
-  padding: 0; }
-#filter > .widget {
-  background: #e5e5e5;
-  padding: 1rem; }
-#filter .widgettitle {
-  margin: 0;
-  border: none; }
-#filter .woof_list_checkbox {
-  padding: 0; }
-  #filter .woof_list_checkbox .woof_childs_list {
-    padding: 0;
-    margin-top: 0 !important; }
-  #filter .woof_list_checkbox > .woof_childs_list {
-    margin: 0 !important; }
-  #filter .woof_list_checkbox li {
-    font-size: .95rem;
-    margin-left: 0 !important;
-    padding-bottom: 2px !important;
-    position: relative;
-    width: 100%; }
-  #filter .woof_list_checkbox > li.woof_childs_list_li {
-    border-top: 1px solid #000;
-    margin: .5rem 0 !important;
-    padding-top: .5rem !important; }
-    #filter .woof_list_checkbox > li.woof_childs_list_li > input {
-      display: none;
-      pointer-events: none; }
-      #filter .woof_list_checkbox > li.woof_childs_list_li > input + label:before {
-        content: none;
-        display: none;
-        pointer-events: none; }
-    #filter .woof_list_checkbox > li.woof_childs_list_li > label {
-      font-family: "Univers", Helvetica, Arial, sans-serif;
-      text-transform: uppercase;
-      pointer-events: none;
-      margin: 0; }
-      #filter .woof_list_checkbox > li.woof_childs_list_li > label .woof_checkbox_count {
-        display: none; }
-    #filter .woof_list_checkbox > li.woof_childs_list_li > .woof_childs_list {
-      margin: 0 !important; }
-  #filter .woof_list_checkbox .woof_checkbox_label_selected {
-    font-weight: normal; }
-#filter .woof_childs_list_opener {
-  position: absolute;
-  right: 0;
-  top: 3px;
-  outline: none; }
-  #filter .woof_childs_list_opener span {
-    width: 9px;
-    height: 1px;
-    background: #000 !important;
-    position: relative;
-    outline: none; }
-    #filter .woof_childs_list_opener span.woof_is_closed {
-      background: #000 !important; }
-      #filter .woof_childs_list_opener span.woof_is_closed:before {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 1px;
-        height: 9px;
-        top: -4px;
-        left: 4px;
-        background: #000; }
-#filter input.woof_checkbox_term {
-  position: absolute;
-  opacity: 0; }
-  #filter input.woof_checkbox_term + label {
-    position: relative;
-    cursor: pointer;
-    padding: 0;
-    margin: 0; }
-  #filter input.woof_checkbox_term + label:before {
-    content: '';
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: baseline;
-    width: 8px;
-    height: 8px;
-    border: 1px solid #000; }
-  #filter input.woof_checkbox_term:hover + label:before {
-    background: #000; }
-  #filter input.woof_checkbox_term:focus + label:before {
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12); }
-  #filter input.woof_checkbox_term:checked + label:before {
-    background: #000; }
-  #filter input.woof_checkbox_term:disabled + label:before {
-    box-shadow: none;
-    background: #ddd; }
-  #filter input.woof_checkbox_term:checked + label:after {
-    content: none;
-    position: absolute;
-    left: 5px;
-    top: 9px;
-    background: white;
-    width: 2px;
-    height: 2px;
-    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
-    transform: rotate(45deg); }
+/*
+#filter {
+	.widget {
+		margin: 0;
+		padding: 0;
+	}
+	
+	> .widget {
+		background: $light-gray;
+		padding: 1rem;
+	}
+	
+	.widgettitle {
+		margin: 0;
+		border: none;
+	}
+	
+	.woof_list_checkbox {
+		padding: 0;
+		
+		.woof_childs_list {
+			padding: 0;
+			margin-top: 0 !important;
+		}
+		
+		> .woof_childs_list {
+			margin: 0 !important;
+		}
+		
+		li {
+			font-size: .95rem;
+			margin-left: 0 !important;
+			padding-bottom: 2px !important;
+			position: relative;
+    		width: 100%;
+		}
+		
+		> li.woof_childs_list_li {
+			border-top: 1px solid $black;
+			margin: .5rem 0 !important;
+    		padding-top: .5rem !important;
+			
+			> input {
+				display: none;
+				pointer-events: none;
+				
+				+ label:before {
+					content: none;
+					display: none;
+					pointer-events: none;
+				}
+			}
+			
+			> label {
+				font-family: $sans-serif;
+				text-transform: uppercase;
+				pointer-events: none;
+				margin: 0;
+				
+				.woof_checkbox_count {
+					display: none;
+				}
+			}
+			
+			> .woof_childs_list {
+				margin: 0 !important;
+			}
+		}
+		
+		.woof_checkbox_label_selected {
+			font-weight: normal;
+		}
+	}
+	
+	.woof_childs_list_opener {
+		position: absolute;
+    	right: 0;
+		top: 3px;
+		outline: none;
+		
+		span {
+			width: 9px;
+			height: 1px;
+			background: $black !important;
+			position: relative;
+			outline: none;
+			
+			&.woof_is_closed {
+				background: $black !important;
+				
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					width: 1px;
+					height: 9px;
+					top: -4px;
+   					left: 4px;
+					background: $black;
+				}
+			}
+		}
+	}
+	
+	input.woof_checkbox_term {
+		position: absolute;
+		opacity: 0;
+		
+		& + label {
+			position: relative;
+			cursor: pointer;
+			padding: 0;
+			margin: 0;
+		}
+
+		// Box.
+		& + label:before {
+			content: '';
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: baseline;
+			width: 8px;
+			height: 8px;
+			border: 1px solid $black;
+		}
+
+		// Box hover
+		&:hover + label:before {
+			background: $black;
+		}
+
+		// Box focus
+		&:focus + label:before {
+			box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+		}
+
+		// Box checked
+		&:checked + label:before {
+			background: $black;
+		}
+
+		// Disabled state label.
+		&:disabled + label {
+//			color: #b8b8b8;
+//			cursor: auto;
+		}
+
+		// Disabled box.
+		&:disabled + label:before {
+			box-shadow: none;
+			background: #ddd;
+		}
+
+		// Checkmark. Could be replaced with an image
+		&:checked + label:after {
+			content: none;
+			position: absolute;
+			left: 5px;
+			top: 9px;
+			background: white;
+			width: 2px;
+			height: 2px;
+			box-shadow: 
+			  2px 0 0 white,
+			  4px 0 0 white,
+			  4px -2px 0 white,
+			  4px -4px 0 white,
+			  4px -6px 0 white,
+			  4px -8px 0 white;
+			transform: rotate(45deg);
+		}
+	}
+}
 
 .woof_products_top_panel {
-  margin-top: 0 !important; }
-  .woof_products_top_panel li {
-    font-family: "Univers", Helvetica, Arial, sans-serif;
-    font-size: .8rem !important;
-    font-weight: 900; }
-    .woof_products_top_panel li .woof_remove_ppi {
-      background: none !important; }
-      .woof_products_top_panel li .woof_remove_ppi:before {
-        content: 'x';
-        margin-right: 5px;
-        display: inline-block;
-        vertical-align: middle; }
+	margin-top: 0 !important;
+	
+	li {
+		font-family: $sans-serif;
+		font-size: .8rem !important;
+		font-weight: 900;
+		
+		.woof_remove_ppi {
+			background: none !important;
+			
+			&:before {
+				content: 'x';
+				margin-right: 5px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+}/*
 
 /*********************
 FOOTER STYLES
