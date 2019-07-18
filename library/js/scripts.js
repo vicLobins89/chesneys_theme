@@ -24,8 +24,7 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
 
     var doc = new jsPDF(),
         pdfTitle = document.querySelector('.product_title').innerText,
-        mainImage = document.querySelector('.wp-post-image'),
-        description = ;
+        mainImage = document.querySelector('.wp-post-image');
 
     doc.html(document.body, {
        callback: function (doc) {
