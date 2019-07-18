@@ -19,6 +19,7 @@ defined( 'ABSPATH' ) || exit;
 global $product;
 require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
+$blog_id = get_current_blog_id();
 
 // Removing image link
 function wc_remove_link_on_thumbnails( $html ) {
@@ -183,8 +184,11 @@ foreach ($cat as $category) {
 echo '<section class="row entry-content cf related-products"><div class="cf"><div class="col-12">';
 if( $product->get_upsell_ids() ) {
 	woocommerce_upsell_display(3, 3, 'menu_order', 'asc');
+} else if( $blog_id == 5 ) {
+    echo '<h2>You might also like</h2><p></p>';
+	echo do_shortcode('[products orderby="rand" category="'.$current_cat->slug.'" limit="3" columns="3" class="related-products"]');
 } else {
-	echo '<h2>You might also like</h2><p></p><p style="visibility: hidden; height:0;">'.$current_cat->slug.'</p>';
+	echo '<h2>You might also like</h2><p></p>';
 	echo do_shortcode('[products orderby="rand" category="'.$parent_cat.'" limit="3" columns="3" class="related-products"]');
 }
 echo '</section></div></div>';
