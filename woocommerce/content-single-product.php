@@ -181,32 +181,11 @@ foreach ($cat as $category) {
 	}
 }
 
-
-function change_wc_related_products_relation_to_and($limit = '4', $meta_query = '', $cats_array = '') {
-    $get_related_products_args = array(
-        'orderby' => 'rand',
-        'posts_per_page' => $limit,
-        'post_type' => 'product',
-        'fields' => 'ids',
-        'meta_query' => $meta_query,
-        'tax_query' => array(
-            'relation' => 'AND',
-            array(
-                'taxonomy' => 'product_cat',
-                'field' => 'slug',
-                'terms' => $cats_array
-            )
-        )
-    );
-    print_r( $get_related_products_args );
-    return $get_related_products_args;
-}
-
 echo '<section class="row entry-content cf related-products"><div class="cf"><div class="col-12">';
 if( $product->get_upsell_ids() ) {
 	woocommerce_upsell_display(3, 3, 'menu_order', 'asc');
 } else if( $blog_id == 5 ) {
-    echo '<h2>You might also like</h2><p></p>';
+    echo '<h2>Mantels you might like</h2><p></p>';
 	echo do_shortcode('[products orderby="rand" category="'.$current_cat->slug.'" limit="3" columns="3" class="related-products"]');
 } else {
 	echo '<h2>You might also like</h2><p></p>';
