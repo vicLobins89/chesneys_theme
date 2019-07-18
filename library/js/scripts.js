@@ -19,6 +19,18 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	document.body.className += ' ' + 'is-mobile';
 }
 
+document.querySelector('.pdf-sheet').addEventListener("click", function(e){
+    e.preventDefault();
+
+    var doc = new jsPDF(),
+        pdfTitle = document.querySelector('.product_title').text,
+        mainImage = document.querySelector('.wp-post-image').src;
+
+    doc.text('Hello world!', 10, 10);
+    doc.addImage(mainImage, 'JPEG', 35, 40, 180, 160)
+    doc.save(''+pdfTitle+'.pdf');
+});
+
 jQuery(document).ready(function($) {
 	
 	"use strict";
@@ -28,9 +40,12 @@ jQuery(document).ready(function($) {
     $('.pdf-sheet').click(function(e){
         e.preventDefault();
         
-        var doc = new jsPDF();
+        var doc = new jsPDF(),
+            pdfTitle = 
+            mainImage = $('.wp-post-image').attr('src');
 
         doc.text('Hello world!', 10, 10);
+        doc.addImage(mainImage, 'JPEG', 35, 40, 180, 160)
         doc.save('a4.pdf');
     });
     
