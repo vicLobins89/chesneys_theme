@@ -119,7 +119,7 @@ if( !empty(get_the_content()) ) {
 		woocommerce_template_single_add_to_cart();
 	} else if( $blog_id == 5 ) {
         woocommerce_template_single_add_to_cart();
-        echo '<div class="hidden">';
+        echo '<div class="drawings-link hidden">';
         wc_get_template( 'single-product/tabs/description.php' );
         echo '</div>';
     } else {

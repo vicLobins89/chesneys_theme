@@ -25,6 +25,11 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
     
+    // Shows drawings on US
+    if( $('body').hasClass('us-site') ) {
+        $('.drawings-link a').parent().detach().appendTo('.product-details');
+    }
+    
     //Add class to tags
     var tagName = $('input.woof_checkbox_term');
     tagName.each(function(){
