@@ -172,6 +172,8 @@ $acfClass->render_modules($acc_module);
  */
 
 $cat = get_the_terms( $product->get_id(), 'product_cat' );
+$product_term = get_term_by('id', $product->get_id(), 'product_cat', 'ARRAY_A');
+
 $parent_cat;
 foreach ($cat as $category) {
 	if($category->parent == 0){
@@ -183,7 +185,7 @@ echo '<section class="row entry-content cf related-products"><div class="cf"><di
 if( $product->get_upsell_ids() ) {
 	woocommerce_upsell_display(3, 3, 'menu_order', 'asc');
 } else {
-	echo '<h2>You might also like</h2><p></p><p style="visibility: hidden; height:0;">'.$cat.'</p>';
+	echo '<h2>You might also like</h2><p></p><p style="visibility: hidden; height:0;">'.$product_term['slug'].'</p>';
 	echo do_shortcode('[products orderby="rand" category="'.$parent_cat.'" limit="3" columns="3" class="related-products"]');
 }
 echo '</section></div></div>';
