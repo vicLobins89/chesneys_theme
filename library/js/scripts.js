@@ -20,7 +20,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 }
 
 jQuery(document).ready(function($) {
-	if( $('body.uk-site') ) {
+	if( $('body').hasClass('uk-site') ) {
 	"use strict";
 	
 	viewport = updateViewportDimensions();
