@@ -23,12 +23,15 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
     e.preventDefault();
 
     var doc = new jsPDF(),
-        pdfTitle = document.querySelector('.product_title').text,
-        mainImage = document.querySelector('.wp-post-image');
+        pdfTitle = document.querySelector('.product_title').innerText,
+        mainImage = document.querySelector('.wp-post-image'),
+        description = ;
 
-    doc.text('Hello world!', 10, 10);
-    doc.addImage(mainImage, 'JPEG', 35, 40, 180, 160)
-    doc.save(''+pdfTitle+'.pdf');
+    doc.html(document.body, {
+       callback: function (doc) {
+         doc.save();
+       }
+    });
 });
 
 jQuery(document).ready(function($) {
@@ -36,18 +39,6 @@ jQuery(document).ready(function($) {
 	"use strict";
 	
 	viewport = updateViewportDimensions();
-    
-    $('.pdf-sheet').click(function(e){
-        e.preventDefault();
-        
-        var doc = new jsPDF(),
-            pdfTitle = 
-            mainImage = $('.wp-post-image').attr('src');
-
-        doc.text('Hello world!', 10, 10);
-        doc.addImage(mainImage, 'JPEG', 35, 40, 180, 160)
-        doc.save('a4.pdf');
-    });
     
     // Shows drawings on US
     if( $('body').hasClass('us-site') ) {
