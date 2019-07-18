@@ -148,7 +148,8 @@ if ( woocommerce_product_loop() ) {
 			$category = get_term_by('id', $parent_cats[0], 'product_cat');
 			$cat_name = $category->slug;
 		} elseif( $blog_id == 5 ) {
-			$cat_name = 'mantels';
+            $category = get_term_by('id', $term_id, 'product_cat');
+			$cat_name = $category->slug;
 		} else {
 			$cat_name = 'fireplaces';
 		}
