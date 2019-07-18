@@ -26,10 +26,10 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
         pdfTitle = document.querySelector('.product_title').innerText,
         mainImage = document.querySelector('.wp-post-image');
 
-    doc.html(document.body, {
-       callback: function (doc) {
-         doc.save();
-       }
+    doc.html(document.querySelector('.wp-post-image'), {
+        callback: function (doc) {
+            doc.save();
+        }
     });
 });
 
