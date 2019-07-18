@@ -184,7 +184,7 @@ echo '<section class="row entry-content cf related-products"><div class="cf"><di
 if( $product->get_upsell_ids() ) {
 	woocommerce_upsell_display(3, 3, 'menu_order', 'asc');
 } else {
-	echo '<h2>You might also like</h2><p></p><p style="visibility: hidden; height:0;">'.print_r($current_cat).'</p>';
+	echo '<h2>You might also like</h2><p></p><p style="visibility: hidden; height:0;"></p>';
 	echo do_shortcode('[products orderby="rand" category="'.$parent_cat.'" limit="3" columns="3" class="related-products"]');
 }
 echo '</section></div></div>';
