@@ -25,13 +25,13 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
     var doc = new jsPDF(),
         pdfTitle = document.querySelector('.product_title').innerText,
         mainImage = document.querySelector('.wp-post-image'),
-        description = document.querySelector('.woocommerce-variation-description').innerText;
-    
-    description = description.replace(/<[^>]*>?/gm, '');
+        shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText.replace(/<[^>]*>?/gm, ''),
+        description = document.querySelector('.woocommerce-variation-description').innerText.replace(/<[^>]*>?/gm, '');
     
     doc.text(pdfTitle, 10, 10);
     doc.addImage(mainImage, 'JPEG', 10, 20, 180, 160);
-    doc.text(description, 10, 200);
+    doc.text(shortDesc, 10, 200);
+    doc.text(description, 10, 220);
     doc.save(''+pdfTitle+'.pdf');
 });
 
