@@ -206,9 +206,8 @@ echo '<section class="row entry-content cf related-products"><div class="cf"><di
 if( $product->get_upsell_ids() ) {
 	woocommerce_upsell_display(3, 3, 'menu_order', 'asc');
 } else if( $blog_id == 5 ) {
-    change_wc_related_products_relation_to_and();
-    //echo '<h2>You might also like</h2><p></p>';
-	//echo do_shortcode('[products orderby="rand" category="'.$current_cat->slug.'" limit="3" columns="3" class="related-products"]');
+    echo '<h2>You might also like</h2><p></p>';
+	echo do_shortcode('[products orderby="rand" category="'.$current_cat->slug.'" limit="3" columns="3" class="related-products"]');
 } else {
 	echo '<h2>You might also like</h2><p></p>';
 	echo do_shortcode('[products orderby="rand" category="'.$parent_cat.'" limit="3" columns="3" class="related-products"]');
