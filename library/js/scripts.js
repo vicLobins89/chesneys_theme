@@ -25,7 +25,7 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
     var doc = new jsPDF(),
         pdfTitle = document.querySelector('.product_title').innerText,
         mainImage = document.querySelector('.wp-post-image'),
-        description = document.querySelector('.woocommerce-variation-description');
+        description = document.querySelector('.woocommerce-variation-description').innerText;
     
     description = description.replace(/<[^>]*>?/gm, '');
     
