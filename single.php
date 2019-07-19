@@ -2,6 +2,7 @@
 get_header();
 require_once('classes/acf.php');
 $acfClass = new CustomACF();
+$blog_id = get_current_blog_id();
 ?>
 
 			<div id="content">
@@ -64,7 +65,14 @@ $acfClass = new CustomACF();
 						</section> <?php // end article section ?>
 
 						<?php // ACF FIELDS ?>
-						<?php $acfClass->page_rows(); ?>
+						<?php
+                            $acfClass->page_rows();
+                            
+                            if( $blog_id == 5 ) {
+                                $signup_module = get_post(2295);
+                                $acfClass->render_modules($signup_module);
+                            }
+                        ?>
 
 					  	</article>
 						<?php // end article ?>
