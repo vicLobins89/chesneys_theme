@@ -29,6 +29,7 @@ jQuery(document).ready(function($) {
     if( $('body').hasClass('us-site') ) {
         $('.drawings-link a').parent().detach().appendTo('.product-details');
         
+        $('.product-details').append('<a class="pdf-sheet" href="#">Download tear sheet (PDF)</a>');
         $('.pdf-sheet').on('click', function(e){
             e.preventDefault();
             
@@ -52,7 +53,7 @@ jQuery(document).ready(function($) {
 
             description.each(function(i){
                 doc.setCharSpace(1);
-                doc.text($(this).text(), 10, 38 + (i * 8), {
+                doc.text($(this).text(), 10, 48 + (i * 8), {
                     maxWidth: 200
                 });
             });
