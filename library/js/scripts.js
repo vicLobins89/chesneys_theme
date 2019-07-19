@@ -55,16 +55,20 @@ jQuery(document).ready(function($) {
             
             doc.setFontSize(8);
             doc.text(shortDesc.innerText, 10, 20, {
-                maxWidth: (dw / 4) - 5
+                maxWidth: (dw / 4)
             });
-            
-            doc.addImage(mainImage, 'JPEG', (dw / 4), 20, chosenWidth, adjustedHeight);
             
             description.each(function(i){
-                doc.text($(this).text(), (dw / 4 * 3) + 5, 20 + (i * 8), {
-                    maxWidth: (dw / 4) - 5
+                doc.setFontSize(7);
+                doc.text($(this).text(), 10, 40 + (i * 8), {
+                    maxWidth: (dw / 4)
                 });
             });
+            
+            doc.addImage(mainImage, 'JPEG', (dw / 4) + 10, 20, chosenWidth, adjustedHeight);
+            
+            doc.setFontSize(8);
+            doc.text('Contact Us', (dw / 4 * 3 + 5), 20);
             
             doc.addImage(logo, 'JPEG', 10, 200, 60, 8);
 
