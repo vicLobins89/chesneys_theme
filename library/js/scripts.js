@@ -54,21 +54,17 @@ jQuery(document).ready(function($) {
             doc.text(pdfTitle, 10, 10);
             
             doc.setFontSize(8);
-            doc.text(shortDesc.innerText, 10, 20, {
-                maxWidth: (dw / 4) - 10
-            });
+            doc.text(shortDesc.innerText, 10, 20, { maxWidth: (dw / 4) - 10 });
             
             description.each(function(i){
                 doc.setFontSize(7);
-                doc.text($(this).text(), 10, 40 + (i * 6), {
-                    maxWidth: (dw / 4) - 10
-                });
+                doc.text($(this).text(), 10, 40 + (i * 6), { maxWidth: (dw / 4) - 10 });
             });
             
             doc.addImage(mainImage, 'JPEG', (dw / 4) + 10, 20, chosenWidth, adjustedHeight);
             
             doc.setFontSize(8);
-            doc.text('Contact Us', (dw / 4 * 3 + 5), 20);
+            doc.text('Contact Us', (dw / 4 * 3 + 15), 20);
             
             doc.addImage(logo, 'JPEG', 10, 200, 60, 8);
 
