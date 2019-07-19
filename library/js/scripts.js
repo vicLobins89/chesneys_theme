@@ -62,6 +62,7 @@ jQuery(document).ready(function($) {
                 var str = descriptions[i].innerHTML;
                 str = str.replace('<p>', '');
                 str = str.replace('<br>', '');
+                str = str.replace(' ', '');
                 
                 doc.setFontSize(7);
                 doc.text(str, 10, 45 + (i * 6), { maxWidth: (dw / 4) });
