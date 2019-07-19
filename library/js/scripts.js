@@ -38,10 +38,8 @@ jQuery(document).ready(function($) {
                 shortDesc = $('.woocommerce-product-details__short-description').text(),
                 description = $('.woocommerce-variation-description p'),
                 chosenWidth = 100,
-                adjustedHeight = chosenWidth * (mainImage.clientWidth / mainImage.clientHeight);
-            
-            console.log( mainImage );
-            
+                adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
+                        
             doc.setFont("helvetica");
             doc.setFontSize(16);
             doc.text(pdfTitle, 10, 10);
@@ -57,7 +55,7 @@ jQuery(document).ready(function($) {
             doc.setFont("helvetica");
             doc.setFontSize(12);
             description.each(function(i){
-                doc.text($(this).text(), 10, 220 + (i * 4), {
+                doc.text($(this).text(), 10, 220 + (i * 6), {
                     maxWidth: 180
                 });
             });
