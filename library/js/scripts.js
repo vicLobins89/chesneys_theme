@@ -28,8 +28,6 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
         shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
         descriptionContainer = document.querySelector('.woocommerce-variation-description'),
         description = descriptionContainer.querySelectorAll('p');
-
-    console.log( description );
     
     doc.setFont("helvetica");
     doc.setFontSize(18);
@@ -46,6 +44,8 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
     doc.setFont("helvetica");
     doc.setFontSize(14);
     for( var i = 1; i <= description.length; i++ ) {
+        console.log( description[i].innerHTML );
+        
         doc.text(description[i].innerText, 10, 220 + (i + 20), {
             maxWidth: 180
         });
