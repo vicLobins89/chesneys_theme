@@ -65,7 +65,7 @@ jQuery(document).ready(function($) {
             
             doc.setFontSize(8);
             doc.text('Further Assistance', 10, 90), { maxWidth: (dw / 4) - 10 };
-            doc.text('If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following:', 10, 95), { maxWidth: (dw / 4) - 10 };
+            doc.text('If you require any further assistance in relation to the information \n\n provided, please do not hesitate to contact sales on the following:', 10, 95), { maxWidth: (dw / 4) - 10 };
             doc.text('T: 020 7627 1410', 10, 100), { maxWidth: (dw / 4) - 10 };
             doc.text('T: 020 7627 1410', 10, 85), { maxWidth: (dw / 4) - 10 };
             doc.text('T: 020 7627 1410', 10, 85), { maxWidth: (dw / 4) - 10 };
