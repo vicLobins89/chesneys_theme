@@ -65,10 +65,17 @@ jQuery(document).ready(function($) {
             
             doc.setFontSize(8);
             doc.text('Further Assistance', 10, 90), { maxWidth: (dw / 4) - 10 };
-            doc.text('If you require any further assistance in relation to the information \n\n provided, please do not hesitate to contact sales on the following:', 10, 95), { maxWidth: (dw / 4) - 10 };
+            
+            
+            var paragraph="If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following";
+		
+            var lines = doc.splitTextToSize(paragraph, (dw / 4) - 10);
+            
+            doc.text(lines, 10, 95);
+            
             doc.text('T: 020 7627 1410', 10, 100), { maxWidth: (dw / 4) - 10 };
-            doc.text('T: 020 7627 1410', 10, 85), { maxWidth: (dw / 4) - 10 };
-            doc.text('T: 020 7627 1410', 10, 85), { maxWidth: (dw / 4) - 10 };
+            doc.text('T: 020 7627 1410', 10, 105), { maxWidth: (dw / 4) - 10 };
+            doc.text('T: 020 7627 1410', 10, 110), { maxWidth: (dw / 4) - 10 };
             
             doc.addImage(mainImage, 'JPEG', (dw / 4) + 15, 20, chosenWidth, adjustedHeight);
             
