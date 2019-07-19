@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
         $('.drawings-link a').parent().detach().appendTo('.product-details');
         $('.drawings-link').remove();
         
-        //$('.product-details').append('<p><a class="pdf-sheet" href="#">Download Tear Sheet (PDF)</a></p>');
+        $('.product-details').append('<p class="links"><a class="pdf-sheet" href="#">Download Tear Sheet (PDF)</a></p>');
         $('.pdf-sheet').on('click', function(e){
             e.preventDefault();
             
@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
                 logo = document.querySelector('.logo img'),
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description'),
                 descriptionWrapper = document.querySelector('.product-details'),
-                descriptions = descriptionWrapper.querySelectorAll('p'),
+                descriptions = descriptionWrapper.querySelectorAll('p:not(.links)'),
                 chosenWidth = (dw / 4 * 3) - 20,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
