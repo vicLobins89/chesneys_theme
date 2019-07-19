@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
                 chosenWidth = 200,
                 adjustedHeight = chosenWidth * (mainImage.width / mainImage.height);
             
-            console.log( mainImage.width + ' ' + mainImage.height );
+            console.log( chosenWidth + ' ' + adjustedHeight );
             
             doc.setFont("helvetica");
             doc.setFontSize(16);
