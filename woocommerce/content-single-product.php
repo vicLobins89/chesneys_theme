@@ -117,7 +117,7 @@ if( !empty(get_the_content()) ) {
 	echo '<div class="product-details">';
 	if( $product->is_type( 'variable' ) && $blog_id == 1 ) {
 		woocommerce_template_single_add_to_cart();
-	} else if( $blog_id == 5 ) {
+	} else if( $product->is_type( 'variable' ) && $blog_id == 5 ) {
         woocommerce_template_single_add_to_cart();
         echo '<div class="drawings-link hidden">';
         wc_get_template( 'single-product/tabs/description.php' );

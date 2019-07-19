@@ -28,6 +28,7 @@ jQuery(document).ready(function($) {
     // Shows drawings on US + tear sheets
     if( $('body').hasClass('us-site') ) {
         $('.drawings-link a').parent().detach().appendTo('.product-details');
+        $('.drawings-link').remove();
         
         $('.product-details').append('<p><a class="pdf-sheet" href="#">Download tear sheet (PDF)</a></p>');
         $('.pdf-sheet').on('click', function(e){
