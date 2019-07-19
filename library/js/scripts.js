@@ -59,9 +59,8 @@ jQuery(document).ready(function($) {
             doc.setFontSize(9);
             doc.text('Product Details', 10, 40);
             for( var i = 0; i < descriptions.length; i++ ) {
-                var str = descriptions[i].innerText;
-                var regex = / +(?=[A-Za-z0-9])/;
-                str = str.replace(regex, '');
+                var str = descriptions[i].innerHTML;
+                str = str.replace('<p>', '');
                 
                 doc.setFontSize(7);
                 doc.text(str, 10, 45 + (i * 6), { maxWidth: (dw / 4) });
