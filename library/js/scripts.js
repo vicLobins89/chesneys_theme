@@ -30,11 +30,12 @@ jQuery(document).ready(function($) {
         $('.drawings-link a').parent().detach().appendTo('.product-details');
         $('.drawings-link').remove();
         
-        $('.product-details').append('<p><a class="pdf-sheet" href="#">Download tear sheet (PDF)</a></p>');
+        $('.product-details').append('<p><a class="pdf-sheet" href="#">Download Tear Sheet (PDF)</a></p>');
         $('.pdf-sheet').on('click', function(e){
             e.preventDefault();
             
-            var doc = new jsPDF('p', 'mm', 'a4'),
+            //A4 210 x 294mm
+            var doc = new jsPDF('l', 'mm', 'a4'),
                 pdfTitle = document.querySelector('.product_title').innerText,
                 mainImage = document.querySelector('.wp-post-image'),
                 logo = document.querySelector('.logo img'),

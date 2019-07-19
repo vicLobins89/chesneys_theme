@@ -1420,10 +1420,6 @@ LAYOUT & GRID STYLES
   .row.post-content .post img {
     width: 100%;
     height: auto; }
-  .us-site .row.post-content .case_study h3, .us-site .row.post-content .case_study .copy-l,
-  .us-site .row.post-content .post h3,
-  .us-site .row.post-content .post .copy-l {
-    display: none; }
 .row.woocommerce-products-header img {
   width: 100%;
   height: auto; }
