@@ -57,12 +57,12 @@ jQuery(document).ready(function($) {
             doc.text(shortDesc.innerText, 10, 25, { maxWidth: (dw / 4)});
             
             doc.setFontSize(9);
-            doc.text('Product Details', 10, 40);
+            doc.text('Product Details', 10, 45);
             for( var i = 0; i < descriptions.length; i++ ) {
                 var str = descriptions[i].innerText;
                 
                 doc.setFontSize(7);
-                doc.text(str, 10, 45 + (i * 6), { maxWidth: (dw / 4) + 20 });
+                doc.text(str, 10, 50 + (i * 6), { maxWidth: (dw / 4) + 20 });
             }
             
             doc.setFontSize(9);

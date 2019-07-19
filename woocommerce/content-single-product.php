@@ -108,25 +108,24 @@ function render_variation(){
 	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 }
 
-if( !empty(get_the_content()) ) {
-	if( have_rows('product_images') ) {
-		echo '<div class="col-6"><div class="details-inner">';
-	} else {
-		echo '<div class="col-12"><div class="details-inner">';
-	}
-	echo '<div class="product-details">';
-	if( $product->is_type( 'variable' ) && $blog_id == 1 ) {
-		woocommerce_template_single_add_to_cart();
-	} else if( $product->is_type( 'variable' ) && $blog_id == 5 ) {
-        woocommerce_template_single_add_to_cart();
-        echo '<div class="drawings-link hidden">';
-        wc_get_template( 'single-product/tabs/description.php' );
-        echo '</div>';
-    } else {
-		wc_get_template( 'single-product/tabs/description.php' );
-	}
-	echo '</div>';
+if( have_rows('product_images') ) {
+    echo '<div class="col-6"><div class="details-inner">';
+} else {
+    echo '<div class="col-12"><div class="details-inner">';
 }
+
+echo '<div class="product-details">';
+if( $product->is_type( 'variable' ) && $blog_id == 1 ) {
+    woocommerce_template_single_add_to_cart();
+} else if( $product->is_type( 'variable' ) && $blog_id == 5 ) {
+    woocommerce_template_single_add_to_cart();
+    echo '<div class="drawings-link hidden">';
+    wc_get_template( 'single-product/tabs/description.php' );
+    echo '</div>';
+} else {
+    wc_get_template( 'single-product/tabs/description.php' );
+}
+echo '</div>';
 
 echo '</div></div></div>'; // close inner
 
