@@ -27,7 +27,7 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
         mainImage = document.querySelector('.wp-post-image'),
         shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
         descriptionContainer = document.querySelector('.woocommerce-variation-description'),
-        description = descriptionContainer.querySelectorAll('p').innerText;
+        description = descriptionContainer.querySelectorAll('p');
 
     console.log( description );
     
