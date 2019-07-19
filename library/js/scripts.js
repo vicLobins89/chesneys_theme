@@ -44,7 +44,7 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
     doc.setFont("helvetica");
     doc.setFontSize(14);
     for( var i = 1; i <= description.length; i++ ) {
-        console.log( description[i].innerHTML );
+        console.log( description[i].innerText );
         
         doc.text(description[i].innerText, 10, 220 + (i + 20), {
             maxWidth: 180
