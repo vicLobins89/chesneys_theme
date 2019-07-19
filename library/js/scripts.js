@@ -34,11 +34,11 @@ jQuery(document).ready(function($) {
             
             var doc = new jsPDF(),
                 pdfTitle = $('.product_title').text(),
-                mainImage = $('.wp-post-image'),
+                mainImage = document.querySelector('.wp-post-image'),
                 shortDesc = $('.woocommerce-product-details__short-description').text(),
                 description = $('.woocommerce-variation-description p'),
                 chosenWidth = 100,
-                adjustedHeight = chosenWidth * (mainImage.width / mainImage.height);
+                adjustedHeight = chosenWidth * (mainImage.clientWidth / mainImage.clientHeight);
             
             console.log( chosenWidth + ' ' + adjustedHeight );
             
