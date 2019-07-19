@@ -36,8 +36,8 @@ jQuery(document).ready(function($) {
             
             //A4 210 x 294mm
             var doc = new jsPDF('l', 'mm', 'a4'),
-                dw = 210,
-                dh = 294,
+                dh = 210,
+                dw = 294,
                 pdfTitle = document.querySelector('.product_title').innerText,
                 mainImage = document.querySelector('.wp-post-image'),
                 logo = document.querySelector('.logo img'),
@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
             doc.setFontSize(10);
             doc.text(pdfTitle, 10, 10);
             
-            doc.setFontSize(12);
+            doc.setFontSize(8);
             doc.text(shortDesc.innerText, 10, 20, {
                 maxWidth: (dw / 4) - 5
             });
@@ -61,7 +61,6 @@ jQuery(document).ready(function($) {
             doc.addImage(mainImage, 'JPEG', (dw / 4), 20, chosenWidth, adjustedHeight);
             
             description.each(function(i){
-                doc.setCharSpace(1);
                 doc.text($(this).text(), (dw / 4 * 3) + 5, 20 + (i * 8), {
                     maxWidth: (dw / 4) - 5
                 });
