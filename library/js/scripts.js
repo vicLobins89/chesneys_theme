@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description'),
                 descriptionWrapper = document.querySelector('.product-details'),
                 descriptions = descriptionWrapper.querySelectorAll('p'),
-                chosenWidth = dw / 4 * 3,
+                chosenWidth = (dw / 4 * 3) - 10,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
             doc.setFont("helvetica");
@@ -52,23 +52,25 @@ jQuery(document).ready(function($) {
             doc.text(pdfTitle, 10, 10);
             
             doc.setFontSize(9);
-            doc.text('Description', 10, 20);
+            doc.text('Product Description', 10, 20);
             doc.setFontSize(8);
             doc.text(shortDesc.innerText, 10, 25, { maxWidth: (dw / 4)});
             
             doc.setFontSize(9);
-            doc.text('Details', 10, 40);
+            doc.text('Product Details', 10, 40);
             for( var i = 0; i < descriptions.length; i++ ) {
                 doc.setFontSize(7);
                 doc.text(descriptions[i].innerText, 10, 45 + (i * 6), { maxWidth: (dw / 4) });
             }
             
             doc.setFontSize(8);
-            doc.text('FURTHER ASSISTANCE', 10, 80), { maxWidth: (dw / 4) - 10 };
-            var contactString = 'If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following:';
-            doc.text(contactString, 10, 85), { maxWidth: (dw / 4) - 10 };
+            doc.text('Further Assistance', 10, 90), { maxWidth: (dw / 4) - 10 };
+            doc.text('If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following:', 10, 95), { maxWidth: (dw / 4) - 10 };
+            doc.text('T: 020 7627 1410', 10, 100), { maxWidth: (dw / 4) - 10 };
+            doc.text('T: 020 7627 1410', 10, 85), { maxWidth: (dw / 4) - 10 };
+            doc.text('T: 020 7627 1410', 10, 85), { maxWidth: (dw / 4) - 10 };
             
-            doc.addImage(mainImage, 'JPEG', (dw / 4) + 10, 20, chosenWidth, adjustedHeight);
+            doc.addImage(mainImage, 'JPEG', (dw / 4) + 15, 20, chosenWidth, adjustedHeight);
             
             doc.addImage(logo, 'JPEG', 10, 200, 50, 7);
 
