@@ -48,7 +48,7 @@ jQuery(document).ready(function($) {
             doc.text(pdfTitle.innerText, 30, 30);
             
             doc.setFontSize(12);
-            doc.text(shortDesc.innerText, 30, pdfTitle.height + 20, {
+            doc.text(shortDesc.innerText, 30, (pdfTitle.height + 20), {
                 maxWidth: 2420
             });
 
@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
                 });
             });
             
-            doc.addImage(mainImage, 'JPEG', 30, descContainer.height + shortDesc.height + pdfTitle.height + 20, chosenWidth, adjustedHeight);
+            doc.addImage(mainImage, 'JPEG', 30, (descContainer.height + shortDesc.height + pdfTitle.height + 20), chosenWidth, adjustedHeight);
             
             doc.addImage(logo, 'JPEG', 30, 3466, 90, 12);
 
