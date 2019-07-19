@@ -46,25 +46,27 @@ jQuery(document).ready(function($) {
                 chosenWidth = dw / 2,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
-            doc.setDrawColor(255,0,0);
-            doc.rect(10, 20, 10, 10);
-            
             doc.setFont("helvetica");
             doc.setFontSize(10);
             doc.text(pdfTitle, 10, 10);
             
+            doc.setFontSize(9);
+            doc.text('Description', 10, 20);
             doc.setFontSize(8);
-            doc.text(shortDesc.innerText, 10, 20, { maxWidth: (dw / 4) - 10 });
+            doc.text(shortDesc.innerText, 10, 25, { maxWidth: (dw / 4) - 10 });
             
+            doc.setFontSize(9);
+            doc.text('Details', 10, 40);
             description.each(function(i){
                 doc.setFontSize(7);
-                doc.text($(this).text(), 10, 40 + (i * 6), { maxWidth: (dw / 4) - 10 });
+                doc.text($(this).text(), 10, 45 + (i * 6), { maxWidth: (dw / 4) - 10 });
             });
             
             doc.addImage(mainImage, 'JPEG', (dw / 4) + 10, 20, chosenWidth, adjustedHeight);
             
             doc.setFontSize(8);
-            doc.text('Contact Us', (dw / 4 * 3 + 15), 20);
+            doc.text('FURTHER ASSISTANCE', (dw / 4 * 3 + 15), 20), { maxWidth: (dw / 4) - 10 };
+            doc.text('If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following:', (dw / 4 * 3 + 15), 25), { maxWidth: (dw / 4) - 10 };
             
             doc.addImage(logo, 'JPEG', 10, 200, 60, 8);
 
