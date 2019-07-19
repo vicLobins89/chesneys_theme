@@ -61,9 +61,9 @@ jQuery(document).ready(function($) {
             
             doc.addImage(mainImage, 'JPEG', 30, (descContainer.clientHeight + shortDesc.clientHeight + pdfTitle.clientHeight + 10), chosenWidth, adjustedHeight);
             
-            doc.addImage(logo, 'JPEG', 30, 2000, 90, 12);
+            doc.addImage(logo, 'JPEG', 30, 3466, 90, 12);
 
-            doc.save(''+pdfTitle+'.pdf');
+            doc.save(''+pdfTitle.innerText+'.pdf');
         });
     }
     
