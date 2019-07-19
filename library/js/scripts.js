@@ -34,36 +34,35 @@ jQuery(document).ready(function($) {
             
             // 2480 pixels x 3508 pixels
             var doc = new jsPDF('p', 'px', 'a4'),
-                pdfTitle = document.querySelector('.product_title'),
+                pdfTitle = document.querySelector('.product_title').innerText,
                 mainImage = document.querySelector('.wp-post-image'),
                 logo = document.querySelector('.logo img'),
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description'),
-                descContainer = document.querySelector('.woocommerce-variation-description'),
                 description = $('.woocommerce-variation-description p'),
-                chosenWidth = 2420,
+                chosenWidth = 150,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
                         
             doc.setFont("helvetica");
             doc.setFontSize(16);
-            doc.text(pdfTitle.innerText, 30, 30);
+            doc.text(pdfTitle, 30, 30);
             
             doc.setFontSize(12);
-            doc.text(shortDesc.innerText, 30, (pdfTitle.clientHeight + 10), {
-                maxWidth: 2420
+            doc.text(shortDesc.innerText, 10, 20, {
+                maxWidth: 200
             });
 
             description.each(function(i){
                 doc.setCharSpace(1);
-                doc.text($(this).text(), 30, (shortDesc.clientHeight + pdfTitle.clientHeight + 10) + (i * 8), {
-                    maxWidth: 2420
+                doc.text($(this).text(), 10, shortDesc.clientHeight + (i * 8), {
+                    maxWidth: 200
                 });
             });
             
-            doc.addImage(mainImage, 'JPEG', 30, (descContainer.clientHeight + shortDesc.clientHeight + pdfTitle.clientHeight + 10), chosenWidth, adjustedHeight);
+            doc.addImage(mainImage, 'JPEG', 10, 80, chosenWidth, adjustedHeight);
             
-            doc.addImage(logo, 'JPEG', 30, 3466, 90, 12);
+            doc.addImage(logo, 'JPEG', 10, 3466, 90, 12);
 
-            doc.save(''+pdfTitle.innerText+'.pdf');
+            doc.save(''+pdfTitle+'.pdf');
         });
     }
     
