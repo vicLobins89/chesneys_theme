@@ -58,6 +58,7 @@ jQuery(document).ready(function($) {
             
             doc.setFontSize(9);
             doc.text('Details', 10, 40);
+            doc.text(descriptions[0].innerText, 10, 45 + (i * 6), { maxWidth: (dw / 4) - 10 });
             for( var i = 0; i < descriptions.length; i++ ) {
                 doc.setFontSize(7);
                 doc.text(descriptions[i].innerText, 10, 45 + (i * 6), { maxWidth: (dw / 4) - 10 });
@@ -67,7 +68,7 @@ jQuery(document).ready(function($) {
             
             doc.setFontSize(8);
             doc.text('FURTHER ASSISTANCE', (dw / 4 * 3 + 15), 20), { maxWidth: (dw / 4) - 10 };
-            doc.text('If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following:', (dw / 4 * 3 + 15), 25), { maxWidth: (dw / 4) - 10 };
+            doc.text('If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following:', (dw / 4 * 3 + 15), 25), { maxWidth: 10 };
             
             doc.addImage(logo, 'JPEG', 10, 200, 60, 8);
 
