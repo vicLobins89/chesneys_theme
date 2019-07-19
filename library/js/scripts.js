@@ -27,6 +27,8 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
         mainImage = document.querySelector('.wp-post-image'),
         shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
         description = document.querySelector('.woocommerce-variation-description p').innerText;
+
+    console.log( description );
     
     doc.setFont("helvetica");
     doc.setFontSize(18);
