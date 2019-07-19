@@ -48,20 +48,20 @@ jQuery(document).ready(function($) {
             doc.text(pdfTitle.innerText, 30, 30);
             
             doc.setFontSize(12);
-            doc.text(shortDesc.innerText, 30, (pdfTitle.clientHeight + 20), {
+            doc.text(shortDesc.innerText, 30, (pdfTitle.clientHeight + 10), {
                 maxWidth: 2420
             });
 
             description.each(function(i){
                 doc.setCharSpace(1);
-                doc.text($(this).text(), 30, (shortDesc.clientHeight + pdfTitle.clientHeight + 20) + (i * 8), {
+                doc.text($(this).text(), 30, (shortDesc.clientHeight + pdfTitle.clientHeight + 10) + (i * 8), {
                     maxWidth: 2420
                 });
             });
             
-            doc.addImage(mainImage, 'JPEG', 30, (descContainer.clientHeight + shortDesc.clientHeight + pdfTitle.clientHeight + 20), chosenWidth, adjustedHeight);
+            doc.addImage(mainImage, 'JPEG', 30, (descContainer.clientHeight + shortDesc.clientHeight + pdfTitle.clientHeight + 10), chosenWidth, adjustedHeight);
             
-            doc.addImage(logo, 'JPEG', 30, 3466, 90, 12);
+            doc.addImage(logo, 'JPEG', 30, 2000, 90, 12);
 
             doc.save(''+pdfTitle+'.pdf');
         });
