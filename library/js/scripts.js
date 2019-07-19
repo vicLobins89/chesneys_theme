@@ -41,34 +41,24 @@ jQuery(document).ready(function($) {
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
                         
             doc.setFont("helvetica");
-//            doc.setFontSize(16);
-//            doc.text(pdfTitle, 10, 10);
-//            
-//            doc.setFontSize(12);
-//            doc.text(shortDesc, 10, 20, {
-//                maxWidth: 200
-//            });
-//
-//            description.each(function(i){
-//                doc.setCharSpace(1);
-//                doc.text($(this).text(), 10, 50 + (i * 8), {
-//                    maxWidth: 200
-//                });
-//            });
-//            
-//            doc.addImage(mainImage, 'JPEG', 10, 100, chosenWidth, adjustedHeight);
-//
-//            doc.save(''+pdfTitle+'.pdf');
+            doc.setFontSize(16);
+            doc.text(pdfTitle, 10, 10);
             
-            var source = window.document.getElementsByTagName("body")[0];
-            doc.fromHTML(
-              source,
-              15,
-              0.5,
-              {
-                'width': 180
-              });
-                doc.save('abc.pdf');
+            doc.setFontSize(12);
+            doc.text(shortDesc, 10, 20, {
+                maxWidth: 200
+            });
+
+            description.each(function(i){
+                doc.setCharSpace(1);
+                doc.text($(this).text(), 10, 50 + (i * 8), {
+                    maxWidth: 200
+                });
+            });
+            
+            doc.addImage(mainImage, 'JPEG', 10, 100, chosenWidth, adjustedHeight);
+
+            doc.save(''+pdfTitle+'.pdf');
         });
     }
     
