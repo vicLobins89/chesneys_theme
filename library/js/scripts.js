@@ -19,17 +19,46 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	document.body.className += ' ' + 'is-mobile';
 }
 
-
-
 jQuery(document).ready(function($) {
 	
 	"use strict";
 	
 	viewport = updateViewportDimensions();
     
-    // Shows drawings on US
+    // Shows drawings on US + tear sheets
     if( $('body').hasClass('us-site') ) {
         $('.drawings-link a').parent().detach().appendTo('.product-details');
+        
+        $('.pdf-sheet').on('click', function(e){
+            e.preventDefault();
+            
+            var doc = new jsPDF(),
+                pdfTitle = document.querySelector('.product_title').innerText,
+                mainImage = document.querySelector('.wp-post-image'),
+                shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
+                description = document.querySelector('.woocommerce-variation-description p').innerText;
+            
+            doc.setFont("helvetica");
+            doc.setFontSize(18);
+            doc.text(pdfTitle, 10, 10);
+
+            doc.addImage(mainImage, 'JPEG', 10, 20, 180, 160);
+
+            doc.setFont("helvetica");
+            doc.setFontSize(14);
+            doc.text(shortDesc, 10, 200, {
+                maxWidth: 180
+            });
+
+            doc.setFont("helvetica");
+            doc.setFontSize(14);
+            doc.setCharSpace(2);
+            doc.text(description, 10, 220, {
+                maxWidth: 180
+            });
+
+            doc.save(''+pdfTitle+'.pdf');
+        });
     }
     
     //Add class to tags
