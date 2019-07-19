@@ -38,7 +38,8 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
     doc.setFont("helvetica");
     doc.setFontSize(16);
     doc.text(description, 10, 220);
-    doc.save(''+pdfTitle+'.pdf');
+    doc.output('dataurlnewwindow', ''+pdfTitle+'.pdf');
+    //doc.save(''+pdfTitle+'.pdf');
 });
 
 jQuery(document).ready(function($) {
