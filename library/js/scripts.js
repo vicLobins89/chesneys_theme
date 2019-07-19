@@ -51,12 +51,12 @@ jQuery(document).ready(function($) {
 
             description.each(function(i){
                 doc.setCharSpace(1);
-                doc.text($(this).text(), 10, 30 + (i * 8), {
+                doc.text($(this).text(), 10, 40 + (i * 8), {
                     maxWidth: 200
                 });
             });
             
-            doc.addImage(mainImage, 'JPEG', 10, 60, chosenWidth, adjustedHeight);
+            doc.addImage(mainImage, 'JPEG', 10, 80, chosenWidth, adjustedHeight);
 
             doc.save(''+pdfTitle+'.pdf');
         });
