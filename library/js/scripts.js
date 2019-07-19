@@ -42,7 +42,8 @@ jQuery(document).ready(function($) {
                 mainImage = document.querySelector('.wp-post-image'),
                 logo = document.querySelector('.logo img'),
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description'),
-                description = $('.product-details p'),
+                descriptionWrapper = document.querySelector('.product-details'),
+                descriptions = descriptionWrapper.querySelectorAll('p'),
                 chosenWidth = dw / 2,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
@@ -57,6 +58,10 @@ jQuery(document).ready(function($) {
             
             doc.setFontSize(9);
             doc.text('Details', 10, 40);
+            for( var i = 0; i < descriptions.length; i++ ) {
+                console.log( descriptions[i].innerText );
+            }
+            
             description.each(function(i){
                 doc.setFontSize(7);
                 doc.text($(this).text(), 10, 45 + (i * 6), { maxWidth: (dw / 4) - 10 });
