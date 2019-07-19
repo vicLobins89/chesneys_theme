@@ -39,22 +39,22 @@ jQuery(document).ready(function($) {
                 description = $('.woocommerce-variation-description p');
             
             doc.setFont("helvetica");
-            doc.setFontSize(18);
+            doc.setFontSize(16);
             doc.text(pdfTitle, 10, 10);
 
-            doc.addImage(mainImage, 'JPEG', 10, 20, 180, 160);
+            doc.addImage(mainImage, 'JPEG', 10, 20, mainImage.width, mainImage.height);
 
             doc.setFont("helvetica");
-            doc.setFontSize(14);
+            doc.setFontSize(12);
             doc.text(shortDesc, 10, 200, {
                 maxWidth: 180
             });
 
             doc.setFont("helvetica");
-            doc.setFontSize(14);
+            doc.setFontSize(12);
             
-            description.each(function(){
-                doc.text($(this).text(), 10, 220, {
+            description.each(function(i){
+                doc.text($(this).text(), 10, 220 + (i + 20), {
                     maxWidth: 180
                 });
             });
