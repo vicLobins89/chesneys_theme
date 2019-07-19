@@ -59,13 +59,9 @@ jQuery(document).ready(function($) {
             doc.setFontSize(9);
             doc.text('Details', 10, 40);
             for( var i = 0; i < descriptions.length; i++ ) {
-                console.log( descriptions[i].innerText );
-            }
-            
-            description.each(function(i){
                 doc.setFontSize(7);
-                doc.text($(this).text(), 10, 45 + (i * 6), { maxWidth: (dw / 4) - 10 });
-            });
+                doc.text(descriptions[i].innerText, 10, 45 + (i * 6), { maxWidth: (dw / 4) - 10 });
+            }
             
             doc.addImage(mainImage, 'JPEG', (dw / 4) + 10, 20, chosenWidth, adjustedHeight);
             
