@@ -42,7 +42,7 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
     
     doc.setFont("helvetica");
     doc.setFontSize(14);
-    doc.setCharSpace(2)
+    doc.setCharSpace(2);
     doc.text(description, 10, 220, {
         maxWidth: 180
     });
