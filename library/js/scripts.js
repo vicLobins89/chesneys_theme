@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
                 mainImage = document.querySelector('.wp-post-image'),
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
                 description = $('.woocommerce-variation-description p'),
-                chosenWidth = 200,
+                chosenWidth = 100,
                 adjustedHeight = chosenWidth * (mainImage.width / mainImage.height);
             
             console.log( chosenWidth + ' ' + adjustedHeight );
