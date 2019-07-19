@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
             
             doc.addImage(mainImage, 'JPEG', 10, 80, chosenWidth, adjustedHeight);
             
-            doc.addImage(logo, 'JPEG', 10, 300, 60, 8);
+            doc.addImage(logo, 'JPEG', 10, 230, 60, 8);
 
             doc.save(''+pdfTitle+'.pdf');
         });
