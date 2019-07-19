@@ -37,28 +37,28 @@ jQuery(document).ready(function($) {
                 mainImage = document.querySelector('.wp-post-image'),
                 shortDesc = $('.woocommerce-product-details__short-description').text(),
                 description = $('.woocommerce-variation-description p'),
-                chosenWidth = 100,
+                chosenWidth = 200,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
                         
             doc.setFont("helvetica");
             doc.setFontSize(16);
             doc.text(pdfTitle, 10, 10);
 
-            doc.addImage(mainImage, 'JPEG', 10, 20, chosenWidth, adjustedHeight);
-
             doc.setFont("helvetica");
             doc.setFontSize(12);
-            doc.text(shortDesc, 10, 200, {
+            doc.text(shortDesc, 10, 20, {
                 maxWidth: 180
             });
 
             doc.setFont("helvetica");
             doc.setFontSize(12);
             description.each(function(i){
-                doc.text($(this).text(), 10, 220 + (i * 6), {
+                doc.text($(this).text(), 10, 30 + (i * 6), {
                     maxWidth: 180
                 });
             });
+            
+            doc.addImage(mainImage, 'JPEG', 10, 200, chosenWidth, adjustedHeight);
 
             doc.save(''+pdfTitle+'.pdf');
         });
