@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
                 pdfTitle = document.querySelector('.product_title').innerText,
                 mainImage = document.querySelector('.wp-post-image'),
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
-                description = document.querySelector('.woocommerce-variation-description p').innerText;
+                description = document.querySelector('.woocommerce-variation-description').innerText;
             
             doc.setFont("helvetica");
             doc.setFontSize(18);
@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
 
             doc.setFont("helvetica");
             doc.setFontSize(14);
-            doc.setCharSpace(2);
+            doc.setCharSpace(0.2);
             doc.text(description, 10, 220, {
                 maxWidth: 180
             });
