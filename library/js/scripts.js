@@ -32,11 +32,11 @@ jQuery(document).ready(function($) {
         $('.pdf-sheet').on('click', function(e){
             e.preventDefault();
             
-            var doc = new jsPDF(),
+            var doc = new jsPDF('p', 'mm', 'a4'),
                 pdfTitle = document.querySelector('.product_title').innerText,
                 mainImage = document.querySelector('.wp-post-image'),
                 logo = document.querySelector('.logo img'),
-                shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
+                shortDesc = document.querySelector('.woocommerce-product-details__short-description'),
                 description = $('.woocommerce-variation-description p'),
                 chosenWidth = 150,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
@@ -46,20 +46,20 @@ jQuery(document).ready(function($) {
             doc.text(pdfTitle, 10, 10);
             
             doc.setFontSize(12);
-            doc.text(shortDesc, 10, 20, {
+            doc.text(shortDesc.innerText, 10, 20, {
                 maxWidth: 200
             });
 
             description.each(function(i){
                 doc.setCharSpace(1);
-                doc.text($(this).text(), 10, 40 + (i * 8), {
+                doc.text($(this).text(), 10, shortDesc.clientHeight + (i * 8), {
                     maxWidth: 200
                 });
             });
             
             doc.addImage(mainImage, 'JPEG', 10, 80, chosenWidth, adjustedHeight);
             
-            doc.addImage(logo, 'JPEG', 10, 230, 60, 8);
+            doc.addImage(logo, 'JPEG', 10, 280, 60, 8);
 
             doc.save(''+pdfTitle+'.pdf');
         });
