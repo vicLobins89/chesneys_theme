@@ -35,6 +35,7 @@ jQuery(document).ready(function($) {
             var doc = new jsPDF(),
                 pdfTitle = document.querySelector('.product_title').innerText,
                 mainImage = document.querySelector('.wp-post-image'),
+                logo = document.querySelector('.logo'),
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
                 description = $('.woocommerce-variation-description p'),
                 chosenWidth = 150,
@@ -57,6 +58,8 @@ jQuery(document).ready(function($) {
             });
             
             doc.addImage(mainImage, 'JPEG', 10, 80, chosenWidth, adjustedHeight);
+            
+            doc.addImage(logo, 'JPEG', 10, 300, 60, 8);
 
             doc.save(''+pdfTitle+'.pdf');
         });
