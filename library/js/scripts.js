@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
             doc.text('Product Details', 10, 40);
             for( var i = 0; i < descriptions.length; i++ ) {
                 doc.setFontSize(7);
-                doc.text(descriptions[i].innerText, 10, 45, { maxWidth: (dw / 4) });
+                doc.text(descriptions[i].innerText, 10, 45 + (i * 6), { maxWidth: (dw / 4) });
             }
             
             doc.setFontSize(9);
