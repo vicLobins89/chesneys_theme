@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
                 logo = document.querySelector('.logo img'),
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description'),
                 description = $('.product-details p'),
-                chosenWidth = (dw / 2),
+                chosenWidth = 105,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
             doc.setDrawColor(255,0,0);
@@ -62,8 +62,8 @@ jQuery(document).ready(function($) {
             
             description.each(function(i){
                 doc.setCharSpace(1);
-                doc.text($(this).text(), (dw / 4) * 3, 20 + (i * 8), {
-                    maxWidth: 200
+                doc.text($(this).text(), (dw / 4 * 3) + 5, 20 + (i * 8), {
+                    maxWidth: (dw / 4) - 5
                 });
             });
             
