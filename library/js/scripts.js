@@ -40,13 +40,13 @@ jQuery(document).ready(function($) {
                 chosenWidth = 100,
                 adjustedHeight = chosenWidth * (mainImage.clientWidth / mainImage.clientHeight);
             
-            console.log( mainImage.src );
+            console.log( mainImage );
             
             doc.setFont("helvetica");
             doc.setFontSize(16);
             doc.text(pdfTitle, 10, 10);
 
-            doc.addImage(mainImage.src, 'JPEG', 10, 20, chosenWidth, adjustedHeight);
+            doc.addImage(mainImage, 'JPEG', 10, 20, chosenWidth, adjustedHeight);
 
             doc.setFont("helvetica");
             doc.setFontSize(12);
