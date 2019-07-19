@@ -33,34 +33,42 @@ jQuery(document).ready(function($) {
             e.preventDefault();
             
             var doc = new jsPDF(),
-                pdfTitle = document.querySelector('.product_title').innerHTML,
+                pdfTitle = document.querySelector('.product_title').innerText,
                 mainImage = document.querySelector('.wp-post-image'),
-                shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerHTML,
+                shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
                 description = $('.woocommerce-variation-description p'),
                 chosenWidth = 150,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
                         
             doc.setFont("helvetica");
-            doc.setFontSize(16);
-            doc.text(pdfTitle, 10, 10);
-
-            doc.setFont("helvetica");
-            doc.setFontSize(12);
-            doc.text(shortDesc, 10, 20, {
-                maxWidth: 180
-            });
-
-            doc.setFont("helvetica");
-            doc.setFontSize(12);
-            description.each(function(i){
-                doc.text($(this).html(), 10, 50 + (i * 8), {
-                    maxWidth: 180
-                });
-            });
+//            doc.setFontSize(16);
+//            doc.text(pdfTitle, 10, 10);
+//            
+//            doc.setFontSize(12);
+//            doc.text(shortDesc, 10, 20, {
+//                maxWidth: 200
+//            });
+//
+//            description.each(function(i){
+//                doc.setCharSpace(1);
+//                doc.text($(this).text(), 10, 50 + (i * 8), {
+//                    maxWidth: 200
+//                });
+//            });
+//            
+//            doc.addImage(mainImage, 'JPEG', 10, 100, chosenWidth, adjustedHeight);
+//
+//            doc.save(''+pdfTitle+'.pdf');
             
-            doc.addImage(mainImage, 'JPEG', 10, 100, chosenWidth, adjustedHeight);
-
-            doc.save(''+pdfTitle+'.pdf');
+            var source = window.document.getElementsByTagName("body")[0];
+            doc.fromHTML(
+              source,
+              15,
+              0.5,
+              {
+                'width': 180
+              });
+                doc.save('abc.pdf');
         });
     }
     
