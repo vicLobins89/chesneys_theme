@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
         $('.drawings-link a').parent().detach().appendTo('.product-details');
         $('.drawings-link').remove();
         
-        $('.product-details').append('<p><a class="pdf-sheet" href="#">Download Tear Sheet (PDF)</a></p>');
+        //$('.product-details').append('<p><a class="pdf-sheet" href="#">Download Tear Sheet (PDF)</a></p>');
         $('.pdf-sheet').on('click', function(e){
             e.preventDefault();
             
@@ -43,7 +43,10 @@ jQuery(document).ready(function($) {
                 description = $('.product-details p'),
                 chosenWidth = 150,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
-                        
+            
+            doc.setDrawColor(255,0,0);
+            doc.rect(10, 20, 10, 10);
+            
             doc.setFont("helvetica");
             doc.setFontSize(16);
             doc.text(pdfTitle, 10, 10);
