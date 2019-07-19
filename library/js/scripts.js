@@ -65,9 +65,9 @@ jQuery(document).ready(function($) {
             }
             
             doc.setFontSize(8);
-            doc.text('FURTHER ASSISTANCE', (dw / 4 * 3 + 15), 20), { maxWidth: (dw / 4) - 10 };
+            doc.text('FURTHER ASSISTANCE', 10, 80), { maxWidth: (dw / 4) - 10 };
             var contactString = 'If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following:';
-            doc.text(contactString, (dw / 4 * 3 + 15), 25), { maxWidth: (dw / 4) - 10 };
+            doc.text(contactString, 10, 85), { maxWidth: (dw / 4) - 10 };
             
             doc.addImage(mainImage, 'JPEG', (dw / 4) + 10, 20, chosenWidth, adjustedHeight);
             
