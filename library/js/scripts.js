@@ -38,7 +38,9 @@ jQuery(document).ready(function($) {
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
                 description = $('.woocommerce-variation-description p'),
                 chosenWidth = 200,
-                adjustedHeight = chosenWidth * mainImage.width / mainImage.height;
+                adjustedHeight = chosenWidth * (mainImage.width / mainImage.height);
+            
+            console.log( mainImage.width + ' ' + mainImage.height );
             
             doc.setFont("helvetica");
             doc.setFontSize(16);
@@ -54,9 +56,8 @@ jQuery(document).ready(function($) {
 
             doc.setFont("helvetica");
             doc.setFontSize(12);
-            doc.setCharSpace(0.2);
             description.each(function(i){
-                doc.text($(this).text(), 10, 220 + (i + 20), {
+                doc.text($(this).text(), 10, 220 + (i + 40), {
                     maxWidth: 180
                 });
             });
