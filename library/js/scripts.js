@@ -33,12 +33,12 @@ jQuery(document).ready(function($) {
             e.preventDefault();
             
             var doc = new jsPDF(),
-                pdfTitle = document.querySelector('.product_title').innerText,
-                mainImage = document.querySelector('.wp-post-image'),
-                shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
+                pdfTitle = $('.product_title').text(),
+                mainImage = $('.wp-post-image'),
+                shortDesc = $('.woocommerce-product-details__short-description').text(),
                 description = $('.woocommerce-variation-description p'),
                 chosenWidth = 100,
-                adjustedHeight = chosenWidth * (mainImage.width / mainImage.height);
+                adjustedHeight = chosenWidth * (mainImage.outerWidth() / mainImage.outerHeight());
             
             console.log( chosenWidth + ' ' + adjustedHeight );
             
@@ -46,7 +46,7 @@ jQuery(document).ready(function($) {
             doc.setFontSize(16);
             doc.text(pdfTitle, 10, 10);
 
-            doc.addImage(mainImage, 'JPEG', 10, 20, chosenWidth, adjustedHeight);
+            doc.addImage(mainImage.attr('src'), 'JPEG', 10, 20, chosenWidth, adjustedHeight);
 
             doc.setFont("helvetica");
             doc.setFontSize(12);
@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
             doc.setFont("helvetica");
             doc.setFontSize(12);
             description.each(function(i){
-                doc.text($(this).text(), 10, 220 + (i + 40), {
+                doc.text($(this).text(), 10, 220 + (i * 4), {
                     maxWidth: 180
                 });
             });
