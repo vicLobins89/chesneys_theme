@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
             var doc = new jsPDF(),
                 pdfTitle = document.querySelector('.product_title').innerText,
                 mainImage = document.querySelector('.wp-post-image'),
-                logo = document.querySelector('.logo'),
+                logo = document.querySelector('.logo img'),
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
                 description = $('.woocommerce-variation-description p'),
                 chosenWidth = 150,
