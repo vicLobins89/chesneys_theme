@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
                 });
             });
             
-            doc.addImage(mainImage, 'JPEG', 10, 90, chosenWidth, adjustedHeight);
+            doc.addImage(mainImage, 'JPEG', 10, 95, chosenWidth, adjustedHeight);
             
             doc.addImage(logo, 'JPEG', 10, 280, 60, 8);
 
