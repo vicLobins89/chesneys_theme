@@ -44,6 +44,7 @@ jQuery(document).ready(function($) {
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description'),
                 descriptionWrapper = document.querySelector('.product-details'),
                 descriptions = descriptionWrapper.querySelectorAll('p'),
+                descCont = [],
                 chosenWidth = (dw / 4 * 3) - 10,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
@@ -59,23 +60,23 @@ jQuery(document).ready(function($) {
             doc.setFontSize(9);
             doc.text('Product Details', 10, 40);
             for( var i = 0; i < descriptions.length; i++ ) {
+                descCont.push(descriptions[i]);
+            }
+            for( var j = 0; j < descCont.length; j++ ) {
                 doc.setFontSize(7);
-                doc.text(descriptions[i].innerText, 10, 45 + (i * 6), { maxWidth: (dw / 4) });
+                doc.text(descCont[i].innerText, 10, 45 + (i * 6), { maxWidth: (dw / 4) });
             }
             
-            doc.setFontSize(8);
+            doc.setFontSize(9);
             doc.text('Further Assistance', 10, 90), { maxWidth: (dw / 4) - 10 };
             
+            doc.setFontSize(8);
+            var paraOne = doc.splitTextToSize("If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following:", (dw / 4) - 10);
+            doc.text(paraOne, 10, 95);
             
-            var paragraph="If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following";
-		
-            var lines = doc.splitTextToSize(paragraph, (dw / 4) - 10);
-            
-            doc.text(lines, 10, 95);
-            
-            doc.text('T: 020 7627 1410', 10, 100), { maxWidth: (dw / 4) - 10 };
-            doc.text('T: 020 7627 1410', 10, 105), { maxWidth: (dw / 4) - 10 };
             doc.text('T: 020 7627 1410', 10, 110), { maxWidth: (dw / 4) - 10 };
+            doc.text('F: 020 7622 1078', 10, 115), { maxWidth: (dw / 4) - 10 };
+            doc.text('E: sales@chesneys.co.uk', 10, 120), { maxWidth: (dw / 4) - 10 };
             
             doc.addImage(mainImage, 'JPEG', (dw / 4) + 15, 20, chosenWidth, adjustedHeight);
             
