@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description'),
                 descriptionWrapper = document.querySelector('.product-details'),
                 descriptions = descriptionWrapper.querySelectorAll('p'),
-                chosenWidth = (dw / 4 * 3) - 10,
+                chosenWidth = (dw / 4 * 3) - 20,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
             doc.setFont("helvetica");
