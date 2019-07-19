@@ -36,36 +36,38 @@ jQuery(document).ready(function($) {
             
             //A4 210 x 294mm
             var doc = new jsPDF('l', 'mm', 'a4'),
+                dw = 210,
+                dh = 294,
                 pdfTitle = document.querySelector('.product_title').innerText,
                 mainImage = document.querySelector('.wp-post-image'),
                 logo = document.querySelector('.logo img'),
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description'),
                 description = $('.product-details p'),
-                chosenWidth = 150,
+                chosenWidth = (dw / 2),
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
             doc.setDrawColor(255,0,0);
             doc.rect(10, 20, 10, 10);
             
             doc.setFont("helvetica");
-            doc.setFontSize(16);
+            doc.setFontSize(10);
             doc.text(pdfTitle, 10, 10);
             
             doc.setFontSize(12);
             doc.text(shortDesc.innerText, 10, 20, {
-                maxWidth: 200
+                maxWidth: (dw / 4) - 5
             });
-
+            
+            doc.addImage(mainImage, 'JPEG', (dw / 4), 20, chosenWidth, adjustedHeight);
+            
             description.each(function(i){
                 doc.setCharSpace(1);
-                doc.text($(this).text(), 10, 38 + (i * 8), {
+                doc.text($(this).text(), (dw / 4) * 3, 20 + (i * 8), {
                     maxWidth: 200
                 });
             });
             
-            doc.addImage(mainImage, 'JPEG', 10, 95, chosenWidth, adjustedHeight);
-            
-            doc.addImage(logo, 'JPEG', 10, 280, 60, 8);
+            doc.addImage(logo, 'JPEG', 10, 200, 60, 8);
 
             doc.save(''+pdfTitle+'.pdf');
         });
