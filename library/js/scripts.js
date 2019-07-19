@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
             doc.setFont("helvetica");
             doc.setFontSize(14);
             
-            console.log(description);
+            console.log(description[0]);
             
             doc.text(description, 10, 220, {
                 maxWidth: 180
