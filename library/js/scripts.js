@@ -25,8 +25,8 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
     var doc = new jsPDF(),
         pdfTitle = document.querySelector('.product_title').innerText,
         mainImage = document.querySelector('.wp-post-image'),
-        shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText.replace(/<[^>]*>?/gm, ''),
-        description = document.querySelector('.woocommerce-variation-description').innerText.replace(/<[^>]*>?/gm, '');
+        shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
+        description = document.querySelector('.woocommerce-variation-description').innerText;
     
     doc.setFont("helvetica");
     doc.setFontSize(18);
@@ -46,8 +46,7 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
         maxWidth: 180
     });
     
-    doc.output('dataurlnewwindow');
-    //doc.save(''+pdfTitle+'.pdf');
+    doc.save(''+pdfTitle+'.pdf');
 });
 
 jQuery(document).ready(function($) {
