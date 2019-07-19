@@ -26,8 +26,7 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
         pdfTitle = document.querySelector('.product_title').innerText,
         mainImage = document.querySelector('.wp-post-image'),
         shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
-        descriptionContainer = document.querySelector('.woocommerce-variation-description'),
-        description = descriptionContainer.querySelectorAll('p');
+        description = document.querySelector('.woocommerce-variation-description p').innerText;
     
     doc.setFont("helvetica");
     doc.setFontSize(18);
@@ -43,13 +42,10 @@ document.querySelector('.pdf-sheet').addEventListener("click", function(e){
     
     doc.setFont("helvetica");
     doc.setFontSize(14);
-    for( var i = 0; i < description.length; i++ ) {
-        console.log( description[i].innerHTML );
-        
-        doc.text(description[i].innerHTML, 10, 220 + (i + 20), {
-            maxWidth: 180
-        });
-    }
+    doc.setCharSpace(2)
+    doc.text(description, 10, 220, {
+        maxWidth: 180
+    });
     
     doc.save(''+pdfTitle+'.pdf');
 });
