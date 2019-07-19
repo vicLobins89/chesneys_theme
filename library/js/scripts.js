@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description'),
                 descriptionWrapper = document.querySelector('.product-details'),
                 descriptions = descriptionWrapper.querySelectorAll('p'),
-                chosenWidth = dw / 2,
+                chosenWidth = dw / 4 * 3,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
             doc.setFont("helvetica");
@@ -54,23 +54,24 @@ jQuery(document).ready(function($) {
             doc.setFontSize(9);
             doc.text('Description', 10, 20);
             doc.setFontSize(8);
-            doc.text(shortDesc.innerText, 10, 25, { maxWidth: (dw / 4) - 10 });
+            doc.text(shortDesc.innerText, 10, 25, { maxWidth: (dw / 4)});
             
             doc.setFontSize(9);
             doc.text('Details', 10, 40);
-            doc.text(descriptions[0].innerText, 10, 45 + (i * 6), { maxWidth: (dw / 4) - 10 });
+            doc.text(descriptions[0].innerText, 10, 45 + (i * 6), { maxWidth: (dw / 4) });
             for( var i = 0; i < descriptions.length; i++ ) {
                 doc.setFontSize(7);
-                doc.text(descriptions[i].innerText, 10, 45 + (i * 6), { maxWidth: (dw / 4) - 10 });
+                doc.text(descriptions[i].innerText, 10, 45 + (i * 6), { maxWidth: (dw / 4) });
             }
-            
-            doc.addImage(mainImage, 'JPEG', (dw / 4) + 10, 20, chosenWidth, adjustedHeight);
             
             doc.setFontSize(8);
             doc.text('FURTHER ASSISTANCE', (dw / 4 * 3 + 15), 20), { maxWidth: (dw / 4) - 10 };
-            doc.text('If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following:', (dw / 4 * 3 + 15), 25), { maxWidth: 10 };
+            var contactString = 'If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following:';
+            doc.text(contactString, (dw / 4 * 3 + 15), 25), { maxWidth: (dw / 4) - 10 };
             
-            doc.addImage(logo, 'JPEG', 10, 200, 60, 8);
+            doc.addImage(mainImage, 'JPEG', (dw / 4) + 10, 20, chosenWidth, adjustedHeight);
+            
+            doc.addImage(logo, 'JPEG', 10, 200, 50, 7);
 
             doc.save(''+pdfTitle+'.pdf');
         });
