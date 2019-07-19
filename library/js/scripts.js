@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
     if( $('body').hasClass('us-site') ) {
         $('.drawings-link a').parent().detach().appendTo('.product-details');
         
-        $('.product-details').append('<a class="pdf-sheet" href="#">Download tear sheet (PDF)</a>');
+        $('.product-details').append('<p><a class="pdf-sheet" href="#">Download tear sheet (PDF)</a></p>');
         $('.pdf-sheet').on('click', function(e){
             e.preventDefault();
             
