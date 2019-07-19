@@ -64,7 +64,7 @@ jQuery(document).ready(function($) {
             }
             for( var j = 0; j < descCont.length; j++ ) {
                 doc.setFontSize(7);
-                doc.text(descCont[i], 10, 45 + (i * 6), { maxWidth: (dw / 4) });
+                doc.text(descCont[j], 10, 45 + (i * 6), { maxWidth: (dw / 4) });
             }
             
             doc.setFontSize(9);
