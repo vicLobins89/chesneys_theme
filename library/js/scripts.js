@@ -32,7 +32,8 @@ jQuery(document).ready(function($) {
         $('.pdf-sheet').on('click', function(e){
             e.preventDefault();
             
-            var doc = new jsPDF('p', 'mm', 'a4'),
+            // 2480 pixels x 3508 pixels
+            var doc = new jsPDF('p', 'px', 'a4'),
                 pdfTitle = document.querySelector('.product_title').innerText,
                 mainImage = document.querySelector('.wp-post-image'),
                 logo = document.querySelector('.logo img'),
@@ -43,7 +44,7 @@ jQuery(document).ready(function($) {
                         
             doc.setFont("helvetica");
             doc.setFontSize(16);
-            doc.text(pdfTitle, 10, 10);
+            doc.text(pdfTitle, 30, 30);
             
             doc.setFontSize(12);
             doc.text(shortDesc.innerText, 10, 20, {
