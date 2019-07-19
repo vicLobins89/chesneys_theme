@@ -47,18 +47,18 @@ jQuery(document).ready(function($) {
             doc.text(pdfTitle, 10, 10);
             
             doc.setFontSize(12);
-            doc.text(shortDesc.innerText, 10, 15, {
+            doc.text(shortDesc.innerText, 10, 20, {
                 maxWidth: 200
             });
 
             description.each(function(i){
                 doc.setCharSpace(1);
-                doc.text($(this).text(), 10, 58 + (i * 8), {
+                doc.text($(this).text(), 10, 38 + (i * 8), {
                     maxWidth: 200
                 });
             });
             
-            doc.addImage(mainImage, 'JPEG', 10, 80, chosenWidth, adjustedHeight);
+            doc.addImage(mainImage, 'JPEG', 10, 90, chosenWidth, adjustedHeight);
             
             doc.addImage(logo, 'JPEG', 10, 280, 60, 8);
 
