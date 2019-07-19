@@ -46,7 +46,7 @@ jQuery(document).ready(function($) {
             doc.setFontSize(16);
             doc.text(pdfTitle, 10, 10);
 
-            doc.addImage(mainImage.attr('src'), 'JPEG', 10, 20, chosenWidth, adjustedHeight);
+            doc.addImage(mainImage.src, 'JPEG', 10, 20, chosenWidth, adjustedHeight);
 
             doc.setFont("helvetica");
             doc.setFontSize(12);
