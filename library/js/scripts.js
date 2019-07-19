@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
                 pdfTitle = document.querySelector('.product_title').innerText,
                 mainImage = document.querySelector('.wp-post-image'),
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description').innerText,
-                description = $('.woocommerce-variation-description p').text();
+                description = $('.woocommerce-variation-description p');
             
             doc.setFont("helvetica");
             doc.setFontSize(18);
