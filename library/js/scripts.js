@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
         $('.drawings-link a').parent().addClass('links').detach().appendTo('.product-details');
         $('.drawings-link').remove();
         
-        $('.product-details').append('<p class="links"><a class="pdf-sheet" href="#">Download Tear Sheet (PDF)</a></p>');
+        $('.product-details').append('<p class="links"><a class="pdf-sheet" href="#">Download Tear Sheet (PDF)</a></p>');        
         $('.pdf-sheet').on('click', function(e){
             e.preventDefault();
             
@@ -59,13 +59,10 @@ jQuery(document).ready(function($) {
             doc.setFontSize(9);
             doc.text('Product Details', 10, 40);
             for( var i = 0; i < descriptions.length; i++ ) {
-                var str = descriptions[i].innerHTML;
-                str = str.replace('<p>', '');
-                str = str.replace('<br>', '');
-                str = str.replace(' ', '');
+                var str = descriptions[i].innerText;
                 
                 doc.setFontSize(7);
-                doc.text(str, 10, 45 + (i * 6), { maxWidth: (dw / 4) });
+                doc.text(str, 10, 45 + (i * 6), { maxWidth: (dw / 4) + 20 });
             }
             
             doc.setFontSize(9);
