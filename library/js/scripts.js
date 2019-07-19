@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
                 logo = document.querySelector('.logo img'),
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description'),
                 description = $('.product-details p'),
-                chosenWidth = 105,
+                chosenWidth = dw / 2,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
             doc.setDrawColor(255,0,0);
@@ -55,13 +55,13 @@ jQuery(document).ready(function($) {
             
             doc.setFontSize(8);
             doc.text(shortDesc.innerText, 10, 20, {
-                maxWidth: (dw / 4)
+                maxWidth: (dw / 4) - 10
             });
             
             description.each(function(i){
                 doc.setFontSize(7);
-                doc.text($(this).text(), 10, 40 + (i * 8), {
-                    maxWidth: (dw / 4)
+                doc.text($(this).text(), 10, 40 + (i * 6), {
+                    maxWidth: (dw / 4) - 10
                 });
             });
             
