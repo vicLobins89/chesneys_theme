@@ -145,7 +145,7 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'jszip' );
 		wp_enqueue_script( 'filesaver' );
 		wp_enqueue_script( 'jspdf' );
-		wp_enqueue_script( 'html2canvas' );
+		wp_enqueue_script( 'html2canvas9' );
 
 	}
 }
