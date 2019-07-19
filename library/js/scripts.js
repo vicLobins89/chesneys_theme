@@ -53,10 +53,10 @@ jQuery(document).ready(function($) {
             doc.setFont("helvetica");
             doc.setFontSize(14);
             
-            console.log(description[0]);
-            
-            doc.text(description, 10, 220, {
-                maxWidth: 180
+            description.each(function(){
+                doc.text($(this).text(), 10, 220, {
+                    maxWidth: 180
+                });
             });
 
             doc.save(''+pdfTitle+'.pdf');
