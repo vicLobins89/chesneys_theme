@@ -47,13 +47,13 @@ jQuery(document).ready(function($) {
             doc.text(pdfTitle, 10, 10);
             
             doc.setFontSize(12);
-            doc.text(shortDesc.innerText, 10, 20, {
+            doc.text(shortDesc.innerText, 10, 15, {
                 maxWidth: 200
             });
 
             description.each(function(i){
                 doc.setCharSpace(1);
-                doc.text($(this).text(), 10, 48 + (i * 8), {
+                doc.text($(this).text(), 10, 58 + (i * 8), {
                     maxWidth: 200
                 });
             });
