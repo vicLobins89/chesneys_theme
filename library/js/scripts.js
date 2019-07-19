@@ -59,8 +59,12 @@ jQuery(document).ready(function($) {
             doc.setFontSize(9);
             doc.text('Product Details', 10, 40);
             for( var i = 0; i < descriptions.length; i++ ) {
+                var str = descriptions[i].innerText;
+                var regex = / +(?=[A-Za-z0-9])/;
+                str = str.replace(regex, '');
+                
                 doc.setFontSize(7);
-                doc.text(descriptions[i].innerText, 10, 45 + (i * 6), { maxWidth: (dw / 4) });
+                doc.text(str, 10, 45 + (i * 6), { maxWidth: (dw / 4) });
             }
             
             doc.setFontSize(9);
@@ -76,7 +80,7 @@ jQuery(document).ready(function($) {
             
             doc.addImage(mainImage, 'JPEG', (dw / 4) + 15, 20, chosenWidth, adjustedHeight);
             
-            doc.addImage(logo, 'JPEG', 10, 200, 50, 7);
+            doc.addImage(logo, 'JPEG', 10, 198, 40, 6);
 
             doc.save(''+pdfTitle+'.pdf');
         });
