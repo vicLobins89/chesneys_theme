@@ -3069,7 +3069,7 @@ POSTS & CONTENT STYLES
     color: #666666;
     text-decoration: none; }
 
-.us-site.term-accessories .woof_container_product_tag, .us-site.product_parent_cat_accessories .woof_container_product_tag, .us-site.term-mantels .woof_container_product_cat, .us-site.product_parent_cat_mantels .woof_container_product_cat {
+.us-site.term-accessories .woof_container_product_tag, .us-site.product_parent_cat_accessories .woof_container_product_tag, .us-site.term-mantels .woof_container_product_cat, .us-site.product_cat_mantels .woof_container_product_cat, .us-site.product_parent_cat_mantels .woof_container_product_cat {
   display: none; }
 
 #woof_results_by_ajax .price,
