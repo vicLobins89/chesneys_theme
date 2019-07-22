@@ -959,8 +959,9 @@ INPUTS
   max-width: 80%;
   margin: 2rem auto; }
   @media only screen and (max-width: 767px) {
-    #wpcf7-f8467-p8468-o3 form {
-      column-count: 1; } }
+    #wpcf7-f8467-p8468-o3 form > div {
+      float: none !important;
+      width: 100% !important; } }
 
 .wpcf7-form {
   width: 73%;
