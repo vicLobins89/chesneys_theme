@@ -942,21 +942,22 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     transform: scale(1); }
 
 s
+#wpcf7-f8467-p8468-o3 {
+  column-count: 2;
+  max-width: 80%;
+  margin: 1rem auto; }
+
 .wpcf7-form {
   width: 73%;
   margin: 2rem auto; }
-  s
   .wpcf7-form .your-consent {
     margin-bottom: 2rem;
     display: block; }
   @media only screen and (max-width: 767px) {
-    s
     .wpcf7-form {
       width: 100%; } }
-  s
   .wpcf7-form .wpcf7-list-item {
     margin-left: 0; }
-  s
   .wpcf7-form p {
     margin: 1rem 0; }
 
