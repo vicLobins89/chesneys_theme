@@ -272,7 +272,11 @@ jQuery(document).ready(function($) {
 			});
 			$('#content, #primary').css('padding-top', headerHeight);
 		} else {
-			$('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width( menuWidth/3 );
+            if( $('body').hasClass('us-site') ) {
+                $('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width( menuWidth/2 );
+            } else {
+                $('.primary-nav > li > .sub-menu, .primary-nav > li > .sub-menu > li > .sub-menu').width( menuWidth/3 );
+            }
 			$('#nav_widget').css({
 				"top": menuHeight,
 				"padding-top": subMenuHeight
