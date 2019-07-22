@@ -2795,12 +2795,16 @@ POSTS & CONTENT STYLES
 	}
 }
 
-.product_cat_designer:not(.term-mantels) .woof_term_725,
-.product_cat_modern:not(.term-mantels) .woof_term_725,
-.product_cat_antiques:not(.term-mantels) .woof_term_725,
-.product_cat_period-reproductions:not(.term-mantels) .woof_term_725,
+.product_cat_designer .woof_term_725,
+.product_cat_modern .woof_term_725,
+.product_cat_antiques .woof_term_725,
+.product_cat_period-reproductions .woof_term_725,
 .tag-cast-iron {
     display: none !important;
+}
+
+.term-mantels .woof_term_725 {
+    display: block !important;
 }
 
 // start woo //
