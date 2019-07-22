@@ -144,21 +144,15 @@ function bones_scripts_and_styles() {
         wp_enqueue_script( 'jquery' );
         wp_enqueue_script( 'bones-js' );
         
-        wp_enqueue_script( 'jszip' );
+        if( is_page(2450) ) {
+            wp_enqueue_script( 'jszip' );
             wp_enqueue_script( 'filesaver' );
+        }
         
-        wp_enqueue_script( 'jspdf' );
+        if( is_product() && $blog_id == 5 ) {
+            wp_enqueue_script( 'jspdf' );
             wp_enqueue_script( 'html2canvas9' );
-        
-//        if( is_page(2450) ) {
-//            wp_enqueue_script( 'jszip' );
-//            wp_enqueue_script( 'filesaver' );
-//        }
-//        
-//        if( is_product() && $blog_id == 5 ) {
-//            wp_enqueue_script( 'jspdf' );
-//            wp_enqueue_script( 'html2canvas9' );
-//        }
+        }
 	}
 }
 
