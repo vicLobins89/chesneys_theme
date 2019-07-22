@@ -4060,6 +4060,10 @@ SIDEBARS & ASIDES
 }
 
 #geo_popup {
+    .us-site & {
+        display: none;
+    }
+    
 	position: fixed;
     width: 100%;
     bottom: 0;

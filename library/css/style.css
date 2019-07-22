@@ -3923,6 +3923,8 @@ SIDEBARS & ASIDES
   z-index: 999999;
   color: #fff;
   text-align: center; }
+  .us-site #geo_popup {
+    display: none; }
   #geo_popup .secondary-btn:hover, #geo_popup .search input[type="submit"]:hover, .search #geo_popup input[type="submit"]:hover, #geo_popup .woocommerce button.single_add_to_cart_button:hover, .woocommerce #geo_popup button.single_add_to_cart_button:hover,
   #geo_popup .woocommerce button.woocommerce-Button:hover,
   .woocommerce #geo_popup button.woocommerce-Button:hover,
