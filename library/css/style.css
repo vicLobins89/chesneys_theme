@@ -956,9 +956,8 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 INPUTS
 *********************/
 #wpcf7-f8467-p8468-o3 form {
-  column-count: 2;
   max-width: 80%;
-  margin: 1rem auto; }
+  margin: 2rem auto; }
   @media only screen and (max-width: 767px) {
     #wpcf7-f8467-p8468-o3 form {
       column-count: 1; } }
