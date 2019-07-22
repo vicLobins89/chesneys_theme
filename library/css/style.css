@@ -1929,6 +1929,8 @@ LAYOUT & GRID STYLES
       .module.module-register-a-trade-account .wpcf7-form input:not([type=checkbox]), .module.module-sign-up-3 .wpcf7-form input:not([type=checkbox]), .module.module-sign-up-2 .wpcf7-form input:not([type=checkbox]), .module.module-sign-up .wpcf7-form input:not([type=checkbox]) {
         width: 20rem;
         height: 3.5rem; }
+      .module.module-register-a-trade-account .wpcf7-form textarea, .module.module-sign-up-3 .wpcf7-form textarea, .module.module-sign-up-2 .wpcf7-form textarea, .module.module-sign-up .wpcf7-form textarea {
+        width: 20rem; }
   .module.module-ctas, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
     padding: 0 0 1rem 0;
     font-size: .9rem; }
