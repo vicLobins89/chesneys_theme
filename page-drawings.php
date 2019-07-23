@@ -59,18 +59,16 @@ $acfClass = new CustomACF();
 							<?php // ACF FIELDS ?>
 							<?php $acfClass->page_rows(); ?>
                     
-                            <ul class="client-list cf">
                             <?php
-                            $dir = wp_upload_dir().'/drawings/';
+                            $uploads = wp_upload_dir();
                             $files1 = scandir($dir);
                             $files2 = scandir($dir, 1);
                                 
-                            echo $dir;
+                            echo wp_basename( $uploads['baseurl'] );
 
                             print_r($files1);
                             print_r($files2);
                             ?>
-                            </ul>
 
 							</article>
 
