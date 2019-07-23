@@ -62,13 +62,15 @@ $acfClass = new CustomACF();
                             <?php
                             $upload_dir = wp_upload_dir(); 
                             $logo_dir = ( $upload_dir['basedir'] . '/drawings/' );
+                            $drawings = glob($logo_dir . "*.pdf");
                     
-                            $images = glob($logo_dir . "*");
+                            print_r($drawings);
+                    
                             echo '<ul>';
-                            foreach($images as $image) {
-                                $filename = str_replace( ' ', '%20', basename($image) );
+                            foreach($drawings as $drawing) {
+                                $filename = str_replace( ' ', '%20', basename($drawing) );
                                 $filename = $upload_dir['baseurl']."/drawings/$filename";
-                                echo '<li><a href="'.$filename.'">'.$image.'</a></li>';
+                                echo '<li><a target="_blank" href="'.$filename.'">'.$drawing.'</a></li>';
                             }
                             echo '</ul>';
                             ?>
