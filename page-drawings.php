@@ -64,13 +64,14 @@ $acfClass = new CustomACF();
                             $logo_dir = ( $upload_dir['basedir'] . '/drawings/' );
                             $drawings = glob($logo_dir . "*.pdf");
                     
-                            print_r($drawings);
-                    
                             echo '<ul>';
                             foreach($drawings as $drawing) {
-                                $filename = str_replace( ' ', '%20', basename($drawing) );
-                                $filename = $upload_dir['baseurl']."/drawings/$filename";
-                                echo '<li><a target="_blank" href="'.$filename.'">'.$drawing.'</a></li>';
+                                $url = str_replace( ' ', '%20', basename($drawing) );
+                                $url = $upload_dir['baseurl']."/drawings/$url";
+                                
+                                $name = basename($drawing);
+                                
+                                echo '<li><a target="_blank" href="'.$url.'">'.$name.'</a></li>';
                             }
                             echo '</ul>';
                             ?>
