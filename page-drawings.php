@@ -61,9 +61,11 @@ $acfClass = new CustomACF();
                     
                             <ul class="client-list cf">
                             <?php
-                            $dir = '/wp-content/uploads/sites/5/drawings/';
+                            $dir = wp_upload_dir().'/drawings/';
                             $files1 = scandir($dir);
                             $files2 = scandir($dir, 1);
+                                
+                            echo $dir;
 
                             print_r($files1);
                             print_r($files2);
