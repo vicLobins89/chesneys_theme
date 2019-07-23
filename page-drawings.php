@@ -61,8 +61,8 @@ $acfClass = new CustomACF();
                     
                             <?php
                             $uploads = wp_upload_dir();
-                            $files1 = scandir($dir);
-                            $files2 = scandir($dir, 1);
+                            $files1 = scandir($uploads);
+                            $files2 = scandir($uploads, 1);
                                 
                             echo wp_basename( $uploads['baseurl'] );
 
