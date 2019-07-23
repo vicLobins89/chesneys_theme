@@ -2924,6 +2924,8 @@ POSTS & CONTENT STYLES
           text-indent: -10px; }
     .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers):not(.order_details).sans {
       font-size: .8em; }
+    .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers):not(.order_details).drawings-list {
+      columns: 3px; }
     .entry-content ul:not(.woocommerce-error):not(.products):not(.product-categories):not(.children):not(.page-numbers):not(.order_details) li {
       font-size: 1.15em;
       margin-bottom: 6px; }
