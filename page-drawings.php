@@ -66,7 +66,8 @@ $acfClass = new CustomACF();
                             $images = glob($logo_dir . "*");
                             foreach($images as $image) {
                                 $filename = str_replace( ' ', '%20', basename($image) );
-                                echo $upload_dir['baseurl']."/$filename";
+                                $filename = $upload_dir['baseurl']."/drawings/$filename";
+                                echo $filename;
                             }
                             ?>
 
