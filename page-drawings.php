@@ -64,11 +64,13 @@ $acfClass = new CustomACF();
                             $logo_dir = ( $upload_dir['basedir'] . '/drawings/' );
                     
                             $images = glob($logo_dir . "*");
+                            echo '<ul>';
                             foreach($images as $image) {
                                 $filename = str_replace( ' ', '%20', basename($image) );
                                 $filename = $upload_dir['baseurl']."/drawings/$filename";
-                                echo $filename;
+                                echo '<li><a href="'.$filename.'">'.$image.'</a></li>';
                             }
+                            echo '</ul>';
                             ?>
 
 							</article>
