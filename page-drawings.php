@@ -62,9 +62,11 @@ $acfClass = new CustomACF();
                             <ul class="client-list cf">
                             <?php
                             $dir = '/wp-content/uploads/sites/5/drawings/';
-                            foreach( glob( $dir.'*', GLOB_ONLYDIR ) as $folder ) {
-                                echo '<li>'.$folder.'</li>';
-                            }
+                            $files1 = scandir($dir);
+                            $files2 = scandir($dir, 1);
+
+                            print_r($files1);
+                            print_r($files2);
                             ?>
                             </ul>
 
