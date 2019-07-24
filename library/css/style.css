@@ -3017,9 +3017,11 @@ POSTS & CONTENT STYLES
     margin: 0 0 1.5em;
     border-radius: 3px; }
 
-.page-template-page-sitemap ul, .page-template-page-sitemap li {
+.page-template-page-sitemap ul {
   font-size: 1rem;
-  list-style: disc; }
+  list-style: disc;
+  margin: 0;
+  padding: 0; }
 
 .wp-caption {
   max-width: 100%;
