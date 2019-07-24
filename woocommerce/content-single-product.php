@@ -20,6 +20,9 @@ global $product;
 require_once(__DIR__.'/../classes/acf.php');
 $acfClass = new CustomACF();
 $blog_id = get_current_blog_id();
+$cat = get_the_terms( $product->get_id(), 'product_cat' );
+$parent_cat;
+$current_cat = end($cat);
 
 // Removing image link
 function wc_remove_link_on_thumbnails( $html ) {
@@ -87,7 +90,7 @@ echo '</div>';
 
 <?php
 // CTAs Module 1
-if( $blog_id == 5 && is_product_category('limited-edition') ) {
+if( $blog_id == 5 && has_term( 'limited-edition', 'product_cat' ) ) {
     $cta_module = get_post(8487);
 } else {
     $cta_module = get_post(1409);
@@ -179,10 +182,6 @@ $acfClass->render_modules($acc_module);
  * @hooked woocommerce_upsell_display - 15
  * @hooked woocommerce_output_related_products - 20
  */
-
-$cat = get_the_terms( $product->get_id(), 'product_cat' );
-$parent_cat;
-$current_cat = end($cat);
 foreach ($cat as $category) {
 	if($category->parent == 0){
 	   $parent_cat = $category->slug;
