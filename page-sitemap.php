@@ -64,7 +64,7 @@ $acfClass = new CustomACF();
                             echo '<div class="cf">';
                             
                             wp_list_categories(array(
-                                'taxonomy' => 'products_cat'
+                                'taxonomy' => 'product_cat'
                             ));
                     
                             echo '</div></section>';
