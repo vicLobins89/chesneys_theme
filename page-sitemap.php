@@ -61,14 +61,14 @@ $acfClass = new CustomACF();
                     
                             <?php
                             echo '<section class="row entry-content wrap cf" itemprop="articleBody">';
-                            echo '<div class="cf">';
+                            echo '<div class="cf"><ul>';
                             
                             wp_list_categories(array(
                                 'title_li' => '',
                                 'taxonomy' => 'product_cat'
                             ));
                     
-                            echo '</div></section>';
+                            echo '</ul></div></section>';
                             ?>
 
 							</article>
