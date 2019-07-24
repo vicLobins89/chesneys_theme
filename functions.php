@@ -307,12 +307,15 @@ function custom_catalog_ordering_args( $args ) {
     $product_categories = array('sir-john-soane', 'sir-edwin-lutyens');
     
     foreach($product_categories as $product_category) {
-        if( !is_product_category($product_category) ) return $args;
+        if( !is_product_category($product_category) ) {
+            return $args;
+        }
         
         $args['orderby'] = 'title';
 
-        if( $args['orderby'] == 'title' )
-            $args['order'] = 'ASC'; // Set order by DESC
+        if( $args['orderby'] == 'title' ) {
+            $args['order'] = 'ASC';
+        }
 
         return $args;
     }
