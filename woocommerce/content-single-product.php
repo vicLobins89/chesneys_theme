@@ -87,7 +87,11 @@ echo '</div>';
 
 <?php
 // CTAs Module 1
-$cta_module = get_post(1409);
+if( $blog_id == 5 && is_product_category(776) ) {
+    $cta_module = get_post(8487);
+} else {
+    $cta_module = get_post(1409);
+}
 $acfClass->render_modules($cta_module);
 
 // Product Details + Images
