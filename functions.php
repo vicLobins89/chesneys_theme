@@ -309,15 +309,15 @@ function custom_catalog_ordering_args( $args ) {
     foreach($product_categories as $product_category) {
         if( !is_product_category($product_category) ) {
             return $args;
-        }
-        
-        $args['orderby'] = 'title';
+        } else {
+            $args['orderby'] = 'title';
 
-        if( $args['orderby'] == 'title' ) {
-            $args['order'] = 'ASC';
-        }
+            if( $args['orderby'] == 'title' ) {
+                $args['order'] = 'ASC';
+            }
 
-        return $args;
+            return $args;
+        }
     }
 }
 add_filter( 'woocommerce_get_catalog_ordering_args', 'custom_catalog_ordering_args', 20, 1 );
