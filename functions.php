@@ -304,21 +304,16 @@ if ($userInfo->country->isoCode == 'US') {
 
 // Limited Edition
 function custom_catalog_ordering_args( $args ) {
-    $product_categories = array('sir-edwin-lutyens', 'sir-john-soane');
-    
-    foreach($product_categories as $product_category) {
-        if( !is_product_category($product_category) ) {
-            return $args;
-        } else {
-            $args['orderby'] = 'title';
+    $product_category = "'sir-john-soane', 'sir-edwin-lutyens'";
 
-            if( $args['orderby'] == 'title' ) {
-                $args['order'] = 'ASC';
-            }
+    if( !is_product_category($product_category) ) return $args;
 
-            return $args;
-        }
-    }
+    $args['orderby'] = 'title';
+
+    if( $args['orderby'] == 'title' )
+        $args['order'] = 'ASC';
+
+    return $args;
 }
 add_filter( 'woocommerce_get_catalog_ordering_args', 'custom_catalog_ordering_args', 20, 1 );
 
