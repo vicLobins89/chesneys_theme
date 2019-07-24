@@ -3109,7 +3109,7 @@ POSTS & CONTENT STYLES
 .term-tudor-gothic .woof_term_724,
 .term-regency .woof_term_724,
 .term-regency .woof_term_827,
-.tag-cast-iron {
+.tag-cast-iron:not(.woof_term_33) {
   display: none !important; }
 
 .term-mantels .woof_term_725 {
