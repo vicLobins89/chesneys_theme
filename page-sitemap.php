@@ -61,7 +61,7 @@ $acfClass = new CustomACF();
                     
                             <?php
                             echo '<section class="row entry-content wrap cf" itemprop="articleBody">';
-                            echo '<div class="cf"><ul>';
+                            echo '<div class="cf"><h1 class="h2" style="text-align: center;">Sitemap</h1><ul>';
                             
                             wp_list_categories(array(
                                 'title_li' => '',
