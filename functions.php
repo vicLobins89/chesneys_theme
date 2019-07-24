@@ -302,6 +302,23 @@ if ($userInfo->country->isoCode == 'US') {
 	remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
 }
 
+// Limited Edition
+function custom_catalog_ordering_args( $args ) {
+    $product_category = 'sir-john-soane'; // <== HERE define your product category
+
+    // Only for defined product category archive page
+    if( ! is_product_category($product_category) ) return $args;
+
+    // Set default ordering to 'date ID', so "Newness"
+    $args['orderby'] = 'title';
+
+    if( $args['orderby'] == 'title' )
+        $args['order'] = 'ASC'; // Set order by DESC
+
+    return $args;
+}
+add_filter( 'woocommerce_get_catalog_ordering_args', 'custom_catalog_ordering_args', 20, 1 );
+
 //STORE LOCATOR
 function custom_templates( $templates ) {
 
