@@ -63,13 +63,7 @@ $acfClass = new CustomACF();
                             echo '<section class="row entry-content wrap cf" itemprop="articleBody">';
                             echo '<div class="cf">';
                             
-                            wp_nav_menu(array(
-                                'container' => false,
-                                'container_class' => 'sitemap cf',
-                                'menu' => __( 'The Main Menu', 'bonestheme' ),
-                                'menu_class' => 'sitemap cf',
-                                'theme_location' => 'main-nav'
-                            ));
+                            wp_list_categories();
                     
                             echo '</div></section>';
                             ?>
