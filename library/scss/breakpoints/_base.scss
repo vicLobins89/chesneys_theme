@@ -2626,35 +2626,6 @@ POSTS & CONTENT STYLES
 				background-size: 1.25em !important;
 				list-style-type: none;
 			}
-			
-			.icon-air-hockey { background: url(../images/icons/icon-air-hockey.png) no-repeat center left; }
-			.icon-balcony { background: url(../images/icons/icon-balcony.png) no-repeat center left; }
-			.icon-bath { background: url(../images/icons/icon-bath.png) no-repeat center left; }
-			.icon-bathrooms { background: url(../images/icons/icon-bathrooms.png) no-repeat center left; }
-			.icon-bbq { background: url(../images/icons/icon-bbq.png) no-repeat center left; }
-			.icon-bedrooms { background: url(../images/icons/icon-bedrooms.png) no-repeat center left; }
-			.icon-coffee { background: url(../images/icons/icon-coffee.png) no-repeat center left; }
-			.icon-dining { background: url(../images/icons/icon-dining.png) no-repeat center left; }
-			.icon-dishwasher { background: url(../images/icons/icon-dishwasher.png) no-repeat center left; }
-			.icon-drier { background: url(../images/icons/icon-drier.png) no-repeat center left; }
-			.icon-drying-area { background: url(../images/icons/icon-drying-area.png) no-repeat center left; }
-			.icon-fridge { background: url(../images/icons/icon-fridge.png) no-repeat center left; }
-			.icon-garden { background: url(../images/icons/icon-garden.png) no-repeat center left; }
-			.icon-guests { background: url(../images/icons/icon-guests.png) no-repeat center left; }
-			.icon-hot-tub { background: url(../images/icons/icon-hot-tub.png) no-repeat center left; }
-			.icon-microwave { background: url(../images/icons/icon-microwave.png) no-repeat center left; }
-			.icon-oven { background: url(../images/icons/icon-oven.png) no-repeat center left; }
-			.icon-parking { background: url(../images/icons/icon-parking.png) no-repeat center left; }
-			.icon-pool-table { background: url(../images/icons/icon-pool-table.png) no-repeat center left; }
-			.icon-raclette { background: url(../images/icons/icon-raclette.png) no-repeat center left; }
-			.icon-seating { background: url(../images/icons/icon-seating.png) no-repeat center left; }
-			.icon-shower { background: url(../images/icons/icon-shower.png) no-repeat center left; }
-			.icon-ski-area { background: url(../images/icons/icon-ski-area.png) no-repeat center left; }
-			.icon-ski-lifts { background: url(../images/icons/icon-ski-lifts.png) no-repeat center left; }
-			.icon-tv { background: url(../images/icons/icon-tv.png) no-repeat center left; }
-			.icon-washing-machine { background: url(../images/icons/icon-washing-machine.png) no-repeat center left; }
-			.icon-wifi { background: url(../images/icons/icon-wifi.png) no-repeat center left; }
-			.icon-wood-fire { background: url(../images/icons/icon-wood-fire.png) no-repeat center left; }
 		}
 	}
 
@@ -2780,6 +2751,17 @@ POSTS & CONTENT STYLES
 		margin: 0 0 1.5em;
 		border-radius: 3px;
 	}
+}
+
+.page-template-page-sitemap {
+    ul {
+        font-size: 1rem;
+        list-style: disc;
+        
+        li {
+            
+        }
+    }
 }
 
 .wp-caption {
