@@ -2829,6 +2829,10 @@ POSTS & CONTENT STYLES
         max-width: 70%;
         margin-left: auto !important;
         margin-right: auto !important; }
+  .us-site.home .featured-copy h1, .us-site.home .module.module-outdoor-living-shop .inner-module h1, .module.module-outdoor-living-shop .us-site.home .inner-module h1, .us-site.home .module.module-glossary .inner-module h1, .module.module-glossary .us-site.home .inner-module h1, .us-site.home .module.module-design-a-fireplace .inner-module h1, .module.module-design-a-fireplace .us-site.home .inner-module h1, .us-site.home .uk-site #folio_header .widget_text h1, .uk-site #folio_header .us-site.home .widget_text h1,
+  .us-site.home .uk-site #news_header .widget_text h1,
+  .uk-site #news_header .us-site.home .widget_text h1 {
+    display: none; }
 
 .spares-thumbs .wp-caption {
   margin-bottom: 2rem;
