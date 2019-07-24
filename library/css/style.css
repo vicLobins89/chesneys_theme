@@ -3115,8 +3115,10 @@ POSTS & CONTENT STYLES
 .term-mantels .woof_term_725 {
   display: block !important; }
 
+.term-sir-edwin-lutyens #filter,
 .term-sir-john-soane #filter {
   display: none; }
+.term-sir-edwin-lutyens .col-9,
 .term-sir-john-soane .col-9 {
   width: 100%; }
 

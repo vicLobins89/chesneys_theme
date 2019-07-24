@@ -304,10 +304,11 @@ if ($userInfo->country->isoCode == 'US') {
 
 // Limited Edition
 function custom_catalog_ordering_args( $args ) {
-    $product_category = 'sir-john-soane'; // <== HERE define your product category
-
-    // Only for defined product category archive page
-    if( ! is_product_category($product_category) ) return $args;
+    $product_categories = array('sir-john-soane', 'sir-edwin-lutyens');
+    
+    foreach($product_categories as $product_category) {
+        if( !is_product_category($product_category) ) return $args;
+    }
 
     // Set default ordering to 'date ID', so "Newness"
     $args['orderby'] = 'title';
