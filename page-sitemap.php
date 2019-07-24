@@ -60,6 +60,9 @@ $acfClass = new CustomACF();
 							<?php $acfClass->page_rows(); ?>
                     
                             <?php
+                            echo '<section class="row entry-content wrap cf" itemprop="articleBody">';
+                            echo '<div class="cf">';
+                            
                             wp_nav_menu(array(
                                 'container' => false,
                                 'container_class' => 'sitemap cf',
@@ -67,6 +70,8 @@ $acfClass = new CustomACF();
                                 'menu_class' => 'sitemap cf',
                                 'theme_location' => 'main-nav'
                             ));
+                    
+                            echo '</div></section>';
                             ?>
 
 							</article>
