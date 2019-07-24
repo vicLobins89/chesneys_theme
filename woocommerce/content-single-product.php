@@ -87,7 +87,7 @@ echo '</div>';
 
 <?php
 // CTAs Module 1
-if( $blog_id == 5 ) {
+if( $blog_id == 5 && is_product_category('limited-edition') ) {
     $cta_module = get_post(8487);
 } else {
     $cta_module = get_post(1409);
