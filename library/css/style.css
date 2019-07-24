@@ -1948,22 +1948,22 @@ LAYOUT & GRID STYLES
         height: 3.5rem; }
       .module.module-register-a-trade-account .wpcf7-form textarea, .module.module-sign-up-3 .wpcf7-form textarea, .module.module-sign-up-2 .wpcf7-form textarea, .module.module-sign-up .wpcf7-form textarea {
         width: 20rem; }
-  .module.module-ctas, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
+  .module.module-ctas, .module.module-ctas-2, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
     padding: 0 0 1rem 0;
     font-size: .9rem; }
     @media only screen and (max-width: 767px) {
-      .module.module-ctas, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
+      .module.module-ctas, .module.module-ctas-2, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
         text-align: center; } }
-    .module.module-ctas h2, .module.module-outdoor-ctas h2, .module.module-outdoor-ctas-2 h2 {
+    .module.module-ctas h2, .module.module-ctas-2 h2, .module.module-outdoor-ctas h2, .module.module-outdoor-ctas-2 h2 {
       display: none; }
-    .module.module-ctas p, .module.module-outdoor-ctas p, .module.module-outdoor-ctas-2 p {
+    .module.module-ctas p, .module.module-ctas-2 p, .module.module-outdoor-ctas p, .module.module-outdoor-ctas-2 p {
       display: inline-block; }
-      .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
+      .module.module-ctas p a, .module.module-ctas-2 p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
         vertical-align: middle;
         max-width: 14rem;
         margin: 1rem 2rem; }
         @media only screen and (max-width: 767px) {
-          .module.module-ctas p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
+          .module.module-ctas p a, .module.module-ctas-2 p a, .module.module-outdoor-ctas p a, .module.module-outdoor-ctas-2 p a {
             min-width: 12rem; } }
   .module.module-our-team h2 {
     text-align: center; }
@@ -4644,7 +4644,7 @@ TABLET & SMALLER LAPTOPS
   .module.module-register-a-trade-account, .module.module-sign-up-3, .module.module-sign-up-2, .module.module-sign-up, .module.module-need-help-2, .module.module-need-help {
     padding-top: 5%;
     padding-bottom: 5%; }
-  .module.module-ctas p, .module.module-outdoor-ctas p, .module.module-outdoor-ctas-2 p {
+  .module.module-ctas p, .module.module-ctas-2 p, .module.module-outdoor-ctas p, .module.module-outdoor-ctas-2 p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
