@@ -304,14 +304,16 @@ if ($userInfo->country->isoCode == 'US') {
 
 // Limited Edition
 function custom_catalog_ordering_args( $args ) {
-    $product_category = "'sir-john-soane', 'sir-edwin-lutyens'";
 
-    if( !is_product_category($product_category) ) return $args;
+    if( !is_product_category('sir-john-soane', 'sir-edwin-lutyens') ) {
+        return $args;
+    }
 
     $args['orderby'] = 'title';
 
-    if( $args['orderby'] == 'title' )
+    if( $args['orderby'] == 'title' ) {
         $args['order'] = 'ASC';
+    }
 
     return $args;
 }
