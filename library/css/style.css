@@ -3023,6 +3023,8 @@ POSTS & CONTENT STYLES
   margin: 0;
   padding: 0;
   text-indent: 0; }
+  .page-template-page-sitemap ul ul, .page-template-page-sitemap ul ul ul {
+    margin: 1rem; }
 
 .wp-caption {
   max-width: 100%;
