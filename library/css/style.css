@@ -3103,6 +3103,7 @@ POSTS & CONTENT STYLES
 .term-limited-edition .woof_term_844,
 .term-our-collection .woof_term_844,
 .term-special-materials .woof_term_844,
+.term-museum .woof_term_844,
 .term-georgian .woof_term_724,
 .term-victorian .woof_term_724,
 .term-tudor-gothic .woof_term_724,
@@ -3113,6 +3114,11 @@ POSTS & CONTENT STYLES
 
 .term-mantels .woof_term_725 {
   display: block !important; }
+
+.term-sir-john-soane #filter {
+  display: none; }
+.term-sir-john-soane .col-9 {
+  width: 100%; }
 
 .us-site.term-accessories .woof_container_product_tag, .us-site.product_parent_cat_accessories .woof_container_product_tag, .us-site.term-mantels .woof_container_product_cat, .us-site.product_cat_mantels .woof_container_product_cat, .us-site.product_parent_cat_mantels .woof_container_product_cat {
   display: none; }
