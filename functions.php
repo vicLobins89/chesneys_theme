@@ -305,7 +305,7 @@ if ($userInfo->country->isoCode == 'US') {
 // Limited Edition
 function custom_catalog_ordering_args( $args ) {
 
-    if( !is_product_category('sir-edwin-lutyens', 'sir-john-soane') ) {
+    if( !is_product_category('sir-john-soane') || !is_product_category('sir-edwin-lutyens') ) {
         return $args;
     }
 
