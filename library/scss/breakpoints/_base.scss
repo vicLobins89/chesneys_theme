@@ -2754,15 +2754,11 @@ POSTS & CONTENT STYLES
 }
 
 .page-template-page-sitemap {
-    ul {
+    ul, li {
         font-size: 1rem;
         list-style: disc;
         margin: 0;
         padding: 0;
-        
-        li {
-            
-        }
     }
 }
 
