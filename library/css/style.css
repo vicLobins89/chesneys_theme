@@ -3068,11 +3068,11 @@ POSTS & CONTENT STYLES
 .product_cat_antiques .woof_term_725,
 .product_parent_cat_period-reproductions .woof_term_725,
 .product_cat_period-reproductions .woof_term_725,
-.term-mantels .woof_term_725 {
-  display: block !important; }
-
 .tag-cast-iron:not(.woof_term_33) {
   display: none !important; }
+
+.term-mantels .woof_term_725 {
+  display: block !important; }
 
 .term-limited-edition #filter,
 .term-electric-fires #filter,
