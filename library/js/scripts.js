@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
                 chosenWidth = (dw / 4 * 3) - 20,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
-            doc.addImage(logo, 'JPEG', 10, 5, 40, 5);
+            doc.addImage(logo, 'JPEG', 10, 6, 40, 5);
             
             doc.setFont("helvetica");
             doc.setFontSize(10);
