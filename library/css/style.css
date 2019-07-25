@@ -3076,11 +3076,13 @@ POSTS & CONTENT STYLES
 .term-mantels .woof_term_725 {
   display: block !important; }
 
+.product_parent_cat_antiques:not(.term-antiques) #filter,
 .term-limited-edition #filter,
 .term-electric-fires #filter,
 .term-sir-edwin-lutyens #filter,
 .term-sir-john-soane #filter {
   display: none; }
+.product_parent_cat_antiques:not(.term-antiques) .col-9,
 .term-limited-edition .col-9,
 .term-electric-fires .col-9,
 .term-sir-edwin-lutyens .col-9,
