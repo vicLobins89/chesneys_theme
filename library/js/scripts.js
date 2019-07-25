@@ -47,46 +47,38 @@ jQuery(document).ready(function($) {
                 chosenWidth = (dw / 4 * 3) - 20,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
+            doc.addImage(logo, 'JPEG', 10, 10, 40, 5);
+            
             doc.setFont("helvetica");
             doc.setFontSize(10);
-            doc.text(pdfTitle, 10, 10);
+            doc.text(pdfTitle, 10, 20);
             
             doc.setFontSize(9);
-            doc.text('Product Description', 10, 20);
+            doc.text('Product Description', 10, 30);
             doc.setFontSize(8);
-            doc.text(shortDesc.innerText, 10, 25, { maxWidth: (dw / 4)});
-            
-            
-            // Description
-            var desc = descriptionWrapper.innerText
-            desc = desc.replace(/″/gi, '"');
-            console.log(desc);
+            doc.text(shortDesc.innerText, 10, 35, { maxWidth: (dw / 4)});
             
             doc.setFontSize(9);
-            doc.text('Product Details', 10, 45);
+            doc.text('Product Details', 10, 55);
             for( var i = 0; i < descriptions.length; i++ ) {
                 var str = descriptions[i].innerText;
                 str = str.replace(/″/gi, '"');
-                //console.log(str);
                 
-                doc.setFontSize(7);
-                doc.text(str, 10, 50 + (i * 6), { maxWidth: (dw / 4) + 20 });
+                doc.setFontSize(8);
+                doc.text(str, 10, 60 + (i * 5), { maxWidth: (dw / 4) + 20 });
             }
             
             doc.setFontSize(9);
-            doc.text('Further Assistance', 10, 90), { maxWidth: (dw / 4) - 10 };
+            doc.text('Further Assistance', 10, 100), { maxWidth: (dw / 4) - 10 };
             
             doc.setFontSize(8);
             var paraOne = doc.splitTextToSize("If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following:", (dw / 4) - 10);
-            doc.text(paraOne, 10, 95);
+            doc.text(paraOne, 10, 105);
             
-            doc.text('T: 020 7627 1410', 10, 110), { maxWidth: (dw / 4) - 10 };
-            doc.text('F: 020 7622 1078', 10, 115), { maxWidth: (dw / 4) - 10 };
-            doc.text('E: sales@chesneys.co.uk', 10, 120), { maxWidth: (dw / 4) - 10 };
+            doc.text('T: (646) 840-0609', 10, 120), { maxWidth: (dw / 4) - 10 };
+            doc.text('E: sales@chesneys.com', 10, 125), { maxWidth: (dw / 4) - 10 };
             
             doc.addImage(mainImage, 'JPEG', (dw / 4) + 15, 20, chosenWidth, adjustedHeight);
-            
-            doc.addImage(logo, 'JPEG', 10, 198, 40, 6);
 
             doc.save(''+pdfTitle+'.pdf');
         });
