@@ -58,7 +58,10 @@ jQuery(document).ready(function($) {
             
             
             // Description
-            console.log(descriptionWrapper.innerText);
+            var desc = descriptionWrapper.innerText
+            desc = desc.replace('″', '"');
+            console.log(desc);
+            
             doc.setFontSize(9);
             doc.text('Product Details', 10, 45);
             for( var i = 0; i < descriptions.length; i++ ) {
