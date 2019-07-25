@@ -2871,10 +2871,12 @@ POSTS & CONTENT STYLES
 		display: none;
 	}
     
+    &.product_parent_cat_archive .woof_container_product_cat,
     &.product_parent_cat_antiques .woof_container_product_cat {
         display: block !important;
     }
     
+    &.product_parent_cat_archive .woof_container_product_tag,
     &.product_parent_cat_antiques .woof_container_product_tag {
         display: none !important;
     }
