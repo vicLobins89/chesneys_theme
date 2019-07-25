@@ -105,7 +105,7 @@
 					
 					<?php
 					if($options['logo']){
-						echo '<a class="logo" href="'. home_url() .'"><img src="'. $options['logo'] .'" alt="'. get_bloginfo('name') .'" /></a>';
+						echo '<a class="logo" href="'. home_url() .'"><img class="logo-img" src="'. $options['logo'] .'" alt="'. get_bloginfo('name') .'" /></a>';
 					} else {
 						echo '<p class="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="'. home_url() .'">'. get_bloginfo('name') .'</a></p>';
 					}
