@@ -60,6 +60,7 @@ jQuery(document).ready(function($) {
             doc.text('Product Details', 10, 45);
             for( var i = 0; i < descriptions.length; i++ ) {
                 var str = descriptions[i].innerText;
+                str = str.replace('″', '"');
                 
                 doc.setFontSize(7);
                 doc.text(str, 10, 50 + (i * 6), { maxWidth: (dw / 4) + 20 });
