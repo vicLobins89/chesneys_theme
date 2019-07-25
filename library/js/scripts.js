@@ -59,14 +59,14 @@ jQuery(document).ready(function($) {
             
             // Description
             var desc = descriptionWrapper.innerText
-            desc = desc.replace('″', '"');
+            desc = desc.replace(/″/gi, '"');
             console.log(desc);
             
             doc.setFontSize(9);
             doc.text('Product Details', 10, 45);
             for( var i = 0; i < descriptions.length; i++ ) {
                 var str = descriptions[i].innerText;
-                str = str.replace('″', '"');
+                str = str.replace(/″/gi, '"');
                 //console.log(str);
                 
                 doc.setFontSize(7);
