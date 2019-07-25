@@ -2860,6 +2860,14 @@ POSTS & CONTENT STYLES
 	&.product_parent_cat_mantels .woof_container_product_cat {
 		display: none;
 	}
+    
+    &.product_parent_cat_antiques .woof_container_product_cat {
+        display: block !important;
+    }
+    
+    &.product_parent_cat_antiques .woof_container_inner_producttags {
+        display: none !important;
+    }
 }
 
 #woof_results_by_ajax {
