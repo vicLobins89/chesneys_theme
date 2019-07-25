@@ -47,11 +47,11 @@ jQuery(document).ready(function($) {
                 chosenWidth = (dw / 4 * 3) - 20,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
-            doc.addImage(logo, 'JPEG', 10, 10, 40, 5);
+            doc.addImage(logo, 'JPEG', 10, 5, 40, 5);
             
             doc.setFont("helvetica");
             doc.setFontSize(10);
-            doc.text(pdfTitle, 10, 20);
+            doc.text(pdfTitle, 10, 23);
             
             doc.setFontSize(9);
             doc.text('Product Description', 10, 30);
