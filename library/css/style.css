@@ -3077,9 +3077,12 @@ POSTS & CONTENT STYLES
 .product_cat_antiques .woof_term_725,
 .product_parent_cat_period-reproductions .woof_term_725,
 .product_cat_period-reproductions .woof_term_725,
-.tag-cast-iron:not(.woof_term_33) {
+.tag-cast-iron:not(.woof_term_33),
+.tag-timber {
   display: none !important; }
 
+.term-mantels .tag-timber,
+.product_parent_cat_antiques .tag-timber,
 .term-mantels .woof_term_725 {
   display: block !important; }
 
