@@ -191,8 +191,11 @@ foreach ($cat as $category) {
 echo '<section class="row entry-content cf related-products"><div class="cf"><div class="col-12">';
 if( $product->get_upsell_ids() ) {
 	woocommerce_upsell_display(3, 3, 'menu_order', 'asc');
-} else if( $blog_id == 5 ) {
+} else if( $blog_id == 5 && has_term( 'mantels', 'product_cat' ) ) {
     echo '<h2>Mantels you might like</h2><p></p>';
+	echo do_shortcode('[products orderby="rand" category="'.$current_cat->slug.'" limit="3" columns="3" class="related-products"]');
+} else if( $blog_id == 5 ) {
+    echo '<h2>You might like</h2><p></p>';
 	echo do_shortcode('[products orderby="rand" category="'.$current_cat->slug.'" limit="3" columns="3" class="related-products"]');
 } else {
 	echo '<h2>You might also like</h2><p></p>';
