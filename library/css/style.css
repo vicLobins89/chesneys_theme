@@ -3093,6 +3093,11 @@ POSTS & CONTENT STYLES
   display: block !important; }
 
 .product_parent_cat_antiques:not(.term-antiques) #filter,
+.term-fire-screens #filter,
+.term-custom-metal-slips #filter,
+.term-interior-panels #filter,
+.term-tools #filter,
+.term-antique #filter,
 .term-limited-edition #filter,
 .term-electric-fires #filter,
 .term-robert-adam #filter,
@@ -3101,6 +3106,11 @@ POSTS & CONTENT STYLES
 .term-sir-john-soane #filter {
   display: none; }
 .product_parent_cat_antiques:not(.term-antiques) .col-9,
+.term-fire-screens .col-9,
+.term-custom-metal-slips .col-9,
+.term-interior-panels .col-9,
+.term-tools .col-9,
+.term-antique .col-9,
 .term-limited-edition .col-9,
 .term-electric-fires .col-9,
 .term-robert-adam .col-9,
