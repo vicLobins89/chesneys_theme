@@ -1922,6 +1922,12 @@ LAYOUT & GRID STYLES
       display: none; }
   .module.module-free-delivery p {
     font-family: "Univers", Helvetica, Arial, sans-serif; }
+  .module.module-register-a-trade-account .wpcf7-response-output {
+    display: block;
+    margin: auto;
+    width: 50%;
+    clear: both;
+    float: right; }
   .module.module-register-a-trade-account, .module.module-sign-up-3, .module.module-sign-up-2, .module.module-sign-up, .module.module-need-help-2, .module.module-need-help {
     background: #142128;
     color: #fff;

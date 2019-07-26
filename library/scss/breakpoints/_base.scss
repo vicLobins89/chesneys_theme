@@ -1170,6 +1170,16 @@ LAYOUT & GRID STYLES
 			font-family: $sans-serif;
 		}
 	}
+    
+    &.module-register-a-trade-account {
+        .wpcf7-response-output {
+            display: block;
+            margin: auto;
+            width: 50%;
+            clear: both;
+            float: right;
+        }
+    }
 	
 	&.module-register-a-trade-account,
 	&.module-sign-up-3,
