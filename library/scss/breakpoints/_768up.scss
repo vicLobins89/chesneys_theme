@@ -150,6 +150,13 @@ NAVIGATION STYLES
                 width: 130%;
             }
         }
+        
+        &.three-col {
+            > ul {
+                columns: 3;
+                width: 140% !important;
+            }
+        }
 	}
 	
 	> li {

@@ -255,6 +255,9 @@ NAVIGATION STYLES
     .wordpress:not(.is-mobile) .primary-nav li.two-col > ul {
       columns: 2;
       width: 130%; }
+    .wordpress:not(.is-mobile) .primary-nav li.three-col > ul {
+      columns: 3;
+      width: 140% !important; }
   .wordpress:not(.is-mobile) .primary-nav > li {
     border: none;
     padding: 1rem 1.5rem 1.5rem; }
