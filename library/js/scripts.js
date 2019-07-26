@@ -53,13 +53,9 @@ jQuery(document).ready(function($) {
             doc.setFontSize(10);
             doc.text(pdfTitle, 10, 23);
             
-            doc.setFontSize(9);
-            doc.text('Product Description', 10, 30);
             doc.setFontSize(8);
             doc.text(shortDesc.innerText, 10, 35, { maxWidth: (dw / 4)});
             
-            doc.setFontSize(9);
-            doc.text('Product Details', 10, 55);
             for( var i = 0; i < descriptions.length; i++ ) {
                 var str = descriptions[i].innerText;
                 str = str.replace(/″/gi, '"');
@@ -68,11 +64,8 @@ jQuery(document).ready(function($) {
                 doc.text(str, 10, 60 + (i * 5), { maxWidth: (dw / 4) + 20 });
             }
             
-            doc.setFontSize(9);
-            doc.text('Further Assistance', 10, 100), { maxWidth: (dw / 4) - 10 };
-            
             doc.setFontSize(8);
-            var paraOne = doc.splitTextToSize("If you require any further assistance in relation to the information provided, please do not hesitate to contact sales on the following:", (dw / 4) - 10);
+            var paraOne = doc.splitTextToSize("If you require additional information. please do not hesitate to contact us.", (dw / 4) - 10);
             doc.text(paraOne, 10, 105);
             
             doc.text('T: (646) 840-0609', 10, 120), { maxWidth: (dw / 4) - 10 };
