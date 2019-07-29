@@ -267,11 +267,12 @@ function send_api_call_ches($data) {
 
 function send_api_call($data) {
 	$api_mode = 'live';
-	if($api_mode == 'sandbox') {
-		$endpoint = "https://enh641edaecg.x.pipedream.net";
+$endpoint = "https://api.controlport.co.uk/api/1/";
+	/*if($api_mode == 'sandbox') {
+		$endpoint = "https://ens29l0sfhzhd.x.pipedream.net/";
 	} else {
 		$endpoint = "https://api.controlport.co.uk/api/1/"; 
-	}
+	}*/
 	
 	// JSON
 	$options = array(
@@ -292,6 +293,7 @@ function send_api_call($data) {
 		print_r($response);
 		return;
 	}
+print_r($data);
 }
 
 function create_csv_string($csv_data) {    
