@@ -1000,6 +1000,10 @@ LAYOUT & GRID STYLES
 	}
     
     &.image-hovers {
+        p {
+            position: relative;
+        }
+        
         img {            
             + img {
                 position: absolute;
