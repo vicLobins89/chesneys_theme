@@ -1000,11 +1000,27 @@ LAYOUT & GRID STYLES
 	}
     
     &.image-hovers {
-        img {
+        img {            
             + img {
+                position: absolute;
+                visibility: hidden;
+                z-index: 10;
+                top: 75%;
+                left: 75%;
+                padding: 10px;
+                background: white;
+                border: 1px solid black;
                 height: 0;
                 width: 0;
                 opacity: 0;
+                @include transition(all 0.5s ease-in-out);
+            }
+            
+            &:hover + img {
+                width: 100%;
+                height: auto;
+                opacity: 1;
+                visibility: visible;
             }
         }
     }

@@ -1747,9 +1747,24 @@ LAYOUT & GRID STYLES
 .row.gmaps .col-6:last-child {
   min-height: 20rem; }
 .row.image-hovers img + img {
+  position: absolute;
+  visibility: hidden;
+  z-index: 10;
+  top: 75%;
+  left: 75%;
+  padding: 10px;
+  background: white;
+  border: 1px solid black;
   height: 0;
   width: 0;
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+.row.image-hovers img:hover + img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  visibility: visible; }
 
 .disclaimer {
   position: absolute;
