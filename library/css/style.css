@@ -1754,20 +1754,22 @@ LAYOUT & GRID STYLES
     opacity: 1;
     visibility: visible;
     padding: 10px; }
-.row.image-hovers img + img {
-  position: absolute;
-  visibility: hidden;
-  z-index: 10;
-  top: 75%;
-  left: 75%;
-  padding: 0;
-  background: white;
-  border: 1px solid black;
-  height: 0;
-  width: 0;
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+.row.image-hovers img {
+  cursor: pointer; }
+  .row.image-hovers img + img {
+    position: absolute;
+    visibility: hidden;
+    z-index: 10;
+    top: 75%;
+    left: 75%;
+    padding: 0;
+    background: white;
+    border: 1px solid black;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
 
 .disclaimer {
   position: absolute;
