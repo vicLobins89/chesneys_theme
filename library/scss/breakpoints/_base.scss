@@ -1002,6 +1002,15 @@ LAYOUT & GRID STYLES
     &.image-hovers {
         p {
             position: relative;
+            
+            &:hover {
+                img + img {
+                    width: 100%;
+                    height: auto;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
         }
         
         img {            
@@ -1017,14 +1026,7 @@ LAYOUT & GRID STYLES
                 height: 0;
                 width: 0;
                 opacity: 0;
-                @include transition(all 0.5s ease-in-out);
-            }
-            
-            &:hover + img {
-                width: 100%;
-                height: auto;
-                opacity: 1;
-                visibility: visible;
+                @include transition(all 0.3s ease-in-out);
             }
         }
     }

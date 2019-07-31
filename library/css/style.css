@@ -1748,6 +1748,11 @@ LAYOUT & GRID STYLES
   min-height: 20rem; }
 .row.image-hovers p {
   position: relative; }
+  .row.image-hovers p:hover img + img {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    visibility: visible; }
 .row.image-hovers img + img {
   position: absolute;
   visibility: hidden;
@@ -1760,13 +1765,8 @@ LAYOUT & GRID STYLES
   height: 0;
   width: 0;
   opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
-.row.image-hovers img:hover + img {
-  width: 100%;
-  height: auto;
-  opacity: 1;
-  visibility: visible; }
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
 
 .disclaimer {
   position: absolute;
