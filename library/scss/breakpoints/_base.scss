@@ -998,6 +998,16 @@ LAYOUT & GRID STYLES
 			min-height: 20rem;
 		}
 	}
+    
+    &.image-hovers {
+        img {
+            + img {
+                height: 0;
+                width: 0;
+                opacity: 0;
+            }
+        }
+    }
 }
 
 .disclaimer {

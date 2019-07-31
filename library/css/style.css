@@ -1746,6 +1746,10 @@ LAYOUT & GRID STYLES
 .row.gmaps .aspect-ratio,
 .row.gmaps .col-6:last-child {
   min-height: 20rem; }
+.row.image-hovers img + img {
+  height: 0;
+  width: 0;
+  opacity: 0; }
 
 .disclaimer {
   position: absolute;
