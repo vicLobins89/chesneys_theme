@@ -1009,6 +1009,7 @@ LAYOUT & GRID STYLES
                     height: auto;
                     opacity: 1;
                     visibility: visible;
+                    padding: 10px;
                 }
             }
         }
@@ -1020,7 +1021,7 @@ LAYOUT & GRID STYLES
                 z-index: 10;
                 top: 75%;
                 left: 75%;
-                padding: 10px;
+                padding: 0;
                 background: white;
                 border: 1px solid black;
                 height: 0;
