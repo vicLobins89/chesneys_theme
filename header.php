@@ -54,6 +54,13 @@
 		$blog_id = get_current_blog_id();
 		$blog_class = ( $blog_id == 1 ) ? 'uk-site' : 'us-site';
         
+        if( is_product_category() ) {
+            $term = get_queried_object();
+            $altURL = get_field('alt_url', $term);
+        } else {
+            $altURL = get_field('alt_url', get_the_ID());
+        }
+        
         global $wp;
         $current_url = home_url( add_query_arg($_GET, $wp->request) );
         if( $blog_id == 1 ) {
@@ -61,10 +68,10 @@
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en" />';
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-gb" />';
             
-            if( get_field('alt_url', get_the_ID()) == 'NA' ) {
+            if( $altURL == 'NA' ) {
                 echo '';
-            } elseif( get_field('alt_url', get_the_ID()) && get_field('alt_url', get_the_ID()) !== 'NA' ) {
-                echo '<link rel="alternate" href="'.get_field('alt_url', get_the_ID()).'" hreflang="en-us" />';
+            } elseif( $altURL && $altURL !== 'NA' ) {
+                echo '<link rel="alternate" href="'.$altURL.'" hreflang="en-us" />';
             } else {
                 echo '<link rel="alternate" href="'.$new_url.'" hreflang="en-us" />';
             }
@@ -73,10 +80,10 @@
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en" />';
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-us" />';
             
-            if( get_field('alt_url', get_the_ID()) == 'NA' ) {
+            if( $altURL == 'NA' ) {
                 echo '';
-            } elseif( get_field('alt_url', get_the_ID()) && get_field('alt_url', get_the_ID()) !== 'NA' ) {
-                echo '<link rel="alternate" href="'.get_field('alt_url', get_the_ID()).'" hreflang="en-gb" />';
+            } elseif( $altURL && $altURL !== 'NA' ) {
+                echo '<link rel="alternate" href="'.$altURL.'" hreflang="en-gb" />';
             } else {
                 echo '<link rel="alternate" href="'.$new_url.'" hreflang="en-gb" />';
             }
