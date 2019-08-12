@@ -55,13 +55,17 @@
 		$blog_class = ( $blog_id == 1 ) ? 'uk-site' : 'us-site';
         
         global $wp;
-        $current_url = add_query_arg( $wp->query_vars, home_url( $wp->request ) );
+        $current_url = home_url( add_query_arg($_GET, $wp->request) );
         if( $blog_id == 1 ) {
-            $current_url = str_replace('.co.uk', '.com', $current_url);
-            echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-us" />';
-        } else {
-            $current_url = str_replace('.com', '.co.uk', $current_url);
+            $new_url = str_replace('.co.uk', '.com', $current_url);
+            echo '<link rel="alternate" href="'.$current_url.'" hreflang="en" />';
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-gb" />';
+            echo '<link rel="alternate" href="'.$new_url.'" hreflang="en-us" />';
+        } else {
+            $new_url = str_replace('.com', '.co.uk', $current_url);
+            echo '<link rel="alternate" href="'.$current_url.'" hreflang="en" />';
+            echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-us" />';
+            echo '<link rel="alternate" href="'.$new_url.'" hreflang="en-gb" />';
         }
 		?>
 
