@@ -1027,6 +1027,11 @@ LAYOUT & GRID STYLES
                 @include transition(all 0.3s ease-in-out);
             }
         }
+        
+        .wp-caption-text {
+            font-family: $sans-serif;
+            text-transform: uppercase;
+        }
     }
 }
 

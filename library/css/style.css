@@ -1765,6 +1765,9 @@ LAYOUT & GRID STYLES
     opacity: 0;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
+.row.image-hovers .wp-caption-text {
+  font-family: "Univers", Helvetica, Arial, sans-serif;
+  text-transform: uppercase; }
 
 .disclaimer {
   position: absolute;
