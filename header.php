@@ -60,12 +60,26 @@
             $new_url = str_replace('.co.uk', '.com', $current_url);
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en" />';
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-gb" />';
-            echo '<link rel="alternate" href="'.$new_url.'" hreflang="en-us" />';
+            
+            if( get_field('alt_url', get_the_ID()) == 'NA' ) {
+                echo '';
+            } elseif( get_field('alt_url', get_the_ID()) && get_field('alt_url', get_the_ID()) !== 'NA' ) {
+                echo '<link rel="alternate" href="'.get_field('alt_url', get_the_ID()).'" hreflang="en-us" />';
+            } else {
+                echo '<link rel="alternate" href="'.$new_url.'" hreflang="en-us" />';
+            }
         } else {
             $new_url = str_replace('.com', '.co.uk', $current_url);
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en" />';
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-us" />';
-            echo '<link rel="alternate" href="'.$new_url.'" hreflang="en-gb" />';
+            
+            if( get_field('alt_url', get_the_ID()) == 'NA' ) {
+                echo '';
+            } elseif( get_field('alt_url', get_the_ID()) && get_field('alt_url', get_the_ID()) !== 'NA' ) {
+                echo '<link rel="alternate" href="'.get_field('alt_url', get_the_ID()).'" hreflang="en-gb" />';
+            } else {
+                echo '<link rel="alternate" href="'.$new_url.'" hreflang="en-gb" />';
+            }
         }
 		?>
 
