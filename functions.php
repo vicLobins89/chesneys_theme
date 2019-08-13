@@ -733,4 +733,12 @@ function custom_woocommerce_catalog_orderby( $sortby ) {
 add_filter( 'woocommerce_default_catalog_orderby_options', 'custom_woocommerce_catalog_orderby' );
 add_filter( 'woocommerce_catalog_orderby', 'custom_woocommerce_catalog_orderby' );
 
+
+// Customer notes maxlength
+function filter_checkout_fields( $fields ) {
+	$fields['order']['order_comments']['maxlength'] = 200;
+	return $fields;
+}
+add_filter( 'woocommerce_checkout_fields', 'filter_checkout_fields' );
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
