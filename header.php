@@ -46,8 +46,6 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-		
 		<?php
 		wp_head();
 		$options = get_option('rh_settings');
@@ -65,16 +63,17 @@
         $current_url = home_url( add_query_arg($_GET, $wp->request) );
         if( $blog_id == 1 ) {
             $new_url = str_replace('.co.uk', '.com', $current_url);
-            echo '<link rel="alternate" href="'.$current_url.'" hreflang="en" />';
-            echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-gb" />';
-            
+                        
             if( $altURL == 'NA' ) {
                 echo '';
             } elseif( $altURL && $altURL !== 'NA' ) {
                 echo '<link rel="alternate" href="'.$altURL.'" hreflang="en-us" />';
             } else {
+                echo '<link rel="alternate" href="'.$new_url.'" hreflang="en" />';
                 echo '<link rel="alternate" href="'.$new_url.'" hreflang="en-us" />';
             }
+            
+            echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-gb" />';
         } else {
             $new_url = str_replace('.com', '.co.uk', $current_url);
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en" />';

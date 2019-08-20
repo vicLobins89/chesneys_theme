@@ -36,8 +36,56 @@ Stylesheet: Typography
 /*********************
 FONTFACE
 *********************/
-@import url(/wp-content/themes/chesneys_theme/library/fonts/Univers/stylesheet.css);
-@import url(/wp-content/themes/chesneys_theme/library/fonts/Baskerville/stylesheet.css);
+@font-face {
+  font-family: 'Univers';
+  src: url("../fonts/Univers/Univers.woff2") format("woff2"), url("../fonts/Univers/Univers.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Univers';
+  src: url("../fonts/Univers/Univers-Bold.woff2") format("woff2"), url("../fonts/Univers/Univers-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Univers';
+  src: url("../fonts/Univers/Univers-Light.woff2") format("woff2"), url("../fonts/Univers/Univers-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Univers Cond';
+  src: url("../fonts/Univers/Univers-Condensed.woff2") format("woff2"), url("../fonts/Univers/Univers-Condensed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Baskerville';
+  src: url("../fonts/Baskerville/Baskerville-SemiBold.woff2") format("woff2"), url("../fonts/Baskerville/Baskerville-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: 'Baskerville';
+  src: url("../fonts/Baskerville/Baskerville-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Baskerville/Baskerville-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic; }
+@font-face {
+  font-family: 'Baskerville';
+  src: url("../fonts/Baskerville/Baskerville-Italic.woff2") format("woff2"), url("../fonts/Baskerville/Baskerville-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'Baskerville';
+  src: url("../fonts/Baskerville/Baskerville-BoldItalic.woff2") format("woff2"), url("../fonts/Baskerville/Baskerville-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+@font-face {
+  font-family: 'Baskerville';
+  src: url("../fonts/Baskerville/Baskerville.woff2") format("woff2"), url("../fonts/Baskerville/Baskerville.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Baskerville';
+  src: url("../fonts/Baskerville/Baskerville-Bold.woff2") format("woff2"), url("../fonts/Baskerville/Baskerville-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
 /******************************************************************
 Site Name: Honey
 Author: Vic Lobins
