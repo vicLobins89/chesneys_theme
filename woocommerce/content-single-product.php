@@ -70,7 +70,7 @@ if ( post_password_required() ) {
 		 */
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-		if( $product->is_type( 'variable' ) ) {
+		if( $product->is_type( 'variable' ) || has_term( 'fireplaces', 'product_cat' ) || has_term( 'stoves', 'product_cat' ) ) {
 			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 		}
 		add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
@@ -111,7 +111,7 @@ if( have_rows('product_images') ) {
 	echo '</div>';
 }
 
-function render_variation(){
+function render_variation() {
 	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 }
 
