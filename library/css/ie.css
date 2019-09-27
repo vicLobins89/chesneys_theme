@@ -308,7 +308,7 @@ NAVIGATION STYLES
       width: 140% !important; }
   .wordpress:not(.is-mobile) .primary-nav > li {
     border: none;
-    padding: 1rem 1.5rem 1.5rem; }
+    padding: 1rem .8rem 1.5rem; }
     .us-site.wordpress:not(.is-mobile) .primary-nav > li {
       padding: 1rem 2.5rem 1.5rem; }
     .wordpress:not(.is-mobile) .primary-nav > li.separator, .wordpress:not(.is-mobile) .primary-nav > li.separator > a {
@@ -371,7 +371,7 @@ NAVIGATION STYLES
         height: 17rem; }
       .wordpress:not(.is-mobile) .primary-nav > li ul.sub-menu li,
       .wordpress:not(.is-mobile) .primary-nav > li ul.children li {
-        padding: 1rem 1.5rem;
+        padding: 1rem .8rem;
         width: 100%; }
         .us-site.wordpress:not(.is-mobile) .primary-nav > li ul.sub-menu li, .wordpress:not(.is-mobile) .primary-nav > li ul.children li {
           padding: 1rem 2.5rem; }
@@ -729,6 +729,11 @@ Stylesheet: Desktop Stylsheet
 ******************************************************************/
 html {
   font-size: 16px; }
+
+.primary-nav > li {
+  padding: 1rem 1.5rem 1.5rem; }
+  .us-site.primary-nav > li {
+    padding: 1rem 2.5rem 1.5rem; }
 
 .wrap > div {
   max-width: 930px; }
