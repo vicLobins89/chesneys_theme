@@ -1498,10 +1498,10 @@ LAYOUT & GRID STYLES
     .row.spares-shop-loop ul.products[class*=columns-] li.product {
       width: 48%;
       float: left;
-      clear: both;
       margin: 0 4% 2.992em 0; }
       .row.spares-shop-loop ul.products[class*=columns-] li.product:nth-child(even) {
-        margin-right: 0; } }
+        margin-right: 0;
+        clear: none; } }
 .row.product-type-bundle span.bundle-price {
   display: none; }
 .row.product-type-bundle .woocommerce-product-gallery {
@@ -2030,7 +2030,7 @@ LAYOUT & GRID STYLES
     @media only screen and (max-width: 767px) {
       .module.module-ctas, .module.module-ctas-2, .module.module-outdoor-ctas, .module.module-outdoor-ctas-2 {
         text-align: center; } }
-    .module.module-ctas h2, .module.module-ctas-2 h2, .module.module-outdoor-ctas h2, .module.module-outdoor-ctas-2 h2 {
+    .module.module-ctas .h2, .module.module-ctas .row.outdoor-product-single .short-desc .product_title, .row.outdoor-product-single .short-desc .module.module-ctas .product_title, .module.module-ctas .woocommerce .spares-product .product_title, .woocommerce .spares-product .module.module-ctas .product_title, .module.module-ctas-2 .h2, .module.module-ctas-2 .row.outdoor-product-single .short-desc .product_title, .row.outdoor-product-single .short-desc .module.module-ctas-2 .product_title, .module.module-ctas-2 .woocommerce .spares-product .product_title, .woocommerce .spares-product .module.module-ctas-2 .product_title, .module.module-outdoor-ctas .h2, .module.module-outdoor-ctas .row.outdoor-product-single .short-desc .product_title, .row.outdoor-product-single .short-desc .module.module-outdoor-ctas .product_title, .module.module-outdoor-ctas .woocommerce .spares-product .product_title, .woocommerce .spares-product .module.module-outdoor-ctas .product_title, .module.module-outdoor-ctas-2 .h2, .module.module-outdoor-ctas-2 .row.outdoor-product-single .short-desc .product_title, .row.outdoor-product-single .short-desc .module.module-outdoor-ctas-2 .product_title, .module.module-outdoor-ctas-2 .woocommerce .spares-product .product_title, .woocommerce .spares-product .module.module-outdoor-ctas-2 .product_title {
       display: none; }
     .module.module-ctas p, .module.module-ctas-2 p, .module.module-outdoor-ctas p, .module.module-outdoor-ctas-2 p {
       display: inline-block; }
@@ -2273,7 +2273,7 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a {
-  color: #53575a;
+  color: #4b858e;
   text-decoration: none;
   outline: none;
   /* on hover */
@@ -2353,6 +2353,8 @@ h4, .h4 {
   text-transform: uppercase; }
   h4 + p, .h4 + p {
     margin-top: 0; }
+  h4:after, .h4:after {
+    content: none; }
 
 h5, .h5 {
   font-size: 1.2em; }
@@ -2742,6 +2744,9 @@ POSTS & CONTENT STYLES
 #content {
   position: relative;
   font-size: 1rem; }
+
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+  width: 100%; }
 
 #folio_header,
 #news_header {
@@ -3167,6 +3172,7 @@ POSTS & CONTENT STYLES
 .term-custom-metal-slips #filter,
 .term-interior-panels #filter,
 .term-tools #filter,
+.term-andirons #filter,
 .term-antique #filter,
 .term-limited-edition #filter,
 .term-electric-fires #filter,
@@ -3180,6 +3186,7 @@ POSTS & CONTENT STYLES
 .term-custom-metal-slips .col-9,
 .term-interior-panels .col-9,
 .term-tools .col-9,
+.term-andirons .col-9,
 .term-antique .col-9,
 .term-limited-edition .col-9,
 .term-electric-fires .col-9,
@@ -3209,6 +3216,15 @@ POSTS & CONTENT STYLES
     display: none; }
 .woocommerce .woocommerce-variation-add-to-cart {
   display: none !important; }
+.woocommerce .woocommerce-variation-price {
+  font-size: 1.2rem; }
+.woocommerce.product_parent_cat_stoves .woocommerce-variation-add-to-cart {
+  display: block !important;
+  clear: both;
+  margin-top: 1rem; }
+.woocommerce.product_parent_cat_stoves .woocommerce-variation-price,
+.woocommerce.product_parent_cat_stoves .woocommerce-variation-description {
+  display: none; }
 .woocommerce span.onsale {
   min-height: 2.236rem;
   min-width: 3.236rem;
@@ -3446,6 +3462,7 @@ POSTS & CONTENT STYLES
     display: block;
     background: none;
     padding-bottom: 10px;
+    color: #53575a;
     -webkit-transition: background 0.3s ease-in-out;
     transition: background 0.3s ease-in-out; }
     .woocommerce ul.products li.product a:not(.button):hover, .woocommerce ul.products li.product a:not(.button):focus {
@@ -3787,6 +3804,12 @@ POSTS & CONTENT STYLES
 .woocommerce .spares-shop-loop .product-categories > li.cat-item:not(.current-cat):not(.cat-parent) {
   display: none; }
 
+.discount-notice {
+  clear: both;
+  text-align: left;
+  font-size: .9em;
+  padding: 1rem 0 0; }
+
 #text_slider {
   color: #fff; }
   #text_slider .sa_hover_container p:first-child {
@@ -4106,25 +4129,25 @@ SIDEBARS & ASIDES
     padding-bottom: 2px !important;
     position: relative;
     width: 100%; }
-  #filter .woof_list_checkbox > li.woof_childs_list_li {
+  #filter .woof_list_checkbox > li.woof_childs_list_li:not(.woof_term_47) {
     border-top: 1px solid #000;
     margin: .5rem 0 !important;
     padding-top: .5rem !important; }
-    #filter .woof_list_checkbox > li.woof_childs_list_li > input {
+    #filter .woof_list_checkbox > li.woof_childs_list_li:not(.woof_term_47) > input {
       display: none;
       pointer-events: none; }
-      #filter .woof_list_checkbox > li.woof_childs_list_li > input + label:before {
+      #filter .woof_list_checkbox > li.woof_childs_list_li:not(.woof_term_47) > input + label:before {
         content: none;
         display: none;
         pointer-events: none; }
-    #filter .woof_list_checkbox > li.woof_childs_list_li > label {
+    #filter .woof_list_checkbox > li.woof_childs_list_li:not(.woof_term_47) > label {
       font-family: "Univers", Helvetica, Arial, sans-serif;
       text-transform: uppercase;
       pointer-events: none;
       margin: 0; }
-      #filter .woof_list_checkbox > li.woof_childs_list_li > label .woof_checkbox_count {
+      #filter .woof_list_checkbox > li.woof_childs_list_li:not(.woof_term_47) > label .woof_checkbox_count {
         display: none; }
-    #filter .woof_list_checkbox > li.woof_childs_list_li > .woof_childs_list {
+    #filter .woof_list_checkbox > li.woof_childs_list_li:not(.woof_term_47) > .woof_childs_list {
       margin: 0 !important; }
   #filter .woof_list_checkbox .woof_checkbox_label_selected {
     font-weight: normal; }
@@ -4595,15 +4618,23 @@ TABLET & SMALLER LAPTOPS
     .wordpress:not(.is-mobile) .primary-nav > li.current_page_ancestor > a {
       color: #4b858e; }
   .wordpress:not(.is-mobile) .socket {
+    position: relative;
     display: block; }
     .wordpress:not(.is-mobile) .socket .socket-nav {
+      text-align: left;
       padding: .7rem 0; }
     .wordpress:not(.is-mobile) .socket .rhs-links {
       position: absolute;
       right: 2rem;
-      top: .7rem;
-      text-align: left;
-      padding: 0; }
+      top: 0;
+      height: 100%;
+      text-align: left; }
+      .wordpress:not(.is-mobile) .socket .rhs-links a {
+        padding: .7rem 0; }
+      .wordpress:not(.is-mobile) .socket .rhs-links .login {
+        background: #4b858e;
+        padding: .7rem 1rem;
+        margin-right: 0; }
   .wordpress:not(.is-mobile) .mobile-links {
     display: none !important; }
   .wordpress:not(.is-mobile) .menu-breadcrumb {
@@ -4951,6 +4982,11 @@ LARGE VIEWING SIZE
 
   p + h4 {
     clear: unset; }
+
+  .socket .socket-nav {
+    text-align: center !important; }
+  .socket .rhs-links .login {
+    padding-top: .85rem !important; }
 
   .featured-copy, .module.module-outdoor-living-shop .inner-module, .module.module-glossary .inner-module, .module.module-design-a-fireplace .inner-module, .uk-site #folio_header .widget_text,
   .uk-site #news_header .widget_text {

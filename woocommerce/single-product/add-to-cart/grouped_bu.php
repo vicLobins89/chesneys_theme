@@ -84,7 +84,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							$value = $grouped_product_child->get_price_html() . wc_get_stock_html( $grouped_product_child );
 							break;
 						case 'cart':
-							$value = '<button type="submit" class="single_add_to_cart_button button alt"> '. esc_html( $product->single_add_to_cart_text() ) . '</button>';
+							$value = '<button type="submit" class="single_add_to_cart_button secondary-btn button alt"> '. esc_html( $product->single_add_to_cart_text() ) . '</button>';
 							break;
 						default:
 							$value = '';

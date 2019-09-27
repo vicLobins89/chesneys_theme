@@ -25,6 +25,18 @@ img {
 
 p + h4 { clear: unset; }
 
+.socket {
+    .socket-nav {
+        text-align: center !important;
+    }
+    
+    .rhs-links {
+        .login {
+            padding-top: .85rem !important;
+        }
+    }
+}
+
 .featured-copy {
 	width: 30%;
 }

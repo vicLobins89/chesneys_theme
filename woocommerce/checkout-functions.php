@@ -97,6 +97,7 @@ function wdm_send_order_to_ext( $order_id ){
 	foreach( $items as $key => $item) {
 		$item_id = $item['product_id'];
 		$product = new WC_Product($item_id);
+        $variation_sku = get_post_meta( $item['variation_id'], '_sku', true );
 		
 		if( 
 			$product->get_shipping_class() == 'banburry' ||
@@ -135,6 +136,7 @@ function wdm_send_order_to_ext( $order_id ){
 			"product_id" => $product->get_id(),
 			"quantity" => $item['qty'],
 			"sku" => $product->get_sku(),
+			"variation_sku" => $variation_sku,
 			"subtotal" => ($product->get_price() * $item['qty']),
 			"total" => $item['line_total']
 		);
@@ -243,6 +245,7 @@ function wdm_send_order_to_ext( $order_id ){
 
 function send_api_call_ches($data) {
      $endpoint = "https://core.chesneys.co.uk/wcf/ChesneysWoocommerceService.svc/Order";
+
      // JSON
      $options = array(
        'http' => array(

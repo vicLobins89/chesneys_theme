@@ -23,6 +23,7 @@ $blog_id = get_current_blog_id();
 $cat = get_the_terms( $product->get_id(), 'product_cat' );
 $parent_cat;
 $current_cat = end($cat);
+$user = wp_get_current_user();
 
 // Removing image link
 function wc_remove_link_on_thumbnails( $html ) {
@@ -70,9 +71,23 @@ if ( post_password_required() ) {
 		 */
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-		if( $product->is_type( 'variable' ) || has_term( 'fireplaces', 'product_cat' ) || has_term( 'stoves', 'product_cat' ) ) {
+        
+        // disable add to cart buttons
+		if( 
+            ( $blog_id == 5 && $product->is_type( 'variable' ) ) || // hide for US variable products
+            has_term( 'fireplaces', 'product_cat' ) || // hide for all fireplaces
+            // hide for stove subcategories unless user is logged in as trade
+            ( has_term( 'multi-fuel', 'product_cat' ) && !in_array( 'trade', (array) $user->roles ) ) || 
+            ( has_term( 'wood-burning-stoves', 'product_cat' ) && !in_array( 'trade', (array) $user->roles ) ) || 
+            // hide the other stoves
+            has_term( 'gas-stoves', 'product_cat' ) || 
+            has_term( 'electric-stoves', 'product_cat' ) || 
+//            has_term( 'stoves', 'product_cat' ) || 
+            has_term( 'archive', 'product_cat' ) // hide archive
+        ) {
 			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 		}
+        
 		add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
 		
 		echo '<div class="short-desc">';
@@ -111,10 +126,6 @@ if( have_rows('product_images') ) {
 	echo '</div>';
 }
 
-function render_variation() {
-	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
-}
-
 if( have_rows('product_images') ) {
     echo '<div class="col-6"><div class="details-inner">';
 } else {
@@ -123,7 +134,11 @@ if( have_rows('product_images') ) {
 
 echo '<div class="product-details">';
 if( $product->is_type( 'variable' ) && $blog_id == 1 ) {
-    woocommerce_template_single_add_to_cart();
+    if( has_term( 'stoves', 'product_cat' ) ) {
+        wc_get_template( 'single-product/tabs/description.php' );
+    } else {
+        woocommerce_template_single_add_to_cart();
+    }
 } else if( $product->is_type( 'variable' ) && $blog_id == 5 ) {
     woocommerce_template_single_add_to_cart();
     echo '<div class="drawings-link hidden">';

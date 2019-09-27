@@ -48,23 +48,47 @@
 		
 		<?php
 		wp_head();
+        //
 		$options = get_option('rh_settings');
 		$blog_id = get_current_blog_id();
 		$blog_class = ( $blog_id == 1 ) ? 'uk-site' : 'us-site';
+        $term = get_queried_object();
+        global $wp;
         
+        
+        /* */
         if( is_product_category() ) {
-            $term = get_queried_object();
             $altURL = get_field('alt_url', $term);
         } else {
             $altURL = get_field('alt_url', get_the_ID());
         }
         
-        global $wp;
+        /* */
         $current_url = home_url( add_query_arg($_GET, $wp->request) );
         if( $blog_id == 1 ) {
             $new_url = str_replace('.co.uk', '.com', $current_url);
-                        
-            if( $altURL == 'NA' ) {
+            
+            //
+            if( 
+                $altURL == 'NA' ||
+                is_product_category( array( 
+                    'stoves',
+                    'stove-spares',
+                    'fires',
+                    'fuel-accessories',
+                    'cast-iron'
+                ) ) ||
+                term_is_ancestor_of(56, $term->term_id, 'product_cat') || //stoves
+                term_is_ancestor_of(52, $term->term_id, 'product_cat') || //fires
+                term_is_ancestor_of(67, $term->term_id, 'product_cat') || //stove spares
+                term_is_ancestor_of(68, $term->term_id, 'product_cat') || //fuel-accessories
+                term_is_ancestor_of(33, $term->term_id, 'product_cat') || //cast-iron
+                has_term( 'fuel-accessories', 'product_cat' ) ||
+                has_term( 'cast-iron', 'product_cat' ) ||
+                has_term( 'fires', 'product_cat' ) ||
+                has_term( 'stoves', 'product_cat' ) ||
+                has_term( 'outdoor-living', 'product_cat' ) ||
+                has_term( 'stove-spares', 'product_cat' ) ) {
                 echo '';
             } elseif( $altURL && $altURL !== 'NA' ) {
                 echo '<link rel="alternate" href="'.$altURL.'" hreflang="en-us" />';
@@ -75,6 +99,7 @@
             
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-gb" />';
         } else {
+            //
             $new_url = str_replace('.com', '.co.uk', $current_url);
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en" />';
             echo '<link rel="alternate" href="'.$current_url.'" hreflang="en-us" />';
@@ -113,6 +138,7 @@
 				));
 				if ( $blog_id == 1 ) {
 					echo '<div class="rhs-links">';
+					echo '<a href="'.home_url('/my-account').'" class="menu-item login" title="Dealer login">Dealer login</a>';
 					echo '<a href="'.wc_get_cart_url().'" class="menu-item basket" title="View your shopping cart">';
 					if( WC()->cart->get_cart_contents_count() !== 0 ) {
 						echo '<span>'.sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ).'</span>';

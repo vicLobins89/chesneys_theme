@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
                 shortDesc = document.querySelector('.woocommerce-product-details__short-description'),
                 descriptionWrapper = document.querySelector('.product-details'),
                 descriptions = descriptionWrapper.querySelectorAll('p:not(.links)'),
-                chosenWidth = (dw / 4 * 3) - 20,
+                chosenWidth = (dw / 4 * 3) - 50,
                 adjustedHeight = chosenWidth * (mainImage.clientHeight / mainImage.clientWidth);
             
             doc.addImage(logo, 'JPEG', 10, 6, 40, 5);
@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
             doc.text('T: (646) 840-0609', 10, 120), { maxWidth: (dw / 4) - 10 };
             doc.text('E: sales@chesneys.com', 10, 125), { maxWidth: (dw / 4) - 10 };
             
-            doc.addImage(mainImage, 'JPEG', (dw / 4) + 15, 20, chosenWidth, adjustedHeight);
+            doc.addImage(mainImage, 'JPEG', (dw / 4) + 40, 20, chosenWidth, adjustedHeight);
 
             doc.save(''+pdfTitle+'.pdf');
         });
@@ -313,7 +313,8 @@ jQuery(document).ready(function($) {
 				$(this).css({
 					'background-image': 'url("'+imgSrc+'")',
 					'background-repeat': 'no-repeat',
-					'background-size': 'cover'
+					'background-size': 'cover',
+                    'background-position': 'center'
 				});
 			});
 		}

@@ -293,7 +293,7 @@ function is_tree($pid) {      // $pid = The ID of the page we're looking for pag
                return false;  // we're elsewhere
 };
 
-// iframes
+// allow  iframes in editor
 function fb_change_mce_options( $initArray ) {
 
     // Comma separated string od extendes tags.
@@ -312,6 +312,7 @@ function fb_change_mce_options( $initArray ) {
 }
 add_filter( 'tiny_mce_before_init', 'fb_change_mce_options' );
 
+
 // WOOCOMMERCE
 add_filter( 'woocommerce_helper_suppress_admin_notices', '__return_true' );
 
@@ -320,7 +321,7 @@ function mytheme_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
-// US Restrict
+// remove prices and add to cart button on US site
 $userInfo = geoip_detect2_get_info_from_current_ip();
 if ($userInfo->country->isoCode == 'US') {
 	remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
@@ -329,7 +330,7 @@ if ($userInfo->country->isoCode == 'US') {
 	remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
 }
 
-// Limited Edition
+// Limited Edition order by title filter
 function custom_catalog_ordering_args( $args ) {
 
     if( 
@@ -350,6 +351,7 @@ function custom_catalog_ordering_args( $args ) {
 }
 add_filter( 'woocommerce_get_catalog_ordering_args', 'custom_catalog_ordering_args', 20, 1 );
 
+
 //STORE LOCATOR
 function custom_templates( $templates ) {
 
@@ -363,7 +365,8 @@ function custom_templates( $templates ) {
 }
 add_filter( 'wpsl_templates', 'custom_templates' );
 
-//WOOCOMMERCE Functions
+
+//WOOCOMMERCE Checkout Functions require
 require_once( 'woocommerce/checkout-functions.php' );
 
 // Custom role
@@ -377,7 +380,7 @@ function custom_override_checkout_fields( $fields ) {
 }
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
-// Detect change order status
+// Detect change order status and send email to Matt
 function send_email_on_change( $order_id, $old_status, $new_status ){
     $order = new WC_Order($order_id);
     $order_id = trim(str_replace('#', '', $order->get_order_number()));
@@ -390,7 +393,7 @@ function send_email_on_change( $order_id, $old_status, $new_status ){
 }
 add_action( 'woocommerce_order_status_changed', 'send_email_on_change', 99, 3 );
 
-// Gateways for user roles
+// Set gateways/checkout type for user roles
 function set_trade_gateways( $available_gateways ) {
 	global $woocommerce;
 	if ( current_user_can('trade') ) {
@@ -402,7 +405,7 @@ function set_trade_gateways( $available_gateways ) {
 }
 add_filter( 'woocommerce_available_payment_gateways', 'set_trade_gateways' ); 
 
-// Place order button
+// Place order button text filter
 function woo_custom_order_button_text() {
 	if( current_user_can('trade') ) {
 		return __( 'Place order', 'woocommerce' );
@@ -412,7 +415,7 @@ function woo_custom_order_button_text() {
 }
 add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text' );
 
-// Prices for trade
+// Bulk discounts for trade stockist (currently inactive)
 //add_filter('woocommerce_product_get_price', 'custom_price_trade', 10, 2);
 function custom_price_trade($price, $product) {
     if (!is_user_logged_in()) return $price;
@@ -493,7 +496,7 @@ function woocommerce_category_image() {
 remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
 add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 15 );
 
-// Display subcat descriptions
+// Display subcategory descriptions
 function my_theme_woocommerce_taxonomy_archive_description($category) {
     $category_id = $category->term_id;
     echo category_description( $category_id );
@@ -577,14 +580,14 @@ function winwar_first_sentence( $string ) {
 // Sorting
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 
-// Tags
+// Make Tags heirarchial
 function my_woocommerce_taxonomy_args_product_tag( $array ) {
     $array['hierarchical'] = true;
     return $array;
 };
 add_filter( 'woocommerce_taxonomy_args_product_tag', 'my_woocommerce_taxonomy_args_product_tag', 10, 1 );
 
-// Adding dealer field
+// Adding dealer referrer fields
 function my_custom_checkout_field( $checkout ) {
    echo '<div id="dealer-code"><h3 class="h2 lhs no-after">' . __('Dealer Code') . '</h3>';
     woocommerce_form_field( 'dealer_code', array(
@@ -608,48 +611,7 @@ function my_custom_checkout_field( $checkout ) {
 }
 add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
 
-
-// Checkbox for delivery
-function bbloomer_add_checkout_privacy_policy() {
-    woocommerce_form_field( 'privacy_policy', array(
-       'type'          => 'checkbox',
-       'class'         => array('form-row privacy'),
-       'label_class'   => array('woocommerce-form__label woocommerce-form__label-for-checkbox checkbox'),
-       'input_class'   => array('woocommerce-form__input woocommerce-form__input-checkbox input-checkbox'),
-       'required'      => true,
-       'label'         => 'I accept and have read the <a href="/your-delivery-explained/" target="_blank"><u>Deliveries Explained</U></a> document',
-    )); 
-}
-add_action( 'woocommerce_review_order_before_submit', 'bbloomer_add_checkout_privacy_policy', 9 );
-   
-function bbloomer_not_approved_privacy() {
-    if ( ! (int) isset( $_POST['privacy_policy'] ) ) {
-        wc_add_notice( __( 'Please read the Deliveries Explained document ' ), 'error' );
-    }
-}
-add_action( 'woocommerce_checkout_process', 'bbloomer_not_approved_privacy' );
-
-
-// Trade notice
-function trade_notice() {
-    $user = wp_get_current_user();
-    if ( in_array( 'trade', (array) $user->roles ) ) {
-        echo '<p style="text-align: center;">The prices quoted here are at full retail price & do not include any delivery charges, your discounted price will be confirmed on your order confirmation.</p>';
-    }
-}
-//add_action( 'woocommerce_before_cart_table', 'trade_notice' );
-//add_action( 'woocommerce_checkout_before_customer_details', 'trade_notice' );
- 
-function bbloomer_add_content_specific_email( $order, $sent_to_admin, $plain_text, $email ) {
-   $user = wp_get_current_user();
-    if ( in_array( 'trade', (array) $user->roles ) ) {
-        echo '<p style="text-align: center;">The prices quoted here are at full retail price & do not include any delivery charges, your discounted price will be confirmed on your order confirmation.</p>';
-    }
-}
-//add_action( 'woocommerce_email_before_order_table', 'bbloomer_add_content_specific_email', 20, 4 );
-
-
-// Save
+// Save custom input box data on checkout
 function my_custom_checkout_field_update_order_meta( $order_id ) {
     if ( ! empty( $_POST['dealer_code'] ) ) {
         update_post_meta( $order_id, 'Dealer Code', sanitize_text_field( $_POST['dealer_code'] ) );
@@ -680,14 +642,56 @@ function my_custom_checkout_field_display_admin_order_meta($order){
 }
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
 
-// Revisions on products
-add_filter( 'woocommerce_register_post_type_product', 'wc_modify_product_post_type' );
 
+// Checkbox for delivery
+function bbloomer_add_checkout_privacy_policy() {
+    woocommerce_form_field( 'privacy_policy', array(
+       'type'          => 'checkbox',
+       'class'         => array('form-row privacy'),
+       'label_class'   => array('woocommerce-form__label woocommerce-form__label-for-checkbox checkbox'),
+       'input_class'   => array('woocommerce-form__input woocommerce-form__input-checkbox input-checkbox'),
+       'required'      => true,
+       'label'         => 'I accept and have read the <a href="/your-delivery-explained/" target="_blank"><u>Deliveries Explained</U></a> document',
+    )); 
+}
+add_action( 'woocommerce_review_order_before_submit', 'bbloomer_add_checkout_privacy_policy', 9 );
+   
+function bbloomer_not_approved_privacy() {
+    if ( ! (int) isset( $_POST['privacy_policy'] ) ) {
+        wc_add_notice( __( 'Please read the Deliveries Explained document ' ), 'error' );
+    }
+}
+add_action( 'woocommerce_checkout_process', 'bbloomer_not_approved_privacy' );
+
+
+// Trade prices notice
+function trade_notice() {
+    $user = wp_get_current_user();
+    if ( in_array( 'trade', (array) $user->roles ) ) {
+        echo '<p class="discount-notice">The prices quoted here are at full retail price & do not include any delivery charges, your discounted price will be confirmed on your order confirmation.</p>';
+    }
+}
+add_action( 'woocommerce_before_cart_table', 'trade_notice' );
+//add_action( 'woocommerce_checkout_before_customer_details', 'trade_notice' );
+add_action( 'woocommerce_single_product_summary', 'trade_notice', 200 );
+ 
+// Notice in emails
+function bbloomer_add_content_specific_email( $order, $sent_to_admin, $plain_text, $email ) {
+   $user = wp_get_current_user();
+    if ( in_array( 'trade', (array) $user->roles ) ) {
+        echo '<p style="text-align: center;">The prices quoted here are at full retail price & do not include any delivery charges, your discounted price will be confirmed on your order confirmation.</p>';
+    }
+}
+//add_action( 'woocommerce_email_before_order_table', 'bbloomer_add_content_specific_email', 20, 4 );
+
+
+// Revisions on products
 function wc_modify_product_post_type( $args ) {
      $args['supports'][] = 'revisions';
 
      return $args;
 }
+add_filter( 'woocommerce_register_post_type_product', 'wc_modify_product_post_type' );
 
 
 // Show variation
@@ -704,7 +708,6 @@ add_filter( 'woocommerce_variation_is_visible', 'iconic_variation_is_visible', 1
 
 
 // related
-
 function jk_related_products_args( $args ) {
 	$args['posts_per_page'] = 2;
 	$args['columns'] = 2;
@@ -740,5 +743,35 @@ function filter_checkout_fields( $fields ) {
 	return $fields;
 }
 add_filter( 'woocommerce_checkout_fields', 'filter_checkout_fields' );
+
+
+// Change h4 tags to h2 tags in posts 
+function filter_the_content_in_the_main_loop( $content ) {
+ 
+    // Check if we're inside the main loop in a single post page.
+    if ( is_single() ) {
+        $replace = array(
+            '<h4>' => '<h2 class="h4">',
+            '</h4>' => '</h2>'
+        );
+        $content = str_replace(array_keys($replace), $replace, $content);
+    }
+ 
+    return $content;
+}
+add_filter( 'the_content', 'filter_the_content_in_the_main_loop' );
+
+
+
+// Iframe gmaps shortcode
+function add_google_maps_shortcode( $atts = array() ) {
+    // set up default parameters
+    extract(shortcode_atts(array(
+     'url' => 'https://www.google.com/maps/d/u/0/embed?mid=1YaXJ6Vhpsl_MNIhXMRX00r8XZVgNeuCQ'
+    ), $atts));
+    
+    return '<div class="aspect-ratio"><iframe width="640" height="480" src="'.$url.'"></iframe></div>';
+}
+add_shortcode('google_maps', 'add_google_maps_shortcode');
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

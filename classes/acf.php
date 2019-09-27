@@ -16,7 +16,7 @@ class CustomACF {
 			<section class="row entry-content cf module module-<?php echo $post->post_name; ?>">
 				<div class="cf" <?php echo (isset($moduleBackground)) ? $moduleBackground : ''; ?>>
 					<div class="inner-module">
-						<h2><?php the_title(); ?></h2>
+						<h5 class="h2"><?php the_title(); ?></h5>
 						<?php the_content(); ?>
 						<?php if( have_rows('team_members') ) : ?>
 						<div class="team-members cf">
@@ -24,7 +24,7 @@ class CustomACF {
 							<div class="col-6">
 								<div class="cf"><img src="<?php echo get_sub_field('photo'); ?>" alt="<?php echo get_sub_field('name'); ?>">
 								<div class="text">
-									<h4 class="h2"><?php echo get_sub_field('role'); ?></h4>
+									<h6 class="h2"><?php echo get_sub_field('role'); ?></h6>
 									<p class="name"><?php echo get_sub_field('name'); ?></p>
 									<p><?php echo get_sub_field('bio'); ?></p>
 								</div></div>
