@@ -3804,6 +3804,9 @@ POSTS & CONTENT STYLES
 .woocommerce .spares-shop-loop .product-categories > li.cat-item:not(.current-cat):not(.cat-parent) {
   display: none; }
 
+.woocommerce.quick-search {
+  padding-bottom: 0 !important; }
+
 .discount-notice {
   clear: both;
   text-align: left;
@@ -4517,7 +4520,7 @@ TABLET & SMALLER LAPTOPS
           height: 17rem; }
         .wordpress:not(.is-mobile) .primary-nav > li ul.sub-menu li,
         .wordpress:not(.is-mobile) .primary-nav > li ul.children li {
-          padding: 1rem 1.5rem;
+          padding: 1rem .8rem;
           width: 100%; }
           .us-site.wordpress:not(.is-mobile) .primary-nav > li ul.sub-menu li, .wordpress:not(.is-mobile) .primary-nav > li ul.children li {
             padding: 1rem 2.5rem; }
