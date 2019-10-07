@@ -371,7 +371,7 @@ NAVIGATION STYLES
         height: 17rem; }
       .wordpress:not(.is-mobile) .primary-nav > li ul.sub-menu li,
       .wordpress:not(.is-mobile) .primary-nav > li ul.children li {
-        padding: 1rem .8rem;
+        padding: 1rem 1.5rem;
         width: 100%; }
         .us-site.wordpress:not(.is-mobile) .primary-nav > li ul.sub-menu li, .wordpress:not(.is-mobile) .primary-nav > li ul.children li {
           padding: 1rem 2.5rem; }

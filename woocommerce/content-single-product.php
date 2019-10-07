@@ -69,11 +69,11 @@ if ( post_password_required() ) {
 		 * @hooked woocommerce_template_single_sharing - 50
 		 * @hooked WC_Structured_Data::generate_product_data() - 60
 		 */
-		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+        remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
         
         // disable add to cart buttons
-		if( 
+		if(
             ( $blog_id == 5 && $product->is_type( 'variable' ) ) || // hide for US variable products
             has_term( 'fireplaces', 'product_cat' ) || // hide for all fireplaces
             // hide for stove subcategories unless user is logged in as trade
@@ -82,13 +82,20 @@ if ( post_password_required() ) {
             // hide the other stoves
             has_term( 'gas-stoves', 'product_cat' ) || 
             has_term( 'electric-stoves', 'product_cat' ) || 
-//            has_term( 'stoves', 'product_cat' ) || 
+            //has_term( 'stoves', 'product_cat' ) || 
             has_term( 'archive', 'product_cat' ) // hide archive
         ) {
 			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 		}
         
-		add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
+        // show prices on all UK sites pages and US site for antiques
+        if( 
+            $blog_id == 1 ||
+            ( $blog_id == 5 && ( is_product_category( 'antiques' ) || has_term( 'antiques', 'product_cat' ) ) )
+        ) {
+            add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
+        }
+
 		
 		echo '<div class="short-desc">';
 		do_action( 'woocommerce_single_product_summary' );

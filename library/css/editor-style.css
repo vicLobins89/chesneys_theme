@@ -205,8 +205,6 @@ body#tinymce.wp-editor {
   /*********************
   FONTFACE
   *********************/
-  @import url(/wp-content/themes/chesneys_theme/library/fonts/Univers/stylesheet.css);
-  @import url(/wp-content/themes/chesneys_theme/library/fonts/Baskerville/stylesheet.css);
   /******************************************************************
   Site Name: Honey
   Author: Vic Lobins
@@ -499,6 +497,66 @@ body#tinymce.wp-editor {
   body#tinymce.wp-editor span.amp {
     font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
     font-style: italic; }
+@font-face {
+  body#tinymce.wp-editor {
+    font-family: 'Univers';
+    src: url("../fonts/Univers/Univers.woff2") format("woff2"), url("../fonts/Univers/Univers.woff") format("woff");
+    font-weight: normal;
+    font-style: normal; } }
+@font-face {
+  body#tinymce.wp-editor {
+    font-family: 'Univers';
+    src: url("../fonts/Univers/Univers-Bold.woff2") format("woff2"), url("../fonts/Univers/Univers-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal; } }
+@font-face {
+  body#tinymce.wp-editor {
+    font-family: 'Univers';
+    src: url("../fonts/Univers/Univers-Light.woff2") format("woff2"), url("../fonts/Univers/Univers-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal; } }
+@font-face {
+  body#tinymce.wp-editor {
+    font-family: 'Univers Cond';
+    src: url("../fonts/Univers/Univers-Condensed.woff2") format("woff2"), url("../fonts/Univers/Univers-Condensed.woff") format("woff");
+    font-weight: normal;
+    font-style: normal; } }
+@font-face {
+  body#tinymce.wp-editor {
+    font-family: 'Baskerville';
+    src: url("../fonts/Baskerville/Baskerville-SemiBold.woff2") format("woff2"), url("../fonts/Baskerville/Baskerville-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal; } }
+@font-face {
+  body#tinymce.wp-editor {
+    font-family: 'Baskerville';
+    src: url("../fonts/Baskerville/Baskerville-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Baskerville/Baskerville-SemiBoldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic; } }
+@font-face {
+  body#tinymce.wp-editor {
+    font-family: 'Baskerville';
+    src: url("../fonts/Baskerville/Baskerville-Italic.woff2") format("woff2"), url("../fonts/Baskerville/Baskerville-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic; } }
+@font-face {
+  body#tinymce.wp-editor {
+    font-family: 'Baskerville';
+    src: url("../fonts/Baskerville/Baskerville-BoldItalic.woff2") format("woff2"), url("../fonts/Baskerville/Baskerville-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic; } }
+@font-face {
+  body#tinymce.wp-editor {
+    font-family: 'Baskerville';
+    src: url("../fonts/Baskerville/Baskerville.woff2") format("woff2"), url("../fonts/Baskerville/Baskerville.woff") format("woff");
+    font-weight: normal;
+    font-style: normal; } }
+@font-face {
+  body#tinymce.wp-editor {
+    font-family: 'Baskerville';
+    src: url("../fonts/Baskerville/Baskerville-Bold.woff2") format("woff2"), url("../fonts/Baskerville/Baskerville-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal; } }
   body#tinymce.wp-editor .mce-toolbar .mce-btn i {
     color: #000; }
   body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
