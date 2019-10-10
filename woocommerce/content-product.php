@@ -26,21 +26,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <li <?php wc_product_class('product'); ?>>
-	<?php // Fireplaces hover info
-	/*if( isset($term->term_id) && term_is_ancestor_of(16, $term->term_id, 'product_cat') ) {
-		echo '<div class="hover-text">';
-		$post_id = 1003;
-		$queried_post = get_post($post_id);
-		echo $queried_post->post_content;
-		echo '</div>';
-	} elseif( isset($term->term_id) && term_is_ancestor_of(56, $term->term_id, 'product_cat') ) {
-		echo '<div class="hover-text">';
-		$post_id = 1003;
-		$queried_post = get_post($post_id);
-		echo $queried_post->post_content;
-		echo '</div>';
-	}
-	*/?>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.

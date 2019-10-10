@@ -3165,6 +3165,10 @@ POSTS & CONTENT STYLES
 				background: $light-brown;
 			}
 		}
+        
+        .product_count {
+            border: none !important;
+        }
 	}
 	
 	.woocommerce-shipping-fields {
@@ -3805,6 +3809,14 @@ POSTS & CONTENT STYLES
 
 .woocommerce.quick-search {
     padding-bottom: 0 !important;
+    position: relative;
+    
+    #loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -32px 0 0 -32px;
+    }
 }
 
 .discount-notice {

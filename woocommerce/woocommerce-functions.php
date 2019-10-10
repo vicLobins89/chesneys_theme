@@ -282,6 +282,14 @@ add_filter( 'woocommerce_catalog_orderby', 'custom_woocommerce_catalog_orderby' 
 // Custom trade stockist role
 add_role( 'trade', __( 'Trade Stockist' ), array('read' => true,) );
 
+// Add trade capability to admins
+function add_theme_caps() {
+     global $wp_roles;
+    // gets the administrator role
+    $role = get_role( 'administrator' );
+    $role->add_cap( 'trade' ); 
+}
+add_action( 'admin_init', 'add_theme_caps');
 
 // Set/unset gateways/checkout type for user roles
 function set_trade_gateways( $available_gateways ) {

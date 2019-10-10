@@ -10,22 +10,27 @@
 				<div id="inner-content" class="cf">
 
 					<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                        
+                        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 						
 						<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
                             
-                            <section class="entry-content cf row wrap woocommerce quick-search" itemprop="articleBody">
-                                <div class="cf">
-                                    <h1 class="h3">Quick search</h1>
-                                    
-                                    <?php /* Called in functions.php */ ?>
-                                    <form method="get" class="quicksearch" id="quicksearch" action="<?php echo esc_url( home_url('/') ); ?>">
-                                        <input type="text" id="searchInput" name="s" onKeyUp="fetchResults()" placeholder="Please enter the product SKU code">
-                                    </form>
-                                    <table id="datafetch" class="shop_table"></table>
-                                </div>
-                            </section>
+                            <?php if( current_user_can('trade') || current_user_can('administrator') ) : ?>
+                            
+                                <section class="entry-content cf row wrap woocommerce quick-search" itemprop="articleBody">
+                                    <div class="cf">
+                                        <h1 class="h3">Quick search</h1>
+
+                                        <?php /* Called in functions.php */ ?>
+                                        <form method="get" class="quicksearch" id="quicksearch" action="<?php echo esc_url( home_url('/') ); ?>">
+                                            <input type="text" id="searchInput" name="s" onKeyUp="fetchResults()" placeholder="Please start typing a product name e.g. Salisbury 5WS…">
+                                        </form>
+                                        <table id="datafetch" class="shop_table"></table>
+                                        <div id="loader"><div></div><div></div><div></div><div></div></div>
+                                    </div>
+                                </section>
+                            
+                            <?php endif; ?>
 							
 							<section class="entry-content cf row wrap" itemprop="articleBody">
 								<div class="cf"><?php the_content(); ?></div>

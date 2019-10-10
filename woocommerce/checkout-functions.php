@@ -1,6 +1,6 @@
 <?php
 
-// Order Complete Hook
+// Order Processing Hook (activates when on order status is changed to processing after payment)
 add_action('woocommerce_order_status_processing', 'wdm_send_order_to_ext');
 function wdm_send_order_to_ext( $order_id ){
 	// get order object and order details
@@ -64,7 +64,7 @@ function wdm_send_order_to_ext( $order_id ){
 	$transaction_key = get_post_meta( $order_id, '_transaction_id', true );
 	$transaction_key = empty($transaction_key) ? $_GET['key'] : $transaction_key;
 
-	// get product details
+	// set up product vars
 	$items = $order->get_items();
 	$csv_data = array();
 	$api_items = array();
@@ -73,6 +73,7 @@ function wdm_send_order_to_ext( $order_id ){
     $service_type = '';
     $swiftcare_only = false;
     foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
+        /* Establish service type from shipping names */
         $shipping_name = $shipping_item_obj->get_name();
         
         switch ($shipping_name) {
@@ -99,7 +100,7 @@ function wdm_send_order_to_ext( $order_id ){
 		$product = new WC_Product($item_id);
         $variation_sku = get_post_meta( $item['variation_id'], '_sku', true );
 		
-		if( 
+		if( // check if items are swiftcare only (banburry and banburry-accessories shipping classes) then set up CSV data
 			$product->get_shipping_class() == 'banburry' ||
 			($product->get_shipping_class() == 'banburry-accessories' && $swiftcare_only)
 		) {
@@ -121,7 +122,9 @@ function wdm_send_order_to_ext( $order_id ){
 				'ServiceType' => 'Deliver, Unpack & Position',
 				'CustomerNotes' => $notes
 			);
-		} elseif ( $product->get_shipping_class() == 'northamptonshire' ) {
+		} elseif ( // or set up API data for J&J (northamptonshire shipping class)
+            $product->get_shipping_class() == 'northamptonshire' 
+        ) {
 			$api_items[] = array(
 				'client_ref' => $product->get_sku(),
 				'quantity' => $item['qty'],
@@ -129,6 +132,7 @@ function wdm_send_order_to_ext( $order_id ){
 			);
 		}
 		
+        // add all order items to array for send to Chesneys API endpoint
 		$api_items_ches[] = array(
 			"id" => $key,
 			"name" => $item['name'],
@@ -143,7 +147,7 @@ function wdm_send_order_to_ext( $order_id ){
 	}
 	
 	
-	//API Details
+	//API Data for J&J endpoint
 	$api_key = 'a83fb1720d8382b90fad6d00aee2f4ad';
 	$message_timestamp = time();
 	$api_data = array(
@@ -181,7 +185,7 @@ function wdm_send_order_to_ext( $order_id ){
 		)
 	);
 	
-	//Chesneys API Data
+	//API Data for Chesneys endpoint
 	$api_data_ches = array(
         "shipping_type" => $service_type,
         
@@ -229,17 +233,22 @@ function wdm_send_order_to_ext( $order_id ){
 		'items' => $api_items_ches
 	);
 
-	// Iterating through order shipping items
+	// Iterating through order shipping methods to determine where to send
 	foreach( $order->get_items('shipping') as $item_id => $shipping_item_obj ){
 		$shipping_name = $shipping_item_obj->get_name();
 		
-		if( $shipping_name == 'Standard Delivery' ) {
+		if( // Standard Delivery is set up to be used with banburry and banburry-accessories shipping classes (https://chesneys.co.uk/wp-admin/admin.php?page=wc-settings&tab=shipping&section=advanced_shipping_packages)
+            $shipping_name == 'Standard Delivery' 
+        ) {
 			send_api_call($api_data);
-		} elseif( $shipping_name == 'Deliver, Unpack &amp; Position' ) {
+		} elseif( // Deliver, Unpack & Position is set up for northamptonshire shipping class
+            $shipping_name == 'Deliver, Unpack &amp; Position' 
+        ) {
 			send_csv_mail($csv_data, "Product Order ", $order_number, $address['shipping_first_name'] . ' ' . $address['shipping_last_name']);
 		}
 	}
 	
+    // send all data to Chesneys API
 	send_api_call_ches($api_data_ches);
 }
 
@@ -270,12 +279,7 @@ function send_api_call_ches($data) {
 
 function send_api_call($data) {
 	$api_mode = 'live';
-$endpoint = "https://api.controlport.co.uk/api/1/";
-	/*if($api_mode == 'sandbox') {
-		$endpoint = "https://ens29l0sfhzhd.x.pipedream.net/";
-	} else {
-		$endpoint = "https://api.controlport.co.uk/api/1/"; 
-	}*/
+    $endpoint = "https://api.controlport.co.uk/api/1/";
 	
 	// JSON
 	$options = array(
@@ -296,7 +300,8 @@ $endpoint = "https://api.controlport.co.uk/api/1/";
 		print_r($response);
 		return;
 	}
-print_r($data);
+    
+    //print_r($data);
 }
 
 function create_csv_string($csv_data) {    

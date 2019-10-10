@@ -77,8 +77,8 @@ if ( post_password_required() ) {
             ( $blog_id == 5 && $product->is_type( 'variable' ) ) || // hide for US variable products
             has_term( 'fireplaces', 'product_cat' ) || // hide for all fireplaces
             // hide for stove subcategories unless user is logged in as trade
-            ( has_term( 'multi-fuel', 'product_cat' ) && !in_array( 'trade', (array) $user->roles ) ) || 
-            ( has_term( 'wood-burning-stoves', 'product_cat' ) && !in_array( 'trade', (array) $user->roles ) ) || 
+            ( has_term( 'multi-fuel', 'product_cat' ) && ( !current_user_can('trade') || !current_user_can('administrator') ) ) || 
+            ( has_term( 'wood-burning-stoves', 'product_cat' ) && ( !current_user_can('trade') || !current_user_can('administrator') ) ) || 
             // hide the other stoves
             has_term( 'gas-stoves', 'product_cat' ) || 
             has_term( 'electric-stoves', 'product_cat' ) || 
